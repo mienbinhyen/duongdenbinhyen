@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đường Đến Bình Yên | Thì Thầm | Sách mở lối | Tác giả Thiện Nhân</title>
+    <title>Giới thiệu về tác giả | Người viết tìm bình yên | góc nhỏ của Thiện Nhân</title>
     <style>
         body { margin: 0; font-family: 'Times New Roman', serif; }
 
@@ -52,8 +52,17 @@
 <body>
 <h1 style="display:none;">Đường Đến Bình Yên | thì thầm | Miền bình yên | Sách mở lối | tác giả Thiện Nhân</h1>
 
-
 <style>
+.section-label, .section-label-sync, .section-label-author, .section-label-values {
+    white-space: nowrap !important;
+}
+@media (max-width: 600px) {
+    .section-label, .section-label-sync, .section-label-author, .section-label-values {
+        font-size: 4.5vw !important;
+    }
+}
+
+
 /* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
 .menu-paco {
     position: fixed;
@@ -107,7 +116,7 @@
 <div class="menu-paco" onclick="toggleMenu()" id="menuButton">☰</div>
 
 <div id="menuList" class="noidung-menu">
-    <a href="https://duongdenbinhyen.com">TRANG CHỦ</a>
+    <a href="https://duongdenbinhyen.com/">TRANG CHỦ</a>
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
     <a href="tac-pham.html">TÁC PHẨM MỚI</a>
     <a href="lien-he.html">LIÊN HỆ</a>
@@ -133,45 +142,18 @@ window.addEventListener('scroll', function() {
 
 
 
-
-    <<div class="paco-header">
+ <div class="paco-header">
     <div class="logo-area">
         <a href="https://duongdenbinhyen.com/">
             <img src="Paco_binhyen.png" alt="Logo">
-        </a> </div> </div>
-</body>
-</html>
-
-
-<style>
-    .hero-banner-section {
-        width: 100%;
-        background-color: #ffffff;
-        line-height: 0; /* Loại bỏ khoảng hở dưới chân ảnh */
-        overflow: hidden;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        /* Tạo hiệu ứng chuyển cảnh mượt mà */
-        transition: transform 0.5s ease;
-    }
-
-    /* ĐIỀU CHỈNH CHO MOBILE */
-    @media (max-width: 600px) {
-        .hero-banner-section {
-            /* Đảm bảo hình ảnh không bị dính sát quá vào các khối nội dung sau */
-            margin-bottom: 10px;
-        }
-    }
-</style>
+        </a>
+    </div>
+</div>
 
 
 
 <section class="hero-banner-section">
-    <img src="mienbinhyen.jpg" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
+    <img src="duongdenbinhyen.jpg" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
 </section>
 
 <style>
@@ -228,75 +210,53 @@ window.addEventListener('scroll', function() {
 
 
 
-<section class="wisdom-section">
-    <div class="container-paco">
-        <span class="section-label-wisdom">TRI THỨC KHƠI NGUỒN TRÍ TUỆ</span>
-
-        <p class="wisdom-description">
-            "Mỗi cuốn sách, mỗi trang viết tại đây đều là những mảnh ghép của tri thức thực chứng, được chắt lọc để đồng hành cùng bạn trên con đường tìm lại chính mình. Đây là nơi những trải nghiệm sống trở thành kim chỉ nam, giúp khơi mở sự thông tuệ và xoa dịu những xao động trong tâm trí. Khi tri thức được thấu hiểu bằng cả trái tim, sự bình yên sẽ tự nhiên trở thành hơi thở, hiện hữu trong từng quyết định và từng khoảnh khắc của cuộc sống đời thường."
-        </p>
-    </div>
-</section>
-
 <style>
-    /* KHỐI 3: TRI THỨC - TƯƠNG THÍCH MỌI THIẾT BỊ */
-    .wisdom-section {
-        padding: 60px 20px;
-        background-color: #ffffff;
-    }
+    .about-author-section { padding: 60px 20px; background-color: #f8f9fa; }
+    .container-paco { max-width: 900px; margin: auto; }
 
-    .container-paco {
-        max-width: 900px;
-        margin: auto;
-    }
-
-    /* TIÊU ĐỀ CĂN TRÁI VỚI CHỮ NỔI */
-    .section-label-wisdom {
-        font-family: 'Times New Roman', serif;
-        font-size: 1.6em;
-        color: #004a99;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        display: block;
-        text-align: left;
-        margin-bottom: 30px;
-        border-left: 6px solid #004a99; 
-        padding-left: 15px;
-        line-height: 1.2;
-        /* Hiệu ứng chữ nổi */
+    /* Tiêu đề đồng bộ có gạch đứng và chống tràn trên mobile */
+    .section-label-author {
+        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #008080;
+        text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
+        display: block; text-align: left; margin-bottom: 30px;
+        border-left: 6px solid #008080; padding-left: 15px; line-height: 1.3;
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
 
-    .wisdom-description {
-        font-family: 'Times New Roman', serif;
-        font-size: 1.25em;
-        line-height: 1.9;
-        text-align: justify;
-        color: #333;
-        text-indent: 40px;
-        margin: 0;
+    .author-description {
+        font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.8;
+        text-align: justify; color: #333; margin-bottom: 30px;
     }
 
-    /* ĐIỀU CHỈNH TƯƠNG THÍCH MOBILE */
+    .author-img-wrapper { text-align: center; margin-top: 20px; }
+    
+    .author-img { 
+        width: 220px; height: 220px; object-fit: cover; 
+        border-radius: 50%; border: 4px solid #fff; 
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    }
+
     @media (max-width: 600px) {
-        .wisdom-section {
-            padding: 40px 15px;
-        }
-        .section-label-wisdom {
-            font-size: 1.15em;
-            letter-spacing: 1px;
-            padding-left: 10px;
-        }
-        .wisdom-description {
-            font-size: 1.1em;
-            text-indent: 25px;
-            line-height: 1.7;
-        }
+        .about-author-section { padding: 40px 15px; }
+        .section-label-author { font-size: 1.3em; line-height: 1.4; }
+        .author-description { font-size: 1.1em; }
+        .author-img { width: 180px; height: 180px; }
     }
 </style>
 
+<section class="about-author-section">
+    <div class="container-paco">
+        <span class="section-label-author">GIỚI THIỆU VỀ TÁC GIẢ</span>
 
+        <p class="author-description">
+            "Đến từ miền quê lúa với tâm hồn chân phương, Thiện Nhân viết để chạm vào những khoảnh khắc nhỏ bé của cuộc sống. Đây là nơi ông chia sẻ những câu chuyện chữa lành, giúp chúng ta nhận ra rằng dù thế giới có vội vã, bình yên vẫn luôn ở rất gần."
+        </p>
+
+        <div class="author-img-wrapper">
+            <img src="tacgiathiennhan.jpg" alt="Tác giả Thiện Nhân" class="author-img">
+        </div>
+    </div>
+</section>
 
 
 
@@ -308,79 +268,46 @@ window.addEventListener('scroll', function() {
     .book-intro-section { padding: 60px 20px; background-color: #f8f9fa; }
     .container-paco { max-width: 900px; margin: auto; }
 
-    .section-label {
-        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #004a99;
+    /* Tiêu đề đồng bộ màu xanh #008080 và gạch đứng */
+    .section-label-sync {
+        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #008080;
         text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
-        display: block; text-align: left; margin-bottom: 50px;
-        border-left: 6px solid #004a99; padding-left: 15px; line-height: 1.2;
+        display: block; text-align: left; margin-bottom: 30px;
+        border-left: 6px solid #008080; padding-left: 15px; line-height: 1.3;
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
-    .book-title-main {
-        font-family: 'Times New Roman', serif; font-size: 2.2em; color: #004a99;
-        font-weight: bold; display: block; text-align: center; margin-bottom: 5px; text-transform: uppercase;
-    }
-    .book-title-sub {
-        font-family: 'Times New Roman', serif; font-size: 1.3em; color: #0056b3;
-        font-style: italic; display: block; text-align: center; margin-bottom: 35px;
-    }
+
     .book-description {
         font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9;
         text-align: justify; color: #333; margin-bottom: 20px; text-indent: 40px;
     }
+
     .book-image {
-        display: block; margin: 30px auto 0; max-width: 100%; height: auto;
+        display: block; margin: 30px auto 0; width: 300px; height: auto;
         border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    /* NÚT THU NHỎ 40% - LUÔN NẰM NGANG */
-    .paco-action-wrapper {
-        display: flex; flex-direction: row; gap: 10px; margin-top: 40px; justify-content: center; width: 100%;
-    }
-    .paco-btn-oval {
-        flex: 0 1 180px; /* Thu nhỏ 40% so với 300px */
-        text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center;
-        padding: 6px 10px; border-radius: 50px; background: #ffffff; border: 1.5px solid #004a99;
-        box-shadow: 0 4px 10px rgba(0, 74, 153, 0.15); transition: all 0.2s;
-    }
-    .price-old { color: #888; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
-    .price-new { color: #004a99; font-size: 0.85em; font-weight: bold; white-space: nowrap; }
-    .ebook-text { color: #004a99; font-size: 0.85em; font-weight: bold; padding: 6px 0; white-space: nowrap; }
-
     @media (max-width: 600px) {
-        .book-intro-section { padding: 40px 10px; }
-        .paco-action-wrapper { gap: 5px; } 
-        .paco-btn-oval { flex: 0 1 145px; padding: 5px; } 
-        .price-old, .price-new, .ebook-text { font-size: 0.65em; } 
-        .book-title-main { font-size: 1.6em; }
+        .book-intro-section { padding: 40px 15px; }
+        .section-label-sync { font-size: 1.3em; line-height: 1.4; }
         .book-description { font-size: 1.1em; text-indent: 20px; }
+        .book-image { width: 100%; max-width: 250px; }
     }
 </style>
 
 <section class="book-intro-section">
     <div class="container-paco">
-        <span class="section-label">NGƯỜI BẠN ĐỒNG HÀNH</span>
-        <span class="book-title-main">ĐƯỜNG ĐẾN BÌNH YÊN</span>
-        <span class="book-title-sub">Đích đến của mọi cuộc hành trình</span>
+        <span class="section-label-sync">HÀNH TRÌNH VIẾT</span>
 
         <p class="book-description">
-            Tác phẩm Đường Đến Bình Yên được lấy cảm hứng từ vùng núi Ronda – Tây Ban Nha, nơi những cung đường uốn lượn giữa trời mây và đá núi khơi dậy một cảm giác rất lạ: cảm giác vừa đi, vừa mất phương hướng, nhưng cũng rất gần với chính mình. Lấy bối cảnh quê hương của nhân vật Paco, cuốn sách tái hiện hành trình nội tâm từ năm 11 tuổi — khi cậu rời khỏi làng quê nhỏ để bước vào thế giới rộng lớn hơn, với nhiều va đập, thử thách và cả những tưởng như vỡ vụn.
+            “Tôi bắt đầu viết từ những trải nghiệm đời thường, những vết thương và cả những khoảnh khắc bình yên. Mỗi cuốn sách là một lời nhắn nhủ: dù cuộc sống bộn bề, ta vẫn có thể tìm thấy sự lắng đọng trong tâm hồn.”
         </p>
 
         <p class="book-description">
-            Đường Đến Bình Yên không đi theo lối kể thông thường, mà chọn cách lặng lẽ dẫn người đọc vào một hành trình rất riêng – nơi mỗi bước đi là một lần thử thách niềm tin, sự lựa chọn, và cả cách ta đối diện với chính mình. Tác phẩm không cố tìm một định nghĩa cho bình yên, nhưng qua từng trang viết, nó dần hình thành một điều gì đó gần gũi và thật: rằng bình yên không đến từ việc tránh né bão giông, mà từ khả năng đứng vững giữa giông bão mà không đánh mất mình.
+            “Một người viết lặng lẽ, lắng nghe đời bằng ánh nhìn sâu và trái tim rộng mở. Sinh ra từ miền quê lúa, ông mang theo sự chân phương giữa phố thị ồn ào, giữ cho mình nét bình dị và tấm lòng thấu cảm. Viết không để phô bày những điều lớn lao, mà để chạm vào những khoảnh khắc nhỏ bé, nơi cuộc sống cất lời theo cách riêng—tinh tế và lặng thầm. Bởi giữa bộn bề, bình yên vẫn luôn ở rất gần.”
         </p>
 
-        <img src="bia_duong den binh yen_4t.jpg" alt="Bìa sách" class="book-image">
-
-        <div class="paco-action-wrapper">
-            <a href="#datsach" class="paco-btn-oval">
-                <span class="price-old">Giá phát hành: 196.000đ</span>
-                <span class="price-new">Giá ưu đãi: 89.000đ</span>
-            </a>
-            <a href="#ebook" class="paco-btn-oval">
-                <span class="ebook-text">XEM ĐỌC EBOOK</span>
-            </a>
-        </div>
+        <img src="biaduongdenbinhyen.jpg" alt="Hành trình viết" class="book-image">
     </div>
 </section>
 
@@ -390,171 +317,159 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+<section class="life-inspiration-section">
+    <div class="container-paco">
+        <span class="section-label-life">CUỘC SỐNG & CẢM HỨNG</span>
+        <p class="life-description">
+            Cuộc sống của tôi không gắn liền với những điều quá lớn lao, mà xuất phát từ những khoảnh khắc rất đời thường. Tôi thích dành những buổi sáng sớm ngồi lặng yên bên tách trà, lắng nghe tiếng chim hót và ngắm ánh nắng đầu ngày. Những buổi chiều, tôi hay đi dạo chậm rãi, quan sát những con đường nhỏ, những gương mặt lặng lẽ bước qua đời nhau. Chính sự bình dị ấy đã gieo vào tôi những cảm xúc sâu lắng và thôi thúc tôi viết.
+        </p>
+        <p class="life-description">
+            Mỗi trang viết không chỉ là câu chữ, mà còn là tiếng vọng từ những trải nghiệm thật – niềm vui, nỗi buồn, những thương tổn và cả những chữa lành tôi đã đi qua. Tôi viết để giữ lại những điều mong manh dễ vỡ, để nhắc mình rằng trong những điều bình thường vẫn luôn có vẻ đẹp dịu dàng đang chờ được nhận ra. Và nếu độc giả tìm thấy trong đó một chút đồng cảm, một sự an ủi hay một nguồn cảm hứng để bước tiếp, thì với tôi, đó chính là ý nghĩa lớn nhất của việc cầm bút.
+        </p>
+    </div>
+</section>
+
 <style>
-    .book-section-alt { padding: 60px 20px; background-color: #ffffff; }
+    .life-inspiration-section { padding: 60px 20px; background-color: #ffffff; }
     .container-paco { max-width: 900px; margin: auto; }
 
-    .book-title-main {
-        font-family: 'Times New Roman', serif; font-size: 2.2em; color: #004a99;
-        font-weight: bold; display: block; text-align: center; margin-bottom: 5px; text-transform: uppercase;
-    }
-    .book-title-sub {
-        font-family: 'Times New Roman', serif; font-size: 1.3em; color: #0056b3;
-        font-style: italic; display: block; text-align: center; margin-bottom: 35px;
-    }
-    .book-description {
-        font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9;
-        text-align: justify; color: #333; margin-bottom: 20px; text-indent: 40px;
-    }
-    .book-image {
-        display: block; margin: 30px auto 0; max-width: 100%; height: auto;
-        border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .paco-action-wrapper {
-        display: flex; flex-direction: row; gap: 10px; margin-top: 40px; justify-content: center; width: 100%;
-    }
-    .paco-btn-oval {
-        flex: 0 1 180px; text-decoration: none; display: flex; flex-direction: column; 
-        align-items: center; justify-content: center; padding: 6px 10px; border-radius: 50px; 
-        background: #ffffff; border: 1.5px solid #004a99; box-shadow: 0 4px 10px rgba(0, 74, 153, 0.15);
-    }
-    .price-old { color: #888; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
-    .price-new { color: #004a99; font-size: 0.85em; font-weight: bold; white-space: nowrap; }
-    .ebook-text { color: #004a99; font-size: 0.85em; font-weight: bold; padding: 6px 0; white-space: nowrap; }
-
-    @media (max-width: 600px) {
-        .book-section-alt { padding: 40px 10px; }
-        .paco-action-wrapper { gap: 5px; } 
-        .paco-btn-oval { flex: 0 1 145px; padding: 5px; } 
-        .price-old, .price-new, .ebook-text { font-size: 0.65em; } 
-        .book-title-main { font-size: 1.6em; }
-        .book-description { font-size: 1.1em; text-indent: 20px; }
-    }
-</style>
-
-<section class="book-section-alt">
-    <div class="container-paco">
-        <span class="book-title-main">THÌ THẦM</span>
-        <span class="book-title-sub">Khi cuộc đời thì thầm những điều đẹp đẽ</span>
-
-        <p class="book-description">
-            Tác phẩm Thì Thầm được viết trong những khoảng lặng rất nhỏ – những buổi chiều không vội, những sáng sớm không lời, những lúc mà cuộc sống dường như ngừng lại một chút, đủ để lắng nghe điều gì đó rất khẽ từ bên trong. Không có câu chuyện cụ thể, cũng không có nhân vật rõ ràng, Thì Thầm là tập hợp những mảnh rời rạc của đời sống nội tâm – nơi mỗi suy tư, mỗi cảm giác thoáng qua đều được giữ lại bằng một thứ ngôn ngữ rất tiết chế.
-        </p>
-
-        <p class="book-description">
-            Trong thế giới ngày càng ồn ào, Thì Thầm là một lời thì thầm đúng nghĩa – về lòng tốt, về sự bao dung, và những đóa hoa lặng lẽ nở từ bên trong mỗi người. Những câu chuyện giản dị, nhưng chứa đựng sức mạnh chữa lành từ sự đồng cảm sâu sắc.
-        </p>
-
-        <p class="book-description">
-            Hai cuốn sách – một hành trình, một khoảng lặng – nhưng gặp nhau ở cùng một điểm: sự thành thật. Thành thật với đời sống, với cảm xúc, và với chính mình. Và có lẽ, trong một thế giới ngày càng nhiều tiếng nói, những cuốn sách biết thì thầm đôi khi lại là những cuốn sách ở lại lâu nhất trong lòng người đọc.
-        </p>
-
-        <img src="bia_thi tham_4t.jpg" alt="Bìa sách Thì Thầm" class="book-image">
-
-        <div class="paco-action-wrapper">
-            <a href="#datsach" class="paco-btn-oval">
-                <span class="price-old">Giá phát hành: 136.000đ</span>
-                <span class="price-new">Giá ưu đãi: 89.000đ</span>
-            </a>
-            <a href="#ebook" class="paco-btn-oval">
-                <span class="ebook-text">XEM ĐỌC EBOOK</span>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-<style>
-    .author-talk-section {
-        padding: 60px 20px;
-        background-color: #f8f9fa;
-    }
-    .container-paco {
-        max-width: 900px;
-        margin: auto;
-    }
-
-    /* TIÊU ĐỀ KHỐI - ĐÃ SỬA CHỮ NỔI */
-    .section-label-author {
-        font-family: 'Times New Roman', serif;
-        font-size: 1.6em;
-        color: #004a99;
-        text-transform: uppercase;
-        font-weight: bold;
-        letter-spacing: 2px;
-        display: block;
-        text-align: left;
-        margin-bottom: 40px;
-        border-left: 6px solid #004a99; 
-        padding-left: 15px;
-        line-height: 1.2;
-        /* HIỆU ỨNG CHỮ NỔI VỪA PHẢI */
+    .section-label-life {
+        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #008080;
+        text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
+        display: block; text-align: left; margin-bottom: 30px;
+        border-left: 6px solid #008080; padding-left: 15px; line-height: 1.2;
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
 
-    /* HÌNH ẢNH TÁC GIẢ */
-    .author-image {
-        display: block;
-        width: 250px; /* Kích thước ảnh */
-        height: auto;
-        margin: 0 auto 30px; /* Căn giữa và tạo khoảng cách dưới */
-        border-radius: 50%; /* Hình tròn */
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        border: 4px solid #fff;
+    .life-description {
+        font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9;
+        text-align: justify; color: #333; margin-bottom: 20px; text-indent: 40px;
     }
 
-    .author-description {
-        font-family: 'Times New Roman', serif;
-        font-size: 1.25em;
-        line-height: 1.9;
-        text-align: justify;
-        color: #333;
-        margin-bottom: 20px;
-        text-indent: 40px;
-    }
-
-    /* ĐIỀU CHỈNH CHO MOBILE */
     @media (max-width: 600px) {
-        .author-talk-section {
-            padding: 40px 15px;
-        }
-        .section-label-author {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-        }
-        .author-image {
-            width: 180px; /* Thu nhỏ ảnh trên mobile */
-        }
-        .author-description {
-            font-size: 1.1em;
-            text-indent: 25px;
-            line-height: 1.7;
+        .life-inspiration-section { padding: 40px 15px; }
+        .life-description { font-size: 1.1em; text-indent: 25px; }
+        .section-label-life {
+            font-size: 4.5vw !important;
+            white-space: nowrap !important;
+            letter-spacing: 1px;
         }
     }
 </style>
 
-<section class="author-talk-section">
+
+
+
+
+
+
+
+
+<style>
+    /* KHỐI 6: DẤU ẤN & SÁCH ĐÃ RA MẮT */
+    .milestone-section { 
+        padding: 60px 20px; 
+        background-color: #f8f9fa; 
+    }
+    .container-paco { 
+        max-width: 1100px; 
+        margin: auto; 
+    }
+
+    .section-label-milestone {
+        font-family: 'Times New Roman', serif; 
+        font-size: 1.6em; 
+        color: #008080;
+        text-transform: uppercase; 
+        font-weight: bold; 
+        letter-spacing: 2px;
+        display: block; 
+        text-align: left; 
+        margin-bottom: 40px;
+        border-left: 6px solid #008080; 
+        padding-left: 15px; 
+        line-height: 1.2;
+        text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
+    }
+
+    .milestone-grid {
+        display: flex; 
+        flex-wrap: nowrap; 
+        gap: 25px; 
+        justify-content: center;
+    }
+
+    .milestone-item {
+        flex: 1; 
+        background: #fff; 
+        padding: 20px;
+        border-radius: 8px; 
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+        text-align: center;
+    }
+
+    .milestone-img { 
+        width: 100%; 
+        height: auto; 
+        border-radius: 4px; 
+        margin-bottom: 15px; 
+    }
+
+    .milestone-time { 
+        font-weight: bold; 
+        color: #008080; 
+        display: block; 
+        margin-bottom: 10px; 
+        font-size: 0.95em; 
+    }
+
+    .milestone-text { 
+        font-family: 'Times New Roman', serif; 
+        font-size: 1.1em; 
+        line-height: 1.6; 
+        color: #444; 
+        text-align: justify; 
+    }
+
+    @media (max-width: 800px) {
+        /* PHẦN BỔ SUNG ĐỂ TƯƠNG THÍCH TIÊU ĐỀ TRÊN ĐIỆN THOẠI */
+        .section-label-milestone {
+            font-size: 4.5vw !important;
+            white-space: nowrap !important;
+            letter-spacing: 1px;
+        }
+        /* HẾT PHẦN BỔ SUNG */
+
+        .milestone-grid { flex-wrap: wrap; }
+        .milestone-item { flex: 0 0 100%; }
+    }
+</style>
+
+<section class="milestone-section">
     <div class="container-paco">
-        <span class="section-label-author">TÂM TÌNH CỦA TÁC GIẢ</span>
+        <span class="section-label-milestone">DẤU ẤN & SÁCH ĐÃ RA MẮT</span>
 
-        <img src="tacgiathiennhan.jpg" alt="Tác giả Thiện Nhân" class="author-image">
+        <div class="milestone-grid">
+            <div class="milestone-item">
+                <img src="ddby.jpg" alt="Đường đến bình yên" class="milestone-img">
+                <span class="milestone-time">Xuất bản và phát hành 12/2024</span>
+                <p class="milestone-text">Cuốn sách đầu tiên mở ra hành trình viết về chữa lành và tìm lại sự tĩnh lặng trong tâm hồn.</p>
+            </div>
 
-        <p class="author-description">
-            Cuộc sống của tôi không gắn liền với những điều quá lớn lao, mà xuất phát từ những khoảnh khắc rất đời thường. Tôi thích dành những buổi sáng sớm ngồi lặng yên bên tách trà, lắng nghe tiếng chim hót và ngắm ánh nắng đầu ngày. Những buổi chiều, tôi hay đi dạo chậm rãi, quan sát những con đường nhỏ, những gương mặt lặng lẽ bước qua đời nhau. Chính sự bình dị ấy đã gieo vào tôi những cảm xúc sâu lắng và thôi thúc tôi viết.
-        </p>
+            <div class="milestone-item">
+                <img src="thi_tham.jpg" alt="Thì thầm" class="milestone-img">
+                <span class="milestone-time">Xuất bản và phát hành 05/2025</span>
+                <p class="milestone-text">Tập tản văn ghi lại những chiêm nghiệm nhẹ nhàng, như lời thì thầm từ sâu thẳm trái tim, nâng đỡ người đọc trong từng khoảnh khắc đời sống.</p>
+            </div>
 
-        <p class="author-description">
-            Mỗi trang viết không chỉ là câu chữ, mà còn là tiếng vọng từ những trải nghiệm thật – niềm vui, nỗi buồn, những thương tổn và cả những chữa lành tôi đã đi qua. Tôi viết để giữ lại những điều mong manh dễ vỡ, để nhắc mình rằng trong những điều bình thường vẫn luôn có vẻ đẹp dịu dàng đang chờ được nhận ra. Và nếu độc giả tìm thấy trong đó một chút đồng cảm, một sự an ủi hay một nguồn cảm hứng để bước tiếp, thì với tôi, đó chính là ý nghĩa lớn nhất của việc cầm bút.
-        </p>
-	<p class="author-description" style="text-align: right; font-style: italic; font-weight: bold;">
-    — Tác giả Thiện Nhân —
-</p>
+            <div class="milestone-item">
+                <img src="nguoiviet.jpg" alt="Các dự án tiếp theo" class="milestone-img">
+                <span class="milestone-time">Các dự án tiếp theo</span>
+                <p class="milestone-text">Chuỗi tác phẩm sắp ra mắt, tiếp tục đồng hành cùng bạn đọc trên con đường tìm kiếm bình yên và sự thấu hiểu.</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -564,45 +479,57 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
 <style>
+    /* KHỐI: TRIẾT LÝ TRONG TỪNG TRANG VIẾT - TỐI ƯU MOBILE */
     .values-section { padding: 60px 20px; background-color: #ffffff; }
     .container-paco { max-width: 900px; margin: auto; }
 
     .section-label-values {
-        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #004a99;
-        text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
-        display: block; text-align: left; margin-bottom: 40px;
-        border-left: 6px solid #004a99; padding-left: 15px; line-height: 1.2;
+        font-family: 'Times New Roman', serif; 
+        font-size: 1.6em; 
+        color: #008080;
+        text-transform: uppercase; 
+        font-weight: bold; 
+        letter-spacing: 2px;
+        display: block; 
+        text-align: left; 
+        margin-bottom: 40px;
+        border-left: 6px solid #008080; 
+        padding-left: 15px; 
+        line-height: 1.3; /* Tăng độ giãn dòng để không bị đè chữ */
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
 
-    /* BỐ CỤC THẺ NGANG - HIỆU ỨNG GƯƠNG */
     .values-grid { display: flex; flex-direction: column; gap: 15px; }
 
     .value-card-horizontal {
         display: flex; align-items: center; gap: 20px;
         padding: 20px; border-radius: 12px;
-        /* Hiệu ứng gương màu nhạt */
-        background: rgba(240, 247, 255, 0.6); 
+        background: rgba(235, 250, 250, 0.6); 
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(0, 74, 153, 0.1);
+        border: 1px solid rgba(0, 128, 128, 0.1);
         transition: all 0.3s ease;
     }
     
     .value-card-horizontal:hover {
-        background: rgba(240, 247, 255, 0.9);
-        border-color: #004a99;
+        background: rgba(235, 250, 250, 0.9);
+        border-color: #008080;
         transform: translateX(5px);
     }
 
-    .value-icon { font-size: 1.3em; color: #004a99; flex-shrink: 0; }
-    
+    .value-icon { font-size: 1.3em; color: #008080; flex-shrink: 0; }
     .value-content { flex-grow: 1; }
 
     .value-title {
         font-family: 'Times New Roman', serif; font-weight: bold;
-        color: #004a99; font-size: 1.15em; margin-bottom: 5px; display: block;
+        color: #008080; font-size: 1.15em; margin-bottom: 5px; display: block;
     }
     
     .value-text {
@@ -610,32 +537,46 @@ window.addEventListener('scroll', function() {
         line-height: 1.6; color: #333; margin: 0; text-align: justify;
     }
 
-    /* ĐIỀU CHỈNH TRÊN MÁY TÍNH - CÓ THỂ CHIA 2 CỘT NẾU MUỐN */
+    /* ĐIỀU CHỈNH CHUYÊN SÂU CHO MÀN HÌNH NHỎ */
+    @media (max-width: 600px) {
+        .values-section { padding: 40px 15px; }
+        
+        .section-label-values { 
+            font-size: 1.25em; /* Hạ cỡ chữ tiêu đề trên mobile */
+            letter-spacing: 1px; 
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .value-card-horizontal { 
+            padding: 15px; 
+            gap: 12px; 
+            flex-direction: row; /* Giữ icon và chữ nằm ngang cho gọn */
+            align-items: flex-start;
+        }
+
+        .value-title { font-size: 1.05em; }
+        .value-text { font-size: 1em; line-height: 1.5; }
+    }
+
     @media (min-width: 768px) {
         .values-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Máy tính chia 2 cột cho gọn */
+            grid-template-columns: repeat(2, 1fr);
         }
-    }
-
-    @media (max-width: 600px) {
-        .values-section { padding: 40px 15px; }
-        .value-card-horizontal { padding: 15px; gap: 12px; }
-        .value-title { font-size: 1.05em; }
-        .value-text { font-size: 1em; }
     }
 </style>
 
 <section class="values-section">
     <div class="container-paco">
-        <span class="section-label-values">GIÁ TRỊ CỦA TRI THỨC</span>
+        <span class="section-label-values">TRIẾT LÝ TRONG TỪNG TRANG VIẾT</span>
 
         <div class="values-grid">
             <div class="value-card-horizontal">
                 <div class="value-icon">✦</div>
                 <div class="value-content">
                     <span class="value-title">Xoa dịu tâm trí</span>
-                    <p class="value-text">Những trang viết giúp bạn tách mình khỏi những xao động, tìm về sự tĩnh lặng giữa thế gian bộn bề.</p>
+                    <p class="value-text">Những trang viết không chỉ là câu chữ, mà là nhịp cầu giúp bạn tách mình khỏi những xao động, tìm về sự tĩnh lặng giữa thế gian bộn bề.</p>
                 </div>
             </div>
 
@@ -643,15 +584,15 @@ window.addEventListener('scroll', function() {
                 <div class="value-icon">✦</div>
                 <div class="value-content">
                     <span class="value-title">Thấu hiểu bản thân</span>
-                    <p class="value-text">Mỗi câu chữ là một tấm gương phản chiếu, giúp bạn nhìn sâu vào tâm hồn và tìm lại chính mình.</p>
+                    <p class="value-text">Mỗi dòng tâm tình là một tấm gương phản chiếu, giúp bạn nhìn sâu vào nội tâm để thấu cảm và tìm lại chính mình.</p>
                 </div>
             </div>
 
             <div class="value-card-horizontal">
                 <div class="value-icon">✦</div>
                 <div class="value-content">
-                    <span class="value-title">Trải nghiệm thực tế</span>
-                    <p class="value-text">Không là lý thuyết suông, đây là tri thức chắt lọc từ những vết thương, niềm vui và sự tỉnh thức có thật.</p>
+                    <span class="value-title">Trải nghiệm thực chứng</span>
+                    <p class="value-text">Không lý thuyết suông, đây là những tri thức chắt lọc từ chính những vết thương, niềm vui và sự tỉnh thức có thật trong đời tác giả.</p>
                 </div>
             </div>
 
@@ -659,12 +600,14 @@ window.addEventListener('scroll', function() {
                 <div class="value-icon">✦</div>
                 <div class="value-content">
                     <span class="value-title">Kiến tạo bình yên</span>
-                    <p class="value-text">Giúp sự bình an không còn là mong ước, mà trở thành hơi thở hiện hữu trong từng quyết định đời thường.</p>
+                    <p class="value-text">Giúp sự an yên không còn là mong ước xa xôi, mà trở thành hơi thở hiện hữu trong từng quyết định và khoảnh khắc của cuộc sống đời thường.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 
 
@@ -682,20 +625,20 @@ window.addEventListener('scroll', function() {
 
     /* TIÊU ĐỀ ĐỒNG BỘ - ĐÃ CỐ ĐỊNH 1 HÀNG */
     .section-label {
-        font-family: 'Times New Roman', serif;
-        font-size: 28px;
-        color: #004a99;
-        text-transform: uppercase;
-        font-weight: bold;
-        display: block;
-        text-align: left;
-        margin-bottom: 30px;
-        border-left: 6px solid #004a99;
-        padding-left: 15px;
-        line-height: 1.2;
-        /* GIỮ TIÊU ĐỀ LUÔN TRÊN 1 HÀNG */
-        white-space: nowrap; 
-    }
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    color: #008080 !important;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 30px;
+    border-left: 6px solid #008080 !important;
+    padding-left: 15px;
+    line-height: 1.2;
+    /* GIỮ TIÊU ĐỀ LUÔN TRÊN 1 HÀNG */
+    white-space: nowrap;
+}
 
     .social-grid {
         display: grid;
@@ -1101,9 +1044,9 @@ window.addEventListener('scroll', function() {
         </div>
 
         <div class="footer-seo">
-            <span class="seo-label">Từ khóa liên quan:</span> Đường Đến Bình Yên, tác giả Thiện Nhân, sách chữa lành, triết lý sống, bình yên nội tâm, chữa lành tâm hồn, sách mới 2025., quà tặng sách ý nghĩa, danh mục sách hay nên đọc, hiệu sách chữa lành, phát hành sách mới.
+            <span class="seo-label">Từ khóa liên quan:</span> Đường Đến Bình Yên, thì thầm, tác giả thiện nhân, Sách Thiện Nhân, Tản văn chữa lành, Sách truyền cảm hứng, Tâm an đời sáng, Văn học chữa lành, Sách tản văn Việt Nam, Tri thức và bình yên, Hành trình nội tâm, Sách dành cho tâm hồn, Quà tặng cha mẹ, Gắn kết gia đình, Paco Đường Đến Bình Yên, Ebook Đường Đến Bình Yên, Miền Bình Yên, Chữa lành đứa trẻ bên trong, Inner Child, Sống tỉnh thức, Mindfulness, Vượt qua kiệt sức, Burnout, Trí tuệ cảm xúc, Chăm sóc sức khỏe tinh thần, Lối sống tối giản, Nghệ thuật an nhiên, Sách hay gối đầu giường, Chữa lành mối quan hệ, Thực hành lòng biết ơn.Mua sách online, đặt sách trực tuyến, sách giấy, sách chữ ký tác giả, combo sách chữa lành, nhà sách online, sách mới xuất bản 2025, sách bản quyền, tủ sách gia đình, sách nói audiobook, ebook PDF bản quyền, quà tặng sách ý nghĩa, danh mục sách hay nên đọc, hiệu sách chữa lành, phát hành sách mới.
             <span class="hashtag-list">
-                #DuongDenBinhYen #ThienNhan #SachChuaLanh #SongTinhThuc #BinhYen #KietTacNhanLoai. #TanVan #TamAnDoiSang #SachTruyenCamHung #SachHay #TriThuc #HanhTrinhNoiTam #DocSach #ThiTham #MienBinhYen #Paco #ChuaLanh #YeuGiaDinh #QuaTangChaMe #InnerChild #MentalHealthVietnam #SongTinhThuc #HealingJourney #SelfLove #PhatTrienBanThan #SongCham #ReviewSach #BookTokVietnam #NangLuongTichCuc #AnNhien #MuaSachOnline #NhaSachOnline #SachMoi #SachHayMoiNgay #TuSachGiaDinh #BookstagramVietnam #DocSach #SachBanQuyen #KietTacNhanLoai #TiệmSáchBìnhYên #ReviewSachHay #TiệmSáchpaco #pacobook.
+                #DuongDenBinhYen #ThienNhan #SachChuaLanh #TanVan #TamAnDoiSang #SachTruyenCamHung #SachHay #TriThuc #HanhTrinhNoiTam #DocSach #ThiTham #MienBinhYen #Paco #ChuaLanh #YeuGiaDinh #QuaTangChaMe #InnerChild #MentalHealthVietnam #SongTinhThuc #HealingJourney #SelfLove #PhatTrienBanThan #SongCham #ReviewSach #BookTokVietnam #NangLuongTichCuc #AnNhien #MuaSachOnline #NhaSachOnline #SachMoi #SachHayMoiNgay #TuSachGiaDinh #BookstagramVietnam #DocSach #SachBanQuyen #KietTacNhanLoai #TiệmSáchBìnhYên #ReviewSachHay #TiệmSáchpaco #pacobook.
             </span>
         </div>
 
