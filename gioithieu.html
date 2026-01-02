@@ -118,8 +118,8 @@
 <div id="menuList" class="noidung-menu">
     <a href="https://duongdenbinhyen.com/">TRANG CHỦ</a>
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
-    <a href="tac-pham.html">TÁC PHẨM MỚI</a>
-    <a href="lien-he.html">LIÊN HỆ</a>
+    <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
+    <a href="index.html#lienhe">LIÊN HỆ</a>
 </div>
 
 <script>
@@ -283,16 +283,20 @@ window.addEventListener('scroll', function() {
     }
 
     .book-image {
-        display: block; margin: 30px auto 0; width: 300px; height: auto;
-        border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+    display: block; 
+    margin: 30px auto 0; 
+    width: 100% !important; /* Sửa 300px thành 100% để full máy tính */
+    height: auto;
+    border-radius: 4px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
-    @media (max-width: 600px) {
-        .book-intro-section { padding: 40px 15px; }
-        .section-label-sync { font-size: 1.3em; line-height: 1.4; }
-        .book-description { font-size: 1.1em; text-indent: 20px; }
-        .book-image { width: 100%; max-width: 250px; }
+@media (max-width: 600px) {
+    .book-image { 
+        width: 100% !important; 
+        max-width: 100% !important; /* Đảm bảo full điện thoại */
     }
+}
 </style>
 
 <section class="book-intro-section">
@@ -307,7 +311,7 @@ window.addEventListener('scroll', function() {
             “Một người viết lặng lẽ, lắng nghe đời bằng ánh nhìn sâu và trái tim rộng mở. Sinh ra từ miền quê lúa, ông mang theo sự chân phương giữa phố thị ồn ào, giữ cho mình nét bình dị và tấm lòng thấu cảm. Viết không để phô bày những điều lớn lao, mà để chạm vào những khoảnh khắc nhỏ bé, nơi cuộc sống cất lời theo cách riêng—tinh tế và lặng thầm. Bởi giữa bộn bề, bình yên vẫn luôn ở rất gần.”
         </p>
 
-        <img src="biaduongdenbinhyen.jpg" alt="Hành trình viết" class="book-image">
+        <img src="haibia.jpg" alt="Hành trình viết" class="book-image">
     </div>
 </section>
 
