@@ -47,6 +47,41 @@
             .paco-header { padding: 3px 0; }
         }
   
+
+
+
+//* 1. SỬA LỖI ĐỘ TƯƠNG PHẢN (Hình 3f3686) - Giúp chữ rõ nét, không bị lóa */
+body { 
+    color: #1a1a1a !important; 
+}
+.paco-btn-3d { 
+    color: #004d40 !important; /* Chữ màu xanh đậm trên nền nút xanh nhạt để rõ nét, không bị trắng lóa */
+    font-weight: bold !important;
+    text-shadow: none !important; 
+}
+
+/* 2. SỬA LỖI NHẢY BỐ CỤC (Hình 3f3625, 3f364b) - Giữ ổn định trang khi tải */
+img:not(.logo-area img) { 
+    max-width: 100%; 
+    height: auto !important; 
+}
+
+/* 3. SỬA LỖI ĐIỂM CHẠM (Hình 3f3686) - Chỉ nới rộng các nút mua hàng, KHÔNG làm to logo */
+.paco-btn-3d, .menu-paco { 
+    min-height: 44px; 
+    padding: 10px 20px !important;
+}
+
+/* 4. CỐ ĐỊNH LOGO (Hình 408801) - Đảm bảo logo luôn nhỏ gọn như ý Ông Paco */
+.logo-area img {
+    height: 45px !important; 
+    width: auto !important;
+}
+
+
+
+
+
 </style>
 </head>
 <body>
