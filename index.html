@@ -92,6 +92,28 @@
 }
 
 
+/* 5. TỐI ƯU GOOGLE (FIX LỖI NHẢY TRANG & LOAD CHẬM) */
+.hero-banner-section {
+    width: 100%;
+    min-height: auto; /* Bỏ aspect-ratio gây khoảng trắng */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    /* Giúp ảnh banner hiện ngay lập tức để giảm 6.5 giây LCP */
+    content-visibility: visible; 
+}
+
+/* Ép các ảnh trong bài viết có kích thước rõ ràng để không nhảy khung */
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 
 
@@ -188,7 +210,7 @@ window.addEventListener('scroll', function() {
     <div class="paco-header">
     <div class="logo-area">
         <a href="https://duongdenbinhyen.com/">
-            <img src="Paco_binhyen.png" alt="Logo">
+            <img src="Paco_binhyen.png" width="1600" height="200" alt="Logo">
         </a> </div> </div>
 </body>
 </html>
