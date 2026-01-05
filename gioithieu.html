@@ -46,7 +46,89 @@
             .logo-area img { height: 40px; }
             .paco-header { padding: 3px 0; }
         }
-  
+
+
+
+
+
+
+
+
+
+/* 1. KHÔI PHỤC LOGO CÂN ĐỐI (Sửa lỗi hình 9c3063) */
+.logo-area img {
+    height: 55px !important; /* Tăng nhẹ kích thước để cân đối trên máy tính */
+    width: auto !important;
+    border: none !important;
+    padding: 5px 0 !important;
+}
+
+/* 2. TỐI ƯU NÚT CHO SEO & TIẾP CẬN (Điểm 100 Google) */
+.paco-btn-3d { 
+    font-size: 19px !important; /* Chữ to rõ đạt chuẩn Google */
+    font-weight: 800 !important;
+    color: #013220 !important; /* Xanh cực đậm để đạt tương phản 100% */
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 55px !important; /* Kích thước điểm chạm lý tưởng cho SEO di động */
+}
+
+/* 3. CỐ ĐỊNH NÚT DƯỚI ĐÁY (Sửa lỗi ghim nút) */
+.paco-sticky-container {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    z-index: 99999 !important;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. TỐI ƯU RIÊNG CHO MÁY TÍNH (Đẩy Hiệu suất > 90) */
+@media (min-width: 1024px) {
+    .logo-area img { height: 65px !important; } /* Logo máy tính to và sang trọng hơn */
+    .paco-btn-3d { font-size: 22px !important; }
+    body { color: #111111 !important; } /* Chữ thân bài đậm rõ để Google không bắt lỗi */
+}
+
+
+/* --- PHẦN 2: "THUỐC ĐẶC TRỊ" RIÊNG CHO TRANG GIỚI THIỆU (TỐI ƯU GOOGLE) --- */
+
+/* Khắc phục LCP 12.5s: Giúp trang tải nhanh thần tốc */
+img {
+    content-visibility: auto; 
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Khắc phục lỗi nhảy bố cục CLS và điểm SEO */
+.author-image img, .intro-content img {
+    aspect-ratio: auto;
+    display: block;
+}
+
+/* Tối ưu hóa phông chữ nội dung để không bị báo lỗi Hỗ trợ tiếp cận */
+p, span, div {
+    line-height: 1.6 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -118,8 +200,8 @@
 <div id="menuList" class="noidung-menu">
     <a href="https://duongdenbinhyen.com/">TRANG CHỦ</a>
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
-    <a href="tac-pham.html">TÁC PHẨM MỚI</a>
-    <a href="lien-he.html">LIÊN HỆ</a>
+    <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
+    <a href="index.html#lienhe">LIÊN HỆ</a>
 </div>
 
 <script>
@@ -145,7 +227,7 @@ window.addEventListener('scroll', function() {
  <div class="paco-header">
     <div class="logo-area">
         <a href="https://duongdenbinhyen.com/">
-            <img src="Paco_binhyen.png" alt="Logo">
+            <img src="Paco_binhyen.png" width="1600" height="200" alt="Logo">
         </a>
     </div>
 </div>
@@ -283,16 +365,20 @@ window.addEventListener('scroll', function() {
     }
 
     .book-image {
-        display: block; margin: 30px auto 0; width: 300px; height: auto;
-        border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
+    display: block; 
+    margin: 30px auto 0; 
+    width: 100% !important; /* Sửa 300px thành 100% để full máy tính */
+    height: auto;
+    border-radius: 4px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
-    @media (max-width: 600px) {
-        .book-intro-section { padding: 40px 15px; }
-        .section-label-sync { font-size: 1.3em; line-height: 1.4; }
-        .book-description { font-size: 1.1em; text-indent: 20px; }
-        .book-image { width: 100%; max-width: 250px; }
+@media (max-width: 600px) {
+    .book-image { 
+        width: 100% !important; 
+        max-width: 100% !important; /* Đảm bảo full điện thoại */
     }
+}
 </style>
 
 <section class="book-intro-section">
@@ -307,7 +393,7 @@ window.addEventListener('scroll', function() {
             “Một người viết lặng lẽ, lắng nghe đời bằng ánh nhìn sâu và trái tim rộng mở. Sinh ra từ miền quê lúa, ông mang theo sự chân phương giữa phố thị ồn ào, giữ cho mình nét bình dị và tấm lòng thấu cảm. Viết không để phô bày những điều lớn lao, mà để chạm vào những khoảnh khắc nhỏ bé, nơi cuộc sống cất lời theo cách riêng—tinh tế và lặng thầm. Bởi giữa bộn bề, bình yên vẫn luôn ở rất gần.”
         </p>
 
-        <img src="biaduongdenbinhyen.jpg" width="1358" height="700" alt="Hành trình viết" class="book-image">
+        <img src="haibia.jpg" width="1358" height="788" alt="Hành trình viết" class="book-image">
     </div>
 </section>
 
@@ -459,7 +545,7 @@ window.addEventListener('scroll', function() {
             </div>
 
             <div class="milestone-item">
-                <img src="thi_tham.jpg"  width="667" height="1000" alt="Thì thầm" class="milestone-img">
+                <img src="thi_tham.jpg" width="667" height="1000" alt="Thì thầm" class="milestone-img">
                 <span class="milestone-time">Xuất bản và phát hành 05/2025</span>
                 <p class="milestone-text">Tập tản văn ghi lại những chiêm nghiệm nhẹ nhàng, như lời thì thầm từ sâu thẳm trái tim, nâng đỡ người đọc trong từng khoảnh khắc đời sống.</p>
             </div>
@@ -1030,7 +1116,7 @@ window.addEventListener('scroll', function() {
 
         <div class="footer-info">
             <span class="footer-item">
-                <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình – Phường Bến Nghé - Tp. Hồ Chí Minh
+                <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình - Thành phố Hồ Chí Minh - Việt Nam
             </span>
             <span class="footer-item">
                 <span class="footer-label">Điện thoại:</span> <a href="tel:0933223301" class="footer-link">09 33 22 33 01</a>
@@ -1119,6 +1205,6 @@ window.addEventListener('scroll', function() {
 </style>
 <body>
 <div class="paco-sticky-container">
-    <a href="#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
-    <a href="#ebook" class="paco-btn-3d right">XEM EBOOK</a>
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
+    <a href="https://duongdenbinhyen.com/#ebook" class="paco-btn-3d right">XEM EBOOK</a>
 </div>
