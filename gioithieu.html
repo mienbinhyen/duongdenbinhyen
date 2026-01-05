@@ -95,29 +95,28 @@
 }
 
 
-/* --- PHẦN 2: "THUỐC ĐẶC TRỊ" RIÊNG CHO TRANG GIỚI THIỆU (TỐI ƯU GOOGLE) --- */
 
-/* Khắc phục LCP 12.5s: Giúp trang tải nhanh thần tốc */
-img {
-    content-visibility: auto; 
-    max-width: 100%;
-    height: auto !important;
+/* 5. TỐI ƯU GOOGLE (FIX LỖI NHẢY TRANG & LOAD CHẬM) */
+.hero-banner-section {
+    width: 100%;
+    min-height: auto; /* Bỏ aspect-ratio gây khoảng trắng */
+    overflow: hidden;
 }
 
-/* Khắc phục lỗi nhảy bố cục CLS và điểm SEO */
-.author-image img, .intro-content img {
-    aspect-ratio: auto;
+.hero-image {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    /* Giúp ảnh banner hiện ngay lập tức để giảm 6.5 giây LCP */
+    content-visibility: visible; 
+}
+
+/* Ép các ảnh trong bài viết có kích thước rõ ràng để không nhảy khung */
+.content-section img {
+    max-width: 100%;
+    height: auto;
     display: block;
 }
-
-/* Tối ưu hóa phông chữ nội dung để không bị báo lỗi Hỗ trợ tiếp cận */
-p, span, div {
-    line-height: 1.6 !important;
-}
-
-
-
-
 
 
 
