@@ -46,87 +46,7 @@
             .logo-area img { height: 40px; }
             .paco-header { padding: 3px 0; }
         }
-
-
-
-
-
-
-
-
-
-
-/* --- PHẦN 1: GIỮ NGUYÊN THÔNG SỐ TRANG CHỦ THEO Ý ÔNG PACO --- */
-
-.logo-area img {
-    height: 55px !important; 
-    width: auto !important;
-    border: none !important;
-    padding: 5px 0 !important;
-}
-
-.paco-btn-3d { 
-    font-size: 19px !important; 
-    font-weight: 800 !important;
-    color: #013220 !important; 
-    white-space: nowrap !important;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    height: 55px !important; 
-}
-
-.paco-sticky-container {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    display: flex !important;
-    z-index: 99999 !important;
-    background: rgba(255,255,255,0.95);
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-}
-
-@media (min-width: 1024px) {
-    .logo-area img { height: 65px !important; } 
-    .paco-btn-3d { font-size: 22px !important; }
-    body { color: #111111 !important; } 
-}
-
-/* --- PHẦN 2: "THUỐC ĐẶC TRỊ" RIÊNG CHO TRANG GIỚI THIỆU (TỐI ƯU GOOGLE) --- */
-
-/* Khắc phục LCP 12.5s: Giúp trang tải nhanh thần tốc */
-img {
-    content-visibility: auto; 
-    max-width: 100%;
-    height: auto !important;
-}
-
-/* Khắc phục lỗi nhảy bố cục CLS và điểm SEO */
-.author-image img, .intro-content img {
-    aspect-ratio: auto;
-    display: block;
-}
-
-/* Tối ưu hóa phông chữ nội dung để không bị báo lỗi Hỗ trợ tiếp cận */
-p, span, div {
-    line-height: 1.6 !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 </style>
 </head>
 <body>
@@ -198,8 +118,8 @@ p, span, div {
 <div id="menuList" class="noidung-menu">
     <a href="https://duongdenbinhyen.com/">TRANG CHỦ</a>
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
-    <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
-    <a href="index.html#lienhe">LIÊN HỆ</a>
+    <a href="tac-pham.html">TÁC PHẨM MỚI</a>
+    <a href="lien-he.html">LIÊN HỆ</a>
 </div>
 
 <script>
@@ -233,7 +153,7 @@ window.addEventListener('scroll', function() {
 
 
 <section class="hero-banner-section">
-    <img src="duongdenbinhyen.jpg" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
+    <img src="duongdenbinhyen.jpg" width="1600" height="600" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
 </section>
 
 <style>
@@ -333,7 +253,7 @@ window.addEventListener('scroll', function() {
         </p>
 
         <div class="author-img-wrapper">
-            <img src="tacgiathiennhan.jpg" alt="Tác giả Thiện Nhân" class="author-img">
+            <img src="tacgiathiennhan.jpg" width="700" height="700" alt="Tác giả Thiện Nhân" class="author-img">
         </div>
     </div>
 </section>
@@ -363,20 +283,16 @@ window.addEventListener('scroll', function() {
     }
 
     .book-image {
-    display: block; 
-    margin: 30px auto 0; 
-    width: 100% !important; /* Sửa 300px thành 100% để full máy tính */
-    height: auto;
-    border-radius: 4px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 600px) {
-    .book-image { 
-        width: 100% !important; 
-        max-width: 100% !important; /* Đảm bảo full điện thoại */
+        display: block; margin: 30px auto 0; width: 300px; height: auto;
+        border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-}
+
+    @media (max-width: 600px) {
+        .book-intro-section { padding: 40px 15px; }
+        .section-label-sync { font-size: 1.3em; line-height: 1.4; }
+        .book-description { font-size: 1.1em; text-indent: 20px; }
+        .book-image { width: 100%; max-width: 250px; }
+    }
 </style>
 
 <section class="book-intro-section">
@@ -391,7 +307,7 @@ window.addEventListener('scroll', function() {
             “Một người viết lặng lẽ, lắng nghe đời bằng ánh nhìn sâu và trái tim rộng mở. Sinh ra từ miền quê lúa, ông mang theo sự chân phương giữa phố thị ồn ào, giữ cho mình nét bình dị và tấm lòng thấu cảm. Viết không để phô bày những điều lớn lao, mà để chạm vào những khoảnh khắc nhỏ bé, nơi cuộc sống cất lời theo cách riêng—tinh tế và lặng thầm. Bởi giữa bộn bề, bình yên vẫn luôn ở rất gần.”
         </p>
 
-        <img src="haibia.jpg" alt="Hành trình viết" class="book-image">
+        <img src="biaduongdenbinhyen.jpg" width="1358" height="700" alt="Hành trình viết" class="book-image">
     </div>
 </section>
 
@@ -537,19 +453,19 @@ window.addEventListener('scroll', function() {
 
         <div class="milestone-grid">
             <div class="milestone-item">
-                <img src="ddby.jpg" alt="Đường đến bình yên" class="milestone-img">
+                <img src="ddby.jpg" width="667" height="1000" alt="Đường đến bình yên" class="milestone-img">
                 <span class="milestone-time">Xuất bản và phát hành 12/2024</span>
                 <p class="milestone-text">Cuốn sách đầu tiên mở ra hành trình viết về chữa lành và tìm lại sự tĩnh lặng trong tâm hồn.</p>
             </div>
 
             <div class="milestone-item">
-                <img src="thi_tham.jpg" alt="Thì thầm" class="milestone-img">
+                <img src="thi_tham.jpg"  width="667" height="1000" alt="Thì thầm" class="milestone-img">
                 <span class="milestone-time">Xuất bản và phát hành 05/2025</span>
                 <p class="milestone-text">Tập tản văn ghi lại những chiêm nghiệm nhẹ nhàng, như lời thì thầm từ sâu thẳm trái tim, nâng đỡ người đọc trong từng khoảnh khắc đời sống.</p>
             </div>
 
             <div class="milestone-item">
-                <img src="nguoiviet.jpg" alt="Các dự án tiếp theo" class="milestone-img">
+                <img src="nguoiviet.jpg" width="819" height="1229" alt="Các dự án tiếp theo" class="milestone-img">
                 <span class="milestone-time">Các dự án tiếp theo</span>
                 <p class="milestone-text">Chuỗi tác phẩm sắp ra mắt, tiếp tục đồng hành cùng bạn đọc trên con đường tìm kiếm bình yên và sự thấu hiểu.</p>
             </div>
@@ -1114,7 +1030,7 @@ window.addEventListener('scroll', function() {
 
         <div class="footer-info">
             <span class="footer-item">
-                <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình - Thành phố Hồ Chí Minh - Việt Nam
+                <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình – Phường Bến Nghé - Tp. Hồ Chí Minh
             </span>
             <span class="footer-item">
                 <span class="footer-label">Điện thoại:</span> <a href="tel:0933223301" class="footer-link">09 33 22 33 01</a>
@@ -1203,6 +1119,6 @@ window.addEventListener('scroll', function() {
 </style>
 <body>
 <div class="paco-sticky-container">
-    <a href="https://duongdenbinhyen.com/#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
-    <a href="https://duongdenbinhyen.com/#ebook" class="paco-btn-3d right">XEM EBOOK</a>
+    <a href="#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
+    <a href="#ebook" class="paco-btn-3d right">XEM EBOOK</a>
 </div>
