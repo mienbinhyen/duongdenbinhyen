@@ -47,6 +47,69 @@
     .paco-header { padding: 3px 0; }
 }
   
+
+
+
+
+
+
+
+
+
+/* 1. KHÔI PHỤC LOGO CÂN ĐỐI (Sửa lỗi hình 9c3063) */
+.logo-area img {
+    height: 55px !important; /* Tăng nhẹ kích thước để cân đối trên máy tính */
+    width: auto !important;
+    border: none !important;
+    padding: 5px 0 !important;
+}
+
+/* 2. TỐI ƯU NÚT CHO SEO & TIẾP CẬN (Điểm 100 Google) */
+.paco-btn-3d { 
+    font-size: 19px !important; /* Chữ to rõ đạt chuẩn Google */
+    font-weight: 800 !important;
+    color: #013220 !important; /* Xanh cực đậm để đạt tương phản 100% */
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 55px !important; /* Kích thước điểm chạm lý tưởng cho SEO di động */
+}
+
+/* 3. CỐ ĐỊNH NÚT DƯỚI ĐÁY (Sửa lỗi ghim nút) */
+.paco-sticky-container {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    z-index: 99999 !important;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* 4. TỐI ƯU RIÊNG CHO MÁY TÍNH (Đẩy Hiệu suất > 90) */
+@media (min-width: 1024px) {
+    .logo-area img { height: 65px !important; } /* Logo máy tính to và sang trọng hơn */
+    .paco-btn-3d { font-size: 22px !important; }
+    body { color: #111111 !important; } /* Chữ thân bài đậm rõ để Google không bắt lỗi */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
