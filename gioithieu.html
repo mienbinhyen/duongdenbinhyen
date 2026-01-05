@@ -46,7 +46,87 @@
             .logo-area img { height: 40px; }
             .paco-header { padding: 3px 0; }
         }
-  
+
+
+
+
+
+
+
+
+
+
+/* --- PHẦN 1: GIỮ NGUYÊN THÔNG SỐ TRANG CHỦ THEO Ý ÔNG PACO --- */
+
+.logo-area img {
+    height: 55px !important; 
+    width: auto !important;
+    border: none !important;
+    padding: 5px 0 !important;
+}
+
+.paco-btn-3d { 
+    font-size: 19px !important; 
+    font-weight: 800 !important;
+    color: #013220 !important; 
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: 55px !important; 
+}
+
+.paco-sticky-container {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    z-index: 99999 !important;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 1024px) {
+    .logo-area img { height: 65px !important; } 
+    .paco-btn-3d { font-size: 22px !important; }
+    body { color: #111111 !important; } 
+}
+
+/* --- PHẦN 2: "THUỐC ĐẶC TRỊ" RIÊNG CHO TRANG GIỚI THIỆU (TỐI ƯU GOOGLE) --- */
+
+/* Khắc phục LCP 12.5s: Giúp trang tải nhanh thần tốc */
+img {
+    content-visibility: auto; 
+    max-width: 100%;
+    height: auto !important;
+}
+
+/* Khắc phục lỗi nhảy bố cục CLS và điểm SEO */
+.author-image img, .intro-content img {
+    aspect-ratio: auto;
+    display: block;
+}
+
+/* Tối ưu hóa phông chữ nội dung để không bị báo lỗi Hỗ trợ tiếp cận */
+p, span, div {
+    line-height: 1.6 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
