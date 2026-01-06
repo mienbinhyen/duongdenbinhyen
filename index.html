@@ -60,15 +60,24 @@
 
 
 
+/* 0. KHÓA CHẶT LỀ TRANG (Sửa lỗi dịch chuyển trang lần đầu) */
+html, body {
+max-width: 100% !important;
+overflow-x: hidden !important;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
 /* 1. LOGO CÂN ĐỐI */
 .logo-area img {
-height: 55px !important;
+height: 45px !important;
 width: auto !important;
 border: none !important;
 padding: 5px 0 !important;
 }
 
-/* 2. NÚT SEO (Giữ chỉ số, bỏ can thiệp lề) /
+/* 2. NÚT SEO (Giữ chỉ số, bỏ can thiệp lề) */
 .paco-btn-3d {
 font-size: 19px !important;
 font-weight: 800 !important;
@@ -77,10 +86,10 @@ display: flex !important;
 align-items: center;
 justify-content: center;
 height: 55px !important;
-box-sizing: border-box !important; / Chống nở nút gây tràn */
+box-sizing: border-box !important;
 }
 
-/* 3. GHIM NÚT (Xóa nền trắng & Shadow, Fix tràn lề) /
+/* 3. GHIM NÚT (Xóa nền trắng & Shadow, Fix tràn lề) */
 .paco-sticky-container {
 position: fixed !important;
 bottom: 0 !important;
@@ -88,25 +97,24 @@ left: 0 !important;
 width: 100% !important;
 display: flex !important;
 z-index: 99999 !important;
-background: transparent !important; / Trả lại nền trong suốt /
-box-shadow: none !important; / Bỏ bóng đổ đè footer /
-box-sizing: border-box !important; / Quan trọng: Fix tràn lề */
+background: transparent !important;
+box-shadow: none !important;
+box-sizing: border-box !important;
 }
 
-/* 4. TỐI ƯU MÁY TÍNH (Hiệu suất > 90) /
+/* 4. TỐI ƯU MÁY TÍNH (Hiệu suất > 90) */
 @media (min-width: 1024px) {
 .logo-area img { height: 65px !important; }
 .paco-btn-3d { font-size: 22px !important; }
 body {
 color: #111111 !important;
-overflow-x: hidden !important; / Khóa chặt lề ngang */
 }
 }
 
-/* 5. FIX LỖI NHẢY TRANG & TẢI CHẬM (LCP/CLS) /
+/* 5. FIX LỖI NHẢY TRANG & TẢI CHẬM (LCP/CLS) */
 .hero-banner-section {
 width: 100% !important;
-max-width: 100vw !important; / Ép không vượt quá màn hình */
+max-width: 100% !important;
 overflow: hidden;
 box-sizing: border-box !important;
 }
@@ -115,8 +123,8 @@ box-sizing: border-box !important;
 width: 100% !important;
 height: auto !important;
 display: block !important;
-content-visibility: auto; /* Tăng tốc độ load /
-aspect-ratio: auto; / Để trình duyệt tự tính theo file ảnh thực */
+content-visibility: auto;
+aspect-ratio: auto;
 }
 
 .content-section img {
@@ -125,7 +133,6 @@ height: auto !important;
 display: block !important;
 box-sizing: border-box !important;
 }
-
 
 
 
