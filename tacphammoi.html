@@ -1100,65 +1100,73 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
+
+
+
 <style>
-    /* KHỐI CHỨA 2 NÚT */
+    /* 1. KHỐI CHỨA 2 NÚT - Tối ưu đa thiết bị */
     .paco-sticky-container {
         position: fixed;
-        bottom: 10px; /* Cách đáy 10px để tách biệt */
-        left: 5%;
-        width: 90%; /* Thu gọn lại một chút để không chạm lề trái phải */
+        bottom: 10px;
+        left: 5%; /* Chuẩn cho điện thoại */
+        width: 90%; 
         display: flex;
-        gap: 5px; /* Khoảng cách giữa 2 nút */
+        gap: 5px;
         z-index: 99999;
     }
 
-    /* PHONG CÁCH NÚT 3D SANG TRỌNG */
+    /* CHỈ ÁP DỤNG CĂN GIỮA CHO MÁY TÍNH (Khóa khổ bài viết) */
+    @media (min-width: 1024px) {
+        .paco-sticky-container {
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 100%;
+            max-width: 900px; /* Khớp với khổ chữ/hình của bài viết */
+        }
+    }
+
+    /* 2. PHONG CÁCH NÚT 3D SANG TRỌNG (Giữ nguyên) */
     .paco-btn-3d {
         flex: 1;
-        height: 60px; /* Độ cao lớn để nút nhìn quyền lực */
-        background: #87CEFA; /* Màu xanh biển nhạt Ông chọn */
-        color: #004a99; /* Chữ xanh thẫm nổi bật */
+        height: 60px;
+        background: #87CEFA;
+        color: #004a99;
         text-decoration: none;
         font-weight: bold;
-        font-size: 30px; /* Chữ lớn rực rỡ */
+        font-size: 30px;
         text-transform: uppercase;
-        border-radius: 15px; /* Bo góc sang trọng */
+        border-radius: 15px;
         display: flex;
         align-items: center;
         transition: all 0.2s;
         border: none;
-        
-        /* ĐỔ BÓNG 3D: Bóng tối đậm bên dưới tạo độ dày */
         box-shadow: 0 6px 0 #4682B4, 0 8px 15px rgba(0,0,0,0.3);
         text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
     }
 
-    /* NÚT TRÁI: Chữ canh phải (về giữa màn hình) */
-    .paco-btn-3d.left {
-        justify-content: flex-end;
-        padding-right: 25px;
-    }
+    .paco-btn-3d.left { justify-content: flex-end; padding-right: 25px; }
+    .paco-btn-3d.right { justify-content: flex-start; padding-left: 25px; }
 
-    /* NÚT PHẢI: Chữ canh trái (về giữa màn hình) */
-    .paco-btn-3d.right {
-        justify-content: flex-start;
-        padding-left: 25px;
-    }
-
-    /* HIỆU ỨNG BẤM PHÍM */
     .paco-btn-3d:active {
         box-shadow: 0 2px 0 #5f9ea0, 0 4px 6px rgba(0,0,0,0.3);
         transform: translateY(4px);
     }
 
-    /* TƯƠNG THÍCH MOBILE */
+    /* 3. TƯƠNG THÍCH MOBILE CHO NÚT (Giữ nguyên) */
     @media (max-width: 600px) {
-        .paco-sticky-container { width: 96%; left: 2%; bottom: 8px; }
         .paco-btn-3d { font-size: 20px; height: 50px; border-radius: 10px; }
         .paco-btn-3d.left { padding-right: 15px; }
         .paco-btn-3d.right { padding-left: 15px; }
     }
 </style>
+
+
 <body>
 <div class="paco-sticky-container">
     <a href="https://duongdenbinhyen.com/#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
