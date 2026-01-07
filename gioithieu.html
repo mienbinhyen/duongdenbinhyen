@@ -13,14 +13,12 @@
             justify-content: center;
             align-items: center;
             
-            /* 1. NỀN GƯƠNG XANH NHẠT (Alice Blue) */
+            /* GIỐNG HỆT INDEX: NỀN GƯƠNG XANH NHẠT (Alice Blue) */
             background-color: rgba(240, 248, 255, 0.85); 
             backdrop-filter: blur(12px); 
             -webkit-backdrop-filter: blur(12px);
             
-            /* 2. THU HẸP CHIỀU CAO 30% */
             padding: 5px 0; 
-            
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
             position: sticky;
             top: 0;
@@ -36,7 +34,7 @@
         }
 
         .logo-area img {
-            height: 50px; /* Logo gọn gàng theo yêu cầu */
+            height: 50px; 
             width: auto;
             display: block;
         }
@@ -72,6 +70,7 @@
 <h1 style="display:none;">Đường Đến Bình Yên | thì thầm | Miền bình yên | Sách mở lối | tác giả Thiện Nhân</h1>
 
 <style>
+/* Gộp các nhãn section để tối ưu dung lượng */
 .section-label, .section-label-sync, .section-label-author, .section-label-values {
     white-space: nowrap !important;
 }
@@ -81,26 +80,23 @@
     }
 }
 
-
-/* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
+/* Nút Menu 3 gạch */
 .menu-paco {
     position: fixed;
     top: 10px;
     right: 15px;
     z-index: 10000;
     color: #008080;
-    font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
+    font-size: 24px;
     cursor: pointer;
     transition: 0.3s;
 }
-
-/* Hiệu ứng khi rê chuột vào nút 3 gạch */
 .menu-paco:hover {
-    color: #ff6600; /* Đổi sang màu cam để nổi bật */
+    color: #ff6600;
     transform: scale(1.1);
 }
 
-/* 2. Bảng menu sổ ra */
+/* Bảng menu sổ xuống */
 .noidung-menu {
     display: none;
     position: fixed;
@@ -113,7 +109,6 @@
     width: 200px;
     border-radius: 4px;
 }
-
 .noidung-menu a {
     display: block;
     padding: 12px 15px;
@@ -124,18 +119,16 @@
     border-bottom: 1px solid #eee;
     transition: 0.3s;
 }
-
-/* Hiệu ứng nổi bật khi rê chuột vào từng mục menu */
 .noidung-menu a:hover {
-    background: #008080; /* Nền xanh */
-    color: white; /* Chữ trắng */
+    background: #008080;
+    color: white;
 }
 </style>
 
 <div class="menu-paco" onclick="toggleMenu()" id="menuButton">☰</div>
 
 <div id="menuList" class="noidung-menu">
-    <a href="https://duongdenbinhyen.com/">TRANG CHỦ</a>
+    <a href="index.html">TRANG CHỦ</a>
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
     <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
     <a href="index.html#lienhe">LIÊN HỆ</a>
@@ -149,19 +142,15 @@ function toggleMenu() {
 window.addEventListener('click', function(e){   
     var m = document.getElementById('menuList');
     var b = document.getElementById('menuButton');
-    if (!m.contains(e.target) && !b.contains(e.target)) m.style.display = "none";
+    if (m && b && !m.contains(e.target) && !b.contains(e.target)) m.style.display = "none";
 });
 window.addEventListener('scroll', function() {
-    document.getElementById("menuList").style.display = "none";
+    var m = document.getElementById("menuList");
+    if (m) m.style.display = "none";
 });
 </script>
 
-
-
-
-
-
- <div class="paco-header">
+<div class="paco-header">
     <div class="logo-area">
         <a href="https://duongdenbinhyen.com/">
             <img src="Paco_binhyen.png" width="1600" height="200" alt="Logo">
@@ -171,12 +160,28 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="hero-banner-section">
     <img src="duongdenbinhyen.jpg" width="1600" height="600" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
 </section>
 
 <style>
-    /* BANNER TƯƠNG THÍCH MỌI THIẾT BỊ */
     .hero-banner-section {
         position: relative;
         overflow: hidden;
@@ -191,31 +196,29 @@ window.addEventListener('scroll', function() {
         object-fit: cover;
     }
 
-    /* HIỆU ỨNG ÁNH SÁNG MẠNH VÀ RỘNG */
     .hero-banner-section::after {
         content: "";
         position: absolute;
         top: 0;
         left: -200%;
-        width: 80%; /* Dải sáng rộng hơn */
+        width: 80%;
         height: 100%;
         background: linear-gradient(
             to right, 
             rgba(255,255,255,0) 0%, 
-            rgba(255,255,255,0.6) 50%, /* Độ sáng mạnh (0.6) */
+            rgba(255,255,255,0.6) 50%,
             rgba(255,255,255,0) 100%
         );
         transform: skewX(-20deg);
-        animation: shine-light 6s infinite;
+        animation: shine-light 5s infinite;
     }
 
     @keyframes shine-light {
         0% { left: -200%; }
-        25% { left: 150%; }
+        30% { left: 150%; }
         100% { left: 150%; }
     }
 
-    /* TƯƠNG THÍCH MOBILE */
     @media (max-width: 600px) {
         .hero-image {
             min-height: 150px;
@@ -229,11 +232,13 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
 <style>
     .about-author-section { padding: 60px 20px; background-color: #f8f9fa; }
     .container-paco { max-width: 900px; margin: auto; }
 
-    /* Tiêu đề đồng bộ có gạch đứng và chống tràn trên mobile */
+    /* Tiêu đề đồng bộ - Tối ưu mã màu và khoảng cách */
     .section-label-author {
         font-family: 'Times New Roman', serif; font-size: 1.6em; color: #008080;
         text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
@@ -283,11 +288,17 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
 <style>
     .book-intro-section { padding: 60px 20px; background-color: #f8f9fa; }
     .container-paco { max-width: 900px; margin: auto; }
 
-    /* Tiêu đề đồng bộ màu xanh #008080 và gạch đứng */
+    /* Tiêu đề đồng bộ - Giữ nguyên thiết kế của ông */
     .section-label-sync {
         font-family: 'Times New Roman', serif; font-size: 1.6em; color: #008080;
         text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
@@ -302,20 +313,18 @@ window.addEventListener('scroll', function() {
     }
 
     .book-image {
-    display: block; 
-    margin: 30px auto 0; 
-    width: 100% !important; /* Sửa 300px thành 100% để full máy tính */
-    height: auto;
-    border-radius: 4px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 600px) {
-    .book-image { 
-        width: 100% !important; 
-        max-width: 100% !important; /* Đảm bảo full điện thoại */
+        display: block; 
+        margin: 30px auto 0; 
+        width: 100%;
+        height: auto;
+        border-radius: 4px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-}
+
+    @media (max-width: 600px) {
+        .book-intro-section { padding: 40px 15px; }
+        .book-description { font-size: 1.15em; line-height: 1.7; text-indent: 30px; }
+    }
 </style>
 
 <section class="book-intro-section">
@@ -333,6 +342,8 @@ window.addEventListener('scroll', function() {
         <img src="haibia.jpg" width="1358" height="788" alt="Hành trình viết" class="book-image">
     </div>
 </section>
+
+
 
 
 
@@ -373,7 +384,7 @@ window.addEventListener('scroll', function() {
 
     @media (max-width: 600px) {
         .life-inspiration-section { padding: 40px 15px; }
-        .life-description { font-size: 1.1em; text-indent: 25px; }
+        .life-description { font-size: 1.1em; text-indent: 25px; line-height: 1.7; }
         .section-label-life {
             font-size: 4.5vw !important;
             white-space: nowrap !important;
@@ -381,6 +392,10 @@ window.addEventListener('scroll', function() {
         }
     }
 </style>
+
+
+
+
 
 
 
@@ -431,13 +446,20 @@ window.addEventListener('scroll', function() {
         border-radius: 8px; 
         box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
         text-align: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .milestone-img { 
         width: 100%; 
         height: auto; 
         border-radius: 4px; 
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+    
+    .milestone-item:hover .milestone-img {
+        transform: translateY(-5px);
     }
 
     .milestone-time { 
@@ -454,17 +476,15 @@ window.addEventListener('scroll', function() {
         line-height: 1.6; 
         color: #444; 
         text-align: justify; 
+        margin-top: auto;
     }
 
     @media (max-width: 800px) {
-        /* PHẦN BỔ SUNG ĐỂ TƯƠNG THÍCH TIÊU ĐỀ TRÊN ĐIỆN THOẠI */
         .section-label-milestone {
             font-size: 4.5vw !important;
             white-space: nowrap !important;
             letter-spacing: 1px;
         }
-        /* HẾT PHẦN BỔ SUNG */
-
         .milestone-grid { flex-wrap: wrap; }
         .milestone-item { flex: 0 0 100%; }
     }
@@ -508,8 +528,9 @@ window.addEventListener('scroll', function() {
 
 
 
+
 <style>
-    /* KHỐI: TRIẾT LÝ TRONG TỪNG TRANG VIẾT - TỐI ƯU MOBILE */
+    /* KHỐI: TRIẾT LÝ TRONG TỪNG TRANG VIẾT - TỐI ƯU HIỆU SUẤT */
     .values-section { padding: 60px 20px; background-color: #ffffff; }
     .container-paco { max-width: 900px; margin: auto; }
 
@@ -525,14 +546,14 @@ window.addEventListener('scroll', function() {
         margin-bottom: 40px;
         border-left: 6px solid #008080; 
         padding-left: 15px; 
-        line-height: 1.3; /* Tăng độ giãn dòng để không bị đè chữ */
+        line-height: 1.3;
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
 
     .values-grid { display: flex; flex-direction: column; gap: 15px; }
 
     .value-card-horizontal {
-        display: flex; align-items: center; gap: 20px;
+        display: flex; align-items: flex-start; gap: 20px;
         padding: 20px; border-radius: 12px;
         background: rgba(235, 250, 250, 0.6); 
         backdrop-filter: blur(5px);
@@ -547,7 +568,7 @@ window.addEventListener('scroll', function() {
         transform: translateX(5px);
     }
 
-    .value-icon { font-size: 1.3em; color: #008080; flex-shrink: 0; }
+    .value-icon { font-size: 1.3em; color: #008080; flex-shrink: 0; margin-top: 3px; }
     .value-content { flex-grow: 1; }
 
     .value-title {
@@ -560,24 +581,15 @@ window.addEventListener('scroll', function() {
         line-height: 1.6; color: #333; margin: 0; text-align: justify;
     }
 
-    /* ĐIỀU CHỈNH CHUYÊN SÂU CHO MÀN HÌNH NHỎ */
     @media (max-width: 600px) {
         .values-section { padding: 40px 15px; }
-        
         .section-label-values { 
-            font-size: 1.25em; /* Hạ cỡ chữ tiêu đề trên mobile */
+            font-size: 1.25em; 
             letter-spacing: 1px; 
             margin-bottom: 25px;
             line-height: 1.4;
         }
-
-        .value-card-horizontal { 
-            padding: 15px; 
-            gap: 12px; 
-            flex-direction: row; /* Giữ icon và chữ nằm ngang cho gọn */
-            align-items: flex-start;
-        }
-
+        .value-card-horizontal { padding: 15px; gap: 12px; }
         .value-title { font-size: 1.05em; }
         .value-text { font-size: 1em; line-height: 1.5; }
     }
@@ -586,6 +598,7 @@ window.addEventListener('scroll', function() {
         .values-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            align-items: stretch;
         }
     }
 </style>
@@ -637,6 +650,11 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
@@ -646,22 +664,22 @@ window.addEventListener('scroll', function() {
     }
     .container-paco { max-width: 900px; margin: auto; }
 
-    /* TIÊU ĐỀ ĐỒNG BỘ - ĐÃ CỐ ĐỊNH 1 HÀNG */
+    /* TIÊU ĐỀ ĐỒNG BỘ - CHUẨN GOOGLE */
     .section-label {
-    font-family: 'Times New Roman', serif;
-    font-size: 28px;
-    color: #008080 !important;
-    text-transform: uppercase;
-    font-weight: bold;
-    display: block;
-    text-align: left;
-    margin-bottom: 30px;
-    border-left: 6px solid #008080 !important;
-    padding-left: 15px;
-    line-height: 1.2;
-    /* GIỮ TIÊU ĐỀ LUÔN TRÊN 1 HÀNG */
-    white-space: nowrap;
-}
+        font-family: 'Times New Roman', serif;
+        font-size: 28px;
+        color: #008080 !important;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+        text-align: left;
+        margin-bottom: 30px;
+        border-left: 6px solid #008080 !important;
+        padding-left: 15px;
+        line-height: 1.2;
+        white-space: nowrap;
+        text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.1);
+    }
 
     .social-grid {
         display: grid;
@@ -669,6 +687,7 @@ window.addEventListener('scroll', function() {
         gap: 25px;
     }
 
+    /* NÚT 3D NEUMORPHISM - TỐI ƯU CẢM ỨNG */
     .btn-paco-3d {
         background: #f0f2f5;
         border-radius: 12px;
@@ -683,6 +702,7 @@ window.addEventListener('scroll', function() {
         color: #004a99;
         box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
         transition: all 0.2s ease;
+        border: none;
     }
 
     .btn-paco-3d i {
@@ -700,8 +720,12 @@ window.addEventListener('scroll', function() {
     }
 
     @media (max-width: 600px) {
-        /* ĐIỀU CHỈNH CỠ CHỮ ĐỂ KHÔNG TRÀN MÀN HÌNH */
-        .section-label { font-size: 18px; } 
+        .paco-social-section { padding: 40px 15px; }
+        .section-label { 
+            font-size: 18px; 
+            white-space: normal; 
+            border-left-width: 4px;
+        } 
         .social-grid { gap: 15px; }
         .btn-paco-3d { padding: 15px 5px; font-size: 14px; }
     }
@@ -726,6 +750,16 @@ window.addEventListener('scroll', function() {
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
 
 
