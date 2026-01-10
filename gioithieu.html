@@ -1316,7 +1316,7 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-fixed-menu {
         position: fixed;
-        right: 30px; /* Sát lề phải */
+        right: 35px; /* Sát lề phải */
         top: 75%;    /* Nâng lên vị trí giữa màn hình theo đánh dấu */
         transform: translateY(-50%);
         display: flex;
@@ -1329,25 +1329,7 @@ window.addEventListener('scroll', function() {
         width: 24px; /* Siêu nhỏ thanh thoát */
         height: 24px;
         object-fit: contain;
-    }
-    
-    /* Nút mũi tên lên nằm riêng ở dưới cùng bên phải */
-    .btn-scroll-top {
-        position: fixed;
-        right: 15px;
-        bottom: 50px; 
-        font-size: 26px;
-        color: #004a99;
-        text-decoration: none;
-        cursor: pointer;
-        z-index: 10000;
-        background: #f0f0f0; /* Tạo nền mờ nhẹ để dễ thấy */
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
+   
     }
 </style>
 
@@ -1381,7 +1363,7 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-back-top {
         position: fixed;
-        right: 30px;
+        right: 35px;
         bottom: 60px;
         width: 30px; /* Nhỏ gọn */
         height: 30px;
@@ -1485,7 +1467,7 @@ window.addEventListener('scroll', function() {
         position: fixed;
         bottom: 6px;
         left: 5%; /* Chuẩn cho điện thoại */
-        width: 90%; 
+        width: 88%; 
         display: flex;
         gap: 5px;
         z-index: 99999;
@@ -1531,8 +1513,8 @@ window.addEventListener('scroll', function() {
     /* 3. TƯƠNG THÍCH MOBILE CHO NÚT (Giữ nguyên) */
     @media (max-width: 600px) {
         .paco-btn-3d { font-size: 20px; height: 35px; border-radius: 10px; }
-        .paco-btn-3d.left { padding-right: 15px; }
-        .paco-btn-3d.right { padding-left: 15px; }
+        .paco-btn-3d.left { padding-right: 10px; }
+        .paco-btn-3d.right { padding-left: 10px; }
     }
 </style>
 
