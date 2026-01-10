@@ -342,25 +342,27 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-catalog-wrapper {
         width: 100%;
-        max-width: 1000px;
+        max-width: 900px; /* Ép bằng khối chuẩn */
         margin: 40px auto;
-        padding: 0 15px;
+        padding: 0; 
         display: flex;
         justify-content: center;
-        gap: 150px; /* Độ dãn trên máy tính */
+        gap: 80px; /* Giảm gap để không đẩy lề */
+        box-sizing: border-box; /* Khóa không cho phình ra */
     }
     .paco-catalog-item {
         text-align: center;
+        flex: 1; /* Chia đều không gian */
     }
     .paco-catalog-item img {
-        height: 350px; /* Máy tính: Cao rõ nét */
+        height: 350px;
         width: auto;
         max-width: 100%;
         border-radius: 8px;
         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         transition: 0.3s;
         display: block;
-        margin-bottom: 15px;
+        margin: 0 auto 15px; /* Căn giữa ảnh */
     }
     .paco-catalog-item img:hover { transform: translateY(-10px); }
     
@@ -375,13 +377,13 @@ window.addEventListener('scroll', function() {
     }
 
     /* ĐIỀU CHỈNH CHO ĐIỆN THOẠI */
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
         .paco-catalog-wrapper {
-            gap: 70px; /* Thu hẹp khoảng cách trên mobile */
-            padding: 20px 10px;
+            gap: 20px; /* Mobile để gần nhau cho đẹp */
+            padding: 0 15px; /* Khớp padding khối chuẩn */
         }
         .paco-catalog-item img {
-            height: 180px; /* Mobile: Nhỏ gọn thanh thoát */
+            height: 180px;
         }
         .paco-btn-detail {
             font-size: 14px;
@@ -404,6 +406,10 @@ window.addEventListener('scroll', function() {
         <a href="https://duongdenbinhyen.com/tacphammoi.html#thitham" class="paco-btn-detail">Xem chi tiết</a>
     </div>
 </div>
+
+
+
+
 
 
 
@@ -753,13 +759,20 @@ window.addEventListener('scroll', function() {
 
 
 <style>
+    /* Ép lại padding cho đồng bộ khối chuẩn */
     .paco-news-section { padding: 40px 20px; background-color: #ffffff; }
-    .container-paco-news { max-width: 900px; margin: auto; }
+
+    .container-paco-news { 
+        max-width: 900px; /* Giới hạn tối đa bằng khối chuẩn */
+        width: 100%;      /* Tự co giãn theo màn hình, không gây tràn */
+        margin: auto; 
+        box-sizing: border-box; 
+    }
 
     .section-label-news {
         font-family: 'Times New Roman', serif; font-size: 1.6em; color: #004a99;
         text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
-        display: block; text-align: left; margin-bottom: 30px;
+        display: block; text-align: left; margin-bottom: 20px; /* Giảm để gần nhau hơn */
         border-left: 6px solid #004a99; padding-left: 15px; line-height: 1.2;
         text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
@@ -768,17 +781,16 @@ window.addEventListener('scroll', function() {
 
     .news-item-paco {
         display: flex; align-items: center; gap: 15px;
-        padding: 6px 15px; 
+        padding: 8px 0; /* Bỏ padding ngang để tránh cộng dồn gây tràn */
         border-bottom: 1px solid #f0f0f0;
         transition: all 0.3s ease;
     }
 
     .news-item-paco:hover {
         background: rgba(240, 247, 255, 0.8);
-        transform: translateX(8px);
+        padding-left: 10px; /* Chỉ đẩy nhẹ khi hover */
     }
 
-    /* 1. Icon cây bút màu vàng đồng nổi bật */
     .news-icon-paco { 
         color: #d4af37; 
         font-size: 1.3em; 
@@ -786,46 +798,38 @@ window.addEventListener('scroll', function() {
         filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
     }
 
-    /* 2. Màu chữ giống màu Link (Xanh dương đặc trưng) */
     .news-link-paco {
         font-family: 'Times New Roman', serif; font-size: 1.15em;
-        color: #0066cc; /* Màu xanh Link tiêu chuẩn, dễ nhận biết */
+        color: #0066cc;
         text-decoration: underline;
         text-underline-offset: 4px;
         font-weight: 500;
         transition: all 0.3s;
     }
 
-    .news-item-paco:hover .news-link-paco { 
-        color: #004a99; /* Đậm lên khi di chuột */
-        text-decoration-thickness: 2px;
+    /* ĐIỀU CHỈNH MOBILE */
+    @media (max-width: 600px) {
+        .paco-news-section { padding: 30px 15px; }
+        .section-label-news { font-size: 1.15em; }
+        .news-link-paco { font-size: 1.05em; }
     }
 </style>
 
 <section class="paco-news-section">
     <div class="container-paco-news">
         <span class="section-label-news">BÀI VIẾT MỚI</span>
-
         <div class="news-list-paco">
             <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuduongdenbinhyen" class="news-link-paco">
-                    Giới thiệu sách Đường đến Bình yên
-                </a>
+                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuduongdenbinhyen" class="news-link-paco">Giới thiệu sách Đường đến Bình yên</a>
             </div>
-
             <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuthitham" class="news-link-paco">
-                    Giới thiệu sách Thì thầm
-                </a>
+                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuthitham" class="news-link-paco">Giới thiệu sách Thì thầm</a>
             </div>
-
             <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/gioithieu.html" class="news-link-paco">
-                    Giới thiệu về tác giả
-                </a>
+                <a href="https://duongdenbinhyen.com/gioithieu.html" class="news-link-paco">Giới thiệu về tác giả</a>
             </div>
         </div>
     </div>
@@ -1312,7 +1316,7 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-fixed-menu {
         position: fixed;
-        right: 35px; /* Sát lề phải */
+        right: 25px; /* Sát lề phải */
         top: 75%;    /* Nâng lên vị trí giữa màn hình theo đánh dấu */
         transform: translateY(-50%);
         display: flex;
@@ -1359,7 +1363,7 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-back-top {
         position: fixed;
-        right: 35px;
+        right: 25px;
         bottom: 60px;
         width: 30px; /* Nhỏ gọn */
         height: 30px;
@@ -1500,8 +1504,8 @@ window.addEventListener('scroll', function() {
     /* 3. TƯƠNG THÍCH MOBILE CHO NÚT (Giữ nguyên) */
     @media (max-width: 600px) {
         .paco-btn-3d { font-size: 20px; height: 35px; border-radius: 10px; }
-        .paco-btn-3d.left { padding-right: 10px; }
-        .paco-btn-3d.right { padding-left: 10px; }
+        .paco-btn-3d.left { padding-right: 15px; }
+        .paco-btn-3d.right { padding-left: 15px; }
     }
 </style>
 
