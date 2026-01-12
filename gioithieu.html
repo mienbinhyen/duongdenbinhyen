@@ -153,12 +153,89 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
-<div class="paco-header">
-    <div class="logo-area">
-        <a href="https://duongdenbinhyen.com/">
-            <img src="Paco_binhyen.png" width="1600" height="200" alt="Logo">
-        </a>
-    </div>
+
+
+
+
+
+
+
+
+
+
+<style>
+    /* 1. GIẢM CHIỀU CAO THANH NỀN & 2. GIẢM MÀU XANH XUỐNG CỰC MỜ (2%) */
+    .header-fixed-container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        /* Nền xanh biển siêu nhạt 4% và độ mờ kính mạnh */
+        background-color: rgba(240, 252, 255, 0.5); 
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0, 203, 153, 0.05);
+    }
+
+    .paco-brand {
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        /* 1. GIẢM ĐỘ CAO THANH NỀN TỐI ĐA (Chỉ để 2px padding) */
+        padding: 2px 0; 
+        max-width: 700px;
+        margin: 0 auto;
+        font-family: 'Times New Roman', serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: #01cb99;
+    }
+
+    @media (max-width: 600px) {
+        .paco-brand {
+            /* 1. GIẢM ĐỘ CAO TRÊN MOBILE */
+            padding: 2px 0 5px 0; 
+            text-align: center;
+        }
+    }
+
+    /* GIỮ NGUYÊN 100% THÔNG SỐ LOGO GỐC CỦA ÔNG */
+    .paco-part {
+        color: #01cb99;
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+	letter-spacing: 2px;
+        text-shadow: 
+            1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 
+            1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 
+            1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .books-part {
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #007399;
+	letter-spacing: 2px; 
+        text-shadow: 
+            1px 1px 0px #007399, 1px 1px 0px #007399, 1px 1px 0px #007399,
+            2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .paco-brand:hover .paco-part, 
+    .paco-brand:hover .books-part {
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
+</style>
+
+<div class="header-fixed-container">
+    <a href="https://duongdenbinhyen.com/" class="paco-brand">
+        <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
+    </a>
 </div>
 
 
@@ -166,68 +243,92 @@ window.addEventListener('scroll', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <section class="hero-banner-section">
-    <img src="duongdenbinhyen.jpg" width="1600" height="600" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
+    <div class="container-content">
+        <a href="https://duongdenbinhyen.com/" class="hero-text-link">
+            Miền bình yên 
+            <svg class="rss-icon" viewBox="0 0 24 24">
+                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93v-2.83z"/>
+            </svg>
+        </a>
+    </div>
 </section>
 
 <style>
+    /* 1. KHỔ NỘI DUNG (Căn theo lề của văn bản bên dưới) */
+    .container-content {
+        max-width: 900px; /* Số này phải khớp với chiều rộng phần nội dung của Ông */
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
     .hero-banner-section {
-        position: relative;
-        overflow: hidden;
         width: 100%;
-        line-height: 0;
+        padding: 10px 0;
+        background: #fff;
     }
 
-    .hero-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
+   /* 1. KHAI BÁO FONT ĐÃ TẢI LÊN HOSTING */
+@font-face {
+    font-family: 'SVN-Androgyne';
+    src: url('SVN-Androgyne.ttf'); /* Đảm bảo file nằm cùng thư mục với index.html */
+}
+
+/* 1. KHAI BÁO FONT ĐỂ MÁY KHÁC CŨNG XEM ĐƯỢC */
+@font-face {
+    font-family: 'SVN-Androgyne';
+    src: url('SVN-Androgyne.ttf'); 
+}
+
+/* 2. ÁP DỤNG FONT, HIỆU ỨNG VÀ CĂN CHỈNH */
+.hero-text-link {
+    font-family: 'SVN-Androgyne', sans-serif;
+    font-size: 55px; 
+    font-weight: normal;
+    color: #222; 
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: baseline; /* Căn logo theo chân chữ cho chuẩn mẫu */
+    letter-spacing: -0.5px;
+    
+    /* Hiệu ứng ánh sáng nhẹ đi qua */
+    background: linear-gradient(110deg, #222 45%, #888 50%, #222 55%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+/* 3. LOGO SÓNG RSS */
+.rss-icon {
+    width: 40px; /* Chỉnh lại cỡ này cho cân xứng với chữ 55px */
+    height: 40px;
+    margin-left: 3px;
+    fill: #2563eb;
+    transform: translateY(4px); /* Nhích nhẹ để logo nằm ngay ngắn trên đường cơ sở */
+}
+
+/* 4. ĐỊNH NGHĨA HIỆU ỨNG ÁNH SÁNG */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+}
+
+    @keyframes shine {
+        to { background-position: 200% center; }
     }
 
-    .hero-banner-section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -200%;
-        width: 80%;
-        height: 100%;
-        background: linear-gradient(
-            to right, 
-            rgba(255,255,255,0) 0%, 
-            rgba(255,255,255,0.6) 50%,
-            rgba(255,255,255,0) 100%
-        );
-        transform: skewX(-20deg);
-        animation: shine-light 5s infinite;
-    }
-
-    @keyframes shine-light {
-        0% { left: -200%; }
-        30% { left: 150%; }
-        100% { left: 150%; }
-    }
-
+    /* Mobile */
     @media (max-width: 600px) {
-        .hero-image {
-            min-height: 150px;
-        }
+        .hero-text-link { font-size: 28px; }
+        .rss-icon { width: 20px; height: 20px; }
     }
 </style>
+
+
+
+
 
 
 
