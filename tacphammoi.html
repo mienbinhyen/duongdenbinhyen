@@ -167,70 +167,173 @@ window.addEventListener('scroll', function() {
 
 
 
- <div class="paco-header">
-    <div class="logo-area">
-        <a href="https://duongdenbinhyen.com/">
-            <img src="Paco_binhyen.png" width="1600" height="200" alt="Logo">
-        </a>
-    </div>
+
+
+
+
+
+ 
+
+<style>
+    /* 1. GHIM CỐ ĐỊNH header */
+    .header-fixed-container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 99999; /* Đưa lên cao nhất để không bị banner đè */
+        width: 100%;
+        background-color: rgba(240, 252, 255, 0.5); 
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0, 203, 153, 0.05);
+    }
+
+    .paco-brand {
+        display: block;
+        text-align: center; /* Luôn giữa */
+        text-decoration: none !important;
+        padding: 5px 0; 
+        max-width: 100%;
+        margin: 0 auto;
+        font-family: 'Times New Roman', serif;
+    }
+
+    /* 2. LOGO CHI TIẾT */
+    .paco-part {
+        color: #01cb99;
+        font-size: 25px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 0px #0099cc, 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .books-part {
+        color: white;
+        font-size: 18px;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #007399;
+        letter-spacing: 2px; 
+        text-shadow: 1px 1px 0px #007399, 2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .paco-brand:hover .paco-part, 
+    .paco-brand:hover .books-part {
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
+</style>
+
+<div class="header-fixed-container">
+    <a href="https://duongdenbinhyen.com/" class="paco-brand">
+        <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
+    </a>
 </div>
 
 
 
-<section class="hero-banner-section">
-    <img src="tacphammoi.jpg" width="1400" height="560" alt="Miền Bình Yên - Tác giả Thiện Nhân" class="hero-image">
+
+
+
+
+
+<section class="paco-banner">
+    <div id="paco-snow"></div> 
+    <div id="paco-light"></div> 
+    <div class="paco-content">
+        <a href="https://duongdenbinhyen.com/" class="paco-link">
+            <span class="paco-text">Miền Bình Yên</span>
+            <svg class="paco-leaf" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+        </a>
+    </div>
 </section>
 
 <style>
-    /* BANNER TƯƠNG THÍCH MỌI THIẾT BỊ */
-    .hero-banner-section {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        line-height: 0;
+/* PHẦN 2: THÔNG SỐ CHỮ & KHUNG (PC) */
+.paco-banner { 
+    all: initial; 
+    display: flex !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+    position: relative !important; 
+    width: 100% !important;
+    height: 300px !important; 
+    background: #fff !important; 
+    overflow: hidden !important;
+}
+
+/* THÊM LỆNH NÀY ĐỂ BẤM ĐƯỢC LINK */
+.paco-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 999; /* Nổi lên trên tuyết để click */
+}
+
+.paco-text { 
+    font-family: 'Playfair Display', serif; font-size: 70px; font-style: italic; color: #6ab04c; 
+    text-shadow: 1px 1px 0px #000000, 3px 3px 8px rgba(0,0,0,0.15); 
+}
+.paco-leaf { width: 50px; height: 50px; fill: #6ab04c; margin-left: 10px; }
+
+/* PHẦN 3: HIỆU ỨNG ÁNH SÁNG */
+#paco-light { 
+    position: absolute; top: 0; left: -100%; width: 100%; height: 100%; pointer-events: none; z-index: 5;
+    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%);
+    animation: lightPass 12s infinite; 
+}
+@keyframes lightPass { 0% { left: -100%; } 100% { left: 100%; } }
+
+/* PHẦN 4: HIỆU ỨNG TUYẾT RƠI (PC) */
+#paco-snow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.paco-flake { position: absolute; border-radius: 50%; pointer-events: none; z-index: 15; background: #fff; }
+@keyframes pacoFall {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(200px); opacity: 0; }
+}
+
+/* PHẦN 5: ĐIỀU CHỈNH CHO MOBILE */
+@media (max-width: 768px) {
+    .paco-banner { height: 200px !important; }
+    .paco-text { font-size: 40px !important; }
+    .paco-leaf { width: 35px !important; height: 35px !important; }
+    
+    @keyframes pacoFall {
+        0% { transform: translateY(0); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(120px); opacity: 0; }
     }
-
-    .hero-image {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-    }
-
-    /* HIỆU ỨNG ÁNH SÁNG MẠNH VÀ RỘNG */
-    .hero-banner-section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -200%;
-        width: 80%; /* Dải sáng rộng hơn */
-        height: 100%;
-        background: linear-gradient(
-            to right, 
-            rgba(255,255,255,0) 0%, 
-            rgba(255,255,255,0.6) 50%, /* Độ sáng mạnh (0.6) */
-            rgba(255,255,255,0) 100%
-        );
-        transform: skewX(-20deg);
-        animation: shine-light 6s infinite;
-    }
-
-    @keyframes shine-light {
-        0% { left: -200%; }
-        25% { left: 150%; }
-        100% { left: 150%; }
-    }
-
-    /* TƯƠNG THÍCH MOBILE */
-    @media (max-width: 600px) {
-    .book-intro-section { padding: 40px 15px; }
-    .section-label-sync { font-size: 1.3em; line-height: 1.4; }
-    .book-description { font-size: 1.1em; text-indent: 20px; }
-
-    /* Ông sửa dòng này: đổi 250px thành 100% */
-    .book-image { width: 100%; max-width: 100%; } 
 }
 </style>
+
+<script>
+(function() {
+    const box = document.getElementById('paco-snow');
+    if(!box) return;
+    box.innerHTML = '';
+    const colors = ['#ffffff', '#d1d8e0', '#f1f2f6']; 
+    for (let i = 0; i < 400; i++) {
+        const f = document.createElement('div');
+        f.className = 'paco-flake';
+        f.style.background = colors[Math.floor(Math.random() * colors.length)];
+        f.style.width = f.style.height = (Math.random() * 2 + 1) + 'px';
+        f.style.left = Math.random() * 100 + '%';
+        f.style.top = Math.random() * 100 + '%'; 
+        f.style.animation = `pacoFall ${Math.random() * 3 + 2}s linear ${Math.random() * -5}s infinite`;
+        box.appendChild(f);
+    }
+})();
+</script>
+
+
+
+
+
+
 
 
 
