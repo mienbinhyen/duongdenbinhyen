@@ -71,6 +71,8 @@
 <body>
 <h1 style="display:none;">Đường Đến Bình Yên | thì thầm | Miền bình yên | Sách mở lối | tác giả Thiện Nhân</h1>
 
+
+
 <style>
 /* Gộp các nhãn section để tối ưu dung lượng */
 .section-label, .section-label-sync, .section-label-author, .section-label-values {
@@ -160,14 +162,13 @@ window.addEventListener('scroll', function() {
 
 
 
-
 <style>
-    /* 1. GHIM CỐ ĐỊNH header */
+    /* 1. GIỮ NGUYÊN KHUNG GHIM */
     .header-fixed-container {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
-        z-index: 99999; /* Đưa lên cao nhất để không bị banner đè */
+        z-index: 9999;
         width: 100%;
         background-color: rgba(240, 252, 255, 0.5); 
         backdrop-filter: blur(15px);
@@ -175,24 +176,34 @@ window.addEventListener('scroll', function() {
         border-bottom: 1px solid rgba(0, 203, 153, 0.05);
     }
 
-    .paco-brand {
-        display: block;
-        text-align: center; /* Luôn giữa */
-        text-decoration: none !important;
-        padding: 5px 0; 
-        max-width: 100%;
-        margin: 0 auto;
-        font-family: 'Times New Roman', serif;
+   .paco-brand {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    /* 1. GIẢM CHIỀU CAO: Để padding 0 và line-height nhỏ lại */
+    padding: 0px 0 !important; 
+    line-height: 35px !important; /* Chỉnh số này nhỏ xuống để thanh nền mỏng lại */
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Times New Roman', serif;
+}
+
+    @media (max-width: 600px) {
+        .paco-brand {
+            padding: 2px 0 5px 0; 
+            text-align: center;
+        }
     }
 
-    /* 2. LOGO CHI TIẾT */
+    /* GIỮ NGUYÊN 100% LOGO CỦA ÔNG */
     .paco-part {
         color: #01cb99;
         font-size: 25px;
         font-weight: 900;
         text-transform: uppercase;
+        text-decoration: none;
         letter-spacing: 2px;
-        text-shadow: 1px 1px 0px #0099cc, 1px 1px 4px rgba(0,0,0,0.5);
+        text-shadow: 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     .books-part {
@@ -201,11 +212,12 @@ window.addEventListener('scroll', function() {
         font-weight: 900;
         -webkit-text-stroke: 1px #007399;
         letter-spacing: 2px; 
-        text-shadow: 1px 1px 0px #007399, 2px 2px 4px rgba(0,0,0,0.4);
+        text-shadow: 1px 1px 0px #007399, 1px 1px 0px #007399, 1px 1px 0px #007399, 2px 2px 4px rgba(0,0,0,0.4);
     }
 
     .paco-brand:hover .paco-part, 
     .paco-brand:hover .books-part {
+        display: inline-block;
         transform: scale(1.02);
         transition: 0.3s;
     }
@@ -216,6 +228,7 @@ window.addEventListener('scroll', function() {
         <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
     </a>
 </div>
+
 
 
 
@@ -244,7 +257,7 @@ window.addEventListener('scroll', function() {
     align-items: center !important; 
     position: relative !important; 
     width: 100% !important;
-    height: 300px !important; 
+    height: 250px !important; 
     background: #fff !important; 
     overflow: hidden !important;
 }
@@ -284,7 +297,7 @@ window.addEventListener('scroll', function() {
 
 /* PHẦN 5: ĐIỀU CHỈNH CHO MOBILE */
 @media (max-width: 768px) {
-    .paco-banner { height: 200px !important; }
+    .paco-banner { height: 170px !important; }
     .paco-text { font-size: 40px !important; }
     .paco-leaf { width: 35px !important; height: 35px !important; }
     
