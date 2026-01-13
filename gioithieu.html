@@ -194,44 +194,39 @@ window.addEventListener('scroll', function() {
 
 
     .paco-brand {
-
-        display: block;
-
-        text-align: left;
-
-        text-decoration: none;
-
-        /* 1. GIẢM ĐỘ CAO THANH NỀN TỐI ĐA (Chỉ để 2px padding) */
-
-        padding: 1px 0; 
-
-        max-width: 700px;
-
-        margin: 0 auto;
-
-        font-family: 'Times New Roman', serif;
-
-        font-size: 30px;
-
-        font-weight: bold;
-
-        color: #01cb99;
-
-    }
+    display: block;
+    text-align: center; /* Giữ nguyên để căn giữa chữ */
+    text-decoration: none;
+    padding: 1px 0; 
+    
+    max-width: 100%; /* SỬA TỪ 700px THÀNH 100% */
+    
+    margin: 0 auto;
+    font-family: 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #01cb99;
+}
 
 
 
     @media (max-width: 600px) {
 
-        .paco-brand {
-
-            /* 1. GIẢM ĐỘ CAO TRÊN MOBILE */
-
-            padding: 2px 0 5px 0; 
-
-            text-align: center;
-
-        }
+     .paco-brand {
+        display: block; 
+        text-align: center;
+        text-decoration: none;
+        padding: 1px 0;  
+        
+        /* SỬA 2 DÒNG NÀY ĐỂ LOGO RA GIỮA */
+        width: fit-content; 
+        margin: 0 auto; 
+        
+        font-family: 'Times New Roman', serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: #01cb99;
+    }
 
     }
 
