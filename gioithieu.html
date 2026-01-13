@@ -161,153 +161,61 @@ window.addEventListener('scroll', function() {
 
 
 
-<section class="paco-logo">
-
 <style>
-
-    /* 1. GIẢM CHIỀU CAO THANH NỀN & 2. GIẢM MÀU XANH XUỐNG CỰC MỜ (2%) */
-
+    /* 1. GHIM CỐ ĐỊNH header */
     .header-fixed-container {
-
         position: -webkit-sticky;
-
         position: sticky;
-
         top: 0;
-
-        z-index: 9999;
-
+        z-index: 99999; /* Đưa lên cao nhất để không bị banner đè */
         width: 100%;
-
-        /* Nền xanh biển siêu nhạt 6% và độ mờ kính mạnh */
-
         background-color: rgba(240, 252, 255, 0.5); 
-
         backdrop-filter: blur(15px);
-
         -webkit-backdrop-filter: blur(15px);
-
         border-bottom: 1px solid rgba(0, 203, 153, 0.05);
-
     }
-
-
 
     .paco-brand {
-    display: block;
-    text-align: center; /* Giữ nguyên để căn giữa chữ */
-    text-decoration: none;
-    padding: 1px 0; 
-    
-    max-width: 100%; /* SỬA TỪ 700px THÀNH 100% */
-    
-    margin: 0 auto;
-    font-family: 'Times New Roman', serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: #01cb99;
-}
-
-
-
-    @media (max-width: 600px) {
-
-     .paco-brand {
-        display: block; 
-        text-align: center;
-        text-decoration: none;
-        padding: 1px 0;  
-        
-        /* SỬA 2 DÒNG NÀY ĐỂ LOGO RA GIỮA */
-        width: fit-content; 
-        margin: 0 auto; 
-        
+        display: block;
+        text-align: center; /* Luôn giữa */
+        text-decoration: none !important;
+        padding: 5px 0; 
+        max-width: 100%;
+        margin: 0 auto;
         font-family: 'Times New Roman', serif;
-        font-size: 30px;
-        font-weight: bold;
-        color: #01cb99;
     }
 
-    }
-
-
-
-    /* GIỮ NGUYÊN 100% THÔNG SỐ LOGO GỐC CỦA ÔNG */
-
+    /* 2. LOGO CHI TIẾT */
     .paco-part {
-
         color: #01cb99;
-
         font-size: 25px;
-
         font-weight: 900;
-
         text-transform: uppercase;
-
-        text-decoration: none;
-
-letter-spacing: 2px;
-
-        text-shadow: 
-
-            1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 
-
-            1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 
-
-            1px 1px 4px rgba(0,0,0,0.5);
-
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 0px #0099cc, 1px 1px 4px rgba(0,0,0,0.5);
     }
-
-
 
     .books-part {
-
         color: white;
-
         font-size: 18px;
-
         font-weight: 900;
-
         -webkit-text-stroke: 1px #007399;
-
-letter-spacing: 2px; 
-
-        text-shadow: 
-
-            1px 1px 0px #007399, 1px 1px 0px #007399, 1px 1px 0px #007399,
-
-            2px 2px 4px rgba(0,0,0,0.4);
-
+        letter-spacing: 2px; 
+        text-shadow: 1px 1px 0px #007399, 2px 2px 4px rgba(0,0,0,0.4);
     }
-
-
 
     .paco-brand:hover .paco-part, 
-
     .paco-brand:hover .books-part {
-
         transform: scale(1.02);
-
         transition: 0.3s;
-
     }
-
 </style>
 
-
-
 <div class="header-fixed-container">
-
     <a href="https://duongdenbinhyen.com/" class="paco-brand">
-
         <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
-
     </a>
-
 </div>
-
-</section>
-
 
 
 
