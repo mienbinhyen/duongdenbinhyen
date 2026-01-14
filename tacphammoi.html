@@ -261,7 +261,7 @@ window.addEventListener('scroll', function() {
 </section>
 
 <style>
-/* PHẦN 2: THÔNG SỐ CHỮ & KHUNG (PC) */
+/* PHẦN 2: GIỮ NGUYÊN GỐC - KHÔNG THAY ĐỔI */
 .paco-banner { 
     all: initial; 
     display: flex !important; 
@@ -274,72 +274,45 @@ window.addEventListener('scroll', function() {
     overflow: hidden !important;
 }
 
-/* THÊM LỆNH NÀY ĐỂ BẤM ĐƯỢC LINK */
 .paco-link {
     display: flex;
     align-items: center;
     text-decoration: none !important;
     position: relative;
-    z-index: 999; /* Nổi lên trên tuyết để click */
+    z-index: 999;
 }
 
 .paco-text { 
-    font-family: 'Playfair Display', serif; font-size: 70px; font-style: italic; color: #6ab04c; 
-    text-shadow: 1px 1px 0px #000000, 3px 3px 8px rgba(0,0,0,0.15); 
+    font-family: 'Playfair Display', serif; font-size: 70px; font-style: italic; color: #019570; 
+    text-shadow: 1px 1px 0px #000000, 2px 2px 5px rgba(0,0,0,0.15); 
 }
 .paco-leaf { width: 50px; height: 50px; fill: #6ab04c; margin-left: 10px; }
 
-/* PHẦN 3: HIỆU ỨNG ÁNH SÁNG */
+/* PHẦN 3: ĐIỀU CHỈNH ÁNH SÁNG XANH BIỂN, CHẬM, LIÊN TỤC */
 #paco-light { 
     position: absolute; top: 0; left: -100%; width: 100%; height: 100%; pointer-events: none; z-index: 5;
-    background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.8) 50%, transparent 70%);
-    animation: lightPass 12s infinite; 
+    /* Ánh sáng xanh biển mạnh */
+    background: linear-gradient(110deg, transparent 15%, rgba(0, 150, 255, 0.2) 50%, transparent 85%);
+    /* Chạy chậm 12 giây, mượt mà bằng transform để tối ưu hiệu suất */
+    animation: lightPass 12s infinite linear; 
 }
-@keyframes lightPass { 0% { left: -100%; } 100% { left: 100%; } }
-
-/* PHẦN 4: HIỆU ỨNG TUYẾT RƠI (PC) */
-#paco-snow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-.paco-flake { position: absolute; border-radius: 50%; pointer-events: none; z-index: 15; background: #fff; }
-@keyframes pacoFall {
-    0% { transform: translateY(0); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(200px); opacity: 0; }
+@keyframes lightPass { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(200%); } 
 }
 
-/* PHẦN 5: ĐIỀU CHỈNH CHO MOBILE */
+/* PHẦN 4: VÔ HIỆU HÓA TUYẾT */
+#paco-snow { display: none; }
+.paco-flake { display: none; }
+
+/* PHẦN 5: GIỮ NGUYÊN GỐC CHO MOBILE */
 @media (max-width: 768px) {
     .paco-banner { height: 170px !important; }
     .paco-text { font-size: 40px !important; }
     .paco-leaf { width: 35px !important; height: 35px !important; }
-    
-    @keyframes pacoFall {
-        0% { transform: translateY(0); opacity: 0; }
-        10% { opacity: 1; }
-        90% { opacity: 1; }
-        100% { transform: translateY(120px); opacity: 0; }
-    }
 }
 </style>
 
-<script>
-(function() {
-    const box = document.getElementById('paco-snow');
-    if(!box) return;
-    box.innerHTML = '';
-    const colors = ['#ffffff', '#d1d8e0', '#f1f2f6']; 
-    for (let i = 0; i < 400; i++) {
-        const f = document.createElement('div');
-        f.className = 'paco-flake';
-        f.style.background = colors[Math.floor(Math.random() * colors.length)];
-        f.style.width = f.style.height = (Math.random() * 2 + 1) + 'px';
-        f.style.left = Math.random() * 100 + '%';
-        f.style.top = Math.random() * 100 + '%'; 
-        f.style.animation = `pacoFall ${Math.random() * 3 + 2}s linear ${Math.random() * -5}s infinite`;
-        box.appendChild(f);
-    }
-})();
-</script>
 
 
 
