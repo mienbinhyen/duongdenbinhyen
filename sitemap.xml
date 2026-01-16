@@ -22,4 +22,16 @@
     <loc>https://duongdenbinhyen.com/truyenthong.html</loc>
     <lastmod>2026-01-11</lastmod>
   </url>
+
+  <url>
+    <loc>https://duongdenbinhyen.com/gioi-thieu-tac-gia-thien-nhan.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://duongdenbinhyen.com/cha-me-con-la-con-noi-de-ve.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
