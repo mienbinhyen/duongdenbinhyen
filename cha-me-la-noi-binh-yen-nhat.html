@@ -1256,26 +1256,27 @@ window.addEventListener('scroll', function() {
 </style>
 
 <script>
-    (function() {
-        // Đồng hồ vẫn giữ nguyên
-        function updateClock() {
-            const now = new Date();
-            const timeStr = now.toLocaleTimeString('vi-VN', { 
-                timeZone: 'Asia/Ho_Chi_Minh', 
-                hour12: false 
-            });
-            document.getElementById('paco-clock').textContent = timeStr;
+    window.addEventListener('load', function() { // Chỉ chạy khi toàn bộ trang đã tải xong
+        // 1. Đồng hồ
+        const clockEl = document.getElementById('paco-clock');
+        if (clockEl) {
+            setInterval(() => {
+                const now = new Date();
+                clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
+                    timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
+                });
+            }, 1000);
         }
-        setInterval(updateClock, 1000);
-        updateClock();
 
-        // BỘ ĐẾM: Đã bỏ kiểm tra session, mỗi lần tải trang là tăng 1 đơn vị
-        let count = localStorage.getItem('paco_v_count_1') || 121005;
-        count = parseInt(count) + 1;
-        localStorage.setItem('paco_v_count', count);
-        
-        document.getElementById('paco-counter').textContent = Number(count).toLocaleString('vi-VN');
-    })();
+        // 2. Bộ đếm siêu nhẹ
+        const counterEl = document.getElementById('paco-counter');
+        if (counterEl) {
+            let count = parseInt(localStorage.getItem('paco_v_total')) || 121005;
+            count++;
+            localStorage.setItem('paco_v_total', count);
+            counterEl.textContent = count.toLocaleString('vi-VN');
+        }
+    });
 </script>
 
 
