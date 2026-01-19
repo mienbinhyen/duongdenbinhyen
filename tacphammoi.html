@@ -1525,33 +1525,27 @@ window.addEventListener('scroll', function() {
     .paco-stats-box {
         max-width: 900px;
         margin: 5px auto;
-        padding: 15px 20px;
-        background-color: #2c3e50; 
+        padding: 10px 5px;
+        background-color: #2c3e50;
         color: #ecf0f1;
         font-family: 'Times New Roman', serif;
         display: flex;
-        /* 1. Căn giữa các mục như phiên bản trên */
         justify-content: center;
-        gap: 50px; 
-        font-size: 1.2em; /* 2. Chữ lớn hơn một chút */
+        align-items: center;
+        gap: 10px;
         border-top: 1px solid #3e4f5f;
+        /* HAI DÒNG QUAN TRỌNG NHẤT ĐỂ KHÔNG NHẢY DÒNG */
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
     }
-    .stats-item { display: flex; align-items: center; gap: 10px; }
-    .stats-label { color: #bdc3c7; }
-    
-    /* 2. Số và đồng hồ màu xanh lá thẫm */
-    .stats-value { 
-        font-weight: bold; 
-        color: #2ecc71; 
-        font-size: 1.1em; 
-    }
+    .stats-item { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .stats-label { color: #bdc3c7; font-size: 15px; }
+    .stats-value { font-weight: bold; color: #2ecc71; font-size: 16px; }
 
     @media (max-width: 600px) {
-        .paco-stats-box { 
-            gap: 20px; 
-            font-size: 1.1em; 
-            padding: 10px;
-        }
+        .paco-stats-box { gap: 8px; }
+        .stats-label { font-size: 11px; }
+        .stats-value { font-size: 12px; }
     }
 </style>
 
