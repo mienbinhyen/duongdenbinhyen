@@ -806,10 +806,6 @@ window.addEventListener('scroll', function() {
 
 
 
-
-
-
-
 <style>
     .values-section { padding: 60px 20px; background-color: #ffffff; }
     .container-paco { max-width: 900px; margin: auto; }
@@ -1026,6 +1022,108 @@ window.addEventListener('scroll', function() {
     </div>
 </section>
 
+
+
+
+
+
+
+
+
+<section class="paco-feedback-box">
+    <div class="feedback-wrapper">
+        <h3 class="feedback-title">CẢM NHẬN TỪ ĐỘC GIẢ</h3>
+        
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+                <div class="slide-item">
+                    <p class="slide-text">Cuốn Đường Đến Bình Yên như một tấm gương soi chiếu nội tâm, giúp tôi tìm lại sự thản nhiên giữa cuộc sống ồn ào.</p>
+                    <span class="slide-author">— Độc giả Minh An</span>
+                </div>
+                <div class="slide-item">
+                    <p class="slide-text">Những dòng Thì Thầm thật nhẹ nhàng nhưng đầy sức mạnh. Sách thiết kế rất chỉn chu, cầm trên tay cảm giác trân quý.</p>
+                    <span class="slide-author">— Độc giả Thu Trang</span>
+                </div>
+                <div class="slide-item">
+                    <p class="slide-text">Trân trọng tâm huyết của Tác giả Thiện Nhân. Từng câu chữ đều toát lên sự tử tế và trải nghiệm sâu sắc về nhân sinh.</p>
+                    <span class="slide-author">— Độc giả Hoàng Nam</span>
+                </div>
+                <div class="slide-item">
+                    <p class="slide-text">Xem Video giới thiệu của tiệm xong mình đã quyết định mua ngay. Hình ảnh truyền cảm hứng rất lớn cho người xem.</p>
+                    <span class="slide-author">— Độc giả Linh Chi</span>
+                </div>
+                <div class="slide-item">
+                    <p class="slide-text">Tri thức từ sách là tài sản vô giá. Đọc sách mỗi ngày tại tiệm giúp tư duy mở rộng và tâm hồn thêm phong phú.</p>
+                    <span class="slide-author">— Người yêu tri thức</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .paco-feedback-box {
+        padding: 30px 10px;
+        background-color: #f4f7f6; /* Nền ngoài nhạt */
+    }
+    .feedback-wrapper {
+        max-width: 750px;
+        margin: auto;
+        /* THAY ĐỔI: Nền xanh than thẫm để nổi bật */
+        background: #2c3e50; 
+        padding: 20px 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        text-align: center;
+        border: 1px solid #3e4f5f;
+    }
+    .feedback-title {
+        font-family: 'Times New Roman', serif;
+        font-size: 1.3em;
+        color: #f1c40f; /* Màu vàng nhạt cho tiêu đề nổi trên nền tối */
+        margin-bottom: 15px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .slider-container { overflow: hidden; position: relative; }
+    .slider-track { display: flex; transition: transform 1s ease-in-out; }
+    .slide-item { min-width: 100%; box-sizing: border-box; padding: 0 10px; }
+    
+    .slide-text {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+        font-size: 1.15em;
+        color: #ecf0f1; /* Chữ trắng xám dễ đọc trên nền tối */
+        line-height: 1.5;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .slide-author {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #2ecc71; /* Màu xanh lá thẫm đồng bộ với bộ đếm của Ông */
+        font-size: 0.95em;
+    }
+</style>
+
+<script>
+    (function() {
+        let index = 0;
+        const track = document.getElementById('sliderTrack');
+        const slides = document.querySelectorAll('.slide-item');
+        if(slides.length > 0) {
+            setInterval(() => {
+                index++;
+                if (index >= slides.length) index = 0;
+                track.style.transform = `translateX(-${index * 100}%)`;
+            }, 6000);
+        }
+    })();
+</script>
 
 
 
