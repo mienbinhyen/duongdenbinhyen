@@ -1432,19 +1432,19 @@ window.addEventListener('scroll', function() {
         white-space: nowrap !important;
     }
     .stats-item { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-    .stats-label { color: #bdc3c7; font-size: 15px; }
-    .stats-value { font-weight: bold; color: #2ecc71; font-size: 16px; }
+    .stats-label { color: #bdc3c7; font-size: 28px; }
+    .stats-value { font-weight: bold; color: #2ecc71; font-size: 30px; }
 
     @media (max-width: 600px) {
         .paco-stats-box { gap: 8px; }
-        .stats-label { font-size: 11px; }
-        .stats-value { font-size: 12px; }
+        .stats-label { font-size: 15px; }
+        .stats-value { font-size: 16px; }
     }
 </style>
 
 <script>
-    window.addEventListener('load', function() { // Chỉ chạy khi toàn bộ trang đã tải xong
-        // 1. Đồng hồ
+    window.addEventListener('load', function() {
+        // 1. ĐỒNG HỒ
         const clockEl = document.getElementById('paco-clock');
         if (clockEl) {
             setInterval(() => {
@@ -1455,16 +1455,24 @@ window.addEventListener('scroll', function() {
             }, 1000);
         }
 
-        // 2. Bộ đếm siêu nhẹ
+        // 2. BỘ ĐẾM TỔNG TOÀN CẦU (KHỞI TẠO 100.000)
         const counterEl = document.getElementById('paco-counter');
         if (counterEl) {
-            let count = parseInt(localStorage.getItem('paco_v_total')) || 121005;
-            count++;
-            localStorage.setItem('paco_v_total', count);
-            counterEl.textContent = count.toLocaleString('vi-VN');
+            // Dùng dịch vụ đếm thay thế tin cậy (api.counterapi.dev)
+            fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
+                .then(res => res.json())
+                .then(data => {
+                    const total = data.count + 100000;
+                    counterEl.textContent = total.toLocaleString('vi-VN');
+                })
+                .catch(() => {
+                    // Nếu lỗi mạng, hiện mốc 100.000 chứ không để số 0
+                    counterEl.textContent = "100.000";
+                });
         }
     });
 </script>
+
 
 
 
