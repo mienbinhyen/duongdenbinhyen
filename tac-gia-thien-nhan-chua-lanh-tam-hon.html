@@ -414,10 +414,21 @@ window.addEventListener('scroll', function() {
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
+    /* ĐIỀU CHỈNH TƯƠNG THÍCH MOBILE */
     @media (max-width: 600px) {
-        .author-circle-img { width: 220px; height: 220px; }
-        .section-label-wisdom { font-size: 1.3em; }
-    }
+        .wisdom-section {
+            padding: 40px 15px;
+        }
+        .section-label-wisdom {
+            font-size: 1.15em;
+            letter-spacing: 1px;
+            padding-left: 10px;
+        }
+        .wisdom-description {
+            font-size: 1.1em;
+            text-indent: 25px;
+            line-height: 1.7;
+        }
 </style>
 
 
