@@ -382,58 +382,41 @@ window.addEventListener('scroll', function() {
 
 <style>
     /* CSS ĐỂ HÌNH ẢNH GIỐNG HỆT MẪU ÔNG GỬI */
-    .author-image-wrapper {
-        text-align: center;
-        margin: 30px 0;
-    }
+    .author-image-wrapper { text-align: center; margin: 30px 0; }
     .author-circle-img {
-        width: 300px; /* Độ rộng chuẩn theo mẫu */
-        height: 300px;
-        object-fit: cover;
-        border-radius: 50%; /* Tạo khung tròn */
-        border: 1px solid #eee; /* Viền nhẹ */
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Đổ bóng mờ theo mẫu */
-        padding: 5px;
-        background: #fff;
+        width: 300px; height: 300px;
+        object-fit: cover; border-radius: 50%;
+        border: 1px solid #eee; padding: 5px; background: #fff;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
 
     /* GIỮ NGUYÊN PHONG CÁCH CHỮ CỦA ÔNG */
     .section-label-wisdom {
-        font-family: 'Times New Roman', serif;
-        font-size: 1.8em;
-        color: #004a99;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-left: 6px solid #004a99;
-        padding-left: 15px;
-        line-height: 1.3;
-        text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
+        font-family: 'Times New Roman', serif; font-size: 1.8em;
+        color: #004a99; text-transform: uppercase; font-weight: bold;
+        border-left: 6px solid #004a99; padding-left: 15px;
+        line-height: 1.3; text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
     .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin-top: 20px; }
     .wisdom-description { font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9; text-align: justify; }
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
-    /* ĐIỀU CHỈNH TƯƠNG THÍCH MOBILE */
+    /* ĐIỀU CHỈNH MOBILE - KHÔNG RỚT CHỮ - KHÔNG TRÀN LỀ */
     @media (max-width: 600px) {
-        .wisdom-section {
-            padding: 40px 15px;
-        }
-        .section-label-wisdom {
-            font-size: 1.15em;
-            letter-spacing: 1px;
+        .book-intro-section { padding: 30px 15px; overflow: hidden; }
+        .container-paco { width: 100%; box-sizing: border-box; }
+        .section-label-sync { 
+            font-size: 5.5vw; /* Tự động thu nhỏ theo chiều rộng màn hình */
+            line-height: 1.4; 
+            word-break: keep-all; 
             padding-left: 10px;
+            max-width: 100%;
         }
-        .wisdom-description {
-            font-size: 1.1em;
-            text-indent: 25px;
-            line-height: 1.7;
-        }
+        .book-description { font-size: 1.1em; text-indent: 25px; line-height: 1.7; }
+        .book-image { width: 100%; height: auto; } 
+    }
 </style>
-
-
-
-
 
 
 
