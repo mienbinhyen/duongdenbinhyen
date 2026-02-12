@@ -409,9 +409,14 @@ window.addEventListener('scroll', function() {
     }
 
     @media (max-width: 600px) {
-        .section-label-author { font-size: 1.6em; }
-        .author-image { width: 100%; }
-        .author-description { font-size: 1.2em; }
+        .wisdom-section { padding: 40px 15px; }
+        .section-label-wisdom, .wisdom-subtitle { 
+            font-size: 4.4vw; /* Tự thu nhỏ để tiêu đề nằm gọn 1 hàng */
+            word-break: keep-all; /* Tuyệt đối không để rớt 1 chữ lẻ loi */
+            overflow-wrap: normal;
+        }
+        .section-label-wisdom { padding-left: 10px; }
+        .wisdom-description { font-size: 1.1em; text-indent: 25px; line-height: 1.7; }
     }
 </style>
 
