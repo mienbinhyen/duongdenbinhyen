@@ -380,24 +380,21 @@ window.addEventListener('scroll', function() {
         color: #555;
     }
 
-   @media (max-width: 600px) {
-        .book-intro-section { padding: 40px 15px; }
-        .section-label-sync { 
-            font-size: 1.25em; /* Kích thước đủ lớn để đọc rõ */
-            line-height: 1.4;
-            word-break: keep-all; 
-            overflow-wrap: break-word; /* Tự xuống dòng cả từ nếu hết chỗ */
-            padding-left: 10px;
-            white-space: normal; /* Cho phép xuống dòng khi tiêu đề dài */
+    @media (max-width: 600px) {
+        .wisdom-section { padding: 40px 15px; }
+        .section-label-wisdom, .wisdom-subtitle { 
+            font-size: 4.4vw; /* Tự thu nhỏ để tiêu đề nằm gọn 1 hàng */
+            word-break: keep-all; /* Tuyệt đối không để rớt 1 chữ lẻ loi */
+            overflow-wrap: normal;
         }
-        .book-description { font-size: 1.1em; text-indent: 25px; line-height: 1.7; }
-        .book-image { width: 100%; height: auto; }
+        .section-label-wisdom { padding-left: 10px; }
+        .wisdom-description { font-size: 1.1em; text-indent: 25px; line-height: 1.7; }
     }
 </style>
 
 <section id="baiviet3" class="book-intro-section">
     <div class="container-paco">
-        <h1 class="section-label-sync">NHỮNG ĐÓA HOA ÂM THẦM TỎA SẮC</h1>
+        <h1 class="section-label-sync">HOA QUỲNH TỎA SẮC</h1>
 
         <p class="book-description" style="text-align: center; text-indent: 0; font-style: italic;">
             "Vẻ đẹp chân thật không nằm ở nơi được nhìn thấy, mà ở nơi được cảm nhận sâu sắc."
