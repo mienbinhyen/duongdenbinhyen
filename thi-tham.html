@@ -380,19 +380,35 @@ window.addEventListener('scroll', function() {
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
-@media (max-width: 600px) {
+/* XỬ LÝ MOBILE: TỰ ĐỘNG THU NHỎ ĐỂ KHÔNG MẤT CHỮ */
+    @media (max-width: 600px) {
+        .wisdom-section { padding: 30px 10px; }
+        
         .section-label-wisdom { 
-            font-size: 1.4em; 
-            margin-left: 15px; /* THỤT LỀ TRÁI CHO H1 */
+            /* Tự co giãn từ 16px đến 24px để luôn vừa màn hình */
+            font-size: clamp(16px, 3.5vw, 24px) !important; 
+            padding-left: 10px;
+            line-height: 1.2;
+            word-break: keep-all;
+            white-space: normal; /* Cho phép xuống dòng nếu cực kỳ cần thiết để không mất chữ */
         }
+
         .wisdom-subtitle { 
-            font-size: 1.2em; 
-            padding: 0 15px; /* THỤT LỀ TRÁI/PHẢI CHO H2 */
+            /* Tự co giãn để H2 luôn nằm trên 1 dòng */
+            font-size: clamp(14px, 3.5vw, 20px) !important;
+            word-break: keep-all;
+            white-space: normal;
         }
+
+        .author-circle-img { 
+            width: 180px; 
+            height: 180px; 
+        }
+
         .wisdom-description { 
-            font-size: 1.1em; 
+            font-size: 1.05em; 
             text-indent: 20px; 
-            padding: 0 15px; /* THỤT LỀ TRÁI/PHẢI CHO ĐOẠN VĂN */
+            line-height: 1.6; 
         }
 </style>
 
@@ -1210,7 +1226,7 @@ window.addEventListener('scroll', function() {
 
 <body>
 <div class="paco-sticky-container">
-    <a href="#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
-    <a href="#ebook" class="paco-btn-3d right">XEM EBOOK</a>
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
+    <a href="https://duongdenbinhyen.com/#ebook" class="paco-btn-3d right">XEM EBOOK</a>
 </div>
 </body>
