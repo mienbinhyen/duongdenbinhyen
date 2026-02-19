@@ -356,89 +356,59 @@ window.addEventListener('scroll', function() {
 
 
 
-<section class="wisdom-section">
-<div class="container-paco">
-<h1 class="section-label-wisdom">
-ĐƯỜNG ĐẾN BÌNH YÊN
-</h1>
-<div class="author-image-wrapper">
-<img src="bia_duong den binh yen_4t.jpg" alt="Bìa sách Đường Đến Bình Yên" class="author-circle-img">
-</div>
-<h2 class="wisdom-subtitle">Bản lĩnh đối diện và sự tỉnh thức trước nhân sinh</h2>
-<div class="wisdom-description">
-<p>Đường Đến Bình Yên không dành cho những ai tìm kiếm sự an ủi nhất thời; đây là hành trình của sự đối diện. Tác giả Thiện Nhân bóc tách những ảo tưởng về cuộc đời, buộc độc giả phải nhìn thẳng vào những góc khuất trong tâm trí để nhận ra bản chất của khổ đau và hạnh phúc. Cuốn sách khẳng định rằng bình yên chỉ thực sự hiện hữu khi con người đủ bản lĩnh để chấp nhận mọi quy luật khắc nghiệt của thực tại.</p>
-<p>Nội dung tác phẩm khắc họa những cột mốc quan trọng trong tư duy:</p>
-<p><strong>Nhân sinh quan thực tại:</strong> Nhìn nhận thế giới không qua lăng kính màu hồng, mà bằng sự thấu triệt về nhân quả và lẽ vô thường.</p>
-<p><strong>Giải mã cái tôi:</strong> Phá bỏ những rào cản của bản ngã để tìm lại giá trị chân thật nhất của con người giữa dòng đời biến động.</p>
-<p><strong>Lối sống bản lĩnh:</strong> Chuyển hóa từ sự cam chịu sang tư thế chủ động kiến tạo sự tĩnh tại ngay trong lòng giông bão.</p>
-<p>Cuốn sách là một mảnh ghép quan trọng cùng với Thì Thầm và Miền Bình Yên, tạo nên một hệ thống tư tưởng thực tế về nhân sinh mà Tác giả Thiện Nhân muốn gửi gắm. Độc giả sẽ tìm thấy sự điềm tĩnh và ánh sáng tri thức để tự mình định đoạt số phận thay vì tìm kiếm sự dựa dẫm.</p>
-<p class="signature">– Tác giả Thiện Nhân –</p>
-</div>
-</div>
-</section>
-
-
 <style>
-    /* HÌNH ẢNH TÁC GIẢ TRÒN */
-    .author-circle-img {
-    width: 380px; 
-    height: auto;
-    object-fit: contain; 
-    border-radius: 8px; /* Bo góc nhẹ thay vì 50% */
-    border: 1px solid #eee; 
-    padding: 5px; 
-    background: #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+    /* 1. HÌNH CHUẨN MẪU (Bìa chữ nhật) */
+    .book-image {
+        display: block; 
+        margin: 30px auto; 
+        width: 100%; /* Theo mẫu ảnh Ông gửi: rộng hết khổ chữ */
+        max-width: 900px; 
+        height: auto; 
+        border-radius: 4px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-    /* PHONG CÁCH CHỮ CHUẨN */
+    /* 2. CHỮ CHUẨN MẪU (Đúng font và lề) */
     .section-label-wisdom {
         font-family: 'Times New Roman', serif; font-size: 1.8em;
         color: #004a99; text-transform: uppercase; font-weight: bold;
         border-left: 6px solid #004a99; padding-left: 15px;
         line-height: 1.3; text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
-    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin-top: 20px; color: #333; }
+    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin: 30px 0 20px; color: #333; }
     .wisdom-description { font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9; text-align: justify; }
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
-
-    /* XỬ LÝ MOBILE: TỰ ĐỘNG THU NHỎ ĐỂ KHÔNG MẤT CHỮ */
     @media (max-width: 600px) {
-        .wisdom-section { padding: 30px 10px; }
-        
-        .section-label-wisdom { 
-            /* Tự co giãn từ 16px đến 24px để luôn vừa màn hình */
-            font-size: clamp(16px, 3.5vw, 24px) !important; 
-            padding-left: 10px;
-            line-height: 1.2;
-            word-break: keep-all;
-            white-space: normal; /* Cho phép xuống dòng nếu cực kỳ cần thiết để không mất chữ */
-        }
-
-        .wisdom-subtitle { 
-            /* Tự co giãn để H2 luôn nằm trên 1 dòng */
-            font-size: clamp(14px, 3.5vw, 20px) !important;
-            word-break: keep-all;
-            white-space: normal;
-        }
-
-        .author-circle-img { 
-            width: 180px; 
-            height: 180px; 
-        }
-
-        .wisdom-description { 
-            font-size: 1.05em; 
-            text-indent: 20px; 
-            line-height: 1.6; 
-        }
+        .section-label-wisdom { font-size: 1.4em; }
+        .wisdom-subtitle { font-size: 1.2em; }
+        .wisdom-description { font-size: 1.1em; text-indent: 20px; }
     }
 </style>
 
+<section class="wisdom-section">
+    <div class="container-paco">
+        <h1 class="section-label-wisdom">ĐƯỜNG ĐẾN BÌNH YÊN</h1>
+        
+        <h2 class="wisdom-subtitle">Bản lĩnh đối diện và sự tỉnh thức trước nhân sinh</h2>
 
+        <div class="wisdom-description">
+            <p>Đường Đến Bình Yên không dành cho những ai tìm kiếm sự an ủi nhất thời; đây là hành trình của sự đối diện. Tác giả Thiện Nhân bóc tách những ảo tưởng về cuộc đời, buộc độc giả phải nhìn thẳng vào những góc khuất trong tâm trí để nhận ra bản chất của khổ đau và hạnh phúc. Cuốn sách khẳng định rằng bình yên chỉ thực sự hiện hữu khi con người đủ bản lĩnh để chấp nhận mọi quy luật khắc nghiệt của thực tại.</p>
+        </div>
 
+        <img src="bia_duong den binh yen_4t.jpg" alt="Bìa sách Đường Đến Bình Yên" class="book-image">
+
+        <div class="wisdom-description">
+            <p>Nội dung tác phẩm khắc họa những cột mốc quan trọng trong tư duy:</p>
+            <p><strong>Nhân sinh quan thực tại:</strong> Nhìn nhận thế giới không qua lăng kính màu hồng, mà bằng sự thấu triệt về nhân quả và lẽ vô thường.</p>
+            <p><strong>Giải mã cái tôi:</strong> Phá bỏ những rào cản của bản ngã để tìm lại giá trị chân thật nhất của con người giữa dòng đời biến động.</p>
+            <p><strong>Lối sống bản lĩnh:</strong> Chuyển hóa từ sự cam chịu sang tư thế chủ động kiến tạo sự tĩnh tại ngay trong lòng giông bão.</p>
+            <p>Cuốn sách là một mảnh ghép quan trọng cùng với Thì Thầm và Miền Bình Yên, tạo nên một hệ thống tư tưởng thực tế về nhân sinh mà Tác giả Thiện Nhân muốn gửi gắm. Độc giả sẽ tìm thấy sự điềm tĩnh và ánh sáng tri thức để tự mình định đoạt số phận thay vì tìm kiếm sự dựa dẫm.</p>
+            <p class="signature">– Tác giả Thiện Nhân –</p>
+        </div>
+    </div>
+</section>
 
 
 
@@ -531,7 +501,7 @@ window.addEventListener('scroll', function() {
             </div>
 	    <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Tác giả mới</a>
+                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-pac">Đường Đến Bình Yên</a>
             </div>
 	    <div class="news-item-paco">
 		<div class="news-icon-paco">🖋️</div>

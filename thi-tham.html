@@ -356,87 +356,61 @@ window.addEventListener('scroll', function() {
 
 
 
-<section class="wisdom-section">
-<div class="container-paco">
-<h1 class="section-label-wisdom">
-THÌ THẦM
-</h1>
-<div class="author-image-wrapper">
-<img src="bia_thi tham_4t.jpg" alt="Bìa sách Thì Thầm" class="author-circle-img">
-</div>
-<h2 class="wisdom-subtitle">Đối thoại cùng thực tại và những lẽ đạo trong đời</h2>
-<div class="wisdom-description">
-<p>Trong cuốn sách Thì Thầm không chỉ là những lời an ủi vỗ về, mà là những cuộc đối thoại sòng phẳng với thực tại. Qua tác phẩm, Tác giả Thiện Nhân chỉ ra rằng sự bình yên không đến từ việc trốn tránh, mà đến từ sự thấu hiểu tường tận về các quy luật nhân quả, bản chất của con người và sự vận hành của cuộc sống. Mỗi dòng viết là một nhịp gõ vào tâm thức, buộc ta phải tỉnh thức trước những ảo vọng của bản thân.</p>
-<p>Nội dung tác phẩm khắc họa những thông điệp nhân sinh cốt lõi:</p>
-<p><strong>Sự thật về nhân gian:</strong> Những chiêm nghiệm về khổ đau, hạnh phúc và sự vô thường được trình bày một cách điềm tĩnh và minh triết.</p>
-<p><strong>Trách nhiệm với chính mình:</strong> Nhấn mạnh việc quay về soi rọi nội tâm, tự chịu trách nhiệm cho mọi lựa chọn thay vì tìm kiếm sự giải thoát từ bên ngoài.</p>
-<p><strong>Giá trị của sự tĩnh lặng:</strong> Cách thức giữ vững tâm thế giữa những xáo trộn của danh lợi và những tác động của môi trường xung quanh.</p>
-<p>Cuốn sách đóng vai trò là một phần không thể tách rời trong bộ ba tác phẩm cùng với Đường Đến Bình Yên và Miền Bình Yên, định hình nên một triết lý sống quyết đoán và thực tế của Tác giả Thiện Nhân. Đây là lời nhắc nhở về một lối sống bản lĩnh, biết buông bỏ những điều vô nghĩa để nắm giữ những giá trị chân thật.</p>
-<p class="signature">– Tác giả Thiện Nhân –</p>
-</div>
-</div>
-</section>
-
-
 <style>
-    /* HÌNH ẢNH TÁC GIẢ TRÒN */
-    .author-circle-img {
-    width: 380px; 
-    height: auto;
-    object-fit: contain; 
-    border-radius: 8px; /* Bo góc nhẹ thay vì 50% */
-    border: 1px solid #eee; 
-    padding: 5px; 
-    background: #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+    /* 1. HÌNH CHUẨN MẪU (Bìa chữ nhật) */
+    .book-image {
+        display: block; 
+        margin: 30px auto; 
+        width: 100%; 
+        max-width: 900px; 
+        height: auto; 
+        border-radius: 4px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-    /* PHONG CÁCH CHỮ CHUẨN */
+    /* 2. CHỮ CHUẨN MẪU (Đúng font và lề) */
     .section-label-wisdom {
         font-family: 'Times New Roman', serif; font-size: 1.8em;
         color: #004a99; text-transform: uppercase; font-weight: bold;
         border-left: 6px solid #004a99; padding-left: 15px;
         line-height: 1.3; text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
-    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin-top: 20px; color: #333; }
+    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin: 30px 0 20px; color: #333; }
     .wisdom-description { font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9; text-align: justify; }
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
-
-    /* XỬ LÝ MOBILE: TỰ ĐỘNG THU NHỎ ĐỂ KHÔNG MẤT CHỮ */
     @media (max-width: 600px) {
-        .wisdom-section { padding: 30px 10px; }
-        
-        .section-label-wisdom { 
-            /* Tự co giãn từ 16px đến 24px để luôn vừa màn hình */
-            font-size: clamp(16px, 3.5vw, 24px) !important; 
-            padding-left: 10px;
-            line-height: 1.2;
-            word-break: keep-all;
-            white-space: normal; /* Cho phép xuống dòng nếu cực kỳ cần thiết để không mất chữ */
-        }
-
-        .wisdom-subtitle { 
-            /* Tự co giãn để H2 luôn nằm trên 1 dòng */
-            font-size: clamp(14px, 3.5vw, 20px) !important;
-            word-break: keep-all;
-            white-space: normal;
-        }
-
-        .author-circle-img { 
-            width: 180px; 
-            height: 180px; 
-        }
-
-        .wisdom-description { 
-            font-size: 1.05em; 
-            text-indent: 20px; 
-            line-height: 1.6; 
-        }
+        .section-label-wisdom { font-size: 1.4em; }
+        .wisdom-subtitle { font-size: 1.2em; }
+        .wisdom-description { font-size: 1.1em; text-indent: 20px; }
     }
 </style>
 
+<section class="wisdom-section">
+    <div class="container-paco">
+        <h1 class="section-label-wisdom">THÌ THẦM</h1>
+        
+        <h2 class="wisdom-subtitle">Đối thoại cùng thực tại và những lẽ đạo trong đời</h2>
+
+        <div class="wisdom-description">
+            <p>Trong cuốn sách Thì Thầm không chỉ là những lời an ủi vỗ về, mà là những cuộc đối thoại sòng phẳng với thực tại. Qua tác phẩm, Tác giả Thiện Nhân chỉ ra rằng sự bình yên không đến từ việc trốn tránh, mà đến từ sự thấu hiểu tường nhận về các quy luật nhân quả, bản chất của con người và sự vận hành của cuộc sống. Mỗi dòng viết là một nhịp gõ vào tâm thức, buộc ta phải tỉnh thức trước những ảo vọng của bản thân.</p>
+        </div>
+
+        <img src="bia_thi tham_4t.jpg" alt="Bìa sách Thì Thầm" class="book-image">
+
+        <div class="wisdom-description">
+            <p>Nội dung tác phẩm khắc họa những thông điệp nhân sinh cốt lõi:</p>
+            <p><strong>Sự thật về nhân gian:</strong> Những chiêm nghiệm về khổ đau, hạnh phúc và sự vô thường được trình bày một cách điềm tĩnh và minh triết.</p>
+            <p><strong>Trách nhiệm với chính mình:</strong> Nhấn mạnh việc quay về soi rọi nội tâm, tự chịu trách nhiệm cho mọi lựa chọn thay vì tìm kiếm sự giải thoát từ bên ngoài.</p>
+            <p><strong>Giá trị của sự tĩnh lặng:</strong> Cách thức giữ vững tâm thế giữa những xáo trộn của danh lợi và những tác động của môi trường xung quanh.</p>
+            
+            <p>Cuốn sách đóng vai trò là một phần không thể tách rời trong bộ ba tác phẩm cùng với Đường Đến Bình Yên và Miền Bình Yên, định hình nên một triết lý sống quyết đoán và thực tế của Tác giả Thiện Nhân. Đây là lời nhắc nhở về một lối sống bản lĩnh, biết buông bỏ những điều vô nghĩa để nắm giữ những giá trị chân thật.</p>
+            
+            <p class="signature">– Tác giả Thiện Nhân –</p>
+        </div>
+    </div>
+</section>
 
 
 
@@ -531,7 +505,7 @@ THÌ THẦM
             </div>
 	    <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Tác giả mới</a>
+                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Đường Đến Bình Yên</a>
             </div>
 	    <div class="news-item-paco">
 		<div class="news-icon-paco">🖋️</div>

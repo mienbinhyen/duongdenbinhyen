@@ -356,87 +356,61 @@ window.addEventListener('scroll', function() {
 
 
 
-<section class="wisdom-section">
-<div class="container-paco">
-<h1 class="section-label-wisdom">
-MIỀN BÌNH YÊN
-</h1>
-<div class="author-image-wrapper">
-<img src="mien-binh-yen.jpg" alt="Bìa sách Miền Bình Yên" class="author-circle-img">
-</div>
-<h2 class="wisdom-subtitle">Kiến tạo tọa độ tâm trí giữa dòng đời biến động</h2>
-<div class="wisdom-description">
-<p>Miền Bình Yên là một điểm dừng chân mang tính triết học, nơi Tác giả Thiện Nhân phác họa rõ nét ranh giới giữa sự tác động bên ngoài và sự tự chủ bên trong. Tác phẩm không mời gọi sự ẩn dật, mà thúc đẩy việc tìm thấy một miền tĩnh tại ngay trong lòng những thực tế nghiệt ngã nhất của kiếp người.</p>
-<p>Trong trang sách này, những quy luật cốt lõi được bóc tách:</p>
-<p><strong>Bản chất của tự do:</strong> Tự do thực sự bắt đầu khi ta thấu hiểu luật nhân quả và ngừng oán trách số phận.</p>
-<p><strong>Thanh lọc nhãn quan:</strong> Cách nhìn nhận thấu đáo về thiện ác, đúng sai để không bị cuốn vào những tranh chấp vô nghĩa của nhân gian.</p>
-<p><strong>Điểm tựa nội tại:</strong> Xây dựng một bản lĩnh sống không dựa dẫm vào danh lợi hay cảm xúc nhất thời từ đám đông.</p>
-<p>Khác với sự đối thoại của Thì Thầm hay sự dẫn dắt của Đường Đến Bình Yên, tác phẩm này là lời khẳng định về một thái độ sống kiên định. Tác giả Thiện Nhân định hướng độc giả trở thành những người quan sát thông tuệ, làm chủ hoàn toàn "miền" riêng của chính mình giữa thế gian xô bồ.</p>
-<p class="signature">– Tác giả Thiện Nhân –</p>
-</div>
-</div>
-</section>
-
-
 <style>
-    /* HÌNH ẢNH TÁC GIẢ TRÒN */
-    .author-circle-img {
-    width: 380px; 
-    height: auto;
-    object-fit: contain; 
-    border-radius: 8px; /* Bo góc nhẹ thay vì 50% */
-    border: 1px solid #eee; 
-    padding: 5px; 
-    background: #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
+    /* 1. HÌNH CHUẨN MẪU (Bìa chữ nhật) */
+    .book-image {
+        display: block; 
+        margin: 30px auto; 
+        width: 100%; 
+        max-width: 900px; 
+        height: auto; 
+        border-radius: 4px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
 
-    /* PHONG CÁCH CHỮ CHUẨN */
+    /* 2. CHỮ CHUẨN MẪU (Đúng font và lề) */
     .section-label-wisdom {
         font-family: 'Times New Roman', serif; font-size: 1.8em;
         color: #004a99; text-transform: uppercase; font-weight: bold;
         border-left: 6px solid #004a99; padding-left: 15px;
         line-height: 1.3; text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
     }
-    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin-top: 20px; color: #333; }
+    .wisdom-subtitle { font-family: 'Times New Roman', serif; font-size: 1.5em; font-weight: bold; margin: 30px 0 20px; color: #333; }
     .wisdom-description { font-family: 'Times New Roman', serif; font-size: 1.25em; line-height: 1.9; text-align: justify; }
     .wisdom-description p { margin-bottom: 15px; text-indent: 40px; }
     .signature { text-align: right; margin-top: 30px; }
 
-
-    /* XỬ LÝ MOBILE: TỰ ĐỘNG THU NHỎ ĐỂ KHÔNG MẤT CHỮ */
     @media (max-width: 600px) {
-        .wisdom-section { padding: 30px 10px; }
-        
-        .section-label-wisdom { 
-            /* Tự co giãn từ 16px đến 24px để luôn vừa màn hình */
-            font-size: clamp(16px, 3.5vw, 24px) !important; 
-            padding-left: 10px;
-            line-height: 1.2;
-            word-break: keep-all;
-            white-space: normal; /* Cho phép xuống dòng nếu cực kỳ cần thiết để không mất chữ */
-        }
-
-        .wisdom-subtitle { 
-            /* Tự co giãn để H2 luôn nằm trên 1 dòng */
-            font-size: clamp(14px, 3.5vw, 20px) !important;
-            word-break: keep-all;
-            white-space: normal;
-        }
-
-        .author-circle-img { 
-            width: 180px; 
-            height: 180px; 
-        }
-
-        .wisdom-description { 
-            font-size: 1.05em; 
-            text-indent: 20px; 
-            line-height: 1.6; 
-        }
+        .section-label-wisdom { font-size: 1.4em; }
+        .wisdom-subtitle { font-size: 1.2em; }
+        .wisdom-description { font-size: 1.1em; text-indent: 20px; }
     }
 </style>
 
+<section class="wisdom-section">
+    <div class="container-paco">
+        <h1 class="section-label-wisdom">MIỀN BÌNH YÊN</h1>
+        
+        <h2 class="wisdom-subtitle">Kiến tạo tọa độ tâm trí giữa dòng đời biến động</h2>
+
+        <div class="wisdom-description">
+            <p>Miền Bình Yên là một điểm dừng chân mang tính triết học, nơi Tác giả Thiện Nhân phác họa rõ nét ranh giới giữa sự tác động bên ngoài và sự tự chủ bên trong. Tác phẩm không mời gọi sự ẩn dật, mà thúc đẩy việc tìm thấy một miền tĩnh tại ngay trong lòng những thực tế nghiệt ngã nhất của kiếp người.</p>
+        </div>
+
+        <img src="mien-binh-yen.jpg" alt="Bìa sách Miền Bình Yên" class="book-image">
+
+        <div class="wisdom-description">
+            <p>Trong trang sách này, những quy luật cốt lõi được bóc tách:</p>
+            <p><strong>Bản chất của tự do:</strong> Tự do thực sự bắt đầu khi ta thấu hiểu luật nhân quả và ngừng oán trách số phận.</p>
+            <p><strong>Thanh lọc nhãn quan:</strong> Cách nhìn nhận thấu đáo về thiện ác, đúng sai để không bị cuốn vào những tranh chấp vô nghĩa của nhân gian.</p>
+            <p><strong>Điểm tựa nội tại:</strong> Xây dựng một bản lĩnh sống không dựa dẫm vào danh lợi hay cảm xúc nhất thời từ đám đông.</p>
+            
+            <p>Khác với sự đối thoại của Thì Thầm hay sự dẫn dắt của Đường Đến Bình Yên, tác phẩm này là lời khẳng định về một thái độ sống kiên định. Tác giả Thiện Nhân định hướng độc giả trở thành những người quan sát thông tuệ, làm chủ hoàn toàn "miền" riêng của chính mình giữa thế gian xô bồ.</p>
+            
+            <p class="signature">– Tác giả Thiện Nhân –</p>
+        </div>
+    </div>
+</section>
 
 
 
@@ -531,7 +505,7 @@ MIỀN BÌNH YÊN
             </div>
 	    <div class="news-item-paco">
                 <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Tác giả mới</a>
+                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Đường Đến Bình Yên</a>
             </div>
 	    <div class="news-item-paco">
 		<div class="news-icon-paco">🖋️</div>
