@@ -43,74 +43,7 @@
   }
 </style>
 
-    <style>
-        body { margin: 0; font-family: 'Times New Roman', serif; }
-
-        /* KHỐI 1: HEADER CỐ ĐỊNH - NỀN GƯƠNG SIÊU NHẠT & GỌN GÀNG */
-        .paco-header {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            /* 1. NỀN GƯƠNG XANH NHẠT (Alice Blue) */
-            background-color: rgba(240, 248, 255, 0.85); 
-            backdrop-filter: blur(12px); 
-            -webkit-backdrop-filter: blur(12px);
-            
-            /* 2. THU HẸP CHIỀU CAO 30% */
-            padding: 5px 0; 
-            
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .logo-area {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-area img {
-            height: 50px; /* Logo gọn gàng theo yêu cầu */
-            width: auto;
-            display: block;
-        }
-
-        /* TƯƠNG THÍCH MOBILE */
-        @media (max-width: 600px) {
-            .logo-area img { height: 40px; }
-            .paco-header { padding: 3px 0; }
-        }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</style>
+   
 </head>
 <body>
 <h1 style="display:none;">Đường Đến Bình Yên | thì thầm | Miền bình yên | Sách mở lối | tác giả Thiện Nhân</h1>
@@ -176,21 +109,6 @@
     <a href="truyenthong.html">TRUYỀN THÔNG</a>
     <a href="index.html#lienhe">LIÊN HỆ</a>
 </div>
-
-<script>
-function toggleMenu() {
-    var m = document.getElementById("menuList");
-    m.style.display = (m.style.display === "block") ? "none" : "block";
-}
-window.addEventListener('click', function(e){   
-    var m = document.getElementById('menuList');
-    var b = document.getElementById('menuButton');
-    if (!m.contains(e.target) && !b.contains(e.target)) m.style.display = "none";
-});
-window.addEventListener('scroll', function() {
-    document.getElementById("menuList").style.display = "none";
-});
-</script>
 
 
 
@@ -1521,31 +1439,7 @@ window.addEventListener('scroll', function() {
     <div id="msg" style="margin-top:10px; color: green; font-weight: bold; display:none;"></div>
 </div>
 
-<script>
-    const form = document.getElementById('pacoForm');
-    const msg = document.getElementById('msg');
-    const btn = document.getElementById('submitBtn');
 
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        btn.innerHTML = "Đang gửi...";
-        btn.disabled = true;
-        
-        fetch("https://script.google.com/macros/s/AKfycbzYGjzAdP4RLsO7uVT85TLPoJtNxDPBBAAXvpmY5WvwETiRFUekWzYsW7R6wS1z7UOx/exec", {
-            method: 'POST',
-            mode: 'no-cors',
-            body: new FormData(form)
-        })
-        .then(() => {
-            msg.innerHTML = "Cảm ơn Bạn đã đăng ký mua sách! Chúng tôi sẽ gửi tới bạn sớm nhất có thể.";
-            msg.style.display = "block";
-            form.reset();
-            btn.innerHTML = "Gửi đi";
-            btn.disabled = false;
-        })
-        .catch(err => alert("Có lỗi xảy ra, vui lòng thử lại!"));
-    });
-</script>
 </section>
 
 
@@ -1700,36 +1594,7 @@ window.addEventListener('scroll', function() {
     }
 </style>
 
-<script>
-    window.addEventListener('load', function() {
-        // 1. ĐỒNG HỒ
-        const clockEl = document.getElementById('paco-clock');
-        if (clockEl) {
-            setInterval(() => {
-                const now = new Date();
-                clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
-                    timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
-                });
-            }, 1000);
-        }
 
-        // 2. BỘ ĐẾM TỔNG TOÀN CẦU (KHỞI TẠO 100.000)
-        const counterEl = document.getElementById('paco-counter');
-        if (counterEl) {
-            // Dùng dịch vụ đếm thay thế tin cậy (api.counterapi.dev)
-            fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-                .then(res => res.json())
-                .then(data => {
-                    const total = data.count + 100000;
-                    counterEl.textContent = total.toLocaleString('vi-VN');
-                })
-                .catch(() => {
-                    // Nếu lỗi mạng, hiện mốc 100.000 chứ không để số 0
-                    counterEl.textContent = "100.000";
-                });
-        }
-    });
-</script>
 
 
 
@@ -1962,9 +1827,84 @@ window.addEventListener('scroll', function() {
     }
 </style>
 
-<body>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="paco-sticky-container">
     <a href="#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
     <a href="#ebook" class="paco-btn-3d right">XEM EBOOK</a>
 </div>
+
+<script>
+// 1. MA MENU
+function toggleMenu() {
+    var m = document.getElementById("menuList");
+    if (m) m.style.display = (m.style.display === "block") ? "none" : "block";
+}
+window.addEventListener('click', function(e){   
+    var m = document.getElementById('menuList');
+    var b = document.getElementById('menuButton');
+    if (m && b && !m.contains(e.target) && !b.contains(e.target)) m.style.display = "none";
+});
+window.addEventListener('scroll', function() {
+    var m = document.getElementById("menuList");
+    if (m) m.style.display = "none";
+});
+
+// 2. MA DONG HO VA BO DEM
+window.addEventListener('load', function() {
+    const clockEl = document.getElementById('paco-clock');
+    if (clockEl) {
+        setInterval(() => {
+            const now = new Date();
+            clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
+                timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
+            });
+        }, 1000);
+    }
+    const counterEl = document.getElementById('paco-counter');
+    if (counterEl) {
+        fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
+            .then(res => res.json())
+            .then(data => {
+                counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
+            })
+            .catch(() => { counterEl.textContent = "100.000"; });
+    }
+});
+
+// 3. MA GUI DON HANG
+const pacoForm = document.getElementById('pacoForm');
+if (pacoForm) {
+    pacoForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const msg = document.getElementById('msg');
+        btn.innerHTML = "Đang gửi...";
+        btn.disabled = true;
+        fetch("https://script.google.com/macros/s/AKfycbzYGjzAdP4RLsO7uVT85TLPoJtNxDPBBAAXvpmY5WvwETiRFUekWzYsW7R6wS1z7UOx/exec", {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new FormData(pacoForm)
+        })
+        .then(() => {
+            msg.innerHTML = "Cảm ơn Bạn đã đăng ký mua sách! Chúng tôi sẽ gửi tới bạn sớm nhất có thể.";
+            msg.style.display = "block";
+            pacoForm.reset();
+            btn.innerHTML = "Gửi đi";
+            btn.disabled = false;
+        });
+    });
+}
+</script>
 </body>
+</html>
