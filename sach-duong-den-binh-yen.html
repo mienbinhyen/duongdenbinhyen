@@ -73,6 +73,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
         min-height: 100vh;
         background-color: #f4ece0; /* Màu kem giấy cho vùng nội dung */
         box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
+	overflow-x: hidden; /* Chống tràn ngang */
     }
 
 
@@ -119,51 +120,42 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-/* Khung bao ngoài để giữ lề 10px */
+/* 1. Khung ngoài tạo lề trái phải 15px */
 .paco-slider-wrapper {
-    padding: 50px 10px 20px 10px; /* Thay 70px thành 62px để kéo lên sát hơn */
+    padding: 62px 15px 20px 15px !important; 
     box-sizing: border-box;
+    width: 100%;
 }
 
-/* Khung chứa chỉ hiện 1 hình, lướt ngang */
+/* 2. Khung chứa: KHÓA CHẶT 550PX VÀ CĂN GIỮA */
 .paco-slider-container {
-    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    
-    /* 1. Ép chiều cao tự động theo hình 1500px */
-    height: auto !important; 
-    /* 2. Triệt tiêu mọi khoảng hở lề */
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-/* 3. Thêm đoạn này để ép hình hiển thị đúng khổ */
-.paco-slider-container img {
     width: 100%;
-    height: auto !important;
-    display: block;
-    scroll-snap-align: start;
-    flex-shrink: 0;
+    max-width: 550px !important;
+    margin: 0 auto !important;
 }
 
 .paco-slider-container::-webkit-scrollbar {
     display: none;
 }
 
-/* Từng tấm hình */
+/* 3. Từng tấm hình: PHẢI ĐỔI THÀNH MIN-WIDTH: 0 */
 .paco-slide {
-    min-width: 100%; /* Ép mỗi hình chiếm đúng 1 khung nhìn */
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    min-width: 0 !important; /* ĐỂ 0 ĐỂ NÓ KHÔNG ĐẨY LỀ */
     scroll-snap-align: start;
     position: relative;
 }
 
+/* 4. Hình ảnh bên trong tự co theo lề */
 .paco-slide img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     display: block;
 }
 
@@ -410,7 +402,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     cursor: pointer;
     font-size: 16px;
     /* Xóa bỏ mọi khoảng cách dư thừa */
-    margin-top: -20px !important; 
+    margin-top: 0px !important; 
     padding-top: 0px !important;
     line-height: 1; /* Ép sát dòng */
 }
@@ -676,6 +668,10 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
     </div>
 </div>
+
+
+
+
 
 
 
