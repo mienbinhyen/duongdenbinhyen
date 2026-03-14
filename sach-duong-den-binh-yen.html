@@ -120,21 +120,21 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-/* 1. Khung ngoài tạo lề trái phải 15px */
+/* 1. Khung ngoài tạo lề trái phải 10px */
 .paco-slider-wrapper {
-    padding: 62px 15px 20px 15px !important; 
-    box-sizing: border-box;
+    padding: 62px 10px 20px 10px !important; 
+    box-sizing: border-box !important;
     width: 100%;
 }
 
 /* 2. Khung chứa: KHÓA CHẶT 550PX VÀ CĂN GIỮA */
 .paco-slider-container {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
     -webkit-overflow-scrolling: touch;
-    width: 100%;
+    width: 100% !important;
     max-width: 550px !important;
     margin: 0 auto !important;
 }
@@ -143,21 +143,26 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     display: none;
 }
 
-/* 3. Từng tấm hình: PHẢI ĐỔI THÀNH MIN-WIDTH: 0 */
+/* 3. Từng tấm hình: ÉP CHẶT CHIỀU RỘNG ĐỂ KHÔNG ĐẨY LỀ */
 .paco-slide {
-    flex: 0 0 100% !important;
+    flex: 0 0 100% !important; /* KHÔNG CHO PHÉP HÌNH TỰ Ý GIÃN NỞ */
     width: 100% !important;
-    min-width: 0 !important; /* ĐỂ 0 ĐỂ NÓ KHÔNG ĐẨY LỀ */
+    min-width: 100% !important;
     scroll-snap-align: start;
     position: relative;
 }
 
-/* 4. Hình ảnh bên trong tự co theo lề */
+/* 4. Hình ảnh bên trong */
 .paco-slide img {
     width: 100% !important;
     height: auto !important;
     display: block;
 }
+
+
+
+
+
 
 
 /* Nút đẩy xuống thêm một chút */
@@ -614,7 +619,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     /* 2. Thay đổi số 2px để tăng/giảm độ dày từ chữ đến viền (trong nút) */
     padding: 2px 10px; 
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 13px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     display: flex;
@@ -646,11 +651,11 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-
 <div class="header-fixed-container">
     <div class="mien-binh-yen-title">Miền Bình Yên</div>
 </div>
 
+<div class="paco-slider-wrapper">
 <div class="paco-slider-container">
     <div class="paco-slide"><img src="docthu6.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 
@@ -665,11 +670,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
     <div class="paco-slide"><img src="Biaduongdenbinhyen.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 </div>
-
-    </div>
 </div>
-
-
 
 
 
