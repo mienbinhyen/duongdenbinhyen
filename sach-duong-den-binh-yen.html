@@ -756,16 +756,18 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 <h2 class="paco-h2-title">ĐƯỜNG ĐẾN BÌNH YÊN</h2>
 <div class="paco-body-text">
     <p>Chúng ta làm việc không ngừng nghỉ, tích lũy không mệt mỏi, để rồi nhận ra thứ duy nhất không thể mua được bằng tiền chính là một tâm thế thản nhiên, tỉnh táo và tự tại trước mọi biến động.
-    <span id="paco-btn" style="color: #01579b; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 16px;" onclick="toggleContent()">Xem thêm</span></p>
+    <span id="paco-btn" style="color: #01579b; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 16px;" onclick="toggleContent1()">Xem thêm</span></p>
 
     <div id="more-content" style="display: none;">
         <p>Cuốn sách “Đường Đến Bình Yên” của tác giả Thiện Nhân không phải là những lời khuyên màu hồng. Nó là một hồi chuông tỉnh thức, sắc bén và thực tế đến đau lòng. Tác giả không dạy bạn cách trốn chạy thế gian, mà dạy bạn cách đứng vững ngay giữa tâm bão.</p>
         
         <p class="paco-quote">"&nbsp; Bình yên không phải là điểm đến, mà là tâm thế bạn chọn để đi qua thế gian này. " </p>
         
-        <div class="paco-readmore-btn" onclick="toggleContent()" style="margin-top: 15px; cursor: pointer; text-align: center;">Thu gọn</div>
+        <div class="paco-readmore-btn" onclick="toggleContent1()" style="margin-top: 15px; cursor: pointer; text-align: center;">Thu gọn</div>
     </div>
 </div>
+
+
     <div style="margin-top: 50px;"></div>
 
 
@@ -926,20 +928,20 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 <script>
-function toggleContent() {
+function toggleContent1() {
     var content = document.getElementById("more-content");
     var btn = document.getElementById("paco-btn");
     
     if (content.style.display === "none" || content.style.display === "") {
         content.style.display = "block";
-        btn.style.display = "none"; // Ẩn nút xem thêm khi mở
+        btn.style.display = "none"; 
     } else {
         content.style.display = "none";
-        btn.style.display = "inline"; // Hiện lại khi đóng
+        btn.style.display = "inline"; 
+        // Cuộn về đúng vị trí nút Xem thêm sau khi thu gọn
         btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 }
-
 
 
 
