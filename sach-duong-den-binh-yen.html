@@ -233,7 +233,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 }
 
 .paco-main-title {
-    font-size: 22px; /* Cố định kích thước chữ cho rõ ràng */
+    font-size: 24px; /* Cố định kích thước chữ cho rõ ràng */
     font-weight: bold;
     color: #333;
     margin-bottom: 8px;
@@ -357,7 +357,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 }
 
 .paco-h2-title {
-    font-size: 22px; /* Tiêu đề H2 nhỏ hơn H1 một chút */
+    font-size: 20px; /* Tiêu đề H2 nhỏ hơn H1 một chút */
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -645,6 +645,17 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 }
 
 
+
+/* ĐIỀU CHỈNH RIÊNG CHO ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    .paco-main-title {
+        font-size: 22px !important; /* Hạ size chữ xuống để không bị tràn */
+        line-height: 1.3 !important;
+        white-space: normal !important; /* Cho phép xuống dòng */
+        text-align: center !important;
+        display: block !important;
+    }
+}
 
 
 
