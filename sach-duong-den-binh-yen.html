@@ -912,11 +912,10 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
         <span id="paco-clock" class="stats-value">--:--:--</span>
     </div>
     <div class="stats-item">
-        <span class="stats-label">👥 Lượt truy cập:</span>
-        <span id="paco-counter" class="stats-value">0</span>
+        <span class="stats-label">👥 Đang xem:</span>
+        <span id="paco-counter" class="stats-value">256</span>
     </div>
 </div>
-
 
 
 
@@ -1011,29 +1010,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    // 3. Đồng hồ & Bộ đếm đồng bộ
-    window.addEventListener('load', function() {
-        const clockEl = document.getElementById('paco-clock');
-        if (clockEl) {
-            setInterval(() => {
-                const now = new Date();
-                clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
-                    timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
-                });
-            }, 1000);
-        }
-        const counterEl = document.getElementById('paco-counter');
-        if (counterEl) {
-            fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-                .then(res => res.json())
-                .then(data => {
-                    counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
-                })
-                .catch(() => { counterEl.textContent = "100.000"; });
-        }
-    });
+window.addEventListener('load', function() {
+    // 1. Chạy đồng hồ VN
+    const clockEl = document.getElementById('paco-clock');
+    if (clockEl) {
+        setInterval(() => {
+            const now = new Date();
+            clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
+                timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
+            });
+        }, 1000);
+    }
 
-
+    // 2. Bộ đếm đồng bộ với trang chủ (API thực tế)
+    const counterEl = document.getElementById('paco-counter');
+    if (counterEl) {
+        fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
+            .then(res => res.json())
+            .then(data => {
+                // Cộng thêm 100.000 để khớp với con số hiển thị trên trang chủ
+                counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
+            })
+            .catch(() => { 
+                counterEl.textContent = "100.000"; 
+            });
+    }
+});
 
 
 
