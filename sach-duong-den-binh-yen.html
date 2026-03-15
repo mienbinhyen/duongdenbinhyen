@@ -646,14 +646,20 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-/* ĐIỀU CHỈNH RIÊNG CHO ĐIỆN THOẠI */
 @media (max-width: 768px) {
+    /* Căn trái tiêu đề H1 */
     .paco-main-title {
-        font-size: 22px !important; /* Hạ size chữ xuống để không bị tràn */
+        font-size: 22px !important;
         line-height: 1.3 !important;
-        white-space: normal !important; /* Cho phép xuống dòng */
-        text-align: center !important;
+        white-space: normal !important;
+        text-align: left !important; /* Đã thay từ center thành left */
         display: block !important;
+    }
+    /* Căn trái tên tác giả và chủ biên */
+    .paco-author-info {
+        text-align: left !important; /* Đã thay từ center thành left */
+        display: block !important;
+        margin-top: 5px !important;
     }
 }
 
