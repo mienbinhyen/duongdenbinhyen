@@ -154,10 +154,10 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 /* 4. Hình ảnh bên trong */
 .paco-slide img {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 2 / 3; /* Giúp trình duyệt giữ chỗ trước cho hình, không bị giật bố cục */
-    display: block;
+    width: 100%;
+    height: auto; /* Quan trọng: Để chiều cao tự nhảy theo chiều rộng */
+    aspect-ratio: 686 / 1005; /* Ép đúng tỷ lệ gốc của file ảnh */
+    object-fit: contain;
 }
 
 
