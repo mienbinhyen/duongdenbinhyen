@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sách Đường Đến Bình Yên | Tác giả Thiện Nhân</title>
-
+<link rel="preload" as="image" href="mienbinhyen000.webp">
 <meta property="og:site_name" content="Miền Bình Yên" />
 <meta property="og:title" content="Sách Đường Đến Bình Yên | Tác giả Thiện Nhân" />
 
@@ -71,7 +71,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
         width: 100%;
         max-width: 550px; /* Khóa khổ toàn trang */
         min-height: 100vh;
-        background-color: #f4ece0; /* Màu kem giấy cho vùng nội dung */
+        background-color: #f5f5f0 ; /* Màu kem giấy cho vùng nội dung #f4ece0 #fdfaf1 */
         box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
 	overflow-x: hidden; /* Chống tràn ngang */
     }
@@ -156,6 +156,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 .paco-slide img {
     width: 100% !important;
     height: auto !important;
+    aspect-ratio: 2 / 3; /* Giúp trình duyệt giữ chỗ trước cho hình, không bị giật bố cục */
     display: block;
 }
 
@@ -201,7 +202,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     padding: 10px 10px; /* Lề 10px bằng với khối hình */
     line-height: 1.2; /* Độ thưa dòng 1.5 */
     color: #333;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .paco-info-item {
@@ -234,8 +235,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 .paco-main-title {
     color: #014c87 !important; /* Xanh đậm hơn nữa để nét chữ trông đặc hơn */
-    font-size: 24px !important;
-    font-weight: 500 !important; /* Đẩy độ dày lên mức cao nhất */
+    font-size: 25px !important;
+    font-weight: 800 !important; /* Đẩy độ dày lên mức cao nhất */
     text-transform: uppercase;
     letter-spacing: 0.8px; /* Giãn nhẹ để chữ không bị dính khi nét dày */
     text-shadow: 0.5px 0.5px 0px rgba(1, 76, 135, 0.3); /* Tạo nét kép nhẹ cho chữ dày hơn */
@@ -446,7 +447,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 .paco-author-section {
     margin-top: 10px;
     padding: 2px 10px 20px 10px;
-    background-color: #e1f5fe; /* Màu nền xanh nhạt để nhấn */
+    background-color: #f4ece0; /* Màu nền xanh nhạt để nhấn */
     border-radius: 8px; /* Bo góc nhẹ cho khối nền */
     box-sizing: border-box;
 }
@@ -681,22 +682,25 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     <div class="mien-binh-yen-title">Miền Bình Yên</div>
 </div>
 
+
+
+
 <div class="paco-slider-wrapper">
 <div class="paco-slider-container">
-    <div class="paco-slide"><img src="docthu6.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu6.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 
-    <div class="paco-slide"><img src="mienbinhyen000.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="mienbinhyen000.webp" width="686" height="1005" fetchpriority="high"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 
-    <div class="paco-slide"><img src="Biaduongdenbinhyen.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="biathitham.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu1.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu2.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu3.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu4.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu5.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
-    <div class="paco-slide"><img src="docthu6.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="Biaduongdenbinhyen.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="biathitham.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu1.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu2.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu3.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu4.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu5.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="docthu6.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 
-    <div class="paco-slide"><img src="Biaduongdenbinhyen.webp"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
+    <div class="paco-slide"><img src="Biaduongdenbinhyen.webp" width="686" height="1005" loading="lazy"><div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ</div></div>
 </div>
 </div>
 
@@ -706,7 +710,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-<div class="paco-info-section">
+<div class="paco-info-section" style="padding-left: 25px;">
     <span class="paco-info-item"><span class="paco-info-label">Nhà xuất bản:</span> Tri Thức</span>
     <span class="paco-info-item"><span class="paco-info-label">Số trang:</span> 268</span>
     <span class="paco-info-item"><span class="paco-info-label">Kích thước:</span> 14 x 20,5 (cm)</span>
@@ -1089,7 +1093,6 @@ window.addEventListener('load', () => {
     slider.scrollTo({ left: slider.clientWidth, behavior: 'auto' });
     resetTimer();
 });
-
 
 
 
