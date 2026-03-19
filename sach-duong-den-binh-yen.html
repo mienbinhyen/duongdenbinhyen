@@ -658,6 +658,54 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
+/* =========================================
+   KHỐI 8: CAM KẾT HÀNG CHÍNH HÃNG
+   ========================================= */
+
+/* Khối cam kết dưới form đặt hàng */
+
+.paco-trust-box {
+    margin: 5px 10px; /* Giảm lề trên dưới còn 5px */
+    padding: 5px 10px; /* Thu nhỏ khoảng cách đệm bên trong */
+    border: 1px dashed #01579b; 
+    border-radius: 12px; 
+    text-align: center; 
+    color: #333;
+    background-color: rgba(1, 87, 155, 0.05);
+}
+
+.paco-trust-items {
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 2px; /* Ép sát dòng trên với dòng dưới */
+}
+
+.paco-trust-item b {
+    color: #01579b; 
+    font-size: 14px;
+}
+.paco-trust-info {
+    color: #555; 
+    margin: 0; 
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -917,9 +965,9 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
         <div class="paco-input-wrapper">
             <input type="text" name="Họ và Tên" class="paco-input" placeholder="Họ và tên" required>
         </div>
-        <div class="paco-input-wrapper">
-            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại" required>
-        </div>
+	<div class="paco-input-wrapper">
+    	   <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại" required onfocus="fbq('track', 'InitiateCheckout');">
+	</div>
         <div class="paco-input-wrapper">
             <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết (Số nhà, tên đường...)" required>
         </div>
@@ -929,6 +977,17 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     <div id="msg" class="hidden" style="color: #2e7d32; text-align: center; margin-top: 15px; font-weight: bold;">
         Gửi đơn hàng thành công!
     </div>
+</div>
+
+
+
+
+<div class="paco-trust-box">
+    <div class="paco-trust-items">
+        <div class="paco-trust-item"><span>🛡️</span><br><b>Hàng chính hãng</b></div>
+        <div class="paco-trust-item"><span>📦</span><br><b>Kiểm tra khi nhận</b></div>
+    </div>
+    <p class="paco-trust-info">Sách thuộc <b>Nhà xuất bản Tri Thức</b>. Tác giả <b>Thiện Nhân</b>.</p>
 </div>
 
 
