@@ -619,6 +619,20 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 }
 
 
+/* Hiệu ứng phản hồi khi nhấn chuột/ngón tay */
+.paco-submit-btn:active {
+    transform: scale(0.90); /* Nút thu nhỏ lại tạo cảm giác lún xuống */
+    filter: brightness(0.6); /* Nút tối đi một chút như bị đè nặng */
+    box-shadow: inset 0 6px 12px rgba(0,0,0,0.3); /* Tạo bóng đổ bên trong */
+}
+
+/* Hiệu ứng khi nút bị khóa (đang gửi) */
+.paco-submit-btn:disabled {
+    background-color: #9e9e9e !important; /* Chuyển sang màu xám */
+    cursor: not-allowed;
+    transform: none;
+}
+
 
 /* =========================================
    KHỐI 7: ĐỒNG HỒ & TRUY CẬP
@@ -1095,7 +1109,7 @@ function toggleContent(num) {
 
 
 
-// Chờ trang tải xong mới chạy script
+// Crip gửi thông tin form đơn đặt hàng
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1104,18 +1118,27 @@ document.addEventListener("DOMContentLoaded", function() {
     if (pacoForm) {
         pacoForm.addEventListener('submit', e => {
             e.preventDefault();
-            submitBtn.innerHTML = "Đang gửi...";
+            
+            // 1. Khóa nút ngay lập tức để chặn bấm lần 2
+            submitBtn.disabled = true; 
+            submitBtn.innerHTML = "Đang gửi đơn...";
             
             fetch("https://script.google.com/macros/s/AKfycbzYGjzAdP4RLsO7uVT85TLPoJtNxDPBBAAXvpmY5WvwETiRFUekWzYsW7R6wS1z7UOx/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
             }).then(() => {
+                // 2. Hiện thông báo và xóa sạch dữ liệu trong Form
                 msg.classList.remove('hidden');
-                pacoForm.reset();
+                pacoForm.reset(); 
+                
+                // 3. Mở khóa nút trở lại (Lúc này form đã trống nên khách không gửi trùng được)
+                submitBtn.disabled = false;
                 submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
             }).catch(err => {
                 console.error(err);
+                // Nếu lỗi mạng, mở lại nút để khách thử lại
+                submitBtn.disabled = false;
                 submitBtn.innerHTML = "THỬ LẠI";
             });
         });
