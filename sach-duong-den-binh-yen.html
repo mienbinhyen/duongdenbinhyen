@@ -1148,7 +1148,7 @@ function toggleContent(num) {
 
 
 
-// Crip gửi thông tin form đơn đặt hàng
+// Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1158,32 +1158,32 @@ document.addEventListener("DOMContentLoaded", function() {
         pacoForm.addEventListener('submit', e => {
             e.preventDefault();
             
-            // 1. Khóa nút ngay lập tức để chặn bấm lần 2
+            // 1. Khóa nút và mờ đi để báo đang gửi thông tin
             submitBtn.disabled = true; 
-            submitBtn.innerHTML = "Đang gửi đơn...";
+            submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
             fetch("https://script.google.com/macros/s/AKfycbzYGjzAdP4RLsO7uVT85TLPoJtNxDPBBAAXvpmY5WvwETiRFUekWzYsW7R6wS1z7UOx/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
-		
-		}).then(() => {
-                // 1. Gửi tín hiệu cho Meta Pixel (Chỉ 1 lần duy nhất khi thành công)
+            }).then(() => {
+                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
                 fbq('track', 'Purchase', {currency: 'VND', value: 199000});
 
-                // 2. Hiện thông báo thành công và xóa dữ liệu Form
+                // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
                 submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
                 pacoForm.reset(); 
 
-                // 3. Khóa nút vĩnh viễn và chuyển hướng sau 2 giây để làm sạch trình duyệt
-                // Tuyệt đối không để submitBtn.disabled = false ở đây
+                // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
                 setTimeout(() => {
-                    window.location.href = "https://duongdenbinhyen.com/cam-on.html";
-                }, 2000);
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
+                    msg.classList.add('hidden'); // Ẩn thông báo cũ
+                }, 5000);
 
             }).catch(err => {
-                // Chỉ mở lại nút nếu gửi THẤT BẠI (lỗi mạng)
+                // Mở lại nút nếu lỗi mạng để khách thử lại
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = "THỬ LẠI";
                 console.error('Lỗi:', err);
