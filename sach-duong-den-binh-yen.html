@@ -1051,7 +1051,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
             <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết (Số nhà, tên đường...)" required>
         </div>
 	<div class="paco-freeship">🚚 Miễn ship trên toàn quốc</div>
-        <button type="submit" id="submitBtn" class="paco-submit-btn" onclick="fbq('track', 'Purchase');">HOÀN TẤT ĐẶT HÀNG</button>
+        <button type="submit" id="submitBtn" class="paco-submit-btn">HOÀN TẤT ĐẶT HÀNG</button>
     </form>
     <div id="msg" class="hidden" style="color: #2e7d32; text-align: center; margin-top: 15px; font-weight: bold;">
         Gửi đơn hàng thành công!
@@ -1166,19 +1166,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
-            }).then(() => {
-                // 2. Hiện thông báo và xóa sạch dữ liệu trong Form
+		
+		}).then(() => {
+                // 1. Gửi tín hiệu cho Meta Pixel (Chỉ 1 lần duy nhất khi thành công)
+                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+
+                // 2. Hiện thông báo thành công và xóa dữ liệu Form
                 msg.classList.remove('hidden');
+                submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
                 pacoForm.reset(); 
-                
-                // 3. Mở khóa nút trở lại (Lúc này form đã trống nên khách không gửi trùng được)
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
+
+                // 3. Khóa nút vĩnh viễn và chuyển hướng sau 2 giây để làm sạch trình duyệt
+                // Tuyệt đối không để submitBtn.disabled = false ở đây
+                setTimeout(() => {
+                    window.location.href = "https://duongdenbinhyen.com/cam-on.html";
+                }, 2000);
+
             }).catch(err => {
-                console.error(err);
-                // Nếu lỗi mạng, mở lại nút để khách thử lại
+                // Chỉ mở lại nút nếu gửi THẤT BẠI (lỗi mạng)
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = "THỬ LẠI";
+                console.error('Lỗi:', err);
             });
         });
     }
