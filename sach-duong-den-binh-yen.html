@@ -1248,6 +1248,10 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 <script>
+
+window.onbeforeunload = function () { window.scrollTo(0, 0); };
+
+
 function toggleContent1() {
     var content = document.getElementById("more-content");
     var btn = document.getElementById("paco-btn");
