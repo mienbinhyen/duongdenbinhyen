@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=450, initial-scale=0.8, user-scalable=yes">
+    <meta name="viewport" content="width=450">
     <title>Bộ sách Miền Bình Yên | Tác giả Thiện Nhân</title>
     
     <link rel="preload" as="image" href="mienbinhyen000.webp">
@@ -54,18 +54,33 @@
 
     <style>
         /* THIẾT LẬP KHUNG CỐ ĐỊNH */
-        html { background-color: #333; display: flex; justify-content: center; }
-        body { 
-            margin: 0; padding: 0;
-	    width: 450px !important; /* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT */
-    	    min-width: 450px !important; /* GIỮ CHẶT KHUNG TRÊN MÁY NHỎ */
-            background-color: #eadfca; box-shadow: 0 0 20px rgba(0,0,0,0.5); 
-            overflow-x: hidden; font-family: 'Times New Roman', Times, serif; 
-        }
+    /* Khóa toàn trang vào khổ 550px và căn giữa màn hình */
+    
+    * { box-sizing: border-box; }
+
+
+    html {
+        background-color: #333; /* Nền tối bên ngoài vùng khóa */
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 550px; /* Khóa khổ toàn trang */
+        min-height: 100vh;
+        background-color: #eadfca; /* Màu kem giấy cho vùng nội dung #f4ece0 #fdfaf1 */
+        box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
+	overflow-x: hidden; /* Chống tràn ngang */
+    }
+
+
 
         /* HEADER */
         .header-fixed-container {
-            position: fixed; top: 0; width: 450px; height: 40px;
+            position: fixed; top: 0; width: 100%; max-width: 450px; height: 40px;
             background-color: #e1f5fe; display: flex; justify-content: center;
             align-items: center; z-index: 9999; border-bottom: 2px solid #01579b;
         }
@@ -142,12 +157,12 @@
 
 
 
-<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 450px; height: 0; z-index: 9999; pointer-events: none;">
+<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; height: 0; z-index: 9999; pointer-events: none;">
     <div style="
         position: absolute;
         /* --- CHỈNH VỊ TRÍ TẠI ĐÂY --- */
         top: 5px;    /* Số càng lớn càng xuống thấp */
-        right: 10px;   /* Cách lề phải khung 450px là 10px */
+        right: 0px;   /* Cách lề phải khung 450px là 10px */
         /* --------------------------- */
         background: #d32f2f;
         color: #ffffff;
@@ -178,7 +193,7 @@
 </style>
 
 
-<div style="position: fixed; bottom: 0px; left: 50%; transform: translateX(-50%); width: 450px; z-index: 9998; pointer-events: none; display: flex; justify-content: center;">
+<div style="position: fixed; bottom: 0px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; z-index: 9998; pointer-events: none; display: flex; justify-content: center;">
     <button onclick="document.getElementById('datsach').scrollIntoView({behavior: 'smooth'});"
         style="
             pointer-events: auto;
