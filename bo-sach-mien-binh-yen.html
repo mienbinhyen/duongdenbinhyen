@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=450, user-scalable=no">
+    <meta name="viewport" content="width=450, initial-scale=1.0, user-scalable=yes">
     <title>Bộ sách Miền Bình Yên | Tác giả Thiện Nhân</title>
     
     <link rel="preload" as="image" href="mienbinhyen000.webp">
@@ -56,7 +56,9 @@
         /* THIẾT LẬP KHUNG CỐ ĐỊNH */
         html { background-color: #333; display: flex; justify-content: center; }
         body { 
-            margin: 0; padding: 0; width: 450px; /* Khóa chết độ rộng */
+            margin: 0; padding: 0;
+	    width: 450px !important; /* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT */
+    	    min-width: 450px !important; /* GIỮ CHẶT KHUNG TRÊN MÁY NHỎ */
             background-color: #eadfca; box-shadow: 0 0 20px rgba(0,0,0,0.5); 
             overflow-x: hidden; font-family: 'Times New Roman', Times, serif; 
         }
@@ -110,7 +112,7 @@
             border-radius: 8px; font-size: 16px; box-sizing: border-box; margin-bottom: 15px; 
         }
         .paco-submit-btn {
-            width: 100%; background-color: #b30000; color: #fff; border: 2px solid #ffd700;
+            width: 80%; margin: 0 auto; display: block; background-color: #b30000; color: #fff; border: 2px solid #ffd700;
             padding: 12px; font-size: 18px; font-weight: 900; border-radius: 99px;
             text-transform: uppercase; animation: pacoPulsate 1.5s infinite ease-in-out; cursor: pointer;
         }
@@ -217,7 +219,13 @@
             Mời bạn lắng nghe giai điệu của sự bình yên...
         </p>
         <div class="video-container">
-            <iframe src="https://www.youtube-nocookie.com/embed/fmSmuaxPo6o?autoplay=1&mute=1&playlist=fmSmuaxPo6o&loop=1&playsinline=1&rel=0&controls=1&vq=hd720" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe 
+    src="https://www.youtube.com/embed/fmSmuaxPo6o?autoplay=1&mute=1&playlist=fmSmuaxPo6o&loop=1&playsinline=1&rel=0" 
+    allow="autoplay; encrypted-media" 
+    playsinline="1" 
+    webkit-playsinline="true"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+</iframe>
         </div>
 
         <div style="margin: 16px 0; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; padding: 10px; text-align: center; color: #01579b; font-weight: bold; font-style: italic; font-size: 17px;">
@@ -232,8 +240,8 @@
         </div>
 
         <div class="paco-border-box">
-            <div style="color: #1a1a1a; font-style: italic; font-weight: 600; line-height: 1.6; font-size: 17px;">
-                <span style="font-size: 1.7em; font-weight: 800; line-height: 0.8; margin-right: 2px;">Đừng</span> để những vết sẹo của quá khứ ngăn cản bạn tìm thấy hạnh phúc ở thực tại. Bởi giữa những bộn bề và toan tính, tri thức chính là ngọn đèn soi sáng khi ta lỡ bước lạc lối. Hãy tin rằng mỗi sớm mai thức dậy là một cơ hội mới để bạn tự tay viết lại câu chuyện đời mình.
+            <div style="color: #1a1a1a; font-style: italic; font-weight: 600; line-height: 1.6; font-size: 18px;">
+                <span style="font-size: 1.8em; font-weight: 800; line-height: 0.8; margin-right: 2px;">Đừng</span> để những vết sẹo của quá khứ ngăn cản bạn tìm thấy hạnh phúc ở thực tại. Bởi giữa những bộn bề và toan tính, tri thức chính là ngọn đèn soi sáng khi ta lỡ bước lạc lối. Hãy tin rằng mỗi sớm mai thức dậy là một cơ hội mới để bạn tự tay viết lại câu chuyện đời mình.
             </div>
         </div>
 
@@ -272,8 +280,8 @@
         </div>
 
         <div class="paco-border-box">
-            <div style="color: #1a1a1a; font-style: italic; font-weight: 600; line-height: 1.6; font-size: 17px;">
-                <span style="font-size: 1.7em; font-weight: 800; color: #01579b; margin-right: 2px;">Tri thức</span> chính là bản lĩnh để thấu hiểu mọi lẽ ở đời trên cung Đường Đến Bình Yên. Chỉ khi đủ tỉnh táo trước những lo toan và nghịch cảnh, bạn mới thực sự làm chủ được cuộc sống và chạm tới Miền Bình Yên của riêng mình.
+            <div style="color: #1a1a1a; font-style: italic; font-weight: 600; line-height: 1.6; font-size: 18px;">
+                <span style="font-size: 1.8em; font-weight: 800; color: #01579b; margin-right: 2px;">Tri thức</span> chính là bản lĩnh để thấu hiểu mọi lẽ ở đời trên cung Đường Đến Bình Yên. Chỉ khi đủ tỉnh táo trước những lo toan và nghịch cảnh, bạn mới thực sự làm chủ được cuộc sống và chạm tới Miền Bình Yên của riêng mình.
             </div>
         </div>
 
