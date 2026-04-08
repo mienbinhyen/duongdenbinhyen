@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=450, initial-scale=0.1, user-scalable=yes">
+    <meta name="viewport" content="width=450, initial-scale=1.0, user-scalable=yes">
     <title>Bộ sách Miền Bình Yên | Tác giả Thiện Nhân</title>
     
     <link rel="preload" as="image" href="mienbinhyen000.webp">
@@ -59,7 +59,6 @@
             margin: 0; padding: 0;
 	    width: 450px !important; /* ĐÂY LÀ DÒNG QUAN TRỌNG NHẤT */
     	    min-width: 450px !important; /* GIỮ CHẶT KHUNG TRÊN MÁY NHỎ */
-	    white-space: nowrap; /* DÒNG CHỐT HẠ LỖI NHẢY CHỮ */
             background-color: #eadfca; box-shadow: 0 0 20px rgba(0,0,0,0.5); 
             overflow-x: hidden; font-family: 'Times New Roman', Times, serif; 
         }
@@ -76,7 +75,7 @@
         }
 
         /* VIDEO & KHỐI ĐẦU TƯ */
-        .paco-section-wrapper { padding: 55px 15px 15px; box-sizing: border-box; }
+        .paco-section-wrapper { padding: 55px 15px 15px; box-sizing: border-box; **word-break: break-word; overflow-wrap: break-word;** }
         .video-container {
             position: relative; padding-bottom: 56.25%; height: 0; 
             overflow: hidden; border-radius: 4px; width: 100%;
