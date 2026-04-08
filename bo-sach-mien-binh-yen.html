@@ -37,20 +37,44 @@
     }
     </script>
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('set', 'autoConfig', false, '935549958850787');
-    fbq('init', '935549958850787');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"/></noscript>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('set', 'autoConfig', false, '935549958850787');
+fbq('init', '935549958850787');
+fbq('set', 'autoConfig', false, '935549958850787');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <style>
         /* THIẾT LẬP KHUNG CỐ ĐỊNH */
@@ -234,8 +258,12 @@
             Mời bạn lắng nghe giai điệu của sự bình yên...
         </p>
 
-<div style="position: relative; width: 100%; max-width: 450px; margin: 0 auto; overflow: hidden; line-height: 0;">
-    <video id="pacoVideo" width="450" height="253" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="nenvideo.webp" style="width: 100%; height: auto; display: block; background-color: #000;">
+<div style="position: relative; width: 100%; max-width: 450px; margin: 0 auto; overflow: hidden;">
+    <video id="pacoVideo" width="450" height="253" 
+           autoplay muted="muted" loop playsinline webkit-playsinline 
+           preload="auto" 
+           poster="nenvideo.webp" 
+           style="width: 100%; height: auto; display: block; background-color: #000;">
         <source src="https://duongdenbinhyen.com/trithuc.mp4" type="video/mp4">
     </video>
     <div onclick="var v=document.getElementById('pacoVideo'); v.muted=!v.muted; this.innerHTML=v.muted?'🔇':'🔊';" 
@@ -354,6 +382,9 @@
         </div>
     </main>
 
+
+
+
     <script>
         // Đồng hồ đếm ngược
         function startCountdown() {
@@ -380,28 +411,55 @@
             .then(data => { document.getElementById('paco-counter').textContent = (data.count + 100000).toLocaleString('vi-VN'); })
             .catch(() => { document.getElementById('paco-counter').textContent = "100.256"; });
 
-        // Xử lý Form
-        const pacoForm = document.getElementById('pacoForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const msg = document.getElementById('msg');
 
+
+
+
+
+      // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
+document.addEventListener("DOMContentLoaded", function() {
+    const pacoForm = document.getElementById('pacoForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const msg = document.getElementById('msg');
+
+    if (pacoForm) {
         pacoForm.addEventListener('submit', e => {
             e.preventDefault();
-            submitBtn.disabled = true;
+            
+            // 1. Khóa nút và mờ đi để báo đang gửi thông tin
+            submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
+            
+	
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
-                method: 'POST', mode: 'no-cors', body: new FormData(pacoForm)
+                method: 'POST', 
+                mode: 'no-cors', 
+                body: new FormData(pacoForm)
             }).then(() => {
+                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
+                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+
+                // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
                 submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
-                pacoForm.reset();
+                pacoForm.reset(); 
+
+                // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
                 setTimeout(() => {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
-                    msg.classList.add('hidden');
+                    msg.classList.add('hidden'); // Ẩn thông báo cũ
                 }, 5000);
+
+            }).catch(err => {
+                // Mở lại nút nếu lỗi mạng để khách thử lại
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "THỬ LẠI";
+                console.error('Lỗi:', err);
             });
         });
+    }
+});
     </script>
 </body>
 </html>
