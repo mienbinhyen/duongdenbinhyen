@@ -719,6 +719,42 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+
+
+const slider = document.querySelector('.paco-slider-container');
+let isDown = false, startX, scrollLeft;
+
+// 1. Chặn trình duyệt nắm kéo ảnh
+slider.querySelectorAll('img').forEach(img => {
+    img.ondragstart = () => false;
+});
+
+// 2. Xử lý Quay vòng (Cả máy tính & Điện thoại) - ĐÃ BỎ RESETTIMER
+slider.addEventListener('scroll', () => {
+    const w = slider.clientWidth;
+    if (slider.scrollLeft <= 2) slider.scrollTo({ left: w * (slider.children.length - 2), behavior: 'auto' });
+    if (slider.scrollLeft >= w * (slider.children.length - 1) - 2) slider.scrollTo({ left: w, behavior: 'auto' });
+});
+
+// 3. Kéo chuột máy tính
+slider.addEventListener('mousedown', (e) => {
+    isDown = true; slider.style.scrollSnapType = 'none';
+    startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return; e.preventDefault();
+    slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 2;
+});
+const end = () => { isDown = false; slider.style.scrollSnapType = 'x mandatory'; };
+slider.addEventListener('mouseup', end); slider.addEventListener('mouseleave', end);
+
+// 4. Khởi tạo - ĐÃ BỎ RESETTIMER
+window.addEventListener('load', () => {
+    slider.scrollTo({ left: slider.clientWidth, behavior: 'auto' });
+});
+
+
+
 </script>
 
 
