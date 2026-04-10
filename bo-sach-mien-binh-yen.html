@@ -122,6 +122,90 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
    
 
 
+
+/* =========================================
+   KHỐI 2: GIÁ CẢ VÀ NÚT MUA HÀNG
+   ========================================= */
+
+.paco-price-section {
+    margin-top: 15px; /* Chỉnh khoảng cách với khối trên */
+    padding: 0 10px;
+}
+
+
+.paco-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0px; /* SỬA SỐ NÀY: Số âm càng lớn (vd: -10px) thì giá càng sát lên chữ */
+}
+
+.old-prices-stack span {
+    display: block; /* Ép từng dòng nhận lệnh gạch */
+    text-decoration: line-through; /* Lệnh gạch ngang */
+    text-decoration-color: #666; /* Màu của dấu gạch */
+}
+
+.new-price {
+    color: #e53935;
+    font-size: 35px; /* Tăng độ lớn */
+    font-weight: bold;
+    line-height: 1;
+}
+
+
+
+
+.discount-tag {
+    background-color: #8b0000; /* Đỏ đậm chuẩn tương phản */
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+.paco-buy-btn {
+    font-family: 'Times New Roman', Times, serif !important;
+    width: 220px; /* Tăng nhẹ chiều ngang cho cân đối chữ */
+    margin: 15px auto;
+    display: block;
+    background-color: #b30000 !important;
+    color: #ffffff;
+    border: 2px solid #ffd700 !important;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    
+    /* BO GÓC NHẸ ĐỂ ĐẸP HƠN */
+    border-radius: 8px !important; 
+    
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Đổ bóng vàng nhẹ */
+    animation: pacoPulsate 3.5s infinite ease-in-out;
+}
+    
+    /* Hiệu ứng rung rinh */
+    animation: paco-shake 3s infinite;
+}
+
+/* Hiệu ứng zoom nhẹ nhàng cho điện thoại */
+.paco-zoom-anim {
+    animation: pacoPulsate 1.5s infinite ease-in-out;
+}
+
+@keyframes pacoPulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); } /* Zoom nhẹ 3% để không bị thô */
+    100% { transform: scale(1); }
+}
+
+
+
    /* =========================================
    KHỐI 6: FORM ĐẶT HÀNG (#datsach)
    ========================================= */
@@ -497,7 +581,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
         <div class="paco-book-pair" style="margin: 20px 15px; width: auto;">
-            <img src="Biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên">
+            <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên">
             <img src="biathitham11.webp" alt="Thì Thầm">
             <div class="paco-book-info">
                 <div style="color: #004a80; font-weight: bold; font-size: 18px; text-transform: uppercase;">Bộ đôi sách Tâm lý</div>
@@ -513,8 +597,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 <div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 600; font-style: italic; font-size: 22px; line-height: 1.6;">
-        <span style="font-size: 1.8em; font-weight: 800; color: #01579b; margin-right: 2px;">Đừng</span> để những vết sẹo của quá khứ ngăn cản bạn tìm thấy hạnh phúc ở thực tại. Bởi giữa những bộn bề và toan tính, tri thức chính là ngọn đèn soi sáng khi ta lỡ bước lạc lối. Hãy tin rằng mỗi sớm mai thức dậy là một cơ hội mới để bạn tự tay viết lại câu chuyện đời mình.
+    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
+        <span style="font-size: 1.8em; font-weight: 600; color: #01579b; margin-right: 2px;">Đừng</span> để những vết sẹo của quá khứ ngăn cản bạn tìm thấy hạnh phúc ở thực tại. Bởi giữa những bộn bề và toan tính, tri thức chính là ngọn đèn soi sáng khi ta lỡ bước lạc lối. Hãy tin rằng mỗi sớm mai thức dậy là một cơ hội mới để bạn tự tay viết lại câu chuyện đời mình.
     </div>
 </div>
 
@@ -542,8 +626,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
         </div>
 
        <div class="paco-border-box" style="max-width: 520px; margin: 10px auto; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; padding: 15px; text-align: justify; box-sizing: border-box;">
-            <div style="color: #1a1a1a; font-style: italic; font-weight: 600; line-height: 1.6; font-size: 22px;">
-                <span style="font-size: 1.8em; font-weight: 800; color: #01579b; margin-right: 2px;">Tri thức</span> chính là bản lĩnh để thấu hiểu mọi lẽ ở đời trên cung Đường Đến Bình Yên. Chỉ khi đủ tỉnh táo trước những lo toan và nghịch cảnh, bạn mới thực sự làm chủ được cuộc sống và chạm tới Miền Bình Yên của riêng mình.
+            <div style="color: #1a1a1a; font-style: nomal; font-weight: 550; line-height: 1.6; font-size: 22px;">
+                <span style="font-size: 1.8em; font-weight: 600; color: #01579b; margin-right: 2px;">Tri thức</span> chính là bản lĩnh để thấu hiểu mọi lẽ ở đời trên cung Đường Đến Bình Yên. Chỉ khi đủ tỉnh táo trước những lo toan và nghịch cảnh, bạn mới thực sự làm chủ được cuộc sống và chạm tới Miền Bình Yên của riêng mình.
             </div>
         </div>
 
