@@ -1164,18 +1164,25 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     <script>
 	// Đồng hồ đếm ngược
 
+
 (function() {
-    var time = 5 * 3600; 
+    var cycle = 5 * 3600; // Chu kỳ 5 tiếng (giây)
     var displays = document.querySelectorAll('.paco-timer');
+    
     setInterval(function () {
-        var h = Math.floor(time / 3600);
-        var m = Math.floor((time % 3600) / 60);
-        var s = time % 60;
+        // Lấy thời gian hiện tại của máy tính để tính toán vị trí trong chu kỳ 5 tiếng
+        var now = Math.floor(Date.now() / 1000);
+        var remaining = cycle - (now % cycle);
+        
+        var h = Math.floor(remaining / 3600);
+        var m = Math.floor((remaining % 3600) / 60);
+        var s = remaining % 60;
+        
         var text = (h < 10 ? "0" + h : h) + " : " + (m < 10 ? "0" + m : m) + " : " + (s < 10 ? "0" + s : s);
+        
         displays.forEach(function(el) {
             el.textContent = text;
         });
-        if (--time < 0) time = 5 * 3600;
     }, 1000);
 })();
 
