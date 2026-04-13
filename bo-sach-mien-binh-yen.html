@@ -846,22 +846,6 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     </div>
 </div>
 
-<script>
-(function() {
-    var time = 5 * 3600; // Đặt sẵn 5 tiếng (18000 giây)
-    var displays = document.querySelectorAll('.paco-timer');
-    setInterval(function () {
-        var h = Math.floor(time / 3600);
-        var m = Math.floor((time % 3600) / 60);
-        var s = time % 60;
-        var text = (h < 10 ? "0" + h : h) + " : " + (m < 10 ? "0" + m : m) + " : " + (s < 10 ? "0" + s : s);
-        displays.forEach(function(el) {
-            el.textContent = text;
-        });
-        if (--time < 0) time = 5 * 3600; // Hết 5 tiếng tự quay lại từ đầu
-    }, 1000);
-})();
-</script>
 
 
         <div class="paco-border-box" style="width: auto; max-width: 550px; margin: 20px 15px; background-color: #f0f7ff;  box-sizing: border-box; padding: 15px 0; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; text-align: center;">
