@@ -1287,7 +1287,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 body: new FormData(pacoForm)
             }).then(() => {
                 // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+		ttq.track('PlaceAnOrder', {currency: 'VND', value: 199000});
 
                 // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
