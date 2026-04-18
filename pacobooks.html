@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miền Bình Yên | Pacobooks | Tác giả Thiện Nhân</title>
+    <title>Tự Do Tâm Trí | Bộ Đôi Sách Chữa Lành: Đường Đến Bình Yên & Thì Thầm</title>
     
     <meta property="og:site_name" content="Miền Bình Yên" />
-    <meta property="og:title" content="Paco Books - Miền Bình Yên - Hành trình tìm lại chính mình" />
+    <meta property="og:title" content="Paco Books - Tự Do Tâm Trí - Hành trình tìm lại chính mình" />
     <meta name="keywords" content="Tự Do Tâm Trí, Paco Books, Paco, Đường Đến Bình Yên, Thì Thầm, Tác giả Thiện Nhân, Miền Bình Yên, sách chữa lành" />
     <meta name="description" content="Khám phá bộ đôi sách chữa lành Tự Do Tâm Trí của Tác giả Thiện Nhân tại Paco Books. Hành trình kết nối tâm hồn tại Miền Bình Yên.">
     
@@ -45,7 +45,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
 
 
 
@@ -742,8 +741,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     Mời bạn lắng nghe giai điệu của sự bình yên...
 </p>
     <div class="paco-slider-container">
-        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
-        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
         <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="600" height="800" loading="lazy"></div>
@@ -1255,13 +1254,7 @@ function toggleContent(num) {
 
 
 
-
-
-
-
-
-
-      // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
+     // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1275,14 +1268,26 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
-	
+    
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
             }).then(() => {
                 // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                //fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+
+
+            fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: new URLSearchParams({
+                    event_name: 'Purchase',
+                    value: 199000,
+                    currency: 'VND',
+                    action_source: 'website'
+                })
+            });
 
                 // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
@@ -1305,6 +1310,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+
+
+
+
+
+
 
 
 
@@ -1350,3 +1362,13 @@ window.addEventListener('load', () => {
 </main>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
