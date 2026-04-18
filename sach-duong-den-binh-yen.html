@@ -24,6 +24,9 @@
     }
     </script>
 
+
+
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,26 +41,20 @@
     </script>
 
 
-<!-- Meta Pixel Code -->
+<!-- TikTok Pixel Code Start -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('set', 'autoConfig', false, '935549958850787');
-fbq('init', '935549958850787');
-fbq('set', 'autoConfig', false, '935549958850787');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
+
+  ttq.load('D7ETK7JC77U751P3J3V0');
+  ttq.page();
+  ttq.track('ViewContent');
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
 
 
 
@@ -754,8 +751,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     Mời bạn lắng nghe giai điệu của sự bình yên...
 </p>
     <div class="paco-slider-container">
-        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
-        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
         <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="600" height="800" loading="lazy"></div>
@@ -1263,6 +1260,16 @@ function toggleContent(num) {
 
 
 
+
+
+
+
+
+
+
+
+
+
       // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
@@ -1277,33 +1284,44 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
-	
+	    const formData = new FormData(pacoForm);
+            formData.append('Nguồn', 'TikTok'); // Thêm dòng này
+
+
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
-                body: new FormData(pacoForm)
+                body: formData
             }).then(() => {
                 // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+		ttq.track('PlaceAnOrder', {
+    		    "content_id": "ttbosach-01", 
+    		    "currency": "VND", 
+    		    "value": 199000
+		});
 		
-	    // --- GỬI CAPI (Dùng await để đảm bảo gửi xong mới chạy tiếp) ---
-    try {
-        await fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                event_name: 'Purchase',
-                event_time: Math.floor(Date.now() / 1000),
-                action_source: 'website',
-                user_data: { client_user_agent: navigator.userAgent },
-                custom_data: { currency: 'VND', value: 199000 }
-            })
-        });
-    } catch (e) {
-        console.error('CAPI Error:', e);
-    }
-		
+
+		// --- CHÈN CAPI VÀO ĐÂY ---
+    fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            event_name: 'Purchase',
+            event_time: Math.floor(Date.now() / 1000),
+            action_source: 'website',
+            user_data: {
+                client_user_agent: navigator.userAgent
+            },
+            custom_data: {
+                currency: 'VND',
+                value: 199000
+            }
+        })
+    });
+    // -------------------------
+
+
                 // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
                 submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
@@ -1326,27 +1344,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-    // -------------------------
-
-	// 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
-        msg.classList.remove('hidden');
-            submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
-            pacoForm.reset(); 
-
-
-    // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
-    setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
-        msg.classList.add('hidden'); // Ẩn thông báo cũ
-    }, 5000);
-
-}).catch(err => {
-    // Mở lại nút nếu lỗi mạng để khách thử lại
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = "THỬ LẠI";
-    console.error('Lỗi:', err);
-});
 
 
 const slider = document.querySelector('.paco-slider-container');
@@ -1391,3 +1388,4 @@ window.addEventListener('load', () => {
 </main>
 </body>
 </html>
+
