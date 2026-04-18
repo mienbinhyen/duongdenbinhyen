@@ -754,8 +754,8 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     Mời bạn lắng nghe giai điệu của sự bình yên...
 </p>
     <div class="paco-slider-container">
-        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
-        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
+        <div class="paco-slide"><img src="mienbinhyen011.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
         <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="600" height="800" loading="lazy"></div>
@@ -1263,16 +1263,6 @@ function toggleContent(num) {
 
 
 
-
-
-
-
-
-
-
-
-
-
       // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
@@ -1288,36 +1278,53 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
 	
-            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
-                method: 'POST', 
-                mode: 'no-cors', 
-                body: new FormData(pacoForm)
-            }).then(() => {
-                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+          fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
+    method: 'POST', 
+    mode: 'no-cors', 
+    body: new FormData(pacoForm)
+}).then(() => {
+    // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
+    fbq('track', 'Purchase', {currency: 'VND', value: 199000});
 
-                // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
-                msg.classList.remove('hidden');
-                submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
-                pacoForm.reset(); 
+    // --- CHÈN CAPI VÀO ĐÂY ---
+    fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            event_name: 'Purchase',
+            event_time: Math.floor(Date.now() / 1000),
+            action_source: 'website',
+            user_data: {
+                client_user_agent: navigator.userAgent
+            },
+            custom_data: {
+                currency: 'VND',
+                value: 199000
+            }
+        })
+    });
+    // -------------------------
 
-                // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
-                    msg.classList.add('hidden'); // Ẩn thông báo cũ
-                }, 5000);
+	// 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
+        msg.classList.remove('hidden');
+            submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
+            pacoForm.reset(); 
 
-            }).catch(err => {
-                // Mở lại nút nếu lỗi mạng để khách thử lại
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = "THỬ LẠI";
-                console.error('Lỗi:', err);
-            });
-        });
-    }
+
+    // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
+    setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
+        msg.classList.add('hidden'); // Ẩn thông báo cũ
+    }, 5000);
+
+}).catch(err => {
+    // Mở lại nút nếu lỗi mạng để khách thử lại
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = "THỬ LẠI";
+    console.error('Lỗi:', err);
 });
-
 
 
 const slider = document.querySelector('.paco-slider-container');
