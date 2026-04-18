@@ -1278,32 +1278,54 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
 	
-          fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
-    method: 'POST', 
-    mode: 'no-cors', 
-    body: new FormData(pacoForm)
-}).then(() => {
-    // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-    fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
+                method: 'POST', 
+                mode: 'no-cors', 
+                body: new FormData(pacoForm)
+            }).then(() => {
+                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
+                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+		
+	    // --- GỬI CAPI (Dùng await để đảm bảo gửi xong mới chạy tiếp) ---
+    try {
+        await fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                event_name: 'Purchase',
+                event_time: Math.floor(Date.now() / 1000),
+                action_source: 'website',
+                user_data: { client_user_agent: navigator.userAgent },
+                custom_data: { currency: 'VND', value: 199000 }
+            })
+        });
+    } catch (e) {
+        console.error('CAPI Error:', e);
+    }
+		
+                // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
+                msg.classList.remove('hidden');
+                submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
+                pacoForm.reset(); 
 
-    // --- CHÈN CAPI VÀO ĐÂY ---
-    fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            event_name: 'Purchase',
-            event_time: Math.floor(Date.now() / 1000),
-            action_source: 'website',
-            user_data: {
-                client_user_agent: navigator.userAgent
-            },
-            custom_data: {
-                currency: 'VND',
-                value: 199000
-            }
-        })
-    });
+                // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
+                    msg.classList.add('hidden'); // Ẩn thông báo cũ
+                }, 5000);
+
+            }).catch(err => {
+                // Mở lại nút nếu lỗi mạng để khách thử lại
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "THỬ LẠI";
+                console.error('Lỗi:', err);
+            });
+        });
+    }
+});
+
     // -------------------------
 
 	// 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
