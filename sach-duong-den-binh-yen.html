@@ -1296,7 +1296,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 body: new FormData(pacoForm)
             }).then(() => {
                 // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                //fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
 
 		// --- CHÈN CAPI VÀO ĐÂY ---
     fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
