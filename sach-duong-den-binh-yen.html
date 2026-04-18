@@ -1269,7 +1269,7 @@ function toggleContent(num) {
 
 
 
-      // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
+     // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
 document.addEventListener("DOMContentLoaded", function() {
     const pacoForm = document.getElementById('pacoForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -1283,7 +1283,7 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
-	
+    
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
@@ -1293,16 +1293,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 //fbq('track', 'Purchase', {currency: 'VND', value: 199000});
 
 
-	    fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
-    		method: 'POST',
-    		mode: 'no-cors',
-    		body: new URLSearchParams({
-        	event_name: 'Purchase',
-        	value: 199000,
-        	currency: 'VND',
-        	action_source: 'website'
-    	    })
-	});
+            fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: new URLSearchParams({
+                    event_name: 'Purchase',
+                    value: 199000,
+                    currency: 'VND',
+                    action_source: 'website'
+                })
+            });
 
                 // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
                 msg.classList.remove('hidden');
@@ -1325,8 +1325,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
-
-
 
 
 
