@@ -1359,6 +1359,103 @@ window.addEventListener('load', () => {
 
 
 
+
+
+
+
+
+<script>
+(function() {
+    /* ============================================================
+       BẢNG ĐIỀU KHIỂN CHO ÔNG PACO - CHỈNH SỬA TẠI ĐÂY
+       ============================================================ */
+    const LIMIT_CAPTCHA = 3;  // Đơn thứ mấy thì bắt đầu hiện mã bảo vệ
+    const LIMIT_LOCK    = 5;  // Đơn thứ mấy thì khóa hẳn nút đặt hàng
+    const LOCK_MINUTES  = 60; // Thời gian khóa (phút)
+    /* ============================================================ */
+
+    const submitBtn = document.getElementById('submitBtn');
+    const pacoForm = document.getElementById('pacoForm');
+    const storageKey = 'paco_order_track';
+    const lockKey = 'paco_lock_until';
+
+    let data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0 };
+    let lockUntil = localStorage.getItem(lockKey) || 0;
+
+    if (Date.now() < lockUntil) {
+        submitBtn.disabled = true;
+        submitBtn.style.backgroundColor = "#9e9e9e";
+        submitBtn.innerHTML = "HỆ THỐNG BẬN - QUAY LẠI SAU";
+        return;
+    }
+
+    function renderGuard() {
+        if (document.getElementById('paco-guard-box')) return;
+        const code = Math.floor(1000 + Math.random() * 9000);
+        const html = `
+            <div id="paco-guard-box" style="margin: 15px auto; width: 85%; border: 1px solid #8b0000; padding: 12px; border-radius: 8px; background: #fffaf0; text-align: center; font-family: sans-serif;">
+                <div style="color: #8b0000; font-size: 13px; font-weight: bold; margin-bottom: 8px;">
+                    Bạn đã đặt quá giới hạn, có dấu hiệu spam?
+                </div>
+                <div style="display: flex; gap: 8px; justify-content: center; align-items: stretch;">
+                    <div id="display-code" style="background: #eee; padding: 0 15px; font-weight: bold; letter-spacing: 2px; border: 1px solid #8b0000; border-radius: 4px; display: flex; align-items: center; font-size: 16px;">${code}</div>
+                    <input type="number" id="paco-verify" placeholder="Nhập mã" required oninvalid="this.setCustomValidity('Bạn cần nhập mã bảo vệ!')" oninput="this.setCustomValidity('')" style="width: 100px; padding: 8px; border: 1px solid #8b0000; border-radius: 4px; text-align: center; font-size: 14px;">
+                </div>
+            </div>`;
+        submitBtn.insertAdjacentHTML('beforebegin', html);
+        submitBtn.setAttribute('data-code', code);
+    }
+
+    if (data.count >= LIMIT_CAPTCHA) renderGuard();
+
+    submitBtn.addEventListener('click', function(e) {
+        const phoneInput = pacoForm.querySelector('input[type="tel"]');
+        const verifyInput = document.getElementById('paco-verify');
+
+        if(phoneInput) phoneInput.setCustomValidity("");
+        if(verifyInput) verifyInput.setCustomValidity("");
+
+        if (!pacoForm.checkValidity()) return; 
+
+        if (data.count >= LIMIT_CAPTCHA) {
+            const phoneValue = phoneInput.value.trim().replace(/\D/g, '');
+
+            if (phoneValue.length !== 10) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                phoneInput.setCustomValidity("Vui lòng nhập đúng 10 số điện thoại!");
+                phoneInput.reportValidity();
+                return;
+            }
+
+            const correctCode = submitBtn.getAttribute('data-code');
+            if (verifyInput.value !== correctCode) {
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                // Ép hiện thông báo Tiếng Việt và đẩy lên trên bằng cách cuộn nhẹ nếu cần
+                verifyInput.setCustomValidity("Mã xác nhận chưa chính xác!");
+                verifyInput.reportValidity();
+                return;
+            }
+        }
+
+        data.count++;
+        localStorage.setItem(storageKey, JSON.stringify(data));
+
+        if (data.count >= LIMIT_LOCK) {
+            localStorage.setItem(lockKey, Date.now() + (LOCK_MINUTES * 60000));
+        }
+    }, true);
+})();
+</script>
+
+
+
+
+
+
+
+
 </main>
 </body>
 </html>
