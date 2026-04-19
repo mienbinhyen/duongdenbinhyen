@@ -1375,15 +1375,15 @@ window.addEventListener('load', () => {
     /* ============================================================
        BẢNG ĐIỀU KHIỂN CHO ÔNG PACO - CHIẾN THUẬT 1-2-3
        ============================================================ */
-    const LIMIT_CAPTCHA = 1;  // Đơn 1 bình thường. Từ đơn 2 hiện Captcha.
-    const LIMIT_LOCK    = 2;  // Đặt xong đơn 2 (tức đơn 3) sẽ khóa.
+    const LIMIT_CAPTCHA = 2;  // Đơn 1 bình thường. Từ đơn 2 hiện Captcha.
+    const LIMIT_LOCK    = 3;  // Đặt xong đơn 2 (tức đơn 3) sẽ khóa.
     const LOCK_MINUTES  = 720; // Khóa 12 tiếng (720 phút).
     /* ============================================================ */
 
     const submitBtn = document.getElementById('submitBtn');
     const pacoForm = document.getElementById('pacoForm');
-    const storageKey = 'paco_track_v2';
-    const lockKey = 'paco_lock_v2';
+    const storageKey = 'paco_track_v3';
+    const lockKey = 'paco_lock_v3';
 
     let data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0 };
     let lockUntil = parseInt(localStorage.getItem(lockKey)) || 0;
@@ -1459,6 +1459,7 @@ window.addEventListener('load', () => {
             localStorage.setItem(lockKey, lockUntil);
             // Không chặn ngay để đơn này được gửi đi, nhưng đơn sau sẽ bị khóa
         } else if (data.count >= LIMIT_CAPTCHA) {
+		renderGuard(); // <--- THÊM DÒNG NÀY ĐỂ HIỆN CAPTCHA NGAY LẬP TỨC
         }
     }, true);
 })();
