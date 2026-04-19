@@ -1413,7 +1413,6 @@ window.addEventListener('load', () => {
         submitBtn.setAttribute('data-code', code);
     }
 
-    // Luôn gọi hàm này để kiểm tra ngay khi load trang
     if (data.count >= LIMIT_CAPTCHA) renderGuard();
 
     // 3. LOGIC KIỂM TRA CHẶN LỌC
@@ -1424,11 +1423,8 @@ window.addEventListener('load', () => {
         if(phoneInput) phoneInput.setCustomValidity("");
         if(verifyInput) verifyInput.setCustomValidity("");
 
-        // ƯU TIÊN KIỂM TRA ĐIỆN THOẠI VÀ CAPTCHA TRƯỚC
         if (data.count >= LIMIT_CAPTCHA) {
             const phoneValue = phoneInput.value.trim().replace(/\D/g, '');
-
-            // Bắt lỗi 10 số điện thoại
             if (phoneValue.length !== 10) {
                 e.preventDefault();
                 e.stopImmediatePropagation();
@@ -1437,7 +1433,6 @@ window.addEventListener('load', () => {
                 return;
             }
 
-            // Bắt lỗi Captcha
             const correctCode = submitBtn.getAttribute('data-code');
             if (!verifyInput.value || verifyInput.value !== correctCode) {
                 e.preventDefault();
@@ -1448,10 +1443,9 @@ window.addEventListener('load', () => {
             }
         }
 
-        // Kiểm tra các trường khác của Form (Tên, Địa chỉ...)
         if (!pacoForm.checkValidity()) return;
 
-        // Nếu mọi thứ ok: Ghi nhận đơn và tăng biến đếm
+        // KHẮC PHỤC: Ghi nhận đơn ngay lập tức trước khi trang load lại
         data.count++;
         localStorage.setItem(storageKey, JSON.stringify(data));
 
@@ -1461,7 +1455,6 @@ window.addEventListener('load', () => {
     }, true);
 })();
 </script>
-
 
 
 
