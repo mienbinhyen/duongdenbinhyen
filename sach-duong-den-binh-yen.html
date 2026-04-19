@@ -1380,9 +1380,9 @@ window.addEventListener('load', () => {
     /* ============================================================
        BẢNG ĐIỀU KHIỂN CHO ÔNG PACO - CHỈNH SỬA TẠI ĐÂY
        ============================================================ */
-    const LIMIT_CAPTCHA = 3;  // Đơn thứ mấy thì bắt đầu hiện mã bảo vệ
-    const LIMIT_LOCK    = 5;  // Đơn thứ mấy thì khóa hẳn nút đặt hàng
-    const LOCK_MINUTES  = 60; // Thời gian khóa (phút)
+    const LIMIT_CAPTCHA = 2;  // Sau 2 lần đầu (tức lần 3, 4) sẽ bắt nhập 10 số & Captcha
+    const LIMIT_LOCK    = 4;  // Sau 4 lần (tức lần 5) sẽ khóa tuyệt đối
+    const LOCK_MINUTES  = 180; // Thời gian khóa: 180 phút
     /* ============================================================ */
 
     const submitBtn = document.getElementById('submitBtn');
@@ -1390,27 +1390,35 @@ window.addEventListener('load', () => {
     const storageKey = 'paco_order_track';
     const lockKey = 'paco_lock_until';
 
+    // Đảm bảo lấy dữ liệu chuẩn xác trên mọi môi trường (Local & Hosting)
     let data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0 };
-    let lockUntil = localStorage.getItem(lockKey) || 0;
+    let lockUntil = parseInt(localStorage.getItem(lockKey)) || 0;
 
+    // 1. KIỂM TRA LỆNH KHÓA (180 PHÚT)
     if (Date.now() < lockUntil) {
         submitBtn.disabled = true;
         submitBtn.style.backgroundColor = "#9e9e9e";
-        submitBtn.innerHTML = "HỆ THỐNG BẬN - QUAY LẠI SAU";
+        submitBtn.style.cursor = "not-allowed";
+        submitBtn.innerHTML = "HỆ THỐNG BẬN - VUI LÒNG QUAY LẠI SAU";
         return;
     }
 
+    // 2. HÀM HIỂN THỊ KHUNG BẢO VỆ (Cân đối, hài hòa với nút bấm)
     function renderGuard() {
         if (document.getElementById('paco-guard-box')) return;
         const code = Math.floor(1000 + Math.random() * 9000);
+        // Chiều rộng 100% để cân bằng với nút bấm phía dưới
         const html = `
-            <div id="paco-guard-box" style="margin: 15px auto; width: 85%; border: 1px solid #8b0000; padding: 12px; border-radius: 8px; background: #fffaf0; text-align: center; font-family: sans-serif;">
-                <div style="color: #8b0000; font-size: 13px; font-weight: bold; margin-bottom: 8px;">
+            <div id="paco-guard-box" style="margin: 10px auto; width: 100%; text-align: center; font-family: sans-serif;">
+                <div style="color: #000000; font-size: 13px; font-weight: bold; margin-bottom: 10px; text-align: center;">
                     Bạn đã đặt quá giới hạn, có dấu hiệu spam?
                 </div>
-                <div style="display: flex; gap: 8px; justify-content: center; align-items: stretch;">
-                    <div id="display-code" style="background: #eee; padding: 0 15px; font-weight: bold; letter-spacing: 2px; border: 1px solid #8b0000; border-radius: 4px; display: flex; align-items: center; font-size: 16px;">${code}</div>
-                    <input type="number" id="paco-verify" placeholder="Nhập mã" required oninvalid="this.setCustomValidity('Bạn cần nhập mã bảo vệ!')" oninput="this.setCustomValidity('')" style="width: 100px; padding: 8px; border: 1px solid #8b0000; border-radius: 4px; text-align: center; font-size: 14px;">
+                <div style="display: flex; gap: 10px; justify-content: center; align-items: stretch;">
+                    <div id="display-code" style="background: #eee; padding: 0 15px; font-weight: bold; letter-spacing: 2px; border: 1px solid #8b0000; border-radius: 4px; display: flex; align-items: center; font-size: 16px; min-height: 38px;">${code}</div>
+                    <input type="number" id="paco-verify" placeholder="Nhập mã" required 
+                        oninvalid="this.setCustomValidity('Bạn cần nhập mã bảo vệ!')" 
+                        oninput="this.setCustomValidity('')"
+                        style="flex: 1; max-width: 120px; padding: 8px; border: 1px solid #8b0000; border-radius: 4px; text-align: center; font-size: 14px; height: 38px; box-sizing: border-box;">
                 </div>
             </div>`;
         submitBtn.insertAdjacentHTML('beforebegin', html);
@@ -1419,6 +1427,7 @@ window.addEventListener('load', () => {
 
     if (data.count >= LIMIT_CAPTCHA) renderGuard();
 
+    // 3. LOGIC KIỂM TRA CHẶN LỌC
     submitBtn.addEventListener('click', function(e) {
         const phoneInput = pacoForm.querySelector('input[type="tel"]');
         const verifyInput = document.getElementById('paco-verify');
@@ -1431,6 +1440,7 @@ window.addEventListener('load', () => {
         if (data.count >= LIMIT_CAPTCHA) {
             const phoneValue = phoneInput.value.trim().replace(/\D/g, '');
 
+            // Bắt buộc 10 số điện thoại
             if (phoneValue.length !== 10) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
@@ -1439,26 +1449,31 @@ window.addEventListener('load', () => {
                 return;
             }
 
+            // Kiểm tra Captcha
             const correctCode = submitBtn.getAttribute('data-code');
             if (verifyInput.value !== correctCode) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
-                // Ép hiện thông báo Tiếng Việt và đẩy lên trên bằng cách cuộn nhẹ nếu cần
                 verifyInput.setCustomValidity("Mã xác nhận chưa chính xác!");
                 verifyInput.reportValidity();
                 return;
             }
         }
 
+        // Nếu đặt đơn thành công:
         data.count++;
         localStorage.setItem(storageKey, JSON.stringify(data));
 
-        if (data.count >= LIMIT_LOCK) {
-            localStorage.setItem(lockKey, Date.now() + (LOCK_MINUTES * 60000));
+        // Nếu đạt đơn thứ 5 (sau 4 lần đầu): Khóa 180 phút
+        if (data.count > LIMIT_LOCK) {
+            const lockTime = Date.now() + (LOCK_MINUTES * 60000);
+            localStorage.setItem(lockKey, lockTime);
         }
     }, true);
 })();
 </script>
+
+
 
 
 </main>
