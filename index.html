@@ -1586,7 +1586,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
     </div>
     <div class="stats-item">
         <span class="stats-label">👥 Lượt truy cập:</span>
-        <span id="paco-counter" class="stats-value">0</span>
+        <span id="paco-counter" class="stats-value">--</span>
     </div>
 </div>
 
@@ -1895,14 +1895,19 @@ window.addEventListener('load', function() {
             });
         }, 1000);
     }
+// 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
     const counterEl = document.getElementById('paco-counter');
     if (counterEl) {
-        fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-            .then(res => res.json())
+        fetch('https://script.google.com/macros/s/AKfycbyaf5xLxC48RljyIwlerotX1e38b01BxKtahswy2ZdTjMAGksYJfM-Y6fnBGrwz5fh8Ig/exec')
+            .then(res => res.text())
             .then(data => {
-                counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
+                // data chính là con số chính xác lấy từ ô A2 của Ông
+                counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
             })
-            .catch(() => { counterEl.textContent = "100.000"; });
+            .catch(() => { 
+                // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
+                console.log("Lỗi kết nối máy chủ bộ đếm");
+            });
     }
 });
 
