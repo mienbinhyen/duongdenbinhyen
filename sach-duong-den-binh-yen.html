@@ -1152,7 +1152,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
         <div class="paco-stats-box">
             <div class="stats-item">🕒 Giờ VN: <span id="paco-clock" style="color:#b30000; font-weight:bold">--:--:--</span></div>
-            <div class="stats-item">👥 Đang xem: <span id="paco-counter" style="color:#b30000; font-weight:bold">100.256</span></div>
+            <div class="stats-item">👥 Đang xem: <span id="paco-counter" style="color:#b30000; font-weight:bold">--</span></div>
         </div>
     </main>
 
@@ -1205,17 +1205,18 @@ window.addEventListener('load', function() {
         }, 1000);
     }
 
-    // 2. Bộ đếm đồng bộ với trang chủ (API thực tế)
+// 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
     const counterEl = document.getElementById('paco-counter');
     if (counterEl) {
-        fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-            .then(res => res.json())
+        fetch('https://script.google.com/macros/s/AKfycbyaf5xLxC48RljyIwlerotX1e38b01BxKtahswy2ZdTjMAGksYJfM-Y6fnBGrwz5fh8Ig/exec')
+            .then(res => res.text())
             .then(data => {
-                // Cộng thêm 100.000 để khớp với con số hiển thị trên trang chủ
-                counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
+                // data chính là con số chính xác lấy từ ô A2 của Ông
+                counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
             })
             .catch(() => { 
-                counterEl.textContent = "100.000"; 
+                // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
+                console.log("Lỗi kết nối máy chủ bộ đếm");
             });
     }
 });
@@ -1434,7 +1435,7 @@ window.addEventListener('load', () => {
         if (!guardBox) {
             const html = `
                 <div id="paco-guard-box" style="margin: 10px auto; width: 100%; text-align: center; font-family: sans-serif;">
-                    <div style="color: #000; font-size: 13px; font-weight: bold; margin-bottom: 10px;">Xác minh bảo vệ (Phát hiện đặt đơn liên tục)</div>
+                    <div style="color: #000; font-size: 13px; font-weight: bold; margin-bottom: 10px;">Nhập mã bảo vệ - Bạn đang đặt lần 2</div>
                     <div style="display: flex; gap: 10px; justify-content: center; align-items: stretch;">
                         <div id="display-code" style="background: #eee; padding: 0 15px; font-weight: bold; border: 1px solid #000; border-radius: 4px; display: flex; align-items: center; font-size: 16px; min-height: 38px; color:#000;">${code}</div>
                         <input type="number" id="paco-verify" placeholder="Nhập mã" required style="flex: 1; max-width: 120px; padding: 8px; border: 1px solid #000; border-radius: 4px; text-align: center; font-size: 14px; height: 38px; box-sizing: border-box; color:#000;">
