@@ -1559,7 +1559,7 @@ window.addEventListener('scroll', function() {
     </div>
     <div class="stats-item">
         <span class="stats-label">👥 Lượt truy cập:</span>
-        <span id="paco-counter" class="stats-value">0</span>
+        <span id="paco-counter" class="stats-value">--</span>
     </div>
 </div>
 
@@ -1603,23 +1603,21 @@ window.addEventListener('scroll', function() {
                 });
             }, 1000);
         }
-
-        // 2. BỘ ĐẾM TỔNG TOÀN CẦU (KHỞI TẠO 100.000)
-        const counterEl = document.getElementById('paco-counter');
-        if (counterEl) {
-            // Dùng dịch vụ đếm thay thế tin cậy (api.counterapi.dev)
-            fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-                .then(res => res.json())
-                .then(data => {
-                    const total = data.count + 100000;
-                    counterEl.textContent = total.toLocaleString('vi-VN');
-                })
-                .catch(() => {
-                    // Nếu lỗi mạng, hiện mốc 100.000 chứ không để số 0
-                    counterEl.textContent = "100.000";
-                });
-        }
-    });
+// 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
+    const counterEl = document.getElementById('paco-counter');
+    if (counterEl) {
+        fetch('https://script.google.com/macros/s/AKfycbyaf5xLxC48RljyIwlerotX1e38b01BxKtahswy2ZdTjMAGksYJfM-Y6fnBGrwz5fh8Ig/exec')
+            .then(res => res.text())
+            .then(data => {
+                // data chính là con số chính xác lấy từ ô A2 của Ông
+                counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
+            })
+            .catch(() => { 
+                // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
+                console.log("Lỗi kết nối máy chủ bộ đếm");
+            });
+    }
+});
 </script>
 
 
