@@ -78,7 +78,12 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         width: 100%;
         max-width: 550px; /* Khóa khổ toàn trang */
         min-height: 100vh;
-        background-color: #eadfca; /* Màu kem giấy #eadfca; cho vùng nội dung #f4ece0 #fdfaf1 */Màu trắng tinh khiết: #ffffff -#fffdf5(gần trắng)
+	
+	/* Lớp 1: Nền phủ */
+	background-image: linear-gradient(to right, rgba(0, 100, 255, 0.4), transparent); /* linear-gradient(to right, transparent, rgba(0, 100, 255, 0.5), transparent); linear-gradient(to right, rgba(0, 100, 255, 0.4), transparent); */
+
+	/* Lớp 2: Nền gốc */
+	background-color: #A9C9A9; /* Màu #FDFCF0; kem giấy #eadfca; cho vùng nội dung #f4ece0 #fdfaf1; Màu trắng tinh khiết: #ffffff; #fffdf5 */
         box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
 	overflow-x: hidden; /* Chống tràn ngang */
     }
@@ -164,14 +169,14 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 .paco-buy-btn {
     font-family: 'Times New Roman', Times, serif !important;
-    width: 220px; /* Tăng nhẹ chiều ngang cho cân đối chữ */
+    width: 240px; /* Tăng nhẹ chiều ngang cho cân đối chữ */
     margin: 15px auto;
     display: block;
     background-color: #b30000 !important;
     color: #ffffff;
     border: 2px solid #ffd700 !important;
     padding: 12px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     
     /* BO GÓC NHẸ ĐỂ ĐẸP HƠN */
@@ -715,11 +720,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         style="
             pointer-events: auto;
             width: 60%;
-            background: #ff8c2e; /* Màu cam như hình mẫu */
-            color: #000000;
+            background: #FF6600; /* Màu cam như hình mẫu */
+            color: #FFFFFF;
             font-family: Times New Roman;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
             padding: 12px 0;
             border: none;
             border-radius: 50px;
@@ -744,8 +749,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 <div class="paco-slider-wrapper">
    <div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ 👆</div>
-<p style="position: absolute; top: 10px; left: 0; width: 100%; text-align: center; font-size: 19px; font-weight: bold; font-style: italic; margin: 0; color: #01579b;">
-    Mời bạn lắng nghe giai điệu của sự bình yên...
+<p style="position: absolute; top: 18px; left: 0; width: 100%; text-align: center; font-size: 19px; font-weight: bold; font-style: italic; margin: 0; color: #01579b;">
+    pacobooks<br><br>Mời bạn lắng nghe giai điệu của sự bình yên...
 </p>
     <div class="paco-slider-container">
         <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
@@ -767,7 +772,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="margin: 40px 15px 25px 15px; text-align: center; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #d4a017; border-radius: 8px; padding: 20px 10px; background-color: #fff9e6; box-sizing: border-box;">
+<div style="margin: 40px 15px 25px 15px; text-align: center; x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 0px solid #d4a017; border-radius: 8px; padding: 20px 10px; background: linear-gradient(to top, rgba(169, 201, 169, 0.4), #FDFCF0); x-background-color: #fff9e6; box-sizing: border-box;">
     <span style="color: #004a80; font-size: 28px; font-weight: 800; text-transform: uppercase;">BỘ SÁCH MIỀN BÌNH YÊN</span>
     <div style="font-size: 16px; color: #555; margin-top: 5px;">
         Tác giả: <span style="color: #01579b; font-weight: bold;">Thiện Nhân</span> &nbsp;&nbsp; Chủ biên: <span style="color: #01579b; font-weight: bold;">Paco</span>
@@ -776,8 +781,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="width: 100%; max-width: 550px; margin: 30px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 25px;">
+<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
+    <div style="x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.2), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 25px;">
         Đầu tư vào tri thức <br> là khoản đầu tư sinh lời nhất
     </div>
 </div>
@@ -785,7 +790,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-        <div class="paco-book-pair" style="margin: 10px 15px; width: auto; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; padding: 15px; background-color: #f0f7ff;">
+        <div class="paco-book-pair" style="margin: 10px 15px; width: auto; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; padding: 15px; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff;">
             <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên">
             <img src="biathitham11.webp" alt="Thì Thầm">
             <div class="paco-book-info">
@@ -801,10 +806,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         </div>
 
 
-<div style="width: 100%; max-width: 550px; margin: 30px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
-        <div style="font-family: 'Times New Roman', serif; color: #8b0000; font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
-           BỘ TÁC PHẨM PHẢN CHIẾU HÀNH TRÌNH GIAN TRUÂN CỦA CHÍNH BẠN
+<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
+    <div style="x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
+        <div style="font-family: 'Times New Roman', serif; color: #0056b3; font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
+           BỘ TÁC PHẨM PHẢN CHIẾU HÀNH TRÌNH 
+    		<span style="font-size: 20px; color: #006400;">GIAN TRUÂN</span> 
+    		CỦA 
+    		<span style="font-size: 20px; color: #006400;">CHÍNH BẠN</span>
 
         </div>
 
@@ -831,8 +839,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="max-width: 550px; margin: 20px auto; box-sizing: border-box; padding: 15px; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif; width: 92%;">
-    <div style="font-size: 17px; color: #2e7d32; line-height: 1.4; font-weight: bold;">
+<div style="max-width: 550px; margin: 10px auto; box-sizing: x-border-box; padding: 15px; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif; width: 92%;">
+    <div style="font-size: 16px; color: #FFFF00; line-height: 1.4; font-weight: bold;">
         Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size: 25px; color: #8b0000; margin-left: 3px; vertical-align: middle;">-40%</span>
     </div>
     <div class="paco-timer" style="font-size: 40px; color: #004a7c; font-weight: bold; margin-top: 5px;">
@@ -842,7 +850,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-        <div class="paco-border-box" style="width: auto; max-width: 550px; margin: 20px 15px; background-color: #fff9e6; box-sizing: border-box; padding: 15px 0; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; text-align: center;">
+        <div class="paco-border-box" style="width: auto; max-width: 550px; margin: 10px 15px; background-color: #fff9e6; box-sizing: border-box; padding: 15px 0; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center;">
             <div style="color: #8b0000; font-style: italic; font-weight: 600; font-size: 19px;">🌸 Tháng tri ân tác giả 🌸</div>
             <div style="color: #01579b; font-weight: bold; font-size: 20px; text-transform: uppercase; margin: 10px 0;">MUA 2 CHỈ VỚI GIÁ 1</div>
             <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
@@ -854,8 +862,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior: 'smooth'});">MUA NGAY - GIẢM 40%</button>
         </div>
 
-        <div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: center;">
+        <div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: x-border-box; padding: 0 15px;">
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b;  background-image: linear-gradient(to right, transparent, #FDFCF0);  x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: center;">
             <div style="font-weight: bold; color: #01579b; line-height: 1.8; font-size: 20px;">
                 <span style="display: block;">Có tri thức, bạn không còn sợ hãi.</span>
                 <span style="display: block;">Có bình yên, bạn sở hữu cả thế giới.</span>
@@ -865,7 +873,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 <div class="paco-content-section">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; background-color: #f0f7ff;  border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 18px; line-height: 1.4;">
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff;  border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 18px; line-height: 1.4;">
         
         <div style="text-align: left; margin-bottom: 24px;">
             <h2 class="paco-h2-title" style="margin-bottom: 5px; color: #004a80;">ĐƯỜNG ĐẾN BÌNH YÊN</h2>
@@ -906,7 +914,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 <div class="paco-content-section">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); margin: -20px auto; border-bottom: 2px solid #01579b; background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); margin: -20px auto; border-bottom: 1px solid #01579b; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
         
 <div style="text-align: left; margin-bottom: 20px;">
     <h2 class="paco-h2-title" style="margin-bottom: 5px; color: #004a80;">THÌ THẦM</h2>
@@ -944,7 +952,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 <div class="paco-content-section">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); margin: 0px auto; border-bottom: 2px solid #01579b; background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); margin: 0px auto; border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
         
     <h2 class="paco-author-h2">
         <span style="font-size: 26px;">◈</span> VỀ TÁC GIẢ
@@ -973,9 +981,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 <div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 15px auto;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
-        <div style="font-family: 'Times New Roman', serif; color: #8b0000; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
-            TÁC PHẨM GIÚP BẠN BUÔNG BỎ MUỘN PHIỀN
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
+        <div style="font-family: 'Times New Roman', serif; color: #0056b3; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
+            TÁC PHẨM GIÚP BẠN BUÔNG BỎ
+		<span style="font-size: 26px; color: #006400;">MUỘN PHIỀN</span> 
 
         </div>
 
@@ -1008,9 +1017,9 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="background-color: #ffffff; border: 1px solid #e1e8ed; border-radius: 8px; padding: 15px; margin: 20px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+<div style="background-color: #ffffff; border: 0px solid #e1e8ed; border-radius: 8px; padding: 15px; margin: 20px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
     
-    <div style="border-bottom: 2px solid #f0f2f5; padding-bottom: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="border-bottom: 1px solid #f0f2f5; padding-bottom: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
         <span style="color: #004a7c; font-weight: 600; font-size: 16px;">Khách hàng phản hồi (10.000+)</span>
         <div style="text-align: right;">
             <div style="color: #ffb400; font-size: 14px;">⭐⭐⭐⭐⭐</div>
@@ -1063,8 +1072,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="width: 100%; max-width: 550px; margin: 0px 0 auto; box-sizing: border-box; padding: 0 -15px;">
-    <div style="border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #d4a017; background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 20px;">
+<div style="width: 100%; max-width: 550px; margin: 0px 0 auto; box-sizing: x-border-box; padding: 0 -15px;">
+    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #d4a017; background: linear-gradient(to top, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 20px;">
         Khoản đầu tư sinh lời nhất là tri thức <br> giá chỉ bằng vài ly cả phê của bạn
     </div>
 </div>
@@ -1075,8 +1084,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
 
 
-<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 15px; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 2px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif;">
-    <div style="font-size: 17px; color: #2e7d32; line-height: 1.4; font-weight: bold;">
+<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 15px; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif;">
+    <div style="font-size: 17px; color: #FFFF00; line-height: 1.4; font-weight: bold;">
     Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size: 25px; color: #8b0000; margin-left: 3px; vertical-align: middle;">-40%</span>
 </div>
     <div class="paco-timer" style="font-size: 50px; color: #004a7c; font-weight: bold; margin-top: 5px;">
@@ -1099,6 +1108,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
             <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết" required>
         </div>
         
+	<input type="hidden" name="Nguon_Don" value="pacobooks">
+	<div style="display:none;"><input type="text" name="confirm_email" value=""></div>
 
 <div style="text-align: center; margin: 15px 0; font-family: 'Times New Roman', serif;">
     <div style="font-style: normal; color: #008B8B; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;">
@@ -1132,9 +1143,12 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
         <div class="paco-stats-box">
             <div class="stats-item">🕒 Giờ VN: <span id="paco-clock" style="color:#b30000; font-weight:bold">--:--:--</span></div>
-            <div class="stats-item">👥 Đang xem: <span id="paco-counter" style="color:#b30000; font-weight:bold">100.256</span></div>
+            <div class="stats-item">👥 Đang xem: <span id="paco-counter" style="color:#b30000; font-weight:bold">--</span></div>
         </div>
     </main>
+
+
+
 
 
 
@@ -1178,17 +1192,18 @@ window.addEventListener('load', function() {
         }, 1000);
     }
 
-    // 2. Bộ đếm đồng bộ với trang chủ (API thực tế)
+// 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
     const counterEl = document.getElementById('paco-counter');
     if (counterEl) {
-        fetch('https://api.counterapi.dev/v1/duongdenbinhyen/paco/up')
-            .then(res => res.json())
+        fetch('https://script.google.com/macros/s/AKfycbyaf5xLxC48RljyIwlerotX1e38b01BxKtahswy2ZdTjMAGksYJfM-Y6fnBGrwz5fh8Ig/exec')
+            .then(res => res.text())
             .then(data => {
-                // Cộng thêm 100.000 để khớp với con số hiển thị trên trang chủ
-                counterEl.textContent = (data.count + 100000).toLocaleString('vi-VN');
+                // data chính là con số chính xác lấy từ ô A2 của Ông
+                counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
             })
             .catch(() => { 
-                counterEl.textContent = "100.000"; 
+                // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
+                console.log("Lỗi kết nối máy chủ bộ đếm");
             });
     }
 });
