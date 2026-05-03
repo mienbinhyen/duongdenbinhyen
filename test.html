@@ -1278,6 +1278,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // 1. Dòng này cực quan trọng: Để Ông nhìn thấy kết quả lọc trùng trong F12 Console
     console.log("Tín hiệu từ Sheet trả về là: " + ketQua);
 
+	// ÔNG PHẢI ĐỂ 2 DÒNG NÀY Ở ĐÂY THÌ NÓ MỚI KHÔNG NHẢY TRANG
+            document.getElementById('paco-success').style.display = 'block';
+            pacoForm.reset();
+
     if (ketQua === "Thành công") {
         /* --- ĐÃ KHÓA TOÀN BỘ BÁO CÁO META ĐỂ TEST ---
         fbq('track', 'Purchase', {currency: 'VND', value: 199000});
