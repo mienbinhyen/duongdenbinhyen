@@ -37,6 +37,27 @@
 </script>
 
 
+<!-- Event snippet for Lượt mua sách conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18152807118/6X77CKC53aocEM61989D',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
+
+
 
 
 
@@ -1321,9 +1342,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
-            }).then(() => {
-                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+		}).then(() => {
+    		// 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
+    		fbq('track', 'Purchase', {currency: 'VND', value: 199000});
+    		gtag_report_conversion();
 
 
             fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
