@@ -1323,14 +1323,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
 		
-		}).then(() => { // Dấu ngoặc ở đây mới là chuẩn
-// 2. Google Ads - Chỉ thay đúng đoạn này trong dấu ngoặc .then
-gtag('event', 'conversion', {
-    'send_to': 'AW-18152807118/6X77CKC53aocEM61989D',
-    'value': 199000.0,
-    'currency': 'VND',
-    'transaction_id': '' 
-});
+}).then(() => { 
+    // 1. Chỉ bắn tín hiệu cho Google Ads
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18152807118/6X77CKC53aocEM61989D',
+        'value': 199000.0,
+        'currency': 'VND',
+        'transaction_id': '' 
+    });
 
             fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
                 method: 'POST',
