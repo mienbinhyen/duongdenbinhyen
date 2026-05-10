@@ -1342,10 +1342,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 method: 'POST', 
                 mode: 'no-cors', 
                 body: new FormData(pacoForm)
-		}).then(() => {
+	}).then(() => {
     		// 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
     		fbq('track', 'Purchase', {currency: 'VND', value: 199000});
-    		gtag_report_conversion();
+    
+    		gtag('event', 'conversion', {
+      		'send_to': 'AW-18152807118/6X77CKC53aocEM61989D'
+    		});
 
 
             fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
