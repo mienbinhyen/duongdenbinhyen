@@ -36,7 +36,10 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('set', 'autoConfig', false, '935549958850787');
-fbq('init', '935549958850787');
+fbq('init', '935549958850787', {
+  em: 'email@email.com',   // Values will be hashed automatically by the pixel using SHA-256
+  ph: '1234567890',
+});
 fbq('set', 'autoConfig', false, '935549958850787');
 fbq('track', 'PageView');
 </script>
@@ -44,8 +47,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
-
-
 
 
 
@@ -1125,7 +1126,7 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
             <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết" required>
         </div>
         
-	<input type="hidden" name="Nguon_Don" value="pacobooks">
+	<input type="hidden" name="Nguon_Don" value="facebook">
 	<div style="display:none;"><input type="text" name="confirm_email" value=""></div>
 
 <div style="text-align: center; margin: 15px 0; font-family: 'Times New Roman', serif;">
