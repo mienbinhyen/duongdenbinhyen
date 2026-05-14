@@ -50,7 +50,13 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
-
+<script>
+let clientIP = "Đang lấy...";
+fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => clientIP = data.ip)
+    .catch(() => clientIP = "Không lấy được");
+</script>
 
 
 
@@ -1330,11 +1336,15 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
-    
+	    // --- ĐOẠN SỬA ĐỂ LẤY IP ---
+            const formData = new FormData(pacoForm);
+            formData.append("IP", clientIP); // Thêm dòng này để gửi IP về Sheet
+            // --------------------------    
+
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
                 mode: 'no-cors', 
-                body: new FormData(pacoForm)
+                body: formData
             }).then(() => {
                 // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
                 fbq('track', 'Purchase', {currency: 'VND', value: 199000});
