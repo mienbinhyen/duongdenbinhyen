@@ -1131,7 +1131,7 @@ fetch('https://api.ipify.org?format=json')
             <input type="text" name="Họ và Tên" class="paco-input" placeholder="Ví dụ: Tác giả Thiện Nhân" required>
         </div>
         <div class="paco-input-wrapper">
-            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
+            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
         </div>
         <div class="paco-input-wrapper">
             <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết - trước khi sát nhập" required>
@@ -1338,13 +1338,9 @@ document.addEventListener("DOMContentLoaded", function() {
             submitBtn.disabled = true; 
             submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
             
-	    const formData = new FormData(pacoForm);
-            formData.append('Nguồn', 'TikTok'); // Thêm dòng này
-
-	    // --- ĐOẠN SỬA ĐỂ LẤY IP ---
-            const formData = new FormData(pacoForm);
-            formData.append("IP", clientIP); // Thêm dòng này để gửi IP về Sheet
-            // --------------------------   
+		const formData = new FormData(pacoForm);
+		formData.append('Nguồn', 'TikTok'); 
+		formData.append("IP", clientIP);
 
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
