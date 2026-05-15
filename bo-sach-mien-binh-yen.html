@@ -54,6 +54,13 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <!-- TikTok Pixel Code End -->
 
 
+<script>
+let clientIP = "Đang lấy...";
+fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => clientIP = data.ip)
+    .catch(() => clientIP = "Không lấy được");
+</script>
 
 
 
@@ -1121,16 +1128,16 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <div class="paco-form-title" style="color: #004a7c; font-weight: bold;">Nơi Bạn Nhận Sách </div>
     <form id="pacoForm">
         <div class="paco-input-wrapper">
-            <input type="text" name="Họ và Tên" class="paco-input" placeholder="Ví dụ: Thiện Nhân" required>
+            <input type="text" name="Họ và Tên" class="paco-input" placeholder="Ví dụ: Tác giả Thiện Nhân" required>
         </div>
         <div class="paco-input-wrapper">
-            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại" required onfocus="fbq('track', 'InitiateCheckout');">
+            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
         </div>
         <div class="paco-input-wrapper">
-            <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết" required>
+            <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết - trước khi sát nhập" required>
         </div>
         
-	<input type="hidden" name="Nguon_Don" value="pacobooks">
+	<input type="hidden" name="Nguon_Don" value="tiktok">
 	<div style="display:none;"><input type="text" name="confirm_email" value=""></div>
 
 <div style="text-align: center; margin: 15px 0; font-family: 'Times New Roman', serif;">
@@ -1334,6 +1341,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	    const formData = new FormData(pacoForm);
             formData.append('Nguồn', 'TikTok'); // Thêm dòng này
 
+	    // --- ĐOẠN SỬA ĐỂ LẤY IP ---
+            const formData = new FormData(pacoForm);
+            formData.append("IP", clientIP); // Thêm dòng này để gửi IP về Sheet
+            // --------------------------   
 
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
                 method: 'POST', 
