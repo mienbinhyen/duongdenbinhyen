@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=450">
+    <meta name="viewport" content="width=450, initial-scale=1.0, user-scalable=yes">
     <title>Đường Đến Bình Yên | Đích đến của mọi cuộc hành trình</title>
     
     <meta property="og:site_name" content="Đường Đến Bình Yên" />
@@ -31,11 +31,10 @@
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
+n.queue=[];t=b.createElement(e);t.async=!0;t.defer=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('set', 'autoConfig', false, '935549958850787');
 fbq('init', '935549958850787', {
   em: 'email@email.com',   // Values will be hashed automatically by the pixel using SHA-256
   ph: '1234567890',
@@ -49,14 +48,6 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 
-
-<script>
-let clientIP = "Đang lấy...";
-fetch('https://api.ipify.org?format=json')
-    .then(res => res.json())
-    .then(data => clientIP = data.ip)
-    .catch(() => clientIP = "Không lấy được");
-</script>
 
 
 
@@ -81,11 +72,11 @@ fetch('https://api.ipify.org?format=json')
         min-height: 100vh;
 	
 	/* Lớp 1: Nền phủ */
-	background-image: #FDFCF0);
+	background-color: #FDFCF0;
 
 	/* Lớp 2: Nền gốc */
 	background-color: #FDFCF0; /* Màu#A9C9A9 #FDFCF0; kem giấy #eadfca; cho vùng nội dung #f4ece0 #fdfaf1; Màu trắng tinh khiết: #ffffff; #fffdf5 */
-        box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
+        box-shadow: 0 0 10px #000; /* Đổ bóng tạo chiều sâu box-shadow: 0 0 20px rgba(0,0,0,0.5); */
 	overflow-x: hidden; /* Chống tràn ngang */
     }
 
@@ -180,17 +171,13 @@ fetch('https://api.ipify.org?format=json')
     font-size: 16px;
     font-weight: bold;
     
-    /* BO GÓC NHẸ ĐỂ ĐẸP HƠN */
+  /* BO GÓC NHẸ ĐỂ ĐẸP HƠN */
     border-radius: 8px !important; 
     
     cursor: pointer;
     text-transform: uppercase;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Đổ bóng vàng nhẹ */
-    animation: pacoPulsate 3.5s infinite ease-in-out;
-}
-    
-    /* Hiệu ứng rung rinh */
-    animation: paco-shake 3s infinite;
+    box-shadow: 0 0 10px #ffd700;
+    animation: pacoPulsate 1.5s infinite ease-in-out;
 }
 
 /* Hiệu ứng zoom nhẹ nhàng cho điện thoại */
@@ -200,10 +187,9 @@ fetch('https://api.ipify.org?format=json')
 
 @keyframes pacoPulsate {
     0% { transform: scale(1); }
-    50% { transform: scale(1.15); } /* Zoom nhẹ 3% để không bị thô */
+    50% { transform: scale(1.15); } /* Zoom nhẹ để không bị thô */
     100% { transform: scale(1); }
 }
-
 
 
 /* =========================================
@@ -349,7 +335,7 @@ fetch('https://api.ipify.org?format=json')
     border-radius: 8px;
     margin: 2px 0px;
     padding: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px #eee;
 }
 
 .paco-comment-h2 {
@@ -420,7 +406,7 @@ fetch('https://api.ipify.org?format=json')
     padding: 20px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px #ddd;
 }
 
 .paco-form-title {
@@ -451,24 +437,21 @@ fetch('https://api.ipify.org?format=json')
     margin: 0 auto;
     display: block;
     font-family: 'Times New Roman', Times, serif !important;
-    background-color: #b30000 !important; /* ĐỎ ĐẬM */
+    background-color: #b30000 !important;
     color: #ffffff;
-    border: 2px solid #ffd700 !important; /* VIỀN VÀNG */
+    border: 2px solid #ffd700 !important;
     padding: 12px;
     font-size: 18px;
     font-weight: 900;
-    border-radius: 99px; /* Bo tròn hẳn như hình mẫu */
+    border-radius: 99px;
     text-transform: uppercase;
     animation: pacoPulsate 1.5s infinite ease-in-out;
 }
     
-    /* Thêm hiệu ứng zoom nhẹ */
-    animation: pacoPulsate 1.5s infinite ease-in-out;
-}
 
 @keyframes pacoPulsate {
     0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
+    50% { transform: scale(1.15); }
     100% { transform: scale(1); }
 }
 /* Ẩn thông báo khi chưa gửi form */
@@ -505,34 +488,30 @@ fetch('https://api.ipify.org?format=json')
 /* =========================================
    KHỐI 7: ĐỒNG HỒ & TRUY CẬP
    ========================================= */
-.paco-stats-box { display: flex; justify-content: center; gap: 10px; margin-bottom: 70px; }
-    /* 1. Thay đổi số 10px để tăng/giảm khoảng cách với bên ngoài (trên và dưới) */
-    margin: 10px 0; 
-    font-family: 'Times New Roman', Times, serif;
+.paco-stats-box { 
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 10px 0 70px 0; /* Gộp margin: trên 10px, dưới 70px để thoáng trang */
+    font-family: 'Times New Roman', Times, serif; 
 }
 
 .stats-item {
     background: #fff;
-    /* 2. Thay đổi số 2px để tăng/giảm độ dày từ chữ đến viền (trong nút) */
     padding: 2px 8px; 
     border-radius: 50px;
     font-size: 12px;
     border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    /* Đổi sang màu cố định cho nhẹ máy */
+    box-shadow: 0 2px 4px #eee; 
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
-.stats-label { 
-    color: #555; 
-}
+.stats-label { color: #555; }
 
-.stats-value { 
-    font-weight: bold; 
-    color: #b30000; /* Màu đỏ nhấn mạnh */
-}
-
+.stats-value { font-weight: bold; color: #b30000; }
 
 
 
@@ -550,7 +529,7 @@ fetch('https://api.ipify.org?format=json')
     border-radius: 12px; 
     text-align: center; 
     color: #333;
-    background-color: rgba(1, 87, 155, 0.05);
+    background-color: #f2f7fb;
 }
 
 .paco-trust-items {
@@ -618,7 +597,7 @@ fetch('https://api.ipify.org?format=json')
 .paco-slide img {
     width: 100%;
     height: auto; /* Quan trọng: Để chiều cao tự nhảy theo chiều rộng */
-    aspect-ratio: 686 / 1005; /* Ép đúng tỷ lệ gốc của file ảnh */
+    aspect-ratio: 600 / 800; /* Ép đúng tỷ lệ gốc của file ảnh */
     object-fit: contain;
 }
 
@@ -627,10 +606,10 @@ fetch('https://api.ipify.org?format=json')
 /* Nút đẩy xuống thêm một chút */
 .paco-btn-bottom {
     position: absolute;
-    bottom: -20px; 
+    bottom: -41px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 86, 179, 0.7) !important;
+    background-color: #003366 !important;
     color: #fff;
     
     /* 1. Giảm cỡ chữ (mặc định thường là 16px) */
@@ -722,7 +701,7 @@ fetch('https://api.ipify.org?format=json')
             pointer-events: auto;
             width: 60%;
             background: #FF6600; /* Màu cam như hình mẫu */
-            color: #FFFFFF;
+            color: #000000;
             font-family: Times New Roman;
             font-weight: bold;
             font-size: 20px;
@@ -797,8 +776,8 @@ fetch('https://api.ipify.org?format=json')
 
 
         <div class="paco-book-pair" style="margin: 30px 15px; width: auto; x-border: 0px dashed rgba(1, 87, 155, 0.4); x-border-bottom: 0px solid #01579b; x-border-radius: 8px; padding: 15px; x-background-image: linear-gradient(to TOP, transparent, #FDFCF0); x-background-color: #f0f7ff;">
-            <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên">
-            <img src="biathitham11.webp" alt="Thì Thầm">
+            <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên" width="600" height="800" loading="lazy">
+            <img src="biathitham11.webp" alt="Thì Thầm" width="600" height="800" loading="lazy">
             <div class="paco-book-info">
                 <div style="color: #004a80; font-weight: bold; font-size: 18px; text-transform: uppercase;">Bộ đôi sách Tâm lý</div>
                 <div style="font-size: 17px;">✨ Đường Đến Bình Yên</div>
@@ -1011,12 +990,12 @@ fetch('https://api.ipify.org?format=json')
 
 
 <div class="paco-action-box" style="width: auto; max-width: 550px; margin: 40px 0px; text-align: center;">
-    <p style="font-size: 14px; color: #FF4500; font-weight: bold; font-style: italic; margin-bottom: 10px;">
+    <p style="font-size: 14px; color: #b30000; font-weight: bold; font-style: italic; margin-bottom: 10px;">
         ⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!
     </p>
     
     <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior: 'smooth'});" style="margin-top: 0; line-height: 1.2;">
-        <span style="font-size: 14px;">ĐANG GIẢM GIÁ 40%</span><br>
+        <span style="font-size: 15px;">ĐANG GIẢM GIÁ 40%</span><br>
         <span style="font-size: 22px;">ĐẶT NGAY</span>
     </button>
 </div>
@@ -1059,7 +1038,7 @@ fetch('https://api.ipify.org?format=json')
     <div style="color: #ffb400; font-size: 10px; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
     <p style="margin: 0 0 8px 0; font-size: 14px; color: #4b4f56; line-height: 1.5;">Nội dung thực tế, trình bày rất dễ hiểu. Cuốn sách giúp tôi khơi thông tâm trí sau những giờ làm việc căng thẳng.</p>
     
-        <img src="hoangnam.webp" alt="Hình ảnh từ Hoàng Nam" width="320" height="320" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
+        <img src="hoangnam.webp" alt="Hình ảnh từ Hoàng Nam" width="320" height="320" loading="lazy" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
     
 </div>
 
@@ -1080,7 +1059,7 @@ fetch('https://api.ipify.org?format=json')
     <div style="color: #ffb400; font-size: 10px; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
     <p style="margin: 0 0 8px 0; font-size: 14px; color: #4b4f56; line-height: 1.5;">Sách đóng gói kỹ, giao hàng siêu tốc. Nội dung phản chiếu đúng thăng trầm đời người, rất đáng để chiêm nghiệm.</p>
     
-        <img src="bacthanh.webp" alt="Hình ảnh từ Bác Thành" width="320" height="320" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
+        <img src="bacthanh.webp" alt="Hình ảnh từ Bác Thành" width="320" height="320" loading="lazy" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
     
 </div>
 
@@ -1136,7 +1115,7 @@ fetch('https://api.ipify.org?format=json')
 	<div style="display:none;"><input type="text" name="confirm_email" value=""></div>
 
 <div style="text-align: center; margin: 15px 0; font-family: 'Times New Roman', serif;">
-    <div style="font-style: normal; color: #008B8B; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;">
+    <div style="font-style: normal; color: #004d4d; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;">
         "Kiểm tra kỹ lưỡng, hài lòng mới thanh toán"
     </div>
 </div>
@@ -1181,7 +1160,7 @@ fetch('https://api.ipify.org?format=json')
 
 
 
-    <script>
+    <script async>
 	// Đồng hồ đếm ngược
 
 
@@ -1408,15 +1387,29 @@ slider.addEventListener('scroll', () => {
 });
 
 // 3. Kéo chuột máy tính
+let ticking = false; // MỚI 1
+
 slider.addEventListener('mousedown', (e) => {
     isDown = true; slider.style.scrollSnapType = 'none';
     startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
 });
+
 slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return; e.preventDefault();
-    slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 2;
+    if (!isDown || ticking) return; // MỚI 2 (Thêm vế || ticking)
+    e.preventDefault();
+    
+    ticking = true; // MỚI 3
+    window.requestAnimationFrame(() => { // MỚI 4
+        slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 2;
+        ticking = false; // MỚI 5
+    }); // MỚI 6
 });
-const end = () => { isDown = false; slider.style.scrollSnapType = 'x mandatory'; };
+
+const end = () => { 
+    isDown = false; 
+    ticking = false; // MỚI 7
+    slider.style.scrollSnapType = 'x mandatory'; 
+};
 slider.addEventListener('mouseup', end); slider.addEventListener('mouseleave', end);
 
 // 4. Khởi tạo - ĐÃ BỎ RESETTIMER
@@ -1435,7 +1428,7 @@ window.addEventListener('load', () => {
 
 
 
-<script>
+<script async>
 (function() {
     /* ============================================================
        BẢNG ĐIỀU KHIỂN CHO ÔNG PACO - CHIẾN THUẬT 1-2-3
@@ -1530,6 +1523,14 @@ window.addEventListener('load', () => {
 })();
 </script>
 
+
+<script async>
+let clientIP = "Đang lấy...";
+fetch('https://api.ipify.org?format=json')
+    .then(res => res.json())
+    .then(data => clientIP = data.ip)
+    .catch(() => clientIP = "Không lấy được");
+</script>
 
 
 
