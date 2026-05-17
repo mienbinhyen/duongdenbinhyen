@@ -712,7 +712,7 @@
 </p>
     <div class="paco-slider-container">
         <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high" decoding="sync"></div>
-        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high" decoding="sync"></div>
+        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" loading="lazy"></div>
         <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="100%" height="auto" loading="lazy"></div>
         <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="100%" height="auto" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="100%" height="auto" loading="lazy"></div>
@@ -1512,6 +1512,8 @@ window.addEventListener('load', function() {
 
 <!-- Meta Pixel Code -->
 <script>
+window.addEventListener('load', function() {
+setTimeout(function() {
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -1526,6 +1528,8 @@ fbq('init', '935549958850787', {
 });
 fbq('set', 'autoConfig', false, '935549958850787');
 fbq('track', 'PageView');
+}, 3000); 
+});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
