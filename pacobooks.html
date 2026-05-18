@@ -1540,6 +1540,46 @@ src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"
 
 
 
+
+<script>
+    /* ============================================================
+       CHẶN IP-DO NGHI NGỜ SPAM
+       ============================================================ */
+window.addEventListener('load', function() {
+    // Chờ 4 giây sau khi trang tải xong mới chạy để không ảnh hưởng tốc độ
+    setTimeout(function() {
+        const rawIPs = `
+171.253.34.116
+
+        `;
+
+        const blacklistedIPs = rawIPs.split('\n').map(ip => ip.trim()).filter(ip => ip !== "");
+
+        fetch('https://api.ipify.org?format=json')
+            .then(res => res.json())
+            .then(data => {
+                if (blacklistedIPs.includes(data.ip)) {
+                    document.body.innerHTML = `
+                        <div style="text-align:center; padding:50px; font-family:Arial; color:#b30000; background:#fff; height:100vh;">
+                            <h2 style="font-size:24px;">Hệ thống đang bảo trì</h2>
+                            <p style="font-size:18px;">Vui lòng quay lại sau hoặc gọi 0933223301.</p>
+                        </div>`;
+                    window.stop();
+                }
+            })
+            .catch(() => { console.log("Hệ thống bảo vệ đang chạy"); });
+    }, 4000); 
+});
+</script>
+
+
+
+
+
+
+
+
+
 </main>
 </body>
 </html>
