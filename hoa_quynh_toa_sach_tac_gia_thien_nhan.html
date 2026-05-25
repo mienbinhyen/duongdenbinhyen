@@ -79,6 +79,19 @@
 
 </style>
 <body>
+<style>
+body {
+    background-color: #d0e8e0;
+    margin: 0;
+    padding: 0;
+}
+.paco-page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+</style>
+<div class="paco-page-wrap">
 <h1 style="display:none;">Đường Đến Bình Yên | thì thầm | Miền bình yên | Sách mở lối | tác giả Thiện Nhân</h1>
 
 <style>
@@ -96,7 +109,7 @@
 .menu-paco {
     position: fixed;
     top: 10px;
-    right: 15px;
+    right: calc((100vw - 900px) / 2);
     z-index: 10000;
     color: #008080;
     font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
@@ -115,7 +128,7 @@
     display: none;
     position: fixed;
     top: 50px;
-    right: 15px;
+    right: calc((100vw - 900px) / 2);
     background: white;
     border: 1px solid #008080;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -812,129 +825,72 @@ window.addEventListener('scroll', function() {
 
 
 <style>
-    /* Ép lại padding cho đồng bộ khối chuẩn */
-    .paco-news-section { padding: 40px 20px; background-color: #ffffff; }
-
-    .container-paco-news { 
-        max-width: 900px; /* Giới hạn tối đa bằng khối chuẩn */
-        width: 100%;      /* Tự co giãn theo màn hình, không gây tràn */
-        margin: auto; 
-        box-sizing: border-box; 
-    }
-
-    .section-label-news {
-        font-family: 'Times New Roman', serif; font-size: 1.6em; color: #004a99;
-        text-transform: uppercase; font-weight: bold; letter-spacing: 2px;
-        display: block; text-align: left; margin-bottom: 20px; /* Giảm để gần nhau hơn */
-        border-left: 6px solid #004a99; padding-left: 15px; line-height: 1.2;
-        text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
-    }
-
-    .news-list-paco { list-style: none; padding: 0; margin: 0; }
-
-    .news-item-paco {
-        display: flex; align-items: center; gap: 15px;
-        padding: 8px 0; /* Bỏ padding ngang để tránh cộng dồn gây tràn */
-        border-bottom: 1px solid #f0f0f0;
-        transition: all 0.3s ease;
-    }
-
-    .news-item-paco:hover {
-        background: rgba(240, 247, 255, 0.8);
-        padding-left: 10px; /* Chỉ đẩy nhẹ khi hover */
-    }
-
-    .news-icon-paco { 
-        color: #d4af37; 
-        font-size: 1.3em; 
-        flex-shrink: 0;
-        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
-    }
-
-    .news-link-paco {
-        font-family: 'Times New Roman', serif; font-size: 1.15em;
-        color: #0066cc;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        font-weight: 500;
-        transition: all 0.3s;
-    }
-
-    /* ĐIỀU CHỈNH MOBILE */
-    @media (max-width: 600px) {
-        .paco-news-section { padding: 30px 15px; }
-        .section-label-news { font-size: 1.15em; }
-        .news-link-paco { font-size: 1.05em; }
-    }
+.paco-news-section {
+    padding: 40px 20px;
+    background-color: #f0f7ff;
+}
+.container-paco-news {
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #d0e4f7;
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,74,153,0.08);
+}
+.section-label-news {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.6em;
+    color: #004a99;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
+}
+.section-sub-news {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.05em;
+    color: #555;
+    margin: 10px 0 25px 0;
+    font-style: italic;
+    text-align: center;
+}
+.news-view-all {
+    display: inline-block;
+    padding: 13px 35px;
+    background: linear-gradient(135deg, #004a99, #0066cc);
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.news-view-all:hover {
+    background: linear-gradient(135deg, #003a7a, #004a99);
+    box-shadow: 0 4px 15px rgba(0,74,153,0.3);
+}
+@media (max-width: 600px) {
+    .paco-news-section { padding: 30px 15px; }
+    .container-paco-news { padding: 30px 20px; }
+    .section-label-news { font-size: 1.2em; }
+}
 </style>
 
 <section class="paco-news-section">
     <div class="container-paco-news">
         <span class="section-label-news">BÀI VIẾT MỚI</span>
-        <div class="news-list-paco">
-	     <div class="news-item-paco">
-        	<div class="news-icon-paco">📜</div>
-        	<a href="https://duongdenbinhyen.com/chinhsach.html" class="news-link-paco">Chính sách & Bảo mật</a>
-    	    </div>
-	    <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html" class="news-link-paco">tác giả thiện nhân</a>
-            </div>
-
-	    <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan.html" class="news-link-paco">Tác giả mới</a>
-            </div>
-	    <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-link-paco">Đường Đến Bình Yên</a>
-            </div>
-	    <div class="news-item-paco">
-		<div class="news-icon-paco">🖋️</div>
-		<a href="https://duongdenbinhyen.com/thi-tham.html" class="news-link-paco">Thì Thầm</a>
-	    </div>
-	    <div class="news-item-paco">
-		<div class="news-icon-paco">🖋️</div>
-		<a href="https://duongdenbinhyen.com/mien-binh-yen.html" class="news-link-paco">Miền Bình Yên</a>
-	    </div>
-	    <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/gioi-thieu-sach-va-tac-gia-thien-nhan.html" class="news-link-paco">Giới thiệu sách và tác giả</a>
-            </div>
-
-
-	    <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/hoa_quynh_toa_sach_tac_gia_thien_nhan.html" class="news-link-paco">Hoa Quỳnh trong sách của thiện nhân</a>
-            </div>
-            <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuduongdenbinhyen" class="news-link-paco">Giới thiệu sách Đường đến Bình yên</a>
-            </div>
-            <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuthitham" class="news-link-paco">Giới thiệu sách Thì thầm</a>
-            </div>
-            <div class="news-item-paco">
-                <div class="news-icon-paco">🖋️</div>
-                <a href="https://duongdenbinhyen.com/gioithieu.html" class="news-link-paco">Giới thiệu về tác giả</a>
-            </div>
-	    <div class="news-item-paco">
-    		<div class="news-icon-paco">🖋️</div>
-    		<a href="https://duongdenbinhyen.com/truyenthong.html#phongsuthitham" class="news-link-paco">Phóng sự: Lời thì thầm từ trái tim</a>
-	</div>
-	    <div class="news-item-paco">
-    		<div class="news-icon-paco">🖋️</div>
-    		<a href="https://duongdenbinhyen.com/truyenthong.html#phongsuduongdenbinhyen" class="news-link-paco">Phóng sự: Giới thiệu sách</a>
-	</div>
-	    <div class="news-item-paco">
-   		<div class="news-icon-paco">🖋️</div>
-    		<a href="https://duongdenbinhyen.com/gioi-thieu-tac-gia-thien-nhan.html" class="news-link-paco">Giới thiệu về tác giả Thiện Nhân</a>
-	</div>
-	    <div class="news-item-paco">
-   		<div class="news-icon-paco">🖋️</div>
-    		<a href="https://duongdenbinhyen.com/cha-me-la-noi-binh-yen-nhat.html" class="news-link-paco">Cha mẹ là nới bình yên nhất</a>
-	</div>
+        <p class="section-sub-news">Góc nhìn mới — tri thức chắt lọc từ hành trình thực chứng</p>
+        <a href="https://duongdenbinhyen.com/bai-viet-moi.html" class="news-view-all">XEM TẤT CẢ BÀI VIẾT →</a>
     </div>
 </section>
 
@@ -1613,20 +1569,22 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-fixed-menu {
         position: fixed;
-        right: 25px; /* Sát lề phải */
-        top: 75%;    /* Nâng lên vị trí giữa màn hình theo đánh dấu */
+        right: calc((100vw - 900px) / 2 + 5px);
+        top: 75%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 07px;   /* Khoảng cách các icon rất sát nhau */
+        gap: 07px;
         z-index: 10000;
     }
     .paco-icon-item img {
-        width: 24px; /* Siêu nhỏ thanh thoát */
+        width: 24px;
         height: 24px;
         object-fit: contain;
- 
+    }
+    @media (max-width: 900px) {
+        .paco-fixed-menu { right: 5px; }
     }
 </style>
 
@@ -1660,20 +1618,23 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-back-top {
         position: fixed;
-        right: 25px;
+        right: calc((100vw - 900px) / 2 + 5px);
         bottom: 60px;
-        width: 30px; /* Nhỏ gọn */
+        width: 30px;
         height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         z-index: 10000;
-        background: transparent; /* Không nền */
+        background: transparent;
     }
     .paco-back-top svg {
         width: 100%;
         height: 100%;
+    }
+    @media (max-width: 900px) {
+        .paco-back-top { right: 5px; }
     }
 </style>
 
