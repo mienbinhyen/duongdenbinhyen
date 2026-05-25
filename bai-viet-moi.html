@@ -359,6 +359,17 @@ window.addEventListener('scroll', function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <style>
 .paco-news-section {
     padding: 50px 20px;
@@ -1397,23 +1408,24 @@ window.addEventListener('scroll', function() {
 <style>
     .paco-fixed-menu {
         position: fixed;
-        right: 25px; /* Sát lề phải */
-        top: 75%;    /* Nâng lên vị trí giữa màn hình theo đánh dấu */
+        right: calc((100vw - 900px) / 2 + 5px);
+        top: 75%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 07px;   /* Khoảng cách các icon rất sát nhau */
+        gap: 07px;
         z-index: 10000;
     }
     .paco-icon-item img {
-        width: 24px; /* Siêu nhỏ thanh thoát */
+        width: 24px;
         height: 24px;
         object-fit: contain;
-   
+    }
+    @media (max-width: 900px) {
+        .paco-fixed-menu { right: 5px; }
     }
 </style>
-
 <div class="paco-fixed-menu">
     <a href="https://duongdenbinhyen.com/" class="paco-icon-item">
         <img src="https://img.icons8.com/material-outlined/48/000000/home--v1.png" alt="Home">
@@ -1433,34 +1445,33 @@ window.addEventListener('scroll', function() {
 
 
 
-
-
 <a href="#" class="paco-back-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15L12 9L6 15" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </a>
-
 <style>
     .paco-back-top {
         position: fixed;
-        right: 25px;
+        right: calc((100vw - 900px) / 2 + 5px);
         bottom: 60px;
-        width: 30px; /* Nhỏ gọn */
+        width: 30px;
         height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
         z-index: 10000;
-        background: transparent; /* Không nền */
+        background: transparent;
     }
     .paco-back-top svg {
         width: 100%;
         height: 100%;
     }
+    @media (max-width: 900px) {
+        .paco-back-top { right: 5px; }
+    }
 </style>
-
 
 
 
