@@ -85,6 +85,7 @@
 
 
 
+
 <style>
 body {
     background-color: #d0e8e0;
@@ -100,41 +101,32 @@ body {
 <div class="paco-page-wrap">
 
 
-
-
 <style>
-/* Gộp các nhãn section để tối ưu dung lượng */
-.section-label, .section-label-sync, .section-label-author, .section-label-values {
-    white-space: nowrap !important;
-}
-@media (max-width: 600px) {
-    .section-label, .section-label-sync, .section-label-author, .section-label-values {
-        font-size: 4.5vw !important;
-    }
-}
-
-/* Nút Menu 3 gạch */
+/* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
 .menu-paco {
     position: fixed;
     top: 10px;
     right: calc((100vw - 900px) / 2);
     z-index: 10000;
     color: #008080;
-    font-size: 24px;
+    font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
     cursor: pointer;
     transition: 0.3s;
 }
+
+/* Hiệu ứng khi rê chuột vào nút 3 gạch */
+@media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
 .menu-paco:hover {
-    color: #ff6600;
+    color: #ff6600; /* Đổi sang màu cam để nổi bật */
     transform: scale(1.1);
 }
 
-/* Bảng menu sổ xuống */
+/* 2. Bảng menu sổ ra */
 .noidung-menu {
     display: none;
     position: fixed;
     top: 50px;
-    right: 15px;
+    right: calc((100vw - 900px) / 2);
     background: white;
     border: 1px solid #008080;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -142,6 +134,7 @@ body {
     width: 200px;
     border-radius: 4px;
 }
+
 .noidung-menu a {
     display: block;
     padding: 12px 15px;
@@ -152,9 +145,11 @@ body {
     border-bottom: 1px solid #eee;
     transition: 0.3s;
 }
+
+/* Hiệu ứng nổi bật khi rê chuột vào từng mục menu */
 .noidung-menu a:hover {
-    background: #008080;
-    color: white;
+    background: #008080; /* Nền xanh */
+    color: white; /* Chữ trắng */
 }
 </style>
 

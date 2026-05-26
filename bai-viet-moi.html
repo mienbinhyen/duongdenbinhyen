@@ -80,22 +80,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </style>
 </head>
 <body>
@@ -140,6 +124,7 @@ body {
 }
 
 /* Hiệu ứng khi rê chuột vào nút 3 gạch */
+@media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
 .menu-paco:hover {
     color: #ff6600; /* Đổi sang màu cam để nổi bật */
     transform: scale(1.1);
@@ -150,7 +135,7 @@ body {
     display: none;
     position: fixed;
     top: 50px;
-    right: calc((100vw - 900px) / 2);
+    right: 15px;
     background: white;
     border: 1px solid #008080;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);

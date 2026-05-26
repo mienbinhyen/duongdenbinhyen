@@ -116,6 +116,21 @@ body {
 
 
 <style>
+body {
+    background-color: #d0e8e0;
+    margin: 0;
+    padding: 0;
+}
+.paco-page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+</style>
+<div class="paco-page-wrap">
+
+
+<style>
 /* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
 .menu-paco {
     position: fixed;
@@ -129,6 +144,7 @@ body {
 }
 
 /* Hiệu ứng khi rê chuột vào nút 3 gạch */
+@media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
 .menu-paco:hover {
     color: #ff6600; /* Đổi sang màu cam để nổi bật */
     transform: scale(1.1);
