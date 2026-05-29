@@ -66,8 +66,10 @@ body {
     margin: 0 auto;
     background-color: #ffffff;
 }
+.hidden { display: none; }
 </style>
 <div class="paco-page-wrap">
+<main>
 
 
 
@@ -442,15 +444,15 @@ body {
 
 <div class="paco-catalog-wrapper">
     <div class="paco-catalog-item">
-        <a href="https://duongdenbinhyen.com/">
+        <a href="https://duongdenbinhyen.com/" aria-label="Xem sách Đường Đến Bình Yên">
             <img src="DDBY_bia.webp" width="500" height="732" alt="Đường Đến Bình Yên">
         </a>
         <a href="https://duongdenbinhyen.com/tacphammoi.html#duongdenbinhyen" class="paco-btn-detail">Xem chi tiết</a>
     </div>
 
     <div class="paco-catalog-item">
-        <a href="https://duongdenbinhyen.com/">
-            <img src="thitham_bia.webp" width="500" height="732 alt="Thì Thầm">
+        <a href="https://duongdenbinhyen.com/" aria-label="Xem sách Thì Thầm">
+            <img src="thitham_bia.webp" width="500" height="732" alt="Thì Thầm">
         </a>
         <a href="https://duongdenbinhyen.com/tacphammoi.html#thitham" class="paco-btn-detail">Xem chi tiết</a>
     </div>
@@ -506,7 +508,7 @@ body {
         padding: 6px 10px; border-radius: 50px; background: #ffffff; border: 1.5px solid #004a99;
         box-shadow: 0 4px 10px rgba(0, 74, 153, 0.15); transition: all 0.2s;
     }
-    .price-old { color: #888; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
+    .price-old { color: #555; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
     .price-new { color: #004a99; font-size: 0.85em; font-weight: bold; white-space: nowrap; }
     .ebook-text { color: #004a99; font-size: 0.85em; font-weight: bold; padding: 6px 0; white-space: nowrap; }
 
@@ -590,7 +592,7 @@ body {
         align-items: center; justify-content: center; padding: 6px 10px; border-radius: 50px; 
         background: #ffffff; border: 1.5px solid #004a99; box-shadow: 0 4px 10px rgba(0, 74, 153, 0.15);
     }
-    .price-old { color: #888; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
+    .price-old { color: #555; font-size: 0.7em; text-decoration: line-through; white-space: nowrap; }
     .price-new { color: #004a99; font-size: 0.85em; font-weight: bold; white-space: nowrap; }
     .ebook-text { color: #004a99; font-size: 0.85em; font-weight: bold; padding: 6px 0; white-space: nowrap; }
 
@@ -758,7 +760,7 @@ body {
         </iframe>
     </div>
 
-    <p style="font-family: 'Times New Roman', serif; color: #999; font-size: 0.85em; margin-top: 15px; text-align: justify;">
+    <p style="font-family: 'Times New Roman', serif; color: #666; font-size: 0.85em; margin-top: 15px; text-align: justify;">
         Hashtag: #thitham #langnghe #tamhon #camxuc #thiennhan #dieukydieu #binhyentamhon #sachmoi #mienbinhyen #tacgiathiennhan
     </p>
 </section>
@@ -1075,7 +1077,6 @@ body {
 
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
     .paco-social-section {
@@ -1150,16 +1151,16 @@ body {
         <span class="section-label">MIỀN BÌNH YÊN-MẠNG XÃ HỘI</span>
         <div class="social-grid">
             <a href="https://www.facebook.com/duongdenbinhyen" class="btn-paco-3d" target="_blank">
-                <i class="fa-brands fa-facebook"></i> FACEBOOK
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#1877f2" style="margin-right:12px;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> FACEBOOK
             </a>
             <a href="https://zalo.me/0933223301" class="btn-paco-3d" target="_blank">
-                <i class="fa-solid fa-comment"></i> ZALO
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#0084ff" style="margin-right:12px;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg> ZALO
             </a>
             <a href="https://www.tiktok.com/@duongdenbinhyenbooks" class="btn-paco-3d" target="_blank">
-                <i class="fa-brands fa-tiktok"></i> TIKTOK
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#000000" style="margin-right:12px;"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.95a8.16 8.16 0 004.77 1.52V7.02a4.85 4.85 0 01-1-.33z"/></svg> TIKTOK
             </a>
             <a href="https://www.youtube.com/channel/UC5xXdShnswnynGsGfBWWERw" class="btn-paco-3d" target="_blank">
-                <i class="fa-brands fa-youtube"></i> YOUTUBE
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#ff0000" style="margin-right:12px;"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg> YOUTUBE
             </a>
         </div>
     </div>
@@ -1301,23 +1302,31 @@ body {
 
     .paco-f-row { display: flex; align-items: center; gap: 12px; }
     .paco-f-row .paco-f-input { margin-bottom: 0; flex: 1; }
-    .paco-f-hint { font-size: 14px; color: #999; font-style: italic; white-space: nowrap; }
+    .paco-f-hint { font-size: 14px; color: #555; font-style: italic; white-space: nowrap; }
 
     .paco-f-submit {
-        width: 100%;
-        padding: 15px;
+        width: 50%;
+        padding: 10px;
         margin-top: 20px;
-        border: none;
-        border-radius: 10px;
-        background: #f0f2f5;
-        font-size: 18px;
-        font-weight: bold;
-        color: #004a99;
+        border: 2px solid #ffd700;
+        border-radius: 99px;
+        background: #b30000;
+        font-size: 16px;
+        font-weight: 900;
+        color: #ffffff;
         text-transform: uppercase;
-        box-shadow: 6px 6px 12px #d1d9e6, -6px -6px 12px #ffffff;
+        box-shadow: 0 0 14px rgba(255,215,0,0.35);
         cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        animation: pacoSubmitPulse 1.5s infinite ease-in-out;
     }
-    .paco-f-submit:active { box-shadow: inset 3px 3px 6px #d1d9e6, inset -3px -3px 6px #ffffff; }
+    .paco-f-submit:active { transform: scale(0.90); filter: brightness(0.6); }
+    @keyframes pacoSubmitPulse {
+        0%,100% { transform: scale(1); }
+        50%      { transform: scale(1.05); }
+    }
 
     /* ĐIỀU CHỈNH MOBILE (GIỮ 2 CỘT CHO EBOOK) */
     @media (max-width: 600px) {
@@ -1346,54 +1355,117 @@ body {
             <a href="http://books.apple.com/us/book/id6752637907" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Đường đến bình yên</span>
-                    <span class="platform-name"><i class="fa-brands fa-apple"></i> Ebook Apple Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#555" style="margin-right:8px;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Ebook Apple Book</span>
                 </div>
             </a>
             <a href="https://play.google.com/store/books/details?id=kEyCEQAAQBAJ" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Đường đến bình yên</span>
-                    <span class="platform-name"><i class="fa-brands fa-google-play"></i> Ebook Google Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#34a853" style="margin-right:8px;"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-11.96-2.87-2.87L3.18 23.76zM.68 1.23C.26 1.67 0 2.35 0 3.23v17.54c0 .88.26 1.56.68 2l.11.1 9.83-9.83v-.23L.79 3.13l-.11.1zM20.55 10.3L17.3 8.45l-3.17 3.17 3.17 3.17 3.27-1.86c.93-.53.93-1.39 0-1.93v.3zM4.17.24l12.6 11.96-2.87 2.87L3.18.44C3.53.4 3.87.47 4.17.24z"/></svg> Ebook Google Book</span>
                 </div>
             </a>
             <a href="http://books.apple.com/us/book/id6752648459" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Thì thầm</span>
-                    <span class="platform-name"><i class="fa-brands fa-apple"></i> Ebook Apple Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#555" style="margin-right:8px;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Ebook Apple Book</span>
                 </div>
             </a>
             <a href="https://play.google.com/store/books/details?id=nrWFEQAAQBAJ" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Thì thầm</span>
-                    <span class="platform-name"><i class="fa-brands fa-google-play"></i> Ebook Google Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#34a853" style="margin-right:8px;"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-11.96-2.87-2.87L3.18 23.76zM.68 1.23C.26 1.67 0 2.35 0 3.23v17.54c0 .88.26 1.56.68 2l.11.1 9.83-9.83v-.23L.79 3.13l-.11.1zM20.55 10.3L17.3 8.45l-3.17 3.17 3.17 3.17 3.27-1.86c.93-.53.93-1.39 0-1.93v.3zM4.17.24l12.6 11.96-2.87 2.87L3.18.44C3.53.4 3.87.47 4.17.24z"/></svg> Ebook Google Book</span>
                 </div>
             </a>
             <a href="#" class="btn-ebook-3d" onclick="return false;">
                 <div class="btn-content">
                     <span class="book-name">Miền Bình Yên</span>
-                    <span class="platform-name"><i class="fa-brands fa-apple"></i> Ebook Apple Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#555" style="margin-right:8px;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Ebook Apple Book</span>
                 </div>
             </a>
             <a href="#" class="btn-ebook-3d" onclick="return false;">
                 <div class="btn-content">
                     <span class="book-name">Miền Bình Yên</span>
-                    <span class="platform-name"><i class="fa-brands fa-google-play"></i> Ebook Google Book</span>
+                    <span class="platform-name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#34a853" style="margin-right:8px;"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-11.96-2.87-2.87L3.18 23.76zM.68 1.23C.26 1.67 0 2.35 0 3.23v17.54c0 .88.26 1.56.68 2l.11.1 9.83-9.83v-.23L.79 3.13l-.11.1zM20.55 10.3L17.3 8.45l-3.17 3.17 3.17 3.17 3.27-1.86c.93-.53.93-1.39 0-1.93v.3zM4.17.24l12.6 11.96-2.87 2.87L3.18.44C3.53.4 3.87.47 4.17.24z"/></svg> Ebook Google Book</span>
                 </div>
             </a>
         </div>
 
-    <div class="paco-form-box" id="datsach">
-    <div class="paco-f-title">ĐĂNG KÝ MUA SÁCH GIẤY</div>
-    <form id="pacoForm">
-        <input type="text" name="Họ và Tên" class="paco-f-input" placeholder="Họ và tên" required>
-        <input type="tel" name="Số điện thoại" class="paco-f-input" placeholder="Số điện thoại" required>
-        <input type="text" name="Địa chỉ nhận sách" class="paco-f-input" placeholder="Địa chỉ nhận sách" required>
-        <div class="paco-f-row">
-            <input type="text" name="Ghi chú" class="paco-f-input" placeholder="Ghi chú">
-            <span class="paco-f-hint">(Nhập tên sách)</span>
+<style>
+.paco-form-trust-wrap {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin: 20px 0;
+}
+.paco-form-trust-wrap .paco-form-col { flex: 1; }
+.paco-form-trust-wrap .paco-trust-col {
+    width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.paco-trust-item {
+    flex: 1;
+    padding: 15px;
+    border: 1px dashed #004a99;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #f0f5fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+.paco-trust-item span { font-size: 28px; }
+.paco-trust-item b { color: #004a99; font-size: 14px; display: block; }
+.paco-trust-item p { font-size: 12px; color: #555; margin: 0; }
+@media (max-width: 600px) {
+    .paco-form-trust-wrap { flex-direction: column; }
+    .paco-form-trust-wrap .paco-trust-col { width: 100%; flex-direction: row; }
+    .paco-trust-item { flex: 1; }
+}
+</style>
+
+<div class="paco-form-trust-wrap">
+    <div class="paco-form-col">
+        <div id="datsach" style="padding:24px;background:rgba(240,245,250,0.92);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.08);border:1px solid #ddd;border-top:4px solid #b30000;height:100%;box-sizing:border-box;">
+        <div style="font-size:20px;font-weight:bold;color:#1a1a1a;margin-bottom:20px;text-align:center;text-transform:uppercase;">Nơi Bạn Nhận Sách</div>
+        <form id="pacoForm">
+            <div style="margin-bottom:15px;">
+                <input type="text" name="Họ và Tên" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Họ và tên Người Nhận" required>
+            </div>
+            <div style="text-align:center;font-size:11px;color:#0d3b7a;font-weight:600;margin:-8px 0 6px 0;">📞 Vui lòng nghe máy, chúng tôi sẽ gọi xác nhận trước khi gửi sách!</div>
+            <div style="margin-bottom:15px;">
+                <input type="tel" name="Số điện thoại" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');">
+            </div>
+            <div style="margin-bottom:15px;">
+                <input type="text" name="Địa chỉ nhận sách" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Địa chỉ chi tiết" required>
+            </div>
+            <input type="hidden" name="Nguon_Don" value="Trang chủ">
+            <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
+            <div style="text-align:center;margin:15px 0;">
+                <div style="font-style:normal;color:#1a1a1a;font-size:14px;font-weight:600;letter-spacing:0.5px;">&quot;Kiểm tra kỹ lưỡng, hài lòng mới thanh toán&quot;</div>
+            </div>
+            
+            <button type="submit" id="submitBtn" style="width:80%;margin:0 auto;display:block;font-family:'Times New Roman',Times,serif;background-color:#b30000;color:#ffffff;border:2px solid #ffd700;padding:12px;font-size:18px;font-weight:900;border-radius:99px;text-transform:uppercase;animation:pacoSubmitPulse 1.5s infinite ease-in-out;box-shadow:0 0 14px rgba(255,215,0,0.35);cursor:pointer;">HOÀN TẤT ĐẶT HÀNG</button>
+        </form>
+        <div id="msg" class="hidden" style="color:#2e7d32;text-align:center;margin-top:15px;font-weight:bold;">Gửi thông tin thành công!</div>
         </div>
-        <button type="submit" class="paco-f-submit" id="submitBtn">Gửi đi</button>
-    </form>
-    <div id="msg" style="margin-top:10px; color: green; font-weight: bold; display:none;"></div>
+    </div>
+    <div class="paco-trust-col">
+        <div class="paco-trust-item">
+            <span>🛡️</span>
+            <b>Hàng chính hãng</b>
+            <p>Nhà xuất bản Tri Thức</p>
+        </div>
+        <div class="paco-trust-item">
+            <span>📦</span>
+            <b>Kiểm tra khi nhận</b>
+            <p>Tác giả Thiện Nhân</p>
+        </div>
+
+    </div>
 </div>
 </section>
 
@@ -1451,7 +1523,7 @@ body {
         line-height: 1.5;
     }
     .footer-item { margin-bottom: 5px; display: block; }
-    .footer-label { color: #bdc3c7; font-weight: bold; margin-right: 10px; }
+    .footer-label { color: #ffffff; font-weight: bold; margin-right: 10px; }
     .footer-link { color: #ecf0f1; text-decoration: none; }
     .footer-link:hover { text-decoration: underline; }
 
@@ -1462,8 +1534,8 @@ body {
     }
 </style>
 
+</main>
 <footer class="paco-footer">
-    <div class="footer-container" id="lienhe">
         <div class="footer-flex">
             <div class="footer-column">
                 <span class="footer-brand">TIỆM SÁCH PACO</span>
@@ -1610,16 +1682,16 @@ body {
 </style>
 <div class="paco-fixed-menu">
     <a href="https://duongdenbinhyen.com/" class="paco-icon-item">
-        <img src="https://img.icons8.com/material-outlined/48/000000/home--v1.png" alt="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#008080"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
     </a>
     <a href="https://www.facebook.com/duongdenbinhyen" target="_blank" class="paco-icon-item">
-        <img src="https://img.icons8.com/material-outlined/48/000000/facebook-new.png" alt="FB">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
     </a>
     <a href="https://zalo.me/0933223301" target="_blank" class="paco-icon-item">
-        <img src="https://img.icons8.com/ios-filled/50/000000/zalo.png" alt="Zalo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#0068ff"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial">Zalo</text></svg>
     </a>
-    <a href="https://duongdenbinhyen.com/#ebook" class="paco-icon-item">
-        <i class="fa-brands fa-google-play" style="color: #004a99; font-size: 18px;"></i>
+    <a href="https://duongdenbinhyen.com/#ebook" class="paco-icon-item" aria-label="Xem Ebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#004a99"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-11.96-2.87-2.87L3.18 23.76zM.68 1.23C.26 1.67 0 2.35 0 3.23v17.54c0 .88.26 1.56.68 2l.11.1 9.83-9.83v-.23L.79 3.13l-.11.1zM20.55 10.3L17.3 8.45l-3.17 3.17 3.17 3.17 3.27-1.86c.93-.53.93-1.39 0-1.93v.3zM4.17.24l12.6 11.96-2.87 2.87L3.18.44C3.53.4 3.87.47 4.17.24z"/></svg>
     </a>
 </div>
 
@@ -1627,7 +1699,7 @@ body {
 
 
 
-<a href="#" class="paco-back-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+<a href="#" class="paco-back-top" aria-label="Lên đầu trang" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15L12 9L6 15" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -1694,13 +1766,13 @@ body {
 </style>
 
 <div class="paco-fixed-nav">
-    <a href="javascript:history.back()" class="paco-nav-btn-fixed">
+    <a href="javascript:history.back()" class="paco-nav-btn-fixed" aria-label="Trang trước">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 18L9 12L15 6" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
     </a>
 
-    <a href="javascript:history.forward()" class="paco-nav-btn-fixed">
+    <a href="javascript:history.forward()" class="paco-nav-btn-fixed" aria-label="Trang sau">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 6L15 12L9 18" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -1841,29 +1913,94 @@ window.addEventListener('load', function() {
     }
 });
 
-// 3. MA GUI DON HANG
-const pacoForm = document.getElementById('pacoForm');
-if (pacoForm) {
-    pacoForm.addEventListener('submit', e => {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
-        const msg = document.getElementById('msg');
-        btn.innerHTML = "Đang gửi...";
-        btn.disabled = true;
-        fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
-            method: 'POST',
-            mode: 'no-cors',
-            body: new FormData(pacoForm)
-        })
-        .then(() => {
-            msg.innerHTML = "Cảm ơn Bạn đã đăng ký mua sách! Chúng tôi sẽ gửi tới bạn sớm nhất có thể.";
-            msg.style.display = "block";
-            pacoForm.reset();
-            btn.innerHTML = "Gửi đi";
-            btn.disabled = false;
+</script>
+
+<!-- Script 6: Gửi form -->
+<script>
+var clientIP = "";
+document.addEventListener("DOMContentLoaded",function(){
+    var pacoForm=document.getElementById('pacoForm'),submitBtn=document.getElementById('submitBtn'),msg=document.getElementById('msg');
+    if(pacoForm){
+        pacoForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            submitBtn.disabled=true;submitBtn.innerHTML="ĐANG GỬI THÔNG TIN...";
+            var formData=new FormData(pacoForm);formData.append("IP",clientIP);
+            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
+            .then(function(){
+                msg.innerHTML="Gửi thông tin thành công!";msg.style.display="block";pacoForm.reset();
+                submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG";
+                setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="Gửi đi";msg.style.display="none";},5000);
+            }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
         });
-    });
-}
+    }
+});
+</script>
+
+<!-- Script 7: Lấy IP khách hàng -->
+<script>
+window.addEventListener('load',function(){
+    setTimeout(function(){
+        fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){clientIP=d.ip;}).catch(function(){clientIP="Không lấy được";});
+    },3000);
+});
+</script>
+
+<!-- Script 8: Captcha + Giới hạn đặt hàng -->
+<script>
+(function(){
+    var LIMIT_CAPTCHA=2,LIMIT_LOCK=3,LOCK_MINUTES=720;
+    var submitBtn=document.getElementById('submitBtn'),pacoForm=document.getElementById('pacoForm');
+    var storageKey='paco_track_v3',lockKey='paco_lock_v3';
+    var data=JSON.parse(localStorage.getItem(storageKey))||{count:0};
+    var lockUntil=parseInt(localStorage.getItem(lockKey))||0;
+    function checkLock(){
+        if(Date.now()<lockUntil){
+            submitBtn.disabled=true;submitBtn.style.backgroundColor="#9e9e9e";submitBtn.style.lineHeight="1.0";
+            submitBtn.innerHTML="BẠN ĐÃ ĐẶT QUÁ GIỚI HẠN<br><span style='font-size:12px;'>Đặt trực tiếp: 09 33 22 33 01</span>";
+            return true;
+        }return false;
+    }
+    if(checkLock())return;
+    function renderGuard(){
+        var guardBox=document.getElementById('paco-guard-box'),code=Math.floor(1000+Math.random()*9000);
+        if(!guardBox){
+            var html='<div id="paco-guard-box" style="margin:10px auto;width:100%;text-align:center;font-family:sans-serif;"><div style="color:#000;font-size:13px;font-weight:bold;margin-bottom:10px;">Nhập mã bảo vệ - Bạn đang đặt lần 2</div><div style="display:flex;gap:10px;justify-content:center;align-items:stretch;"><div id="display-code" style="background:#eee;padding:0 15px;font-weight:bold;border:1px solid #000;border-radius:4px;display:flex;align-items:center;font-size:16px;min-height:38px;color:#000;">'+code+'</div><input type="number" id="paco-verify" placeholder="Nhập mã" required style="flex:1;max-width:120px;padding:8px;border:1px solid #000;border-radius:4px;text-align:center;font-size:14px;height:38px;box-sizing:border-box;color:#000;"></div></div>';
+            submitBtn.insertAdjacentHTML('beforebegin',html);
+        }else{document.getElementById('display-code').innerText=code;document.getElementById('paco-verify').value="";}
+        submitBtn.setAttribute('data-code',code);
+    }
+    if(data.count>=LIMIT_CAPTCHA)renderGuard();
+    submitBtn.addEventListener('click',function(e){
+        if(checkLock())return;
+        var phoneInput=pacoForm.querySelector('input[type="tel"]'),verifyInput=document.getElementById('paco-verify');
+        if(phoneInput)phoneInput.setCustomValidity("");if(verifyInput)verifyInput.setCustomValidity("");
+        var phoneValue=phoneInput.value.trim().replace(/\D/g,'');
+        if(phoneValue.length!==10){e.preventDefault();e.stopImmediatePropagation();phoneInput.setCustomValidity("Vui lòng nhập đúng 10 số điện thoại!");phoneInput.reportValidity();return;}
+        if(data.count>=LIMIT_CAPTCHA){
+            if(!verifyInput.value||verifyInput.value!==submitBtn.getAttribute('data-code')){e.preventDefault();e.stopImmediatePropagation();verifyInput.setCustomValidity("Mã xác nhận chưa chính xác!");verifyInput.reportValidity();return;}
+        }
+        if(!pacoForm.checkValidity())return;
+        data.count++;localStorage.setItem(storageKey,JSON.stringify(data));
+        if(data.count>=LIMIT_LOCK){lockUntil=Date.now()+(LOCK_MINUTES*60000);localStorage.setItem(lockKey,lockUntil);}
+        else if(data.count>=LIMIT_CAPTCHA){renderGuard();}
+    },true);
+})();
+</script>
+
+<!-- Script 10: Chặn IP spam (delay 4s) -->
+<script>
+window.addEventListener('load',function(){
+    setTimeout(function(){
+        var rawIPs='\n171.253.34.116\n\n        ';
+        var blacklistedIPs=rawIPs.split('\n').map(function(ip){return ip.trim();}).filter(function(ip){return ip!=="";});
+        fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){
+            if(blacklistedIPs.includes(d.ip)){
+                document.body.innerHTML='<div style="text-align:center;padding:50px;font-family:Arial;color:#ff9500;background:#fff;height:100vh;"><h2 style="font-size:25px;">Hệ thống đang bận</h2><p style="font-size:20px;">"Ưu đãi đặc biệt GIẢM 40% khi đặt hàng qua điện thoại: 0933223301 - Cảm ơn".</p></div>';
+                window.stop();
+            }
+        }).catch(function(){console.log("Hệ thống bảo vệ đang chạy");});
+    },4000);
+});
 </script>
 </body>
 </html>
