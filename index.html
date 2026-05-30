@@ -1923,13 +1923,13 @@ document.addEventListener("DOMContentLoaded",function(){
     if(pacoForm){
         pacoForm.addEventListener('submit',function(e){
             e.preventDefault();
-            submitBtn.disabled=true;submitBtn.innerHTML="ĐANG GỬI THÔNG TIN...";
+            submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG...";
             var formData=new FormData(pacoForm);formData.append("IP",clientIP);
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
             .then(function(){
-                msg.innerHTML="Gửi thông tin thành công!";msg.style.display="block";pacoForm.reset();
-                submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG";
-                setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="Gửi đi";msg.style.display="none";},5000);
+                if(typeof fbq!=='undefined')fbq('track','Purchase',{currency:'VND',value:199000});
+                msg.classList.remove('hidden');submitBtn.innerHTML="ĐƠN HÀNG ĐÃ GỬI THÀNH CÔNG - Cảm ơn";pacoForm.reset();
+                setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
             }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
         });
     }
