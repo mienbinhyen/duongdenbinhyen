@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 	<title>Đường Đến Bình Yên | Đích đến của mọi cuộc hành trình</title>
+
 	<!-- SEO META TAGS -->
 	<meta property="og:site_name" content="Đường Đến Bình Yên" />
 	<meta property="og:title" content="Đường Đến Bình Yên | PacoBooks" />
@@ -12,6 +13,8 @@
 	<meta property="og:image" content="https://duongdenbinhyen.com/logo-paco.webp" />
 	<meta property="og:image:width" content="1000" />
 	<meta property="og:image:height" content="1000" />
+	<meta property="og:type" content="article" />
+    	<meta name="robots" content="index, follow">
 	<link rel="canonical" href="https://duongdenbinhyen.com/sach-hay.html" />
 	<link rel="preload" href="mienbinhyen001.webp" as="image" fetchpriority="high" imagesrcset="mienbinhyen001.webp 600w" imagesizes="100vw">
 	
@@ -331,7 +334,7 @@
     .paco-trust-items { display: flex; justify-content: space-around; margin-bottom: 2px; }
 
     /* ============================================================
-       ĐỒNG HỒ & SỐ NGƯỜI XEM
+       ĐỒNG HỒ & Bộ ĐẾM LƯỢT TRUY CẬP
        ============================================================ */
     .paco-stats-box {
         display: flex; justify-content: center; gap: 10px;
@@ -932,7 +935,7 @@ document.addEventListener("DOMContentLoaded",function(){
             .then(function(){
                 fbq('track','Purchase',{currency:'VND',value:199000});
                 fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',body:new URLSearchParams({event_name:'Purchase',value:199000,currency:'VND',action_source:'website'})});
-                msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG";pacoForm.reset();
+                msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();
                 setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
             }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
         });
