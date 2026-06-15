@@ -148,7 +148,7 @@ body {
     display: none;
     position: fixed;
     top: 50px;
-    right: 15px;
+    right: calc((100vw - 900px) / 2);
     background: white;
     border: 1px solid #008080;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -182,8 +182,13 @@ body {
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
     <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
     <a href="truyenthong.html">TRUYỀN THÔNG</a>
+    <a href="bai-viet-moi.html">BÀI VIẾT MỚI</a>
     <a href="/#lienhe">LIÊN HỆ</a>
 </div>
+
+
+
+
 
 <script>
 function toggleMenu() {
@@ -362,21 +367,33 @@ window.addEventListener('scroll', function() {
 
 <section class="wisdom-section" id="vechungtoi">
     <div class="container-paco">
-        <span class="section-label-wisdom">VỀ CHÚNG TÔI - MIỀN BÌNH YÊN</span>
+        <style>
+        .paco-divider-vechungtoi { height:60px; margin:0 -20px 20px -20px; background: linear-gradient(90deg, #01cb99, #0099cc, #ff6600); display:flex; align-items:center; overflow:hidden; white-space:nowrap; }
+        .paco-divider-vechungtoi span { color:#ffffff; font-family:'Times New Roman', serif; font-size:14px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
+        @media (max-width: 600px) { .paco-divider-vechungtoi { margin:0 -15px 20px -15px; } .paco-divider-vechungtoi span { font-size:12px; } }
+        </style>
+        <div class="paco-divider-vechungtoi"><span>VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS | VỀ CHÚNG TÔI - PACOBOOKS</span></div>
+        <span class="section-label-wisdom">VỀ CHÚNG TÔI - PACOBOOKS</span>
 
         <div class="wisdom-description">
-            <p style="text-indent: 40px; margin-bottom: 15px;">Chào mừng bạn đến với <strong>Đường Đến Bình Yên</strong> – Không gian hội tụ của những giá trị tri thức và tinh hoa văn hóa đọc.</p>
-            
-            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>Sứ mệnh của chúng tôi:</strong> Chúng tôi tin rằng sách không chỉ là kho tàng kiến thức mà còn là người thầy dẫn dắt con người đến với sự hiểu biết sâu sắc và toàn diện. Đường Đến Bình Yên ra đời với tâm nguyện trở thành nhịp cầu kết nối độc giả với những tác phẩm giá trị, góp phần bồi đắp tư duy và làm phong phú đời sống trí tuệ của mỗi cá nhân.</p>
-            
+            <p style="text-indent: 40px; margin-bottom: 15px;"><a href="https://duongdenbinhyen.com/"><strong>Pacobooks</strong></a> là đơn vị phát hành sách trực thuộc dự án <strong>Đường Đến Bình Yên</strong> – không gian hội tụ những giá trị tri thức và tinh hoa văn hóa đọc.</p>
+
+            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>Sứ mệnh của chúng tôi:</strong> Chúng tôi tin rằng mỗi cuốn sách không chỉ là kho tàng kiến thức, mà còn là người bạn đồng hành dẫn dắt con người đến với sự hiểu biết sâu sắc và toàn diện hơn về chính mình. Pacobooks ra đời với tâm nguyện trở thành nhịp cầu kết nối độc giả với những tác phẩm giá trị, góp phần bồi đắp tư duy và làm phong phú đời sống tinh thần của mỗi người.</p>
+
             <p style="text-indent: 40px; margin-bottom: 5px;"><strong>Giá trị cốt lõi:</strong></p>
-            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>- Tri thức chọn lọc:</strong> Chúng tôi tập trung cung cấp những dòng sách có nội dung chất lượng, được kiểm chứng qua thời gian, giúp độc giả mở rộng thế giới quan và trau dồi kỹ năng đa dạng.</p>
-            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>- Nâng tầm trí tuệ:</strong> Lấy tri thức làm gốc rễ, chúng tôi không ngừng phát triển và mở rộng các thể loại sách khác nhau, đáp ứng nhu cầu học hỏi và khám phá không giới hạn của cộng đồng.</p>
-            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>- Sự tử tế và Trách nhiệm:</strong> Mỗi cuốn sách gửi đến tay độc giả là một lời cam kết về sự chỉn chu, uy tín và lòng tận tâm trong việc lan tỏa văn hóa đọc bền vững.</p>
-            
-            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>Tầm nhìn:</strong> Không dừng lại ở một thể loại nhất định, Đường Đến Bình Yên đang mạnh mẽ vươn mình, đa dạng hóa các mảng nội dung để trở thành điểm đến tin cậy cho mọi người yêu sách, nơi tri thức là khởi nguồn của mọi sự phát triển vững chắc.</p>
-            
-            <p style="text-indent: 40px; font-weight: bold;">Đường Đến Bình Yên – Tri thức khởi nguồn trí tuệ.</p>
+            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>- Tri thức chọn lọc:</strong> Chúng tôi tập trung giới thiệu những đầu sách có nội dung chất lượng, được kiểm chứng qua thời gian, giúp độc giả mở rộng góc nhìn và trau dồi nhiều kỹ năng trong cuộc sống.</p>
+            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>- Đồng hành cùng nội tâm:</strong> Mỗi tác phẩm là một lời mời chậm lại, lắng nghe và thấu hiểu chính mình, để từ tri thức mà tìm về sự bình yên bên trong.</p>
+            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>- Sự tử tế và trách nhiệm:</strong> Mỗi cuốn sách đến tay độc giả đều là một lời cam kết về sự chỉn chu, uy tín và tâm huyết trong việc lan tỏa văn hóa đọc bền vững.</p>
+
+            <p style="text-indent: 40px; margin-bottom: 15px;"><strong>Tầm nhìn:</strong> Pacobooks không ngừng mở rộng và đa dạng hóa các đầu sách, hướng tới trở thành điểm đến quen thuộc và tin cậy của những người yêu sách – nơi tri thức là khởi nguồn cho một đời sống an nhiên và vững vàng hơn.</p>
+
+            <p style="text-indent: 40px; font-weight: bold;">Pacobooks – tri thức khởi nguồn trí tuệ.</p>
+
+            <div style="text-align:center; margin-top:20px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#01cb99; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#0099cc; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#ff6600; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            </div>
         </div>
     </div>
 </section>
@@ -451,10 +468,16 @@ window.addEventListener('scroll', function() {
 
 <section class="wisdom-section" id="chinhsachbaomat">
     <div class="container-paco">
+        <style>
+        .paco-divider-vechungtoi { height:60px; margin:0 -20px 20px -20px; background: linear-gradient(90deg, #01cb99, #0099cc, #ff6600); display:flex; align-items:center; overflow:hidden; white-space:nowrap; }
+        .paco-divider-vechungtoi span { color:#ffffff; font-family:'Times New Roman', serif; font-size:14px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
+        @media (max-width: 600px) { .paco-divider-vechungtoi { margin:0 -15px 20px -15px; } .paco-divider-vechungtoi span { font-size:12px; } }
+        </style>
+        <div class="paco-divider-vechungtoi"><span>CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ | CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ</span></div>
         <span class="section-label-wisdom">CHÍNH SÁCH BẢO MẬT & QUYỀN RIÊNG TƯ</span>
 
         <div class="wisdom-description">
-            <p style="text-indent: 40px; margin-bottom: 15px;">Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ thông tin cá nhân của độc giả một cách tuyệt đối khi truy cập vào <strong>Đường Đến Bình Yên</strong>.</p>
+            <p style="text-indent: 40px; margin-bottom: 15px;">Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ thông tin cá nhân của độc giả một cách tuyệt đối khi truy cập vào <a href="https://duongdenbinhyen.com/"><strong>Đường Đến Bình Yên</strong></a>.</p>
             
             <p style="text-indent: 40px; margin-bottom: 5px;"><strong>1. Thu thập thông tin:</strong> Chúng tôi chỉ thu thập thông tin cần thiết khi bạn thực hiện các thao tác: Đăng ký nhận bản tin tri thức, đặt mua các ấn phẩm sách, hoặc gửi yêu cầu tư vấn. Thông tin bao gồm: Họ tên, số điện thoại, email và địa chỉ giao hàng.</p>
             
@@ -465,6 +488,12 @@ window.addEventListener('scroll', function() {
             <p style="text-indent: 40px; margin-bottom: 5px;"><strong>4. Quyền của độc giả:</strong> Bạn có quyền yêu cầu chúng tôi kiểm tra, cập nhật hoặc xóa bỏ thông tin cá nhân của mình khỏi hệ thống bất kỳ lúc nào bằng cách liên hệ trực tiếp với chúng tôi.</p>
             
             <p style="text-indent: 40px; margin-bottom: 15px;"><strong>5. Cam kết:</strong> Chính sách này nhằm đảm bảo bạn có một không gian trải nghiệm tri thức an toàn và tin cậy nhất tại Đường Đến Bình Yên.</p>
+
+            <div style="text-align:center; margin-top:20px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#01cb99; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#0099cc; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#ff6600; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            </div>
         </div>
     </div>
 </section>
@@ -543,20 +572,32 @@ window.addEventListener('scroll', function() {
 
 <section class="wisdom-section" id="chinhsachbanhang">
     <div class="container-paco">
+        <style>
+        .paco-divider-vechungtoi { height:60px; margin:0 -20px 20px -20px; background: linear-gradient(90deg, #01cb99, #0099cc, #ff6600); display:flex; align-items:center; overflow:hidden; white-space:nowrap; }
+        .paco-divider-vechungtoi span { color:#ffffff; font-family:'Times New Roman', serif; font-size:14px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
+        @media (max-width: 600px) { .paco-divider-vechungtoi { margin:0 -15px 20px -15px; } .paco-divider-vechungtoi span { font-size:12px; } }
+        </style>
+        <div class="paco-divider-vechungtoi"><span>CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG | CHÍNH SÁCH BÁN HÀNG</span></div>
         <span class="section-label-wisdom">CHÍNH SÁCH BÁN HÀNG</span>
 
         <div class="wisdom-description">
-            <p style="text-indent: 40px; margin-bottom: 15px;">Tại <strong>Đường Đến Bình Yên</strong>, chúng tôi cam kết mang đến cho độc giả những trải nghiệm mua sắm thuận tiện, tin cậy và sự hài lòng cao nhất.</p>
+            <p style="text-indent: 40px; margin-bottom: 15px;">Tại <a href="https://duongdenbinhyen.com/"><strong>PACOBOOKS</strong></a>, chúng tôi cam kết mang đến cho độc giả những trải nghiệm mua sắm thuận tiện, tin cậy và sự hài lòng cao nhất.</p>
             
             <p style="text-indent: 40px; margin-bottom: 5px;"><strong>1. Quy trình đặt hàng:</strong> Độc giả có thể đặt hàng trực tiếp qua Website, Fanpage hoặc Hotline chính thức. Sau khi nhận được thông tin, bộ phận chăm sóc khách hàng sẽ liên hệ xác nhận đơn hàng và thời gian giao nhận trong vòng 24h.</p>
             
-            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>2. Giá cả và Thanh toán:</strong> Giá bán niêm yết trên website là giá công khai và chưa bao gồm phí vận chuyển (trừ các chương trình ưu đãi đặc biệt). Chúng tôi hỗ trợ đa dạng hình thức thanh toán: Thanh toán khi nhận hàng (COD) hoặc Chuyển khoản ngân hàng.</p>
+            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>2. Giá cả và Thanh toán:</strong> Giá bán niêm yết trên website là giá công khai và chưa bao gồm phí vận chuyển (trừ các chương trình ưu đãi đặc biệt). Chúng tôi hỗ trợ 2 hình thức thanh toán: (1) <strong>Thanh toán khi nhận hàng (COD)</strong> – độc giả kiểm tra sách trước, thanh toán trực tiếp cho nhân viên giao hàng khi nhận; (2) <strong>Chuyển khoản ngân hàng</strong> – độc giả chuyển khoản theo thông tin được cung cấp khi xác nhận đơn, đơn hàng được xử lý ngay sau khi nhận thanh toán. Độc giả có thể lựa chọn hình thức phù hợp khi đặt hàng.</p>
             
             <p style="text-indent: 40px; margin-bottom: 5px;"><strong>3. Chất lượng ấn phẩm:</strong> Mọi cuốn sách được gửi đi đều là sách thật, mới 100%, có bản quyền và được đóng gói cẩn thận để tránh hư hỏng trong quá trình vận chuyển.</p>
             
-            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>4. Chính sách vận chuyển:</strong> Giao hàng toàn quốc thông qua các đơn vị vận chuyển uy tín. Thời gian nhận hàng từ 2 – 5 ngày làm việc tùy thuộc vào địa lý của độc giả.</p>
+            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>4. Chính sách vận chuyển:</strong> Giao hàng toàn quốc thông qua các đơn vị vận chuyển uy tín, giao tận địa chỉ người nhận. Thời gian nhận hàng dự kiến từ 2 – 5 ngày làm việc, tùy thuộc vào khoảng cách địa lý của độc giả. Trong trường hợp phát sinh chậm trễ giao hàng, chúng tôi sẽ thông báo kịp thời cho độc giả qua điện thoại hoặc tin nhắn, và độc giả có quyền hủy đơn hàng nếu không muốn tiếp tục chờ.</p>
             
             <p style="text-indent: 40px; margin-bottom: 15px;"><strong>5. Cam kết hỗ trợ:</strong> Chúng tôi luôn lắng nghe và giải quyết mọi thắc mắc của độc giả qua các kênh hỗ trợ trực tuyến để đảm bảo quyền lợi tốt nhất cho bạn.</p>
+
+            <div style="text-align:center; margin-top:20px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#01cb99; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#0099cc; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#ff6600; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            </div>
         </div>
     </div>
 </section>
@@ -630,6 +671,12 @@ window.addEventListener('scroll', function() {
 
 <section class="wisdom-section" id="chinhsachbaohanh">
     <div class="container-paco">
+        <style>
+        .paco-divider-vechungtoi { height:60px; margin:0 -20px 20px -20px; background: linear-gradient(90deg, #01cb99, #0099cc, #ff6600); display:flex; align-items:center; overflow:hidden; white-space:nowrap; }
+        .paco-divider-vechungtoi span { color:#ffffff; font-family:'Times New Roman', serif; font-size:14px; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
+        @media (max-width: 600px) { .paco-divider-vechungtoi { margin:0 -15px 20px -15px; } .paco-divider-vechungtoi span { font-size:12px; } }
+        </style>
+        <div class="paco-divider-vechungtoi"><span>CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ | CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ</span></div>
         <span class="section-label-wisdom">CHÍNH SÁCH BẢO HÀNH & ĐỔI TRẢ</span>
 
         <div class="wisdom-description">
@@ -645,9 +692,15 @@ window.addEventListener('scroll', function() {
                 <br>• Bước 3: Chúng tôi tiến hành gửi sản phẩm thay thế hoặc hoàn tiền trong vòng 3-5 ngày làm việc.
             </p>
             
-            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>4. Chi phí đổi trả:</strong> Nếu lỗi thuộc về nhà sản xuất hoặc đơn vị vận chuyển, <strong>Đường Đến Bình Yên</strong> sẽ chịu hoàn toàn 100% phí vận chuyển hai chiều.</p>
+            <p style="text-indent: 40px; margin-bottom: 5px;"><strong>4. Chi phí đổi trả:</strong> Nếu lỗi thuộc về nhà sản xuất hoặc đơn vị vận chuyển, <a href="https://duongdenbinhyen.com/"><strong>Pacobooks</strong></a> sẽ chịu hoàn toàn 100% phí vận chuyển hai chiều.</p>
             
             <p style="text-indent: 40px; margin-bottom: 15px;"><strong>5. Cam kết:</strong> Chúng tôi cam kết xử lý mọi khiếu nại một cách công tâm và thỏa đáng nhất, đảm bảo niềm tin của độc giả dành cho tri thức luôn được trân trọng.</p>
+
+            <div style="text-align:center; margin-top:20px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#01cb99; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#0099cc; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" style="fill:#ff6600; margin:0 6px;"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/></svg>
+            </div>
         </div>
     </div>
 </section>
@@ -1358,10 +1411,10 @@ window.addEventListener('scroll', function() {
     <div class="footer-container" id="lienhe">
         <div class="footer-flex">
             <div class="footer-column">
-                <span class="footer-brand">TIỆM SÁCH PACO</span>
+                <span class="footer-brand">PACOBOOKS</span>
                 <div class="footer-info">
                     <span class="footer-item">
-                        <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình - Thành phố Hồ Chí Minh - Việt Nam
+                        <span class="footer-label">Địa Chỉ:</span> 46 Lê đình thám, P. Tân sơn nhì - Thành phố Hồ Chí Minh - Việt Nam
                     </span>
                     <span class="footer-item">
                         <span class="footer-label">Điện thoại:</span> <a href="tel:0933223301" class="footer-link">09 33 22 33 01</a>
