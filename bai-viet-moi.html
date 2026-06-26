@@ -135,7 +135,7 @@ body {
     display: none;
     position: fixed;
     top: 50px;
-    right: calc((100vw - 900px) / 2);
+    right: 15px;
     background: white;
     border: 1px solid #008080;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -169,7 +169,6 @@ body {
     <a href="gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
     <a href="tacphammoi.html">TÁC PHẨM MỚI</a>
     <a href="truyenthong.html">TRUYỀN THÔNG</a>
-    <a href="bai-viet-moi.html">BÀI VIẾT MỚI</a>
     <a href="/#lienhe">LIÊN HỆ</a>
 </div>
 
@@ -427,27 +426,125 @@ window.addEventListener('scroll', function() {
 }
 </style>
 
+
+<style>
+.group-label-paco {
+    grid-column: 1 / -1;
+    font-family: 'Times New Roman', serif;
+    font-size: 1.05em;
+    font-weight: 700;
+    color: #004a99;
+    border-bottom: 2px solid #e8f0fb;
+    padding-bottom: 6px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+.group-label-paco:first-child { margin-top: 0; }
+</style>
+
 <section class="paco-news-section">
     <div class="container-paco-news">
-        <span class="section-label-news">BÀI VIẾT MỚI</span>
+        <span class="section-label-news">TẤT CẢ BÀI VIẾT</span>
         <p class="section-sub-news">Góc nhìn mới — tri thức chắt lọc từ hành trình thực chứng</p>
         <div class="news-grid-paco">
-            <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tác giả Thiện Nhân</span></a>
-            <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tác giả mới</span></a>
-            <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Đường Đến Bình Yên</span></a>
-            <a href="https://duongdenbinhyen.com/thi-tham.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Thì Thầm</span></a>
-            <a href="https://duongdenbinhyen.com/mien-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Miền Bình Yên</span></a>
-            <a href="https://duongdenbinhyen.com/gioi-thieu-sach-va-tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu sách và tác giả</span></a>
-            <a href="https://duongdenbinhyen.com/hoa_quynh_toa_sach_tac_gia_thien_nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Hoa Quỳnh của Thiện Nhân</span></a>
-            <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuduongdenbinhyen" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu sách Đường Đến Bình Yên</span></a>
-            <a href="https://duongdenbinhyen.com/tacphammoi.html#goithieuthitham" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu sách Thì Thầm</span></a>
+            <div class="group-label-paco">📌 TRANG CHÍNH</div>
             <a href="https://duongdenbinhyen.com/gioithieu.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu về tác giả</span></a>
+            <a href="https://duongdenbinhyen.com/gioi-thieu-tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu tác giả Thiện Nhân</span></a>
+            <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tác giả Thiện Nhân</span></a>
+            <a href="https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tác giả Thiện Nhân — Chữa lành</span></a>
+            <a href="https://duongdenbinhyen.com/gioi-thieu-sach-va-tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu sách và tác giả</span></a>
+            <a href="https://duongdenbinhyen.com/tac-gia-sach-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tác giả sách Thiện Nhân</span></a>
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="news-card-paco"><span class="news-card-icon">📖</span><span class="news-card-title">Tác phẩm mới</span></a>
+            <a href="https://duongdenbinhyen.com/duong-den-binh-yen.html" class="news-card-paco"><span class="news-card-icon">📖</span><span class="news-card-title">Đường Đến Bình Yên</span></a>
+            <a href="https://duongdenbinhyen.com/thi-tham.html" class="news-card-paco"><span class="news-card-icon">📖</span><span class="news-card-title">Thì Thầm</span></a>
+            <a href="https://duongdenbinhyen.com/mien-binh-yen.html" class="news-card-paco"><span class="news-card-icon">📖</span><span class="news-card-title">Miền Bình Yên</span></a>
+            <a href="https://duongdenbinhyen.com/hoa_quynh_toa_sach_tac_gia_thien_nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Hoa Quỳnh của Thiện Nhân</span></a>
+            <a href="https://duongdenbinhyen.com/pacobooks.html" class="news-card-paco"><span class="news-card-icon">🏠</span><span class="news-card-title">Paco Books</span></a>
+            <a href="https://duongdenbinhyen.com/tiemsachpaco.html" class="news-card-paco"><span class="news-card-icon">🏠</span><span class="news-card-title">Tiệm sách Paco</span></a>
+            <div class="group-label-paco">📜 CHÍNH SÁCH & TRUYỀN THÔNG</div>
+            <a href="https://duongdenbinhyen.com/chinhsach.html#vechungtoi" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Về chúng tôi</span></a>
+            <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbaomat" class="news-card-paco"><span class="news-card-icon">🛡️</span><span class="news-card-title">Chính sách bảo mật</span></a>
+            <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbanhang" class="news-card-paco"><span class="news-card-icon">📦</span><span class="news-card-title">Chính sách bán hàng</span></a>
+            <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbaohanh" class="news-card-paco"><span class="news-card-icon">🔄</span><span class="news-card-title">Chính sách bảo hành</span></a>
+            <a href="https://duongdenbinhyen.com/truyenthong.html" class="news-card-paco"><span class="news-card-icon">🎬</span><span class="news-card-title">Truyền thông & Phóng sự</span></a>
             <a href="https://duongdenbinhyen.com/truyenthong.html#phongsuthitham" class="news-card-paco"><span class="news-card-icon">🎬</span><span class="news-card-title">Phóng sự: Lời thì thầm từ trái tim</span></a>
             <a href="https://duongdenbinhyen.com/truyenthong.html#phongsuduongdenbinhyen" class="news-card-paco"><span class="news-card-icon">🎬</span><span class="news-card-title">Phóng sự: Giới thiệu sách</span></a>
             <a href="https://duongdenbinhyen.com/truyenthong.html#phongsunhanvat" class="news-card-paco"><span class="news-card-icon">🎬</span><span class="news-card-title">Phóng sự: Phác họa nhân vật</span></a>
-            <a href="https://duongdenbinhyen.com/gioi-thieu-tac-gia-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Giới thiệu về tác giả Thiện Nhân</span></a>
+            <div class="group-label-paco">🖋️ BÀI VIẾT</div>
+            <a href="https://duongdenbinhyen.com/tu-do-tam-tri.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tự do tâm trí</span></a>
+            <a href="https://duongdenbinhyen.com/con-duong-den-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Con đường đến bình yên</span></a>
+            <a href="https://duongdenbinhyen.com/sach-duong-den-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách Đường Đến Bình Yên</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay</span></a>
             <a href="https://duongdenbinhyen.com/cha-me-la-noi-binh-yen-nhat.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cha mẹ là nơi bình yên nhất</span></a>
-            <a href="https://duongdenbinhyen.com/chinhsach.html" class="news-card-paco"><span class="news-card-icon">📜</span><span class="news-card-title">Chính sách & Bảo mật</span></a>
+            <a href="https://duongdenbinhyen.com/mien-binh-yen-thien-nhan.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Miền Bình Yên Thiện Nhân</span></a>
+            <a href="https://duongdenbinhyen.com/mienbinhyen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Miền Bình Yên</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly-hoc.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý học</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-ve-tam-ly-hoc.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay về tâm lý học</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly-hoc-hanh-vi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý học hành vi</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly-chua-lanh.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý chữa lành</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tu-chua-lanh.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tự chữa lành</span></a>
+            <a href="https://duongdenbinhyen.com/doc-sach-hay.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Đọc sách hay</span></a>
+            <a href="https://duongdenbinhyen.com/mua-sach-online.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Mua sách online</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly-hay-nhat.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý hay nhất</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-nen-doc.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay nên đọc</span></a>
+            <a href="https://duongdenbinhyen.com/sach-chua-lanh.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách chữa lành</span></a>
+            <a href="https://duongdenbinhyen.com/sach-phat-trien-ban-than.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách phát triển bản thân</span></a>
+            <a href="https://duongdenbinhyen.com/sach-truyen-cam-hung.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách truyền cảm hứng</span></a>
+            <a href="https://duongdenbinhyen.com/nhung-cuon-sach-hay-nen-doc.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Những cuốn sách hay nên đọc</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-ve-cuoc-song.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay về cuộc sống</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tan-van-hay.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tản văn hay</span></a>
+            <a href="https://duongdenbinhyen.com/the-nao-la-mot-quyen-sach-hay.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Thế nào là một quyển sách hay</span></a>
+            <a href="https://duongdenbinhyen.com/tim-lai-chinh-minh.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tìm lại chính mình</span></a>
+            <a href="https://duongdenbinhyen.com/lam-sao-de-binh-yen-hon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Làm sao để bình yên hơn</span></a>
+            <a href="https://duongdenbinhyen.com/song-giua-thanh-pho-ma-long-trong-rong.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sống giữa thành phố mà lòng trống rỗng</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-khi-buon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay khi buồn</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-hay-lo-lang.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người hay lo lắng</span></a>
+            <a href="https://duongdenbinhyen.com/cam-thay-lac-long.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cảm thấy lạc lõng</span></a>
+            <a href="https://duongdenbinhyen.com/cach-vuot-qua-noi-buon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cách vượt qua nỗi buồn</span></a>
+            <a href="https://duongdenbinhyen.com/ap-luc-cong-viec-khong-loi-thoat.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Áp lực công việc không lối thoát</span></a>
+            <a href="https://duongdenbinhyen.com/sach-giup-tim-lai-chinh-minh.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách giúp tìm lại chính mình</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-co-don.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người cô đơn</span></a>
+            <a href="https://duongdenbinhyen.com/met-moi-voi-cuoc-song.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Mệt mỏi với cuộc sống</span></a>
+            <a href="https://duongdenbinhyen.com/cach-chua-lanh-tam-hon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cách chữa lành tâm hồn</span></a>
+            <a href="https://duongdenbinhyen.com/sau-chia-tay-cam-thay-mat-mat.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sau chia tay cảm thấy mất mát</span></a>
+            <a href="https://duongdenbinhyen.com/sach-ve-binh-yen-noi-tam.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách về bình yên nội tâm</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-nhay-cam.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người nhạy cảm</span></a>
+            <a href="https://duongdenbinhyen.com/cam-giac-trong-rong.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cảm giác trống rỗng</span></a>
+            <a href="https://duongdenbinhyen.com/lam-sao-de-song-cham-lai.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Làm sao để sống chậm lại</span></a>
+            <a href="https://duongdenbinhyen.com/tuoi-30-cam-thay-lac-long.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Tuổi 30 cảm thấy lạc lõng</span></a>
+            <a href="https://duongdenbinhyen.com/sach-nuoi-duong-tam-hon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách nuôi dưỡng tâm hồn</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-mat-phuong-huong.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người mất phương hướng</span></a>
+            <a href="https://duongdenbinhyen.com/khong-biet-minh-muon-gi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Không biết mình muốn gì</span></a>
+            <a href="https://duongdenbinhyen.com/lam-sao-de-khong-con-lo-lang.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Làm sao để không còn lo lắng</span></a>
+            <a href="https://duongdenbinhyen.com/dem-khong-ngu-duoc-hay-nghi-ngoi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Đêm không ngủ được hay nghĩ ngợi</span></a>
+            <a href="https://duongdenbinhyen.com/sach-song-cham-lai.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách sống chậm lại</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-tuoi-30.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho tuổi 30</span></a>
+            <a href="https://duongdenbinhyen.com/hay-lo-lang-khong-ly-do.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Hay lo lắng không lý do</span></a>
+            <a href="https://duongdenbinhyen.com/cach-tim-lai-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cách tìm lại bình yên</span></a>
+            <a href="https://duongdenbinhyen.com/nguoi-tre-mat-phuong-huong.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Người trẻ mất phương hướng</span></a>
+            <a href="https://duongdenbinhyen.com/sach-ve-y-nghia-cuoc-song.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách về ý nghĩa cuộc sống</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-tang-nguoi-than.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay tặng người thân ý nghĩa</span></a>
+            <a href="https://duongdenbinhyen.com/co-don-du-co-nhieu-nguoi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cô đơn dù có nhiều người</span></a>
+            <a href="https://duongdenbinhyen.com/lam-sao-de-buong-bo.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Làm sao để buông bỏ</span></a>
+            <a href="https://duongdenbinhyen.com/cha-me-gia-ma-chua-kip-bao-hieu.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cha mẹ già mà chưa kịp báo hiếu</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tan-van-hay-ve-cuoc-song.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tản văn hay về cuộc sống</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-huong-noi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người hướng nội</span></a>
+            <a href="https://duongdenbinhyen.com/sao-toi-hay-buon-vo-co.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sao tôi hay buồn vô cớ</span></a>
+            <a href="https://duongdenbinhyen.com/cach-de-yeu-thuong-ban-than.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cách để yêu thương bản thân</span></a>
+            <a href="https://duongdenbinhyen.com/cam-giac-cuoc-song-nhat-nheo.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cảm giác cuộc sống nhạt nhẽo</span></a>
+            <a href="https://duongdenbinhyen.com/sach-chua-lanh-tam-hon-2.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách chữa lành tâm hồn</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-dang-buon.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người đang buồn</span></a>
+            <a href="https://duongdenbinhyen.com/cam-thay-minh-khong-du-tot.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cảm thấy mình không đủ tốt</span></a>
+            <a href="https://duongdenbinhyen.com/lam-sao-de-song-co-y-nghia.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Làm sao để sống có ý nghĩa hơn</span></a>
+            <a href="https://duongdenbinhyen.com/so-tuong-lai-khong-biet-lam-gi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sợ tương lai không biết làm gì</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-ve-tam-ly.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay về tâm lý</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-muon-thay-doi.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay cho người muốn thay đổi</span></a>
+            <a href="https://duongdenbinhyen.com/khong-tim-duoc-y-nghia-cuoc-song.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Không tìm được ý nghĩa cuộc sống</span></a>
+            <a href="https://duongdenbinhyen.com/cach-de-khong-cam-thay-co-don.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Cách để không cảm thấy cô đơn</span></a>
+            <a href="https://duongdenbinhyen.com/thanh-cong-roi-ma-van-khong-hanh-phuc.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Thành công rồi mà vẫn không hạnh phúc</span></a>
+            <a href="https://duongdenbinhyen.com/sach-tam-ly-hay-nhat-2.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách tâm lý hay nhất</span></a>
+            <a href="https://duongdenbinhyen.com/sach-hay-ve-hanh-trinh-tro-ve.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-title">Sách hay về hành trình trở về</span></a>
         </div>
     </div>
 </section>
@@ -1235,15 +1332,14 @@ window.addEventListener('scroll', function() {
     }
 </style>
 
-
 <footer class="paco-footer">
     <div class="footer-container" id="lienhe">
         <div class="footer-flex">
             <div class="footer-column">
-                <span class="footer-brand">PACOBOOKS</span>
+                <span class="footer-brand">TIỆM SÁCH PACO</span>
                 <div class="footer-info">
                     <span class="footer-item">
-                        <span class="footer-label">Địa Chỉ:</span> 46 Lê đình thám, P. Tân sơn nhì - Thành phố Hồ Chí Minh - Việt Nam
+                        <span class="footer-label">Địa Chỉ:</span> Đường sách Nguyễn Văn Bình - Thành phố Hồ Chí Minh - Việt Nam
                     </span>
                     <span class="footer-item">
                         <span class="footer-label">Điện thoại:</span> <a href="tel:0933223301" class="footer-link">09 33 22 33 01</a>
