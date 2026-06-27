@@ -925,33 +925,62 @@ function toggleContent(num){
 </script>
 
 <!-- Script 6: Gửi form + Pixel Purchase -->
+
 <script>
-document.addEventListener("DOMContentLoaded",function(){
-    var pacoForm=document.getElementById('pacoForm'),submitBtn=document.getElementById('submitBtn'),msg=document.getElementById('msg');
-    if(pacoForm){
-        pacoForm.addEventListener('submit',function(e){
+document.addEventListener("DOMContentLoaded", function () {
+    var pacoForm = document.getElementById('pacoForm');
+    var submitBtn = document.getElementById('submitBtn');
+    var msg = document.getElementById('msg');
+
+    if (pacoForm) {
+        pacoForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÔNG TIN...";
-            var formData=new FormData(pacoForm);formData.append("IP", window.clientIP || "Không lấy được");
-            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
 
-}).then(() => { 
-    // 1. Chỉ bắn tín hiệu cho Google Ads
-    gtag('event', 'conversion', {
-    'send_to': 'AW-18152807118/6X77CKC53aocEM61989D',
-    'value': 199000.0,
-    'currency': 'VND',
-    'transaction_id': 'PACO' + Date.now() 
-});
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = "ĐÃ GỬI THÔNG TIN...";
 
-                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',body:new URLSearchParams({event_name:'Purchase',value:199000,currency:'VND',action_source:'website'})});
-                msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();
-                setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
-}).catch(function(err){
-    submitBtn.disabled=false;
-    submitBtn.innerHTML="THỬ LẠI";
-    console.error('Lỗi:',err);
-});
+            var formData = new FormData(pacoForm);
+            formData.append("IP", window.clientIP || "Không lấy được");
+
+            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(function () {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18152807118/6X77CKC53aocEM61989D',
+                    'value': 199000.0,
+                    'currency': 'VND',
+                    'transaction_id': 'PACO' + Date.now()
+                });
+
+                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: new URLSearchParams({
+                        event_name: 'Purchase',
+                        value: 199000,
+                        currency: 'VND',
+                        action_source: 'website'
+                    })
+                });
+
+                msg.classList.remove('hidden');
+                submitBtn.innerHTML = "ĐÃ GỬI ĐƠN THÀNH CÔNG";
+                pacoForm.reset();
+
+                setTimeout(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
+                    msg.classList.add('hidden');
+                }, 5000);
+            })
+            .catch(function (err) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = "THỬ LẠI";
+                console.error('Lỗi:', err);
+            });
         });
     }
 });
