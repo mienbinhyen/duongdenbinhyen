@@ -947,8 +947,13 @@ document.addEventListener("DOMContentLoaded",function(){
                 fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',body:new URLSearchParams({event_name:'Purchase',value:199000,currency:'VND',action_source:'website'})});
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();
                 setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
-            }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
+}).catch(function(err){
+    submitBtn.disabled=false;
+    submitBtn.innerHTML="THỬ LẠI";
+    console.error('Lỗi:',err);
+});
         });
+    }
 });
 </script>
 
