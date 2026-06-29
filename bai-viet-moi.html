@@ -37,6 +37,69 @@
     -webkit-user-drag: none; 
     user-select: none; 
   }
+
+/* Card có hình ảnh */
+.news-card-img {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #e8f0fb;
+    border-radius: 8px;
+    background: #f8fbff;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+.news-card-img:hover {
+    background: #e8f2ff;
+    border-color: #0066cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.1);
+}
+.news-card-img img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+.news-card-img .news-card-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+.news-card-img .news-card-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.95em;
+    color: #0055aa;
+    font-weight: 600;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.news-card-img .news-card-desc {
+    font-size: 0.78em;
+    color: #777;
+    margin-top: 2px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+/* Grid 2 cột cho desktop, 1 cột mobile */
+.news-grid-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+    .news-grid-img { grid-template-columns: 1fr; }
+}
 </style>
 
     <style>
@@ -461,6 +524,30 @@ window.addEventListener('scroll', function() {
         <p class="section-sub-news">Góc nhìn mới — tri thức chắt lọc từ hành trình thực chứng</p>
         <div class="news-grid-paco">
             <div class="group-label-paco">🖋️ BÀI VIẾT MỚI</div>
+<div class="group-label-paco" style="grid-column:1/-1">🆕 BÀI VIẾT MỚI NHẤT</div>
+<div class="news-grid-img" style="grid-column:1/-1">
+    <a href="https://duongdenbinhyen.com/tim-ve-noi-binh-yen.html" class="news-card-img"><img src="https://duongdenbinhyen.com/tim-ve-noi-binh-yen.jpg" alt="Tìm về nơi bình yên" loading="lazy"><span class="news-card-text"><span class="news-card-title">Tìm về nơi bình yên</span><span class="news-card-desc">Nơi bình yên chưa bao giờ rời xa ta</span></span></a>
+    <a href="https://duongdenbinhyen.com/mat-niem-tin-vao-tinh-yeu.html" class="news-card-img"><img src="https://duongdenbinhyen.com/mat-niem-tin-vao-tinh-yeu.jpg" alt="Mất niềm tin vào tình yêu" loading="lazy"><span class="news-card-text"><span class="news-card-title">Mất niềm tin vào tình yêu</span><span class="news-card-desc">Khi trái tim đóng lại vì đã mở quá nhiều lần</span></span></a>
+    <a href="https://duongdenbinhyen.com/met-moi-vi-ky-vong-cua-gia-dinh.html" class="news-card-img"><img src="https://duongdenbinhyen.com/met-moi-vi-ky-vong-cua-gia-dinh.jpg" alt="Mệt mỏi vì kỳ vọng của gia đình" loading="lazy"><span class="news-card-text"><span class="news-card-title">Mệt mỏi vì kỳ vọng của gia đình</span><span class="news-card-desc">Khi yêu thương trở thành gánh nặng</span></span></a>
+    <a href="https://duongdenbinhyen.com/khi-con-cai-lon-roi-xa.html" class="news-card-img"><img src="https://duongdenbinhyen.com/khi-con-cai-lon-roi-xa.jpg" alt="Khi con cái lớn rời xa" loading="lazy"><span class="news-card-text"><span class="news-card-title">Khi con cái lớn rời xa</span><span class="news-card-desc">Niềm vui nuôi dưỡng và nỗi trống vắng khi chúng bay đi</span></span></a>
+    <a href="https://duongdenbinhyen.com/sach-hay-cho-phu-nu-hien-dai.html" class="news-card-img"><img src="https://duongdenbinhyen.com/sach-hay-cho-phu-nu-hien-dai.jpg" alt="Sách hay cho phụ nữ hiện đại" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sách hay cho phụ nữ hiện đại</span><span class="news-card-desc">Cần được thấu hiểu trước khi được truyền cảm hứng</span></span></a>
+    <a href="https://duongdenbinhyen.com/cach-song-cham-giua-thanh-pho.html" class="news-card-img"><img src="https://duongdenbinhyen.com/cach-song-cham-giua-thanh-pho.jpg" alt="Cách sống chậm giữa thành phố" loading="lazy"><span class="news-card-text"><span class="news-card-title">Cách sống chậm giữa thành phố</span><span class="news-card-desc">Thành phố không chậm nhưng ta có thể chọn sống chậm</span></span></a>
+    <a href="https://duongdenbinhyen.com/tu-ti-ve-ngoai-hinh.html" class="news-card-img"><img src="https://duongdenbinhyen.com/tu-ti-ve-ngoai-hinh.jpg" alt="Tự ti về ngoại hình" loading="lazy"><span class="news-card-text"><span class="news-card-title">Tự ti về ngoại hình</span><span class="news-card-desc">Thường không phải về ngoại hình mà về giá trị bản thân</span></span></a>
+    <a href="https://duongdenbinhyen.com/cach-chap-nhan-ban-than.html" class="news-card-img"><img src="https://duongdenbinhyen.com/cach-chap-nhan-ban-than.jpg" alt="Cách chấp nhận bản thân" loading="lazy"><span class="news-card-text"><span class="news-card-title">Cách chấp nhận bản thân</span><span class="news-card-desc">Đối xử với mình bằng sự tử tế ta dành cho người khác</span></span></a>
+    <a href="https://duongdenbinhyen.com/yeu-thuong-gia-dinh-khi-con-co-the.html" class="news-card-img"><img src="https://duongdenbinhyen.com/yeu-thuong-gia-dinh-khi-con-co-the.jpg" alt="Yêu thương gia đình khi còn có thể" loading="lazy"><span class="news-card-text"><span class="news-card-title">Yêu thương gia đình khi còn có thể</span><span class="news-card-desc">Yêu thương không nên để dành</span></span></a>
+    <a href="https://duongdenbinhyen.com/so-that-nghiep.html" class="news-card-img"><img src="https://duongdenbinhyen.com/so-that-nghiep.jpg" alt="Sợ thất nghiệp" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sợ thất nghiệp</span><span class="news-card-desc">Không chỉ về tài chính mà còn về giá trị bản thân</span></span></a>
+    <a href="https://duongdenbinhyen.com/song-don-gian-la-song-hanh-phuc.html" class="news-card-img"><img src="https://duongdenbinhyen.com/song-don-gian-la-song-hanh-phuc.jpg" alt="Sống đơn giản là sống hạnh phúc" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sống đơn giản là sống hạnh phúc</span><span class="news-card-desc">Hạnh phúc đến từ việc bớt đi chứ không phải thêm vào</span></span></a>
+    <a href="https://duongdenbinhyen.com/goc-nho-binh-yen.html" class="news-card-img"><img src="https://duongdenbinhyen.com/goc-nho-binh-yen.jpg" alt="Góc nhỏ bình yên" loading="lazy"><span class="news-card-text"><span class="news-card-title">Góc nhỏ bình yên</span><span class="news-card-desc">Ai cũng cần một góc để được là chính mình</span></span></a>
+    <a href="https://duongdenbinhyen.com/so-yeu-vi-so-ton-thuong.html" class="news-card-img"><img src="https://duongdenbinhyen.com/so-yeu-vi-so-ton-thuong.jpg" alt="Sợ yêu vì sợ tổn thương" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sợ yêu vì sợ tổn thương</span><span class="news-card-desc">Khi nỗi sợ lớn hơn mong muốn được yêu</span></span></a>
+    <a href="https://duongdenbinhyen.com/khong-dam-song-that-voi-chinh-minh.html" class="news-card-img"><img src="https://duongdenbinhyen.com/khong-dam-song-that-voi-chinh-minh.jpg" alt="Không dám sống thật với chính mình" loading="lazy"><span class="news-card-text"><span class="news-card-title">Không dám sống thật với chính mình</span><span class="news-card-desc">Khi quên mất giọng nói của mình vì người khác</span></span></a>
+    <a href="https://duongdenbinhyen.com/sinh-vien-moi-ra-truong-hoang-mang.html" class="news-card-img"><img src="https://duongdenbinhyen.com/sinh-vien-moi-ra-truong-hoang-mang.jpg" alt="Sinh viên mới ra trường hoang mang" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sinh viên mới ra trường hoang mang</span><span class="news-card-desc">Ra trường là điểm xuất phát không phải đích đến</span></span></a>
+    <a href="https://duongdenbinhyen.com/sach-hay-cho-nguoi-ngoai-40.html" class="news-card-img"><img src="https://duongdenbinhyen.com/sach-hay-cho-nguoi-ngoai-40.jpg" alt="Sách hay cho người ngoài 40" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sách hay cho người ngoài 40</span><span class="news-card-desc">Đọc không để thay đổi mà để hiểu</span></span></a>
+    <a href="https://duongdenbinhyen.com/digital-detox-la-gi.html" class="news-card-img"><img src="https://duongdenbinhyen.com/digital-detox-la-gi.jpg" alt="Digital detox là gì" loading="lazy"><span class="news-card-text"><span class="news-card-title">Digital detox là gì</span><span class="news-card-desc">Tắt màn hình để bật cuộc sống lên</span></span></a>
+    <a href="https://duongdenbinhyen.com/mang-mat-na-song-voi-doi.html" class="news-card-img"><img src="https://duongdenbinhyen.com/mang-mat-na-song-voi-doi.jpg" alt="Mang mặt nạ sống với đời" loading="lazy"><span class="news-card-text"><span class="news-card-title">Mang mặt nạ sống với đời</span><span class="news-card-desc">Đeo lâu đến mức quên mặt thật của mình</span></span></a>
+    <a href="https://duongdenbinhyen.com/sach-ve-chanh-niem.html" class="news-card-img"><img src="https://duongdenbinhyen.com/sach-ve-chanh-niem.jpg" alt="Sách về chánh niệm" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sách về chánh niệm</span><span class="news-card-desc">Hiện diện trọn vẹn trong từng khoảnh khắc</span></span></a>
+    <a href="https://duongdenbinhyen.com/song-xa-gia-dinh-nho-nha.html" class="news-card-img"><img src="https://duongdenbinhyen.com/song-xa-gia-dinh-nho-nha.jpg" alt="Sống xa gia đình nhớ nhà" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sống xa gia đình nhớ nhà</span><span class="news-card-desc">Nỗi nhớ không giảm, chỉ học cách mang theo</span></span></a>
+</div>
+
 
 
 <a href="https://duongdenbinhyen.com/hanh-trinh-den-binh-yen.html" class="news-card-paco"><span class="news-card-icon">🖋️</span><span class="news-card-text"><span class="news-card-title">Hành trình đến bình yên</span><span class="news-card-desc">Có những hành trình đi bằng cả tâm hồn</span></span></a>
