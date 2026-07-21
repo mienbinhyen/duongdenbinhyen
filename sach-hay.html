@@ -961,7 +961,25 @@ document.addEventListener("DOMContentLoaded",function(){
         pacoForm.addEventListener('submit',function(e){
             e.preventDefault();
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÔNG TIN...";
-            var formData=new FormData(pacoForm);formData.append("IP",clientIP);
+            var formData=new FormData(pacoForm);
+
+            /* --- GỘP 4 Ô ĐỊA CHỈ THÀNH 1 CỘT "Địa chỉ nhận sách" ĐỂ KHỚP VỚI SHEET --- */
+            var diaChiGop=[
+                formData.get("Số nhà, thôn xóm"),
+                formData.get("Xã Phường"),
+                formData.get("Quận Huyện"),
+                formData.get("Tỉnh Thành phố")
+            ].filter(Boolean).join(", ");
+
+            formData.delete("Số nhà, thôn xóm");
+            formData.delete("Xã Phường");
+            formData.delete("Quận Huyện");
+            formData.delete("Tỉnh Thành phố");
+
+            formData.append("Địa chỉ nhận sách",diaChiGop);
+            /* --- HẾT PHẦN GỘP ĐỊA CHỈ --- */
+
+            formData.append("IP",clientIP);
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
             .then(function(){
                 fbq('track','Purchase',{currency:'VND',value:199000});
