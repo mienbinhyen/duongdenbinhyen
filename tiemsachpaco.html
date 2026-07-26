@@ -817,8 +817,13 @@
         <div class="paco-input-wrapper">
             <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required>
         </div>
+        <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
         <div class="paco-input-wrapper">
-            <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết - trước khi sát nhập" required>
+            <input type="text" name="Số nhà, thôn xóm" class="paco-input" placeholder="Số nhà, Tên Đường (thôn/xóm)" required>
+        </div>
+        <div class="paco-input-wrapper" style="display:flex;gap:10px;">
+            <input type="text" name="Xã Phường" class="paco-input" style="flex:1;min-width:0;" placeholder="Xã/Phường" required>
+            <input type="text" name="Tỉnh Thành phố" class="paco-input" style="flex:1;min-width:0;" placeholder="Thành phố/Tỉnh" required>
         </div>
         <input type="hidden" name="Nguon_Don" value="GOOGLE ADS">
         <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
@@ -967,6 +972,21 @@ document.addEventListener("DOMContentLoaded", function () {
             submitBtn.innerHTML = "ĐÃ GỬI THÔNG TIN...";
 
             var formData = new FormData(pacoForm);
+
+            /* --- GỘP 3 Ô ĐỊA CHỈ THÀNH 1 CỘT "Địa chỉ nhận sách" ĐỂ KHỚP VỚI SHEET --- */
+            var diaChiGop = [
+                formData.get("Số nhà, thôn xóm"),
+                formData.get("Xã Phường"),
+                formData.get("Tỉnh Thành phố")
+            ].filter(Boolean).join(", ");
+
+            formData.delete("Số nhà, thôn xóm");
+            formData.delete("Xã Phường");
+            formData.delete("Tỉnh Thành phố");
+
+            formData.append("Địa chỉ nhận sách", diaChiGop);
+            /* --- HẾT PHẦN GỘP ĐỊA CHỈ --- */
+
             formData.append("IP", window.clientIP || "Không lấy được");
 
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {

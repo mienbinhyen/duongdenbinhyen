@@ -822,14 +822,13 @@
         <div class="paco-input-wrapper">
             <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
         </div>
-        <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ trước sáp nhập xã/huyện/tỉnh</div>
-        <div class="paco-input-wrapper" style="display:flex;gap:10px;margin-bottom:7px;">
-            <input type="text" name="Số nhà, thôn xóm" class="paco-input" style="flex:1;min-width:0;font-size:13px;" placeholder="Số nhà/đường/thôn xóm" required>
-            <input type="text" name="Xã Phường" class="paco-input" style="flex:1;min-width:0;" placeholder="Xã/Phường" required>
+        <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
+        <div class="paco-input-wrapper">
+            <input type="text" name="Số nhà, thôn xóm" class="paco-input" placeholder="Số nhà, Tên Đường (thôn/xóm)" required>
         </div>
         <div class="paco-input-wrapper" style="display:flex;gap:10px;">
-            <input type="text" name="Quận Huyện" class="paco-input" style="flex:1;min-width:0;" placeholder="Quận/Huyện" required>
-            <input type="text" name="Tỉnh Thành phố" class="paco-input" style="flex:1;min-width:0;" placeholder="Tỉnh/Thành phố" required>
+            <input type="text" name="Xã Phường" class="paco-input" style="flex:1;min-width:0;" placeholder="Xã/Phường" required>
+            <input type="text" name="Tỉnh Thành phố" class="paco-input" style="flex:1;min-width:0;" placeholder="Thành phố/Tỉnh" required>
         </div>
         <input type="hidden" name="Nguon_Don" value="facebook">
         <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
@@ -963,17 +962,15 @@ document.addEventListener("DOMContentLoaded",function(){
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÔNG TIN...";
             var formData=new FormData(pacoForm);
 
-            /* --- GỘP 4 Ô ĐỊA CHỈ THÀNH 1 CỘT "Địa chỉ nhận sách" ĐỂ KHỚP VỚI SHEET --- */
+            /* --- GỘP 3 Ô ĐỊA CHỈ THÀNH 1 CỘT "Địa chỉ nhận sách" ĐỂ KHỚP VỚI SHEET --- */
             var diaChiGop=[
                 formData.get("Số nhà, thôn xóm"),
                 formData.get("Xã Phường"),
-                formData.get("Quận Huyện"),
                 formData.get("Tỉnh Thành phố")
             ].filter(Boolean).join(", ");
 
             formData.delete("Số nhà, thôn xóm");
             formData.delete("Xã Phường");
-            formData.delete("Quận Huyện");
             formData.delete("Tỉnh Thành phố");
 
             formData.append("Địa chỉ nhận sách",diaChiGop);
