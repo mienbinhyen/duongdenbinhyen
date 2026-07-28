@@ -7,8 +7,8 @@
 	<!-- SEO META TAGS -->
 	<meta property="og:site_name" content="Đường Đến Bình Yên" />
 	<meta property="og:title" content="Đường Đến Bình Yên | PacoBooks" />
-	<meta name="keywords" content="Đường Đến Bình Yên, Tự Do Tâm Trí, Paco Books, Paco, Thì Thầm, Tác giả Thiện Nhân, Miền Bình Yên, sách chữa lành" />
-	<meta name="description" content="Khám phá bộ đôi sách chữa lành Tự Do Tâm Trí của Tác giả Thiện Nhân tại Paco Books. Hành trình kết nối tâm hồn tại Miền Bình Yên.">
+	<meta name="keywords" content="Đường Đến Bình Yên, Tự Do Tâm Trí, Paco Books, Paco, Lời Thì Thầm Từ Cuộc Đời, Tác giả Thiện Nhân, Miền Bình Yên, sách chữa lành" />
+	<meta name="description" content="Khám phá bộ đôi sách chữa lành Đường Đến Bình Yên và Lời Thì Thầm Từ Cuộc Đời của Tác giả Thiện Nhân tại Paco Books. Hành trình kết nối tâm hồn tại Miền Bình Yên.">
 <meta property="og:image" content="https://duongdenbinhyen.com/pacochiase.webp" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -173,17 +173,20 @@
         width: auto; margin: 25px 15px;
         border: 1px solid rgba(255,255,255,0.12);
         border-radius: 12px; padding: 18px;
-        display: flex; align-items: center;
-        justify-content: space-between; gap: 10px;
+        display: flex; flex-direction: column; align-items: center;
+        justify-content: center; gap: 10px;
         background-color: rgba(255,255,255,0.5);
         box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
+    .paco-book-images {
+        display: flex; justify-content: center; gap: 28px;
+    }
     .paco-book-pair img {
-        width: 22%; height: auto;
+        width: 43%; height: auto;
         border-radius: 4px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
-    .paco-book-info { flex: 1; line-height: 1.3; }
+    .paco-book-info { line-height: 1.3; text-align: center; }
 
     /* ============================================================
        KHỐI NỘI DUNG SECTION — DÙNG CHUNG
@@ -465,11 +468,11 @@
 
 
 <!-- ============================================================
-     BADGE GIẢM GIÁ 40% — GÓC TRÁI CỐ ĐỊNH
+     BADGE GIẢM GIÁ 36% — GÓC TRÁI CỐ ĐỊNH
      ============================================================ -->
 <div style="position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:450px;height:0;z-index:10000;pointer-events:none;">
     <div style="position:absolute;top:8px;left:0;background:#c0392b;color:#fff;font-family:Arial,sans-serif;font-weight:900;font-size:30px;padding:7px 11px;border-radius:8px;border:3px solid #fff;box-shadow:4px 4px 15px rgba(0,0,0,0.4);transform:rotate(-10deg);display:flex;flex-direction:column;align-items:center;line-height:0.9;animation:pacoFloatBadge 2s infinite ease-in-out;">
-        40%
+        36%
         <span style="font-size:13px;margin-top:2px;">OFF</span>
     </div>
 </div>
@@ -500,7 +503,7 @@
         <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high" loading="eager" decoding="sync"></div>
         <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" decoding="sync"></div>
         <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="100%" height="auto" loading="lazy"></div>
-        <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="100%" height="auto" loading="lazy"></div>
+        <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách Lời Thì Thầm Từ Cuộc Đời" width="100%" height="auto" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="100%" height="auto" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu12.webp" alt="nội dung sách" width="100%" height="auto" loading="lazy"></div>
         <div class="paco-slide"><img src="docthu13.webp" alt="sách chữa lành" width="100%" height="auto" loading="lazy"></div>
@@ -535,16 +538,36 @@
      BỘ ĐÔI SÁCH — ẢNH + THÔNG TIN
      ============================================================ -->
 <div class="paco-book-pair">
-    <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên" width="600" height="800" loading="lazy" style="aspect-ratio:600/800;">
-    <img src="biathitham11.webp" alt="Thì Thầm" width="600" height="800" loading="lazy" style="aspect-ratio:600/800;">
-    <div class="paco-book-info">
-        <div style="color:var(--blue-dark);font-weight:bold;font-size:15px;text-transform:uppercase;">Bộ đôi sách Tâm lý</div>
-        <div style="font-size:16px;">✨ Đường Đến Bình Yên</div>
-        <div style="font-size:16px;">✨ Thì Thầm</div>
-        <div style="font-size:14px;font-style:italic;">Xuất bản &amp; phát hành 2025</div>
-        <div style="color:var(--red-cta);margin-top:5px;">
+    <div class="paco-book-images">
+        <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên" width="600" height="800" loading="lazy" style="aspect-ratio:600/800;">
+        <img src="biathitham11.webp" alt="Lời Thì Thầm Từ Cuộc Đời" width="600" height="800" loading="lazy" style="aspect-ratio:600/800;">
+    </div>
+    <div class="paco-book-info" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
+        <div style="flex:1;text-align:center;">
+            <div style="color:var(--blue-dark);font-weight:bold;font-size:15px;text-transform:uppercase;">Bộ đôi sách Tâm lý</div>
+            <div style="font-size:14px;font-style:italic;">Xuất bản &amp; phát hành 2025</div>
+        </div>
+        <div style="color:var(--red-cta);flex:1;text-align:center;">
             <div style="font-size:38px;font-weight:bold;color:#cc0000 !important;">10.000+</div>
             <div style="font-size:14px;color:var(--blue-dark);font-style:italic;">Ấn bản đã đến tay độc giả</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     THÔNG TIN TRANG & KÍCH THƯỚC
+     ============================================================ -->
+<div class="paco-content-section">
+    <div class="paco-content-inner">
+        <div style="text-align:center;font-weight:bold;font-size:18px;text-transform:uppercase;color:var(--blue-dark);margin-bottom:10px;">Thông tin bộ sách</div>
+        <div style="display:flex;justify-content:space-between;padding:6px 30px;border-bottom:1px solid var(--divider);">
+            <span><span style="color:var(--text-light);">NXB:</span> <span style="font-weight:bold;">Tri Thức</span></span>
+            <span><span style="color:var(--text-light);">Tác giả:</span> <span style="font-weight:bold;">Thiện Nhân</span></span>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:6px 30px;">
+            <span><span style="color:var(--text-light);">Khổ:</span> <span style="font-weight:bold;">14x20.5</span></span>
+            <span><span style="color:var(--text-light);">Số trang:</span> <span style="font-weight:bold;">268 và 304</span></span>
         </div>
     </div>
 </div>
@@ -567,7 +590,7 @@
 <div style="border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:15px;margin:25px 15px;text-align:center;box-sizing:border-box;background:rgba(255,255,255,0.07);">
     <div style="padding:15px;border-radius:8px;text-align:center;font-family:'Times New Roman',Times,serif;width:92%;">
         <div style="font-size:15px;color:#60b8ff;line-height:1.4;font-weight:bold;">
-            Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size:22px;color:var(--red-sale);margin-left:3px;vertical-align:middle;">-40%</span>
+            Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size:22px;color:var(--red-sale);margin-left:3px;vertical-align:middle;">-36%</span>
         </div>
         <div class="paco-timer" style="font-size:40px;color:var(--blue-dark);font-weight:bold;margin-top:5px;">00 : 00 : 00</div>
     </div>
@@ -581,12 +604,12 @@
     <div style="color:#e8e8e8;font-style:italic;font-weight:600;font-size:19px;">🌸 Tháng tri ân tác giả 🌸</div>
     <div style="color:#f5c518;font-weight:bold;font-size:20px;text-transform:uppercase;margin:10px 0;">MUA 2 CHỈ VỚI GIÁ 1</div>
     <div style="display:flex;align-items:center;justify-content:center;gap:15px;">
-        <span style="text-decoration:line-through;color:#888888;font-size:22px;font-weight:bold;">332.000đ</span>
+        <span style="text-decoration:line-through;color:#888888;font-size:22px;font-weight:bold;">312.000đ</span>
         <span style="color:#ff9500;font-size:36px;font-weight:900;">199.000đ</span>
-        <span style="background-color:#b30000;color:#fff;padding:2px 8px;border-radius:4px;font-size:14px;font-weight:bold;">-40%</span>
+        <span style="background-color:#b30000;color:#fff;padding:2px 8px;border-radius:4px;font-size:14px;font-weight:bold;">-36%</span>
     </div>
     <p style="font-size:16px;color:#e8e8e8;font-weight:bold;font-style:italic;">⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!</p>
-    <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});">MUA NGAY - GIẢM 40%</button>
+    <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});">MUA NGAY - GIẢM 36%</button>
 </div>
 
 
@@ -643,20 +666,20 @@
 
 
     <!-- ============================================================
-         GIỚI THIỆU SÁCH 2: THÌ THẦM
+         GIỚI THIỆU SÁCH 2: LỜI THÌ THẦM TỪ CUỘC ĐỜI
          ============================================================ -->
     <div class="paco-content-section">
         <div class="paco-content-inner" style="margin:-20px auto;font-size:22px;">
             <div style="text-align:left;margin-bottom:10px;">
-                <h2 class="paco-h2-title" style="margin-bottom:5px;">THÌ THẦM</h2>
-                <div style="font-size:18px;color:var(--text-sub);font-style:italic;letter-spacing:0.5px;">Khi cuộc đời thì thầm những điều đẹp đẽ</div>
+                <h2 class="paco-h2-title" style="margin-bottom:5px;">LỜI THÌ THẦM TỪ CUỘC ĐỜI</h2>
+                <div style="font-size:18px;color:var(--text-sub);font-style:italic;letter-spacing:0.5px;">Những bài học dịu dàng giữa bộn bề cuộc sống</div>
             </div>
             <div class="paco-body-text">
-                <p>Nếu <b>Đường Đến Bình Yên</b> là bản lĩnh để thiết lập trật tự giữa bão giông, thì cuốn sách <b>Thì Thầm</b> chính là hành trình chạm vào phần mềm mại nhất của tâm thức.
+                <p>Nếu <b>Đường Đến Bình Yên</b> là bản lĩnh để thiết lập trật tự giữa bão giông, thì cuốn sách <b>Lời Thì Thầm Từ Cuộc Đời</b> chính là hành trình chạm vào phần mềm mại nhất của tâm thức.
                 <span id="paco-btn-3" style="color:var(--blue-mid);font-weight:bold;cursor:pointer;margin-left:5px;font-size:18px;" onclick="toggleContent3()">Xem thêm</span>
                 <div id="content-3" style="display:none;">
                     <p><b>Hồi đáp từ trái tim:</b> Cuốn sách mời gọi bạn bước qua những ồn ào vay mượn để quay về đối thoại với chính mình, nơi sự bình yên vốn luôn hiện hữu, lặng lẽ và vẹn nguyên.</p>
-                    <p><b>Giao cảm cùng đời sống:</b> Những điều giản dị nhất đôi khi lại chứa đựng sức mạnh chữa lành lớn lao nhất. "Thì Thầm" đánh thức những rung cảm tinh tế trước vẻ đẹp của sự sống mà ta đã vô tình lãng quên.</p>
+                    <p><b>Giao cảm cùng đời sống:</b> Những điều giản dị nhất đôi khi lại chứa đựng sức mạnh chữa lành lớn lao nhất. "Lời Thì Thầm Từ Cuộc Đời" đánh thức những rung cảm tinh tế trước vẻ đẹp của sự sống mà ta đã vô tình lãng quên.</p>
                     <p><b>Sự tĩnh lặng quyền năng:</b> Khi tâm bạn đủ tĩnh, tiếng thì thầm của tâm hồn sẽ dẫn lối cho những quyết định sáng suốt nhất, giúp bạn đứng vững giữa nhân gian với một tâm thế tự tại.</p>
                     <p class="paco-quote">"Bình yên không phải là khi thế giới lặng im, mà là khi tâm bạn đủ rộng để ôm lấy mọi âm thanh bằng một sự thản nhiên cần có."</p>
                     <div class="paco-readmore-btn" onclick="toggleContent3()" style="margin-top:15px;cursor:pointer;text-align:center;">Thu gọn</div>
@@ -695,7 +718,7 @@
         ⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!
     </p>
     <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});" style="margin-top:0;line-height:1.2;">
-        <span style="font-size:15px;">ĐANG GIẢM GIÁ 40%</span><br>
+        <span style="font-size:15px;">ĐANG GIẢM GIÁ 36%</span><br>
         <span style="font-size:22px;">ĐẶT NGAY</span>
     </button>
 </div>
@@ -777,7 +800,7 @@
      ============================================================ -->
 <div style="margin:25px 15px;box-sizing:border-box;padding:18px 15px;border:1px solid rgba(255,255,255,0.12);border-radius:12px;text-align:center;font-family:'Times New Roman',Times,serif;background:rgba(255,255,255,0.07);">
     <div style="font-size:17px;color:#60b8ff;line-height:1.4;font-weight:bold;">
-        Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size:25px;color:var(--red-sale);margin-left:3px;vertical-align:middle;">-40%</span>
+        Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size:25px;color:var(--red-sale);margin-left:3px;vertical-align:middle;">-36%</span>
     </div>
     <div class="paco-timer" style="font-size:50px;color:var(--blue-dark);font-weight:bold;margin-top:5px;">00 : 00 : 00</div>
 </div>
@@ -796,8 +819,13 @@
         <div class="paco-input-wrapper">
             <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
         </div>
+        <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
         <div class="paco-input-wrapper">
-            <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết - trước khi sát nhập" required>
+            <input type="text" name="Số nhà, thôn xóm" class="paco-input" placeholder="Số nhà, Tên Đường (thôn/xóm)" required>
+        </div>
+        <div class="paco-input-wrapper" style="display:flex;gap:10px;">
+            <input type="text" name="Xã Phường" class="paco-input" style="flex:1;min-width:0;" placeholder="Xã/Phường" required>
+            <input type="text" name="Tỉnh Thành phố" class="paco-input" style="flex:1;min-width:0;" placeholder="Thành phố/Tỉnh" required>
         </div>
         <input type="hidden" name="Nguon_Don" value="facebook">
         <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
@@ -929,7 +957,23 @@ document.addEventListener("DOMContentLoaded",function(){
         pacoForm.addEventListener('submit',function(e){
             e.preventDefault();
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÔNG TIN...";
-            var formData=new FormData(pacoForm);formData.append("IP",clientIP);
+            var formData=new FormData(pacoForm);
+
+            /* --- GỘP 3 Ô ĐỊA CHỈ THÀNH 1 CỘT "Địa chỉ nhận sách" ĐỂ KHỚP VỚI SHEET --- */
+            var diaChiGop=[
+                formData.get("Số nhà, thôn xóm"),
+                formData.get("Xã Phường"),
+                formData.get("Tỉnh Thành phố")
+            ].filter(Boolean).join(", ");
+
+            formData.delete("Số nhà, thôn xóm");
+            formData.delete("Xã Phường");
+            formData.delete("Tỉnh Thành phố");
+
+            formData.append("Địa chỉ nhận sách",diaChiGop);
+            /* --- HẾT PHẦN GỘP ĐỊA CHỈ --- */
+
+            formData.append("IP",clientIP);
             fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
             .then(function(){
                 fbq('track','Purchase',{currency:'VND',value:199000});
@@ -1014,7 +1058,7 @@ window.addEventListener('load',function(){
         var blacklistedIPs=rawIPs.split('\n').map(function(ip){return ip.trim();}).filter(function(ip){return ip!=="";});
         fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){
             if(blacklistedIPs.includes(d.ip)){
-                document.body.innerHTML='<div style="text-align:center;padding:50px;font-family:Arial;color:#ff9500;background:#fff;height:100vh;"><h2 style="font-size:25px;">Hệ thống đang bận</h2><p style="font-size:20px;">"Ưu đãi đặc biệt GIẢM 40% khi đặt hàng qua điện thoại: 0933223301 - Cảm ơn".</p></div>';
+                document.body.innerHTML='<div style="text-align:center;padding:50px;font-family:Arial;color:#ff9500;background:#fff;height:100vh;"><h2 style="font-size:25px;">Hệ thống đang bận</h2><p style="font-size:20px;">"Ưu đãi đặc biệt GIẢM 36% khi đặt hàng qua điện thoại: 0933223301 - Cảm ơn".</p></div>';
                 window.stop();
             }
         }).catch(function(){console.log("Hệ thống bảo vệ đang chạy");});
