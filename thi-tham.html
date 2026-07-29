@@ -423,11 +423,53 @@ window.addEventListener('scroll', function() {
             height: 180px; 
         }
 
-        .wisdom-description { 
-            font-size: 1.05em; 
-            text-indent: 20px; 
-            line-height: 1.6; 
+        .wisdom-description {
+            font-size: 1.05em;
+            text-indent: 20px;
+            line-height: 1.6;
         }
+
+        .quote-grid { grid-template-columns: 1fr !important; gap: 14px !important; }
+        .quote-card { padding: 16px 18px !important; }
+        .quote-text { font-size: 1em !important; line-height: 1.6 !important; }
+    }
+
+    /* KHỐI TRÍCH ĐOẠN DẠNG THẺ - CÂN ĐỐI, GỌN GÀNG */
+    .quote-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 25px 0;
+    }
+    .quote-card {
+        background: linear-gradient(135deg, #f2faf9, #ffffff);
+        border-left: 4px solid #008080;
+        border-radius: 10px;
+        padding: 22px 26px;
+        box-shadow: 0 4px 14px rgba(0,128,128,0.08);
+    }
+    .quote-theme {
+        display: inline-block;
+        font-family: 'Times New Roman', serif;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #ffffff;
+        background: #008080;
+        padding: 4px 14px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+    .quote-text {
+        font-style: italic;
+        font-size: 1.05em;
+        line-height: 1.7;
+        color: #2c3e50;
+        margin: 0;
+        text-align: left;
+        text-indent: 0;
+    }
 </style>
 
 <section class="wisdom-section">
@@ -443,17 +485,32 @@ window.addEventListener('scroll', function() {
         <img src="bia_thi tham_4t.jpg" alt="Bìa sách Lời thì thầm từ cuộc đời" class="book-image">
 
         <div class="wisdom-description">
-            <p><strong>Về tình thân:</strong></p>
-            <p style="text-align:center;text-indent:0;font-style:italic;font-weight:bold;font-size:1.15em;color:#008080;margin:20px auto;">"Có những tình yêu thương lại biến thành gánh nặng âm thầm trên đôi vai gầy của cha mẹ."</p>
-
-            <p><strong>Về nghị lực sống:</strong></p>
-            <p style="text-align:center;text-indent:0;font-style:italic;font-weight:bold;font-size:1.15em;color:#008080;margin:20px auto;">"Sai lầm là cánh cửa mở ra những bài học, nhưng sự cố chấp lại khóa chặt cánh cửa ấy, nhốt bạn vào vòng luẩn quẩn của thất bại."</p>
-
-            <p><strong>Về thái độ sống:</strong></p>
-            <p style="text-align:center;text-indent:0;font-style:italic;font-weight:bold;font-size:1.15em;color:#008080;margin:20px auto;">"Người lạc quan giống như người mang theo ngọn đuốc, dù trời tối vẫn có ánh sáng dẫn lối."</p>
-
-            <p><strong>Về lòng tốt:</strong></p>
-            <p style="text-align:center;text-indent:0;font-style:italic;font-weight:bold;font-size:1.15em;color:#008080;margin:20px auto;">"Trong cuộc đời, lòng tốt và tình yêu thương luôn tồn tại như những dòng chảy âm thầm, làm dịu mát tâm hồn và nuôi dưỡng những đóa hoa nở rộ từ trái tim."</p>
+            <div class="quote-grid">
+                <div class="quote-card">
+                    <span class="quote-theme">Tình cha mẹ</span>
+                    <p class="quote-text">"Có những tình yêu thương lại biến thành gánh nặng âm thầm trên đôi vai gầy của cha mẹ."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-theme">Tình cha</span>
+                    <p class="quote-text">"Nếu mẹ là ngọn gió dịu dàng, thì cha chính là bóng cả, cứng cỏi nhưng đầy yêu thương."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-theme">Nghị lực sống</span>
+                    <p class="quote-text">"Sai lầm là cánh cửa mở ra những bài học, nhưng sự cố chấp lại khóa chặt cánh cửa ấy, nhốt bạn vào vòng luẩn quẩn của thất bại."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-theme">Thái độ sống</span>
+                    <p class="quote-text">"Người lạc quan giống như người mang theo ngọn đuốc, dù trời tối vẫn có ánh sáng dẫn lối."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-theme">Hạnh phúc</span>
+                    <p class="quote-text">"Hạnh phúc không đợi bạn ở cuối con đường, mà ẩn mình trong từng bước chân bạn đang đi."</p>
+                </div>
+                <div class="quote-card">
+                    <span class="quote-theme">Lòng tốt</span>
+                    <p class="quote-text">"Trong cuộc đời, lòng tốt và tình yêu thương luôn tồn tại như những dòng chảy âm thầm, làm dịu mát tâm hồn và nuôi dưỡng những đóa hoa nở rộ từ trái tim."</p>
+                </div>
+            </div>
 
             <p>Đây chỉ là một phần rất nhỏ trong hơn ba mươi câu chuyện của tập tản văn này. Muốn hiểu trọn vẹn thông điệp, hành trình và cảm xúc phía sau từng trang viết, mời bạn đọc bài giới thiệu đầy đủ tại <a href="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.html">Lời Thì Thầm Từ Cuộc Đời</a>.</p>
 
