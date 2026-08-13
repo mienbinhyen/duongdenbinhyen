@@ -482,7 +482,7 @@
      NÚT ĐẶT HÀNG NGAY — CỐ ĐỊNH DƯỚI CÙNG
      ============================================================ -->
 <div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:450px;z-index:9998;pointer-events:none;display:flex;justify-content:center;">
-    <button onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});"
+    <button onclick="/* ECO-ADD */if(typeof fbq==='function'){fbq('track','AddToCart',{content_ids:['Combo Sách Miền Bình Yên'],content_type:'product',currency:'VND',value:199000});}/* END ECO-ADD */document.getElementById('datsach').scrollIntoView({behavior:'smooth'});"
         style="pointer-events:auto;width:60%;background:var(--btn-float);color:#fff;font-family:'Times New Roman';font-weight:bold;font-size:20px;padding:12px 0;border:none;border-radius:50px;box-shadow:0 4px 18px rgba(192,57,43,0.5);cursor:pointer;text-transform:uppercase;animation:pacoJump 1.5s infinite ease-in-out;">
         Đặt Hàng Ngay
     </button>
@@ -609,7 +609,7 @@
         <span style="background-color:#b30000;color:#fff;padding:2px 8px;border-radius:4px;font-size:14px;font-weight:bold;">-36%</span>
     </div>
     <p style="font-size:16px;color:#e8e8e8;font-weight:bold;font-style:italic;">⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!</p>
-    <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});">MUA NGAY - GIẢM 36%</button>
+    <button class="paco-buy-btn" onclick="/* ECO-ADD */if(typeof fbq==='function'){fbq('track','AddToCart',{content_ids:['Combo Sách Miền Bình Yên'],content_type:'product',currency:'VND',value:199000});}/* END ECO-ADD */document.getElementById('datsach').scrollIntoView({behavior:'smooth'});">MUA NGAY - GIẢM 36%</button>
 </div>
 
 
@@ -717,7 +717,7 @@
     <p style="font-size:14px;color:var(--red-sale);font-weight:bold;font-style:italic;margin-bottom:10px;">
         ⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!
     </p>
-    <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior:'smooth'});" style="margin-top:0;line-height:1.2;">
+    <button class="paco-buy-btn" onclick="/* ECO-ADD */if(typeof fbq==='function'){fbq('track','AddToCart',{content_ids:['Combo Sách Miền Bình Yên'],content_type:'product',currency:'VND',value:199000});}/* END ECO-ADD */document.getElementById('datsach').scrollIntoView({behavior:'smooth'});" style="margin-top:0;line-height:1.2;">
         <span style="font-size:15px;">ĐANG GIẢM GIÁ 36%</span><br>
         <span style="font-size:22px;">ĐẶT NGAY</span>
     </button>
@@ -974,10 +974,15 @@ document.addEventListener("DOMContentLoaded",function(){
             /* --- HẾT PHẦN GỘP ĐỊA CHỈ --- */
 
             formData.append("IP",clientIP);
-            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
+            /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
+            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',keepalive:true,body:formData})
+            /* END ECO-ADD */
             .then(function(){
-                fbq('track','Purchase',{currency:'VND',value:199000});
-                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',body:new URLSearchParams({event_name:'Purchase',value:199000,currency:'VND',action_source:'website'})});
+                /* ECO-ADD: content_ids/content_type để khớp Catalog Facebook */
+                fbq('track','Purchase',{currency:'VND',value:199000,content_ids:['Combo Sách Miền Bình Yên'],content_type:'product'});
+                /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
+                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:199000,currency:'VND',action_source:'website',content_ids:'Combo Sách Miền Bình Yên',content_type:'product'})});
+                /* END ECO-ADD */
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();
                 setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
             }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
@@ -1045,6 +1050,9 @@ window.addEventListener('load',function(){
         fbq('init','935549958850787',{em:'email@email.com',ph:'1234567890'});
         fbq('set','autoConfig',false,'935549958850787');
         fbq('track','PageView');
+        /* ECO-ADD: ViewContent kèm cả 3 ID (Combo + 2 sản phẩm lẻ) để khớp Catalog Facebook */
+        fbq('track','ViewContent',{content_ids:['Combo Sách Miền Bình Yên','u35amq42vu','6lo491xarx'],content_type:'product',currency:'VND',value:199000});
+        /* END ECO-ADD */
     },3000);
 });
 </script>
