@@ -1005,7 +1005,7 @@ window.addEventListener('load',function(){
 <!-- Script 8: Captcha + Giới hạn đặt hàng -->
 <script>
 (function(){
-    var LIMIT_CAPTCHA=1,LIMIT_LOCK=2,LOCK_MINUTES=720;
+    var LIMIT_CAPTCHA=2,LIMIT_LOCK=3,LOCK_MINUTES=720;
     var submitBtn=document.getElementById('submitBtn'),pacoForm=document.getElementById('pacoForm');
     var storageKey='paco_track_v3',lockKey='paco_lock_v3';
     var data=JSON.parse(localStorage.getItem(storageKey))||{count:0};
