@@ -400,72 +400,302 @@ body {
 
 
 <style>
-    .paco-catalog-wrapper {
-        width: 100%;
-        max-width: 900px; /* Ép bằng khối chuẩn */
-        margin: 40px auto;
-        padding: 0; 
-        display: flex;
-        justify-content: center;
-        gap: 80px; /* Giảm gap để không đẩy lề */
-        box-sizing: border-box; /* Khóa không cho phình ra */
-    }
-    .paco-catalog-item {
-        text-align: center;
-        flex: 1; /* Chia đều không gian */
-    }
-    .paco-catalog-item img {
-        height: 350px;
-        width: auto;
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        transition: 0.3s;
-        display: block;
-        margin: 0 auto 15px; /* Căn giữa ảnh */
-    }
-    .paco-catalog-item img:hover { transform: translateY(-10px); }
-    
-    .paco-btn-detail {
-        font-family: 'Times New Roman', serif;
-        font-size: 18px;
-        font-weight: bold;
-        color: #004a99;
-        text-decoration: none;
-        border-bottom: 2px solid #004a99;
-        padding-bottom: 2px;
-    }
+    /* ================================================================
+       KHỐI "TÁC PHẨM MỚI" — thay thế khối paco-catalog-wrapper cũ
+       (chỉ có ảnh + link "Xem chi tiết") bằng lưới sản phẩm có giá + 2 nút.
+       Thêm ngày 2026-09-12 — Em ECO làm theo yêu cầu Ông Paco.
+       Màu/font dùng lại đúng bảng màu sẵn có của site: Times New Roman,
+       xanh navy #004a99 (section-label, price-new), đỏ #b30000 (giống màu
+       nút "HOÀN TẤT ĐẶT HÀNG") cho nhãn giảm giá.
 
-    /* ĐIỀU CHỈNH CHO ĐIỆN THOẠI */
+       MUỐN SỬA GÌ, TÌM Ở ĐÂY:
+       - Đổi ẢNH từng sản phẩm       -> sửa src trong khối HTML bên dưới
+       - Đổi TÊN / TÊN COMBO         -> sửa .paco-product-name / .paco-product-combo-sub
+       - Đổi GIÁ / % GIẢM            -> sửa class price-old / price-new / .paco-product-badge-giam
+       - Đổi LINK "Xem thêm"         -> sửa thuộc tính href của thẻ <a class="paco-product-btn-more">
+       - Đổi SỐ CỘT hiển thị         -> .paco-product-grid (máy tính đang 3 cột — xem @media bên dưới cho điện thoại: 2 cột)
+       - Nút "Thêm vào giỏ" HIỆN CHƯA có chức năng đếm giỏ hàng thật — sẽ làm
+         ở bước tiếp theo (giỏ hàng + form), hàm pacoAddToCart() cuối khối
+         này hiện chỉ là chỗ trống tạm thời, không gây lỗi gì khi bấm.
+       - 3 combo hiện CHƯA có trang "Xem thêm" riêng -> đang tạm trỏ về
+         trang Tác phẩm mới, đổi lại khi có trang riêng cho từng combo.
+       - Ảnh "Miền Bình Yên" và 3 combo hiện tạm dùng chung ảnh biacombo-640x480.webp
+         (chưa có ảnh riêng) — đổi src khi có ảnh mới.
+       ================================================================ */
+    .paco-product-grid {
+        max-width: 900px;
+        margin: 40px auto 0;
+        padding: 0 15px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* MÁY TÍNH: 3 cột */
+        gap: 16px;
+        box-sizing: border-box;
+    }
     @media (max-width: 600px) {
-        .paco-catalog-wrapper {
-            gap: 20px; /* Mobile để gần nhau cho đẹp */
-            padding: 0 15px; /* Khớp padding khối chuẩn */
-        }
-        .paco-catalog-item img {
-            height: 180px;
-        }
-        .paco-btn-detail {
-            font-size: 14px;
-        }
+        .paco-product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } /* ĐIỆN THOẠI: 2 cột */
+    }
+    .paco-product-card {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    .paco-product-img-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 3.6; /* bớt cao hơn tỉ lệ bìa gốc theo góp ý Ông Paco */
+        border-radius: 6px;
+        overflow: hidden;
+        background: #f0f0f0;
+        margin-bottom: 8px;
+    }
+    .paco-product-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .paco-product-badge-giam {
+        position: absolute; top: 6px; right: 6px;
+        background: #b30000; color: #ffffff;
+        font-family: 'Times New Roman', serif; font-size: 11px; font-weight: bold;
+        padding: 3px 7px; border-radius: 5px;
+    }
+    .paco-product-name {
+        font-family: 'Times New Roman', serif; font-size: 14px; font-weight: bold;
+        color: #004a99; line-height: 1.3; margin: 0 0 4px; min-height: 34px;
+    }
+    .paco-product-combo-sub {
+        display: block; font-family: 'Times New Roman', serif; font-size: 11.5px;
+        font-weight: normal; font-style: italic; color: #555; margin-top: 2px; line-height: 1.25;
+    }
+    .paco-product-gia-wrap { margin-bottom: 8px; }
+    .paco-product-gia-wrap .price-new { font-size: 15px; }
+    .paco-product-gia-wrap .price-old { margin-left: 6px; }
+    .paco-product-buttons { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+    .paco-product-btn-more, .paco-product-btn-cart {
+        display: block; text-align: center; border-radius: 20px;
+        font-family: 'Times New Roman', serif; font-size: 12px; font-weight: bold;
+        padding: 7px 4px; text-decoration: none; cursor: pointer; border: none;
+    }
+    .paco-product-btn-more {
+        background: #ffffff; color: #004a99; border: 1.5px solid #004a99;
+    }
+    .paco-product-btn-cart {
+        background: #004a99; color: #ffffff; /* mau xanh navy dong nhat, khong dung gradient de tranh lech tong voi cac tieu de/gia tien khac */
+    }
+    @media (max-width: 600px) {
+        .paco-product-name { font-size: 12.5px; min-height: 30px; }
+        .paco-product-combo-sub { font-size: 10.5px; }
+        .paco-product-gia-wrap .price-new { font-size: 13px; }
+        .paco-product-btn-more, .paco-product-btn-cart { font-size: 11px; padding: 6px 2px; }
     }
 </style>
 
-<div class="paco-catalog-wrapper">
-    <div class="paco-catalog-item">
-        <a href="https://duongdenbinhyen.com/" aria-label="Xem sách Đường Đến Bình Yên">
-            <img src="DDBY_bia.webp" width="500" height="732" alt="Đường Đến Bình Yên">
-        </a>
-        <a href="https://duongdenbinhyen.com/tacphammoi.html#duongdenbinhyen" class="paco-btn-detail">Xem chi tiết</a>
+<style>
+    /* Tiêu đề cách điệu - căn giữa, dùng đúng màu navy #004a99 đang có trong bài (không phải bản gradient xanh ngọc-lam ban đầu) */
+    .paco-product-title-wrap { max-width: 900px; margin: 40px auto 20px; padding: 0 15px; box-sizing: border-box;
+        display: flex; align-items: center; justify-content: center; gap: 14px; }
+    .paco-product-title-wrap .duong-ke { flex: 1; max-width: 80px; height: 2px; }
+    .paco-product-title-wrap .duong-ke.trai { background: linear-gradient(90deg, transparent, #004a99); }
+    .paco-product-title-wrap .duong-ke.phai { background: linear-gradient(90deg, #004a99, transparent); }
+    .paco-product-title-wrap .chu-tieu-de {
+        font-family: 'Times New Roman', serif; font-size: 1.6em; font-weight: bold; color: #004a99;
+        text-transform: uppercase; letter-spacing: 2px; white-space: nowrap;
+        display: flex; align-items: center; gap: 8px;
+        text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
+    }
+    .paco-product-title-wrap svg { width: 24px; height: 24px; flex-shrink: 0; }
+    @media (max-width: 600px) {
+        .paco-product-title-wrap .chu-tieu-de { font-size: 1.15em; }
+        .paco-product-title-wrap .duong-ke { max-width: 30px; }
+    }
+</style>
+
+<div class="paco-product-title-wrap">
+    <span class="duong-ke trai"></span>
+    <span class="chu-tieu-de">
+        <svg viewBox="0 0 24 24"><path d="M4 4.5A2 2 0 0 1 6 3h8v18H6a2 2 0 0 1-2-1.5z" fill="#004a99"/><path d="M20 4.5A2 2 0 0 0 18 3h-4v18h4a2 2 0 0 0 2-1.5z" fill="#0066cc"/></svg>
+        TÁC PHẨM MỚI
+    </span>
+    <span class="duong-ke phai"></span>
+</div>
+
+<div class="paco-product-grid">
+
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="DDBY_bia.webp" alt="Đường Đến Bình Yên" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-24%</span>
+        </div>
+        <p class="paco-product-name">Đường Đến Bình Yên</p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">119.000đ</span>
+            <span class="price-old">156.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Đường Đến Bình Yên')">Thêm vào giỏ</button>
+        </div>
     </div>
 
-    <div class="paco-catalog-item">
-        <a href="https://duongdenbinhyen.com/" aria-label="Xem sách Thì Thầm">
-            <img src="thitham_bia.webp" width="500" height="732" alt="Thì Thầm">
-        </a>
-        <a href="https://duongdenbinhyen.com/tacphammoi.html#thitham" class="paco-btn-detail">Xem chi tiết</a>
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="thitham_bia.webp" alt="Lời Thì Thầm Từ Cuộc Đời" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-24%</span>
+        </div>
+        <p class="paco-product-name">Lời Thì Thầm Từ Cuộc Đời</p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">119.000đ</span>
+            <span class="price-old">156.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Lời Thì Thầm Từ Cuộc Đời')">Thêm vào giỏ</button>
+        </div>
     </div>
+
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="biamienbinhyen.webp" alt="Miền Bình Yên" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-24%</span>
+        </div>
+        <p class="paco-product-name">Miền Bình Yên</p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">119.000đ</span>
+            <span class="price-old">156.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Miền Bình Yên')">Thêm vào giỏ</button>
+        </div>
+    </div>
+
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="biacombo1.webp" alt="Combo 1 - Đường Đến Bình Yên và Lời Thì Thầm Từ Cuộc Đời" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-36%</span>
+        </div>
+        <p class="paco-product-name">Combo 1<span class="paco-product-combo-sub">Đường Đến Bình Yên &amp; Lời Thì Thầm Từ Cuộc Đời</span></p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">199.000đ</span>
+            <span class="price-old">312.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 1')">Thêm vào giỏ</button>
+        </div>
+    </div>
+
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="biacombo2.webp" alt="Combo 2 - Miền Bình Yên và Lời Thì Thầm Từ Cuộc Đời" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-36%</span>
+        </div>
+        <p class="paco-product-name">Combo 2<span class="paco-product-combo-sub">Miền Bình Yên &amp; Lời Thì Thầm Từ Cuộc Đời</span></p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">199.000đ</span>
+            <span class="price-old">312.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 2')">Thêm vào giỏ</button>
+        </div>
+    </div>
+
+    <div class="paco-product-card">
+        <div class="paco-product-img-wrap">
+            <img src="biacombo3.webp" alt="Combo 3 - Miền Bình Yên và Đường Đến Bình Yên" width="600" height="720" loading="lazy">
+            <span class="paco-product-badge-giam">-36%</span>
+        </div>
+        <p class="paco-product-name">Combo 3<span class="paco-product-combo-sub">Miền Bình Yên &amp; Đường Đến Bình Yên</span></p>
+        <div class="paco-product-gia-wrap">
+            <span class="price-new">199.000đ</span>
+            <span class="price-old">312.000đ</span>
+        </div>
+        <div class="paco-product-buttons">
+            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 3')">Thêm vào giỏ</button>
+        </div>
+    </div>
+
 </div>
+
+<script>
+// Giỏ hàng tạm (chỉ lưu trong bộ nhớ trang, KHÔNG lưu trình duyệt, mất khi tải lại trang).
+// Bấm "Thêm vào giỏ" -> tăng số ở icon "Giỏ hàng" trên menu chân trang.
+// BƯỚC TIẾP THEO (form): sẽ dùng biến pacoCartItems bên dưới để hiện danh
+// sách "Sách đã chọn" (tick chọn) ngay trong form đặt hàng #datsach.
+var pacoCartItems = {};
+
+function pacoAddToCart(tenSanPham) {
+    pacoCartItems[tenSanPham] = (pacoCartItems[tenSanPham] || 0) + 1;
+    var tong = 0;
+    for (var k in pacoCartItems) tong += pacoCartItems[k];
+    var elCount = document.getElementById('paco-cart-count');
+    if (elCount) {
+        elCount.textContent = tong;
+        elCount.style.display = tong > 0 ? 'block' : 'none';
+    }
+    pacoVeSpDaChon();
+}
+
+// Vẽ lại danh sách "Sách/combo đã chọn" trong form đặt hàng (#datsach) -
+// chỉ hiện khi giỏ có sản phẩm, mỗi dòng có tick để khách tự bỏ nếu không đặt.
+// Tên 2 cuốn sách trong từng combo - hiện kèm trong ngoặc ở list "Sách đã chọn"
+// cho cân đối, khớp đúng subtitle đang hiện ở khối TÁC PHẨM MỚI phía trên.
+var PACO_COMBO_SACH = {
+    'Combo 1': '2 cuốn',
+    'Combo 2': '2 cuốn',
+    'Combo 3': '2 cuốn'
+};
+
+function pacoVeSpDaChon() {
+    var wrap = document.getElementById('paco-sp-da-chon-wrap');
+    var list = document.getElementById('paco-sp-da-chon-list');
+    if (!wrap || !list) return;
+    var ten = Object.keys(pacoCartItems);
+    if (ten.length === 0) {
+        wrap.style.display = 'none';
+        list.innerHTML = '';
+        pacoCapNhatHiddenSp();
+        return;
+    }
+    wrap.style.display = 'block';
+    // Sách lẻ: 1 cột (tên dài, để mỗi dòng cho dễ đọc).
+    // Combo: 2 cột (chỉ ghi "(2 cuốn)" nên ngắn, xếp 2 cột cho gọn).
+    var htmlSachLe = '';
+    var htmlCombo = '';
+    ten.forEach(function(t){
+        var laCombo = !!PACO_COMBO_SACH[t];
+        var hienThi = t + (laCombo ? ' (' + PACO_COMBO_SACH[t] + ')' : '');
+        var nhan = '<label style="display:flex;align-items:center;gap:6px;padding:3px 0;">'
+            + '<input type="checkbox" checked onchange="pacoCapNhatHiddenSp()">'
+            + '<span>' + hienThi + '</span>'
+            + '</label>';
+        if (laCombo) { htmlCombo += nhan; } else { htmlSachLe += nhan; }
+    });
+    var html = htmlSachLe;
+    if (htmlCombo) {
+        html += '<div style="display:grid;grid-template-columns:1fr 1fr;column-gap:10px;">' + htmlCombo + '</div>';
+    }
+    list.innerHTML = html;
+    pacoCapNhatHiddenSp();
+}
+
+// Gom lại tên các sách ĐANG được tick trong form, ghi vào ô ẩn Sach_Da_Chon
+// để gửi kèm khi khách bấm HOÀN TẤT ĐẶT HÀNG.
+function pacoCapNhatHiddenSp() {
+    var hidden = document.getElementById('paco-sach-da-chon-hidden');
+    if (!hidden) return;
+    var list = document.getElementById('paco-sp-da-chon-list');
+    var daTick = [];
+    if (list) {
+        list.querySelectorAll('label').forEach(function(label){
+            var cb = label.querySelector('input[type=checkbox]');
+            if (cb && cb.checked) daTick.push(label.querySelector('span').textContent);
+        });
+    }
+    hidden.value = daTick.join(', ');
+}
+</script>
 
 
 
@@ -538,12 +768,18 @@ body {
         <span class="book-title-sub">Đích đến của mọi cuộc hành trình</span>
 
         <p class="book-description">
-            Tác phẩm Đường Đến Bình Yên được lấy cảm hứng từ vùng núi Ronda – Tây Ban Nha, nơi những cung đường uốn lượn giữa trời mây và đá núi khơi dậy một cảm giác rất lạ: cảm giác vừa đi, vừa mất phương hướng, nhưng cũng rất gần với chính mình. Lấy bối cảnh quê hương của nhân vật Paco, cuốn sách tái hiện hành trình nội tâm từ năm 11 tuổi — khi cậu rời khỏi làng quê nhỏ để bước vào thế giới rộng lớn hơn, với nhiều va đập, thử thách và cả những tưởng như vỡ vụn.
+            Tác phẩm Đường Đến Bình Yên được lấy cảm hứng từ vùng núi Ronda – Tây Ban Nha, nơi những cung đường uốn lượn giữa trời mây và đá núi khơi dậy một cảm giác rất lạ: cảm giác vừa đi, vừa mất phương hướng, nhưng cũng rất gần với chính mình. Lấy bối cảnh quê hương của nhân vật Paco, cuốn sách tái hiện hành trình nội tâm từ năm 11 tuổi — khi cậu rời khỏi <span id="idx-readmore-btn-1" class="paco-idx-readmore-btn" onclick="pacoToggleReadmore('idx-readmore-1','idx-readmore-btn-1')">Xem thêm</span>
+        </p>
+        <div id="idx-readmore-1" style="display:none;">
+        <p class="book-description">
+            làng quê nhỏ để bước vào thế giới rộng lớn hơn, với nhiều va đập, thử thách và cả những tưởng như vỡ vụn.
         </p>
 
         <p class="book-description">
             Đường Đến Bình Yên không đi theo lối kể thông thường, mà chọn cách lặng lẽ dẫn người đọc vào một hành trình rất riêng – nơi mỗi bước đi là một lần thử thách niềm tin, sự lựa chọn, và cả cách ta đối diện với chính mình. Tác phẩm không cố tìm một định nghĩa cho bình yên, nhưng qua từng trang viết, nó dần hình thành một điều gì đó gần gũi và thật: rằng bình yên không đến từ việc tránh né bão giông, mà từ khả năng đứng vững giữa giông bão mà không đánh mất mình.
         </p>
+        <div class="paco-idx-readmore-collapse" onclick="pacoToggleReadmore('idx-readmore-1','idx-readmore-btn-1')">Thu gọn</div>
+        </div>
 
         <img src="bia_duong den binh yen_4t.webp" width="1500" height="760" alt="Bìa sách" class="book-image">
 
@@ -621,7 +857,11 @@ body {
         <span class="book-title-sub">Những bài học dịu dàng giữa bộn bề cuộc sống</span>
 
         <p class="book-description">
-            Tác phẩm "<a href="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.html">Lời thì thầm từ cuộc đời</a>" được viết trong những khoảng lặng rất nhỏ – những buổi chiều không vội, những sáng sớm không lời, những lúc mà cuộc sống dường như ngừng lại một chút, đủ để lắng nghe điều gì đó rất khẽ từ bên trong. Không có câu chuyện cụ thể, cũng không có nhân vật rõ ràng, Lời thì thầm từ cuộc đời là tập hợp những mảnh rời rạc của đời sống nội tâm – nơi mỗi suy tư, mỗi cảm giác thoáng qua đều được giữ lại bằng một thứ ngôn ngữ rất tiết chế.
+            Tác phẩm "<a href="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.html">Lời thì thầm từ cuộc đời</a>" được viết trong những khoảng lặng rất nhỏ – những buổi chiều không vội, những sáng sớm không lời, những lúc mà cuộc sống dường như ngừng lại một chút, đủ để lắng nghe điều gì đó <span id="idx-readmore-btn-2" class="paco-idx-readmore-btn" onclick="pacoToggleReadmore('idx-readmore-2','idx-readmore-btn-2')">Xem thêm</span>
+        </p>
+        <div id="idx-readmore-2" style="display:none;">
+        <p class="book-description">
+            rất khẽ từ bên trong. Không có câu chuyện cụ thể, cũng không có nhân vật rõ ràng, Lời thì thầm từ cuộc đời là tập hợp những mảnh rời rạc của đời sống nội tâm – nơi mỗi suy tư, mỗi cảm giác thoáng qua đều được giữ lại bằng một thứ ngôn ngữ rất tiết chế.
         </p>
 
         <p class="book-description">
@@ -631,6 +871,8 @@ body {
         <p class="book-description">
             Hai cuốn sách – một hành trình, một khoảng lặng – nhưng gặp nhau ở cùng một điểm: sự thành thật. Thành thật với đời sống, với cảm xúc, và với chính mình. Và có lẽ, trong một thế giới ngày càng nhiều tiếng nói, những cuốn sách biết thì thầm đôi khi lại là những cuốn sách ở lại lâu nhất trong lòng người đọc.
         </p>
+        <div class="paco-idx-readmore-collapse" onclick="pacoToggleReadmore('idx-readmore-2','idx-readmore-btn-2')">Thu gọn</div>
+        </div>
 
         <img src="bia_thi tham_4t.webp" width="1500" height="760" alt="Bìa sách Thì Thầm" class="book-image">
 
@@ -735,12 +977,18 @@ body {
         <img src="tacgiathiennhan.webp" width="450" height="450" alt="Tác giả Thiện Nhân" class="author-image">
 
         <p class="author-description">
-            Cuộc sống của tôi không gắn liền với những điều quá lớn lao, mà xuất phát từ những khoảnh khắc rất đời thường. Tôi thích dành những buổi sáng sớm ngồi lặng yên bên tách trà, lắng nghe tiếng chim hót và ngắm ánh nắng đầu ngày. Những buổi chiều, tôi hay đi dạo chậm rãi, quan sát những con đường nhỏ, những gương mặt lặng lẽ bước qua đời nhau. Chính sự bình dị ấy đã gieo vào tôi những cảm xúc sâu lắng và thôi thúc tôi viết.
+            Cuộc sống của tôi không gắn liền với những điều quá lớn lao, mà xuất phát từ những khoảnh khắc rất đời thường. Tôi thích dành những buổi sáng sớm ngồi lặng yên bên tách trà, lắng nghe tiếng chim hót và ngắm <span id="idx-readmore-btn-3" class="paco-idx-readmore-btn" onclick="pacoToggleReadmore('idx-readmore-3','idx-readmore-btn-3')">Xem thêm</span>
+        </p>
+        <div id="idx-readmore-3" style="display:none;">
+        <p class="author-description">
+            ánh nắng đầu ngày. Những buổi chiều, tôi hay đi dạo chậm rãi, quan sát những con đường nhỏ, những gương mặt lặng lẽ bước qua đời nhau. Chính sự bình dị ấy đã gieo vào tôi những cảm xúc sâu lắng và thôi thúc tôi viết.
         </p>
 
         <p class="author-description">
             Mỗi trang viết không chỉ là câu chữ, mà còn là tiếng vọng từ những trải nghiệm thật – niềm vui, nỗi buồn, những thương tổn và cả những chữa lành tôi đã đi qua. Tôi viết để giữ lại những điều mong manh dễ vỡ, để nhắc mình rằng trong những điều bình thường vẫn luôn có vẻ đẹp dịu dàng đang chờ được nhận ra. Và nếu độc giả tìm thấy trong đó một chút đồng cảm, một sự an ủi hay một nguồn cảm hứng để bước tiếp, thì với tôi, đó chính là ý nghĩa lớn nhất của việc cầm bút.
         </p>
+        <div class="paco-idx-readmore-collapse" onclick="pacoToggleReadmore('idx-readmore-3','idx-readmore-btn-3')">Thu gọn</div>
+        </div>
 	<p class="author-description" style="text-align: right; font-style: italic; font-weight: bold;">
     — Tác giả Thiện Nhân —
 </p>
@@ -1453,10 +1701,14 @@ body {
             </div>
             <input type="hidden" name="Nguon_Don" value="Trang chủ">
             <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
+            <input type="hidden" name="Sach_Da_Chon" id="paco-sach-da-chon-hidden" value="">
+            <div id="paco-sp-da-chon-wrap" style="display:none;text-align:center;margin:0 0 10px 0;">
+                <div id="paco-sp-da-chon-list" style="font-size:13px;color:#1a1a1a;"></div>
+            </div>
             <div style="text-align:center;margin:15px 0;">
+                <div style="width:40px;height:1px;background:#ccc;margin:0 auto 12px;"></div>
                 <div style="font-style:normal;color:#1a1a1a;font-size:14px;font-weight:600;letter-spacing:0.5px;">&quot;Kiểm tra kỹ lưỡng, hài lòng mới thanh toán&quot;</div>
             </div>
-            
             <button type="submit" id="submitBtn" style="width:80%;margin:0 auto;display:block;font-family:'Times New Roman',Times,serif;background-color:#b30000;color:#ffffff;border:2px solid #ffd700;padding:12px;font-size:18px;font-weight:900;border-radius:99px;text-transform:uppercase;animation:pacoSubmitPulse 1.5s infinite ease-in-out;box-shadow:0 0 14px rgba(255,215,0,0.35);cursor:pointer;">HOÀN TẤT ĐẶT HÀNG</button>
         </form>
         <div id="msg" class="hidden" style="color:#2e7d32;text-align:center;margin-top:15px;font-weight:bold;">Gửi thông tin thành công!</div>
@@ -1673,7 +1925,7 @@ body {
     .paco-fixed-menu {
         position: fixed;
         right: calc((100vw - 900px) / 2 + 5px);
-        top: 75%;
+        top: calc(75% - 60px); /* nang len 60px de chua cho nut chat AI o goc duoi - Em ECO 2026-09-12 */
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
@@ -1687,7 +1939,7 @@ body {
         object-fit: contain;
     }
     @media (max-width: 900px) {
-        .paco-fixed-menu { right: 5px; }
+        .paco-fixed-menu { right: 8px; }
     }
 </style>
 <div class="paco-fixed-menu">
@@ -1807,77 +2059,139 @@ body {
 
 
 <style>
-    /* 1. KHỐI CHỨA 2 NÚT - Tối ưu đa thiết bị */
-    .paco-sticky-container {
+    /* ================================================================
+       MENU CHÂN TRANG 5 ICON (thay cho 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
+       Ngày tạo: 2026-09-12 — Em ECO làm theo yêu cầu Ông Paco
+       Vị trí hiển thị: cố định (fixed) sát đáy màn hình, giống vị trí 2 nút cũ
+       Kiểu dáng: nền trắng bo góc trên, mỗi icon nằm trong khối "thẻ" màu
+       pastel riêng (kiểu icon app hiện đại), chữ dùng font không chân cho
+       hiện đại hơn. Trang chủ nổi lên trên bằng khối tròn gradient lớn.
+
+       MUỐN SỬA GÌ, TÌM Ở ĐÂY:
+       - Đổi LINK từng nút          -> sửa thuộc tính href trong khối HTML bên dưới
+       - Đổi TÊN hiển thị           -> sửa chữ trong <span class="paco-nav-label">
+       - Đổi MÀU NỀN thanh menu     -> sửa background-color trong .paco-bottom-nav
+       - Đổi MÀU thẻ icon           -> sửa background trong .paco-nav-badge (mỗi màu riêng bên dưới)
+       - Đổi MÀU vòng tròn Trang chủ -> sửa background (gradient) trong .paco-nav-center-circle
+       - Icon "Giỏ hàng" hiện CHƯA gắn chức năng thật (chờ làm giỏ hàng sau)
+       ================================================================ */
+    .paco-bottom-nav {
         position: fixed;
-        bottom: 6px;
-        left: 5%; /* Chuẩn cho điện thoại */
-        width: 90%; 
-        display: flex;
-        gap: 5px;
+        bottom: 0; /* Dinh sat day, KHONG chua khoang ho ben duoi */
+        left: 50%;
+        transform: translateX(-50%); /* Can giua theo kho bai viet (900px), giong cac khoi fixed khac */
+        width: 100%;
+        max-width: 900px; /* Khop kho .paco-page-wrap - khong tran full man hinh tren may tinh */
         z-index: 99999;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 16px 0 24px; /* Tang chieu cao thanh menu (them dem tren + duoi) de icon/chu nam cao hon, khong bi che, ma khong tao khoang ho duoi day */
+        box-sizing: border-box;
+        background-color: #ffffff; /* Trang 100% theo yeu cau Ong Paco */
+        border-radius: 22px 22px 0 0;
+        box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
     }
 
-    /* CHỈ ÁP DỤNG CĂN GIỮA CHO MÁY TÍNH (Khóa khổ bài viết) */
-    @media (min-width: 1024px) {
-        .paco-sticky-container {
-            left: 50%; 
-            transform: translateX(-50%); 
-            width: 100%;
-            max-width: 900px; /* Khớp với khổ chữ/hình của bài viết */
-        }
-    }
-
-    /* 2. PHONG CÁCH NÚT 3D SANG TRỌNG (Giữ nguyên) */
-    .paco-btn-3d {
-        flex: 1;
-        height: 45px;
-        background: #87CEFA;
-        color: #004a99;
+    .paco-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 30px;
-        text-transform: uppercase;
-        border-radius: 15px;
+        color: #33475b;
+        font-family: -apple-system, 'Segoe UI', Arial, sans-serif; /* font không chân, hiện đại */
+        font-size: 13px;
+        font-weight: 600;
+        flex: 1;
+    }
+
+    /* Thẻ nền pastel phía sau mỗi icon (trừ Trang chủ) */
+    .paco-nav-badge {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
         display: flex;
         align-items: center;
-        transition: all 0.2s;
-        border: none;
-        box-shadow: 0 6px 0 #4682B4, 0 8px 15px rgba(0,0,0,0.3);
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
+    .paco-nav-badge svg { width: 24px; height: 24px; }
 
-    .paco-btn-3d.left { justify-content: flex-end; padding-right: 25px; }
-    .paco-btn-3d.right { justify-content: flex-start; padding-left: 25px; }
+    .paco-nav-badge.badge-book   { background: #fff1e6; }
+    .paco-nav-badge.badge-ebook  { background: #e8f1ff; }
+    .paco-nav-badge.badge-contact{ background: #eef1ff; }
+    .paco-nav-badge.badge-cart   { background: #ffece6; }
 
-    .paco-btn-3d:active {
-        box-shadow: 0 2px 0 #5f9ea0, 0 4px 6px rgba(0,0,0,0.3);
-        transform: translateY(4px);
+    /* --- MỤC GIỮA: TRANG CHỦ — khối tròn gradient nổi lên trên thanh menu --- */
+    .paco-nav-center-circle {
+        width: 62px;
+        height: 62px;
+        margin-top: -26px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #01cb99, #0099cc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 16px rgba(0,153,204,0.4);
+        border: 4px solid #ffffff;
     }
+    .paco-nav-center-circle svg { width: 30px; height: 30px; }
 
-    /* 3. TƯƠNG THÍCH MOBILE CHO NÚT (Giữ nguyên) */
     @media (max-width: 600px) {
-        .paco-btn-3d { font-size: 20px; height: 35px; border-radius: 10px; }
-        .paco-btn-3d.left { padding-right: calc((100vw - 900px) / 2); }
-        .paco-btn-3d.right { padding-left: 15px; }
+        .paco-nav-item { font-size: 12px; }
+        .paco-nav-badge { width: 38px; height: 38px; }
     }
 </style>
 
+<!-- ================================================================
+     MENU CHÂN TRANG 5 ICON (thay 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
+     Thứ tự: Sách giấy - Ebook - Trang chủ (giữa, nổi lên) - Liên hệ - Giỏ hàng
+     ================================================================ -->
+<div class="paco-bottom-nav">
 
+    <!-- 1. SÁCH GIẤY -> cuộn tới form đặt sách (id="datsach") -->
+    <a href="#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-book">
+            <svg viewBox="0 0 24 24"><path d="M4 4.5A2 2 0 0 1 6 3h8v18H6a2 2 0 0 1-2-1.5z" fill="#e0783c"/><path d="M20 4.5A2 2 0 0 0 18 3h-4v18h4a2 2 0 0 0 2-1.5z" fill="#c85a2a"/></svg>
+        </div>
+        <span class="paco-nav-label">Mua sách giấy</span>
+    </a>
 
+    <!-- 2. EBOOK -> cuộn tới khối ebook (id="ebook") -->
+    <a href="#ebook" class="paco-nav-item">
+        <div class="paco-nav-badge badge-ebook">
+            <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" fill="#2f80c4"/><rect x="7.5" y="5.5" width="9" height="10.5" rx="1" fill="#eaf4ff"/><line x1="9" y1="18.5" x2="15" y2="18.5" stroke="#eaf4ff" stroke-width="1.4"/></svg>
+        </div>
+        <span class="paco-nav-label">Mua Ebook</span>
+    </a>
 
+    <!-- 3. TRANG CHỦ -> về trang chủ (mục giữa, khối tròn gradient nổi lên) -->
+    <a href="https://duongdenbinhyen.com/" class="paco-nav-item">
+        <div class="paco-nav-center-circle">
+            <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h5v-6h4v6h5V10z" fill="#ffffff"/></svg>
+        </div>
+        <span class="paco-nav-label">Trang chủ</span>
+    </a>
 
+    <!-- 4. LIÊN HỆ -> cuộn tới khối địa chỉ chân trang (id="lienhe") -->
+    <a href="#lienhe" class="paco-nav-item">
+        <div class="paco-nav-badge badge-contact">
+            <svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="#5b6fd6" stroke-width="2"/><rect x="3" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><rect x="16.5" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><path d="M7.5 20v.5a3 3 0 0 0 3 3H12" fill="none" stroke="#5b6fd6" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <span class="paco-nav-label">Liên hệ</span>
+    </a>
 
+    <!-- 5. GIỎ HÀNG -> bấm vào sẽ về thẳng form đặt sách (#datsach). Số màu đỏ (id="paco-cart-count")
+         tự tăng khi khách bấm "Thêm vào giỏ" ở khối TÁC PHẨM MỚI phía trên (xem hàm pacoAddToCart cuối trang). -->
+    <a href="#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-cart" style="position:relative;">
+            <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z" fill="#e0611f"/><path d="M6 6 5 3H2" fill="none" stroke="#e0611f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="#e0611f"/><circle cx="18" cy="20" r="1.4" fill="#e0611f"/></svg>
+            <span id="paco-cart-count" style="display:none;position:absolute;top:-4px;right:-4px;background:#b30000;color:#ffffff;font-family:'Times New Roman',serif;font-size:11px;font-weight:bold;min-width:16px;height:16px;line-height:16px;border-radius:8px;text-align:center;padding:0 3px;">0</span>
+        </div>
+        <span class="paco-nav-label">Giỏ hàng</span>
+    </a>
 
-
-
-
-
-
-
-<div class="paco-sticky-container">
-    <a href="#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
-    <a href="#ebook" class="paco-btn-3d right">XEM EBOOK</a>
 </div>
 
 <script>
@@ -2042,6 +2356,40 @@ window.addEventListener('load',function(){
 }
 </script>
 <script src="https://pacoai.duongdenbinhyen.com/widget/pacoai-widget.js" data-ma-nhung="pacoai-1-edd3fd49d0f568b2" data-do-rong-noi-dung="900" defer></script>
+<!-- ================================================================
+     CSS + SCRIPT: "XEM THÊM / THU GỌN" CHO 3 BÀI Ở TRANG CHỦ
+     Thêm ngày 2026-09-12 — Em ECO làm theo yêu cầu Ông Paco
+     Áp dụng cho 3 bài:
+       - ĐƯỜNG ĐẾN BÌNH YÊN         (id: idx-readmore-1 / idx-readmore-btn-1)
+       - LỜI THÌ THẦM TỪ CUỘC ĐỜI    (id: idx-readmore-2 / idx-readmore-btn-2)
+       - TÂM TÌNH CỦA TÁC GIẢ        (id: idx-readmore-3 / idx-readmore-btn-3)
+
+     MUỐN SỬA GÌ, TÌM Ở ĐÂY:
+     - Đổi ĐIỂM CẮT (chỗ hiện "Xem thêm") -> tìm đúng đoạn <p class="book-description">
+       hoặc <p class="author-description"> tương ứng ở phía trên trong file, cắt câu ở chỗ khác
+     - Đổi MÀU chữ "Xem thêm" / "Thu gọn" -> sửa .paco-idx-readmore-btn / .paco-idx-readmore-collapse
+     - Cơ chế: bấm "Xem thêm" sẽ hiện khối <div id="idx-readmore-X"> đang ẩn,
+       bấm "Thu gọn" ở cuối khối đó sẽ ẩn lại — dùng chung 1 hàm pacoToggleReadmore()
+     ================================================================ -->
+<style>
+.paco-idx-readmore-btn { color:#0056b3; font-weight:bold; cursor:pointer; margin-left:5px; }
+.paco-idx-readmore-collapse { color:#0056b3; font-weight:bold; cursor:pointer; text-align:center; margin-top:15px; }
+</style>
+<script>
+function pacoToggleReadmore(contentId, btnId) {
+    var c = document.getElementById(contentId);
+    var b = document.getElementById(btnId);
+    if (c.style.display === "none" || c.style.display === "") {
+        c.style.display = "block";
+        b.style.display = "none";
+    } else {
+        c.style.display = "none";
+        b.style.display = "inline";
+        b.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+}
+</script>
+
 
 </body>
 </html>
