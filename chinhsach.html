@@ -1588,7 +1588,7 @@ window.addEventListener('scroll', function() {
     .paco-fixed-menu {
         position: fixed;
         right: calc((100vw - 900px) / 2 + 5px);
-        top: 75%;
+        top: calc(75% - 60px); /* nang len 60px de chua cho nut chat AI o goc duoi - Em ECO 2026-09-12 */
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
@@ -1602,7 +1602,7 @@ window.addEventListener('scroll', function() {
         object-fit: contain;
     }
     @media (max-width: 900px) {
-        .paco-fixed-menu { right: 5px; }
+        .paco-fixed-menu { right: 8px; }
     }
 </style>
 <div class="paco-fixed-menu">
@@ -1718,65 +1718,115 @@ window.addEventListener('scroll', function() {
 
 
 <style>
-    /* 1. KHỐI CHỨA 2 NÚT - Tối ưu đa thiết bị */
-    .paco-sticky-container {
+    /* MENU CHÂN TRANG 5 ICON (thay 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ) - đồng bộ trang-mau-ceo.html.
+       Trang này không có khung đặt sách (#datsach) / khu liên hệ (#lienhe) riêng nên 3 nút
+       Sách giấy - Giỏ hàng - Liên hệ trỏ thẳng về trang chủ (đúng khu vực tương ứng),
+       riêng Ebook trỏ #ebook ngay trong trang vì trang nào cũng có sẵn khối này. */
+    .paco-bottom-nav {
         position: fixed;
-        bottom: 6px;
-        left: 5%; /* Chuẩn cho điện thoại */
-        width: 90%; 
-        display: flex;
-        gap: 5px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 900px;
         z-index: 99999;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 16px 3px 14px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        border-radius: 22px 22px 0 0;
+        box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
     }
 
-    /* CHỈ ÁP DỤNG CĂN GIỮA CHO MÁY TÍNH (Khóa khổ bài viết) */
-    @media (min-width: 1024px) {
-        .paco-sticky-container {
-            left: 50%; 
-            transform: translateX(-50%); 
-            width: 100%;
-            max-width: 900px; /* Khớp với khổ chữ/hình của bài viết */
-        }
-    }
-
-    /* 2. PHONG CÁCH NÚT 3D SANG TRỌNG (Giữ nguyên) */
-    .paco-btn-3d {
-        flex: 1;
-        height: 45px;
-        background: #87CEFA;
-        color: #004a99;
+    .paco-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 30px;
-        text-transform: uppercase;
-        border-radius: 15px;
+        color: #33475b;
+        font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        flex: 1;
+    }
+
+    .paco-nav-badge {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
         display: flex;
         align-items: center;
-        transition: all 0.2s;
-        border: none;
-        box-shadow: 0 6px 0 #4682B4, 0 8px 15px rgba(0,0,0,0.3);
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
+    .paco-nav-badge svg { width: 24px; height: 24px; }
 
-    .paco-btn-3d.left { justify-content: flex-end; padding-right: 25px; }
-    .paco-btn-3d.right { justify-content: flex-start; padding-left: 25px; }
+    .paco-nav-badge.badge-book   { background: #fff1e6; }
+    .paco-nav-badge.badge-ebook  { background: #e8f1ff; }
+    .paco-nav-badge.badge-contact{ background: #eef1ff; }
+    .paco-nav-badge.badge-cart   { background: #ffece6; }
 
-    .paco-btn-3d:active {
-        box-shadow: 0 2px 0 #5f9ea0, 0 4px 6px rgba(0,0,0,0.3);
-        transform: translateY(4px);
+    .paco-nav-center-circle {
+        width: 62px;
+        height: 62px;
+        margin-top: -26px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #01cb99, #0099cc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 16px rgba(0,153,204,0.4);
+        border: 4px solid #ffffff;
     }
+    .paco-nav-center-circle svg { width: 30px; height: 30px; }
 
-    /* 3. TƯƠNG THÍCH MOBILE CHO NÚT (Giữ nguyên) */
     @media (max-width: 600px) {
-        .paco-btn-3d { font-size: 20px; height: 35px; border-radius: 10px; }
-        .paco-btn-3d.left { padding-right: 15px; }
-        .paco-btn-3d.right { padding-left: 15px; }
+        .paco-nav-item { font-size: 12px; }
+        .paco-nav-badge { width: 38px; height: 38px; }
     }
 </style>
 
 <body>
-<div class="paco-sticky-container">
-    <a href="https://duongdenbinhyen.com/#datsach" class="paco-btn-3d left">MUA SÁCH GIẤY</a>
-    <a href="https://duongdenbinhyen.com/#ebook" class="paco-btn-3d right">XEM EBOOK</a>
+<div class="paco-bottom-nav">
+
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-book">
+            <svg viewBox="0 0 24 24"><path d="M4 4.5A2 2 0 0 1 6 3h8v18H6a2 2 0 0 1-2-1.5z" fill="#e0783c"/><path d="M20 4.5A2 2 0 0 0 18 3h-4v18h4a2 2 0 0 0 2-1.5z" fill="#c85a2a"/></svg>
+        </div>
+        <span class="paco-nav-label">Mua sách giấy</span>
+    </a>
+
+    <a href="#ebook" class="paco-nav-item">
+        <div class="paco-nav-badge badge-ebook">
+            <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" fill="#2f80c4"/><rect x="7.5" y="5.5" width="9" height="10.5" rx="1" fill="#eaf4ff"/><line x1="9" y1="18.5" x2="15" y2="18.5" stroke="#eaf4ff" stroke-width="1.4"/></svg>
+        </div>
+        <span class="paco-nav-label">Mua Ebook</span>
+    </a>
+
+    <a href="https://duongdenbinhyen.com/" class="paco-nav-item">
+        <div class="paco-nav-center-circle">
+            <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h5v-6h4v6h5V10z" fill="#ffffff"/></svg>
+        </div>
+        <span class="paco-nav-label">Trang chủ</span>
+    </a>
+
+    <a href="https://duongdenbinhyen.com/#lienhe" class="paco-nav-item">
+        <div class="paco-nav-badge badge-contact">
+            <svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="#5b6fd6" stroke-width="2"/><rect x="3" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><rect x="16.5" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><path d="M7.5 20v.5a3 3 0 0 0 3 3H12" fill="none" stroke="#5b6fd6" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <span class="paco-nav-label">Liên hệ</span>
+    </a>
+
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-cart">
+            <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z" fill="#e0611f"/><path d="M6 6 5 3H2" fill="none" stroke="#e0611f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="#e0611f"/><circle cx="18" cy="20" r="1.4" fill="#e0611f"/></svg>
+        </div>
+        <span class="paco-nav-label">Giỏ hàng</span>
+    </a>
+
 </div>
+<script src="https://pacoai.duongdenbinhyen.com/widget/pacoai-widget.js" data-ma-nhung="pacoai-1-edd3fd49d0f568b2" data-do-rong-noi-dung="900" defer></script>
 </body>
