@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nhà xuất bản Đại học Quốc gia Hà Nội | Paco Books</title>
+    <!-- ================================================================
+         THAY ĐỔI THEO TỪNG TRANG MỚI — PHẦN 1: META & SCHEMA
+         1. title         = Từ khóa chính + " | Paco Books"
+         2. og:title      = Giống title
+         3. keywords      = Từ khóa chính, tác giả Thiện Nhân, Paco Books
+         4. description   = 150-160 ký tự mô tả nội dung bài, chứa từ khóa chính
+         5. canonical     = URL đầy đủ của trang này
+         6. Schema url    = URL đầy đủ của trang này
+         ================================================================ -->
+    <title>Nhà xuất bản Đại học Thái Nguyên | Paco Books</title>
 
     <meta property="og:site_name" content="Đường Đến Bình Yên" />
-    <meta property="og:title" content="Nhà xuất bản Đại học Quốc gia Hà Nội | Paco Books" />
-<meta property="og:image" content="https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.jpg" />
-<meta property="og:image:secure_url" content="https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.jpg" />
+    <meta property="og:title" content="Nhà xuất bản Đại học Thái Nguyên | Paco Books" />
+<meta property="og:image" content="https://duongdenbinhyen.com/nha-xuat-ban-tri-thuc.jpg" />
+<meta property="og:image:secure_url" content="https://duongdenbinhyen.com/nha-xuat-ban-tri-thuc.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
     <meta property="og:type" content="article" />
@@ -17,28 +26,30 @@
 
 
 
-    <meta name="keywords" content="Nhà xuất bản Đại học Quốc gia Hà Nội, giáo trình, chuyên khảo đại học, tác giả Thiện Nhân, Paco Books, Đường Đến Bình Yên, sách chữa lành" />
-    <meta name="description" content="Thông tin Nhà xuất bản Đại học Quốc gia Hà Nội: địa chỉ, website chính thức, thế mạnh giáo trình, chuyên khảo đại học. Cập nhật 12/09/2026.">
+    <meta name="keywords" content="Nhà xuất bản Đại học Thái Nguyên, tác giả Thiện Nhân, Paco Books, Đường Đến Bình Yên, sách chữa lành" />
+    <meta name="description" content="Thông tin Nhà xuất bản Đại học Thái Nguyên: địa chỉ, website chính thức và thế mạnh xuất bản. Nội dung tổng hợp tham khảo, cập nhật 13/09/2026.">
     <meta name="google-site-verification" content="e6RdS_fFeq2ZbD9cQTTdKpOzAaOb1n4i-UXj9XudBQc" />
 
-    <link rel="canonical" href="https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html" />
+    <link rel="canonical" href="https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-thai-nguyen.html" />
 
-    <script type="application/ld+json">
+    <!-- Schema Article — thay URL và tiêu đề theo trang -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Nhà xuất bản Đại học Quốc gia Hà Nội",
+  "headline": "Nhà xuất bản Đại học Thái Nguyên",
   "author": {"@type": "Person", "name": "Tác giả Thiện Nhân"},
   "publisher": {
     "@type": "Organization",
     "name": "Paco Books",
     "logo": {"@type": "ImageObject", "url": "https://duongdenbinhyen.com/logo-paco.webp"}
   },
-  "url": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html",
-  "datePublished": "2026-09-12",
-  "dateModified": "2026-09-12"
+  "url": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-thai-nguyen.html",
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13"
 }
 </script>
+    <!-- ================================================================ -->
 
 <style>
 
@@ -62,23 +73,26 @@ body {
 .hidden { display: none; }
 
 
+/* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
 .menu-paco {
     position: fixed;
     top: 10px;
     right: calc((100vw - 900px) / 2);
     z-index: 10000;
     color: #008080;
-    font-size: 24px;
+    font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
     cursor: pointer;
     transition: 0.3s;
 }
 
+/* Hiệu ứng khi rê chuột vào nút 3 gạch */
 @media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
 .menu-paco:hover {
-    color: #ff6600;
+    color: #ff6600; /* Đổi sang màu cam để nổi bật */
     transform: scale(1.1);
 }
 
+/* 2. Bảng menu sổ ra */
 .noidung-menu {
     display: none;
     position: fixed;
@@ -103,12 +117,14 @@ body {
     transition: 0.3s;
 }
 
+/* Hiệu ứng nổi bật khi rê chuột vào từng mục menu */
 .noidung-menu a:hover {
-    background: #008080;
-    color: white;
+    background: #008080; /* Nền xanh */
+    color: white; /* Chữ trắng */
 }
 
 
+    /* 1. GIỮ NGUYÊN KHUNG GHIM */
     .header-fixed-container {
         position: -webkit-sticky;
         position: sticky;
@@ -125,8 +141,9 @@ body {
     display: block;
     text-align: center;
     text-decoration: none;
+    /* 1. GIẢM CHIỀU CAO: Để padding 0 và line-height nhỏ lại */
     padding: 0px 0 !important;
-    line-height: 35px !important;
+    line-height: 35px !important; /* Chỉnh số này nhỏ xuống để thanh nền mỏng lại */
     max-width: 100%;
     margin: 0 auto;
     font-family: 'Times New Roman', serif;
@@ -139,6 +156,7 @@ body {
         }
     }
 
+    /* GIỮ NGUYÊN 100% LOGO CỦA ÔNG */
     .paco-part {
         color: #01cb99;
         font-size: 25px;
@@ -166,6 +184,7 @@ body {
     }
 
 
+/* PHẦN 2: GIỮ NGUYÊN GỐC - KHÔNG THAY ĐỔI */
 .paco-banner {
     all: initial;
     display: flex !important;
@@ -192,9 +211,12 @@ body {
 }
 .paco-leaf { width: 50px; height: 50px; fill: #6ab04c; margin-left: 10px; }
 
+/* PHẦN 3: ĐIỀU CHỈNH ÁNH SÁNG XANH BIỂN, CHẬM, LIÊN TỤC */
 #paco-light {
     position: absolute; top: 0; left: -100%; width: 100%; height: 100%; pointer-events: none; z-index: 5;
+    /* Ánh sáng xanh biển mạnh */
     background: linear-gradient(110deg, transparent 15%, rgba(0, 150, 255, 0.2) 50%, transparent 85%);
+    /* Chạy chậm 12 giây, mượt mà bằng transform để tối ưu hiệu suất */
     animation: lightPass 12s infinite linear;
 }
 @keyframes lightPass {
@@ -202,9 +224,11 @@ body {
     100% { transform: translateX(200%); }
 }
 
+/* PHẦN 4: VÔ HIỆU HÓA TUYẾT */
 #paco-snow { display: none; }
 .paco-flake { display: none; }
 
+/* PHẦN 5: GIỮ NGUYÊN GỐC CHO MOBILE */
 @media (max-width: 768px) {
     .paco-banner { height: 170px !important; }
     .paco-text { font-size: 40px !important; }
@@ -212,6 +236,7 @@ body {
 }
 
 
+/* KHỐI: BÀI VIẾT LIÊN QUAN - dùng chung kiểu thẻ với bai-viet-moi.html */
 .related-articles-section { padding: 30px 20px 10px; background-color: #ffffff; }
 .related-articles-label {
     font-family: 'Times New Roman', serif;
@@ -345,7 +370,7 @@ body {
 }
 
 
-        /* KHỐI TỔNG BAO CẢ 2 PHẦN */
+    /* KHỐI TỔNG BAO CẢ 2 PHẦN */
     .paco-main-container {
         padding: 50px 20px;
         background-color: #f0f2f5;
@@ -519,8 +544,6 @@ body {
     }
 
 
-    
-
     .paco-footer {
         padding: 50px 20px 30px;
         background-color: #2c3e50;
@@ -531,6 +554,7 @@ body {
         max-width: 900px;
         margin: auto;
     }
+    /* Chia cột cho phần thông tin */
     .footer-flex {
         display: flex;
         flex-wrap: wrap;
@@ -581,6 +605,7 @@ body {
         align-items: center;
         gap: 10px;
         border-top: 1px solid #3e4f5f;
+        /* HAI DÒNG QUAN TRỌNG NHẤT ĐỂ KHÔNG NHẢY DÒNG */
         flex-wrap: nowrap !important;
         white-space: nowrap !important;
     }
@@ -612,7 +637,7 @@ body {
         object-fit: contain;
     }
     @media (max-width: 900px) {
-        .paco-fixed-menu { right: 5px; }
+        .paco-fixed-menu { right: 8px; }
     }
 
 
@@ -640,19 +665,19 @@ body {
 
     .paco-fixed-nav {
         position: fixed;
-        bottom: 50px;
+        bottom: 50px; /* Cách footer/đáy màn hình 70px */
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Căn giữa màn hình */
         display: flex;
         justify-content: center;
-        gap: 100px;
+        gap: 100px; /* Dãn rộng 2 nút sang 2 bên để không che nội dung giữa */
         width: 100%;
-        max-width: 500px;
-        pointer-events: none;
+        max-width: 500px; /* Giới hạn độ rộng để dễ bấm */
+        pointer-events: none; /* Để không cản trở việc click vào nội dung bên dưới */
         z-index: 9998;
     }
     .paco-nav-btn-fixed {
-        pointer-events: auto;
+        pointer-events: auto; /* Kích hoạt lại click cho nút */
         background: transparent;
         text-decoration: none;
         width: 35px;
@@ -668,8 +693,9 @@ body {
 
     /* ================================================================
        MENU CHÂN TRANG 5 ICON (thay cho 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
-       Lấy đúng bản đã làm ở trang chủ (2026-09-12/index.html) — Em ECO đồng bộ
-       để trang NXB dùng chung 1 kiểu menu chân trang với trang chủ.
+       Đồng bộ với bản đã chốt trên trang chủ (2026-09-12/index.html):
+       nền trắng 100%, căn giữa đúng khổ 900px, chiều cao vừa đủ để không
+       bị thanh điều hướng trình duyệt/điện thoại che mất.
 
        MUỐN SỬA GÌ, TÌM Ở ĐÂY:
        - Đổi LINK từng nút          -> sửa thuộc tính href trong khối HTML bên dưới
@@ -681,7 +707,7 @@ body {
        ================================================================ */
     .paco-bottom-nav {
         position: fixed;
-        bottom: 0;
+        bottom: 0; /* Dính sát đáy, KHÔNG chừa khoảng hở bên dưới */
         left: 50%;
         transform: translateX(-50%); /* Căn giữa theo khổ bài viết (900px), giống các khối fixed khác */
         width: 100%;
@@ -705,7 +731,7 @@ body {
         text-decoration: none;
         color: #33475b;
         font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
         flex: 1;
     }
@@ -741,7 +767,7 @@ body {
     .paco-nav-center-circle svg { width: 30px; height: 30px; }
 
     @media (max-width: 600px) {
-        .paco-nav-item { font-size: 10px; }
+        .paco-nav-item { font-size: 12px; }
         .paco-nav-badge { width: 38px; height: 38px; }
     }
 
@@ -749,11 +775,16 @@ body {
 </head>
 <body>
 
-<h1 style="display:none;">Nhà xuất bản Đại học Quốc gia Hà Nội | Tác giả Thiện Nhân | Paco Books</h1>
+<h1 style="display:none;">Nhà xuất bản Đại học Thái Nguyên | Tác giả Thiện Nhân | Paco Books</h1>
+<!-- ================================================================ -->
+
 
 
 <div class="paco-page-wrap">
 <main>
+
+
+
 
 
 <div class="menu-paco" onclick="toggleMenu()" id="menuButton">☰</div>
@@ -768,11 +799,31 @@ body {
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="header-fixed-container">
     <a href="https://duongdenbinhyen.com/" class="paco-brand">
         <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
     </a>
 </div>
+
+
+
+
+
+
+
+
 
 
 <section class="paco-banner">
@@ -787,6 +838,22 @@ body {
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ================================================================
      NỘI DUNG GIỚI THIỆU NHÀ XUẤT BẢN — trang thuộc thư mục trang-nxb
      Tuân theo file quy-tac-bai-viet-nha-xuat-ban.txt (cùng thư mục)
@@ -794,17 +861,17 @@ body {
 <section style="max-width:900px;margin:0 auto;padding:0;font-family:'Times New Roman',Times,serif;">
     <div style="padding:0 20px;">
 
-    <h2 style="font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;color:#004a99;margin-bottom:8px;">Nhà xuất bản Đại học Quốc gia Hà Nội</h2>
-    <h3 style="font-size:22px;font-weight:bold;margin-bottom:8px;color:#222;">Nhà xuất bản Đại học Quốc gia Hà Nội - Địa chỉ, website chính thức</h3>
-    <p style="font-size:14px;font-style:italic;color:#333;margin-bottom:20px;">Cập nhật: 2026-09-12 — Nội dung tổng hợp tham khảo</p>
+    <h2 style="font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;color:#004a99;margin-bottom:8px;">Nhà xuất bản Đại học Thái Nguyên</h2>
+    <h3 style="font-size:22px;font-weight:bold;margin-bottom:8px;color:#222;">Nhà xuất bản Đại học Thái Nguyên - Địa chỉ, website chính thức</h3>
+    <p style="font-size:14px;font-style:italic;color:#333;margin-bottom:20px;">Cập nhật: 2026-09-13 — Nội dung tổng hợp tham khảo</p>
 
     <div style="font-size:18px;line-height:1.5;text-align:justify;color:#333;">
-    <p>Nhà xuất bản Đại học Quốc gia Hà Nội thành lập ngày 12/12/1995, trực thuộc Đại học Quốc gia Hà Nội, đặt trụ sở tại 16 Hàng Chuối, Hai Bà Trưng, Hà Nội.</p>
+    <p>Nhà xuất bản Đại học Thái Nguyên là đơn vị xuất bản trực thuộc Đại học Thái Nguyên, có website chính thức tại nxb.tnu.edu.vn. Theo danh sách chính thức, trụ sở đặt tại phường Tân Thịnh, Thành phố Thái Nguyên. Đơn vị đã kỷ niệm 10 năm thành lập vào năm 2018, tương ứng năm thành lập khoảng 2008.</p>
 
-    <p>Đơn vị có thế mạnh về giáo trình, chuyên khảo và tài liệu tham khảo bậc đại học, sau đại học, phục vụ đào tạo và nghiên cứu.</p>
+    <p>Nhà xuất bản chuyên xuất bản giáo trình, sách chuyên khảo phục vụ đào tạo và nghiên cứu khoa học cho hệ thống các trường thành viên của Đại học Thái Nguyên, đơn vị đào tạo đại học đa ngành lớn tại khu vực trung du và miền núi phía Bắc.</p>
 
-    <p><strong>Địa chỉ:</strong> 16 Hàng Chuối, Hai Bà Trưng, Hà Nội<br>
-    <strong>Website chính thức:</strong> <a href="https://press.vnu.edu.vn" target="_blank" rel="nofollow noopener" style="color:#0056b3;">press.vnu.edu.vn</a></p>
+    <p><strong>Địa chỉ:</strong> Phường Tân Thịnh, Thành phố Thái Nguyên.<br>
+    <strong>Website chính thức:</strong> <a href="http://nxb.tnu.edu.vn/" target="_blank" rel="nofollow noopener" style="color:#0056b3;">http://nxb.tnu.edu.vn/</a></p>
 
     <p><p>Bên cạnh những đầu sách chuyên môn, nhiều độc giả sau giờ làm cũng tìm đến <a href="https://duongdenbinhyen.com/sach-phat-trien-ban-than.html" style="color:#0056b3;">sách phát triển bản thân</a> như một cách để lắng lại và chăm sóc đời sống tinh thần của mình.</p>
 
@@ -813,47 +880,56 @@ body {
     <p>Nếu cần thêm gợi ý, Ông/Bà có thể ghé qua chuyên mục <a href="https://duongdenbinhyen.com/sach-truyen-cam-hung.html" style="color:#0056b3;">sách truyền cảm hứng</a> trên Paco Books để chọn cho mình một cuốn phù hợp.</p></p>
 
     <p style="font-size:14px;color:#555;background:#f5f7fa;border-left:4px solid #004a99;padding:12px 16px;margin-top:25px;">
-    <strong>Lưu ý:</strong> Thông tin trong bài mang tính tham khảo, được tổng hợp tại thời điểm đăng bài (2026-09-12), không đại diện cho quan điểm hay xác nhận chính thức từ Nhà xuất bản Đại học Quốc gia Hà Nội. Quý độc giả vui lòng truy cập website chính thức của Nhà xuất bản Đại học Quốc gia Hà Nội để có thông tin cập nhật, chính xác nhất.
+    <strong>Lưu ý:</strong> Thông tin trong bài mang tính tham khảo, được tổng hợp tại thời điểm đăng bài (2026-09-13), không đại diện cho quan điểm hay xác nhận chính thức từ Nhà xuất bản Đại học Thái Nguyên. Quý độc giả vui lòng đối chiếu thêm với các nguồn chính thức (website, cổng thông tin cơ quan chủ quản) để có thông tin cập nhật, chính xác nhất.
     </p>
     </div>
 
-    <p style="font-size:18px;line-height:1.5;text-align:justify;color:#333;margin-top:15px;">Nếu Ông/Bà muốn tìm thêm những trang viết chữa lành khác, có thể đọc bài "<a href="https://duongdenbinhyen.com/cam-giac-trong-rong.html" style="color:#0056b3;">Khi Có Đủ Đầy Mà Lòng Vẫn Thấy Trống Trải</a>" hoặc "<a href="https://duongdenbinhyen.com/lam-sao-de-song-cham-lai.html" style="color:#0056b3;">Giữa Cuộc Đời Vội Vã, Học Cách Bước Chậm Một Nhịp</a>" trên Paco Books.</p>
+    <p style="font-size:18px;line-height:1.5;text-align:justify;color:#333;margin-top:15px;">Nếu Ông/Bà muốn tìm thêm những trang viết chữa lành khác, có thể đọc bài "<a href="https://duongdenbinhyen.com/ai-o-lai-ben-ta-luc-tuoi-gia.html" style="color:#0056b3;">Ai Ở Lại Bên Ta Lúc Tuổi Già</a>" hoặc "<a href="https://duongdenbinhyen.com/ap-luc-mang-xa-hoi.html" style="color:#0056b3;">Áp Lực Mạng Xã Hội</a>" trên Paco Books.</p>
 
     <p style="text-align:right;font-style:italic;font-weight:bold;margin-top:30px;color:#004a99;">
         <a href="https://duongdenbinhyen.com/" style="color:#004a99;text-decoration:none;">Tác giả Thiện Nhân</a>
     </p>
     </div>
 
-    <img src="nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.jpg"
-         alt="Nhà xuất bản Đại học Quốc gia Hà Nội — Tác giả Thiện Nhân"
+    <img src="nha-xuat-ban-tri-thuc.jpg"
+         alt="Nhà xuất bản Đại học Thái Nguyên — Tác giả Thiện Nhân"
          width="1200" height="630"
          style="width:100%;height:auto;display:block;margin-top:20px;"
          loading="lazy">
 </section>
-<!-- ================================================================ -->
-
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — KHỐI "BÀI VIẾT LIÊN QUAN"
+     Xem quy tắc xoay vòng (Nhóm 4) ở mục 5 SKILL:
+       Thẻ 1 = Trang chủ (cố định)
+       Thẻ 2 = Trang [STT+1] trong sitemap.xml
+       Thẻ 3 = Trang [STT + nửa tổng số trang đã đánh số] trong sitemap.xml
+     Ảnh đại diện: dùng CỐ ĐỊNH đúng 3 ảnh sau cho mọi trang (giống trang mẫu
+     loi-thi-tham-tu-cuoc-doi.html) — KHÔNG đổi ảnh theo từng trang được link:
+       ddenbyen.jpg | loi-thi-tham-tu-cuoc-doi.jpg | logo-paco.webp
+     ================================================================ -->
 <section class="related-articles-section">
     <span class="related-articles-label">Bài viết liên quan</span>
     <div class="news-grid-img">
         <a href="https://duongdenbinhyen.com/" class="news-card-img"><img src="https://duongdenbinhyen.com/logo-paco.webp" alt="Paco Books - Thương hiệu sách chữa lành" loading="lazy"><span class="news-card-text"><span class="news-card-title">Paco Books - Thương hiệu sách chữa lành</span><span class="news-card-desc">Câu chuyện thương hiệu đứng sau mỗi trang sách</span></span></a>
-        <a href="https://duongdenbinhyen.com/cam-giac-trong-rong.html" class="news-card-img"><img src="https://duongdenbinhyen.com/ddenbyen.jpg" alt="Khi Có Đủ Đầy Mà Lòng Vẫn Thấy Trống Trải" loading="lazy"><span class="news-card-text"><span class="news-card-title">Khi Có Đủ Đầy Mà Lòng Vẫn Thấy Trống Trải</span><span class="news-card-desc">Một góc nhìn khác trong hành trình chữa lành cùng Paco Books.</span></span></a>
-        <a href="https://duongdenbinhyen.com/lam-sao-de-song-cham-lai.html" class="news-card-img"><img src="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.jpg" alt="Giữa Cuộc Đời Vội Vã, Học Cách Bước Chậm Một Nhịp" loading="lazy"><span class="news-card-text"><span class="news-card-title">Giữa Cuộc Đời Vội Vã, Học Cách Bước Chậm Một Nhịp</span><span class="news-card-desc">Một góc nhìn khác trong hành trình chữa lành cùng Paco Books.</span></span></a>
+        <a href="https://duongdenbinhyen.com/ai-o-lai-ben-ta-luc-tuoi-gia.html" class="news-card-img"><img src="https://duongdenbinhyen.com/ddenbyen.jpg" alt="Ai Ở Lại Bên Ta Lúc Tuổi Già" loading="lazy"><span class="news-card-text"><span class="news-card-title">Ai Ở Lại Bên Ta Lúc Tuổi Già</span><span class="news-card-desc">Một góc nhìn khác trong hành trình chữa lành cùng Paco Books.</span></span></a>
+        <a href="https://duongdenbinhyen.com/ap-luc-mang-xa-hoi.html" class="news-card-img"><img src="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.jpg" alt="Áp Lực Mạng Xã Hội" loading="lazy"><span class="news-card-text"><span class="news-card-title">Áp Lực Mạng Xã Hội</span><span class="news-card-desc">Một góc nhìn khác trong hành trình chữa lành cùng Paco Books.</span></span></a>
     </div>
 </section>
-
+<!-- ================================================================ -->
+<!-- FAQ HIỂN THỊ — PHẢI khớp 100% với FAQ Schema bên dưới, đúng thứ tự, đủ 3 câu -->
 <div style="max-width:900px;margin:40px auto 20px;padding:0 20px;font-family:inherit">
   <h3 style="font-size:16px;font-weight:700;color:#004a99;border-left:4px solid #004a99;padding-left:12px;margin-bottom:20px">❓ Câu hỏi thường gặp</h3>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Quốc gia Hà Nội thành lập năm nào?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Theo thông tin công khai, đơn vị thành lập ngày 12/12/1995.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Thái Nguyên ở đâu?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Theo danh sách chính thức, trụ sở đặt tại phường Tân Thịnh, Thành phố Thái Nguyên.</p>
   </details>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Quốc gia Hà Nội có địa chỉ ở đâu?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Theo thông tin công khai, đơn vị đặt trụ sở tại 16 Hàng Chuối, Hai Bà Trưng, Hà Nội.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Thái Nguyên trực thuộc đơn vị nào?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Đây là đơn vị xuất bản của Đại học Thái Nguyên.</p>
   </details>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Quốc gia Hà Nội chuyên mảng sách nào?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Đơn vị có thế mạnh về giáo trình, chuyên khảo và tài liệu tham khảo bậc đại học, sau đại học.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Đại học Thái Nguyên mạnh về mảng sách nào?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Nhà xuất bản tập trung giáo trình, sách chuyên khảo phục vụ đào tạo, nghiên cứu của hệ thống Đại học Thái Nguyên.</p>
   </details>
 </div>
 
@@ -890,6 +966,7 @@ body {
         Hashtag: #loithithamtucuocdoi #langnghe #tamhon #camxuc #thiennhan #dieukydieu #binhyentamhon #sachmoi #mienbinhyen #tacgiathiennhan
     </p>
 </section>
+
 
 
 
@@ -996,6 +1073,8 @@ body {
 </footer>
 
 
+
+
 <div class="paco-stats-box">
     <div class="stats-item">
         <span class="stats-label">🕒 Giờ VN :</span>
@@ -1008,13 +1087,21 @@ body {
 </div>
 
 
+
+
 <footer class="paco-footer" style="padding-top: 0;">
     <div class="footer-container">
         <div class="footer-seo" style="border-top: 1px solid #3e4f5f; margin-top: 0; padding-top: 20px; text-align: justify; font-size: 13px;">
 
+            <!-- ================================================
+                 THAY TU KHOA THEO TEN TRANG & BAI VIET
+                 - Chi dung 1 tu khoa chinh cua trang nay
+                 - Vi du: "sach chua lanh tam hon, tac gia Thien Nhan, Paco Books"
+                 ================================================ -->
             <p style="margin-bottom: 20px;">
-                <span class="seo-label">Từ khóa liên quan:</span> Nhà xuất bản Đại học Quốc gia Hà Nội, tác giả Thiện Nhân, Paco Books.
+                <span class="seo-label">Từ khóa liên quan:</span> Nhà xuất bản Đại học Thái Nguyên, tác giả Thiện Nhân, Paco Books.
             </p>
+            <!-- ================================================ -->
 
             <div class="footer-copyright" style="text-align: center; margin-top: 20px; border-top: 1px solid #3e4f5f; padding-top: 15px; font-size: 16px;">
                 © 2025 Đường Đến Bình Yên. All rights reserved.
@@ -1022,6 +1109,8 @@ body {
         </div>
     </div>
 </footer>
+
+
 
 
 <div class="paco-fixed-menu">
@@ -1040,11 +1129,15 @@ body {
 </div>
 
 
+
+
 <a href="#" class="paco-back-top" aria-label="Lên đầu trang" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15L12 9L6 15" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </a>
+
+
 
 
 <div class="paco-fixed-nav">
@@ -1193,7 +1286,7 @@ window.addEventListener('load',function(){
 <!-- ================================================================
      THAY ĐỔI THEO TỪNG TRANG MỚI — SCHEMA BỔ SUNG
      1. Author: giữ nguyên tên tác giả
-     2. Breadcrumb: thay Nhà xuất bản Đại học Quốc gia Hà Nội và nha-xuat-ban-dai-hoc-quoc-gia-ha-noi
+     2. Breadcrumb: thay Nhà xuất bản Bách khoa Hà Nội và nha-xuat-ban-bach-khoa-ha-noi
      3. FAQ: thay câu hỏi và trả lời theo nội dung bài
      ================================================================ -->
 
@@ -1215,10 +1308,10 @@ window.addEventListener('load',function(){
       "url": "https://duongdenbinhyen.com/logo-paco.webp"
     }
   },
-  "headline": "Nhà xuất bản Đại học Quốc gia Hà Nội",
-  "url": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html",
-  "datePublished": "2026-09-12",
-  "dateModified": "2026-09-12"
+  "headline": "Nhà xuất bản Đại học Thái Nguyên",
+  "url": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-thai-nguyen.html",
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13"
 }
 </script>
 
@@ -1237,8 +1330,8 @@ window.addEventListener('load',function(){
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Nhà xuất bản Đại học Quốc gia Hà Nội",
-      "item": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html"
+      "name": "Nhà xuất bản Đại học Thái Nguyên",
+      "item": "https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-thai-nguyen.html"
     }
   ]
 }
@@ -1252,26 +1345,26 @@ window.addEventListener('load',function(){
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Nhà xuất bản Đại học Quốc gia Hà Nội thành lập năm nào?",
+      "name": "Nhà xuất bản Đại học Thái Nguyên ở đâu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Theo thông tin công khai, đơn vị thành lập ngày 12/12/1995."
+        "text": "Theo danh sách chính thức, trụ sở đặt tại phường Tân Thịnh, Thành phố Thái Nguyên."
       }
     },
     {
       "@type": "Question",
-      "name": "Nhà xuất bản Đại học Quốc gia Hà Nội có địa chỉ ở đâu?",
+      "name": "Nhà xuất bản Đại học Thái Nguyên trực thuộc đơn vị nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Theo thông tin công khai, đơn vị đặt trụ sở tại 16 Hàng Chuối, Hai Bà Trưng, Hà Nội."
+        "text": "Đây là đơn vị xuất bản của Đại học Thái Nguyên."
       }
     },
     {
       "@type": "Question",
-      "name": "Nhà xuất bản Đại học Quốc gia Hà Nội chuyên mảng sách nào?",
+      "name": "Nhà xuất bản Đại học Thái Nguyên mạnh về mảng sách nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Đơn vị có thế mạnh về giáo trình, chuyên khảo và tài liệu tham khảo bậc đại học, sau đại học."
+        "text": "Nhà xuất bản tập trung giáo trình, sách chuyên khảo phục vụ đào tạo, nghiên cứu của hệ thống Đại học Thái Nguyên."
       }
     }
   ]
