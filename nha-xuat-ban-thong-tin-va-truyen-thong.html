@@ -598,7 +598,7 @@ body {
     .paco-fixed-menu {
         position: fixed;
         right: calc((100vw - 900px) / 2 + 5px);
-        top: 75%;
+        top: calc(75% - 60px); /* nang len 60px de chua cho nut chat AI o goc duoi - Em ECO 2026-09-12 */
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
@@ -820,7 +820,7 @@ body {
     </p>
     </div>
 
-    <img src="nha-xuat-ban-chinh-tri-quoc-gia-su-that.jpg"
+    <img src="nha-xuat-ban-thong-tin-va-truyen-thong.jpg"
          alt="Nhà xuất bản Thông tin và Truyền thông — Tác giả Thiện Nhân"
          width="1200" height="630"
          style="width:100%;height:auto;display:block;margin-top:20px;"
@@ -1064,20 +1064,20 @@ body {
      ================================================================ -->
 <div class="paco-bottom-nav">
 
-    <!-- 1. SÁCH GIẤY -> về trang chủ, cuộn tới form đặt sách (id="datsach") -->
+    <!-- 1. SÁCH GIẤY -> cuộn tới form đặt sách (id="datsach") -->
     <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
         <div class="paco-nav-badge badge-book">
             <svg viewBox="0 0 24 24"><path d="M4 4.5A2 2 0 0 1 6 3h8v18H6a2 2 0 0 1-2-1.5z" fill="#e0783c"/><path d="M20 4.5A2 2 0 0 0 18 3h-4v18h4a2 2 0 0 0 2-1.5z" fill="#c85a2a"/></svg>
         </div>
-        <span class="paco-nav-label">Sách giấy</span>
+        <span class="paco-nav-label">Mua sách giấy</span>
     </a>
 
-    <!-- 2. EBOOK -> về trang chủ, cuộn tới khối ebook (id="ebook") -->
-    <a href="https://duongdenbinhyen.com/#ebook" class="paco-nav-item">
+    <!-- 2. EBOOK -> cuộn tới khối ebook (id="ebook") -->
+    <a href="#ebook" class="paco-nav-item">
         <div class="paco-nav-badge badge-ebook">
             <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" fill="#2f80c4"/><rect x="7.5" y="5.5" width="9" height="10.5" rx="1" fill="#eaf4ff"/><line x1="9" y1="18.5" x2="15" y2="18.5" stroke="#eaf4ff" stroke-width="1.4"/></svg>
         </div>
-        <span class="paco-nav-label">Ebook</span>
+        <span class="paco-nav-label">Mua Ebook</span>
     </a>
 
     <!-- 3. TRANG CHỦ -> về trang chủ (mục giữa, khối tròn gradient nổi lên) -->
@@ -1088,7 +1088,7 @@ body {
         <span class="paco-nav-label">Trang chủ</span>
     </a>
 
-    <!-- 4. LIÊN HỆ -> về trang chủ, cuộn tới khối địa chỉ chân trang (id="lienhe") -->
+    <!-- 4. LIÊN HỆ -> cuộn tới khối địa chỉ chân trang (id="lienhe") -->
     <a href="https://duongdenbinhyen.com/#lienhe" class="paco-nav-item">
         <div class="paco-nav-badge badge-contact">
             <svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="#5b6fd6" stroke-width="2"/><rect x="3" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><rect x="16.5" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><path d="M7.5 20v.5a3 3 0 0 0 3 3H12" fill="none" stroke="#5b6fd6" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -1096,7 +1096,7 @@ body {
         <span class="paco-nav-label">Liên hệ</span>
     </a>
 
-    <!-- 5. GIỎ HÀNG -> CHƯA gắn chức năng, để href="#" tạm — Ông Paco làm giỏ hàng xong thì đổi link/thêm script ở đây -->
+    <!-- 5. GIỎ HÀNG -> bấm vào sẽ về thẳng form đặt sách (#datsach), giống nút Sách giấy -->
     <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
         <div class="paco-nav-badge badge-cart">
             <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z" fill="#e0611f"/><path d="M6 6 5 3H2" fill="none" stroke="#e0611f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="#e0611f"/><circle cx="18" cy="20" r="1.4" fill="#e0611f"/></svg>
@@ -1107,6 +1107,7 @@ body {
 </div>
 
 <script>
+// 1. MA MENU
 function toggleMenu() {
     var m = document.getElementById("menuList");
     if (m) m.style.display = (m.style.display === "block") ? "none" : "block";
@@ -1121,6 +1122,7 @@ window.addEventListener('scroll', function() {
     if (m) m.style.display = "none";
 });
 
+// 2. MA DONG HO VA BO DEM
 window.addEventListener('load', function() {
     const clockEl = document.getElementById('paco-clock');
     if (clockEl) {
@@ -1131,14 +1133,17 @@ window.addEventListener('load', function() {
             });
         }, 1000);
     }
+// 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
     const counterEl = document.getElementById('paco-counter');
     if (counterEl) {
         fetch('https://script.google.com/macros/s/AKfycbyaf5xLxC48RljyIwlerotX1e38b01BxKtahswy2ZdTjMAGksYJfM-Y6fnBGrwz5fh8Ig/exec')
             .then(res => res.text())
             .then(data => {
+                // data chính là con số chính xác lấy từ ô A2 của Ông
                 counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
             })
             .catch(() => {
+                // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
                 console.log("Lỗi kết nối máy chủ bộ đếm");
             });
     }
@@ -1146,6 +1151,14 @@ window.addEventListener('load', function() {
 
 </script>
 
+<!-- Script 6: Gửi form -->
+
+
+
+
+
+
+<!-- Script 10: Chặn IP spam (delay 4s) -->
 <script>
 window.addEventListener('load',function(){
     setTimeout(function(){
@@ -1173,6 +1186,14 @@ window.addEventListener('load',function(){
 }
 </script>
 
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — SCHEMA BỔ SUNG
+     1. Author: giữ nguyên tên tác giả
+     2. Breadcrumb: thay Nhà xuất bản Thông tin và Truyền thông và nha-xuat-ban-thong-tin-va-truyen-thong
+     3. FAQ: thay câu hỏi và trả lời theo nội dung bài
+     ================================================================ -->
+
+<!-- Schema Author -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1197,6 +1218,7 @@ window.addEventListener('load',function(){
 }
 </script>
 
+<!-- Schema Breadcrumb -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1218,6 +1240,7 @@ window.addEventListener('load',function(){
 }
 </script>
 
+<!-- Schema FAQ — thay câu hỏi và trả lời theo nội dung bài -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1250,6 +1273,7 @@ window.addEventListener('load',function(){
   ]
 }
 </script>
+<!-- ================================================================ -->
 
 <script src="https://pacoai.duongdenbinhyen.com/widget/pacoai-widget.js" data-ma-nhung="pacoai-1-edd3fd49d0f568b2" data-do-rong-noi-dung="900" defer></script>
 </body>

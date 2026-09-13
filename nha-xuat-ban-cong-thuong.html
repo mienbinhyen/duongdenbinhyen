@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nhà xuất bản Giáo dục Việt Nam | Paco Books</title>
+    <!-- ================================================================
+         THAY ĐỔI THEO TỪNG TRANG MỚI — PHẦN 1: META & SCHEMA
+         1. title         = Từ khóa chính + " | Paco Books"
+         2. og:title      = Giống title
+         3. keywords      = Từ khóa chính, tác giả Thiện Nhân, Paco Books
+         4. description   = 150-160 ký tự mô tả nội dung bài, chứa từ khóa chính
+         5. canonical     = URL đầy đủ của trang này
+         6. Schema url    = URL đầy đủ của trang này
+         ================================================================ -->
+    <title>Nhà xuất bản Công Thương | Paco Books</title>
 
     <meta property="og:site_name" content="Đường Đến Bình Yên" />
-    <meta property="og:title" content="Nhà xuất bản Giáo dục Việt Nam | Paco Books" />
-<meta property="og:image" content="https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.jpg" />
-<meta property="og:image:secure_url" content="https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.jpg" />
+    <meta property="og:title" content="Nhà xuất bản Công Thương | Paco Books" />
+<meta property="og:image" content="https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.jpg" />
+<meta property="og:image:secure_url" content="https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
     <meta property="og:type" content="article" />
@@ -17,28 +26,30 @@
 
 
 
-    <meta name="keywords" content="Nhà xuất bản Giáo dục Việt Nam, tác giả Thiện Nhân, Paco Books, Đường Đến Bình Yên, sách chữa lành" />
-    <meta name="description" content="Thông tin nhà xuất bản Giáo dục Việt Nam: địa chỉ, website chính thức, chức năng biên soạn sách giáo khoa. Nội dung tổng hợp tham khảo, cập nhật 12/09/2026.">
+    <meta name="keywords" content="Nhà xuất bản Công Thương, tác giả Thiện Nhân, Paco Books, Đường Đến Bình Yên, sách chữa lành" />
+    <meta name="description" content="Thông tin Nhà xuất bản Công Thương: địa chỉ, website chính thức và thế mạnh xuất bản. Nội dung tổng hợp tham khảo, cập nhật 13/09/2026.">
     <meta name="google-site-verification" content="e6RdS_fFeq2ZbD9cQTTdKpOzAaOb1n4i-UXj9XudBQc" />
 
-    <link rel="canonical" href="https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.html" />
+    <link rel="canonical" href="https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html" />
 
-    <script type="application/ld+json">
+    <!-- Schema Article — thay URL và tiêu đề theo trang -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Nhà xuất bản Giáo dục Việt Nam",
+  "headline": "Nhà xuất bản Công Thương",
   "author": {"@type": "Person", "name": "Tác giả Thiện Nhân"},
   "publisher": {
     "@type": "Organization",
     "name": "Paco Books",
     "logo": {"@type": "ImageObject", "url": "https://duongdenbinhyen.com/logo-paco.webp"}
   },
-  "url": "https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.html",
-  "datePublished": "2026-09-12",
-  "dateModified": "2026-09-12"
+  "url": "https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html",
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13"
 }
 </script>
+    <!-- ================================================================ -->
 
 <style>
 
@@ -62,23 +73,26 @@ body {
 .hidden { display: none; }
 
 
+/* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
 .menu-paco {
     position: fixed;
     top: 10px;
     right: calc((100vw - 900px) / 2);
     z-index: 10000;
     color: #008080;
-    font-size: 24px;
+    font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
     cursor: pointer;
     transition: 0.3s;
 }
 
+/* Hiệu ứng khi rê chuột vào nút 3 gạch */
 @media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
 .menu-paco:hover {
-    color: #ff6600;
+    color: #ff6600; /* Đổi sang màu cam để nổi bật */
     transform: scale(1.1);
 }
 
+/* 2. Bảng menu sổ ra */
 .noidung-menu {
     display: none;
     position: fixed;
@@ -103,12 +117,14 @@ body {
     transition: 0.3s;
 }
 
+/* Hiệu ứng nổi bật khi rê chuột vào từng mục menu */
 .noidung-menu a:hover {
-    background: #008080;
-    color: white;
+    background: #008080; /* Nền xanh */
+    color: white; /* Chữ trắng */
 }
 
 
+    /* 1. GIỮ NGUYÊN KHUNG GHIM */
     .header-fixed-container {
         position: -webkit-sticky;
         position: sticky;
@@ -125,8 +141,9 @@ body {
     display: block;
     text-align: center;
     text-decoration: none;
+    /* 1. GIẢM CHIỀU CAO: Để padding 0 và line-height nhỏ lại */
     padding: 0px 0 !important;
-    line-height: 35px !important;
+    line-height: 35px !important; /* Chỉnh số này nhỏ xuống để thanh nền mỏng lại */
     max-width: 100%;
     margin: 0 auto;
     font-family: 'Times New Roman', serif;
@@ -139,6 +156,7 @@ body {
         }
     }
 
+    /* GIỮ NGUYÊN 100% LOGO CỦA ÔNG */
     .paco-part {
         color: #01cb99;
         font-size: 25px;
@@ -166,6 +184,7 @@ body {
     }
 
 
+/* PHẦN 2: GIỮ NGUYÊN GỐC - KHÔNG THAY ĐỔI */
 .paco-banner {
     all: initial;
     display: flex !important;
@@ -192,9 +211,12 @@ body {
 }
 .paco-leaf { width: 50px; height: 50px; fill: #6ab04c; margin-left: 10px; }
 
+/* PHẦN 3: ĐIỀU CHỈNH ÁNH SÁNG XANH BIỂN, CHẬM, LIÊN TỤC */
 #paco-light {
     position: absolute; top: 0; left: -100%; width: 100%; height: 100%; pointer-events: none; z-index: 5;
+    /* Ánh sáng xanh biển mạnh */
     background: linear-gradient(110deg, transparent 15%, rgba(0, 150, 255, 0.2) 50%, transparent 85%);
+    /* Chạy chậm 12 giây, mượt mà bằng transform để tối ưu hiệu suất */
     animation: lightPass 12s infinite linear;
 }
 @keyframes lightPass {
@@ -202,9 +224,11 @@ body {
     100% { transform: translateX(200%); }
 }
 
+/* PHẦN 4: VÔ HIỆU HÓA TUYẾT */
 #paco-snow { display: none; }
 .paco-flake { display: none; }
 
+/* PHẦN 5: GIỮ NGUYÊN GỐC CHO MOBILE */
 @media (max-width: 768px) {
     .paco-banner { height: 170px !important; }
     .paco-text { font-size: 40px !important; }
@@ -212,6 +236,7 @@ body {
 }
 
 
+/* KHỐI: BÀI VIẾT LIÊN QUAN - dùng chung kiểu thẻ với bai-viet-moi.html */
 .related-articles-section { padding: 30px 20px 10px; background-color: #ffffff; }
 .related-articles-label {
     font-family: 'Times New Roman', serif;
@@ -345,7 +370,7 @@ body {
 }
 
 
-        /* KHỐI TỔNG BAO CẢ 2 PHẦN */
+    /* KHỐI TỔNG BAO CẢ 2 PHẦN */
     .paco-main-container {
         padding: 50px 20px;
         background-color: #f0f2f5;
@@ -519,8 +544,6 @@ body {
     }
 
 
-    
-
     .paco-footer {
         padding: 50px 20px 30px;
         background-color: #2c3e50;
@@ -531,6 +554,7 @@ body {
         max-width: 900px;
         margin: auto;
     }
+    /* Chia cột cho phần thông tin */
     .footer-flex {
         display: flex;
         flex-wrap: wrap;
@@ -581,6 +605,7 @@ body {
         align-items: center;
         gap: 10px;
         border-top: 1px solid #3e4f5f;
+        /* HAI DÒNG QUAN TRỌNG NHẤT ĐỂ KHÔNG NHẢY DÒNG */
         flex-wrap: nowrap !important;
         white-space: nowrap !important;
     }
@@ -612,7 +637,7 @@ body {
         object-fit: contain;
     }
     @media (max-width: 900px) {
-        .paco-fixed-menu { right: 5px; }
+        .paco-fixed-menu { right: 8px; }
     }
 
 
@@ -640,19 +665,19 @@ body {
 
     .paco-fixed-nav {
         position: fixed;
-        bottom: 50px;
+        bottom: 50px; /* Cách footer/đáy màn hình 70px */
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Căn giữa màn hình */
         display: flex;
         justify-content: center;
-        gap: 100px;
+        gap: 100px; /* Dãn rộng 2 nút sang 2 bên để không che nội dung giữa */
         width: 100%;
-        max-width: 500px;
-        pointer-events: none;
+        max-width: 500px; /* Giới hạn độ rộng để dễ bấm */
+        pointer-events: none; /* Để không cản trở việc click vào nội dung bên dưới */
         z-index: 9998;
     }
     .paco-nav-btn-fixed {
-        pointer-events: auto;
+        pointer-events: auto; /* Kích hoạt lại click cho nút */
         background: transparent;
         text-decoration: none;
         width: 35px;
@@ -668,8 +693,9 @@ body {
 
     /* ================================================================
        MENU CHÂN TRANG 5 ICON (thay cho 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
-       Lấy đúng bản đã làm ở trang chủ (2026-09-12/index.html) — Em ECO đồng bộ
-       để trang NXB dùng chung 1 kiểu menu chân trang với trang chủ.
+       Đồng bộ với bản đã chốt trên trang chủ (2026-09-12/index.html):
+       nền trắng 100%, căn giữa đúng khổ 900px, chiều cao vừa đủ để không
+       bị thanh điều hướng trình duyệt/điện thoại che mất.
 
        MUỐN SỬA GÌ, TÌM Ở ĐÂY:
        - Đổi LINK từng nút          -> sửa thuộc tính href trong khối HTML bên dưới
@@ -681,7 +707,7 @@ body {
        ================================================================ */
     .paco-bottom-nav {
         position: fixed;
-        bottom: 0;
+        bottom: 0; /* Dính sát đáy, KHÔNG chừa khoảng hở bên dưới */
         left: 50%;
         transform: translateX(-50%); /* Căn giữa theo khổ bài viết (900px), giống các khối fixed khác */
         width: 100%;
@@ -705,7 +731,7 @@ body {
         text-decoration: none;
         color: #33475b;
         font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 600;
         flex: 1;
     }
@@ -741,7 +767,7 @@ body {
     .paco-nav-center-circle svg { width: 30px; height: 30px; }
 
     @media (max-width: 600px) {
-        .paco-nav-item { font-size: 10px; }
+        .paco-nav-item { font-size: 12px; }
         .paco-nav-badge { width: 38px; height: 38px; }
     }
 
@@ -749,11 +775,16 @@ body {
 </head>
 <body>
 
-<h1 style="display:none;">Nhà xuất bản Giáo dục Việt Nam | Tác giả Thiện Nhân | Paco Books</h1>
+<h1 style="display:none;">Nhà xuất bản Công Thương | Tác giả Thiện Nhân | Paco Books</h1>
+<!-- ================================================================ -->
+
 
 
 <div class="paco-page-wrap">
 <main>
+
+
+
 
 
 <div class="menu-paco" onclick="toggleMenu()" id="menuButton">☰</div>
@@ -768,11 +799,31 @@ body {
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="header-fixed-container">
     <a href="https://duongdenbinhyen.com/" class="paco-brand">
         <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
     </a>
 </div>
+
+
+
+
+
+
+
+
 
 
 <section class="paco-banner">
@@ -787,6 +838,22 @@ body {
 </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ================================================================
      NỘI DUNG GIỚI THIỆU NHÀ XUẤT BẢN — trang thuộc thư mục trang-nxb
      Tuân theo file quy-tac-bai-viet-nha-xuat-ban.txt (cùng thư mục)
@@ -794,41 +861,50 @@ body {
 <section style="max-width:900px;margin:0 auto;padding:0;font-family:'Times New Roman',Times,serif;">
     <div style="padding:0 20px;">
 
-    <h2 style="font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;color:#004a99;margin-bottom:8px;">Nhà xuất bản Giáo dục Việt Nam</h2>
-    <h3 style="font-size:22px;font-weight:bold;margin-bottom:8px;color:#222;">Nhà xuất bản Giáo dục Việt Nam - Địa chỉ, website chính thức</h3>
-    <p style="font-size:14px;font-style:italic;color:#333;margin-bottom:20px;">Cập nhật: 2026-09-12 — Nội dung tổng hợp tham khảo</p>
+    <h2 style="font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;color:#004a99;margin-bottom:8px;">Nhà xuất bản Công Thương</h2>
+    <h3 style="font-size:22px;font-weight:bold;margin-bottom:8px;color:#222;">Nhà xuất bản Công Thương - Địa chỉ, website chính thức</h3>
+    <p style="font-size:14px;font-style:italic;color:#333;margin-bottom:20px;">Cập nhật: 2026-09-13 — Nội dung tổng hợp tham khảo</p>
 
     <div style="font-size:18px;line-height:1.5;text-align:justify;color:#333;">
-    <p>Nhà xuất bản Giáo dục Việt Nam được thành lập ngày 1/6/1957, trực thuộc Bộ Giáo dục và Đào tạo, trụ sở tại 81 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội. Từ năm 2010, đơn vị hoạt động theo mô hình công ty trách nhiệm hữu hạn một thành viên do Nhà nước làm chủ sở hữu.</p>
+    <p>Nhà xuất bản Công Thương được thành lập tháng 8/2009 theo Quyết định số 4191/QĐ-BCT, trực thuộc Bộ Công Thương. Đây là đơn vị xuất bản chuyên ngành, ra đời trong giai đoạn Việt Nam đẩy mạnh hội nhập kinh tế quốc tế sau khi gia nhập WTO (2007), nhằm đáp ứng nhu cầu tài liệu chuyên môn cho cán bộ, doanh nghiệp và người nghiên cứu trong lĩnh vực công thương. Trụ sở đặt tại Tầng 4, Tòa nhà Bộ Công Thương, 655 Phạm Văn Đồng, Hà Nội — cùng địa chỉ với trụ sở cơ quan chủ quản, thuận tiện cho việc phối hợp xuất bản các ấn phẩm phổ biến chính sách, pháp luật ngành.</p>
 
-    <p>Chức năng chính của Nhà xuất bản Giáo dục Việt Nam là tổ chức biên soạn, biên tập, in ấn và phát hành sách giáo khoa, tài liệu giáo dục phục vụ giảng dạy - học tập ở các cấp học trên cả nước. Đơn vị có quy mô xuất bản lớn với gần 40 công ty thành viên, đội ngũ biên tập gồm nhiều giáo sư, tiến sĩ, thạc sĩ cùng khoảng 1.000 cộng tác viên là các nhà khoa học, nhà giáo.</p>
+    <p>Nhà xuất bản chuyên xuất bản tài liệu về hội nhập kinh tế quốc tế, xuất khẩu, thị trường các nước, khoa học - công nghệ và tài liệu bồi dưỡng nghiệp vụ ngành công thương. Các đầu sách tiêu biểu thường gắn với chức năng quản lý nhà nước của Bộ Công Thương như: sổ tay hướng dẫn thực thi các hiệp định thương mại tự do (FTA), tài liệu phổ biến quy định về quản lý thị trường, an toàn thực phẩm, hóa chất, điện lực, cùng các ấn phẩm phục vụ đào tạo, bồi dưỡng cán bộ, công chức ngành công thương từ trung ương đến địa phương. Nhờ vị trí gắn liền với cơ quan quản lý ngành, nhà xuất bản có lợi thế tiếp cận nguồn tài liệu chính sách gốc và đội ngũ chuyên gia đầu ngành để biên soạn, thẩm định nội dung trước khi phát hành.</p>
 
-    <p><strong>Địa chỉ:</strong> 81 Trần Hưng Đạo, Hoàn Kiếm, Hà Nội<br>
-    <strong>Website chính thức:</strong> <a href="https://nxbgd.vn/" target="_blank" rel="nofollow noopener" style="color:#0056b3;">https://nxbgd.vn/</a><br>
-    <strong>Điện thoại:</strong> 024.3822.0801</p>
+    <p>Ngoài Nhà xuất bản Công Thương, bạn đọc quan tâm đến các đơn vị xuất bản khác có thể tham khảo thêm về NXB Đông A tại đây. <a href="https://duongdenbinhyen.com/dong-a.html" style="color:#0056b3;">tại đây</a>.</p>
 
-    <p>Bên cạnh sách giáo khoa, độc giả yêu thích sách văn học đời sống nhẹ nhàng có thể tìm đọc thêm các tác phẩm của tác giả Thiện Nhân tại <a href="https://duongdenbinhyen.com/" style="color:#0056b3;">Paco Books</a>.</p>
+    <p><strong>Địa chỉ:</strong> Tầng 4, 655 Phạm Văn Đồng, Hà Nội (theo trang mẫu ghi quận "Bắc Từ Liêm"; website chính thức hiện ghi phường mới "Nghĩa Đô" — cùng địa chỉ, chỉ khác tên đơn vị hành chính do sáp nhập).<br>
+    <strong>Website chính thức:</strong> <a href="https://nxbcongthuong.vn/" target="_blank" rel="nofollow noopener" style="color:#0056b3;">https://nxbcongthuong.vn/</a></p>
+
+    <p>Nếu Ông/Bà đang tìm những đầu sách văn học nhẹ nhàng, chữa lành như "Đường Đến Bình Yên" hay "Lời Thì Thầm Từ Cuộc Đời" của tác giả Thiện Nhân, có thể tham khảo thêm tại <a href="https://duongdenbinhyen.com/" style="color:#0056b3;">Paco Books</a>.</p>
 
     <p style="font-size:14px;color:#555;background:#f5f7fa;border-left:4px solid #004a99;padding:12px 16px;margin-top:25px;">
-    <strong>Lưu ý:</strong> Thông tin trong bài mang tính tham khảo, được tổng hợp tại thời điểm đăng bài (2026-09-12), không đại diện cho quan điểm hay xác nhận chính thức từ Nhà xuất bản Giáo dục Việt Nam. Quý độc giả vui lòng truy cập website chính thức của Nhà xuất bản Giáo dục Việt Nam để có thông tin cập nhật, chính xác nhất.
+    <strong>Lưu ý:</strong> Thông tin trong bài mang tính tham khảo, được tổng hợp tại thời điểm đăng bài (2026-09-13), không đại diện cho quan điểm hay xác nhận chính thức từ Nhà xuất bản Công Thương. Quý độc giả vui lòng đối chiếu thêm với các nguồn chính thức (website, cổng thông tin cơ quan chủ quản) để có thông tin cập nhật, chính xác nhất.
     </p>
     </div>
 
-    <p style="font-size:18px;line-height:1.5;text-align:justify;color:#333;margin-top:15px;">Nếu Ông/Bà muốn tìm thêm những trang viết chữa lành khác, có thể đọc bài "<a href="https://duongdenbinhyen.com/doc-sach-hay.html" style="color:#0056b3;">Đọc Một Cuốn Sách Hay Là Sống Thêm Một Cuộc Đời</a>" hoặc "<a href="https://duongdenbinhyen.com/mua-sach-online.html" style="color:#0056b3;">Chỉ Một Cú Nhấp Chuột, Cả Một Thế Giới Bình Yên Đến Bên Bạn</a>" trên Paco Books.</p>
+    <p style="font-size:18px;line-height:1.5;text-align:justify;color:#333;margin-top:15px;">Nếu Ông/Bà muốn tìm thêm những trang viết chữa lành khác, có thể đọc bài "<a href="https://duongdenbinhyen.com/ban-chat-cua-hon-nhan.html" style="color:#0056b3;">Bản Chất Của Hôn Nhân</a>" hoặc "<a href="https://duongdenbinhyen.com/binh-yen-chang-o-dau-xa.html" style="color:#0056b3;">Bình Yên Chẳng Ở Đâu Xa</a>" trên Paco Books.</p>
 
     <p style="text-align:right;font-style:italic;font-weight:bold;margin-top:30px;color:#004a99;">
         <a href="https://duongdenbinhyen.com/" style="color:#004a99;text-decoration:none;">Tác giả Thiện Nhân</a>
     </p>
     </div>
 
-    <img src="nha-xuat-ban-giao-duc-viet-nam.jpg"
-         alt="Nhà xuất bản Giáo dục Việt Nam — Tác giả Thiện Nhân"
+    <img src="nha-xuat-ban-cong-thuong.jpg"
+         alt="Nhà xuất bản Công Thương — Tác giả Thiện Nhân"
          width="1200" height="630"
          style="width:100%;height:auto;display:block;margin-top:20px;"
          loading="lazy">
 </section>
-<!-- ================================================================ -->
-
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — KHỐI "BÀI VIẾT LIÊN QUAN"
+     Xem quy tắc xoay vòng (Nhóm 4) ở mục 5 SKILL:
+       Thẻ 1 = Trang chủ (cố định)
+       Thẻ 2 = Trang [STT+1] trong sitemap.xml
+       Thẻ 3 = Trang [STT + nửa tổng số trang đã đánh số] trong sitemap.xml
+     Ảnh đại diện: dùng CỐ ĐỊNH đúng 3 ảnh sau cho mọi trang (giống trang mẫu
+     loi-thi-tham-tu-cuoc-doi.html) — KHÔNG đổi ảnh theo từng trang được link:
+       ddenbyen.jpg | loi-thi-tham-tu-cuoc-doi.jpg | logo-paco.webp
+     ================================================================ -->
 <section class="related-articles-section">
     <span class="related-articles-label">Bài viết liên quan</span>
     <div class="news-grid-img">
@@ -837,20 +913,21 @@ body {
         <a href="https://duongdenbinhyen.com/bai-viet-moi.html" class="news-card-img"><img src="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.jpg" alt="Bài viết mới" loading="lazy"><span class="news-card-text"><span class="news-card-title">Bài viết mới</span><span class="news-card-desc">Xem thêm các bài viết khác từ Paco Books</span></span></a>
     </div>
 </section>
-
+<!-- ================================================================ -->
+<!-- FAQ HIỂN THỊ — PHẢI khớp 100% với FAQ Schema bên dưới, đúng thứ tự, đủ 3 câu -->
 <div style="max-width:900px;margin:40px auto 20px;padding:0 20px;font-family:inherit">
   <h3 style="font-size:16px;font-weight:700;color:#004a99;border-left:4px solid #004a99;padding-left:12px;margin-bottom:20px">❓ Câu hỏi thường gặp</h3>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Giáo dục Việt Nam trực thuộc cơ quan nào?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Theo thông tin công khai, Nhà xuất bản Giáo dục Việt Nam trực thuộc Bộ Giáo dục và Đào tạo, thành lập năm 1957. Thông tin mang tính tham khảo.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Công Thương ở đâu?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Theo thông tin công khai, trụ sở đặt tại Tầng 4, 655 Phạm Văn Đồng, Hà Nội, trong tòa nhà Bộ Công Thương.</p>
   </details>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Website chính thức của Nhà xuất bản Giáo dục Việt Nam là gì?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Website chính thức được công bố là https://nxbgd.vn/, đây là kênh tham khảo để cập nhật thông tin mới nhất.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Công Thương thành lập năm nào?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Theo thông tin công khai, nhà xuất bản được thành lập tháng 8/2009 theo Quyết định 4191/QĐ-BCT.</p>
   </details>
   <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Giáo dục Việt Nam chuyên mảng nào?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Đơn vị được biết đến với chức năng chính là biên soạn, in ấn và phát hành sách giáo khoa, tài liệu giáo dục. Paco Books tổng hợp thông tin này để bạn đọc tham khảo thêm.</p>
+    <summary style="font-weight:600;cursor:pointer;color:#222">Nhà xuất bản Công Thương mạnh về mảng sách nào?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Đơn vị tập trung xuất bản tài liệu hội nhập kinh tế quốc tế, xuất khẩu và khoa học - công nghệ ngành công thương.</p>
   </details>
 </div>
 
@@ -887,6 +964,7 @@ body {
         Hashtag: #loithithamtucuocdoi #langnghe #tamhon #camxuc #thiennhan #dieukydieu #binhyentamhon #sachmoi #mienbinhyen #tacgiathiennhan
     </p>
 </section>
+
 
 
 
@@ -993,6 +1071,8 @@ body {
 </footer>
 
 
+
+
 <div class="paco-stats-box">
     <div class="stats-item">
         <span class="stats-label">🕒 Giờ VN :</span>
@@ -1005,13 +1085,21 @@ body {
 </div>
 
 
+
+
 <footer class="paco-footer" style="padding-top: 0;">
     <div class="footer-container">
         <div class="footer-seo" style="border-top: 1px solid #3e4f5f; margin-top: 0; padding-top: 20px; text-align: justify; font-size: 13px;">
 
+            <!-- ================================================
+                 THAY TU KHOA THEO TEN TRANG & BAI VIET
+                 - Chi dung 1 tu khoa chinh cua trang nay
+                 - Vi du: "sach chua lanh tam hon, tac gia Thien Nhan, Paco Books"
+                 ================================================ -->
             <p style="margin-bottom: 20px;">
-                <span class="seo-label">Từ khóa liên quan:</span> Nhà xuất bản Giáo dục Việt Nam, tác giả Thiện Nhân, Paco Books.
+                <span class="seo-label">Từ khóa liên quan:</span> Nhà xuất bản Công Thương, tác giả Thiện Nhân, Paco Books.
             </p>
+            <!-- ================================================ -->
 
             <div class="footer-copyright" style="text-align: center; margin-top: 20px; border-top: 1px solid #3e4f5f; padding-top: 15px; font-size: 16px;">
                 © 2025 Đường Đến Bình Yên. All rights reserved.
@@ -1019,6 +1107,8 @@ body {
         </div>
     </div>
 </footer>
+
+
 
 
 <div class="paco-fixed-menu">
@@ -1037,11 +1127,15 @@ body {
 </div>
 
 
+
+
 <a href="#" class="paco-back-top" aria-label="Lên đầu trang" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M18 15L12 9L6 15" stroke="rgba(0,0,0,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
 </a>
+
+
 
 
 <div class="paco-fixed-nav">
@@ -1190,7 +1284,7 @@ window.addEventListener('load',function(){
 <!-- ================================================================
      THAY ĐỔI THEO TỪNG TRANG MỚI — SCHEMA BỔ SUNG
      1. Author: giữ nguyên tên tác giả
-     2. Breadcrumb: thay Nhà xuất bản Giáo dục Việt Nam và nha-xuat-ban-giao-duc-viet-nam
+     2. Breadcrumb: thay Nhà xuất bản Công Thương và nha-xuat-ban-cong-thuong
      3. FAQ: thay câu hỏi và trả lời theo nội dung bài
      ================================================================ -->
 
@@ -1202,7 +1296,7 @@ window.addEventListener('load',function(){
   "author": {
     "@type": "Person",
     "name": "Tác giả Thiện Nhân",
-    "url": "https://duongdenbinhyen.com/gioithieu.html"
+    "url": "https://duongdenbinhyen.com/"
   },
   "publisher": {
     "@type": "Organization",
@@ -1212,10 +1306,10 @@ window.addEventListener('load',function(){
       "url": "https://duongdenbinhyen.com/logo-paco.webp"
     }
   },
-  "headline": "Nhà xuất bản Giáo dục Việt Nam",
-  "url": "https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.html",
-  "datePublished": "2026-09-12",
-  "dateModified": "2026-09-12"
+  "headline": "Nhà xuất bản Công Thương",
+  "url": "https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html",
+  "datePublished": "2026-09-13",
+  "dateModified": "2026-09-13"
 }
 </script>
 
@@ -1234,8 +1328,8 @@ window.addEventListener('load',function(){
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Nhà xuất bản Giáo dục Việt Nam",
-      "item": "https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.html"
+      "name": "Nhà xuất bản Công Thương",
+      "item": "https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html"
     }
   ]
 }
@@ -1249,26 +1343,26 @@ window.addEventListener('load',function(){
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Nhà xuất bản Giáo dục Việt Nam trực thuộc cơ quan nào?",
+      "name": "Nhà xuất bản Công Thương ở đâu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Theo thông tin công khai, Nhà xuất bản Giáo dục Việt Nam trực thuộc Bộ Giáo dục và Đào tạo, thành lập năm 1957. Thông tin mang tính tham khảo."
+        "text": "Theo thông tin công khai, trụ sở đặt tại Tầng 4, 655 Phạm Văn Đồng, Hà Nội, trong tòa nhà Bộ Công Thương."
       }
     },
     {
       "@type": "Question",
-      "name": "Website chính thức của Nhà xuất bản Giáo dục Việt Nam là gì?",
+      "name": "Nhà xuất bản Công Thương thành lập năm nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Website chính thức được công bố là https://nxbgd.vn/, đây là kênh tham khảo để cập nhật thông tin mới nhất."
+        "text": "Theo thông tin công khai, nhà xuất bản được thành lập tháng 8/2009 theo Quyết định 4191/QĐ-BCT."
       }
     },
     {
       "@type": "Question",
-      "name": "Nhà xuất bản Giáo dục Việt Nam chuyên mảng nào?",
+      "name": "Nhà xuất bản Công Thương mạnh về mảng sách nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Đơn vị được biết đến với chức năng chính là biên soạn, in ấn và phát hành sách giáo khoa, tài liệu giáo dục. Paco Books tổng hợp thông tin này để bạn đọc tham khảo thêm."
+        "text": "Đơn vị tập trung xuất bản tài liệu hội nhập kinh tế quốc tế, xuất khẩu và khoa học - công nghệ ngành công thương."
       }
     }
   ]
