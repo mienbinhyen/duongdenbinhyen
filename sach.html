@@ -981,8 +981,11 @@ document.addEventListener("DOMContentLoaded",function(){
             .then(function(){
                 /* ECO-ADD: content_ids/content_type để khớp Catalog Facebook */
                 fbq('track','Purchase',{currency:'VND',value:245000,content_ids:['Combo Sách Miền Bình Yên'],content_type:'product'});
+		var fbp=(document.cookie.match(/(?:^|;\s*)_fbp=([^;]+)/)||[])[1]||'';
+		var oSdt=pacoForm.querySelector('input[type=tel]');
+		var extId=oSdt?oSdt.value.replace(/\D/g,''):'';
                 /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
-                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:245000,currency:'VND',action_source:'website',content_ids:'Combo Sách Miền Bình Yên',content_type:'product'})});
+                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:245000,currency:'VND',action_source:'website',content_ids:'Combo Sách Miền Bình Yên',content_type:'product',fbp:fbp,external_id:extId})});
                 /* END ECO-ADD */
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();
                 setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
