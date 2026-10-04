@@ -1151,24 +1151,36 @@ TÁC GIẢ THIỆN NHÂN
 
 
 <style>
-    /* MENU CHÂN TRANG 5 ICON (thay 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ) - đồng bộ trang-mau-ceo.html.
-       Trang này không có khung đặt sách (#datsach) / khu liên hệ (#lienhe) riêng nên 3 nút
-       Sách giấy - Giỏ hàng - Liên hệ trỏ thẳng về trang chủ (đúng khu vực tương ứng),
-       riêng Ebook trỏ #ebook ngay trong trang vì trang nào cũng có sẵn khối này. */
+    /* ================================================================
+       MENU CHÂN TRANG 5 ICON (thay cho 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
+       Ngày tạo: 2026-09-12 — Em ECO làm theo yêu cầu Ông Paco
+       Vị trí hiển thị: cố định (fixed) sát đáy màn hình, giống vị trí 2 nút cũ
+       Kiểu dáng: nền trắng bo góc trên, mỗi icon nằm trong khối "thẻ" màu
+       pastel riêng (kiểu icon app hiện đại), chữ dùng font không chân cho
+       hiện đại hơn. Trang chủ nổi lên trên bằng khối tròn gradient lớn.
+
+       MUỐN SỬA GÌ, TÌM Ở ĐÂY:
+       - Đổi LINK từng nút          -> sửa thuộc tính href trong khối HTML bên dưới
+       - Đổi TÊN hiển thị           -> sửa chữ trong <span class="paco-nav-label">
+       - Đổi MÀU NỀN thanh menu     -> sửa background-color trong .paco-bottom-nav
+       - Đổi MÀU thẻ icon           -> sửa background trong .paco-nav-badge (mỗi màu riêng bên dưới)
+       - Đổi MÀU vòng tròn Trang chủ -> sửa background (gradient) trong .paco-nav-center-circle
+       - Icon "Giỏ hàng" hiện CHƯA gắn chức năng thật (chờ làm giỏ hàng sau)
+       ================================================================ */
     .paco-bottom-nav {
         position: fixed;
-        bottom: 0;
+        bottom: 0; /* Dinh sat day, KHONG chua khoang ho ben duoi */
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%); /* Can giua theo kho bai viet (900px), giong cac khoi fixed khac */
         width: 100%;
-        max-width: 900px;
+        max-width: 900px; /* Khop kho .paco-page-wrap - khong tran full man hinh tren may tinh */
         z-index: 99999;
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
-        padding: 16px 3px 14px;
+        padding: 16px 12px 14px; /* Tang le trai/phai len 12px de 2 nut 2 ben khong bi cat goc - Em ECO 04/10/2026. Truoc do: Da giam do cao 10px (bot dem duoi) va thut le trai/phai 3px moi ben theo yeu cau Ong Paco - Em ECO */
         box-sizing: border-box;
-        background-color: #ffffff;
+        background-color: #ffffff; /* Trang 100% theo yeu cau Ong Paco */
         border-radius: 22px 22px 0 0;
         box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
     }
@@ -1180,15 +1192,18 @@ TÁC GIẢ THIỆN NHÂN
         gap: 5px;
         text-decoration: none;
         color: #33475b;
-        font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
-        font-size: 13px;
+        font-family: -apple-system, 'Segoe UI', Arial, sans-serif; /* font không chân, hiện đại */
+        font-size: clamp(8px, 2.5vw, 13px); /* Chu tu co theo man hinh - Em ECO 04/10/2026 */
         font-weight: 600;
         flex: 1;
+        min-width: 0; /* Cho phep o co hep lai, khong day tran - Em ECO */
+        white-space: nowrap; /* Chu luon 1 dong, khong tut dong - Em ECO */
     }
 
+    /* Thẻ nền pastel phía sau mỗi icon (trừ Trang chủ) */
     .paco-nav-badge {
-        width: 42px;
-        height: 42px;
+        width: clamp(32px, 9vw, 42px); /* Tu co theo man hinh - Em ECO */
+        height: clamp(32px, 9vw, 42px);
         border-radius: 13px;
         display: flex;
         align-items: center;
@@ -1202,9 +1217,10 @@ TÁC GIẢ THIỆN NHÂN
     .paco-nav-badge.badge-contact{ background: #eef1ff; }
     .paco-nav-badge.badge-cart   { background: #ffece6; }
 
+    /* --- MỤC GIỮA: TRANG CHỦ — khối tròn gradient nổi lên trên thanh menu --- */
     .paco-nav-center-circle {
-        width: 62px;
-        height: 62px;
+        width: clamp(50px, 15vw, 62px); /* Tu co theo man hinh - Em ECO */
+        height: clamp(50px, 15vw, 62px);
         margin-top: -26px;
         border-radius: 50%;
         background: linear-gradient(135deg, #01cb99, #0099cc);
@@ -1217,8 +1233,8 @@ TÁC GIẢ THIỆN NHÂN
     .paco-nav-center-circle svg { width: 30px; height: 30px; }
 
     @media (max-width: 600px) {
-        .paco-nav-item { font-size: 12px; }
-        .paco-nav-badge { width: 38px; height: 38px; }
+        .paco-nav-item { font-size: clamp(8px, 2.5vw, 12px); }
+        .paco-nav-badge { width: clamp(32px, 9vw, 38px); height: clamp(32px, 9vw, 38px); }
     }
 </style>
 
