@@ -819,7 +819,7 @@
         </div>
         <div style="text-align:center;font-size:11px;color:#0d3b7a;font-weight:600;margin:-8px 0 6px 0;">📞 Vui lòng nghe máy, chúng tôi sẽ gọi xác nhận trước khi gửi sách!</div>
         <div class="paco-input-wrapper">
-            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="fbq('track', 'InitiateCheckout');">
+        <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="if(!window.icSent){window.icSent=1;fbq('track','InitiateCheckout');}">
         </div>
         <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
         <div class="paco-input-wrapper">
