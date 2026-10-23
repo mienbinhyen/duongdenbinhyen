@@ -1067,7 +1067,7 @@ function pacoCapNhatHiddenSp() {
     background: #ffffff;
     border: 1px solid #d0e4f7;
     border-radius: 10px;
-    padding: 40px 30px;
+    padding: 14px 0 12px; /* sát mép trên/dưới, thẳng lề nội dung - Em ECO 2026-10-23 */
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,74,153,0.08);
 }
@@ -1080,7 +1080,7 @@ function pacoCapNhatHiddenSp() {
     letter-spacing: 2px;
     display: inline-block;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     line-height: 1.2;
     text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
 }
@@ -1088,7 +1088,7 @@ function pacoCapNhatHiddenSp() {
     font-family: 'Times New Roman', serif;
     font-size: 1.05em;
     color: #555;
-    margin: 10px 0 25px 0;
+    margin: 2px 0 16px 0;
     font-style: italic;
     text-align: center;
 }
@@ -1097,10 +1097,39 @@ function pacoCapNhatHiddenSp() {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     max-height: 400px;
-    overflow-y: auto;
+    overflow-y: scroll;
     text-align: left;
-    padding-right: 6px;
+    padding: 12px;
+    background: #eaf1f9; /* khung lõm - Em ECO 2026-10-23 */
+    border: 1px solid #c9d9ec;
+    border-radius: 8px;
+    box-shadow: inset 0 3px 8px rgba(0,40,90,0.18), inset 0 -3px 8px rgba(0,40,90,0.10);
+    scrollbar-width: auto;
+    scrollbar-color: #004a99 #d3e1f1;
 }
+.paco-articles-scrollbox::-webkit-scrollbar { width: 12px; }
+.paco-articles-scrollbox::-webkit-scrollbar-track { background: #d3e1f1; border-radius: 6px; }
+.paco-articles-scrollbox::-webkit-scrollbar-thumb { background: #004a99; border-radius: 6px; border: 2px solid #d3e1f1; }
+.paco-articles-scrollbox::-webkit-scrollbar-thumb:hover { background: #003a7a; }
+/* 4. nút mũi tên trên / dưới - Em ECO 2026-10-23 */
+.paco-art-arrow {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 34px;
+    height: 22px;
+    margin: -11px auto;
+    padding: 0;
+    border: 1px solid #c9d9ec;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #004a99;
+    font-size: 11px;
+    line-height: 20px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,40,90,0.2);
+}
+.paco-art-arrow:hover { background: #004a99; color: #ffffff; }
 @media (max-width: 600px) {
     .paco-articles-scrollbox { grid-template-columns: 1fr; }
 }
@@ -1157,7 +1186,7 @@ function pacoCapNhatHiddenSp() {
 }
 @media (max-width: 600px) {
     .paco-articles-section { padding: 30px 15px; }
-    .container-paco-articles { padding: 30px 20px; }
+    .container-paco-articles { padding: 10px 0 10px; } /* sát mép, thẳng lề nội dung - Em ECO 2026-10-23 */
     .section-label-articles { font-size: 1.2em; }
 }
 </style>
@@ -1167,7 +1196,50 @@ function pacoCapNhatHiddenSp() {
         <span class="section-label-articles">DANH SÁCH BÀI VIẾT</span>
         <p class="section-sub-articles">Toàn bộ bài viết — cuộn để xem thêm</p>
 
-        <div class="paco-articles-scrollbox">
+        <button type="button" class="paco-art-arrow" aria-label="Cuộn lên" onclick="document.getElementById('pacoArtBox').scrollBy({top:-300,behavior:'smooth'})">▲</button>
+        <div class="paco-articles-scrollbox" id="pacoArtBox">
+            <!-- MỤC REVIEW SÁCH: 40 bài tóm tắt sách (Trang 319 → 280) - Em ECO 2026-10-23 -->
+            <a href="https://duongdenbinhyen.com/nghe-thuat-tinh-te-cua-viec-dech-quan-tam.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/mienbinhyen.jpg" alt="Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm</span><span class="paco-art-desc">Chọn điều đáng để mình bận lòng</span></span></a>
+            <a href="https://duongdenbinhyen.com/phi-ly-tri.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/haibia.jpg" alt="Phi Lý Trí" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Phi Lý Trí</span><span class="paco-art-desc">Những lựa chọn ta tưởng mình hiểu rất rõ</span></span></a>
+            <a href="https://duongdenbinhyen.com/doc-vi-bat-ky-ai.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/gioithieu_thitham.jpg" alt="Đọc Vị Bất Kỳ Ai" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Đọc Vị Bất Kỳ Ai</span><span class="paco-art-desc">Lắng nghe cả những điều không nói thành lời</span></span></a>
+            <a href="https://duongdenbinhyen.com/bi-mat.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/gioithieu_ddby.jpg" alt="Bí Mật" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Bí Mật</span><span class="paco-art-desc">Điều ta nghĩ mỗi ngày có ý nghĩa thế nào</span></span></a>
+            <a href="https://duongdenbinhyen.com/tam-ly-hoc-dam-dong.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/duongdenbinhyen.jpg" alt="Tâm Lý Học Đám Đông" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Tâm Lý Học Đám Đông</span><span class="paco-art-desc">Khi một người hòa vào nhiều người</span></span></a>
+            <a href="https://duongdenbinhyen.com/thien-tai-ben-trai-ke-dien-ben-phai.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/dan-ong-khon.jpg" alt="Thiên Tài Bên Trái Kẻ Điên Bên Phải" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Thiên Tài Bên Trái Kẻ Điên Bên Phải</span><span class="paco-art-desc">Lắng nghe trước khi đóng một cái nhãn</span></span></a>
+            <a href="https://duongdenbinhyen.com/song-thuc-te-giua-doi-thuc-dung.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cha-me-la-noi-binh-yen-nhat.jpg" alt="Sống Thực Tế Giữa Đời Thực Dụng" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Sống Thực Tế Giữa Đời Thực Dụng</span><span class="paco-art-desc">Giữ ước muốn bên cạnh khả năng tự đứng vững</span></span></a>
+            <a href="https://duongdenbinhyen.com/quang-ganh-lo-di-va-vui-song.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cha-me-cung-tung-la-dua-tre-bi-ton-thuong.jpg" alt="Quẳng Gánh Lo Đi Và Vui Sống" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Quẳng Gánh Lo Đi Và Vui Sống</span><span class="paco-art-desc">Dành lại ngày hôm nay cho việc có thể làm</span></span></a>
+            <a href="https://duongdenbinhyen.com/doi-thay-doi-khi-chung-ta-thay-doi.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ban-chat-cua-hon-nhan.jpg" alt="Đời Thay Đổi Khi Chúng Ta Thay Đổi" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Đời Thay Đổi Khi Chúng Ta Thay Đổi</span><span class="paco-art-desc">Thử một cách nhìn khác với ngày đang sống</span></span></a>
+            <a href="https://duongdenbinhyen.com/kheo-an-noi-se-co-duoc-thien-ha.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/nguoi-gia-va-dua-tre.jpg" alt="Khéo Ăn Nói Sẽ Có Được Thiên Hạ" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Khéo Ăn Nói Sẽ Có Được Thiên Hạ</span><span class="paco-art-desc">Chọn lời vừa với người đang ngồi đối diện</span></span></a>
+            <a href="https://duongdenbinhyen.com/khong-gia-dinh.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/mot-doi-cha-me-chi-mong-con-duoc-hanh-phuc.jpg" alt="Không Gia Đình" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Không Gia Đình</span><span class="paco-art-desc">Mái nhà được tìm thấy cả trong lòng người</span></span></a>
+            <a href="https://duongdenbinhyen.com/muon-kiep-nhan-sinh.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/mat-niem-tin-vao-tinh-yeu.jpg" alt="Muôn Kiếp Nhân Sinh" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Muôn Kiếp Nhân Sinh</span><span class="paco-art-desc">Nhìn lại điều mình đang gieo trong từng lựa chọn</span></span></a>
+            <a href="https://duongdenbinhyen.com/dieu-ky-dieu-cua-tiem-tap-hoa-namiya.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/mang-mat-na-song-voi-doi.jpg" alt="Điều Kỳ Diệu Của Tiệm Tạp Hóa Namiya" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Điều Kỳ Diệu Của Tiệm Tạp Hóa Namiya</span><span class="paco-art-desc">Mỗi lời hồi đáp có thể chạm tới một đời người</span></span></a>
+            <a href="https://duongdenbinhyen.com/totto-chan-ben-cua-so.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/luon-cam-thay-khong-bang-nguoi-khac.jpg" alt="Totto-chan Bên Cửa Sổ" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Totto-chan Bên Cửa Sổ</span><span class="paco-art-desc">Một người chịu nghe có thể mở cả bầu trời</span></span></a>
+            <a href="https://duongdenbinhyen.com/ong-gia-va-bien-ca.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/loi-thi-tham-tu-cuoc-doi.jpg" alt="Ông Già Và Biển Cả" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Ông Già Và Biển Cả</span><span class="paco-art-desc">Trở về tay trắng vẫn giữ được lòng can đảm</span></span></a>
+            <a href="https://duongdenbinhyen.com/rung-na-uy.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/loi-song-binh-yen-khong-phuc-tap.jpg" alt="Rừng Na Uy" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Rừng Na Uy</span><span class="paco-art-desc">Đi qua ký ức để tìm một chỗ trong hiện tại</span></span></a>
+            <a href="https://duongdenbinhyen.com/toi-thay-hoa-vang-tren-co-xanh.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/khong-dam-song-that-voi-chinh-minh.jpg" alt="Tôi Thấy Hoa Vàng Trên Cỏ Xanh" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Tôi Thấy Hoa Vàng Trên Cỏ Xanh</span><span class="paco-art-desc">Tuổi nhỏ có cả điều trong veo và lỗi lầm</span></span></a>
+            <a href="https://duongdenbinhyen.com/mat-biec.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/khi-nguoi-than-khong-hieu-minh.jpg" alt="Mắt Biếc" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Mắt Biếc</span><span class="paco-art-desc">Có những thương nhớ không tìm được lời đáp</span></span></a>
+            <a href="https://duongdenbinhyen.com/hai-so-phan.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/khi-nam-tren-giuong-benh-moi-tham.jpg" alt="Hai Số Phận" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Hai Số Phận</span><span class="paco-art-desc">Có những cuộc đối đầu khiến cả hai cùng mất</span></span></a>
+            <a href="https://duongdenbinhyen.com/nguoi-giau-co-nhat-thanh-babylon.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/khi-con-cai-lon-roi-xa.jpg" alt="Người Giàu Có Nhất Thành Babylon" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Người Giàu Có Nhất Thành Babylon</span><span class="paco-art-desc">Giữ một phần hôm nay cho những ngày phía trước</span></span></a>
+            <a href="https://duongdenbinhyen.com/suc-manh-cua-hien-tai.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/khi-cha-me-khong-con-khoe.jpg" alt="Sức Mạnh Của Hiện Tại" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Sức Mạnh Của Hiện Tại</span><span class="paco-art-desc">Trở lại với khoảnh khắc mình đang sống</span></span></a>
+            <a href="https://duongdenbinhyen.com/tri-tue-cam-xuc.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/goc-nho-binh-yen.jpg" alt="Trí Tuệ Cảm Xúc" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Trí Tuệ Cảm Xúc</span><span class="paco-art-desc">Hiểu điều đang dâng lên trước khi cất lời</span></span></a>
+            <a href="https://duongdenbinhyen.com/nha-lanh-dao-khong-chuc-danh.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/goc-khuat-cuoc-doi.jpg" alt="Nhà Lãnh Đạo Không Chức Danh" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nhà Lãnh Đạo Không Chức Danh</span><span class="paco-art-desc">Sự tận tâm không cần đợi một chiếc ghế cao</span></span></a>
+            <a href="https://duongdenbinhyen.com/doi-ngan-dung-ngu-dai.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/gia-dinh-hanh-phuc-la-gi.jpg" alt="Đời Ngắn Đừng Ngủ Dài" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Đời Ngắn Đừng Ngủ Dài</span><span class="paco-art-desc">Đừng để điều quan trọng mãi chờ ngày khác</span></span></a>
+            <a href="https://duongdenbinhyen.com/dam-bi-ghet.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/doi-vai-cha-ganh-ca-mot-doi-lang-le.jpg" alt="Dám Bị Ghét" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Dám Bị Ghét</span><span class="paco-art-desc">Sống đời mình mà vẫn kết nối với người khác</span></span></a>
+            <a href="https://duongdenbinhyen.com/buoc-cham-lai-giua-the-gian-voi-va.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/day-con-hay-nuong-chieu-con.jpg" alt="Bước Chậm Lại Giữa Thế Gian Vội Vã" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Bước Chậm Lại Giữa Thế Gian Vội Vã</span><span class="paco-art-desc">Nghỉ một chút để thấy điều đang ở đây</span></span></a>
+            <a href="https://duongdenbinhyen.com/7-thoi-quen-hieu-qua.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/dan-ong-khoc-tham.jpg" alt="7 Thói Quen Hiệu Quả" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">7 Thói Quen Hiệu Quả</span><span class="paco-art-desc">Dành sức cho điều mình muốn gìn giữ</span></span></a>
+            <a href="https://duongdenbinhyen.com/cha-giau-cha-ngheo.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cha-me-la-noi-binh-yen-nhat-de-quay-ve.jpg" alt="Cha Giàu Cha Nghèo" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Cha Giàu Cha Nghèo</span><span class="paco-art-desc">Nhìn lại điều tiền bạc đang dạy mình</span></span></a>
+            <a href="https://duongdenbinhyen.com/nghi-giau-lam-giau.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cha-me-gia-di-trong-khi-con-mai-me-tim-kiem.jpg" alt="Nghĩ Giàu Làm Giàu" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nghĩ Giàu Làm Giàu</span><span class="paco-art-desc">Đặt mong muốn bên cạnh một việc sẽ làm</span></span></a>
+            <a href="https://duongdenbinhyen.com/atomic-habits.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cam-giac-vo-dung.jpg" alt="Atomic Habits" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Atomic Habits</span><span class="paco-art-desc">Kiên nhẫn với điều nhỏ đang lớn lên mỗi ngày</span></span></a>
+            <a href="https://duongdenbinhyen.com/suc-manh-cua-thoi-quen.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cach-tap-thien-cho-nguoi-moi.jpg" alt="Sức Mạnh Của Thói Quen" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Sức Mạnh Của Thói Quen</span><span class="paco-art-desc">Thay đổi bắt đầu khi nhận ra điều lặp lại</span></span></a>
+            <a href="https://duongdenbinhyen.com/sapiens-luoc-su-loai-nguoi.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cach-quan-ly-cam-xuc.jpg" alt="Sapiens Lược Sử Loài Người" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Sapiens Lược Sử Loài Người</span><span class="paco-art-desc">Nhìn câu chuyện chung để hiểu chỗ đứng riêng</span></span></a>
+            <a href="https://duongdenbinhyen.com/tu-duy-nhanh-va-cham.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cach-han-gan-moi-quan-he.jpg" alt="Tư Duy Nhanh Và Chậm" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Tư Duy Nhanh Và Chậm</span><span class="paco-art-desc">Dừng một nhịp trước điều tưởng đã chắc</span></span></a>
+            <a href="https://duongdenbinhyen.com/cay-cam-ngot-cua-toi.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/cach-han-gan-gia-dinh.jpg" alt="Cây Cam Ngọt Của Tôi" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Cây Cam Ngọt Của Tôi</span><span class="paco-art-desc">Một đứa trẻ lớn lên nhờ được dịu dàng</span></span></a>
+            <a href="https://duongdenbinhyen.com/hoang-tu-be.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/bong-dang-cha-trong-nhung-nam-thang-di-xa.jpg" alt="Hoàng Tử Bé" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Hoàng Tử Bé</span><span class="paco-art-desc">Điều thân thuộc trở nên duy nhất nhờ yêu thương</span></span></a>
+            <a href="https://duongdenbinhyen.com/di-tim-le-song.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/biet-du-la-du.jpg" alt="Đi Tìm Lẽ Sống" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Đi Tìm Lẽ Sống</span><span class="paco-art-desc">Giữ một lý do để bước qua nghịch cảnh</span></span></a>
+            <a href="https://duongdenbinhyen.com/hieu-ve-trai-tim.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ap-luc-phai-thanh-cong-truoc-30.jpg" alt="Hiểu Về Trái Tim" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Hiểu Về Trái Tim</span><span class="paco-art-desc">Nhận ra cảm xúc để thương nhau sáng rõ hơn</span></span></a>
+            <a href="https://duongdenbinhyen.com/tuoi-tre-dang-gia-bao-nhieu.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ap-luc-mang-xa-hoi.jpg" alt="Tuổi Trẻ Đáng Giá Bao Nhiêu" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Tuổi Trẻ Đáng Giá Bao Nhiêu</span><span class="paco-art-desc">Thanh xuân được bồi đắp từ những bước nhỏ</span></span></a>
+            <a href="https://duongdenbinhyen.com/dac-nhan-tam.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ai-o-lai-ben-ta-luc-tuoi-gia.jpg" alt="Đắc Nhân Tâm" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Đắc Nhân Tâm</span><span class="paco-art-desc">Một cuộc gặp bắt đầu từ sự lắng nghe</span></span></a>
+            <a href="https://duongdenbinhyen.com/nha-gia-kim.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ddenbyen.jpg" alt="Nhà Giả Kim" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nhà Giả Kim</span><span class="paco-art-desc">Khi cả hành trình mới chính là kho báu</span></span></a>
+            <!-- KẾT THÚC MỤC REVIEW SÁCH -->
             <a href="https://duongdenbinhyen.com/nguoi-gia-va-dua-tre.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/nguoi-gia-va-dua-tre.jpg" alt="Người già và đứa trẻ" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Người già và đứa trẻ</span><span class="paco-art-desc">Khi người thương mình thật sự không còn nữa</span></span></a>
             <a href="https://duongdenbinhyen.com/ai-o-lai-ben-ta-luc-tuoi-gia.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/ai-o-lai-ben-ta-luc-tuoi-gia.jpg" alt="Ai ở lại bên ta lúc tuổi già" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Ai ở lại bên ta lúc tuổi già</span><span class="paco-art-desc">Người cuối cùng ở lại không phải ai xa lạ</span></span></a>
             <a href="https://duongdenbinhyen.com/noi-so-am-tham-cua-nguoi-tru-cot.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/noi-so-am-tham-cua-nguoi-tru-cot.jpg" alt="Nỗi sợ âm thầm của người trụ cột" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nỗi sợ âm thầm của người trụ cột</span><span class="paco-art-desc">Gánh nặng không tên người đàn ông mang một mình</span></span></a>
@@ -1429,6 +1501,7 @@ function pacoCapNhatHiddenSp() {
             <a href="https://duongdenbinhyen.com/nha-xuat-ban-da-nang.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/nha-xuat-ban-hoc-vien-nong-nghiep.jpg" alt="Nhà xuất bản Đà Nẵng" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nhà xuất bản Đà Nẵng</span><span class="paco-art-desc">Thông tin Nhà xuất bản Đà Nẵng</span></span></a>
             <a href="https://duongdenbinhyen.com/nha-xuat-ban-dong-nai.html" class="paco-art-card"><img src="https://duongdenbinhyen.com/nha-xuat-ban-hong-duc.jpg" alt="Nhà xuất bản Đồng Nai" loading="lazy"><span class="paco-art-text"><span class="paco-art-title">Nhà xuất bản Đồng Nai</span><span class="paco-art-desc">Thông tin Nhà xuất bản Đồng Nai</span></span></a>
         </div>
+        <button type="button" class="paco-art-arrow" aria-label="Cuộn xuống" onclick="document.getElementById('pacoArtBox').scrollBy({top:300,behavior:'smooth'})">▼</button>
     </div>
 </section>
 
