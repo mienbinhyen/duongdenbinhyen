@@ -2072,7 +2072,7 @@
 
 
 <!-- ================================================================
-     MỤC REVIEW SÁCH (TÓM TẮT SÁCH) — 40 TRANG: TRANG 280 ĐẾN TRANG 319
+     MỤC REVIEW SÁCH (TÓM TẮT SÁCH) — 100 TRANG: TRANG 280 ĐẾN TRANG 379
      Thêm ngày 2026-10-23 — các trang tóm tắt sách nổi tiếng
      ================================================================ -->
 
@@ -2317,20 +2317,425 @@
   <priority>0.8</priority>
 </url>
 
+<!-- Trang 320: mindset-tam-ly-hoc-thanh-cong.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/mindset-tam-ly-hoc-thanh-cong.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 321: grit-suc-manh-cua-dam-me-va-kien-tri.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/grit-suc-manh-cua-dam-me-va-kien-tri.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 322: suc-manh-cua-nguoi-huong-noi.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/suc-manh-cua-nguoi-huong-noi.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 323: loi-song-toi-gian-cua-nguoi-nhat.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/loi-song-toi-gian-cua-nguoi-nhat.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 324: ikigai.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/ikigai.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 325: thuc-tinh-muc-dich-song.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/thuc-tinh-muc-dich-song.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 326: danh-thuc-con-nguoi-phi-thuong-trong-ban.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/danh-thuc-con-nguoi-phi-thuong-trong-ban.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 327: tuan-lam-viec-4-gio.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tuan-lam-viec-4-gio.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 328: tu-tot-den-vi-dai.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tu-tot-den-vi-dai.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 329: khoi-nghiep-tinh-gon.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/khoi-nghiep-tinh-gon.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 330: nha-dau-tu-thong-minh.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nha-dau-tu-thong-minh.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 331: bi-mat-tu-duy-trieu-phu.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/bi-mat-tu-duy-trieu-phu.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 332: khong-bao-gio-la-that-bai-tat-ca-la-thu-thach.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/khong-bao-gio-la-that-bai-tat-ca-la-thu-thach.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 333: toi-tai-gioi-ban-cung-the.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/toi-tai-gioi-ban-cung-the.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
+<!-- Trang 334: luoc-su-thoi-gian.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/luoc-su-thoi-gian.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 335: homo-deus-luoc-su-tuong-lai.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/homo-deus-luoc-su-tuong-lai.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 336: 21-bai-hoc-cho-the-ky-21.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/21-bai-hoc-cho-the-ky-21.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 337: sung-vi-trung-va-thep.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/sung-vi-trung-va-thep.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 338: bo-gia.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/bo-gia.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 339: tram-nam-co-don.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tram-nam-co-don.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 340: hai-van-dam-duoi-day-bien.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/hai-van-dam-duoi-day-bien.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 341: nhung-nguoi-khon-kho.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nhung-nguoi-khon-kho.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 342: doi-gio-hu.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/doi-gio-hu.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 343: kieu-hanh-va-dinh-kien.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/kieu-hanh-va-dinh-kien.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 344: giet-con-chim-nhai.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/giet-con-chim-nhai.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 345: dai-gia-gatsby.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/dai-gia-gatsby.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 346: bat-tre-dong-xanh.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/bat-tre-dong-xanh.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 347: thep-da-toi-the-day.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/thep-da-toi-the-day.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 348: nhat-ky-anne-frank.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nhat-ky-anne-frank.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 349: nguoi-dua-dieu.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nguoi-dua-dieu.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 350: ngan-mat-troi-ruc-ro.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/ngan-mat-troi-ruc-ro.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 351: cuon-theo-chieu-gio.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/cuon-theo-chieu-gio.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 352: nhung-tam-long-cao-ca.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nhung-tam-long-cao-ca.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 353: de-men-phieu-luu-ky.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/de-men-phieu-luu-ky.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 354: so-do.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/so-do.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 355: chi-pheo.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/chi-pheo.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 356: tat-den.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tat-den.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 357: cho-toi-xin-mot-ve-di-tuoi-tho.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/cho-toi-xin-mot-ve-di-tuoi-tho.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 358: kinh-van-hoa.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/kinh-van-hoa.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 359: ca-phe-cung-tony.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/ca-phe-cung-tony.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 360: tren-duong-bang.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tren-duong-bang.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 361: hanh-trinh-ve-phuong-dong.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/hanh-trinh-ve-phuong-dong.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 362: phep-la-cua-su-tinh-thuc.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/phep-la-cua-su-tinh-thuc.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 363: tuoi-tho-du-doi.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tuoi-tho-du-doi.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 364: nguoi-ban-hang-vi-dai-nhat-the-gioi.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nguoi-ban-hang-vi-dai-nhat-the-gioi.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 365: nhung-ngay-tho-au.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nhung-ngay-tho-au.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 366: hay-cham-soc-me.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/hay-cham-soc-me.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 367: tieng-goi-noi-hoang-da.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tieng-goi-noi-hoang-da.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 368: chien-binh-cau-vong.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/chien-binh-cau-vong.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 369: bo-con-ca-gai.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/bo-con-ca-gai.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 370: mat-ma-tay-tang.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/mat-ma-tay-tang.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 371: nhung-cuoc-phieu-luu-cua-sherlock-holmes.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/nhung-cuoc-phieu-luu-cua-sherlock-holmes.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 372: harry-potter-va-hon-da-phu-thuy.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/harry-potter-va-hon-da-phu-thuy.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 373: chua-te-nhung-chiec-nhan.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/chua-te-nhung-chiec-nhan.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 374: the-gioi-phang.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/the-gioi-phang.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 375: toi-la-beto.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/toi-la-beto.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 376: tu-duy-nguoc.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tu-duy-nguoc.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 377: tam-ly-hoc-ve-tien.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/tam-ly-hoc-ve-tien.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 378: dung-bao-gio-di-an-mot-minh.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/dung-bao-gio-di-an-mot-minh.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Trang 379: khong-phai-soi-nhung-cung-dung-la-cuu.html -->
+<url>
+  <loc>https://duongdenbinhyen.com/khong-phai-soi-nhung-cung-dung-la-cuu.html</loc>
+  <lastmod>2026-10-24</lastmod>
+  <priority>0.8</priority>
+</url>
 
 <!-- ================================================================
      KẾT THÚC MỤC REVIEW SÁCH
