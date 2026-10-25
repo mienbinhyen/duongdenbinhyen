@@ -1,0 +1,33 @@
+{
+ "v": 1,
+ "repo": {
+  "owner": "mienbinhyen",
+  "name": "duongdenbinhyen",
+  "branch": "main"
+ },
+ "site": "https://duongdenbinhyen.com/",
+ "siteName": "Đường Đến Bình Yên",
+ "token": {
+  "iv": "cOsQWy/4VGQBGDtj",
+  "ct": "c03vAS0RrScu5MDcTiHbM/9v/Vb78JyK2v/WB/4wZQFkvJU+d3hN1ZQaESyWfIjPHM/k5idYLSopXQgHYsPbA3uqustOBeZxKOwjCh1feadWv0oGlGt4LjeAK+Zsmn3A829dHQb78a72dSvy/w=="
+ },
+ "lock": {
+  "salt": "GMNm4dOtB9WNuj8TvPoTrQ==",
+  "iv": "N3/2mNN7jbN+mglq",
+  "ct": "tfCxkmrs5KaZPxRxoeLVuWy0"
+ },
+ "users": [
+  {
+   "u": "paco",
+   "name": "PACOBOOKS",
+   "role": "admin",
+   "active": true,
+   "salt": "0Zx2uazqvAmEUipnAUhw8g==",
+   "iv": "e0ZL6ksK4Wdl/Ou9",
+   "ct": "Nb6TTnJ60a8OUpsp0jiQbpgWbJSbkv6L8A+kgRkeIiSKofXq3S1r5c3i4KetrFFO"
+  }
+ ],
+ "locks": {},
+ "kw": {},
+ "created": "2026-10-25T18:05:55+07:00"
+}
