@@ -136,7 +136,14 @@
        ================================================ -->
  
 
-<!-- ===== 7 TRANG MỚI: BÀI 23-29 — DÁN VÀO SITEMAP TRƯỚC </urlset> ===== -->
+<!-- ===== 7 TRANG MỚI: BÀI 23-29 — DÁN VÀO SITEMAP TRƯỚC
+
+<url>
+  <loc>https://duongdenbinhyen.com/bai-viet-moi.html</loc>
+  <lastmod>2026-10-25</lastmod>
+  <priority>0.9</priority>
+</url>
+</urlset> ===== -->
 
 <!-- Trang 23: sach-tam-ly-hoc.html -->
 <url>
