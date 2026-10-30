@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+	<!-- ECO 30/10: lưu mã click quảng cáo (fbc) NGAY khi khách vào trang, không chờ pixel -->
+	<script>(function(){try{var m=location.search.match(/[?&]fbclid=([^&#]+)/);if(!m)return;var v='fb.1.'+Date.now()+'.'+m[1];document.cookie='_fbc='+v+';max-age=7776000;path=/;SameSite=Lax';try{localStorage.setItem('paco_fbc',v);}catch(e){}}catch(e){}})();</script>
 	<title>Đường Đến Bình Yên | Đích đến của mọi cuộc hành trình</title>
 
 	<!-- SEO META TAGS -->
@@ -1170,7 +1172,7 @@ document.addEventListener("DOMContentLoaded",function(){
 		fbq('track','Purchase',{currency:'VND',value:g.tien,content_ids:g.ids,content_type:'product',num_items:g.n},{eventID:eid});
 		var fbp=(document.cookie.match(/(?:^|;\s*)_fbp=([^;]+)/)||[])[1]||'';
 		var extId=_ext;
-		var _fbc=(document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)||[])[1]||'';if(!_fbc){var _fcl=(location.search.match(/[?&]fbclid=([^&]+)/)||[])[1];if(_fcl)_fbc='fb.1.'+Date.now()+'.'+_fcl;}
+		var _fbc=(document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)||[])[1]||'';if(!_fbc){try{_fbc=localStorage.getItem('paco_fbc')||'';}catch(e){}}if(!_fbc){var _fcl=(location.search.match(/[?&]fbclid=([^&]+)/)||[])[1];if(_fcl)_fbc='fb.1.'+Date.now()+'.'+_fcl;}
                 /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
                 fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:g.tien,currency:'VND',action_source:'website',content_ids:g.ids.join(','),content_type:'product',num_items:g.n,fbp:fbp,external_id:extId,event_id:eid,fbc:_fbc,ph:_ph,fn:_fn,ln:_ln,ct:_ct,country:'vn',event_source_url:location.href.split('?')[0],test_event_code:((location.search.match(/[?&]test_event_code=([^&]+)/)||[])[1]||'')})});
             };
