@@ -471,7 +471,7 @@ body {
         border-radius: 6px;
         overflow: hidden;
         background: #f0f0f0;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
     .paco-product-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .paco-product-badge-giam {
@@ -482,16 +482,17 @@ body {
     }
     .paco-product-name {
         font-family: 'Times New Roman', serif; font-size: 14px; font-weight: bold;
-        color: #004a99; line-height: 1.3; margin: 0 0 4px; min-height: 34px;
+        color: #004a99; line-height: 1.25; margin: 0 0 2px;
     }
     .paco-product-combo-sub {
         display: block; font-family: 'Times New Roman', serif; font-size: 11.5px;
         font-weight: normal; font-style: italic; color: #555; margin-top: 2px; line-height: 1.25;
     }
-    .paco-product-gia-wrap { margin-bottom: 8px; }
+    .paco-product-gia-wrap { margin-bottom: 6px; line-height: 1.2; }
     .paco-product-gia-wrap .price-new { font-size: 15px; }
     .paco-product-gia-wrap .price-old { margin-left: 6px; }
-    .paco-product-buttons { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+    .paco-product-buttons { margin-top: auto; display: flex; flex-direction: row; gap: 6px; }
+    .paco-product-buttons > * { flex: 1 1 0; min-width: 0; white-space: nowrap; }
     .paco-product-btn-more, .paco-product-btn-cart {
         display: block; text-align: center; border-radius: 20px;
         font-family: 'Times New Roman', serif; font-size: 12px; font-weight: bold;
@@ -504,7 +505,8 @@ body {
         background: #004a99; color: #ffffff; /* mau xanh navy dong nhat, khong dung gradient de tranh lech tong voi cac tieu de/gia tien khac */
     }
     @media (max-width: 600px) {
-        .paco-product-name { font-size: 12.5px; min-height: 30px; }
+        .paco-product-name { font-size: 12.5px; }
+        .paco-product-card { padding: 8px; }
         .paco-product-combo-sub { font-size: 10.5px; }
         .paco-product-gia-wrap .price-new { font-size: 13px; }
         .paco-product-btn-more, .paco-product-btn-cart { font-size: 11px; padding: 6px 2px; }
@@ -554,7 +556,7 @@ body {
         </div>
         <div class="paco-product-buttons">
             <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Đường Đến Bình Yên')">Thêm vào giỏ</button>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Đường Đến Bình Yên')">🛒 Thêm giỏ</button>
         </div>
     </div>
 
@@ -570,7 +572,7 @@ body {
         </div>
         <div class="paco-product-buttons">
             <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Lời Thì Thầm Từ Cuộc Đời')">Thêm vào giỏ</button>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Lời Thì Thầm Từ Cuộc Đời')">🛒 Thêm giỏ</button>
         </div>
     </div>
 
@@ -586,137 +588,58 @@ body {
         </div>
         <div class="paco-product-buttons">
             <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Miền Bình Yên')">Thêm vào giỏ</button>
+            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Miền Bình Yên')">🛒 Thêm giỏ</button>
         </div>
     </div>
 
-    <div class="paco-product-card">
-        <div class="paco-product-img-wrap">
-            <img src="biacombo1.webp" alt="Combo 1 - Đường Đến Bình Yên và Lời Thì Thầm Từ Cuộc Đời" width="600" height="720" loading="lazy">
-            <span class="paco-product-badge-giam">-21%</span>
-        </div>
-        <p class="paco-product-name">Combo 1<span class="paco-product-combo-sub">Đường Đến Bình Yên &amp; Lời Thì Thầm Từ Cuộc Đời</span></p>
-        <div class="paco-product-gia-wrap">
-            <span class="price-new">245.000đ</span>
-            <span class="price-old">312.000đ</span>
-        </div>
-        <div class="paco-product-buttons">
-            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 1')">Thêm vào giỏ</button>
-        </div>
-    </div>
-
-    <div class="paco-product-card">
-        <div class="paco-product-img-wrap">
-            <img src="biacombo2.webp" alt="Combo 2 - Miền Bình Yên và Lời Thì Thầm Từ Cuộc Đời" width="600" height="720" loading="lazy">
-            <span class="paco-product-badge-giam">-21%</span>
-        </div>
-        <p class="paco-product-name">Combo 2<span class="paco-product-combo-sub">Miền Bình Yên &amp; Lời Thì Thầm Từ Cuộc Đời</span></p>
-        <div class="paco-product-gia-wrap">
-            <span class="price-new">245.000đ</span>
-            <span class="price-old">312.000đ</span>
-        </div>
-        <div class="paco-product-buttons">
-            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 2')">Thêm vào giỏ</button>
-        </div>
-    </div>
-
-    <div class="paco-product-card">
-        <div class="paco-product-img-wrap">
-            <img src="biacombo3.webp" alt="Combo 3 - Miền Bình Yên và Đường Đến Bình Yên" width="600" height="720" loading="lazy">
-            <span class="paco-product-badge-giam">-21%</span>
-        </div>
-        <p class="paco-product-name">Combo 3<span class="paco-product-combo-sub">Miền Bình Yên &amp; Đường Đến Bình Yên</span></p>
-        <div class="paco-product-gia-wrap">
-            <span class="price-new">245.000đ</span>
-            <span class="price-old">312.000đ</span>
-        </div>
-        <div class="paco-product-buttons">
-            <a href="https://duongdenbinhyen.com/tacphammoi.html" class="paco-product-btn-more">Xem thêm</a>
-            <button type="button" class="paco-product-btn-cart" onclick="pacoAddToCart('Combo 3')">Thêm vào giỏ</button>
-        </div>
-    </div>
 
 </div>
 
 <script>
-// Giỏ hàng tạm (chỉ lưu trong bộ nhớ trang, KHÔNG lưu trình duyệt, mất khi tải lại trang).
-// Bấm "Thêm vào giỏ" -> tăng số ở icon "Giỏ hàng" trên menu chân trang.
-// BƯỚC TIẾP THEO (form): sẽ dùng biến pacoCartItems bên dưới để hiện danh
-// sách "Sách đã chọn" (tick chọn) ngay trong form đặt hàng #datsach.
-var pacoCartItems = {};
-
-function pacoAddToCart(tenSanPham) {
-    pacoCartItems[tenSanPham] = (pacoCartItems[tenSanPham] || 0) + 1;
-    var tong = 0;
-    for (var k in pacoCartItems) tong += pacoCartItems[k];
-    var elCount = document.getElementById('paco-cart-count');
-    if (elCount) {
-        elCount.textContent = tong;
-        elCount.style.display = tong > 0 ? 'block' : 'none';
-    }
-    pacoVeSpDaChon();
-}
-
-// Vẽ lại danh sách "Sách/combo đã chọn" trong form đặt hàng (#datsach) -
-// chỉ hiện khi giỏ có sản phẩm, mỗi dòng có tick để khách tự bỏ nếu không đặt.
-// Tên 2 cuốn sách trong từng combo - hiện kèm trong ngoặc ở list "Sách đã chọn"
-// cho cân đối, khớp đúng subtitle đang hiện ở khối TÁC PHẨM MỚI phía trên.
-var PACO_COMBO_SACH = {
-    'Combo 1': '2 cuốn',
-    'Combo 2': '2 cuốn',
-    'Combo 3': '2 cuốn'
+// ECO 30/10: Giỏ hàng = các cuốn đang tick trong form đặt sách (#datsach).
+// Bấm "Thêm giỏ" -> tick cuốn đó + cập nhật số đỏ trên icon giỏ hàng + Pixel AddToCart.
+var PACO_SACH={
+    ddby:{ten:'Đường Đến Bình Yên',id:'u35amq42vu'},
+    tt:{ten:'Lời Thì Thầm Từ Cuộc Đời',id:'6lo491xarx'},
+    mby:{ten:'Miền Bình Yên',id:'mienbinhyen'}
 };
-
-function pacoVeSpDaChon() {
-    var wrap = document.getElementById('paco-sp-da-chon-wrap');
-    var list = document.getElementById('paco-sp-da-chon-list');
-    if (!wrap || !list) return;
-    var ten = Object.keys(pacoCartItems);
-    if (ten.length === 0) {
-        wrap.style.display = 'none';
-        list.innerHTML = '';
-        pacoCapNhatHiddenSp();
-        return;
-    }
-    wrap.style.display = 'block';
-    // Sách lẻ: 1 cột (tên dài, để mỗi dòng cho dễ đọc).
-    // Combo: 2 cột (chỉ ghi "(2 cuốn)" nên ngắn, xếp 2 cột cho gọn).
-    var htmlSachLe = '';
-    var htmlCombo = '';
-    ten.forEach(function(t){
-        var laCombo = !!PACO_COMBO_SACH[t];
-        var hienThi = t + (laCombo ? ' (' + PACO_COMBO_SACH[t] + ')' : '');
-        var nhan = '<label style="display:flex;align-items:center;gap:6px;padding:3px 0;">'
-            + '<input type="checkbox" checked onchange="pacoCapNhatHiddenSp()">'
-            + '<span>' + hienThi + '</span>'
-            + '</label>';
-        if (laCombo) { htmlCombo += nhan; } else { htmlSachLe += nhan; }
-    });
-    var html = htmlSachLe;
-    if (htmlCombo) {
-        html += '<div style="display:grid;grid-template-columns:1fr 1fr;column-gap:10px;">' + htmlCombo + '</div>';
-    }
-    list.innerHTML = html;
-    pacoCapNhatHiddenSp();
+var PACO_TEN_MA={'Đường Đến Bình Yên':'ddby','Lời Thì Thầm Từ Cuộc Đời':'tt','Miền Bình Yên':'mby'};
+var PACO_GIA={1:129000,2:245000,3:298000};
+function pacoVnd(v){return v.toLocaleString('vi-VN')+'đ';}
+function pacoSoLuong(){var el=document.getElementById('fSoLuong');var n=el?parseInt(el.value)||1:1;return Math.max(1,Math.min(99,n));}
+function pacoGoi(){
+    var cs=[].slice.call(document.querySelectorAll('.chon-cb:checked')).map(function(c){return c.value;});
+    var n=cs.length,sl=pacoSoLuong(),gia=PACO_GIA[n]||0,ids,goi;
+    if(n===3){ids=['tronbo3cuon'];goi='Trọn bộ 3 cuốn';}
+    else if(n===2&&cs.indexOf('ddby')>-1&&cs.indexOf('tt')>-1){ids=['Combo Sách Miền Bình Yên'];goi='Bộ 2 cuốn';}
+    else{ids=cs.map(function(k){return PACO_SACH[k].id;});goi=n===2?'Bộ 2 cuốn':(n===1?'1 cuốn lẻ':'');}
+    return {codes:cs,n:n,sl:sl,gia:gia,tien:gia*sl,ids:ids,goi:goi,sach:cs.map(function(k){return PACO_SACH[k].ten;}).join(' + ')};
 }
-
-// Gom lại tên các sách ĐANG được tick trong form, ghi vào ô ẩn Sach_Da_Chon
-// để gửi kèm khi khách bấm HOÀN TẤT ĐẶT HÀNG.
-function pacoCapNhatHiddenSp() {
-    var hidden = document.getElementById('paco-sach-da-chon-hidden');
-    if (!hidden) return;
-    var list = document.getElementById('paco-sp-da-chon-list');
-    var daTick = [];
-    if (list) {
-        list.querySelectorAll('label').forEach(function(label){
-            var cb = label.querySelector('input[type=checkbox]');
-            if (cb && cb.checked) daTick.push(label.querySelector('span').textContent);
-        });
-    }
-    hidden.value = daTick.join(', ');
+function pacoCapNhat(){
+    var g=pacoGoi(),el=document.getElementById('daChon');
+    var cnt=document.getElementById('paco-cart-count');
+    if(cnt){cnt.textContent=g.n;cnt.style.display=g.n>0?'block':'none';}
+    if(!el)return g;
+    document.getElementById('fGoi').value=g.goi+(g.sl>1?' × '+g.sl:'');
+    document.getElementById('fSach').value=g.sach;
+    document.getElementById('fTien').value=g.tien?g.tien:'';
+    if(!g.n){el.innerHTML='<span class="loi">Vui lòng chọn ít nhất 1 cuốn sách</span>';return g;}
+    var goc=156000*g.n*g.sl,tk=goc-g.tien;
+    el.innerHTML='<div class="dc-row"><b class="dc-goi">'+g.goi+(g.sl>1?' × '+g.sl:'')+'</b><span class="dc-gia"><s>'+pacoVnd(goc)+'</s> <b class="tien">'+pacoVnd(g.tien)+'</b></span></div><div class="dc-sub">Tiết kiệm '+pacoVnd(tk)+' · Miễn ship toàn quốc</div>'+(g.n<3?'<div class="goi-goi-y">👉 Chọn đủ 3 cuốn chỉ 298.000đ</div>':'');
+    return g;
 }
+function pacoDoiSL(d){var el=document.getElementById('fSoLuong');el.value=Math.max(1,Math.min(99,pacoSoLuong()+d));pacoCapNhat();}
+function pacoAddToCart(tenSanPham){
+    var ma=PACO_TEN_MA[tenSanPham];if(!ma)return;
+    var cb=document.querySelector('.chon-cb[value="'+ma+'"]');if(cb)cb.checked=true;
+    pacoCapNhat();
+    if(typeof fbq==='function'){fbq('track','AddToCart',{content_ids:[PACO_SACH[ma].id],content_type:'product',currency:'VND',value:129000});}
+}
+document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.chon-cb').forEach(function(c){c.addEventListener('change',pacoCapNhat);});
+    var sl=document.getElementById('fSoLuong');if(sl)sl.addEventListener('input',pacoCapNhat);
+    pacoCapNhat();
+});
 </script>
 
 
@@ -2150,6 +2073,30 @@ function pacoCapNhatHiddenSp() {
     .paco-form-trust-wrap .paco-trust-col { width: 100%; flex-direction: row; }
     .paco-trust-item { flex: 1; }
 }
+
+/* ECO 30/10: chọn sách + số lượng + tổng tiền (giống landing sach.html) */
+.chon-sach { margin: 4px 0 12px; padding-top: 10px; border-top: 1px dashed #ccc; }
+#datsach .chon-sach-title { font-size: 15px; font-weight: bold; margin-bottom: 8px; color: #1a1a1a; text-align: center; }
+.chon-grid { display: flex; gap: 6px; }
+.chon-item { position: relative; flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px; border: 2px solid #ccc; border-radius: 8px; background: #fff; cursor: pointer; text-align: center; opacity: .55; }
+.chon-item img { width: 50%; height: auto; aspect-ratio: 600/878; object-fit: fill; border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+.chon-item input { position: absolute; top: 4px; left: 4px; width: 18px; height: 18px; margin: 0; accent-color: #b30000; }
+.chon-item:has(input:checked) { border-color: #b30000; background: #fff5f5; opacity: 1; }
+#datsach .chon-item span { color: #1a1a1a; font-size: clamp(9px, 2.75vw, 11.5px); line-height: 1.2; white-space: nowrap; letter-spacing: -0.2px; }
+#datsach .chon-moi { position: absolute; top: 4px; right: 4px; background: #b30000; color: #fff; font-style: normal; font-size: 9px; font-weight: bold; padding: 1px 5px; border-radius: 10px; }
+.chon-sl { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; font-size: 14px; color: #1a1a1a; font-weight: bold; }
+.chon-sl button { width: 30px; height: 30px; border: 1px solid #b30000; background: #fff; color: #b30000; border-radius: 6px; font-size: 18px; line-height: 1; cursor: pointer; }
+.chon-sl input { width: 46px; height: 30px; text-align: center; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; -moz-appearance: textfield; }
+.chon-sl input::-webkit-outer-spin-button, .chon-sl input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.da-chon { margin-top: 8px; padding: 6px 12px; background: #fff8e1; border: 1px solid #f5c518; border-radius: 8px; text-align: center; font-size: 14px; line-height: 1.4; color: #1a1a1a; }
+.dc-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; line-height: 1.15; }
+#datsach .dc-goi { font-size: 16px; white-space: nowrap; }
+.dc-gia { white-space: nowrap; }
+#datsach .dc-gia s { font-size: 13px; color: #888; }
+#datsach .da-chon b.tien { color: #b30000; font-size: 21px; }
+#datsach .dc-sub { font-size: 12px; color: #2e7d32; text-align: left; }
+#datsach .da-chon .goi-goi-y { color: #b30000; font-size: 12px; font-weight: bold; margin-top: 3px; padding-top: 3px; border-top: 1px dashed #f5c518; text-align: left; }
+#datsach .da-chon .loi { color: #b30000; font-weight: bold; }
 </style>
 
 <div class="paco-form-trust-wrap">
@@ -2162,17 +2109,26 @@ function pacoCapNhatHiddenSp() {
             </div>
             <div style="text-align:center;font-size:11px;color:#0d3b7a;font-weight:600;margin:-8px 0 6px 0;">📞 Vui lòng nghe máy, chúng tôi sẽ gọi xác nhận trước khi gửi sách!</div>
             <div style="margin-bottom:15px;">
-                <input type="tel" name="Số điện thoại" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Số điện thoại - nhập đủ 10 số" required="" onfocus="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');">
+                <input type="tel" name="Số điện thoại" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Số điện thoại - nhập đủ 10 số" required="">
             </div>
             <div style="margin-bottom:15px;">
                 <input type="text" name="Địa chỉ nhận sách" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Địa chỉ chi tiết" required="">
             </div>
             <input type="hidden" name="Nguon_Don" value="Trang chủ">
             <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
-            <input type="hidden" name="Sach_Da_Chon" id="paco-sach-da-chon-hidden" value="">
-            <div id="paco-sp-da-chon-wrap" style="display:none;text-align:center;margin:0 0 10px 0;">
-                <div id="paco-sp-da-chon-list" style="font-size:13px;color:#1a1a1a;"></div>
+            <div class="chon-sach">
+                <div class="chon-sach-title">Chọn sách bạn muốn nhận</div>
+                <div class="chon-grid">
+                    <label class="chon-item"><input type="checkbox" class="chon-cb" value="mby"><img src="biamienbinhyen11.webp" alt="" width="600" height="878" loading="lazy"><span>Miền Bình Yên</span><i class="chon-moi">MỚI</i></label>
+                    <label class="chon-item"><input type="checkbox" class="chon-cb" value="ddby"><img src="biaduongdenbinhyen11.webp" alt="" width="600" height="878" loading="lazy"><span>Đường Đến Bình Yên</span></label>
+                    <label class="chon-item"><input type="checkbox" class="chon-cb" value="tt"><img src="biathitham11.webp" alt="" width="600" height="878" loading="lazy"><span>Lời Thì Thầm</span></label>
+                </div>
+                <div class="chon-sl"><span>Số lượng:</span><button type="button" onclick="pacoDoiSL(-1)">−</button><input type="number" id="fSoLuong" name="Số lượng" value="1" min="1" max="99" inputmode="numeric"><button type="button" onclick="pacoDoiSL(1)">+</button></div>
+                <div class="da-chon" id="daChon"></div>
             </div>
+            <input type="hidden" name="Gói" id="fGoi" value="">
+            <input type="hidden" name="Sách đã chọn" id="fSach" value="">
+            <input type="hidden" name="Tổng tiền" id="fTien" value="">
             <div style="text-align:center;margin:15px 0;">
                 <div style="width:40px;height:1px;background:#ccc;margin:0 auto 12px;"></div>
                 <div style="font-style:normal;color:#1a1a1a;font-size:14px;font-weight:600;letter-spacing:0.5px;">"Kiểm tra kỹ lưỡng, hài lòng mới thanh toán"</div>
@@ -2717,13 +2673,14 @@ document.addEventListener("DOMContentLoaded",function(){
     if(pacoForm){
         pacoForm.addEventListener('submit',function(e){
             e.preventDefault();
+            var g=pacoCapNhat();
+            if(!g.n){document.getElementById('daChon').scrollIntoView({behavior:'smooth',block:'center'});return;}
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG...";
             var formData=new FormData(pacoForm);formData.append("IP",clientIP);
-            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec",{method:'POST',mode:'no-cors',body:formData})
+            fetch("https://script.google.com/macros/s/AKfycbwAGVaRQr7qtDZS_BMyrIdT5RjqqRUFPEAsq8iYwokUugB5E5Z3TQ3y-XRyMQE4pk-S/exec",{method:'POST',mode:'no-cors',body:formData})
             .then(function(){
-                if(typeof fbq!=='undefined')fbq('track','Purchase',{currency:'VND',value:199000});
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐƠN HÀNG ĐÃ GỬI THÀNH CÔNG - Cảm ơn";pacoForm.reset();
-                setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
+                pacoCapNhat();setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
             }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
         });
     }
@@ -2862,5 +2819,18 @@ function pacoToggleReadmore(contentId, btnId) {
 
 
 
+<!-- ECO 30/10: Meta Pixel — trang chủ CHỈ ghi Xem trang + Thêm giỏ (tạo tệp khách bám đuổi). KHÔNG gửi Mua hàng. -->
+<script>
+window.addEventListener('load',function(){
+    setTimeout(function(){
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init','935549958850787');
+        fbq('set','autoConfig',false,'935549958850787');
+        fbq('track','PageView');
+        fbq('track','ViewContent',{content_ids:['tronbo3cuon','Combo Sách Miền Bình Yên','mienbinhyen','u35amq42vu','6lo491xarx'],content_type:'product',currency:'VND',value:298000});
+    },3000);
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"></noscript>
 </div></body>
 </html>
