@@ -1041,7 +1041,7 @@ window.addEventListener('scroll', function() {
         padding: 0; 
         display: flex;
         justify-content: center;
-        gap: 80px; /* Giảm gap để không đẩy lề */
+        gap: 30px; /* ECO 30/10: 3 cuốn */
         box-sizing: border-box; /* Khóa không cho phình ra */
     }
     .paco-catalog-item {
@@ -1073,11 +1073,12 @@ window.addEventListener('scroll', function() {
     /* ĐIỀU CHỈNH CHO ĐIỆN THOẠI */
     @media (max-width: 600px) {
         .paco-catalog-wrapper {
-            gap: 20px; /* Mobile để gần nhau cho đẹp */
+            gap: 10px; /* ECO 30/10: 3 cuốn trên 1 hàng */
             padding: 0 15px; /* Khớp padding khối chuẩn */
         }
         .paco-catalog-item img {
-            height: 180px;
+            height: auto;
+            width: 100%;
         }
         .paco-btn-detail {
             font-size: 14px;
@@ -1087,15 +1088,22 @@ window.addEventListener('scroll', function() {
 
 <div class="paco-catalog-wrapper">
     <div class="paco-catalog-item">
+        <a href="https://duongdenbinhyen.com/sach-mien-binh-yen.html">
+            <img src="biamienbinhyen.webp" alt="Miền Bình Yên">
+        </a>
+        <a href="https://duongdenbinhyen.com/sach-mien-binh-yen.html" class="paco-btn-detail">Xem chi tiết</a>
+    </div>
+
+    <div class="paco-catalog-item">
         <a href="https://duongdenbinhyen.com/">
-            <img src="DDBY_bia.webp" width="500" height="732" alt="Đường Đến Bình Yên">
+            <img src="DDBY_bia.webp" alt="Đường Đến Bình Yên">
         </a>
         <a href="https://duongdenbinhyen.com/tacphammoi.html#duongdenbinhyen" class="paco-btn-detail">Xem chi tiết</a>
     </div>
 
     <div class="paco-catalog-item">
         <a href="https://duongdenbinhyen.com/">
-            <img src="thitham_bia.webp" width="500" height="732 alt=" lời thì thầm từ cuộc đời" alt="Bìa sách miền bình yên | Tác giả Thiện Nhân">
+            <img src="thitham_bia.webp" alt="Lời thì thầm từ cuộc đời">
         </a>
         <a href="https://duongdenbinhyen.com/tacphammoi.html#thitham" class="paco-btn-detail">Xem chi tiết</a>
     </div>
@@ -1733,13 +1741,13 @@ window.addEventListener('scroll', function() {
                     <span class="platform-name"><i class="fa-brands fa-google-play"></i> Ebook Google Book</span>
                 </div>
             </a>
-            <a href="#" class="btn-ebook-3d" onclick="return false;">
+            <a href="https://books.apple.com/us/book/id6825341704" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Miền Bình Yên</span>
                     <span class="platform-name"><i class="fa-brands fa-apple"></i> Ebook Apple Book</span>
                 </div>
             </a>
-            <a href="#" class="btn-ebook-3d" onclick="return false;">
+            <a href="https://play.google.com/store/books/details?id=LRIfEgAAQBAJ" class="btn-ebook-3d" target="_blank">
                 <div class="btn-content">
                     <span class="book-name">Miền Bình Yên</span>
                     <span class="platform-name"><i class="fa-brands fa-google-play"></i> Ebook Google Book</span>
