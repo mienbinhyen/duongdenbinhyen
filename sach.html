@@ -1172,7 +1172,7 @@ document.addEventListener("DOMContentLoaded",function(){
 		var extId=_ext;
 		var _fbc=(document.cookie.match(/(?:^|;\s*)_fbc=([^;]+)/)||[])[1]||'';if(!_fbc){var _fcl=(location.search.match(/[?&]fbclid=([^&]+)/)||[])[1];if(_fcl)_fbc='fb.1.'+Date.now()+'.'+_fcl;}
                 /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
-                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:g.tien,currency:'VND',action_source:'website',content_ids:g.ids.join(','),content_type:'product',num_items:g.n,fbp:fbp,external_id:extId,event_id:eid,fbc:_fbc,ph:_ph,fn:_fn,ln:_ln,ct:_ct,country:'vn',event_source_url:location.href.split('?')[0]})});
+                fetch('https://meta-capi-paco.tgthiennhan.workers.dev/',{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({event_name:'Purchase',value:g.tien,currency:'VND',action_source:'website',content_ids:g.ids.join(','),content_type:'product',num_items:g.n,fbp:fbp,external_id:extId,event_id:eid,fbc:_fbc,ph:_ph,fn:_fn,ln:_ln,ct:_ct,country:'vn',event_source_url:location.href.split('?')[0],test_event_code:((location.search.match(/[?&]test_event_code=([^&]+)/)||[])[1]||'')})});
             };
             var _thanhCong=function(){
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐÃ GỬI ĐƠN THÀNH CÔNG";pacoForm.reset();pacoCapNhat();
