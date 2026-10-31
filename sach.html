@@ -195,6 +195,10 @@
         border-radius: 4px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
+    .paco-book-images a { width: 30.5%; display: block; }
+    .paco-book-images a img { width: 100%; display: block; }
+    #sach-mby, #sach-ddby, #sach-tt { scroll-margin-top: 15px; }
+    html { scroll-behavior: smooth; }
     .paco-book-info { line-height: 1.3; text-align: center; }
 
     /* ============================================================
@@ -598,9 +602,9 @@
      ============================================================ -->
 <div class="paco-book-pair">
     <div class="paco-book-images">
-        <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;object-fit:fill;">
-        <img src="biathitham11.webp" alt="Lời Thì Thầm Từ Cuộc Đời" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;object-fit:fill;">
-        <img src="biamienbinhyen11.webp" alt="Miền Bình Yên" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;">
+        <a href="#sach-ddby"><img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;object-fit:fill;"></a>
+        <a href="#sach-tt"><img src="biathitham11.webp" alt="Lời Thì Thầm Từ Cuộc Đời" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;object-fit:fill;"></a>
+        <a href="#sach-mby"><img src="biamienbinhyen11.webp" alt="Miền Bình Yên" width="600" height="878" loading="lazy" style="aspect-ratio:600/878;"></a>
     </div>
     <div class="paco-book-info" style="display:flex;justify-content:space-between;align-items:center;width:100%;">
         <div style="flex:1;text-align:center;">
@@ -711,7 +715,7 @@
     <!-- ============================================================
          GIỚI THIỆU SÁCH 3: MIỀN BÌNH YÊN (MỚI)
          ============================================================ -->
-    <div class="paco-content-section">
+    <div class="paco-content-section" id="sach-mby">
         <div class="paco-content-inner" style="font-size:22px;">
             <div style="text-align:left;margin-bottom:10px;">
                 <h2 class="paco-h2-title" style="margin-bottom:5px;">MIỀN BÌNH YÊN <span class="sach-moi">MỚI</span></h2>
@@ -745,7 +749,7 @@
     <!-- ============================================================
          GIỚI THIỆU SÁCH 1: ĐƯỜNG ĐẾN BÌNH YÊN
          ============================================================ -->
-    <div class="paco-content-section">
+    <div class="paco-content-section" id="sach-ddby">
         <div class="paco-content-inner">
             <div style="text-align:left;margin-bottom:20px;">
                 <h2 class="paco-h2-title" style="margin-bottom:5px;">ĐƯỜNG ĐẾN BÌNH YÊN</h2>
@@ -779,7 +783,7 @@
     <!-- ============================================================
          GIỚI THIỆU SÁCH 2: LỜI THÌ THẦM TỪ CUỘC ĐỜI
          ============================================================ -->
-    <div class="paco-content-section">
+    <div class="paco-content-section" id="sach-tt">
         <div class="paco-content-inner" style="margin:-20px auto;font-size:22px;">
             <div style="text-align:left;margin-bottom:10px;">
                 <h2 class="paco-h2-title" style="margin-bottom:5px;">LỜI THÌ THẦM TỪ CUỘC ĐỜI</h2>
