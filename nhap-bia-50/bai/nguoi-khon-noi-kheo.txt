@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  nguoi-khon-noi-kheo.html
+Title:  Người Khôn Nói Khéo | PACOBOOKS
+Description:  Nói thật lòng mà vẫn bị hiểu lầm? Sách Người Khôn Nói Khéo nói về gì: cách nói điều cần nói mà không làm người nghe thấy bị phủ nhận.
+Keywords:  người khôn nói khéo, sách người khôn nói khéo, Kentaro Hayashi, tóm tắt sách người khôn nói khéo, PACOBOOKS
+Ảnh:  nguoi-khon-noi-kheo.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · nguoi-khon-noi-kheo.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Người Khôn Nói Khéo
+H3:  Người Khôn Nói Khéo — nói đúng thôi chưa đủ, còn phải nói để người ta nghe được
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Bạn chỉ muốn góp ý cho đồng nghiệp một câu, vậy mà cả buổi chiều không khí cứ nặng như chì. Về nhà, nói với mẹ một điều mình tin là đúng, cuối cùng hai mẹ con lại giận nhau. Lòng thì tốt, ý thì thật, mà sao lời nói ra cứ như hòn đá ném vào mặt hồ. Có khi điều ta thiếu không phải là sự chân thành, mà là cách đặt sự chân thành ấy xuống cho người ta đỡ được.
+
+H2: Tóm tắt nội dung sách Người Khôn Nói Khéo
+Người Khôn Nói Khéo – Nghệ Thuật Giao Tiếp Tinh Tế, Xây Dựng Mối Quan Hệ là sách của Kentaro Hayashi, chuyên gia khai vấn và đào tạo lãnh đạo người Nhật. Ấn bản tiếng Việt do AZ Việt Nam phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026, bản dịch của Mochimugi.
+
+Sách bắt đầu từ những người rất giỏi việc, rất thẳng thắn, nhưng hay bị hiểu lầm. Tác giả cho rằng trong giao tiếp, nói đúng chưa đủ; cách nói, thời điểm nói và khả năng hiểu cảm nhận người nghe mới là điều quyết định.
+
+Thay vì dạy nói hay, sách đề nghị nhận diện và thay đổi những thói quen giao tiếp khiến người khác cảm thấy bị phủ nhận, dù ta không có ý đó.
+
+Qua năm chương, người đọc được hướng dẫn lắng nghe, công nhận cảm xúc, dùng câu hỏi mở, điều chỉnh ngôn ngữ cơ thể, và góp ý thẳng mà vẫn giữ sự tôn trọng.
+
+Điểm đáng chú ý là sách không khuyên ta nhường nhịn mọi người. Ta vẫn có thể từ chối, phản biện, chỉ ra sai sót, chỉ cần chọn cách đối thoại để vấn đề được giải quyết mà mối quan hệ không tổn hại không cần thiết.
+
+Thông điệp chung: khả năng giao tiếp không chỉ quyết định điều ta truyền đạt, mà còn ảnh hưởng tới việc người khác có tin và muốn đồng hành cùng ta hay không.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nhớ bà ngoại hay nói: lời nói chẳng mất tiền mua, lựa lời mà nói cho vừa lòng nhau. Hồi nhỏ nghe như câu ca dao, lớn lên mới thấy nó nặng ký. Một câu nói nhẹ đi một chút, đôi khi giữ lại được cả một mối thân tình.
+
+Nói khéo không phải là giả. Nói khéo là thương người nghe đủ để chọn lời.
+
+H2: Ai nên đọc Người Khôn Nói Khéo?
+- Người thẳng tính, hay bị hiểu lầm dù có ý tốt.
+- Nhân viên văn phòng muốn giao tiếp hiệu quả hơn với đồng nghiệp.
+- Người quản lý muốn góp ý mà đội nhóm vẫn tin tưởng.
+- Ai muốn bớt va chạm khi trò chuyện với người thân.
+
+Nguồn tham khảo:
+- Trang sách Người Khôn Nói Khéo tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/nguoi-khon-noi-kheo-nghe-thuat-giao-tiep-tinh-te-xay-dung-moi-quan-he.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Người Khôn Nói Khéo thuộc về tác giả Kentaro Hayashi và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Lựa lời để nói với người khác, cũng cần lựa lời để nói với chính mình. Những trang trong bộ sách Miền Bình Yên (https://duongdenbinhyen.com/mien-binh-yen.html) viết về những điều người ta ít dám nói ra, bằng giọng rất nhẹ.
+
+Nếu bạn đang tìm hiểu sách Người Khôn Nói Khéo nói về gì để chọn đọc, có thể xem thêm các cuốn cùng chủ đề ở sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html), và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Sai Sao Cho Đúng — không phải thất bại nào cũng giống nhau (https://duongdenbinhyen.com/sai-sao-cho-dung.html)
+- Sự Chú Ý Là Tiền — giữ được sự chú ý là giữ được chính mình (https://duongdenbinhyen.com/su-chu-y-la-tien.html)
+- 7 Thói Quen Hiệu Quả — dành sức cho điều mình muốn gìn giữ (https://duongdenbinhyen.com/7-thoi-quen-hieu-qua.html)
+- Mindset Tâm Lý Học Thành Công — khả năng còn có thể lớn lên từ điều chưa biết (https://duongdenbinhyen.com/mindset-tam-ly-hoc-thanh-cong.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Khởi Nghiệp Tinh Gọn (https://duongdenbinhyen.com/khoi-nghiep-tinh-gon.html)
+Thẻ 3: Sách hay cho nhân viên văn phòng (https://duongdenbinhyen.com/sach-hay-cho-nhan-vien-van-phong.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Người Khôn Nói Khéo nói về gì?
+Trả lời: Sách Người Khôn Nói Khéo của Kentaro Hayashi nói về cách giao tiếp tinh tế: nhận diện thói quen khiến người khác thấy bị phủ nhận, học cách lắng nghe, công nhận cảm xúc, dùng câu hỏi mở và góp ý thẳng mà vẫn tôn trọng. Sách giúp giải quyết vấn đề mà không làm tổn hại mối quan hệ.
+
+Câu 2: Ai nên đọc Người Khôn Nói Khéo?
+Trả lời: Người Khôn Nói Khéo hợp với người thẳng tính hay bị hiểu lầm, nhân viên văn phòng, người quản lý cần góp ý cho đội nhóm, và ai muốn bớt va chạm với người thân. Sách viết gọn, dễ áp dụng vào từng cuộc trò chuyện.
+
+Câu 3: Người Khôn Nói Khéo có dạy cách nói chiều lòng người khác không?
+Trả lời: Không hẳn. Theo Tác giả Thiện Nhân, sách không khuyến khích nhường nhịn hay làm vừa lòng tất cả. Bạn vẫn được từ chối, phản biện và bảo vệ quan điểm; điều sách hướng đến là cách nói để người nghe tiếp nhận được mà không thấy bị tổn thương.

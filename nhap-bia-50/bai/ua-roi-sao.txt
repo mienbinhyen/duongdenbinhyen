@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  ua-roi-sao.html
+Title:  Ủa, Rồi Sao? | PACOBOOKS
+Description:  Tự nhủ kệ đi mà 3 giờ sáng vẫn trằn trọc? Sách Ủa, Rồi Sao? nói về gì: vì sao khó thôi bận tâm lời người khác và cách thay đổi từ gốc.
+Keywords:  ủa, rồi sao?, sách ủa, rồi sao?, Ngải A A, tóm tắt sách ủa, rồi sao?, PACOBOOKS
+Ảnh:  ua-roi-sao.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · ua-roi-sao.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-tam-ly.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Ủa, Rồi Sao?
+H3:  Ủa, Rồi Sao? — ba chữ để thôi sợ bị đánh giá
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Xem xong một video truyền động lực, bạn gật gù tự hứa từ nay mặc kệ lời thiên hạ. Ba giờ sáng hôm ấy, bạn vẫn nằm nhìn trần nhà, nghĩ mãi về một câu bình luận ai đó để lại. Mặc kệ, hóa ra không dễ như người ta nói trên mạng. Và có lẽ, ta cần nhiều hơn một câu khẩu hiệu.
+
+H2: Tóm tắt nội dung sách Ủa, Rồi Sao?
+Ủa, Rồi Sao? – Chuyện Gì Cũng Có Thể Hỏi Lại Ba Chữ Này là sách của tác giả Ngải A A. Ấn bản tiếng Việt do AZ Việt Nam phát hành, NXB Dân Trí (https://duongdenbinhyen.com/nha-xuat-ban-dan-tri.html) ấn hành năm 2026.
+
+Sách bắt đầu từ một nhận xét: mạng xã hội cho ta thấy sự nhẹ nhõm của việc không quan tâm, nhưng hiếm khi chỉ ra con đường để đến được đó. Vì vậy, dù tự nhủ kệ đi cả nghìn lần, ta vẫn chẳng thể thật sự mặc kệ.
+
+Nội dung đi qua ba trụ cột. Thứ nhất, vạch ra những cạm bẫy tâm lý khi ta tiếp nhận thông điệp truyền động lực.
+
+Thứ hai, lý giải vì sao rất khó thôi bận tâm và đề xuất một cách tiếp cận mới, từ gốc rễ vấn đề.
+
+Thứ ba, một bộ hành động đơn giản với trích dẫn, bảng biểu, sơ đồ, danh sách và những khoảng trống để người đọc tự suy tư. Sách nhỏ gọn như sổ tay, mang theo được.
+
+Thông điệp chung: hiểu vì sao mình sợ bị đánh giá là bước đầu để thay đổi thật sự và bền vững, thay vì chỉ tự nhủ suông.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thấy ba chữ ủa, rồi sao vừa buồn cười vừa dễ thương. Có những nỗi lo chỉ cần hỏi lại nó một câu như thế là tự xẹp xuống.
+
+Thôi bận tâm không phải là lạnh lùng. Đó là biết giữ lòng mình cho những người, những việc đáng giữ.
+
+H2: Ai nên đọc Ủa, Rồi Sao??
+- Bạn trẻ hay lo bị người khác đánh giá.
+- Người có thói quen làm hài lòng người khác rồi tự trách mình.
+- Người mệt vì phải chạy theo tiêu chuẩn của số đông.
+- Ai đọc nhiều lời khuyên trên mạng mà vẫn hoang mang.
+
+Nguồn tham khảo:
+- Trang sách Ủa, Rồi Sao? tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/ua-roi-sao-chuyen-gi-cung-co-the-hoi-lai-ba-chu-nay.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Ủa, Rồi Sao? thuộc về tác giả Ngải A A và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Khi đã bớt bận tâm lời người, ta mới nghe rõ tiếng lòng mình. Lời thì thầm từ cuộc đời (https://duongdenbinhyen.com/thi-tham.html) là những trang viết cho ai cần một người hiểu mình, không phán xét.
+
+Bạn tìm hiểu sách Ủa, Rồi Sao? nói về gì để chọn đọc? Có thể xem thêm các cuốn cùng chủ đề ở sách tâm lý học (https://duongdenbinhyen.com/sach-tam-ly-hoc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Giải Mã Bộ Não Tuổi Dậy Thì — không phải nổi loạn, mà là não đang lớn (https://duongdenbinhyen.com/giai-ma-bo-nao-tuoi-day-thi.html)
+- Ký Ức Bị Kìm Nén — lắng nghe đứa trẻ từng phải im lặng (https://duongdenbinhyen.com/ky-uc-bi-kim-nen.html)
+- Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm — chọn điều đáng để mình bận lòng (https://duongdenbinhyen.com/nghe-thuat-tinh-te-cua-viec-dech-quan-tam.html)
+- Chúa Tể Những Chiếc Nhẫn — những bước chân nhỏ mang một gánh nặng lớn (https://duongdenbinhyen.com/chua-te-nhung-chiec-nhan.html)
+📚 Thuộc tủ sách:  Sách Tâm Lý (https://duongdenbinhyen.com/sach-tam-ly.html)
+Ký tên: Tác giả Thiện Nhân (https://tacgiathiennhan.com/)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Quẳng Gánh Lo Đi Và Vui Sống (https://duongdenbinhyen.com/quang-ganh-lo-di-va-vui-song.html)
+Thẻ 3: Làm mẹ mà vẫn cô đơn (https://duongdenbinhyen.com/lam-me-ma-van-co-don.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Ủa, Rồi Sao? nói về gì?
+Trả lời: Sách Ủa, Rồi Sao? của Ngải A A giải thích vì sao ta khó thôi bận tâm lời người khác dù đã tự nhủ kệ đi. Sách vạch ra cạm bẫy tâm lý của các thông điệp truyền động lực, đề xuất cách tiếp cận từ gốc và đưa ra bộ hành động đơn giản dạng sổ tay.
+
+Câu 2: Ai nên đọc Ủa, Rồi Sao??
+Trả lời: Ủa, Rồi Sao? hợp với bạn trẻ sợ bị đánh giá, người hay cố làm hài lòng người khác, người mệt vì chạy theo tiêu chuẩn số đông. Sách nhỏ gọn, có sơ đồ và khoảng trống để tự viết suy nghĩ.
+
+Câu 3: Vì sao tự nhủ mặc kệ đi mà vẫn không làm được?
+Trả lời: Theo nội dung Ủa, Rồi Sao?, việc tự nhủ chỉ chạm bề mặt, còn nỗi sợ bị đánh giá có gốc rễ sâu hơn. Tác giả Thiện Nhân cho rằng hiểu được gốc ấy, ta mới thay đổi được từ từ, thay vì cố gồng trong vài ngày rồi lại như cũ.

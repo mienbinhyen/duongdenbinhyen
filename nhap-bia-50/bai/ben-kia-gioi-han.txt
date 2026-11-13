@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  ben-kia-gioi-han.html
+Title:  Bên Kia Giới Hạn | PACOBOOKS
+Description:  Cố hết sức mà vẫn cạn năng lượng? Sách Bên Kia Giới Hạn nói về gì: bài học sức bền, quản trị tâm lý và năng lượng từ hành trình Ironman.
+Keywords:  bên kia giới hạn, sách bên kia giới hạn, Trần Đình Minh Anh, tóm tắt sách bên kia giới hạn, PACOBOOKS
+Ảnh:  ben-kia-gioi-han.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · ben-kia-gioi-han.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-truyen-cam-hung.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Bên Kia Giới Hạn
+H3:  Bên Kia Giới Hạn — giới hạn thường nằm trong đầu trước khi nằm ở đôi chân
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Năm giờ sáng, khi thành phố còn ngủ, có những người đã chạy được chục cây số. Ta nhìn họ và nghĩ chắc họ sinh ra đã khỏe. Nhưng hầu hết bắt đầu từ một vòng chạy hụt hơi, một lần muốn bỏ cuộc giữa đường. Sức bền, hóa ra, được xây bằng những lần không bỏ.
+
+H2: Tóm tắt nội dung sách Bên Kia Giới Hạn
+Bên Kia Giới Hạn – Khi Cự Ly Ironman Vẫn Chưa Đủ Dài là sách của tác giả Trần Đình Minh Anh, do Giver phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026.
+
+Sách bắt đầu từ cảm giác quen thuộc: cố gắng hết sức mỗi ngày mà vẫn mệt mỏi, cạn năng lượng, không biết cân bằng giữa sự nghiệp, gia đình và bản thân.
+
+Đây là cuốn sách phát triển bản thân kết hợp thể thao sức bền, tâm lý học hành vi và quản trị năng lượng, qua hành trình chinh phục các thử thách thể chất khắc nghiệt của tác giả, từ Ironman đến Ultra Triathlon.
+
+Qua mười ba chương, trải nghiệm bơi, đạp xe, chạy bộ được chuyển thành bài học về kỷ luật, xây thói quen, quản lý thời gian, phân bổ năng lượng và làm chủ cảm xúc dưới áp lực.
+
+Sách giới thiệu các cách tiếp cận như quy tắc ba ngăn, chia nhỏ mục tiêu, xử lý vấn đề từng bước, và gợi cách phân bổ nguồn lực cho công việc, gia đình và bản thân.
+
+Thông điệp chung: một người bình thường vẫn có thể vượt giới hạn của mình, nếu biết kiên trì và quản lý năng lượng đúng cách.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết không chạy Ironman, nhưng hiểu cảm giác muốn dừng giữa chừng. Đời ai cũng có những cự ly dài như thế, và bài học từ đường chạy vẫn đúng: chia nhỏ ra, đi từng đoạn, đừng nhìn quá xa.
+
+Vượt giới hạn không phải lúc nào cũng là đi nhanh hơn. Có khi là đi được lâu hơn mà vẫn còn thương mình.
+
+H2: Ai nên đọc Bên Kia Giới Hạn?
+- Người đi làm hay cạn năng lượng, muốn quản lý sức lực tốt hơn.
+- Người yêu chạy bộ, ba môn phối hợp, thể thao sức bền.
+- Người muốn rèn kỷ luật và thói quen bền vững.
+- Ai đang cần động lực để bước qua giới hạn của mình.
+
+Nguồn tham khảo:
+- Trang sách Bên Kia Giới Hạn tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/ben-kia-gioi-han-khi-cu-ly-ironman-van-chua-du-dai-ren-luyen-suc-ben-quan-tri-tam-ly-va-but-pha-trong-cuoc-song.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Bên Kia Giới Hạn thuộc về tác giả Trần Đình Minh Anh và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Sau những cự ly dài, ai cũng cần một chỗ dừng chân. Bộ sách Miền Bình Yên (https://duongdenbinhyen.com/mien-binh-yen.html) là chốn dừng chân giữa đời vội, nơi người ta tìm lại hơi thở của mình.
+
+Bạn ghé để biết sách Bên Kia Giới Hạn nói về gì? Có thể xem thêm các cuốn truyền động lực ở sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html) và về PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Bạn Ơi, Hãy Đọc Cho Chính Mình — mỗi ngày đọc một chút, mỗi ngày tốt hơn một chút (https://duongdenbinhyen.com/ban-oi-hay-doc-cho-chinh-minh.html)
+- Cách Để Người Bình Thường Chiến Thắng Thiên Tài — không cần thiên tài, chỉ cần không bỏ cuộc (https://duongdenbinhyen.com/cach-de-nguoi-binh-thuong-chien-thang-thien-tai.html)
+- Người Giàu Có Nhất Thành Babylon — giữ một phần hôm nay cho những ngày phía trước (https://duongdenbinhyen.com/nguoi-giau-co-nhat-thanh-babylon.html)
+- Sức Mạnh Của Người Hướng Nội — sự lặng lẽ cũng có phần đóng góp của mình (https://duongdenbinhyen.com/suc-manh-cua-nguoi-huong-noi.html)
+📚 Thuộc tủ sách:  Sách Truyền Cảm Hứng (https://duongdenbinhyen.com/sach-truyen-cam-hung.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Trên Đường Băng (https://duongdenbinhyen.com/tren-duong-bang.html)
+Thẻ 3: Áp lực làm dâu (https://duongdenbinhyen.com/ap-luc-lam-dau.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Bên Kia Giới Hạn nói về gì?
+Trả lời: Sách Bên Kia Giới Hạn của Trần Đình Minh Anh chuyển hành trình chinh phục Ironman và Ultra Triathlon thành bài học về kỷ luật, xây thói quen, quản lý thời gian, phân bổ năng lượng và làm chủ cảm xúc, giúp người đọc cân bằng công việc, gia đình và bản thân.
+
+Câu 2: Ai nên đọc Bên Kia Giới Hạn?
+Trả lời: Bên Kia Giới Hạn hợp với người đi làm hay cạn năng lượng, người yêu thể thao sức bền, người muốn rèn kỷ luật và ai cần động lực vượt giới hạn. Không cần chơi thể thao vẫn áp dụng được.
+
+Câu 3: Không chơi thể thao có nên đọc Bên Kia Giới Hạn không?
+Trả lời: Nên. Theo Tác giả Thiện Nhân, thể thao trong Bên Kia Giới Hạn chỉ là câu chuyện dẫn dắt; bài học chính là cách quản lý năng lượng, chia nhỏ mục tiêu và giữ tinh thần, áp dụng được cho mọi người.

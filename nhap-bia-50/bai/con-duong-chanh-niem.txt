@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  con-duong-chanh-niem.html
+Title:  Con Đường Chánh Niệm | PACOBOOKS
+Description:  Có đủ mà lòng vẫn trống? Sách Con Đường Chánh Niệm nói về gì: hành trình của Ram Dass từ giáo sư Harvard đến người thực hành tỉnh thức.
+Keywords:  con đường chánh niệm, sách con đường chánh niệm, Ram Dass, tóm tắt sách con đường chánh niệm, PACOBOOKS
+Ảnh:  con-duong-chanh-niem.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · con-duong-chanh-niem.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-chua-lanh.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Con Đường Chánh Niệm
+H3:  Con Đường Chánh Niệm — khi mọi xáo trộn dừng lại
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Có người đi gần hết con đường người ta gọi là thành công: bằng cấp, địa vị, nhà cửa. Rồi một tối, ngồi giữa căn phòng đẹp đẽ, họ thấy trống không. Không thiếu gì cả, chỉ thiếu chính mình. Câu chuyện ấy cũ như thế giới, nhưng mỗi lần nghe lại, vẫn có ai đó giật mình.
+
+H2: Tóm tắt nội dung sách Con Đường Chánh Niệm
+Con Đường Chánh Niệm là sách của Ram Dass, tên thật Richard Alpert, từng là giáo sư tâm lý học tại Đại học Harvard. Tên gốc tiếng Anh là Be Here Now, xuất bản năm 1971. Ấn bản tiếng Việt do 1980 Books phát hành, NXB Lao Động (https://duongdenbinhyen.com/nha-xuat-ban-lao-dong.html) ấn hành năm 2026, bản dịch của Eve La Luna.
+
+Phần đầu là lời tự thuật của tác giả: dù có địa vị, tài sản và sự nghiệp đỉnh cao, ông nhận ra sự trống rỗng của những lý thuyết tâm lý thông thường và quyết định đi tìm sự thức tỉnh bên trong.
+
+Phần tiếp theo phân tích cơ chế tâm hồn và sự chuyển hóa năng lượng, giúp người đọc nhận diện các trạng thái cảm xúc và vượt qua giới hạn của bản ngã.
+
+Phần cuối là cẩm nang thực hành cho đời sống thường nhật: chăm giấc ngủ, ăn uống, công việc, sinh kế chân chính; rèn tập trung qua thiền, điều hòa hơi thở, trì chú; và giữ tĩnh tại dù sống một mình hay trong gia đình, tập thể.
+
+Theo nhà phát hành, đây là tác phẩm kinh điển giao thoa giữa tâm linh và tâm lý học, hướng tới lối sống tỉnh thức bền vững.
+
+Thông điệp chung: con đường chánh niệm là con đường quay về với chính mình, nơi mọi xáo trộn dừng lại để nhường chỗ cho sự tự do.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết đọc câu chuyện một giáo sư Harvard bỏ lại mọi thứ để tìm mình, và nghĩ tới những người bình thường vẫn ngày ngày tìm mình giữa bếp núc, công sở. Chánh niệm, có lẽ, không cần đi đâu xa.
+
+Rửa một chiếc chén mà biết mình đang rửa chén. Bình yên bắt đầu từ những việc nhỏ như thế.
+
+H2: Ai nên đọc Con Đường Chánh Niệm?
+- Người thành đạt mà vẫn thấy trống rỗng, muốn tìm ý nghĩa sâu hơn.
+- Người quan tâm thiền, chánh niệm, đời sống tâm linh.
+- Người muốn có lộ trình thực hành tỉnh thức trong đời thường.
+- Ai yêu thích các tác phẩm kinh điển về tâm linh phương Đông.
+
+Nguồn tham khảo:
+- Trang sách Con Đường Chánh Niệm tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/con-duong-chanh-niem.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Con Đường Chánh Niệm thuộc về tác giả Ram Dass và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Chánh niệm có thể bắt đầu từ việc đọc chậm một trang sách. Lời thì thầm từ cuộc đời (https://duongdenbinhyen.com/thi-tham.html) là những trang tản văn để đọc khi lòng cần nghỉ ngơi.
+
+Nếu bạn đang tìm hiểu sách Con Đường Chánh Niệm nói về gì, có thể xem thêm ở sách tâm lý chữa lành (https://duongdenbinhyen.com/sach-tam-ly-chua-lanh.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Thân Khỏe Tâm An Trí Minh — sức khỏe bắt đầu từ bên trong (https://duongdenbinhyen.com/than-khoe-tam-an-tri-minh.html)
+- Thiền Định Khai Mở Luân Xa — lắng nghe rung động để tìm lại bình yên (https://duongdenbinhyen.com/thien-dinh-khai-mo-luan-xa.html)
+- Hành Trình Về Phương Đông — những cuộc gặp mở một lối nhìn vào bên trong (https://duongdenbinhyen.com/hanh-trinh-ve-phuong-dong.html)
+- Bí Mật — điều ta nghĩ mỗi ngày có ý nghĩa thế nào (https://duongdenbinhyen.com/bi-mat.html)
+📚 Thuộc tủ sách:  Sách Chữa Lành (https://duongdenbinhyen.com/sach-chua-lanh.html)
+Ký tên: Tác giả Thiện Nhân (https://tacgiathiennhan.com/)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Hãy Chăm Sóc Mẹ (https://duongdenbinhyen.com/hay-cham-soc-me.html)
+Thẻ 3: Sống giữa thành phố mà lòng trống rỗng (https://duongdenbinhyen.com/song-giua-thanh-pho-ma-long-trong-rong.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Con Đường Chánh Niệm nói về gì?
+Trả lời: Sách Con Đường Chánh Niệm của Ram Dass kể hành trình từ giáo sư tâm lý Harvard đến người đi tìm sự thức tỉnh, phân tích cơ chế tâm hồn và chuyển hóa năng lượng, rồi đưa ra cẩm nang thực hành như thiền, điều hòa hơi thở và sống tỉnh thức trong đời thường.
+
+Câu 2: Ai nên đọc Con Đường Chánh Niệm?
+Trả lời: Con Đường Chánh Niệm hợp với người thành đạt mà thấy trống rỗng, người quan tâm thiền và tâm linh, người muốn có lộ trình thực hành tỉnh thức, và ai yêu tác phẩm kinh điển. Sách nên đọc chậm.
+
+Câu 3: Ram Dass là ai?
+Trả lời: Ram Dass, tên thật Richard Alpert, từng là giáo sư tâm lý học tại Harvard, sau đó theo đuổi con đường tâm linh và trở thành người truyền cảm hứng về thiền và tỉnh thức. Theo Tác giả Thiện Nhân, câu chuyện đời ông khiến những trang sách thêm phần chân thật.

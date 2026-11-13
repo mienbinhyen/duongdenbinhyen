@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  kien-dinh-tu-quyet.html
+Title:  Kiên Định Tự Quyết | PACOBOOKS
+Description:  Hay nghi ngờ bản thân, để người khác quyết thay mình? Sách Kiên Định Tự Quyết nói về gì: tin vào sự tiến bộ của mình và tự chủ cuộc đời.
+Keywords:  kiên định tự quyết, sách kiên định tự quyết, Eun Joo Kim, tóm tắt sách kiên định tự quyết, PACOBOOKS
+Ảnh:  kien-dinh-tu-quyet.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · kien-dinh-tu-quyet.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Kiên Định Tự Quyết
+H3:  Kiên Định Tự Quyết — cuộc đời mình, mình cầm lái
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Có người đã chuẩn bị rất lâu cho một cơ hội, đến lúc nó tới thì chỉ cần một câu nói của ai đó, kiểu như chắc gì em làm được, là bao nhiêu háo hức tắt ngấm. Ta lùi lại, tự nhủ thôi để lần sau. Lần sau rồi lại lần sau nữa. Nhìn lại mới thấy, thứ giữ chân mình nhiều nhất đôi khi không phải khó khăn, mà là những lời nghi ngờ mình đã lỡ tin là thật.
+
+H2: Tóm tắt nội dung sách Kiên Định Tự Quyết
+Kiên Định Tự Quyết – Tự Chủ Cuộc Đời là sách của tác giả Hàn Quốc Eun Joo Kim. Ấn bản tiếng Việt do AZ Việt Nam phát hành, NXB Văn Học (https://duongdenbinhyen.com/nha-xuat-ban-van-hoc.html) ấn hành năm 2026, bản dịch của Kyoyeon Duyên.
+
+Sách mở đầu từ một mâu thuẫn rất người: ta mong thành công và hạnh phúc, nhưng lại sợ hãi và ngờ vực chính mình, để rồi phó mặc cuộc đời cho số phận.
+
+Theo phần giới thiệu, tác giả chỉ ra rằng trước thử thách mới, nỗi sợ bên trong đôi khi không lớn bằng những lời đánh giá từ bên ngoài. Nghe mãi, ta dần tin rằng mình không đủ năng lực.
+
+Ý chính tiếp theo là con người có khả năng phát triển liên tục. Vì vậy, thay vì đo mình bằng một lần thất bại, ta nên tin vào tiến bộ từng bước và tiếp tục đi.
+
+Sách nhấn mạnh yếu tố quyết định để sống trọn vẹn là chính mình: nhận thức rằng mỗi người hoàn toàn có quyền tự chủ cuộc đời.
+
+Thông điệp mà nhà phát hành nhắc đến: muốn phát huy năng lực và chạm tới hạnh phúc, trước hết hãy thôi để người khác cầm lái thay mình.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nghĩ tới những lần mình gật đầu với một lựa chọn không phải của mình, chỉ để yên chuyện. Yên được vài hôm, rồi lòng lại chông chênh. Bình yên thật hình như chỉ đến khi ta dám nói: việc này, mình tự quyết.
+
+Kiên định không phải cứng đầu. Nó giống như cái rễ cây, mềm mà bám chặt, gió lớn mấy cũng không bật gốc.
+
+H2: Ai nên đọc Kiên Định Tự Quyết?
+- Người hay nghi ngờ năng lực của mình trước cơ hội mới.
+- Người dễ bị lời đánh giá của người khác làm chùn bước.
+- Người trẻ đang tìm con đường riêng giữa nhiều kỳ vọng.
+- Ai muốn sống chủ động hơn, bớt phó mặc cho hoàn cảnh.
+
+Nguồn tham khảo:
+- Trang sách Kiên Định Tự Quyết tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/kien-dinh-tu-quyet-tu-chu-cuoc-doi.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Kiên Định Tự Quyết thuộc về tác giả Eun Joo Kim và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Tự chủ cuộc đời đôi khi bắt đầu từ một buổi tối ngồi yên và hỏi lòng mình muốn gì. Những trang trong Đường Đến Bình Yên (https://duongdenbinhyen.com/duong-den-binh-yen.html) có thể làm bạn đồng hành cho những buổi tối như vậy.
+
+Nếu bạn ghé để biết sách Kiên Định Tự Quyết nói về gì, hãy xem thêm các đầu sách cùng tinh thần trong sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html), hoặc về PACOBOOKS (https://duongdenbinhyen.com/) để tìm gợi ý mới.
+
+📚 Tóm tắt sách khác:
+- Bước Ra Ánh Sáng — sân khấu là nơi để hiện diện, không phải để trình diễn (https://duongdenbinhyen.com/buoc-ra-anh-sang.html)
+- Tư Duy Phi Logic — dám hỏi lại điều ai cũng cho là hiển nhiên (https://duongdenbinhyen.com/tu-duy-phi-logic.html)
+- Khởi Nghiệp Tinh Gọn — học từ điều thực tế đang trả lời mình (https://duongdenbinhyen.com/khoi-nghiep-tinh-gon.html)
+- Hành Trình Về Phương Đông — những cuộc gặp mở một lối nhìn vào bên trong (https://duongdenbinhyen.com/hanh-trinh-ve-phuong-dong.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://tacgiathiennhan.com/)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Từ Tốt Đến Vĩ Đại (https://duongdenbinhyen.com/tu-tot-den-vi-dai.html)
+Thẻ 3: Làm sao để sống có ý nghĩa hơn (https://duongdenbinhyen.com/lam-sao-de-song-co-y-nghia.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Kiên Định Tự Quyết nói về gì?
+Trả lời: Sách Kiên Định Tự Quyết của Eun Joo Kim nói về việc vượt qua nỗi sợ và sự nghi ngờ bản thân, nhất là những nghi ngờ đến từ lời đánh giá bên ngoài. Tác giả khuyến khích người đọc tin vào khả năng tiến bộ của mình và nhận ra rằng mỗi người có quyền tự chủ cuộc đời để sống đúng là mình.
+
+Câu 2: Ai nên đọc Kiên Định Tự Quyết?
+Trả lời: Kiên Định Tự Quyết hợp với người hay tự ti trước cơ hội mới, người dễ chùn bước vì lời người khác, và người trẻ đang tìm hướng đi riêng. Ai muốn sống chủ động hơn cũng có thể tìm thấy động lực trong sách.
+
+Câu 3: Đọc Kiên Định Tự Quyết có giúp bớt tự ti không?
+Trả lời: Theo Tác giả Thiện Nhân, Kiên Định Tự Quyết giúp người đọc nhận ra nhiều nỗi tự ti thật ra là lời người khác ta đã lỡ tin. Khi tách được điều đó, ta dễ nhìn mình công bằng hơn và có thêm can đảm bước tiếp, dù từng bước nhỏ.

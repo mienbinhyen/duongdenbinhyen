@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  lam-chu-ban-do-tam-tri.html
+Title:  Làm Chủ Bản Đồ Tâm Trí | PACOBOOKS
+Description:  Hình ảnh bạn nghĩ về mình đang dẫn bạn đi đâu? Sách Làm Chủ Bản Đồ Tâm Trí nói về gì: tác phẩm kinh điển về hình ảnh bản thân và sự tự tin.
+Keywords:  làm chủ bản đồ tâm trí, sách làm chủ bản đồ tâm trí, Maxwell Maltz, tóm tắt sách làm chủ bản đồ tâm trí, PACOBOOKS
+Ảnh:  lam-chu-ban-do-tam-tri.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · lam-chu-ban-do-tam-tri.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-tam-ly.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Làm Chủ Bản Đồ Tâm Trí
+H3:  Làm Chủ Bản Đồ Tâm Trí — đổi bản đồ trong đầu, đổi con đường dưới chân
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Có người được khen đẹp cả trăm lần vẫn soi gương thấy mình xấu. Có người làm tốt mọi việc vẫn tin mình kém cỏi. Hình ảnh ta vẽ về chính mình lặng lẽ như một tấm bản đồ, và ta cứ thế đi theo nó, kể cả khi nó vẽ sai.
+
+H2: Tóm tắt nội dung sách Làm Chủ Bản Đồ Tâm Trí
+Làm Chủ Bản Đồ Tâm Trí là ấn bản tiếng Việt của tác phẩm kinh điển của Maxwell Maltz, bác sĩ phẫu thuật thẩm mỹ người Mỹ. Tên gốc tiếng Anh là Psycho-Cybernetics, xuất bản lần đầu năm 1960. Theo nhà phát hành, sách đã bán hơn 30 triệu bản. Bản tiếng Việt do 1980 Books phát hành, NXB Hà Nội (https://duongdenbinhyen.com/nha-xuat-ban-ha-noi.html) ấn hành năm 2026, bản dịch của Anh Thỏ.
+
+Sách giới thiệu khái niệm Psychocybernetics: xem tâm trí như một hệ thống định hướng hành vi theo mục tiêu đã được xác lập.
+
+Ý trung tâm là hình ảnh bản thân đóng vai trò như bản đồ định hướng, ảnh hưởng tới cách ta lựa chọn, phản ứng và đánh giá khả năng của mình.
+
+Nếu tin mình kém cỏi, ta sẽ vô thức đưa ra quyết định củng cố niềm tin ấy. Ngược lại, một hình ảnh bản thân tích cực và thực tế hơn giúp ta mạnh dạn thử điều mới và kiên trì hơn trước khó khăn.
+
+Bên cạnh lý giải, sách đưa ra phương pháp thực hành để phát triển sự tự tin, giải tỏa áp lực tâm lý, xác định mục tiêu rõ ràng và hình thành thói quen tích cực.
+
+Thông điệp chung: một cách nghĩ mới chỉ có ý nghĩa khi được luyện tập thường xuyên, cho tới khi nó thành lựa chọn và hành vi mỗi ngày.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thấy cuốn sách này như một lời mời vẽ lại tấm bản đồ đã cũ. Không phải tô hồng mình, mà là vẽ cho đúng, công bằng với chính mình như ta vẫn công bằng với người khác.
+
+Có khi điều ta cần không phải là thay đổi bản thân, mà là thôi nhìn mình qua đôi mắt của những lời chê ngày xưa.
+
+H2: Ai nên đọc Làm Chủ Bản Đồ Tâm Trí?
+- Người tự ti, hay đánh giá thấp bản thân.
+- Người muốn hiểu cơ chế tâm lý đằng sau thói quen và hành vi.
+- Người muốn đặt mục tiêu rõ ràng và xây thói quen tích cực.
+- Ai yêu thích các tác phẩm kinh điển về phát triển bản thân.
+
+Nguồn tham khảo:
+- Trang sách Làm Chủ Bản Đồ Tâm Trí tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/lam-chu-ban-do-tam-tri.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Làm Chủ Bản Đồ Tâm Trí thuộc về tác giả Maxwell Maltz và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Vẽ lại bản đồ bên trong, đôi khi cần những trang viết dịu dàng làm la bàn. Lời thì thầm từ cuộc đời (https://duongdenbinhyen.com/thi-tham.html) là cuốn sách dành cho ai đang tìm lại chính mình.
+
+Bạn tìm hiểu sách Làm Chủ Bản Đồ Tâm Trí nói về gì? Có thể xem thêm ở sách tâm lý học (https://duongdenbinhyen.com/sach-tam-ly-hoc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Ảnh Hưởng Từ Sự Thiếu Vắng Người Cha Lên Cuộc Đời Con Trai — điều con cần là một người cha trung thực (https://duongdenbinhyen.com/anh-huong-tu-su-thieu-vang-nguoi-cha-len-cuoc-doi-con-trai.html)
+- Chăm Sóc Chính Mình – Hành Trình Nội Tâm Của Nhà Tham Vấn — muốn chăm người khác lâu dài, trước hết phải chăm mình (https://duongdenbinhyen.com/cham-soc-chinh-minh-hanh-trinh-noi-tam-cua-nha-tham-van.html)
+- Đừng Bao Giờ Đi Ăn Một Mình — một cuộc gặp bắt đầu từ điều có thể sẻ chia (https://duongdenbinhyen.com/dung-bao-gio-di-an-mot-minh.html)
+- Phi Lý Trí — những lựa chọn ta tưởng mình hiểu rất rõ (https://duongdenbinhyen.com/phi-ly-tri.html)
+📚 Thuộc tủ sách:  Sách Tâm Lý (https://duongdenbinhyen.com/sach-tam-ly.html)
+Ký tên: Tác giả Thiện Nhân (https://tacgiathiennhan.com/)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Nghệ Thuật Tinh Tế Của Việc Đếch Quan Tâm (https://duongdenbinhyen.com/nghe-thuat-tinh-te-cua-viec-dech-quan-tam.html)
+Thẻ 3: Sách tâm lý học hành vi (https://duongdenbinhyen.com/sach-tam-ly-hoc-hanh-vi.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Làm Chủ Bản Đồ Tâm Trí nói về gì?
+Trả lời: Sách Làm Chủ Bản Đồ Tâm Trí (Psycho-Cybernetics) của Maxwell Maltz cho rằng hình ảnh bản thân là tấm bản đồ định hướng hành vi. Khi xây dựng hình ảnh bản thân tích cực và thực tế hơn, kết hợp mục tiêu rõ ràng và thực hành đều đặn, con người có thể tự tin hơn và thay đổi thói quen.
+
+Câu 2: Ai nên đọc Làm Chủ Bản Đồ Tâm Trí?
+Trả lời: Làm Chủ Bản Đồ Tâm Trí hợp với người tự ti, người muốn hiểu cơ chế tâm lý của hành vi, người muốn xây mục tiêu và thói quen tích cực, và ai yêu sách phát triển bản thân kinh điển.
+
+Câu 3: Làm Chủ Bản Đồ Tâm Trí ra đời từ khi nào?
+Trả lời: Tác phẩm gốc Psycho-Cybernetics của Maxwell Maltz xuất bản lần đầu năm 1960 tại Mỹ. Theo Tác giả Thiện Nhân, dù đã hơn sáu mươi năm, ý tưởng về hình ảnh bản thân trong sách vẫn còn rất gần với người đọc hôm nay.

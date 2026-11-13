@@ -1,0 +1,75 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  thuat-dan-dat-du-luan.html
+Title:  Thuật Dẫn Dắt Dư Luận | PACOBOOKS
+Description:  Vì sao đính chính càng nhiều, khủng hoảng càng lớn? Sách Thuật Dẫn Dắt Dư Luận nói về gì: Edward Bernays và nền tảng của nghề quan hệ công chúng.
+Keywords:  thuật dẫn dắt dư luận, sách thuật dẫn dắt dư luận, Edward Bernays, tóm tắt sách thuật dẫn dắt dư luận, PACOBOOKS
+Ảnh:  thuat-dan-dat-du-luan.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · thuat-dan-dat-du-luan.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-hay-nen-doc.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Thuật Dẫn Dắt Dư Luận
+H3:  Thuật Dẫn Dắt Dư Luận — hiểu đám đông để xây sự tin tưởng
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Một thương hiệu vướng tin đồn, vội vàng đăng thông cáo phủ nhận, rồi thêm một thông cáo nữa. Càng giải thích, người ta càng không tin. Công chúng không phải bảng tính, họ là những con người với cảm xúc, niềm tin và những nỗi sợ chung. Hiểu được điều đó, có lẽ là bài học đầu tiên của bất kỳ ai muốn nói chuyện với số đông.
+
+H2: Tóm tắt nội dung sách Thuật Dẫn Dắt Dư Luận
+Thuật Dẫn Dắt Dư Luận là sách của Edward Bernays, người thường được gọi là cha đẻ ngành quan hệ công chúng (PR) hiện đại. Ấn bản tiếng Việt do 1980 Books phát hành, NXB Công Thương (https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html) ấn hành năm 2026, bản dịch của Diệp Ngô.
+
+Sách mở từ một quan sát: trước khủng hoảng truyền thông, nhiều tổ chức vội đính chính, phủ nhận hay giải thích, nhưng đối đầu trực diện với số đông hiếm khi mang lại kết quả.
+
+Theo tác giả, công chúng hành động dựa trên cảm xúc, niềm tin và động lực tập thể, hơn là những con số logic.
+
+Sách trình bày bản chất và phạm vi nghề cố vấn quan hệ công chúng, xem người làm PR như cầu nối hai chiều: giúp tổ chức truyền đạt ra ngoài, đồng thời giúp tổ chức hiểu và đáp ứng kỳ vọng của công chúng.
+
+Tác giả phân tích vì sao dư luận vừa bảo thủ vừa dễ thay đổi, cách tâm lý con người dịch chuyển khi ở trong nhóm, và các kỹ thuật định hình quan điểm như dựa vào người dẫn dắt tư tưởng và hệ thống truyền thông sẵn có.
+
+Theo nhà phát hành, trọng tâm của sách không phải chiêu trò ngắn hạn, mà là cách một tổ chức dung hòa xung đột, xây dựng sự tin tưởng và tạo đồng thuận bằng chiến lược bài bản.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết đọc cuốn sách này với chút dè dặt, vì kỹ năng tác động tới đám đông có thể dùng để xây, cũng có thể dùng để lấn át. Nhưng hiểu được cách dư luận vận hành giúp mỗi người tỉnh táo hơn trước những gì mình đọc mỗi ngày.
+
+Sự tin tưởng, cuối cùng, vẫn được xây bằng sự thật và thời gian.
+
+H2: Ai nên đọc Thuật Dẫn Dắt Dư Luận?
+- Người làm PR, truyền thông, marketing.
+- Chủ doanh nghiệp muốn hiểu cách xây dựng và giữ niềm tin công chúng.
+- Sinh viên ngành báo chí, truyền thông.
+- Người muốn hiểu cơ chế hình thành dư luận để tỉnh táo hơn khi tiếp nhận thông tin.
+
+Nguồn tham khảo:
+- Trang sách Thuật Dẫn Dắt Dư Luận tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/thuat-dan-dat-du-luan.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Thuật Dẫn Dắt Dư Luận thuộc về tác giả Edward Bernays và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Giữa những ồn ào của dư luận, đôi khi ta cần một trang sách lặng để nghe lại tiếng mình. Lời thì thầm từ cuộc đời (https://duongdenbinhyen.com/thi-tham.html) là góc nhỏ để thở giữa cuộc đời ồn ào.
+
+Bạn tìm hiểu sách Thuật Dẫn Dắt Dư Luận nói về gì? Có thể xem thêm các đầu sách khác ở sách hay về cuộc sống (https://duongdenbinhyen.com/sach-hay-ve-cuoc-song.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Giải Mã Trí Tuệ Do Thái — sức mạnh nằm ở cách con người gắn kết với nhau (https://duongdenbinhyen.com/giai-ma-tri-tue-do-thai.html)
+- Cuốn Theo Chiều Gió — điều muốn giữ có khi chỉ rõ lúc đã xa (https://duongdenbinhyen.com/cuon-theo-chieu-gio.html)
+- Chí Phèo — phía sau tiếng gọi là mong được nhận như một người (https://duongdenbinhyen.com/chi-pheo.html)
+📚 Thuộc tủ sách:  Sách Hay Nên Đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html)
+Ký tên: Tác giả Thiện Nhân (https://tacgiathiennhan.com/)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Đại Gia Gatsby (https://duongdenbinhyen.com/dai-gia-gatsby.html)
+Thẻ 3: Áp lực phải thành công trước 30 (https://duongdenbinhyen.com/ap-luc-phai-thanh-cong-truoc-30.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Thuật Dẫn Dắt Dư Luận nói về gì?
+Trả lời: Sách Thuật Dẫn Dắt Dư Luận của Edward Bernays trình bày nền tảng nghề quan hệ công chúng: vai trò cầu nối giữa tổ chức và công chúng, tâm lý đám đông, cách quan điểm hình thành và thay đổi, và chiến lược xây dựng sự tin tưởng, đồng thuận thay vì đối đầu với số đông.
+
+Câu 2: Ai nên đọc Thuật Dẫn Dắt Dư Luận?
+Trả lời: Thuật Dẫn Dắt Dư Luận hợp với người làm PR, truyền thông, marketing, chủ doanh nghiệp, sinh viên báo chí và ai muốn hiểu cách dư luận hình thành để tỉnh táo hơn trước thông tin.
+
+Câu 3: Edward Bernays là ai?
+Trả lời: Edward Bernays (1891–1995) là nhà tư vấn truyền thông người Mỹ, thường được gọi là cha đẻ ngành quan hệ công chúng hiện đại. Theo Tác giả Thiện Nhân, đọc sách của ông giúp hiểu gốc rễ của nghề PR và cả những trách nhiệm đi kèm.

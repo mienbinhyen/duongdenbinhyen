@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  su-chu-y-la-tien.html
+Title:  Sự Chú Ý Là Tiền | PACOBOOKS
+Description:  Bận cả ngày mà việc vẫn dở dang? Sách Sự Chú Ý Là Tiền nói về gì: quản trị sự chú ý thay vì quản lý thời gian, để làm ít mà xong nhiều.
+Keywords:  sự chú ý là tiền, sách sự chú ý là tiền, Maura Thomas, tóm tắt sách sự chú ý là tiền, PACOBOOKS
+Ảnh:  su-chu-y-la-tien.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · su-chu-y-la-tien.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Sự Chú Ý Là Tiền
+H3:  Sự Chú Ý Là Tiền — giữ được sự chú ý là giữ được chính mình
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Bạn mở điện thoại để trả lời một tin nhắn, mười lăm phút sau vẫn còn lướt, còn tin nhắn thì quên chưa trả. Đang ngồi ăn cùng gia đình, tay lại vô thức mở email công việc. Một ngày trôi qua kín lịch, mệt rã rời, nhưng nhìn lại thì chẳng việc nào thật sự xong. Có lẽ ta không thiếu thời gian, ta chỉ đang để sự chú ý của mình rơi vãi khắp nơi.
+
+H2: Tóm tắt nội dung sách Sự Chú Ý Là Tiền
+Sự Chú Ý Là Tiền là sách của Maura Thomas, chuyên gia về năng suất và quản trị sự chú ý tại Mỹ. Tên tiếng Anh in trên ấn bản Việt là Attention Management. Bản tiếng Việt do AZ Việt Nam phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026, bản dịch của Tuấn Hưng.
+
+Điểm khác biệt cốt lõi của sách là chuyển trọng tâm từ quản lý thời gian sang quản trị sự chú ý. Thay vì cố nhét thêm việc vào một ngày có hạn, tác giả cho rằng điều quyết định năng suất là ta đặt sự chú ý vào đâu.
+
+Sách giới thiệu mô hình bốn trạng thái chú ý: phản ứng và sao nhãng, dòng chảy, mơ mộng, tập trung và chú tâm. Nhận ra mình đang ở trạng thái nào giúp người đọc điều chỉnh cách làm việc cho hợp từng mục tiêu.
+
+Tác giả cũng chỉ ra rằng mất tập trung không chỉ do thiếu kỷ luật, mà còn do thiết kế của các nền tảng công nghệ, văn hóa lúc nào cũng phải kết nối và cách tổ chức nơi làm việc.
+
+Phần giải pháp gắn với tình huống quen thuộc: kiểm soát thông báo, đặt ranh giới giao tiếp, sắp lại góc làm việc, làm một việc một lúc. Sách cũng nối năng suất với nghỉ ngơi, sức khỏe và các mối quan hệ.
+
+Thông điệp mà nhà phát hành nhấn mạnh: năng suất không phải làm được càng nhiều càng tốt, mà là sống và làm việc với sự hiện diện trọn vẹn.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Đọc phần giới thiệu, người viết nghĩ tới những bữa cơm mình ngồi đó mà lòng ở chỗ khác. Hóa ra sự chú ý không chỉ là chuyện công việc, nó là cách ta thương người bên cạnh. Ai đó đáng được ta nhìn vào mắt khi nói chuyện, chứ không phải nhìn vào màn hình.
+
+Cuốn sách nhắc một điều giản dị: mỗi lần ta chọn tắt một thông báo, ta đang giành lại một chút đời mình.
+
+H2: Ai nên đọc Sự Chú Ý Là Tiền?
+- Người đi làm luôn bận nhưng thấy năng suất thấp.
+- Người dễ bị điện thoại, mạng xã hội kéo đi khỏi việc chính.
+- Quản lý muốn xây dựng môi trường làm việc ít sao nhãng hơn.
+- Người muốn cân bằng công việc với nghỉ ngơi và gia đình.
+
+Nguồn tham khảo:
+- Trang sách Sự Chú Ý Là Tiền tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/su-chu-y-la-tien-attention-management.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Sự Chú Ý Là Tiền thuộc về tác giả Maura Thomas và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Khi đã giành lại được sự chú ý, ta mới có chỗ cho những điều lặng lẽ. Bạn có thể dành vài phút buổi tối cho những tác phẩm mới của Tác giả Thiện Nhân (https://duongdenbinhyen.com/tacphammoi.html), nơi những dòng chữ chậm rãi giúp lòng thôi chạy.
+
+Còn nếu bạn đang tìm hiểu sách Sự Chú Ý Là Tiền nói về gì để chọn đọc, tủ sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html) có thêm nhiều gợi ý, và PACOBOOKS (https://duongdenbinhyen.com/) luôn sẵn những đầu sách mới.
+
+📚 Tóm tắt sách khác:
+- Học Như Người Chứ Đừng Học Như Máy — sự tò mò là thứ máy móc không có (https://duongdenbinhyen.com/hoc-nhu-nguoi-chu-dung-hoc-nhu-may.html)
+- Người Khôn Nói Khéo — nói đúng thôi chưa đủ, còn phải nói để người ta nghe được (https://duongdenbinhyen.com/nguoi-khon-noi-kheo.html)
+- Người Bán Hàng Vĩ Đại Nhất Thế Giới — sự bền bỉ bắt đầu từ điều làm lại mỗi ngày (https://duongdenbinhyen.com/nguoi-ban-hang-vi-dai-nhat-the-gioi.html)
+- Chiến Binh Cầu Vồng — một lớp học nhỏ giữ những ước mơ rộng lớn (https://duongdenbinhyen.com/chien-binh-cau-vong.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/gioi-thieu-sach-va-tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Nhà Lãnh Đạo Không Chức Danh (https://duongdenbinhyen.com/nha-lanh-dao-khong-chuc-danh.html)
+Thẻ 3: Cân bằng công việc và cuộc sống (https://duongdenbinhyen.com/can-bang-cong-viec-va-cuoc-song.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Sự Chú Ý Là Tiền nói về gì?
+Trả lời: Sách Sự Chú Ý Là Tiền của Maura Thomas nói về quản trị sự chú ý thay cho quản lý thời gian. Sách giới thiệu mô hình bốn trạng thái chú ý, phân tích nguyên nhân sao nhãng từ cá nhân đến công nghệ và nơi làm việc, kèm giải pháp thực tế như kiểm soát thông báo, đặt ranh giới giao tiếp và làm một việc một lúc.
+
+Câu 2: Ai nên đọc Sự Chú Ý Là Tiền?
+Trả lời: Sự Chú Ý Là Tiền hợp với người đi làm luôn bận mà năng suất thấp, người dễ bị điện thoại kéo đi, và người quản lý muốn đội nhóm làm việc tập trung hơn. Ai muốn cân bằng giữa công việc với nghỉ ngơi cũng có thể áp dụng.
+
+Câu 3: Sự Chú Ý Là Tiền khác gì sách quản lý thời gian thông thường?
+Trả lời: Sách quản lý thời gian thường giúp sắp xếp thêm việc vào lịch, còn Sự Chú Ý Là Tiền tập trung vào việc ta đặt sự chú ý ở đâu. Theo Tác giả Thiện Nhân, cách nhìn này gần với đời sống hơn, vì nó nối năng suất với sức khỏe và các mối quan hệ.

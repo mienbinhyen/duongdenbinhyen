@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  song-co-gu.html
+Title:  Sống Có Gu | PACOBOOKS
+Description:  Có gu hay chỉ đang trông như người có gu? Sách Sống Có Gu nói về gì: bồi đắp cảm thụ cái đẹp qua 6 khía cạnh của đời sống thường ngày.
+Keywords:  sống có gu, sách sống có gu, Miss J, tóm tắt sách sống có gu, PACOBOOKS
+Ảnh:  song-co-gu.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · song-co-gu.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-hay-ve-cuoc-song.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Sống Có Gu
+H3:  Sống Có Gu — gu không phải để khoe, gu là cách mình sống
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Quán cà phê ai cũng check-in, bộ đồ ai cũng mặc, góc nhà ai cũng bày giống hệt nhau. Ta chụp ảnh, đăng lên, nhận vài lượt thích, rồi bỗng thấy lòng trống trơn. Có thể ta đã học rất giỏi cách trông như người có gu, mà quên mất hỏi xem mình thật sự thích điều gì.
+
+H2: Tóm tắt nội dung sách Sống Có Gu
+Sống Có Gu – Nâng Cao Năng Lực Cảm Thụ Cái Đẹp Qua 6 Khía Cạnh Cuộc Sống là sách của tác giả Miss J. Ấn bản tiếng Việt do AZ Việt Nam phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026, bản dịch của Mỹ Linh.
+
+Sách đặt câu hỏi: nếu gu chỉ là biết điều gì đang được yêu thích, thì ta có gu thật hay chỉ đang bắt chước? Từ đó, tác giả định nghĩa nâng cao năng lực cảm thụ là mở rộng biên độ trải nghiệm của chính mình.
+
+Theo sách, gu thẩm mỹ không chỉ nằm ở ngoại hình, trang phục hay cách bày biện nhà cửa. Nó còn hiện diện trong cách ta thưởng thức món ăn, tiếp nhận văn hóa, cảm nhận nghệ thuật và xây dựng các mối quan hệ.
+
+Mỗi khía cạnh mở ra một góc nhìn riêng, giúp người đọc đi qua lớp đánh giá bề nổi để chạm vào chiều sâu của cái đẹp và sự hài hòa.
+
+Sách cung cấp kiến thức thẩm mỹ đa dạng, khuyến khích bồi đắp cảm thụ từng bước để hình thành phong cách sống có dấu ấn riêng.
+
+Thông điệp chung: hãy bắt đầu từ việc hiểu rõ điều mình yêu thích, để mỗi lựa chọn trong đời đều trở thành cách thể hiện gu của riêng mình.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nghĩ tới bà ngoại với chiếc áo bà ba đã sờn, mà lúc nào cũng thơm mùi nắng. Bà chẳng biết chữ gu, nhưng cách bà cắm một nhành bông vào chai nước mắm cũ thì đẹp hơn mọi tấm ảnh trên mạng.
+
+Có gu, có lẽ là biết nhìn kỹ những gì bình thường, và thấy chúng đáng quý.
+
+H2: Ai nên đọc Sống Có Gu?
+- Người trẻ muốn xây phong cách sống riêng, không chạy theo trào lưu.
+- Người yêu cái đẹp, thích tìm hiểu nghệ thuật, ẩm thực, văn hóa.
+- Người làm sáng tạo muốn bồi đắp cảm thụ thẩm mỹ.
+- Ai thấy mình mệt vì phải theo kịp những thứ được gọi là hợp mốt.
+
+Nguồn tham khảo:
+- Trang sách Sống Có Gu tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/song-co-gu-nang-cao-nang-luc-cam-thu-cai-dep-qua-6-khia-canh-cuoc-song.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Sống Có Gu thuộc về tác giả Miss J và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Sống có gu cũng là sống chậm đủ để nhận ra vẻ đẹp của một buổi chiều bình thường. Những tác phẩm mới của Tác giả Thiện Nhân (https://duongdenbinhyen.com/tacphammoi.html) là những trang viết về những điều nhỏ nhoi mà quan trọng như thế.
+
+Nếu bạn muốn biết sách Sống Có Gu nói về gì trước khi chọn đọc, có thể xem thêm ở những cuốn sách hay nên đọc (https://duongdenbinhyen.com/nhung-cuon-sach-hay-nen-doc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Cứ Ăn Kem Đi — sống khỏe mà không cần thấy có lỗi (https://duongdenbinhyen.com/cu-an-kem-di.html)
+- Cuộc Sống Hôn Nhân Và Thách Thức Của Thời Đại — điều gì đang xảy ra với hôn nhân (https://duongdenbinhyen.com/cuoc-song-hon-nhan-va-thach-thuc-cua-thoi-dai.html)
+- Dế Mèn Phiêu Lưu Ký — lớn lên khi biết nghĩ xa hơn chính mình (https://duongdenbinhyen.com/de-men-phieu-luu-ky.html)
+- Những Cuộc Phiêu Lưu Của Sherlock Holmes — manh mối nằm trong điều tưởng không đáng kể (https://duongdenbinhyen.com/nhung-cuoc-phieu-luu-cua-sherlock-holmes.html)
+📚 Thuộc tủ sách:  Sách Hay Về Cuộc Sống (https://duongdenbinhyen.com/sach-hay-ve-cuoc-song.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/gioi-thieu-sach-va-tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Kính Vạn Hoa (https://duongdenbinhyen.com/kinh-van-hoa.html)
+Thẻ 3: Cách để không cảm thấy cô đơn (https://duongdenbinhyen.com/cach-de-khong-cam-thay-co-don.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Sống Có Gu nói về gì?
+Trả lời: Sách Sống Có Gu của Miss J nói về việc nâng cao năng lực cảm thụ cái đẹp qua sáu khía cạnh đời sống như ngoại hình, không gian sống, ẩm thực, văn hóa, nghệ thuật và các mối quan hệ. Sách giúp người đọc phân biệt gu thật với việc chạy theo trào lưu, từ đó hình thành phong cách sống riêng.
+
+Câu 2: Ai nên đọc Sống Có Gu?
+Trả lời: Sống Có Gu hợp với người trẻ muốn xây phong cách sống riêng, người yêu nghệ thuật và ẩm thực, người làm sáng tạo, và ai mệt mỏi vì phải chạy theo xu hướng. Sách nhẹ nhàng, dễ đọc.
+
+Câu 3: Theo góc nhìn của Tác giả Thiện Nhân, có gu bắt đầu từ đâu?
+Trả lời: Theo Tác giả Thiện Nhân, có gu bắt đầu từ việc biết nhìn kỹ những điều bình thường quanh mình và hiểu rõ điều mình thật sự thích. Sống Có Gu nhắc rằng gu không để khoe, mà là cách mỗi người chọn sống mỗi ngày.

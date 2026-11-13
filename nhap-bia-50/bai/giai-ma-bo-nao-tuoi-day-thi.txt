@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  giai-ma-bo-nao-tuoi-day-thi.html
+Title:  Giải Mã Bộ Não Tuổi Dậy Thì | PACOBOOKS
+Description:  Con tuổi dậy thì bỗng khó hiểu? Sách Giải Mã Bộ Não Tuổi Dậy Thì nói về gì: nhìn những biến động tuổi teen từ khoa học não bộ để hiểu nhau hơn.
+Keywords:  giải mã bộ não tuổi dậy thì, sách giải mã bộ não tuổi dậy thì, Daniel J. Siegel, tóm tắt sách giải mã bộ não tuổi dậy thì, PACOBOOKS
+Ảnh:  giai-ma-bo-nao-tuoi-day-thi.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · giai-ma-bo-nao-tuoi-day-thi.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-tam-ly.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Giải Mã Bộ Não Tuổi Dậy Thì
+H3:  Giải Mã Bộ Não Tuổi Dậy Thì — không phải nổi loạn, mà là não đang lớn
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Đứa con từng ríu rít kể chuyện mỗi chiều, nay đóng cửa phòng, trả lời cụt lủn, động chút là cáu. Cha mẹ hoang mang, con cũng chẳng hiểu sao mình như vậy. Hai bên đứng ở hai phía cánh cửa, ai cũng mệt. Có lẽ điều cả hai cần là một tấm bản đồ để hiểu chuyện gì đang diễn ra bên trong.
+
+H2: Tóm tắt nội dung sách Giải Mã Bộ Não Tuổi Dậy Thì
+Giải Mã Bộ Não Tuổi Dậy Thì là sách của bác sĩ tâm thần Daniel J. Siegel, M.D., tốt nghiệp Trường Y Harvard, giáo sư lâm sàng ngành tâm thần học tại Trường Y UCLA. Tên gốc tiếng Anh là Brainstorm, xuất bản năm 2013. Ấn bản tiếng Việt do 1980 Books phát hành, NXB Dân Trí (https://duongdenbinhyen.com/nha-xuat-ban-dan-tri.html) ấn hành năm 2026, bản dịch của Vân Anh.
+
+Sách đặt ra những câu hỏi mà cả cha mẹ lẫn người trẻ đều từng hỏi: vì sao con dễ nổi nóng, thích tranh luận, muốn tự quyết mọi thứ; vì sao cảm xúc tuổi này lại mãnh liệt đến vậy?
+
+Thay vì coi đó là bướng bỉnh hay nổi loạn, tác giả nhìn tuổi dậy thì từ góc độ khoa học não bộ, như một thời kỳ phát triển mạnh mẽ và đầy ý nghĩa.
+
+Dựa trên nghiên cứu, sách lý giải vì sao người trẻ có cảm xúc mạnh, khao khát trải nghiệm và đặc biệt coi trọng quan hệ bạn bè.
+
+Sách không dừng ở giải thích mà còn mở cách tiếp cận thực tế để người trẻ hiểu mình và cha mẹ thấu hiểu con.
+
+Thông điệp chung: khi hiểu đúng cơ chế não bộ, xung đột có thể thành kết nối, và những năm dậy thì trở thành cơ hội để gia đình gần nhau hơn.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nhớ mình cũng từng là đứa trẻ đóng cửa phòng. Hồi ấy chỉ mong có ai đó hiểu mà không cần hỏi. Cuốn sách như một người phiên dịch giữa hai thế hệ.
+
+Hiểu con không có nghĩa là chiều con. Hiểu con là để biết cách ở bên con cho đúng.
+
+H2: Ai nên đọc Giải Mã Bộ Não Tuổi Dậy Thì?
+- Cha mẹ có con tuổi dậy thì, đang lúng túng.
+- Người trẻ muốn hiểu những cảm xúc mãnh liệt của chính mình.
+- Thầy cô, người làm giáo dục, tư vấn học đường.
+- Ai quan tâm khoa học não bộ và tâm lý phát triển.
+
+Nguồn tham khảo:
+- Trang sách Giải Mã Bộ Não Tuổi Dậy Thì tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/giai-ma-bo-nao-tuoi-day-thi.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Giải Mã Bộ Não Tuổi Dậy Thì thuộc về tác giả Daniel J. Siegel và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Hiểu con đã khó, hiểu mình còn khó hơn. Đường Đến Bình Yên (https://duongdenbinhyen.com/duong-den-binh-yen.html) có những trang viết về tuổi trẻ và sự trưởng thành, đọc để thấy mình trong đó.
+
+Nếu bạn đang tìm hiểu sách Giải Mã Bộ Não Tuổi Dậy Thì nói về gì, có thể xem thêm ở sách tâm lý học (https://duongdenbinhyen.com/sach-tam-ly-hoc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Đừng Để Công Việc "Nuốt Chửng" Bạn — làm việc hết mình mà không đánh mất mình (https://duongdenbinhyen.com/dung-de-cong-viec-nuot-chung-ban.html)
+- Hòa Giải Với Chính Mình — nhạy cảm không phải điểm yếu (https://duongdenbinhyen.com/hoa-giai-voi-chinh-minh.html)
+- Khéo Ăn Nói Sẽ Có Được Thiên Hạ — chọn lời vừa với người đang ngồi đối diện (https://duongdenbinhyen.com/kheo-an-noi-se-co-duoc-thien-ha.html)
+- Nhật Ký Anne Frank — giữ tiếng nói riêng giữa những ngày phải lặng im (https://duongdenbinhyen.com/nhat-ky-anne-frank.html)
+📚 Thuộc tủ sách:  Sách Tâm Lý (https://duongdenbinhyen.com/sach-tam-ly.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Quẳng Gánh Lo Đi Và Vui Sống (https://duongdenbinhyen.com/quang-ganh-lo-di-va-vui-song.html)
+Thẻ 3: Làm mẹ mà vẫn cô đơn (https://duongdenbinhyen.com/lam-me-ma-van-co-don.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Giải Mã Bộ Não Tuổi Dậy Thì nói về gì?
+Trả lời: Sách Giải Mã Bộ Não Tuổi Dậy Thì (Brainstorm) của bác sĩ Daniel J. Siegel giải thích những thay đổi tuổi dậy thì như cảm xúc mãnh liệt, khao khát trải nghiệm, coi trọng bạn bè từ góc độ khoa học não bộ, giúp người trẻ hiểu mình và cha mẹ thấu hiểu con.
+
+Câu 2: Ai nên đọc Giải Mã Bộ Não Tuổi Dậy Thì?
+Trả lời: Giải Mã Bộ Não Tuổi Dậy Thì hợp với cha mẹ có con tuổi teen, người trẻ muốn hiểu cảm xúc của mình, thầy cô và người tư vấn học đường. Ai quan tâm tâm lý phát triển cũng sẽ thấy hữu ích.
+
+Câu 3: Con tuổi dậy thì nên đọc Giải Mã Bộ Não Tuổi Dậy Thì không?
+Trả lời: Nên. Sách được viết cho cả người trẻ lẫn cha mẹ. Theo Tác giả Thiện Nhân, nếu cha mẹ và con cùng đọc rồi trò chuyện, cuốn sách có thể thành cầu nối giữa hai thế hệ.

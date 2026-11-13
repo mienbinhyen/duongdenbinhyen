@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  hoc-nhu-nguoi-chu-dung-hoc-nhu-may.html
+Title:  Học Như Người Chứ Đừng Học Như Máy | PACOBOOKS
+Description:  Học mãi vẫn thấy rỗng giữa thời AI? Sách Học Như Người Chứ Đừng Học Như Máy nói về gì: giữ sự tò mò, dám sai và học bằng trải nghiệm thật.
+Keywords:  học như người chứ đừng học như máy, sách học như người chứ đừng học như máy, Aramata Hiroshi, tóm tắt sách học như người chứ đừng học như máy, PACOBOOKS
+Ảnh:  hoc-nhu-nguoi-chu-dung-hoc-nhu-may.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · hoc-nhu-nguoi-chu-dung-hoc-nhu-may.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Học Như Người Chứ Đừng Học Như Máy
+H3:  Học Như Người Chứ Đừng Học Như Máy — sự tò mò là thứ máy móc không có
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Có đứa trẻ hỏi mẹ vì sao con ốc sên lại mang nhà trên lưng, và người mẹ bảo: đi học rồi sẽ biết. Lớn lên, đứa trẻ ấy học thuộc rất nhiều thứ, nhưng câu hỏi về con ốc sên thì không ai nhắc lại nữa. Giờ đây, khi chỉ cần gõ một dòng là máy trả lời ngay, có lẽ điều ta đánh mất không phải là đáp án, mà là niềm vui được tự mình đi tìm.
+
+H2: Tóm tắt nội dung sách Học Như Người Chứ Đừng Học Như Máy
+Học Như Người Chứ Đừng Học Như Máy là sách của Aramata Hiroshi, nhà văn và học giả Nhật Bản. Ấn bản tiếng Việt do NXB Trẻ (https://duongdenbinhyen.com/nha-xuat-ban-tre.html) phát hành năm 2026, bản dịch của Tsusami.
+
+Sách đặt ra câu hỏi rất thời sự: khi trí tuệ nhân tạo ngày càng giỏi ghi nhớ và xử lý thông tin, con người nên học thế nào để không bị bỏ lại. Câu trả lời của tác giả khá bất ngờ: lợi thế của con người nằm ở những thứ máy không có, như tò mò, sai lầm, trải nghiệm và tự khám phá.
+
+Cuốn sách được kể qua chính đời tác giả: từ cậu bé mê những điều kỳ lạ, đến người làm văn phòng bất đắc dĩ phải học lập trình, rồi trở thành nhà văn và học giả có tiếng. Con đường ấy cho thấy tri thức không chỉ đến từ lối đi chuẩn mực.
+
+Một ý quan trọng là những lĩnh vực tưởng vô dụng, hay cả những lần sai, đôi khi lại là điểm khởi đầu của khám phá. Tác giả khuyến khích người đọc dám bước vào điều mình chưa hiểu, chưa từng nghĩ sẽ thích.
+
+Sách gợi ý cách học linh hoạt: đặt câu hỏi, thử nghiệm, nuôi trực giác và nối kiến thức từ nhiều lĩnh vực khác nhau, thay vì học thuộc theo lối máy móc.
+
+Thông điệp chung mà các nguồn giới thiệu nhắc đến: học không chỉ là phương pháp, mà là một cuộc phiêu lưu, nơi mỗi trải nghiệm đều có thể thành một phần câu chuyện đời mình.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nhớ có những điều mình hiểu rất sâu mà chẳng sách giáo khoa nào dạy, chỉ vì từng vấp, từng tò mò, từng đi lạc. Cuốn sách như lời nhắc nhẹ: đừng để nỗi sợ sai lấy mất niềm vui được học.
+
+Giữa thời mọi câu trả lời đều sẵn trong vài giây, giữ được một câu hỏi trong lòng lâu lâu một chút, có khi lại là cách sống chậm và sống thật.
+
+H2: Ai nên đọc Học Như Người Chứ Đừng Học Như Máy?
+- Học sinh, sinh viên thấy việc học khô khan, muốn tìm lại hứng thú.
+- Người đi làm muốn học kỹ năng mới mà không biết bắt đầu từ đâu.
+- Phụ huynh muốn nuôi dưỡng sự tò mò của con thay vì chỉ chạy theo điểm số.
+- Người lo lắng về AI, muốn hiểu giá trị riêng của con người trong việc học.
+
+Nguồn tham khảo:
+- Trang sách Học Như Người Chứ Đừng Học Như Máy tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/hoc-nhu-nguoi-chu-dung-hoc-nhu-may.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Học Như Người Chứ Đừng Học Như Máy thuộc về tác giả Aramata Hiroshi và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Học như người cũng là sống như người: biết dừng lại nhìn một chiếc lá, nghe một câu chuyện cũ. Những trang viết trong Đường Đến Bình Yên (https://duongdenbinhyen.com/duong-den-binh-yen.html) được viết từ chính những khoảnh khắc nhỏ như thế.
+
+Bạn tìm hiểu sách Học Như Người Chứ Đừng Học Như Máy nói về gì để chọn sách cho mình hay cho con? Có thể xem thêm ở sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/) để tìm những cuốn cùng tinh thần.
+
+📚 Tóm tắt sách khác:
+- Rèn Luyện Kỹ Năng Quan Sát Trong Công Việc — nhìn thấy điều người khác bỏ qua (https://duongdenbinhyen.com/ren-luyen-ky-nang-quan-sat-trong-cong-viec.html)
+- Rèn Luyện Tư Duy Nhanh Và Ra Quyết Định Linh Hoạt — cầm bút lên, đầu óc sẽ nhẹ đi (https://duongdenbinhyen.com/ren-luyen-tu-duy-nhanh-va-ra-quyet-dinh-linh-hoat.html)
+- 7 Thói Quen Hiệu Quả — dành sức cho điều mình muốn gìn giữ (https://duongdenbinhyen.com/7-thoi-quen-hieu-qua.html)
+- Cà Phê Cùng Tony — điều học được cần bước vào một việc làm nhỏ (https://duongdenbinhyen.com/ca-phe-cung-tony.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Đánh Thức Con Người Phi Thường Trong Bạn (https://duongdenbinhyen.com/danh-thuc-con-nguoi-phi-thuong-trong-ban.html)
+Thẻ 3: Mới đi làm cảm thấy lạc lõng (https://duongdenbinhyen.com/moi-di-lam-cam-thay-lac-long.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Học Như Người Chứ Đừng Học Như Máy nói về gì?
+Trả lời: Sách Học Như Người Chứ Đừng Học Như Máy của Aramata Hiroshi nói về cách học trong thời AI: thay vì ghi nhớ thật nhiều, con người nên giữ sự tò mò, dám sai, học từ trải nghiệm và nối kiến thức nhiều lĩnh vực. Tác giả kể chính hành trình của mình để cho thấy tri thức có thể đến từ những lối đi không chuẩn mực.
+
+Câu 2: Ai nên đọc Học Như Người Chứ Đừng Học Như Máy?
+Trả lời: Học Như Người Chứ Đừng Học Như Máy hợp với học sinh, sinh viên đang chán học, người đi làm muốn tự học kỹ năng mới, và phụ huynh muốn nuôi dưỡng sự tò mò của con. Người băn khoăn về vai trò của con người trước AI cũng sẽ thấy sách gợi mở.
+
+Câu 3: Học Như Người Chứ Đừng Học Như Máy có phải sách dạy phương pháp học cụ thể?
+Trả lời: Sách có gợi ý cách học như đặt câu hỏi, thử nghiệm và kết nối kiến thức, nhưng theo Tác giả Thiện Nhân, giá trị chính nằm ở tinh thần: coi việc học là cuộc phiêu lưu của sự tò mò. Người đọc sẽ nhận được cảm hứng nhiều hơn một quy trình cứng nhắc.

@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  tu-duy-phi-logic.html
+Title:  Tư Duy Phi Logic | PACOBOOKS
+Description:  Mệt vì sống theo khuôn mẫu của số đông? Sách Tư Duy Phi Logic nói về gì: cách Emmanuel Acho nhìn lại những niềm tin ta chưa từng dám hỏi.
+Keywords:  tư duy phi logic, sách tư duy phi logic, Emmanuel Acho, tóm tắt sách tư duy phi logic, PACOBOOKS
+Ảnh:  tu-duy-phi-logic.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · tu-duy-phi-logic.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Tư Duy Phi Logic
+H3:  Tư Duy Phi Logic — dám hỏi lại điều ai cũng cho là hiển nhiên
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Có những câu ta nghe từ bé đến lớn: học trường này mới tốt, làm nghề kia mới ổn, đến tuổi này phải có cái kia. Ta gật đầu, đi theo, rồi một ngày đứng giữa cuộc đời mình mà thấy lạ lẫm như đang mặc áo của ai khác. Câu hỏi lúc ấy không còn là mình đã sai ở đâu, mà là ai đã đặt ra những chuẩn mực ấy, và vì sao mình chưa từng hỏi lại.
+
+H2: Tóm tắt nội dung sách Tư Duy Phi Logic
+Tư Duy Phi Logic là sách của Emmanuel Acho, cựu cầu thủ bóng bầu dục chuyên nghiệp NFL, nay là bình luận viên truyền thông tại Mỹ. Tên gốc tiếng Anh của sách là Illogical. Ấn bản tiếng Việt do 1980 Books phát hành, NXB Lao Động (https://duongdenbinhyen.com/nha-xuat-ban-lao-dong.html) ấn hành năm 2026, bản dịch của Lương Như Ý.
+
+Cuốn sách bắt đầu từ một nghi vấn: nhiều điều ta gọi là logic thật ra chỉ là thói quen của số đông, được truyền qua nhiều thế hệ đến mức không ai còn thắc mắc. Từ đó, tác giả mời người đọc soi lại những tiêu chuẩn về thành công, cái đẹp hay hạnh phúc mà xã hội đã vẽ sẵn.
+
+Ý chính thứ nhất là nhận diện nhận thức sai lệch. Acho dùng những bài học từ sân cỏ, từ lịch sử thời Phục hưng và từ hội họa để cho thấy niềm tin phổ biến không đồng nghĩa với sự thật.
+
+Ý thứ hai là mở rộng góc nhìn để thoát định kiến. Tác giả cho rằng sự khôn ngoan của người khác đôi khi lại trở thành giới hạn của mình, nếu ta nhận lấy mà không suy xét.
+
+Ý thứ ba là điều chỉnh chính cách nhìn của mình. Ta không bẻ cong được thế giới, cũng khó đổi được suy nghĩ của người khác, nhưng có thể thay đổi cách ta nhìn, và từ đó lấy lại quyền quyết định đời mình.
+
+Thông điệp mà nhiều nguồn nhắc đến: ý nghĩa cuộc sống không nằm ở việc làm vừa lòng thước đo của ai, mà ở việc tự định nghĩa và tự đi con đường của chính mình.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nghĩ tới những lần mình chọn điều an toàn chỉ vì sợ bị nhìn khác đi. Đôi khi bình yên không đến từ việc đứng đúng hàng, mà từ khoảnh khắc ta dám đứng ra khỏi hàng một chút để nhìn rõ hơn mình đang đi về đâu.
+
+Phi logic ở đây không phải là bất chấp, mà là thôi để nỗi sợ khoác áo lý lẽ. Một cuốn sách khiến ta tự hỏi lại mình, chỉ vậy thôi đã là món quà.
+
+H2: Ai nên đọc Tư Duy Phi Logic?
+- Người trẻ đang bối rối giữa kỳ vọng gia đình, xã hội và mong muốn riêng.
+- Người cảm thấy mình sống theo khuôn mẫu, muốn tự định nghĩa thành công.
+- Người muốn rèn tư duy phản biện, bớt tin theo số đông.
+- Người đứng trước một lựa chọn lớn và cần dũng khí để nghĩ khác.
+
+Nguồn tham khảo:
+- Trang sách Tư Duy Phi Logic tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/tu-duy-phi-logic.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Tư Duy Phi Logic thuộc về tác giả Emmanuel Acho và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Khi đã dám hỏi lại những điều hiển nhiên, ta thường cần một chỗ yên để nghe câu trả lời của chính mình. Những trang tản văn trong bộ sách Miền Bình Yên (https://duongdenbinhyen.com/mien-binh-yen.html) có thể là chốn dừng chân như thế giữa nhịp đời vội.
+
+Nếu bạn ghé vì muốn biết sách Tư Duy Phi Logic nói về gì, có thể đọc thêm các đầu sách cùng tinh thần ở sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html), hoặc quay về PACOBOOKS (https://duongdenbinhyen.com/) để xem những gợi ý mới.
+
+📚 Tóm tắt sách khác:
+- Kiên Định Tự Quyết — cuộc đời mình, mình cầm lái (https://duongdenbinhyen.com/kien-dinh-tu-quyet.html)
+- Não Bộ Tâm Trí Cảm Xúc Hành Vi — khi ta hiểu bộ não, ta bớt trách mình (https://duongdenbinhyen.com/nao-bo-tam-tri-cam-xuc-hanh-vi.html)
+- Nhà Lãnh Đạo Không Chức Danh — sự tận tâm không cần đợi một chiếc ghế cao (https://duongdenbinhyen.com/nha-lanh-dao-khong-chuc-danh.html)
+- Bí Mật — điều ta nghĩ mỗi ngày có ý nghĩa thế nào (https://duongdenbinhyen.com/bi-mat.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Từ Tốt Đến Vĩ Đại (https://duongdenbinhyen.com/tu-tot-den-vi-dai.html)
+Thẻ 3: Mệt mỏi vì kỳ vọng của gia đình (https://duongdenbinhyen.com/met-moi-vi-ky-vong-cua-gia-dinh.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Tư Duy Phi Logic nói về gì?
+Trả lời: Sách Tư Duy Phi Logic của Emmanuel Acho nói về việc nhận diện và hỏi lại những niềm tin phổ biến mà xã hội coi là hiển nhiên, như chuẩn mực về thành công, cái đẹp hay hạnh phúc. Qua bài học từ thể thao, lịch sử và nghệ thuật, tác giả khuyến khích người đọc điều chỉnh cách nhìn của mình để tự quyết định cuộc đời.
+
+Câu 2: Ai nên đọc Tư Duy Phi Logic?
+Trả lời: Tư Duy Phi Logic hợp với người trẻ đang chịu áp lực kỳ vọng, người muốn rèn tư duy phản biện, và người cảm thấy mình đang sống theo khuôn mẫu của người khác. Ai đứng trước lựa chọn quan trọng cũng có thể tìm thấy góc nhìn mới trong sách.
+
+Câu 3: Tư Duy Phi Logic có phải là sách khuyến khích sống bất chấp không?
+Trả lời: Không. Theo Tác giả Thiện Nhân, tinh thần của Tư Duy Phi Logic là dám suy xét lại những điều mình được dạy, chứ không phải gạt bỏ mọi quy tắc. Sách giúp người đọc tách nỗi sợ khỏi lý lẽ, từ đó đưa ra lựa chọn tỉnh táo và đúng với giá trị của mình.

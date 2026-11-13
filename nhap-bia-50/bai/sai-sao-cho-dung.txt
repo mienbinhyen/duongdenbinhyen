@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  sai-sao-cho-dung.html
+Title:  Sai Sao Cho Đúng | PACOBOOKS
+Description:  Sợ sai đến mức không dám thử? Sách Sai Sao Cho Đúng nói về gì: phân biệt ba loại thất bại để học từ sai lầm và trưởng thành hơn.
+Keywords:  sai sao cho đúng, sách sai sao cho đúng, Amy C. Edmondson, tóm tắt sách sai sao cho đúng, PACOBOOKS
+Ảnh:  sai-sao-cho-dung.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · sai-sao-cho-dung.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Sai Sao Cho Đúng
+H3:  Sai Sao Cho Đúng — không phải thất bại nào cũng giống nhau
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Đứa trẻ tập đi, ngã cả trăm lần, không ai bảo nó thất bại. Lớn lên, chỉ một lần làm hỏng việc là ta đã muốn trốn đi đâu đó. Ta được dạy rằng sai là xấu, sai là kém, nên dần dần thôi dám thử. Có lẽ điều cần học không phải là đừng bao giờ sai, mà là sai thế nào cho có ích.
+
+H2: Tóm tắt nội dung sách Sai Sao Cho Đúng
+Sai Sao Cho Đúng là ấn bản tiếng Việt của Right Kind of Wrong, sách của Amy C. Edmondson, giáo sư Trường Kinh doanh Harvard, xuất bản lần đầu năm 2023. Bản tiếng Việt do Omega Plus phát hành, NXB Công Thương (https://duongdenbinhyen.com/nha-xuat-ban-cong-thuong.html) ấn hành năm 2026, bản dịch của Phương Nguyễn.
+
+Sách đưa ra góc nhìn thực tế về thất bại: điều quan trọng không phải né tránh thất bại bằng mọi giá, mà là hiểu thất bại nào cần phòng tránh, thất bại nào cần phân tích, thất bại nào giúp ta trưởng thành.
+
+Tác giả phân biệt ba loại. Thất bại cơ bản là sai sót có thể tránh nhờ cẩn trọng, quy trình hợp lý hoặc kiến thức đầy đủ hơn.
+
+Thất bại phức tạp là sự cố đến từ nhiều yếu tố chồng chéo. Còn thất bại thông minh xảy ra khi ta thử điều mới trong bối cảnh chưa quen, có chuẩn bị và suy nghĩ kỹ; loại này có thể tạo ra tri thức và đổi mới.
+
+Qua nhiều câu chuyện từ kinh doanh, y tế, khoa học, thể thao và đời sống, sách khuyến khích bớt đổ lỗi, nhìn thẳng vào sai lầm và tập trung vào điều học được.
+
+Thông điệp chung: biết sai cho đúng giúp ta tự tin hơn trên đường đời nhiều va vấp.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thấy nhẹ lòng khi có người gọi tên một kiểu thất bại là thông minh. Bao nhiêu lần ta dằn vặt vì đã thử mà không thành, trong khi chính lần thử ấy đã dạy ta nhiều nhất.
+
+Cho phép mình sai, cũng là cho phép mình lớn lên.
+
+H2: Ai nên đọc Sai Sao Cho Đúng?
+- Người cầu toàn, sợ sai đến mức không dám thử điều mới.
+- Quản lý muốn xây môi trường làm việc an toàn để học từ sai lầm.
+- Người làm trong y tế, khoa học, kinh doanh muốn hiểu sâu về rủi ro.
+- Ai vừa trải qua thất bại và muốn nhìn nó theo cách khác.
+
+Nguồn tham khảo:
+- Trang sách Sai Sao Cho Đúng tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/sai-sao-cho-dung-right-kind-of-wrong.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Sai Sao Cho Đúng thuộc về tác giả Amy C. Edmondson và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Sau mỗi lần vấp, ta thường cần một trang viết dịu dàng để đứng dậy. Đường Đến Bình Yên (https://duongdenbinhyen.com/duong-den-binh-yen.html) là cuốn tản văn dành cho người đang đứng giữa ngã ba, chưa biết đi tiếp thế nào.
+
+Bạn tìm hiểu sách Sai Sao Cho Đúng nói về gì? Có thể xem thêm các cuốn cùng chủ đề ở sách truyền cảm hứng (https://duongdenbinhyen.com/sach-truyen-cam-hung.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Người Khôn Nói Khéo — nói đúng thôi chưa đủ, còn phải nói để người ta nghe được (https://duongdenbinhyen.com/nguoi-khon-noi-kheo.html)
+- Rèn Luyện Tư Duy Trực Giác — logic và trực giác không loại trừ nhau (https://duongdenbinhyen.com/ren-luyen-tu-duy-truc-giac.html)
+- Khởi Nghiệp Tinh Gọn — học từ điều thực tế đang trả lời mình (https://duongdenbinhyen.com/khoi-nghiep-tinh-gon.html)
+- Homo Deus Lược Sử Tương Lai — tương lai mở ra từ những câu hỏi hôm nay (https://duongdenbinhyen.com/homo-deus-luoc-su-tuong-lai.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan-chua-lanh-tam-hon.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Người Bán Hàng Vĩ Đại Nhất Thế Giới (https://duongdenbinhyen.com/nguoi-ban-hang-vi-dai-nhat-the-gioi.html)
+Thẻ 3: Cách quản lý cảm xúc (https://duongdenbinhyen.com/cach-quan-ly-cam-xuc.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Sai Sao Cho Đúng nói về gì?
+Trả lời: Sách Sai Sao Cho Đúng (Right Kind of Wrong) của Amy C. Edmondson phân biệt ba loại thất bại: cơ bản, phức tạp và thông minh. Sách giúp người đọc biết thất bại nào cần phòng tránh, thất bại nào cần phân tích và thất bại nào đáng học hỏi, qua nhiều câu chuyện từ kinh doanh, y tế, khoa học và đời sống.
+
+Câu 2: Ai nên đọc Sai Sao Cho Đúng?
+Trả lời: Sai Sao Cho Đúng hợp với người cầu toàn sợ sai, quản lý muốn xây đội nhóm dám thử nghiệm, người làm y tế, khoa học, kinh doanh, và ai vừa trải qua thất bại. Sách giúp nhìn sai lầm bình tĩnh và có ích hơn.
+
+Câu 3: Thất bại thông minh trong Sai Sao Cho Đúng là gì?
+Trả lời: Theo sách, thất bại thông minh là thất bại xảy ra khi thử điều mới trong bối cảnh chưa quen, có chuẩn bị và quy mô vừa phải. Tác giả Thiện Nhân cho rằng đây là kiểu thất bại đáng được khuyến khích, vì nó mở ra hiểu biết mới.

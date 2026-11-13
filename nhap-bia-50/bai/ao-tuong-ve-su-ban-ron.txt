@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  ao-tuong-ve-su-ban-ron.html
+Title:  Ảo Tưởng Về Sự Bận Rộn | PACOBOOKS
+Description:  Lúc nào cũng thấy không đủ thời gian? Sách Ảo Tưởng Về Sự Bận Rộn nói về gì: vì sao cảm giác bận không phụ thuộc vào khối lượng việc.
+Keywords:  ảo tưởng về sự bận rộn, sách ảo tưởng về sự bận rộn, Toyodome Natsumi, tóm tắt sách ảo tưởng về sự bận rộn, PACOBOOKS
+Ảnh:  ao-tuong-ve-su-ban-ron.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · ao-tuong-ve-su-ban-ron.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Ảo Tưởng Về Sự Bận Rộn
+H3:  Ảo Tưởng Về Sự Bận Rộn — bận rộn có khi chỉ là một cảm giác
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Đi du lịch, lịch trình kín từ sáng tới tối, vậy mà ta vẫn reo lên chuyến đi thật trọn vẹn. Quay lại văn phòng, chỉ hai cuộc họp trong ngày đã thấy mình bận đến nghẹt thở. Cùng là hai mươi bốn giờ, sao cảm giác lại khác nhau đến thế? Có lẽ thời gian chẳng đổi, chỉ có cách ta nhìn nó là đổi.
+
+H2: Tóm tắt nội dung sách Ảo Tưởng Về Sự Bận Rộn
+Ảo Tưởng Về Sự Bận Rộn – Sự Bận Rộn Và Khối Lượng Công Việc Thực Ra Không Liên Quan Nhiều Đến Nhau là sách của tác giả Nhật Bản Toyodome Natsumi. Ấn bản tiếng Việt do NXB Kim Đồng (https://duongdenbinhyen.com/nha-xuat-ban-kim-dong.html) phát hành năm 2026, bản dịch của Thu Hằng.
+
+Sách bắt đầu từ một nghịch lý: có vô số mẹo quản lý, tối ưu, thanh lọc thời gian, nhưng nhiều người vẫn luôn thấy mình bận và không đủ thời gian.
+
+Tác giả lấy ví dụ chuyến du lịch kín lịch mà không thấy bận, so với ngày làm việc chỉ vài cuộc họp đã quá tải, để cho thấy cảm giác bận không phụ thuộc khối lượng việc, mà chịu ảnh hưởng từ cách tâm trí trải nghiệm thời gian.
+
+Một ý quan trọng: khi lúc nào cũng nghĩ mình không có thời gian, ta vô thức từ bỏ nhiều điều quan trọng, dù thực tế vẫn còn khoảng trống trong ngày.
+
+Kết hợp trải nghiệm cá nhân, dữ liệu khoa học và kiến thức từ nhiều nguồn sách, tác giả gợi ý phương pháp thay đổi cách nhìn thời gian, đặc biệt là biến việc đọc sách thành đồng minh để sống trọn vẹn hơn.
+
+Thông điệp chung: hãy dành phần đời còn lại cho những điều thực sự có ý nghĩa, thay vì để cảm giác bận rộn quyết định thay mình.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thích việc cuốn sách gọi tên bận rộn là một ảo tưởng. Nhiều khi ta nói bận như một tấm khiên, để khỏi phải đối diện với điều mình đang né tránh.
+
+Một cuốn sách khuyên đọc sách để bớt bận, nghe lạ mà thấm. Mười lăm phút đọc chậm, có khi đáng hơn một giờ lướt vội.
+
+H2: Ai nên đọc Ảo Tưởng Về Sự Bận Rộn?
+- Người lúc nào cũng thấy không đủ thời gian.
+- Người đi làm mệt mỏi vì lịch họp, việc vặt.
+- Người muốn xây lại thói quen đọc sách.
+- Ai muốn dành thời gian cho điều quan trọng hơn.
+
+Nguồn tham khảo:
+- Trang sách Ảo Tưởng Về Sự Bận Rộn tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/ao-tuong-ve-su-ban-ron-su-ban-ron-va-khoi-luong-cong-viec-thuc-ra-khong-lien-quan-nhieu-den-nhau.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Ảo Tưởng Về Sự Bận Rộn thuộc về tác giả Toyodome Natsumi và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Bớt một chút bận rộn, ta sẽ có chỗ cho một trang sách buổi tối. Bộ sách Miền Bình Yên (https://duongdenbinhyen.com/mien-binh-yen.html) là những trang tản văn đọc một mình, khi muốn thôi chạy theo đồng hồ.
+
+Nếu bạn đang tìm hiểu sách Ảo Tưởng Về Sự Bận Rộn nói về gì, có thể xem thêm các cuốn cùng chủ đề ở sách hay nên đọc (https://duongdenbinhyen.com/sach-hay-nen-doc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Đánh Thức Khả Năng Quan Sát Và Ghi Nhớ — giữ trí nhớ như giữ một khu vườn (https://duongdenbinhyen.com/danh-thuc-kha-nang-quan-sat-va-ghi-nho.html)
+- Học Như Người Chứ Đừng Học Như Máy — sự tò mò là thứ máy móc không có (https://duongdenbinhyen.com/hoc-nhu-nguoi-chu-dung-hoc-nhu-may.html)
+- Nhà Lãnh Đạo Không Chức Danh — sự tận tâm không cần đợi một chiếc ghế cao (https://duongdenbinhyen.com/nha-lanh-dao-khong-chuc-danh.html)
+- Cà Phê Cùng Tony — điều học được cần bước vào một việc làm nhỏ (https://duongdenbinhyen.com/ca-phe-cung-tony.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Từ Tốt Đến Vĩ Đại (https://duongdenbinhyen.com/tu-tot-den-vi-dai.html)
+Thẻ 3: Mới đi làm cảm thấy lạc lõng (https://duongdenbinhyen.com/moi-di-lam-cam-thay-lac-long.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Ảo Tưởng Về Sự Bận Rộn nói về gì?
+Trả lời: Sách Ảo Tưởng Về Sự Bận Rộn của Toyodome Natsumi giải thích vì sao cảm giác bận không phụ thuộc vào khối lượng việc, mà vào cách tâm trí trải nghiệm thời gian. Tác giả gợi ý cách thay đổi góc nhìn về thời gian, và biến việc đọc sách thành đồng minh để sống trọn vẹn hơn.
+
+Câu 2: Ai nên đọc Ảo Tưởng Về Sự Bận Rộn?
+Trả lời: Ảo Tưởng Về Sự Bận Rộn hợp với người luôn thấy thiếu thời gian, người đi làm mệt vì lịch dày, và người muốn quay lại thói quen đọc sách. Sách mỏng, khoảng một trăm ba mươi trang, đọc nhanh mà nhiều gợi mở.
+
+Câu 3: Ảo Tưởng Về Sự Bận Rộn có phải sách quản lý thời gian không?
+Trả lời: Không hẳn. Theo Tác giả Thiện Nhân, sách ít bàn mẹo sắp lịch mà tập trung vào cách ta cảm nhận thời gian. Khi đổi được cách nhìn, cảm giác bận tự nhiên nhẹ đi, và ta có chỗ cho những việc mình thật sự quý.

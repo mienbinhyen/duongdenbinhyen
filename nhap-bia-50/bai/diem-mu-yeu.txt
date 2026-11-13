@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  diem-mu-yeu.html
+Title:  Điểm Mù Yêu | PACOBOOKS
+Description:  Yêu đến mức không còn nhận ra mình? Sách Điểm Mù Yêu nói về gì: những câu chuyện tình và góc nhìn tâm lý giúp phụ nữ hiểu mình hơn khi yêu.
+Keywords:  điểm mù yêu, sách điểm mù yêu, Trần Vân Anh, tóm tắt sách điểm mù yêu, PACOBOOKS
+Ảnh:  diem-mu-yeu.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · diem-mu-yeu.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-tam-ly.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Điểm Mù Yêu
+H3:  Điểm Mù Yêu — nơi lãng mạn và mù quáng chỉ cách nhau một bước
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Cô bạn kể chuyện người yêu cũ, giọng vẫn bình thản, nhưng tay cứ xoay mãi chiếc ly đã cạn. Cô bảo hồi đó ai cũng thấy, chỉ mình cô là không. Rất nhiều người phụ nữ đã từng như thế, đứng trong một mối quan hệ mà người ngoài nhìn rõ mồn một, còn mình thì cứ ngỡ đó là tình yêu. Không phải vì họ dại, mà vì khi yêu, ai cũng có một vùng không nhìn thấy.
+
+H2: Tóm tắt nội dung sách Điểm Mù Yêu
+Điểm Mù Yêu – Ranh Giới Giữa Lãng Mạn Và Mù Quáng là sách của Trần Vân Anh, người làm truyền thông, biên tập viên từng cộng tác với nhiều tạp chí và có nền tảng tâm lý học. Sách do Công ty Bán lẻ Phương Nam phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026.
+
+Đây là tập truyện ngắn viết theo lối tự sự, đan với phân tích tâm lý học ứng dụng. Mỗi truyện là một lát cắt về những điểm mù trong cảm xúc khi yêu: nơi lý trí vắng mặt, nơi tổn thương cứ lặp lại.
+
+Theo lời tác giả trong phần giới thiệu, sách không chia phần rõ ràng, cũng không giải thích ý nghĩa từng chuyện. Những câu chuyện được để tự kể về mình, mỗi chuyện một giọng, gom từ những người phụ nữ tác giả đã gặp và lắng nghe.
+
+Sách chạm đến những góc khuất quen thuộc: ngoại tình, ghen tuông, thao túng cảm xúc, những mối quan hệ độc hại. Các tình huống được tái hiện gần với đời thật để người đọc dễ đồng cảm.
+
+Tác giả mời người đọc làm người ghép hình, tự nối các mảnh chuyện để nhìn thấy bức tranh lớn hơn về tình yêu, khát khao, sai lầm và hạnh phúc.
+
+Câu hỏi xuyên suốt cuốn sách là hạnh phúc trong tình yêu thực sự là gì, và mỗi người đọc được khuyến khích tìm câu trả lời của riêng mình, bằng cách soi lại những lựa chọn và mô thức yêu của bản thân.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết nghĩ, có lẽ ai cũng từng thương một người mà không thấy được mình đang dần nhỏ lại. Những cuốn sách như thế này không trách ai, chỉ lặng lẽ đặt một tấm gương trước mặt, để ta tự thấy.
+
+Yêu một người không có lỗi. Chỉ là đến một lúc, ta cần học cách yêu mà vẫn còn nhìn thấy chính mình.
+
+H2: Ai nên đọc Điểm Mù Yêu?
+- Phụ nữ đang trong một mối quan hệ khiến mình mệt mỏi mà chưa gọi được tên.
+- Người vừa trải qua chia tay, muốn hiểu vì sao mình cứ lặp lại một kiểu tổn thương.
+- Người thích đọc truyện ngắn có chiều sâu tâm lý.
+- Ai muốn học cách yêu lành mạnh hơn.
+
+Nguồn tham khảo:
+- Trang sách Điểm Mù Yêu tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/diem-mu-yeu-ranh-gioi-giua-lang-man-va-mu-quang.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Điểm Mù Yêu thuộc về tác giả Trần Vân Anh và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Sau những câu chuyện về điểm mù trong tình yêu, đôi khi ta cần một trang viết dịu dàng để ngồi lại với mình. Những bài viết mới của Thiện Nhân (https://duongdenbinhyen.com/bai-viet-moi.html) là nơi người viết kể về những vết thương không tên bằng giọng rất khẽ.
+
+Nếu bạn đang tìm hiểu sách Điểm Mù Yêu nói về gì trước khi chọn đọc, có thể xem thêm các cuốn cùng chủ đề trong sách tâm lý học (https://duongdenbinhyen.com/sach-tam-ly-hoc.html), và ghé PACOBOOKS (https://duongdenbinhyen.com/) để tìm thêm.
+
+📚 Tóm tắt sách khác:
+- 145 Câu Hỏi Giúp Bạn Sống Một Cuộc Đời Khác — một câu hỏi đúng có thể đổi cả cách sống (https://duongdenbinhyen.com/145-cau-hoi-giup-ban-song-mot-cuoc-doi-khac.html)
+- Chăm Sóc Chính Mình – Hành Trình Nội Tâm Của Nhà Tham Vấn — muốn chăm người khác lâu dài, trước hết phải chăm mình (https://duongdenbinhyen.com/cham-soc-chinh-minh-hanh-trinh-noi-tam-cua-nha-tham-van.html)
+- Đừng Bao Giờ Đi Ăn Một Mình — một cuộc gặp bắt đầu từ điều có thể sẻ chia (https://duongdenbinhyen.com/dung-bao-gio-di-an-mot-minh.html)
+- Đọc Vị Bất Kỳ Ai — lắng nghe cả những điều không nói thành lời (https://duongdenbinhyen.com/doc-vi-bat-ky-ai.html)
+📚 Thuộc tủ sách:  Sách Tâm Lý (https://duongdenbinhyen.com/sach-tam-ly.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/gioithieu.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Quẳng Gánh Lo Đi Và Vui Sống (https://duongdenbinhyen.com/quang-ganh-lo-di-va-vui-song.html)
+Thẻ 3: Sợ yêu vì sợ tổn thương (https://duongdenbinhyen.com/so-yeu-vi-so-ton-thuong.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Điểm Mù Yêu nói về gì?
+Trả lời: Sách Điểm Mù Yêu của Trần Vân Anh là tập truyện ngắn tự sự kết hợp phân tích tâm lý, kể về những điểm mù cảm xúc khi yêu như ngoại tình, ghen tuông, thao túng hay mối quan hệ độc hại. Mỗi truyện giúp người đọc, nhất là phụ nữ, soi lại lựa chọn và mô thức yêu của chính mình.
+
+Câu 2: Ai nên đọc Điểm Mù Yêu?
+Trả lời: Điểm Mù Yêu hợp với phụ nữ đang ở trong mối quan hệ khiến mình mệt mỏi, người vừa chia tay muốn hiểu vì sao tổn thương cứ lặp lại, và ai thích truyện ngắn có chiều sâu tâm lý. Sách cũng dành cho người muốn học cách yêu lành mạnh hơn.
+
+Câu 3: Điểm Mù Yêu là truyện hay sách tâm lý?
+Trả lời: Điểm Mù Yêu là tập truyện ngắn, nhưng mỗi truyện được đan thêm góc nhìn tâm lý học ứng dụng. Theo Tác giả Thiện Nhân, chính cách kết hợp này giúp người đọc vừa đồng cảm với nhân vật, vừa tự soi chiếu cảm xúc của mình mà không cảm thấy bị giảng giải.

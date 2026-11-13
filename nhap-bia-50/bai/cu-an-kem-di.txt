@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  cu-an-kem-di.html
+Title:  Cứ Ăn Kem Đi | PACOBOOKS
+Description:  Mệt vì đủ loại bí quyết sống khỏe? Sách Cứ Ăn Kem Đi nói về gì: 6 nguyên tắc đơn giản có cơ sở khoa học để sống lâu mà vẫn tận hưởng.
+Keywords:  cứ ăn kem đi, sách cứ ăn kem đi, Ezekiel J. Emanuel, tóm tắt sách cứ ăn kem đi, PACOBOOKS
+Ảnh:  cu-an-kem-di.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · cu-an-kem-di.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-hay-ve-cuoc-song.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Cứ Ăn Kem Đi
+H3:  Cứ Ăn Kem Đi — sống khỏe mà không cần thấy có lỗi
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Hôm nay mạng xã hội bảo nhịn ăn sáng, mai lại bảo bữa sáng là quan trọng nhất. Ta mua thực phẩm chức năng, cài ứng dụng đếm bước, rồi thấy tội lỗi mỗi lần lỡ ăn một cây kem. Sống khỏe, tự lúc nào đã thành một nỗi lo thay vì một niềm vui.
+
+H2: Tóm tắt nội dung sách Cứ Ăn Kem Đi
+Cứ Ăn Kem Đi – 6 Nguyên Tắc Đơn Giản Để Sống Lâu Khỏe Mạnh là sách của bác sĩ Ezekiel J. Emanuel. Tên gốc tiếng Anh là Eat Your Ice Cream. Ấn bản tiếng Việt do Omega Plus phát hành, NXB Thế Giới (https://duongdenbinhyen.com/nha-xuat-ban-the-gioi.html) ấn hành năm 2026, bản dịch của Hoài Sơn.
+
+Trong sách, tác giả chắt lọc bằng chứng khoa học thành sáu hành vi đơn giản, tự nhiên, dễ áp dụng vào đời sống.
+
+Ông khuyên người đọc đừng chạy theo những bí quyết hay phương pháp chưa được chứng minh, vốn tràn lan và nhiều khi mâu thuẫn nhau.
+
+Một ý quan trọng: sức khỏe và tuổi thọ không phải đích đến, mà là phương tiện để có thêm thời gian yêu thương gia đình, ở bên bạn bè, theo đuổi công việc và sống có ý nghĩa.
+
+Sách nhấn mạnh rằng không cần một cuộc sống hoàn hảo, cũng không cần thấy tội lỗi vì một chiếc bánh hay một phần kem.
+
+Thông điệp chung: hãy chăm sóc sức khỏe, nhưng đừng quên tận hưởng cuộc sống, và đôi khi, cứ ăn kem đi.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thích cái tên sách vì nó nghe như lời một người bạn. Sống khỏe đáng lẽ phải làm ta nhẹ nhõm, chứ không phải thêm một danh sách điều cấm.
+
+Một cây kem ăn cùng con trong buổi chiều mát, có khi bổ hơn mọi viên thuốc.
+
+H2: Ai nên đọc Cứ Ăn Kem Đi?
+- Người rối trí vì quá nhiều lời khuyên sức khỏe trái ngược.
+- Người muốn sống lành mạnh theo cách đơn giản, bền vững.
+- Người hay thấy có lỗi với bản thân về chuyện ăn uống, tập luyện.
+- Ai quan tâm tới tuổi thọ và chất lượng sống.
+
+Nguồn tham khảo:
+- Trang sách Cứ Ăn Kem Đi tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/cu-an-kem-di-6-nguyen-tac-don-gian-de-song-lau-khoe-manh.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Cứ Ăn Kem Đi thuộc về tác giả Ezekiel J. Emanuel và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Sống khỏe cũng là sống chậm, biết vui với những điều nhỏ. Bộ sách Miền Bình Yên (https://duongdenbinhyen.com/mien-binh-yen.html) là những trang tản văn về những niềm vui bình dị như thế.
+
+Nếu bạn đang tìm hiểu sách Cứ Ăn Kem Đi nói về gì, có thể xem thêm ở những cuốn sách hay nên đọc (https://duongdenbinhyen.com/nhung-cuon-sach-hay-nen-doc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/). Sách không thay thế tư vấn y tế cá nhân.
+
+📚 Tóm tắt sách khác:
+- Cuộc Sống Hôn Nhân Và Thách Thức Của Thời Đại — điều gì đang xảy ra với hôn nhân (https://duongdenbinhyen.com/cuoc-song-hon-nhan-va-thach-thuc-cua-thoi-dai.html)
+- Kinh Tế Học Của Đời Người — quỹ tài sản vô hình ai cũng có (https://duongdenbinhyen.com/kinh-te-hoc-cua-doi-nguoi.html)
+- Những Ngày Thơ Ấu — vòng tay mẹ giữa ký ức nhiều lạnh vắng (https://duongdenbinhyen.com/nhung-ngay-tho-au.html)
+- Đồi Gió Hú — đi qua những ràng buộc để mở một lối khác (https://duongdenbinhyen.com/doi-gio-hu.html)
+📚 Thuộc tủ sách:  Sách Hay Về Cuộc Sống (https://duongdenbinhyen.com/sach-hay-ve-cuoc-song.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/tac-gia-thien-nhan.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Tuổi Thơ Dữ Dội (https://duongdenbinhyen.com/tuoi-tho-du-doi.html)
+Thẻ 3: Cách chấp nhận bản thân (https://duongdenbinhyen.com/cach-chap-nhan-ban-than.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Cứ Ăn Kem Đi nói về gì?
+Trả lời: Sách Cứ Ăn Kem Đi của bác sĩ Ezekiel J. Emanuel chắt lọc bằng chứng khoa học thành sáu nguyên tắc đơn giản để sống lâu khỏe mạnh, đồng thời khuyên tránh chạy theo bí quyết chưa được chứng minh. Sách nhấn mạnh sức khỏe là phương tiện để sống có ý nghĩa và vẫn tận hưởng cuộc sống.
+
+Câu 2: Ai nên đọc Cứ Ăn Kem Đi?
+Trả lời: Cứ Ăn Kem Đi hợp với người rối vì quá nhiều lời khuyên sức khỏe, người muốn sống lành mạnh theo cách đơn giản, và người hay thấy có lỗi về chuyện ăn uống. Sách mang tính tham khảo, không thay thế tư vấn bác sĩ.
+
+Câu 3: Cứ Ăn Kem Đi có khuyến khích ăn uống thoải mái không?
+Trả lời: Không theo nghĩa buông thả. Theo Tác giả Thiện Nhân, sách khuyên giữ vài nguyên tắc nền tảng có cơ sở khoa học, rồi thôi tự dằn vặt vì những niềm vui nhỏ. Thông điệp là cân bằng, không phải hoàn hảo.

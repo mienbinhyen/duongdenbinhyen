@@ -1,0 +1,76 @@
+BÀI REVIEW SÁCH — NHÁP (theo 03-VIET-BAI/bai-mau-review-sach.txt)
+Tạo ngày: 2026-11-13
+Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 5-6, đếm link vào từ repo (2026-11-13). Bìa: nhánh nhap-bia-50.
+
+PHẦN 1 — META
+Tên file:  buoc-ra-anh-sang.html
+Title:  Bước Ra Ánh Sáng | PACOBOOKS
+Description:  Sợ đứng trước đám đông? Sách Bước Ra Ánh Sáng nói về gì: cẩm nang thuyết trình thực chiến giúp bạn nói bằng giọng thật và chạm tới người nghe.
+Keywords:  bước ra ánh sáng, sách bước ra ánh sáng, Nguyễn Tiến Danh và Nguyễn Thanh Huyền, tóm tắt sách bước ra ánh sáng, PACOBOOKS
+Ảnh:  buoc-ra-anh-sang.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · buoc-ra-anh-sang.webp (bìa đứng, chèn trước H2 Tóm tắt)
+Cụm (trụ):  sach-phat-trien-ban-than.html
+
+PHẦN 2 — TIÊU ĐỀ
+H1:  Bước Ra Ánh Sáng
+H3:  Bước Ra Ánh Sáng — sân khấu là nơi để hiện diện, không phải để trình diễn
+Trích nguồn:  Tổng hợp từ nguồn mở 2026 — Tác giả Thiện Nhân
+
+PHẦN 3 — NỘI DUNG
+Tay run, giọng lạc, tim đập thình thịch, đầu óc trắng xóa dù đã tập cả tuần. Ai từng đứng trước một phòng đầy người đều nhớ cảm giác ấy. Có những ý tưởng rất hay đã chết lặng chỉ vì người mang nó không dám bước ra. Nói trước đám đông, hóa ra, không phải chuyện năng khiếu, mà là chuyện can đảm và luyện tập.
+
+H2: Tóm tắt nội dung sách Bước Ra Ánh Sáng
+Bước Ra Ánh Sáng – Cẩm Nang Thuyết Trình Thực Chiến là sách của Nguyễn Tiến Danh, giảng viên kỹ năng mềm tại Trường Đại học Bách khoa – Đại học Đà Nẵng, và Nguyễn Thanh Huyền, người làm truyền hình tại VTV8. Sách do Omega Plus phát hành, NXB Dân Trí (https://duongdenbinhyen.com/nha-xuat-ban-dan-tri.html) ấn hành năm 2026.
+
+Sách đưa ra bộ công cụ thực chiến giúp biến ý tưởng trong đầu thành bài thuyết trình chạm đến cảm xúc, bằng chính giọng nói, câu chuyện và năng lượng của người nói.
+
+Không sa vào lý thuyết, hai tác giả xây lộ trình rõ ràng: xây sự tự tin, phát triển tư duy thiết kế nội dung, rồi kết nối cảm xúc với khán giả.
+
+Mỗi chương như một mô-đun kỹ năng, có thể thực hành, thử nghiệm và đo kết quả. Sách giới thiệu các khung thuyết trình như NABC, 7S, PSAC, PANTS, cùng cách diễn đạt ấn tượng, xử lý tình huống và diễn tập có chủ đích.
+
+Theo giới thiệu, sách biến kỹ năng tưởng thuộc về năng khiếu thành năng lực có thể rèn luyện, hữu ích cho người trẻ, người khởi nghiệp, người sáng tạo nội dung.
+
+Thông điệp chung: thuyết trình là hành trình tìm và hiểu tiếng nói thật của chính mình; sân khấu là nơi để hiện diện, kết nối và chia sẻ giá trị bằng cả trái tim.
+
+H2: Góc nhìn của Tác giả Thiện Nhân
+Người viết thích câu sân khấu là nơi để hiện diện. Nhiều người sợ nói vì nghĩ phải diễn cho hay. Nhưng người nghe nhớ lâu nhất thường là những người nói thật.
+
+Bước ra ánh sáng, đôi khi chỉ là thôi trốn sau nỗi sợ của mình.
+
+H2: Ai nên đọc Bước Ra Ánh Sáng?
+- Người sợ nói trước đám đông, muốn tự tin hơn.
+- Sinh viên, người đi làm thường phải thuyết trình.
+- Người khởi nghiệp cần trình bày ý tưởng thuyết phục.
+- Người sáng tạo nội dung muốn kết nối tốt hơn với khán giả.
+
+Nguồn tham khảo:
+- Trang sách Bước Ra Ánh Sáng tại Fahasa (thông tin nhà phát hành, tra ngày 2026-11-13): https://www.fahasa.com/buoc-ra-anh-sang-cam-nang-thuyet-trinh-thuc-chien.html
+
+⚠️ LƯU Ý QUAN TRỌNG
+Nội dung tóm tắt trên được tổng hợp và viết lại từ các nguồn thông tin mở trên internet, chỉ mang tính chất tham khảo. Chúng tôi không cam kết độ chính xác tuyệt đối và không khẳng định bất kỳ điều gì về nội dung, quan điểm của tác phẩm, tác giả, nhà xuất bản, đơn vị phát hành hay các tổ chức, cá nhân nắm giữ bản quyền. Mọi quyền đối với tác phẩm Bước Ra Ánh Sáng thuộc về tác giả Nguyễn Tiến Danh và Nguyễn Thanh Huyền và các đơn vị giữ bản quyền hợp pháp. Để hiểu trọn vẹn tác phẩm, bạn nên tìm đọc bản sách chính thức. Nếu bạn là tác giả, nhà xuất bản hoặc đơn vị nắm giữ bản quyền và muốn điều chỉnh hay gỡ bỏ nội dung này, vui lòng liên hệ tgthiennhan@gmail.com, chúng tôi sẽ xử lý ngay.
+
+Tìm được tiếng nói thật trên sân khấu, cũng cần tìm được tiếng nói thật trong lòng. Những bài viết mới của Thiện Nhân (https://duongdenbinhyen.com/bai-viet-moi.html) là những trang viết về những điều người ta ít dám nói ra.
+
+Bạn tìm hiểu sách Bước Ra Ánh Sáng nói về gì? Có thể xem thêm ở những cuốn sách hay nên đọc (https://duongdenbinhyen.com/nhung-cuon-sach-hay-nen-doc.html) và ghé PACOBOOKS (https://duongdenbinhyen.com/).
+
+📚 Tóm tắt sách khác:
+- Ảo Tưởng Về Sự Bận Rộn — bận rộn có khi chỉ là một cảm giác (https://duongdenbinhyen.com/ao-tuong-ve-su-ban-ron.html)
+- Kiên Định Tự Quyết — cuộc đời mình, mình cầm lái (https://duongdenbinhyen.com/kien-dinh-tu-quyet.html)
+- Đánh Thức Con Người Phi Thường Trong Bạn — một lựa chọn hôm nay mở thêm hướng ngày mai (https://duongdenbinhyen.com/danh-thuc-con-nguoi-phi-thuong-trong-ban.html)
+- Đồi Gió Hú — đi qua những ràng buộc để mở một lối khác (https://duongdenbinhyen.com/doi-gio-hu.html)
+📚 Thuộc tủ sách:  Sách Phát Triển Bản Thân (https://duongdenbinhyen.com/sach-phat-trien-ban-than.html)
+Ký tên: Tác giả Thiện Nhân (https://duongdenbinhyen.com/gioithieu.html)
+
+PHẦN 4 — BÀI VIẾT LIÊN QUAN (3 thẻ)
+Thẻ 1: PACOBOOKS (https://duongdenbinhyen.com/)
+Thẻ 2: Nhà Lãnh Đạo Không Chức Danh (https://duongdenbinhyen.com/nha-lanh-dao-khong-chuc-danh.html)
+Thẻ 3: Sinh viên mới ra trường hoang mang (https://duongdenbinhyen.com/sinh-vien-moi-ra-truong-hoang-mang.html)
+
+PHẦN 5 — FAQ
+Câu 1: Sách Bước Ra Ánh Sáng nói về gì?
+Trả lời: Sách Bước Ra Ánh Sáng của Nguyễn Tiến Danh và Nguyễn Thanh Huyền là cẩm nang thuyết trình thực chiến: xây tự tin, thiết kế nội dung, kết nối cảm xúc với khán giả, kèm các khung NABC, 7S, PSAC, PANTS, kỹ thuật diễn đạt và diễn tập có chủ đích.
+
+Câu 2: Ai nên đọc Bước Ra Ánh Sáng?
+Trả lời: Bước Ra Ánh Sáng hợp với người sợ nói trước đám đông, sinh viên, người đi làm thường thuyết trình, người khởi nghiệp và người sáng tạo nội dung. Sách thực tế, dễ áp dụng.
+
+Câu 3: Người hướng nội có thuyết trình tốt được không?
+Trả lời: Được. Theo tinh thần Bước Ra Ánh Sáng, thuyết trình là kỹ năng rèn được, không phụ thuộc tính cách. Tác giả Thiện Nhân cho rằng người hướng nội thường chuẩn bị kỹ và nói chân thành, đó là lợi thế rất lớn trên sân khấu.
