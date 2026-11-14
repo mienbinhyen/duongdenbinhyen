@@ -2,7 +2,8 @@
  * PACOBOOKS — Like, Bình luận, Lượt xem (Google Apps Script) — Em ECO 2026-11-14
  * Google Sheet gồm 3 tab (tự tạo): Likes | BinhLuan | LuotXem
  * Thuộc tính tập lệnh: ADMIN_PASS = mật khẩu trang quản lý
- * Sau khi dán code: chạy hàm caiDat() 1 lần (tạo lịch ghi lượt xem mỗi phút)
+ * Sau khi dán code: chạy hàm caiDat() 1 lần (tạo lịch ghi lượt xem mỗi 5 phút)
+ * Báo bình luận mới qua Telegram: thuộc tính TG_TOKEN, rồi nhắn bot 1 tin và chạy hàm layChatTelegram() 1 lần
  */
 var SHEET_ID = '178tZgEPcOU_e3bHIgnImnVwWuPPio5vAixKNuNnRuI4'; // Sheet "Like & bình luận" (tgthiennhan)
 var TZ = 'Asia/Ho_Chi_Minh';
@@ -25,7 +26,7 @@ function cache_(){ return CacheService.getScriptCache(); }
 /* Chạy 1 lần sau khi dán code */
 function caiDat(){
   ScriptApp.getProjectTriggers().forEach(function (t){ if (t.getHandlerFunction() === 'ghiLuotXem') ScriptApp.deleteTrigger(t); });
-  ScriptApp.newTrigger('ghiLuotXem').timeBased().everyMinutes(1).create();
+  ScriptApp.newTrigger('ghiLuotXem').timeBased().everyMinutes(5).create();   // ghi lượt xem mỗi 5 phút
   tab_('Likes'); tab_('BinhLuan'); tab_('LuotXem');
 }
 
@@ -54,6 +55,7 @@ function doPost(e){
     var now = new Date(), id = Utilities.getUuid().slice(0, 8);
     tab_('BinhLuan').appendRow([id, now, p, name, text, 'hien']);  // tự động hiện
     cache_().remove('g:' + p);
+    baoTelegram_('💬 Bình luận mới\n👤 ' + name + '\n📝 ' + text + '\n🔗 https://duongdenbinhyen.com' + p);
     return out_({ ok: true, d: fmt_(now) });
   }
   if (d.a === 'admin' || d.a === 'mod'){
@@ -130,4 +132,28 @@ function stats_(){
   tab_('Likes').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]){ g(r[0]).like = Number(r[1]) || 0; g(r[0]).tt = Number(r[2]) || 0; } });
   tab_('BinhLuan').getDataRange().getValues().slice(1).forEach(function (r){ if (r[2] && r[5] !== 'xoa') g(r[2]).bl++; });
   return Object.keys(m).map(function (k){ return m[k]; }).sort(function (a, b){ return b.xem - a.xem; });
+}
+
+/* ---- Telegram: báo bình luận mới ---- */
+function baoTelegram_(msg){
+  var tk = prop_('TG_TOKEN', ''), chat = prop_('TG_CHAT', '');
+  if (!tk || !chat) return;
+  try {
+    UrlFetchApp.fetch('https://api.telegram.org/bot' + tk + '/sendMessage', {
+      method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+      payload: JSON.stringify({ chat_id: chat, text: msg.slice(0, 3500), disable_web_page_preview: true })
+    });
+  } catch (e) {}
+}
+/* Chạy 1 lần sau khi đã nhắn cho bot: tự lấy mã cuộc trò chuyện và lưu TG_CHAT */
+function layChatTelegram(){
+  var tk = prop_('TG_TOKEN', '');
+  if (!tk) throw new Error('Chưa có TG_TOKEN');
+  var r = JSON.parse(UrlFetchApp.fetch('https://api.telegram.org/bot' + tk + '/getUpdates', { muteHttpExceptions: true }).getContentText());
+  if (!r.ok) throw new Error('Token sai: ' + (r.description || ''));
+  var u = (r.result || []).filter(function (x){ return x.message && x.message.chat; }).pop();
+  if (!u) throw new Error('Chưa thấy tin nhắn nào gửi tới bot');
+  PropertiesService.getScriptProperties().setProperty('TG_CHAT', String(u.message.chat.id));
+  baoTelegram_('✅ Đã kết nối PACOBOOKS: có bình luận mới sẽ báo về đây.');
+  return 'OK ' + u.message.chat.id;
 }
