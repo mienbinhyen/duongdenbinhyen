@@ -1,0 +1,130 @@
+/**
+ * PACOBOOKS — Like, Bình luận, Lượt xem (Google Apps Script) — Em ECO 2026-11-14
+ * Google Sheet gồm 3 tab (tự tạo): Likes | BinhLuan | LuotXem
+ * Thuộc tính tập lệnh: ADMIN_PASS = mật khẩu trang quản lý
+ * Sau khi dán code: chạy hàm caiDat() 1 lần (tạo lịch ghi lượt xem mỗi phút)
+ */
+var SHEET_ID = '178tZgEPcOU_e3bHIgnImnVwWuPPio5vAixKNuNnRuI4'; // Sheet "Like & bình luận" (tgthiennhan)
+var TZ = 'Asia/Ho_Chi_Minh';
+
+function ss_(){ return SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActive(); }
+function tab_(name){
+  var head = { Likes: ['trang','so_like'], BinhLuan: ['id','thoi_gian','trang','ten','noi_dung','trang_thai'], LuotXem: ['trang','so_xem'] }[name];
+  var s = ss_().getSheetByName(name);
+  if (!s){ s = ss_().insertSheet(name); s.appendRow(head); }
+  return s;
+}
+function prop_(k, d){ var v = PropertiesService.getScriptProperties().getProperty(k); return v === null ? d : v; }
+function out_(o){ return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
+function page_(p){ return String(p || '').replace(/[^a-z0-9\-\/\.]/gi, '').slice(0, 120) || '/'; }
+function clean_(t, n){ return String(t || '').replace(/[<>]/g, '').trim().slice(0, n); }
+function fmt_(d){ return Utilities.formatDate(new Date(d), TZ, 'dd/MM/yyyy HH:mm'); }
+function cache_(){ return CacheService.getScriptCache(); }
+
+/* Chạy 1 lần sau khi dán code */
+function caiDat(){
+  ScriptApp.getProjectTriggers().forEach(function (t){ if (t.getHandlerFunction() === 'ghiLuotXem') ScriptApp.deleteTrigger(t); });
+  ScriptApp.newTrigger('ghiLuotXem').timeBased().everyMinutes(1).create();
+  tab_('Likes'); tab_('BinhLuan'); tab_('LuotXem');
+}
+
+/* ĐỌC: ?a=get&p=/trang.html — số like + bình luận đang hiện (bộ nhớ đệm 60 giây) */
+function doGet(e){
+  var p = page_(e.parameter.p);
+  if (e.parameter.a === 'get'){
+    var k = 'g:' + p, hit = cache_().get(k);
+    if (!hit){ hit = JSON.stringify({ likes: likes_(p), comments: comments_(p) }); cache_().put(k, hit, 60); }
+    return ContentService.createTextOutput(hit).setMimeType(ContentService.MimeType.JSON);
+  }
+  return out_({ ok: true });
+}
+
+/* GHI: body JSON gửi dạng text/plain */
+function doPost(e){
+  var d = {}; try { d = JSON.parse(e.postData.contents); } catch (x) { return out_({ ok: false }); }
+  var p = page_(d.p);
+  if (d.a === 'view'){ view_(p); return out_({ ok: true }); }
+  if (d.a === 'like') return out_({ ok: true, likes: like_(p) });
+  if (d.a === 'cmt'){
+    if (d.hp) return out_({ ok: true });                          // bẫy máy spam
+    var name = clean_(d.n, 40), text = clean_(d.t, 1000);
+    if (!name || text.length < 2) return out_({ ok: false, err: 'thieu' });
+    var now = new Date(), id = Utilities.getUuid().slice(0, 8);
+    tab_('BinhLuan').appendRow([id, now, p, name, text, 'hien']);  // tự động hiện
+    cache_().remove('g:' + p);
+    return out_({ ok: true, d: fmt_(now) });
+  }
+  if (d.a === 'admin' || d.a === 'mod'){
+    if (!d.k || d.k !== prop_('ADMIN_PASS', '')) return out_({ ok: false, err: 'pass' });
+    if (d.a === 'mod') mod_(d.id, d.st);
+    ghiLuotXem();
+    return out_({ ok: true, pages: stats_(), list: all_() });
+  }
+  return out_({ ok: false });
+}
+
+/* ---- Lượt xem: cộng dồn trong bộ nhớ đệm, mỗi phút ghi vào Sheet 1 lần ---- */
+function view_(p){
+  var l = LockService.getScriptLock(); if (!l.tryLock(3000)) return;
+  try {
+    var c = cache_(), raw = c.get('views'), m = raw ? JSON.parse(raw) : {};
+    m[p] = (m[p] || 0) + 1; c.put('views', JSON.stringify(m), 21600);
+  } finally { l.releaseLock(); }
+}
+function ghiLuotXem(){
+  var l = LockService.getScriptLock(); if (!l.tryLock(10000)) return;
+  try {
+    var c = cache_(), raw = c.get('views'); if (!raw) return;
+    var m = JSON.parse(raw); c.remove('views');
+    var s = tab_('LuotXem'), v = s.getDataRange().getValues(), row = {};
+    for (var i = 1; i < v.length; i++) row[v[i][0]] = i + 1;
+    Object.keys(m).forEach(function (p){
+      if (row[p]){ var r = s.getRange(row[p], 2); r.setValue((Number(r.getValue()) || 0) + m[p]); }
+      else { s.appendRow([p, m[p]]); row[p] = s.getLastRow(); }
+    });
+  } finally { l.releaseLock(); }
+}
+
+/* ---- Like ---- */
+function likes_(p){
+  var v = tab_('Likes').getDataRange().getValues();
+  for (var i = 1; i < v.length; i++) if (v[i][0] === p) return Number(v[i][1]) || 0;
+  return 0;
+}
+function like_(p){
+  var l = LockService.getScriptLock(); l.waitLock(5000);
+  try {
+    var s = tab_('Likes'), v = s.getDataRange().getValues(), n = 1, found = false;
+    for (var i = 1; i < v.length; i++) if (v[i][0] === p){ n = (Number(v[i][1]) || 0) + 1; s.getRange(i + 1, 2).setValue(n); found = true; break; }
+    if (!found) s.appendRow([p, 1]);
+    cache_().remove('g:' + p); return n;
+  } finally { l.releaseLock(); }
+}
+
+/* ---- Bình luận ---- */
+function comments_(p){
+  var v = tab_('BinhLuan').getDataRange().getValues(), r = [];
+  for (var i = 1; i < v.length; i++) if (v[i][2] === p && v[i][5] === 'hien') r.push({ n: v[i][3], t: v[i][4], d: fmt_(v[i][1]) });
+  return r.slice(-100);
+}
+function all_(){
+  var v = tab_('BinhLuan').getDataRange().getValues(), r = [];
+  for (var i = v.length - 1; i >= 1 && r.length < 500; i--) if (v[i][5] !== 'xoa')
+    r.push({ id: v[i][0], p: v[i][2], n: v[i][3], t: v[i][4], st: v[i][5], d: fmt_(v[i][1]) });
+  return r;
+}
+function mod_(id, st){
+  if (['hien','an','xoa'].indexOf(st) < 0) return;
+  var s = tab_('BinhLuan'), v = s.getDataRange().getValues();
+  for (var i = 1; i < v.length; i++) if (v[i][0] === id){ s.getRange(i + 1, 6).setValue(st); cache_().remove('g:' + v[i][2]); return; }
+}
+
+/* ---- Thống kê từng trang: lượt xem, like, bình luận ---- */
+function stats_(){
+  var m = {};
+  function g(p){ return m[p] || (m[p] = { p: p, xem: 0, like: 0, bl: 0 }); }
+  tab_('LuotXem').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]) g(r[0]).xem = Number(r[1]) || 0; });
+  tab_('Likes').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]) g(r[0]).like = Number(r[1]) || 0; });
+  tab_('BinhLuan').getDataRange().getValues().slice(1).forEach(function (r){ if (r[2] && r[5] !== 'xoa') g(r[2]).bl++; });
+  return Object.keys(m).map(function (k){ return m[k]; }).sort(function (a, b){ return b.xem - a.xem; });
+}
