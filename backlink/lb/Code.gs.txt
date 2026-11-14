@@ -10,7 +10,7 @@ var TZ = 'Asia/Ho_Chi_Minh';
 
 function ss_(){ return SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActive(); }
 function tab_(name){
-  var head = { Likes: ['trang','so_like','thich_trang'], BinhLuan: ['id','thoi_gian','trang','ten','noi_dung','trang_thai'], LuotXem: ['trang','so_xem'] }[name];
+  var head = { Likes: ['trang','so_like','thich_trang'], BinhLuan: ['id','thoi_gian','trang','ten','noi_dung','trang_thai','tra_loi','thoi_gian_tl'], LuotXem: ['trang','so_xem'] }[name];
   var s = ss_().getSheetByName(name);
   if (!s){ s = ss_().insertSheet(name); s.appendRow(head); }
   else if (s.getLastColumn() < head.length) s.getRange(1, 1, 1, head.length).setValues([head]); // thêm cột mới nếu thiếu
@@ -18,7 +18,7 @@ function tab_(name){
 }
 function prop_(k, d){ var v = PropertiesService.getScriptProperties().getProperty(k); return v === null ? d : v; }
 function out_(o){ return ContentService.createTextOutput(JSON.stringify(o)).setMimeType(ContentService.MimeType.JSON); }
-function page_(p){ return String(p || '').replace(/[^a-z0-9\-\/\.]/gi, '').slice(0, 120) || '/'; }
+function page_(p){ return String(p || '').replace(/[^a-z0-9\-\/\.#]/gi, '').slice(0, 120) || '/'; }
 function clean_(t, n){ return String(t || '').replace(/[<>]/g, '').trim().slice(0, n); }
 function fmt_(d){ return Utilities.formatDate(new Date(d), TZ, 'dd/MM/yyyy HH:mm'); }
 function cache_(){ return CacheService.getScriptCache(); }
@@ -55,12 +55,13 @@ function doPost(e){
     var now = new Date(), id = Utilities.getUuid().slice(0, 8);
     tab_('BinhLuan').appendRow([id, now, p, name, text, 'hien']);  // tự động hiện
     cache_().remove('g:' + p);
-    baoTelegram_('💬 Bình luận mới\n👤 ' + name + '\n📝 ' + text + '\n🔗 https://duongdenbinhyen.com' + p);
-    return out_({ ok: true, d: fmt_(now) });
+    baoTelegram_('💬 Bình luận mới\n👤 ' + name + '\n📝 ' + text + '\n🔗 https://duongdenbinhyen.com' + p.split('#')[0] + '#bl-' + id);   // link tới đúng bình luận
+    return out_({ ok: true, d: fmt_(now), id: id });
   }
-  if (d.a === 'admin' || d.a === 'mod'){
+  if (d.a === 'admin' || d.a === 'mod' || d.a === 'rep'){
     if (!d.k || d.k !== prop_('ADMIN_PASS', '')) return out_({ ok: false, err: 'pass' });
     if (d.a === 'mod') mod_(d.id, d.st);
+    if (d.a === 'rep') rep_(d.id, d.t);
     ghiLuotXem();
     return out_({ ok: true, pages: stats_(), list: all_() });
   }
@@ -109,19 +110,26 @@ function like_(p, col){
 /* ---- Bình luận ---- */
 function comments_(p){
   var v = tab_('BinhLuan').getDataRange().getValues(), r = [];
-  for (var i = 1; i < v.length; i++) if (v[i][2] === p && v[i][5] === 'hien') r.push({ n: v[i][3], t: v[i][4], d: fmt_(v[i][1]) });
+  for (var i = 1; i < v.length; i++) if (v[i][2] === p && v[i][5] === 'hien') r.push({ i: v[i][0], n: v[i][3], t: v[i][4], d: fmt_(v[i][1]), r: v[i][6] || '', rd: v[i][7] ? fmt_(v[i][7]) : '' });
   return r.slice(-100);
 }
 function all_(){
   var v = tab_('BinhLuan').getDataRange().getValues(), r = [];
   for (var i = v.length - 1; i >= 1 && r.length < 500; i--) if (v[i][5] !== 'xoa')
-    r.push({ id: v[i][0], p: v[i][2], n: v[i][3], t: v[i][4], st: v[i][5], d: fmt_(v[i][1]) });
+    r.push({ id: v[i][0], p: v[i][2], n: v[i][3], t: v[i][4], st: v[i][5], d: fmt_(v[i][1]), r: v[i][6] || '' });
   return r;
 }
 function mod_(id, st){
   if (['hien','an','xoa'].indexOf(st) < 0) return;
   var s = tab_('BinhLuan'), v = s.getDataRange().getValues();
   for (var i = 1; i < v.length; i++) if (v[i][0] === id){ s.getRange(i + 1, 6).setValue(st); cache_().remove('g:' + v[i][2]); return; }
+}
+
+/* PACOBOOKS trả lời 1 bình luận (để trống = xóa câu trả lời) */
+function rep_(id, t){
+  t = clean_(t, 1000);
+  var s = tab_('BinhLuan'), v = s.getDataRange().getValues();
+  for (var i = 1; i < v.length; i++) if (v[i][0] === id){ s.getRange(i + 1, 7, 1, 2).setValues([[t, t ? new Date() : '']]); cache_().remove('g:' + v[i][2]); return; }
 }
 
 /* ---- Thống kê từng trang: lượt xem, like, bình luận ---- */
