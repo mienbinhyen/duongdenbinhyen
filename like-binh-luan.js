@@ -56,6 +56,7 @@
   /* Khung Thích/Bình luận: <div id="paco-lb"></div> (dùng số liệu của trang)
      hoặc nhiều khung trong 1 trang: <div class="paco-lb" data-p="/#ten-bai"></div> (mỗi bài số liệu riêng) */
   var boxes = document.querySelectorAll('#paco-lb,.paco-lb');
+  var HB = (/^#bl-([\w-]+)$/.exec(location.hash) || [])[1];
   if (!boxes.length) return;
 
   var css = '.paco-lb{max-width:900px;margin:12px auto 24px;padding:4px 0 12px;box-sizing:border-box;font-size:16px}.paco-lb button{font-family:inherit}' +
@@ -71,11 +72,13 @@
     '.paco-lb textarea{resize:none;overflow:hidden;min-height:40px;line-height:1.45;white-space:pre-wrap;word-break:break-word}' +
     '.paco-lb .lb-send{background:#019570;color:#fff;border:0;border-radius:8px;padding:4px 12px;cursor:pointer;font-size:14px;line-height:1.4}' +
     '.paco-lb .lb-msg{font-size:14px;margin-left:8px}.paco-lb .lb-msg.err{color:#d33}.paco-lb .lb-msg.ok{color:#019570}' +
-    '.paco-lb .lb-hp{position:absolute;left:-9999px}';
+    '.paco-lb .lb-hp{position:absolute;left:-9999px}' +
+    '.paco-lb .lb-rep{margin:6px 0 0 18px;padding:6px 10px;border-left:3px solid #019570;background:#f3faf7;border-radius:4px;font-size:15px}.paco-lb .lb-rep b{color:#0f6e56}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
-  function item(c, an) { return '<div class="lb-c' + (an ? ' an' : '') + '"><b>' + esc(c.n) + '</b><small>' + esc(c.d) + '</small><p>' + esc(c.t) + '</p></div>'; }
+  function item(c, an) { return '<div class="lb-c' + (an ? ' an' : '') + '"' + (c.i ? ' id="bl-' + esc(c.i) + '"' : '') + '><b>' + esc(c.n) + '</b><small>' + esc(c.d) + '</small><p>' + esc(c.t) + '</p>' +
+    (c.r ? '<div class="lb-rep"><b>PACOBOOKS trả lời</b><small>' + esc(c.rd) + '</small><p>' + esc(c.r) + '</p></div>' : '') + '</div>'; }
   [].forEach.call(boxes, setup);
   function setup(box) {
   box.classList.add('paco-lb');
@@ -111,10 +114,10 @@
     var f = box.querySelector('.lb-f'), m = box.querySelector('.lb-msg'), ta = f.t;
     function grow() { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 2 + 'px'; }
     ta.addEventListener('input', grow); window.addEventListener('resize', grow); grow();
-    /* Mở ô nhập mà 4 giây chưa gõ gì thì tự thu lại */
+    /* Mở ô nhập mà 5 giây chưa gõ gì thì tự thu lại */
     var hc;
     function dong() { f.classList.remove('open'); f.querySelector('.lb-send').textContent = 'Viết bình luận'; }
-    function hen() { clearTimeout(hc); hc = setTimeout(function () { if (f.classList.contains('open') && !f.n.value.trim() && !ta.value.trim()) dong(); }, 4000); }
+    function hen() { clearTimeout(hc); hc = setTimeout(function () { if (f.classList.contains('open') && !f.n.value.trim() && !ta.value.trim()) dong(); }, 5000); }
     f.n.addEventListener('input', hen); ta.addEventListener('input', hen);
     function msg(t, ok) { m.textContent = t; m.className = 'lb-msg ' + (ok ? 'ok' : 'err'); }
 
@@ -131,15 +134,23 @@
         if (!r || !r.ok) { msg('Chưa gửi được, bạn thử lại nhé.'); return; }
         msg('Cảm ơn bạn đã chia sẻ!', true);
         var list = box.querySelector('.lb-list'), em = list.querySelector('.lb-empty'); if (em) em.remove();
-        list.insertAdjacentHTML('afterbegin', item({ n: name, t: text, d: r.d || '' }));
+        list.insertAdjacentHTML('afterbegin', item({ i: r.id, n: name, t: text, d: r.d || '' }));
         box.querySelector('.lb-num b').textContent = ++total;
         ta.value = ''; dong();
       }).catch(function () { btn.disabled = false; msg('Chưa gửi được, bạn thử lại nhé.'); });
     };
   }
 
-  function load() { getData(K).then(render); }
-  if ('IntersectionObserver' in window) {
+  function load() { getData(K).then(function (d) { render(d); toi(); }); }
+  /* Link từ Telegram (...#bl-mã): mở sẵn và cuộn tới đúng bình luận đó */
+  function toi() {
+    var el = HB && box.querySelector('#bl-' + HB); if (!el) return;
+    el.classList.remove('an'); el.style.background = '#e8f6f1'; el.style.transition = 'background 2s';
+    var go = function () { el.scrollIntoView({ block: 'center' }); };
+    go(); setTimeout(go, 800); setTimeout(function () { el.style.background = ''; }, 3000);
+  }
+  if (HB) { load(); }
+  else if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); load(); } }, { rootMargin: '600px' });
     io.observe(box);
   } else { load(); }
