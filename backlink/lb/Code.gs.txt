@@ -9,9 +9,10 @@ var TZ = 'Asia/Ho_Chi_Minh';
 
 function ss_(){ return SHEET_ID ? SpreadsheetApp.openById(SHEET_ID) : SpreadsheetApp.getActive(); }
 function tab_(name){
-  var head = { Likes: ['trang','so_like'], BinhLuan: ['id','thoi_gian','trang','ten','noi_dung','trang_thai'], LuotXem: ['trang','so_xem'] }[name];
+  var head = { Likes: ['trang','so_like','thich_trang'], BinhLuan: ['id','thoi_gian','trang','ten','noi_dung','trang_thai'], LuotXem: ['trang','so_xem'] }[name];
   var s = ss_().getSheetByName(name);
   if (!s){ s = ss_().insertSheet(name); s.appendRow(head); }
+  else if (s.getLastColumn() < head.length) s.getRange(1, 1, 1, head.length).setValues([head]); // thêm cột mới nếu thiếu
   return s;
 }
 function prop_(k, d){ var v = PropertiesService.getScriptProperties().getProperty(k); return v === null ? d : v; }
@@ -33,7 +34,7 @@ function doGet(e){
   var p = page_(e.parameter.p);
   if (e.parameter.a === 'get'){
     var k = 'g:' + p, hit = cache_().get(k);
-    if (!hit){ hit = JSON.stringify({ likes: likes_(p), comments: comments_(p) }); cache_().put(k, hit, 60); }
+    if (!hit){ var lk = likeRow_(p); hit = JSON.stringify({ likes: lk[0], plikes: lk[1], comments: comments_(p) }); cache_().put(k, hit, 60); }
     return ContentService.createTextOutput(hit).setMimeType(ContentService.MimeType.JSON);
   }
   return out_({ ok: true });
@@ -44,7 +45,8 @@ function doPost(e){
   var d = {}; try { d = JSON.parse(e.postData.contents); } catch (x) { return out_({ ok: false }); }
   var p = page_(d.p);
   if (d.a === 'view'){ view_(p); return out_({ ok: true }); }
-  if (d.a === 'like') return out_({ ok: true, likes: like_(p) });
+  if (d.a === 'like') return out_({ ok: true, likes: like_(p, 2) });
+  if (d.a === 'plike') return out_({ ok: true, plikes: like_(p, 3) });   // 👍 Thích trang (thanh dọc)
   if (d.a === 'cmt'){
     if (d.hp) return out_({ ok: true });                          // bẫy máy spam
     var name = clean_(d.n, 40), text = clean_(d.t, 1000);
@@ -86,17 +88,18 @@ function ghiLuotXem(){
 }
 
 /* ---- Like ---- */
-function likes_(p){
+/* Bảng Likes: cột 2 = ♥ thích bài (cuối bài), cột 3 = 👍 thích trang (thanh dọc) */
+function likeRow_(p){
   var v = tab_('Likes').getDataRange().getValues();
-  for (var i = 1; i < v.length; i++) if (v[i][0] === p) return Number(v[i][1]) || 0;
-  return 0;
+  for (var i = 1; i < v.length; i++) if (v[i][0] === p) return [Number(v[i][1]) || 0, Number(v[i][2]) || 0];
+  return [0, 0];
 }
-function like_(p){
+function like_(p, col){
   var l = LockService.getScriptLock(); l.waitLock(5000);
   try {
     var s = tab_('Likes'), v = s.getDataRange().getValues(), n = 1, found = false;
-    for (var i = 1; i < v.length; i++) if (v[i][0] === p){ n = (Number(v[i][1]) || 0) + 1; s.getRange(i + 1, 2).setValue(n); found = true; break; }
-    if (!found) s.appendRow([p, 1]);
+    for (var i = 1; i < v.length; i++) if (v[i][0] === p){ n = (Number(v[i][col - 1]) || 0) + 1; s.getRange(i + 1, col).setValue(n); found = true; break; }
+    if (!found){ var r = [p, 0, 0]; r[col - 1] = 1; s.appendRow(r); }
     cache_().remove('g:' + p); return n;
   } finally { l.releaseLock(); }
 }
@@ -122,9 +125,9 @@ function mod_(id, st){
 /* ---- Thống kê từng trang: lượt xem, like, bình luận ---- */
 function stats_(){
   var m = {};
-  function g(p){ return m[p] || (m[p] = { p: p, xem: 0, like: 0, bl: 0 }); }
+  function g(p){ return m[p] || (m[p] = { p: p, xem: 0, like: 0, tt: 0, bl: 0 }); }
   tab_('LuotXem').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]) g(r[0]).xem = Number(r[1]) || 0; });
-  tab_('Likes').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]) g(r[0]).like = Number(r[1]) || 0; });
+  tab_('Likes').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]){ g(r[0]).like = Number(r[1]) || 0; g(r[0]).tt = Number(r[2]) || 0; } });
   tab_('BinhLuan').getDataRange().getValues().slice(1).forEach(function (r){ if (r[2] && r[5] !== 'xoa') g(r[2]).bl++; });
   return Object.keys(m).map(function (k){ return m[k]; }).sort(function (a, b){ return b.xem - a.xem; });
 }
