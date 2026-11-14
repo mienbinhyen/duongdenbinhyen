@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  nguoi-khon-noi-kheo.html
 Title:  Người Khôn Nói Khéo | PACOBOOKS
-Description:  Nói thật lòng mà vẫn bị hiểu lầm? Sách Người Khôn Nói Khéo nói về gì: cách nói điều cần nói mà không làm người nghe thấy bị phủ nhận.
+Description:  Nói thật lòng mà vẫn hay bị hiểu lầm? Sách Người Khôn Nói Khéo nói về gì: cách nói điều cần nói mà người nghe không thấy mình bị phủ nhận. Đọc tại PACOBOOKS.
 Keywords:  người khôn nói khéo, sách người khôn nói khéo, Kentaro Hayashi, tóm tắt sách người khôn nói khéo, PACOBOOKS
 Ảnh:  nguoi-khon-noi-kheo.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · nguoi-khon-noi-kheo.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-phat-trien-ban-than.html

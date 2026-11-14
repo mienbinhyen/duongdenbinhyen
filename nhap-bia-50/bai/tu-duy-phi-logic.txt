@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  tu-duy-phi-logic.html
 Title:  Tư Duy Phi Logic | PACOBOOKS
-Description:  Mệt vì sống theo khuôn mẫu của số đông? Sách Tư Duy Phi Logic nói về gì: cách Emmanuel Acho nhìn lại những niềm tin ta chưa từng dám hỏi.
+Description:  Mệt vì cứ sống theo khuôn mẫu của số đông? Sách Tư Duy Phi Logic nói về điều gì: cách Emmanuel Acho nhìn lại những niềm tin mà ta chưa từng dám hỏi lại.
 Keywords:  tư duy phi logic, sách tư duy phi logic, Emmanuel Acho, tóm tắt sách tư duy phi logic, PACOBOOKS
 Ảnh:  tu-duy-phi-logic.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · tu-duy-phi-logic.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-phat-trien-ban-than.html

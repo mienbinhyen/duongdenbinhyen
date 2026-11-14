@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  song-co-gu.html
 Title:  Sống Có Gu | PACOBOOKS
-Description:  Có gu hay chỉ đang trông như người có gu? Sách Sống Có Gu nói về gì: bồi đắp cảm thụ cái đẹp qua 6 khía cạnh của đời sống thường ngày.
+Description:  Có gu thật hay chỉ đang trông như người có gu? Sách Sống Có Gu nói về điều gì: bồi đắp khả năng cảm thụ cái đẹp qua 6 khía cạnh của đời sống thường ngày.
 Keywords:  sống có gu, sách sống có gu, Miss J, tóm tắt sách sống có gu, PACOBOOKS
 Ảnh:  song-co-gu.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · song-co-gu.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-hay-ve-cuoc-song.html

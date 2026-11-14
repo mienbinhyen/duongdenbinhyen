@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  con-duong-chanh-niem.html
 Title:  Con Đường Chánh Niệm | PACOBOOKS
-Description:  Có đủ mà lòng vẫn trống? Sách Con Đường Chánh Niệm nói về gì: hành trình của Ram Dass từ giáo sư Harvard đến người thực hành tỉnh thức.
+Description:  Có đủ mọi thứ mà lòng vẫn trống? Sách Con Đường Chánh Niệm nói về điều gì: hành trình của Ram Dass từ giáo sư Harvard đến người thực hành sự tỉnh thức.
 Keywords:  con đường chánh niệm, sách con đường chánh niệm, Ram Dass, tóm tắt sách con đường chánh niệm, PACOBOOKS
 Ảnh:  con-duong-chanh-niem.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · con-duong-chanh-niem.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-chua-lanh.html

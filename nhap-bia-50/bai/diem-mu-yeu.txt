@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  diem-mu-yeu.html
 Title:  Điểm Mù Yêu | PACOBOOKS
-Description:  Yêu đến mức không còn nhận ra mình? Sách Điểm Mù Yêu nói về gì: những câu chuyện tình và góc nhìn tâm lý giúp phụ nữ hiểu mình hơn khi yêu.
+Description:  Yêu đến mức không còn nhận ra chính mình? Sách Điểm Mù Yêu nói về gì: những câu chuyện tình và góc nhìn tâm lý giúp phụ nữ hiểu mình hơn khi yêu. Tại PACOBOOKS.
 Keywords:  điểm mù yêu, sách điểm mù yêu, Trần Vân Anh, tóm tắt sách điểm mù yêu, PACOBOOKS
 Ảnh:  diem-mu-yeu.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · diem-mu-yeu.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-tam-ly.html

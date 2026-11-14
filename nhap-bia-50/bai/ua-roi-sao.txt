@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  ua-roi-sao.html
 Title:  Ủa, Rồi Sao? | PACOBOOKS
-Description:  Tự nhủ kệ đi mà 3 giờ sáng vẫn trằn trọc? Sách Ủa, Rồi Sao? nói về gì: vì sao khó thôi bận tâm lời người khác và cách thay đổi từ gốc.
+Description:  Tự nhủ kệ đi mà 3 giờ sáng vẫn trằn trọc? Sách Ủa, Rồi Sao? nói về gì: vì sao ta khó thôi bận tâm lời người khác, và cách thay đổi từ tận gốc rễ. Tại PACOBOOKS.
 Keywords:  ủa, rồi sao?, sách ủa, rồi sao?, Ngải A A, tóm tắt sách ủa, rồi sao?, PACOBOOKS
 Ảnh:  ua-roi-sao.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · ua-roi-sao.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-tam-ly.html

@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  cam-giac-ca-nhan.html
 Title:  Cảm Giác Cá Nhân | PACOBOOKS
-Description:  Lựa chọn nào mới là của mình? Sách Cảm Giác Cá Nhân nói về gì: những trang viết của một bác sĩ trẻ về gia đình, nghề y, tình bạn và mất mát.
+Description:  Lựa chọn nào mới thật là của mình? Sách Cảm Giác Cá Nhân nói về gì: những trang viết của một bác sĩ trẻ về gia đình, nghề y, tình bạn và mất mát. Tại PACOBOOKS.
 Keywords:  cảm giác cá nhân, sách cảm giác cá nhân, Nguyễn Phú Huy, tóm tắt sách cảm giác cá nhân, PACOBOOKS
 Ảnh:  cam-giac-ca-nhan.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · cam-giac-ca-nhan.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-tan-van-hay.html

@@ -5,7 +5,7 @@ Trạng thái: chờ Ông Paco duyệt. Link chọn theo quy-tac-viet-bai mục 
 PHẦN 1 — META
 Tên file:  buon-co-that-khong.html
 Title:  Buồn Có Thật Không? | PACOBOOKS
-Description:  Buồn mà không biết vì sao? Sách Buồn Có Thật Không? nói về gì: nhìn thẳng vào nguồn gốc nỗi buồn để hiểu và tự tháo gỡ, không trốn tránh.
+Description:  Buồn mà không biết vì sao mình buồn? Sách Buồn Có Thật Không? nói về điều gì: nhìn thẳng vào nguồn gốc nỗi buồn để hiểu và tự tháo gỡ, không trốn tránh.
 Keywords:  buồn có thật không?, sách buồn có thật không?, Peace Nguyen, tóm tắt sách buồn có thật không?, PACOBOOKS
 Ảnh:  buon-co-that-khong.jpg (chia sẻ, dùng lại ảnh 1200x630 có sẵn) · buon-co-that-khong.webp (bìa đứng, chèn trước H2 Tóm tắt)
 Cụm (trụ):  sach-chua-lanh.html
