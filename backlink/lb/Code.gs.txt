@@ -138,7 +138,7 @@ function stats_(){
   function g(p){ return m[p] || (m[p] = { p: p, xem: 0, like: 0, tt: 0, bl: 0 }); }
   tab_('LuotXem').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]) g(r[0]).xem = Number(r[1]) || 0; });
   tab_('Likes').getDataRange().getValues().slice(1).forEach(function (r){ if (r[0]){ g(r[0]).like = Number(r[1]) || 0; g(r[0]).tt = Number(r[2]) || 0; } });
-  tab_('BinhLuan').getDataRange().getValues().slice(1).forEach(function (r){ if (r[2] && r[5] !== 'xoa') g(r[2]).bl++; });
+  tab_('BinhLuan').getDataRange().getValues().slice(1).forEach(function (r){ if (r[2] && r[5] !== 'xoa') g(r[2]).bl += r[6] ? 2 : 1; });   // đếm cả câu trả lời
   return Object.keys(m).map(function (k){ return m[k]; }).sort(function (a, b){ return b.xem - a.xem; });
 }
 
