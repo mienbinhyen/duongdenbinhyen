@@ -83,7 +83,7 @@ var SITE = 'https://duongdenbinhyen.com';
   function draw() {
     var P = DATA.pages || [], L = DATA.list || [];
     var tx = 0, tl = 0, tt = 0; P.forEach(function (x) { tx += x.xem; tl += x.like; tt += (x.tt || 0); });
-    $('#sum').innerHTML = '<div><b>' + tx + '</b>Lượt xem</div><div><b>' + tt + '</b>Thích trang</div><div><b>' + tl + '</b>Thích bài</div><div><b>' + L.length + '</b>Bình luận</div><div><b>' + P.length + '</b>Trang có dữ liệu</div>';
+    $('#sum').innerHTML = '<div><b>' + tx + '</b>Lượt xem</div><div><b>' + tt + '</b>Thích trang</div><div><b>' + tl + '</b>Thích bài</div><div><b>' + (L.length + L.filter(function (c) { return c.r; }).length) + '</b>Bình luận</div><div><b>' + P.length + '</b>Trang có dữ liệu</div>';
     var q = $('#q1').value.toLowerCase();
     var rows = P.filter(function (x) { return !q || x.p.toLowerCase().indexOf(q) >= 0; })
       .sort(function (a, b) { return sortK === 'p' ? sortD * a.p.localeCompare(b.p) : sortD * (a[sortK] - b[sortK]); });

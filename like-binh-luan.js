@@ -87,7 +87,7 @@
   try { liked = localStorage.getItem(KEY) === '1'; } catch (e) {}
 
   function render(d) {
-    var cs = d.comments || []; total = cs.length;
+    var cs = d.comments || []; total = cs.length + cs.filter(function (c) { return c.r; }).length; /* đếm cả câu trả lời */
     box.innerHTML =
       '<div class="lb-top"><button type="button" class="lb-like' + (liked ? ' on' : '') + '" aria-label="Thích bài viết">♥ <span>' + (d.likes || 0) + '</span> Thích</button>' +
       '<span class="lb-count">Bình luận <span class="lb-num">(<b>' + total + '</b>)</span></span></div>' +
