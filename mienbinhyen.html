@@ -2,1166 +2,1094 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=450">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================================================================
+         ⚠️ QUY TẮC THƯƠNG HIỆU (chốt 24/10/2026): luôn viết PACOBOOKS
+         — in hoa, viết liền, KHÔNG viết "Paco Books" có dấu cách ở bất kỳ đâu
+         (title, og:title, bài viết, FAQ, schema, alt ảnh, từ khóa chân trang).
+         ================================================================ -->
+    <!-- ================================================================
+         THAY ĐỔI THEO TỪNG TRANG MỚI — PHẦN 1: META & SCHEMA
+         1. title         = Từ khóa chính + " | PACOBOOKS"
+         2. og:title      = Giống title
+         3. keywords      = Từ khóa chính, từ khóa phụ 1, từ khóa phụ 2, tác giả Thiện Nhân, PACOBOOKS
+         4. description   = 150-160 ký tự mô tả nội dung bài, chứa từ khóa chính
+            og:description = Giống description
+         5. canonical     = URL đầy đủ của trang này
+            og:url        = Giống canonical
+         6. Schema url    = URL đầy đủ của trang này
+         ================================================================ -->
     <title>Miền Bình Yên | Tác giả Thiện Nhân</title>
-    
-    <meta property="og:site_name" content="Miền Bình Yên" />
+
+    <meta property="og:site_name" content="Đường Đến Bình Yên" />
     <meta property="og:title" content="Miền Bình Yên | Tác giả Thiện Nhân" />
-    <meta name="keywords" content="Miền Bình Yên, Tái thiết nội tâm, Làm chủ tâm trí, Sách chữa lành Thiện Nhân, Tự do tâm trí, Đường Đến Bình Yên, Thì Thầm" />
+    <meta property="og:description" content="Dừng lại bão lòng, tìm về an yên. Sở hữu bộ đôi sách Tự Do Tâm Trí giúp bạn tái thiết trật tự nội tâm và làm chủ cuộc đời từ Tác giả Thiện Nhân." />
+    <meta property="og:url" content="https://duongdenbinhyen.com/mienbinhyen.html" />
+<meta property="og:image" content="https://duongdenbinhyen.com/bia_mien-binh-yen_4t.jpg" />
+<meta property="og:image:secure_url" content="https://duongdenbinhyen.com/bia_mien-binh-yen_4t.jpg" />
+<meta property="og:image:width" content="1500" />
+<meta property="og:image:height" content="746" />
+    <meta property="og:type" content="article" />
+    <meta name="robots" content="index, follow">
+
+
+
+    <meta name="keywords" content="Miền Bình Yên, sách tâm lý chữa lành, bình yên trong ta, tác giả Thiện Nhân, PACOBOOKS" />
     <meta name="description" content="Dừng lại bão lòng, tìm về an yên. Sở hữu bộ đôi sách Tự Do Tâm Trí giúp bạn tái thiết trật tự nội tâm và làm chủ cuộc đời từ Tác giả Thiện Nhân.">
-    
+    <meta name="google-site-verification" content="e6RdS_fFeq2ZbD9cQTTdKpOzAaOb1n4i-UXj9XudBQc" />
+
     <link rel="canonical" href="https://duongdenbinhyen.com/mienbinhyen.html" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <style>
-        /* THIẾT LẬP KHUNG CỐ ĐỊNH */
-    /* Khóa toàn trang vào khổ 550px và căn giữa màn hình */
-    
-    * { box-sizing: border-box; }
-
-
-    html {
-        background-color: #333; /* Nền tối bên ngoài vùng khóa */
-        display: flex;
-        justify-content: center;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        max-width: 550px; /* Khóa khổ toàn trang */
-        min-height: 100vh;
-	
-	/* Lớp 1: Nền phủ */
-	background-image: linear-gradient(to right, rgba(0, 100, 255, 0.4), transparent); /* linear-gradient(to right, transparent, rgba(0, 100, 255, 0.5), transparent); linear-gradient(to right, rgba(0, 100, 255, 0.4), transparent); */
-
-	/* Lớp 2: Nền gốc */
-	background-color: #A9C9A9; /* Màu #FDFCF0; kem giấy #eadfca; cho vùng nội dung #f4ece0 #fdfaf1; Màu trắng tinh khiết: #ffffff; #fffdf5 */
-        box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Đổ bóng tạo chiều sâu */
-	overflow-x: hidden; /* Chống tràn ngang */
-    }
-
-
-
-        /* HEADER */
-        .header-fixed-container {
-            position: fixed; top: 0; width: 100%; max-width: 550px; height: 40px;
-            background-color: #e1f5fe; display: flex; justify-content: center;
-            align-items: center; z-index: 9999; border-bottom: 2px solid #01579b;
-        }
-        .mien-binh-yen-title {
-            font-size: 22px; font-weight: 900; color: #01579b;
-            letter-spacing: 2px; text-transform: uppercase;
-        }
-
-
-        /* BỘ ĐÔI SÁCH */
-        .paco-book-pair {
-            width: 100%; margin: 20px 0; border: 1px dashed #bbb; border-radius: 8px;
-            padding: 10px; display: flex; align-items: center; justify-content: space-between; gap: 10px; box-sizing: border-box;
-        }
-        .paco-book-pair img { width: 22%; height: auto; border-radius: 3px; }
-        .paco-book-info { flex: 1; line-height: 1.3; }
-
-        /* BUTTONS */
-        .paco-buy-btn {
-            width: 85%; max-width: 300px; background-color: #b30000; color: #fff;
-            border: 2px solid #ffd700; padding: 12px; font-size: 16px; font-weight: bold;
-            border-radius: 99px; text-transform: uppercase; cursor: pointer;
-            display: block; margin: 15px auto; animation: pacoPulsate 1.5s infinite ease-in-out;
-        }
-
-   
-
-
-
-/* =========================================
-   KHỐI 2: GIÁ CẢ VÀ NÚT MUA HÀNG
-   ========================================= */
-
-.paco-price-section {
-    margin-top: 15px; /* Chỉnh khoảng cách với khối trên */
-    padding: 0 10px;
+    <!-- Schema Article (DUY NHẤT 1 khối) — thay URL, tiêu đề, ảnh, link tác giả theo trang -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Miền Bình Yên | Tác giả Thiện Nhân",
+  "image": "https://duongdenbinhyen.com/bia_mien-binh-yen_4t.jpg",
+  "author": {"@type": "Person", "name": "Tác giả Thiện Nhân", "url": "https://tacgiathiennhan.com/"},
+  "publisher": {
+    "@type": "Organization",
+    "name": "PACOBOOKS",
+    "logo": {"@type": "ImageObject", "url": "https://duongdenbinhyen.com/logo-paco.webp"}
+  },
+  "url": "https://duongdenbinhyen.com/mienbinhyen.html",
+  "datePublished": "2026-11-15",
+  "dateModified": "2026-11-15"
 }
+</script>
+    <!-- ================================================================ -->
+
+<style>
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
 
 
-.paco-price-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 0px; /* SỬA SỐ NÀY: Số âm càng lớn (vd: -10px) thì giá càng sát lên chữ */
-}
-
-.old-prices-stack span {
-    display: block; /* Ép từng dòng nhận lệnh gạch */
-    text-decoration: line-through; /* Lệnh gạch ngang */
-    text-decoration-color: #666; /* Màu của dấu gạch */
-}
-
-.new-price {
-    color: #e53935;
-    font-size: 35px; /* Tăng độ lớn */
-    font-weight: bold;
-    line-height: 1;
-}
-
-
-
-
-.discount-tag {
-    background-color: #8b0000; /* Đỏ đậm chuẩn tương phản */
-    color: #fff;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-
-
-.paco-buy-btn {
-    font-family: 'Times New Roman', Times, serif !important;
-    width: 240px; /* Tăng nhẹ chiều ngang cho cân đối chữ */
-    margin: 15px auto;
-    display: block;
-    background-color: #b30000 !important;
-    color: #ffffff;
-    border: 2px solid #ffd700 !important;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    
-    /* BO GÓC NHẸ ĐỂ ĐẸP HƠN */
-    border-radius: 8px !important; 
-    
-    cursor: pointer;
-    text-transform: uppercase;
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Đổ bóng vàng nhẹ */
-    animation: pacoPulsate 3.5s infinite ease-in-out;
-}
-    
-    /* Hiệu ứng rung rinh */
-    animation: paco-shake 3s infinite;
-}
-
-/* Hiệu ứng zoom nhẹ nhàng cho điện thoại */
-.paco-zoom-anim {
-    animation: pacoPulsate 1.5s infinite ease-in-out;
-}
-
-@keyframes pacoPulsate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); } /* Zoom nhẹ 3% để không bị thô */
-    100% { transform: scale(1); }
-}
-
-
-
-/* =========================================
-   KHỐI 3: NỘI DUNG GIỚI THIỆU SÁCH
-   ========================================= */
-.paco-content-section {
-    margin-top: 25px; /* Chỉnh khoảng cách với khối giá ở trên */
+body {
+    background-color: #d0e8e0;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    color: #333;
+}
+.paco-page-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+.hidden { display: none; }
+
+
+/* 1. Nút 3 gạch nhỏ lại và tinh tế hơn */
+.menu-paco {
+    position: fixed;
+    top: 10px;
+    right: calc((100vw - 900px) / 2);
+    z-index: 10000;
+    color: #008080;
+    font-size: 24px; /* Đã hạ cỡ chữ xuống cho nhỏ gọn */
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.paco-h2-title {
-    font-size: 20px; /* Tiêu đề H2 nhỏ hơn H1 một chút */
+/* Hiệu ứng khi rê chuột vào nút 3 gạch */
+@media (max-width: 900px) { .menu-paco { right: 15px !important; } .noidung-menu { right: 15px !important; } }
+.menu-paco:hover {
+    color: #ff6600; /* Đổi sang màu cam để nổi bật */
+    transform: scale(1.1);
+}
+
+/* 2. Bảng menu sổ ra */
+.noidung-menu {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: calc((100vw - 900px) / 2);
+    background: white;
+    border: 1px solid #008080;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.noidung-menu a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #008080;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 15px;
-    display: block;
-    line-height: 1.3;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
 }
 
-.paco-body-text {
-    font-size: 18px; /* Size 16 theo yêu cầu */
-    line-height: 1.3; /* Cách dòng 1.3 */
-    text-align: justify; /* Căn lề đều hai bên cho đẹp bài viết */
-}
-
-.paco-body-text p {
-    margin-bottom: 12px; /* Khoảng cách giữa các đoạn văn */
-}
-
-.paco-highlight-text {
-    font-weight: bold;
-    font-style: italic;
+/* Hiệu ứng nổi bật khi rê chuột vào từng mục menu */
+.noidung-menu a:hover {
+    background: #008080; /* Nền xanh */
+    color: white; /* Chữ trắng */
 }
 
 
-.paco-quote {
-    display: block;
-    text-align: center; /* Căn giữa đoạn trích */
-    font-weight: bold;
-    font-style: italic;
-    padding: 15px 10px; /* Tạo khoảng trống trên dưới cho thoáng */
-    line-height: 1.5; /* Giãn dòng riêng cho câu trích để dấu ngoặc không dính chữ */
-}
+    /* 1. GIỮ NGUYÊN KHUNG GHIM */
+    .header-fixed-container {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        width: 100%;
+        background-color: rgba(240, 252, 255, 0.5);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0, 203, 153, 0.05);
+    }
 
-
-
-
-
-
-/* Hiệu ứng ẩn nội dung */
-.paco-content-collapse {
-    max-height: none; /* Mặc định để none, sẽ điều khiển bằng JS */
-    overflow: hidden;
-    position: relative;
-}
-
-.paco-content-hidden {
-    display: none; /* Ẩn các đoạn văn sau mục 1 */
-}
-
-/* Nút Xem thêm */
-.paco-readmore-btn {
+   .paco-brand {
     display: block;
     text-align: center;
-    color: #0056b3;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-    /* Xóa bỏ mọi khoảng cách dư thừa */
-    margin-top: 0px !important; 
-    padding-top: 0px !important;
-    line-height: 1; /* Ép sát dòng */
-}
-.paco-readmore-btn:after {
-    content: ''; /* Ký hiệu mũi tên xuống */
+    text-decoration: none;
+    /* 1. GIẢM CHIỀU CAO: Để padding 0 và line-height nhỏ lại */
+    padding: 0px 0 !important;
+    line-height: 35px !important; /* Chỉnh số này nhỏ xuống để thanh nền mỏng lại */
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Times New Roman', serif;
 }
 
-.paco-readmore-btn.active:after {
-    content: ''; /* Ký hiệu mũi tên lên khi mở */
+    @media (max-width: 600px) {
+        .paco-brand {
+            padding: 2px 0 5px 0;
+            text-align: center;
+        }
+    }
+
+    /* GIỮ NGUYÊN 100% LOGO CỦA ÔNG */
+    .paco-part {
+        color: #01cb99;
+        font-size: 25px;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 0px #0099cc, 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .books-part {
+        color: white;
+        font-size: 18px;
+        font-weight: 900;
+        -webkit-text-stroke: 1px #007399;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 0px #007399, 1px 1px 0px #007399, 1px 1px 0px #007399, 2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .paco-brand:hover .paco-part,
+    .paco-brand:hover .books-part {
+        display: inline-block;
+        transform: scale(1.02);
+        transition: 0.3s;
+    }
+
+
+/* PHẦN 2: GIỮ NGUYÊN GỐC - KHÔNG THAY ĐỔI */
+.paco-banner {
+    all: initial;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 250px !important;
+    background: #fff !important;
+    overflow: hidden !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   KHỐI 4: THÔNG TIN TÁC GIẢ
-   ========================================= */
-.paco-author-section {
-    margin-top: 20px;
-    padding: 2px 15px 20px 15px;
-    background-color: #f4ece0; /* Màu nền xanh nhạt để nhấn */
-    border-radius: 8px; /* Bo góc nhẹ cho khối nền */
-    box-sizing: border-box;
-}
-
-.paco-author-h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #01579b;
-    margin-bottom: 15px;
+.paco-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 999;
 }
 
-.paco-author-content {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
+.paco-text {
+    font-family: 'Playfair Display', serif; font-size: 70px; font-style: italic; color: #019570;
+    text-shadow: 1px 1px 0px #0329cd, 2px 2px 5px rgba(0,0,0,0.15);
+}
+.paco-leaf { width: 50px; height: 50px; fill: #6ab04c; margin-left: 10px; }
+
+/* PHẦN 3: ĐIỀU CHỈNH ÁNH SÁNG XANH BIỂN, CHẬM, LIÊN TỤC */
+#paco-light {
+    position: absolute; top: 0; left: -100%; width: 100%; height: 100%; pointer-events: none; z-index: 5;
+    /* Ánh sáng xanh biển mạnh */
+    background: linear-gradient(110deg, transparent 15%, rgba(0, 150, 255, 0.2) 50%, transparent 85%);
+    /* Chạy chậm 12 giây, mượt mà bằng transform để tối ưu hiệu suất */
+    animation: lightPass 12s infinite linear;
+}
+@keyframes lightPass {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(200%); }
 }
 
-.paco-author-content p {
-    margin-bottom: 10px;
+/* PHẦN 4: VÔ HIỆU HÓA TUYẾT */
+#paco-snow { display: none; }
+.paco-flake { display: none; }
+
+/* PHẦN 5: GIỮ NGUYÊN GỐC CHO MOBILE */
+@media (max-width: 768px) {
+    .paco-banner { height: 170px !important; }
+    .paco-text { font-size: 40px !important; }
+    .paco-leaf { width: 35px !important; height: 35px !important; }
 }
 
 
-
-
-
-
-
-
-
-/* =========================================
-   KHỐI 5: CỤM BÌNH LUẬN TẬP TRUNG
-   ========================================= */
-.paco-comment-container {
-    background: #ffffff;
-    border-radius: 8px;
-    margin: 2px 0px;
-    padding: 15px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.paco-comment-h2 {
-    font-size: 18px;
+/* KHỐI: BÀI VIẾT LIÊN QUAN - dùng chung kiểu thẻ với bai-viet-moi.html */
+.related-articles-section { padding: 30px 20px 10px; background-color: #ffffff; }
+.related-articles-label {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.4em;
+    color: #004a99;
+    text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    letter-spacing: 2px;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    border-left: 6px solid #004a99;
+    padding-left: 15px;
+    line-height: 1.2;
 }
-
-.paco-comment-item {
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0; /* Vạch kẻ mỏng giữa các bình luận */
+.news-grid-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
-.paco-comment-item:last-child {
-    border-bottom: none; /* Bình luận cuối không có gạch ngang */
-}
-
-.paco-comment-header {
+.news-card-img {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid #e8f0fb;
+    border-radius: 8px;
+    background: #f8fbff;
+    transition: all 0.25s ease;
+    text-decoration: none;
 }
-
-.paco-comment-user {
-    font-weight: bold;
-    font-size: 14px;
+.news-card-img:hover {
+    background: #e8f2ff;
+    border-color: #0066cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.1);
 }
-
-.paco-verified {
-    color: #26a541;
-    font-size: 12px;
+.news-card-img img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
 }
-
-.paco-stars {
-    color: #ffc107;
-    font-size: 12px;
-    margin-bottom: 5px;
+.news-card-img .news-card-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
 }
-
-.paco-comment-text {
-    font-size: 14px;
-    color: #444;
+.news-card-img .news-card-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 0.95em;
+    color: #0055aa;
+    font-weight: 600;
     line-height: 1.4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   /* =========================================
-   KHỐI 6: FORM ĐẶT HÀNG (#datsach)
-   ========================================= */
-#datsach {
-    margin: 20px 0px; /* Sát khối trên và tràn lề */
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+.news-card-img .news-card-desc {
+    font-size: 0.78em;
+    color: #777;
+    margin-top: 2px;
+    line-height: 1.3;
+}
+@media (max-width: 700px) {
+    .news-grid-img { grid-template-columns: 1fr; }
 }
 
-.paco-form-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center; /* Căn giữa */
-    text-transform: uppercase; /* Chữ in hoa */
-}
 
-.paco-input-wrapper {
-    margin-bottom: 15px;
+.paco-news-section {
+    padding: 40px 20px;
+    background-color: #f0f7ff;
 }
-
-.paco-input {
+.container-paco-news {
+    max-width: 900px;
     width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
+    margin: auto;
     box-sizing: border-box;
-    display: block; /* Ép xuống dòng riêng biệt */
-}
-
-.paco-submit-btn {
-    width: 80%;
-    margin: 0 auto;
-    display: block;
-    font-family: 'Times New Roman', Times, serif !important;
-    background-color: #b30000 !important; /* ĐỎ ĐẬM */
-    color: #ffffff;
-    border: 2px solid #ffd700 !important; /* VIỀN VÀNG */
-    padding: 12px;
-    font-size: 18px;
-    font-weight: 900;
-    border-radius: 99px; /* Bo tròn hẳn như hình mẫu */
-    text-transform: uppercase;
-    animation: pacoPulsate 1.5s infinite ease-in-out;
-}
-    
-    /* Thêm hiệu ứng zoom nhẹ */
-    animation: pacoPulsate 1.5s infinite ease-in-out;
-}
-
-@keyframes pacoPulsate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.03); }
-    100% { transform: scale(1); }
-}
-/* Ẩn thông báo khi chưa gửi form */
-.hidden {
-    display: none;
-}
-
-
-
-.paco-freeship {
-    color: #001f3f; /* Màu xanh đậm */
-    font-size: 18px; /* Chỉnh nhỏ lại ở đây */
+    background: #ffffff;
+    border: 1px solid #d0e4f7;
+    border-radius: 10px;
+    padding: 40px 30px;
     text-align: center;
-    margin: 5px 0;
-    font-weight: normal; /* Chữ thường, không đậm */
+    box-shadow: 0 4px 20px rgba(0,74,153,0.08);
 }
-
-
-/* Hiệu ứng phản hồi khi nhấn chuột/ngón tay */
-.paco-submit-btn:active {
-    transform: scale(0.90); /* Nút thu nhỏ lại tạo cảm giác lún xuống */
-    filter: brightness(0.6); /* Nút tối đi một chút như bị đè nặng */
-    box-shadow: inset 0 6px 12px rgba(0,0,0,0.3); /* Tạo bóng đổ bên trong */
-}
-
-/* Hiệu ứng khi nút bị khóa (đang gửi) */
-.paco-submit-btn:disabled {
-    background-color: #9e9e9e !important; /* Chuyển sang màu xám */
-    cursor: not-allowed;
-    transform: none;
-}
-
-
-/* =========================================
-   KHỐI 7: ĐỒNG HỒ & TRUY CẬP
-   ========================================= */
-.paco-stats-box { display: flex; justify-content: center; gap: 10px; margin-bottom: 70px; }
-    /* 1. Thay đổi số 10px để tăng/giảm khoảng cách với bên ngoài (trên và dưới) */
-    margin: 10px 0; 
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.stats-item {
-    background: #fff;
-    /* 2. Thay đổi số 2px để tăng/giảm độ dày từ chữ đến viền (trong nút) */
-    padding: 2px 8px; 
-    border-radius: 50px;
-    font-size: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.stats-label { 
-    color: #555; 
-}
-
-.stats-value { 
-    font-weight: bold; 
-    color: #b30000; /* Màu đỏ nhấn mạnh */
-}
-
-
-
-
-
-/* =========================================
-   KHỐI 8: CAM KẾT HÀNG CHÍNH HÃNG
-   ========================================= */
-
-/* Khối cam kết dưới form đặt hàng */
-
-.paco-trust-box {
-    margin: 5px 10px; /* Giảm lề trên dưới còn 5px */
-    padding: 5px 10px; /* Thu nhỏ khoảng cách đệm bên trong */
-    border: 1px dashed #01579b; 
-    border-radius: 12px; 
-    text-align: center; 
-    color: #333;
-    background-color: rgba(1, 87, 155, 0.05);
-}
-
-.paco-trust-items {
-    display: flex; 
-    justify-content: space-around; 
-    margin-bottom: 2px; /* Ép sát dòng trên với dòng dưới */
-}
-
-.paco-trust-item b {
-    color: #01579b; 
-    font-size: 14px;
-}
-.paco-trust-info {
-    color: #555; 
-    margin: 0; 
-    font-size: 12px;
-}
-
-
-
-
-
-
-
-
-/* =========================================
-   KHỐI 1: KHỐI HÌNH BANER 
-   ========================================= */
-
-
-
-/* 1. Khung ngoài tạo lề trái phải 10px */
-.paco-slider-wrapper {
-    padding: 20px 15px 0px 15px !important;
-    box-sizing: border-box !important;
-    width: 100%;
-    position: relative;
-}
-/* 2. Khung chứa: KHÓA CHẶT 550PX VÀ CĂN GIỮA */
-.paco-slider-container {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch;
-    width: 100% !important;
-    max-width: 550px !important;
-    margin: 0 auto !important;
-}
-
-.paco-slider-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* 3. Từng tấm hình: ÉP CHẶT CHIỀU RỘNG ĐỂ KHÔNG ĐẨY LỀ */
-.paco-slide {
-    flex: 0 0 100% !important; /* KHÔNG CHO PHÉP HÌNH TỰ Ý GIÃN NỞ */
-    width: 100% !important;
-    min-width: 100% !important;
-    scroll-snap-align: start;
-    position: relative;
-}
-
-/* 4. Hình ảnh bên trong */
-.paco-slide img {
-    width: 100%;
-    height: auto; /* Quan trọng: Để chiều cao tự nhảy theo chiều rộng */
-    aspect-ratio: 686 / 1005; /* Ép đúng tỷ lệ gốc của file ảnh */
-    object-fit: contain;
-}
-
-
-
-/* Nút đẩy xuống thêm một chút */
-.paco-btn-bottom {
-    position: absolute;
-    bottom: -20px; 
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 86, 179, 0.7) !important;
-    color: #fff;
-    
-    /* 1. Giảm cỡ chữ (mặc định thường là 16px) */
-    font-size: 18px; 
-    
-    /* 2. Thu nhỏ độ dày của nút (trên dưới 6px, trái phải 12px) */
-    padding: 12px 30px; 
-    
-    border-radius: 30px;
+.section-label-news {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.6em;
+    color: #004a99;
+    text-transform: uppercase;
     font-weight: bold;
-    border: 1px solid #fff;
-    z-index: 10;
-    white-space: nowrap;
+    letter-spacing: 2px;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+
+    line-height: 1.2;
+    text-shadow: 1px 1px 0px #c5c5c5, 2px 2px 2px rgba(0,0,0,0.15);
+    display: inline-block;
+}
+.section-sub-news {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.05em;
+    color: #555;
+    margin: 10px 0 25px 0;
+    font-style: italic;
+    text-align: center;
+}
+.news-view-all {
+    display: inline-block;
+    padding: 13px 35px;
+    background: linear-gradient(135deg, #004a99, #0066cc);
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.news-view-all:hover {
+    background: linear-gradient(135deg, #003a7a, #004a99);
+    box-shadow: 0 4px 15px rgba(0,74,153,0.3);
+}
+@media (max-width: 600px) {
+    .paco-news-section { padding: 30px 15px; }
+    .container-paco-news { padding: 30px 20px; }
+    .section-label-news { font-size: 1.2em; }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </style>
-</head>
-
-
-
-
-
-
-
-
-<body>
-<main>
-    <header class="header-fixed-container">
-        <div class="mien-binh-yen-title">Miền Bình Yên</div>
-    </header>
-
-
-
-
-<div style="position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 550px; height: 0; z-index: 10000; pointer-events: none;">
-    <div style="
-        position: absolute;
-        /* --- CHỈNH VỊ TRÍ TẠI ĐÂY --- */
-        top: 8px;    /* Số càng lớn càng xuống thấp */
-        left: 0px;   /* Cách lề phải khung 450px là 10px */
-        /* --------------------------- */
-        background: #d32f2f;
+    .paco-footer {
+        padding: 50px 20px 30px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        font-family: 'Times New Roman', serif;
+    }
+    .footer-container {
+        max-width: 900px;
+        margin: auto;
+    }
+    /* Chia cột cho phần thông tin */
+    .footer-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    .footer-column {
+        flex: 1;
+        min-width: 300px;
+    }
+    .footer-brand {
+        font-size: 1.5em;
+        font-weight: bold;
         color: #ffffff;
-        font-family: Arial, sans-serif;
-        font-weight: 900;
-        font-size: 32px;
-        padding: 8px 12px;
-        border-radius: 8px;
-        border: 3px solid #ffffff;
-        box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
-        transform: rotate(-10deg);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: block;
+        margin-bottom: 25px;
+        border-left: 5px solid #004a99;
+        padding-left: 15px;
+        text-shadow: 1px 1px 0px #1a252f, 2px 2px 2px rgba(0,0,0,0.3);
+    }
+    .footer-info {
+        font-size: 1.15em;
+        line-height: 1.5;
+    }
+    .footer-item { margin-bottom: 5px; display: block; }
+    .footer-label { color: #ffffff; font-weight: bold; margin-right: 10px; }
+    .footer-link { color: #ecf0f1; text-decoration: none; }
+    .footer-link:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+        .footer-brand { font-size: 1.4em; }
+        .footer-info { font-size: 1.05em; }
+        .footer-flex { flex-direction: column; }
+    }
+
+
+    .paco-stats-box {
+        max-width: 900px;
+        margin: 5px auto;
+        padding: 10px 5px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        font-family: 'Times New Roman', serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-top: 1px solid #3e4f5f;
+        /* HAI DÒNG QUAN TRỌNG NHẤT ĐỂ KHÔNG NHẢY DÒNG */
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+    }
+    .stats-item { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+    .stats-label { color: #bdc3c7; font-size: 28px; }
+    .stats-value { font-weight: bold; color: #2ecc71; font-size: 30px; }
+
+    @media (max-width: 600px) {
+        .paco-stats-box { gap: 8px; }
+        .stats-label { font-size: 15px; }
+        .stats-value { font-size: 16px; }
+    }
+
+
+    .paco-fixed-menu {
+        position: fixed;
+        right: calc((100vw - 900px) / 2 + 5px);
+        top: calc(75% - 60px); /* nang len 60px de chua cho nut chat AI o goc duoi - Em ECO 2026-09-12 */
+        transform: translateY(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        line-height: 0.9;
-        animation: pacoFloatBadge 2s infinite ease-in-out;
-    ">
-        40%
-        <span style="font-size: 14px; margin-top: 2px;">OFF</span>
-    </div>
-</div>
+        gap: 07px;
+        z-index: 10000;
+    }
+    .paco-icon-item img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+    @media (max-width: 900px) {
+        .paco-fixed-menu { right: 8px; }
+    }
 
-<style>
-@keyframes pacoFloatBadge {
-    0%, 100% { transform: rotate(-10deg) translateY(0); }
-    50% { transform: rotate(-25deg) translateY(-15px); }
-}
+
+    /* ================================================================
+       MENU CHÂN TRANG 5 ICON (thay cho 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
+       Đồng bộ với bản đã chốt trên trang chủ (2026-09-12/index.html):
+       nền trắng 100%, căn giữa đúng khổ 900px, chiều cao vừa đủ để không
+       bị thanh điều hướng trình duyệt/điện thoại che mất.
+
+       MUỐN SỬA GÌ, TÌM Ở ĐÂY:
+       - Đổi LINK từng nút          -> sửa thuộc tính href trong khối HTML bên dưới
+       - Đổi TÊN hiển thị           -> sửa chữ trong <span class="paco-nav-label">
+       - Đổi MÀU NỀN thanh menu     -> sửa background-color trong .paco-bottom-nav
+       - Đổi MÀU thẻ icon           -> sửa background trong .paco-nav-badge
+       - Đổi MÀU vòng tròn Trang chủ -> sửa background (gradient) trong .paco-nav-center-circle
+       - Icon "Giỏ hàng" hiện CHƯA gắn chức năng thật (chờ làm giỏ hàng sau)
+       ================================================================ */
+    .paco-bottom-nav {
+        position: fixed;
+        bottom: 0; /* Dính sát đáy, KHÔNG chừa khoảng hở bên dưới */
+        left: 50%;
+        transform: translateX(-50%); /* Căn giữa theo khổ bài viết (900px), giống các khối fixed khác */
+        width: 100%;
+        max-width: 900px; /* Khớp khổ .paco-page-wrap — không tràn full màn hình trên máy tính */
+        z-index: 99999;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 16px 3px 14px; /* Da giam do cao 10px (bot dem duoi) va thut le trai/phai 3px moi ben theo yeu cau Ong Paco - Em ECO */
+        box-sizing: border-box;
+        background-color: #ffffff; /* Trắng 100% theo yêu cầu Ông Paco */
+        border-radius: 22px 22px 0 0;
+        box-shadow: 0 -6px 20px rgba(0,0,0,0.12);
+    }
+
+    .paco-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        color: #33475b;
+        font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        flex: 1;
+    }
+
+    .paco-nav-badge {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .paco-nav-badge svg { width: 24px; height: 24px; }
+
+    .paco-nav-badge.badge-book   { background: #fff1e6; }
+    .paco-nav-badge.badge-ebook  { background: #e8f1ff; }
+    .paco-nav-badge.badge-contact{ background: #eef1ff; }
+    .paco-nav-badge.badge-cart   { background: #ffece6; }
+
+    .paco-nav-center-circle {
+        width: 62px;
+        height: 62px;
+        margin-top: -26px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #01cb99, #0099cc);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 16px rgba(0,153,204,0.4);
+        border: 4px solid #ffffff;
+    }
+    .paco-nav-center-circle svg { width: 30px; height: 30px; }
+
+    @media (max-width: 600px) {
+        .paco-nav-item { font-size: 12px; }
+        .paco-nav-badge { width: 38px; height: 38px; }
+    }
+
+
+    /* ===== MENU CHAN GON (13/11/2026 - Em ECO): nho nut, nho chu, thap thanh menu ===== */
+    .paco-bottom-nav { padding: 6px 12px calc(4px + env(safe-area-inset-bottom)); border-radius: 16px 16px 0 0; box-shadow: 0 -3px 12px rgba(0,0,0,0.10); align-items: flex-end; }
+    .paco-nav-item { gap: 2px; font-size: 11px; font-weight: 600; }
+    .paco-nav-badge { width: 30px; height: 30px; border-radius: 9px; box-shadow: none; }
+    .paco-nav-badge svg { width: 18px; height: 18px; }
+    .paco-nav-center-circle { width: 44px; height: 44px; margin-top: -16px; border-width: 3px; box-shadow: 0 3px 10px rgba(0,153,204,0.35); }
+    .paco-nav-center-circle svg { width: 22px; height: 22px; }
+    @media (max-width: 600px) {
+        .paco-nav-item { font-size: 10px; }
+        .paco-nav-badge { width: 28px; height: 28px; }
+    }
+
+/* KHỐI: THAM KHẢO SÁCH KHÁC (2026-11-15) — cùng kiểu với Bài viết liên quan */
+.ref-books-section { padding: 30px 20px 10px; background-color: #ffffff; }
+.ref-books-label { font-family: 'Times New Roman', serif; font-size: 1.4em; color: #004a99; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; display: block; margin-bottom: 18px; border-left: 6px solid #004a99; padding-left: 15px; line-height: 1.2; }
+.ref-books-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ref-books-list li { margin: 0; }
+.ref-books-item { display: flex; flex-direction: row; align-items: flex-start; gap: 12px; height: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid #d6e4f5; border-left: 3px solid #0066cc; border-radius: 8px; background: #f8fbff; text-decoration: none; color: inherit; cursor: pointer; transition: all 0.25s ease; }
+.ref-books-item:hover { background: #e8f2ff; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,102,204,0.12); }
+.ref-books-cover { width: 64px; aspect-ratio: 2 / 3; height: auto; object-fit: cover; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.18); flex-shrink: 0; background: #eef3fa; }
+.ref-books-text { display: flex; flex-direction: column; min-width: 0; }
+.ref-books-title { font-family: 'Times New Roman', serif; font-size: 1.05em; color: #0055aa; font-weight: 700; line-height: 1.35; text-decoration: underline; text-underline-offset: 3px; }
+.ref-books-desc { font-size: 0.85em; color: #666; margin-top: 4px; line-height: 1.4; }
+.ref-books-more { margin-top: 8px; font-size: 0.85em; font-weight: 700; color: #0066cc; }
+.ref-books-shelf { margin: 16px 0 0; padding-top: 12px; border-top: 1px dashed #c9dcf2; font-family: 'Times New Roman', serif; font-size: 1em; color: #333; }
+.ref-books-shelf a { color: #0055aa; font-weight: 600; }
+@media (max-width: 700px) { .ref-books-list { grid-template-columns: 1fr; } }
 </style>
+<link rel="preload" as="image" href="banner-mien-binh-yen.webp" fetchpriority="high">
+</head>
+<body>
+
+<!-- ================================================================ -->
 
 
-<div style="position: fixed; bottom: 0px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; z-index: 9998; pointer-events: none; display: flex; justify-content: center;">
-    <button onclick="document.getElementById('datsach').scrollIntoView({behavior: 'smooth'});"
-        style="
-            pointer-events: auto;
-            width: 60%;
-            background: #FF6600; /* Màu cam như hình mẫu */
-            color: #FFFFFF;
-            font-family: Times New Roman;
-            font-weight: bold;
-            font-size: 20px;
-            padding: 12px 0;
-            border: none;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            cursor: pointer;
-            text-transform: uppercase;
-            animation: pacoJump 1.5s infinite ease-in-out;
-        ">
-        Đặt Hàng Ngay
-    </button>
+
+<div class="paco-page-wrap">
+<main>
+
+
+
+
+
+<div class="menu-paco" onclick="toggleMenu()" id="menuButton">☰</div>
+
+<div id="menuList" class="noidung-menu">
+    <a href="https://duongdenbinhyen.com">TRANG CHỦ</a>
+    <a href="https://duongdenbinhyen.com/gioithieu.html">GIỚI THIỆU TÁC GIẢ</a>
+    <a href="https://duongdenbinhyen.com/tacphammoi.html">TÁC PHẨM MỚI</a>
+    <a href="https://duongdenbinhyen.com/truyenthong.html">TRUYỀN THÔNG</a>
+    <a href="https://duongdenbinhyen.com/bai-viet-moi.html">BÀI VIẾT MỚI</a>
+    <a href="https://duongdenbinhyen.com/#lienhe">LIÊN HỆ</a>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header-fixed-container">
+    <a href="https://duongdenbinhyen.com/" class="paco-brand">
+        <span class="paco-part">PACO</span><span class="books-part">BOOKS</span>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- BANNER 3 CUON SACH - Em ECO 2026-11-14 -->
+<section class="pb-view" aria-label="Sách PACOBOOKS">
+  <div class="pb-row">
+    <div class="pb-side pb-left" id="pbL"><img alt="" width="144" height="810"><img alt="" width="144" height="810"></div>
+    <div class="pb-main" id="pbM">
+      <img id="pbCur" src="banner-mien-binh-yen.webp" alt="Sách Miền Bình Yên - Tác giả Thiện Nhân" width="1080" height="810" fetchpriority="high">
+      <img id="pbNew" class="pb-wipe" alt="" width="1080" height="810" style="clip-path: inset(0 0 0 100%)">
+      <div class="pb-line" id="pbLine"></div>
+    </div>
+    <div class="pb-side pb-right" id="pbR"><img alt="" width="144" height="810"><img alt="" width="144" height="810"></div>
+  </div>
+</section>
 <style>
-/* Hiệu ứng nhảy lên thúc giục */
-@keyframes pacoJump {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-35px); }
-}
+  /* Bố cục: hình chính giữa (900px máy tính), 2 bên lộ mép hình trước/sau */
+  .pb-view { --w: 720px; --peek: 90px; position: relative; overflow: hidden; margin: 0 auto;
+    /* Gọn trong khung nội dung 900px như bản điện thoại: hình chính 80%, mỗi dải 10% */
+    width: calc(var(--w) + 2 * var(--peek)); max-width: 100%; }
+  .pb-row { display: flex; gap: 1px; justify-content: center; }
+  .pb-side, .pb-main { position: relative; overflow: hidden; aspect-ratio: auto; }
+  .pb-main { flex: 0 0 var(--w); width: var(--w); height: calc(var(--w) * .75); }
+  .pb-side { flex: 0 0 var(--peek); width: var(--peek); height: calc(var(--w) * .75); cursor: pointer; }
+  /* Dải 2 bên: ảnh dải nhỏ (~30KB) cắt giữa bìa sách, hiện mờ dần khi tải xong */
+  .pb-side { background: #efe9df; }
+  .pb-side img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 2s ease; }
+  .pb-side img.ok { opacity: 1; }
+  .pb-main img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pb-side img, .pb-main img { background: #f6f3ee; }
+  /* Lớp hình mới: mở dần bằng đường kẻ chạy ngang, hình đứng yên */
+  .pb-wipe { z-index: 2; transition: clip-path 1.2s cubic-bezier(.45,.05,.25,1); }
+  .pb-line { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,.9); z-index: 3; opacity: 0;
+    transition: left 1.2s cubic-bezier(.45,.05,.25,1), opacity .2s; }
+  @media (max-width: 768px) {
+    .pb-view { --w: 80vw; --peek: 10vw; width: 100%; }
+  }
 </style>
+<script>
+(function(){
+  var IMG=[
+    {s:'banner-mien-binh-yen.webp', a:'Sách Miền Bình Yên - Tác giả Thiện Nhân'},
+    {s:'banner-duong-den-binh-yen.webp', a:'Sách Đường Đến Bình Yên - Tác giả Thiện Nhân'},
+    {s:'banner-loi-thi-tham-tu-cuoc-doi.webp', a:'Sách Lời Thì Thầm Từ Cuộc Đời - Tác giả Thiện Nhân'}
+  ];
+  var N=IMG.length, c=0, busy=false, ready=false, t;
+  var L=document.querySelectorAll('#pbL img'), R=document.querySelectorAll('#pbR img'),
+      cur=document.getElementById('pbCur'), nw=document.getElementById('pbNew'), line=document.getElementById('pbLine');
+  function m(k){ return IMG[((k%N)+N)%N]; }
+  function strip(k){ return m(k).s.replace('.webp','-dai.webp'); }
+  /* Dải 2 bên đổi hình bằng mờ chồng (crossfade) cùng lúc với đường kẻ chạy */
+  function swap(pair, src){
+    var on=pair[0].classList.contains('ok')?pair[0]:pair[1], off=on===pair[0]?pair[1]:pair[0];
+    if(on.getAttribute('src')===src) return;
+    off.onload=function(){ off.classList.add('ok'); on.classList.remove('ok'); };
+    off.src=src;
+  }
+  function sides(k){ swap(L,strip(k-1)); swap(R,strip(k+1)); }
+
+  /* d: đổi sang cuốn trước/sau; w: hướng đường kẻ (1 = phải sang trái, -1 = trái sang phải) */
+  function go(d,w){ if(busy||!ready) return; busy=true; w=w||d;
+    var n=c+d, im=m(n);
+    nw.style.transition='none'; line.style.transition='none';
+    nw.src=im.s; nw.alt=im.a;
+    // d>0: đường kẻ chạy từ phải sang trái; d<0: từ trái sang phải
+    nw.style.clipPath = w>0 ? 'inset(0 0 0 100%)' : 'inset(0 100% 0 0)';
+    line.style.left = w>0 ? '100%' : '0';
+    void nw.offsetWidth;
+    nw.style.transition=''; line.style.transition='';
+    line.style.opacity='1'; sides(n);
+    nw.style.clipPath='inset(0 0 0 0)';
+    line.style.left = w>0 ? '0' : '100%';
+    setTimeout(function(){
+      cur.src=im.s; cur.alt=im.a; c=n;
+      line.style.opacity='0';
+      setTimeout(function(){ nw.style.transition='none'; nw.style.clipPath='inset(0 0 0 100%)'; busy=false; },60);
+    },1250);
+    timer();
+  }
+  /* Kéo qua kéo lại mỗi bên 1 lần: lần này kéo sang trái, lần sau kéo sang phải; sách đổi lần lượt cả 3 cuốn */
+  var w=1;
+  function timer(){ clearTimeout(t); t=setTimeout(function(){ go(1,w); w=-w; },4000); }
+  document.getElementById('pbR').addEventListener('click',function(){ go(1); });
+  document.getElementById('pbL').addEventListener('click',function(){ go(-1); });
+
+  sides(c); /* 2 dải nhỏ tải ngay */
+  window.addEventListener('load', function(){
+    /* Trang tải xong: tải ngầm 2 hình lớn khi trình duyệt rảnh, hình chính không bị ảnh hưởng */
+    var idle=window.requestIdleCallback||function(f){ return setTimeout(f,300); };
+    idle(function(){ IMG.forEach(function(x){ var i=new Image(); i.decoding='async'; i.src=x.s; }); ready=true; timer(); });
+  });
+})();
+</script>
 
 
 
-<div class="paco-slider-wrapper">
-   <div class="paco-btn-bottom">KÉO QUA ĐỂ ĐỌC THỬ 👆</div>
-<p style="position: absolute; top: 18px; left: 0; width: 100%; text-align: center; font-size: 19px; font-weight: bold; font-style: italic; margin: 0; color: #01579b;">
-    mienbinhyen<br><br>Mời bạn lắng nghe giai điệu của sự bình yên...
-</p>
-    <div class="paco-slider-container">
-        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa bộ sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
-        <div class="paco-slide"><img src="mienbinhyen001.webp" alt="Bìa sách Miền Bình Yên" width="600" height="800" fetchpriority="high"></div>
-        <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="biathitham11.webp" alt="Bìa sách thì thầm" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu11.webp" alt="tác giả thiện nhân" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu12.webp" alt="nội dung sách" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu13.webp" alt="sách chữa lành" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu14.webp" alt="sách hay" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu15.webp" alt="bài ý nghĩa nhất" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu16.webp" alt="lời kết hay nhất" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="docthu17.webp" alt="lời kết" width="600" height="800" loading="lazy"></div>
-        <div class="paco-slide"><img src="biaduongdenbinhyen11.webp" alt="Bìa sách Đường Đến Bình Yên - tác giả thiện nhân" width="686" height="1005" loading="lazy"></div>
-    </div> 
-</div>
 
 
 
 
 
-<div style="margin: 40px 15px 25px 15px; text-align: center; x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 0px solid #d4a017; border-radius: 8px; padding: 20px 10px; background: linear-gradient(to top, rgba(169, 201, 169, 0.4), #FDFCF0); x-background-color: #fff9e6; box-sizing: border-box;">
-    <span style="color: #004a80; font-size: 28px; font-weight: 800; text-transform: uppercase;">BỘ SÁCH MIỀN BÌNH YÊN</span>
-    <div style="font-size: 16px; color: #555; margin-top: 5px;">
-        Tác giả: <span style="color: #01579b; font-weight: bold;">Thiện Nhân</span> &nbsp;&nbsp; Chủ biên: <span style="color: #01579b; font-weight: bold;">Paco</span>
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — PHẦN 3: HÌNH & BÀI VIẾT
+     Cấu trúc section bài viết:
+       A. H1 (hiện, nhỏ 13px, in hoa) = [Từ khóa chính] — trang chỉ có 1 H1 này
+       B. H3 tiêu đề bài (to, đậm) = Tiêu đề bài viết
+       C. Trích nguồn: "Trích: Bản thảo [NĂM] — Tác giả Thiện Nhân"
+       D. Nội dung: 300-900 từ, lấy từ file bài viết. Link trong bài: chạy 13-CONG-CU/goi-y-link.py
+          (khối A: 3 link = trang chủ + 1 giới thiệu sách + 1 bài cùng cụm)
+       E. Ký tên: "Tác giả Thiện Nhân" — link CỐ ĐỊNH https://tacgiathiennhan.com/ (giống Schema Article)
+       F. Hình trong bài: src="[ten-trang].webp" (ảnh chia sẻ og:image vẫn dùng .jpg) | alt="[Từ khóa chính] — Tác giả Thiện Nhân"
+          width="1200" height="630" — tràn full 900px, ngoài div padding
+       G. FAQ: PHẢI có đủ 3 câu hỏi, khớp 100% giữa schema và khối <details> hiển thị bên dưới
+
+     ⚠️ XÓA TOÀN BỘ SECTION NÀY VÀ THAY BẰNG BÀI VIẾT THẬT
+     KHÔNG thêm bài viết bên trên hay bên dưới — thay thế trực tiếp vào đây
+     ================================================================ -->
+<section style="max-width:900px;margin:0 auto;padding:0;font-family:'Times New Roman',Times,serif;">
+    <div style="padding:0 20px;">
+
+    <h1 style="font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:2px;color:#004a99;margin-bottom:8px;margin-top:0.83em;">MIỀN BÌNH YÊN</h1>
+    <h3 style="font-size:22px;font-weight:bold;margin-bottom:8px;color:#222;">Bình yên chưa từng rời xa, chỉ chờ ta quay về</h3>
+    <p style="font-size:14px;font-style:italic;color:#333;margin-bottom:20px;">Trích: Bản thảo Miền Bình Yên — Tác giả Thiện Nhân</p>
+
+    <div style="font-size:18px;line-height:1.5;text-align:justify;color:#333;">
+        <p>Cuốn <a href="https://duongdenbinhyen.com/mien-binh-yen-thien-nhan.html">Miền Bình Yên</a> của Tác giả Thiện Nhân mở đầu bằng một câu hỏi mà ai đi qua nửa đời cũng từng tự hỏi:</p>
+        <p style="font-style:italic;">"Có những điều tưởng như rất gần, nhưng con người phải đi qua gần nửa đời, đôi khi cả một đời, mới nhận ra mình đã tìm kiếm nó quá lâu. Đó là bình yên."</p>
+        <p style="font-style:italic;">"Ta từng nghĩ chỉ cần cuộc sống đủ đầy hơn một chút, mọi thứ rồi sẽ ổn. Có thêm một khoản tiền, một mái nhà vững chãi, một người thật lòng yêu thương, một gia đình êm ấm, một vị trí đủ để được nhìn nhận và trân trọng."</p>
+        <p>Rồi người viết dẫn ta qua một bài rất đẹp trong sách, bài "Bình yên trong ta". Bài bắt đầu bằng những khung cảnh mà ai cũng muốn được đứng vào:</p>
+        <p style="font-style:italic;">"Bạn hãy hình dung mình đang đứng trước một thảo nguyên xanh như thể trời và đất đang chạm vào nhau. Màu cỏ trải dài như một dải lụa mềm, những thảm hoa rực lên trong nắng sớm, làn gió đầu ngày khẽ chạm vào vai như một lời mời rất nhẹ."</p>
+        <p style="font-style:italic;">"Buổi tối trong mỗi gia đình đôi khi có một vẻ đẹp rất riêng. Một bữa cơm tình thân, có cha mẹ chậm rãi kể lại những câu chuyện cũ mà mỗi lần nghe lại vẫn thấy lòng mình mềm xuống. Lũ trẻ ríu rít chạy quanh, vô tư đến mức khiến người lớn phải mỉm cười."</p>
+        <p>Sau mỗi khung cảnh, sách hỏi lại một câu: đó có phải là bình yên mình vẫn tìm không? Rồi bất ngờ rẽ sang một hướng khác:</p>
+        <p style="font-style:italic;">"Nhưng cuộc đời đâu phải lúc nào cũng là thảo nguyên xanh hay những bữa cơm không tì vết. Sẽ ra sao nếu ngày mai bão giông ập tới? Nếu những người ta thương yêu lại mang đến tổn thương, hay thực tại trước mắt chỉ toàn những nghịch cảnh rách nát?"</p>
+        <p>Câu trả lời nằm trong câu chuyện chiếc áo hoa lau của Mẫn Tử Khiên, người học trò của Khổng Tử. Giữa mùa đông tuyết dày, người cha quất roi vào vai con, áo rách ra chỉ toàn hoa lau xám lạnh, trong khi các em được mẹ kế may áo bông dày. Người cha đòi đuổi người vợ đi. Tử Khiên quỳ xuống ôm chân cha:</p>
+        <p style="font-style:italic;">"Mẹ ở lại, chỉ một mình con rét; mẹ đi rồi, cả ba anh em phải chịu bơ vơ. Đuổi mẹ đi, gia đình mình sẽ mãi mãi rách nát, các em con rồi sẽ ra sao?"</p>
+        <p style="font-style:italic;">"Từ mùa đông năm ấy, gian nhà tranh không còn lạnh lẽo nữa, bởi lòng người đã bắt đầu sưởi ấm cho nhau."</p>
+        <p>Từ câu chuyện ngàn năm trước, sách viết tiếp:</p>
+        <p style="font-style:italic;">"Bình yên thực sự không đến từ một gia đình hoàn hảo không tì vết, cũng không phải là sự vắng bóng của tổn thương hay nghịch cảnh. Nó hiện ra ngay giây phút ta thôi đòi hỏi một ngoại cảnh hoàn mỹ, biết chấp nhận và dùng sự tĩnh lặng vô bờ trong tim để ôm lấy cả những thiếu sót, những bất toàn của người thân."</p>
+        <p>Đọc đến đây, người đang mệt vì những điều chưa trọn vẹn trong nhà mình có lẽ sẽ thấy nhẹ đi một chút. Những ai hay cô đơn ngay giữa những người thân cũng sẽ tìm được ở đây một cách nhìn khác.</p>
+        <p>Miền Bình Yên là những lát cắt như thế: tình thân, tình yêu, lòng người, được mất, tổn thương và trưởng thành. Không có công thức hạnh phúc nào trong sách. Chỉ có những câu chuyện để mỗi người tự soi lại mình, như cách người ta tìm đến sách tâm lý chữa lành không phải để được dạy, mà để được hiểu.</p>
+        <p>Bài "Bình yên trong ta" khép lại bằng một lời rất nhẹ:</p>
+        <p style="font-style:italic;">"Mong bạn sẽ sớm nhận ra, thứ bình yên mà bạn vẫn luôn kiếm tìm thật ra chưa từng rời xa, vẫn luôn ở đó chờ bạn quay về để được vỗ về an yên."</p>
+        <p>Cuốn Miền Bình Yên đang có trong tủ sách <a href="https://duongdenbinhyen.com/">PACOBOOKS</a>.</p>
+        <p>Nếu muốn đọc thêm, bạn có thể ghé bài làm sao để bình yên hơn, hoặc cách chữa lành tâm hồn sau những ngày mỏi mệt.</p>
     </div>
-</div>
 
-
-
-<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.2), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 25px;">
-        Đầu tư vào tri thức <br> là khoản đầu tư sinh lời nhất
+    <p style="text-align:right;font-style:italic;font-weight:bold;margin-top:30px;color:#004a99;">
+        <a href="https://tacgiathiennhan.com/" style="color:#004a99;text-decoration:none;">Tác giả Thiện Nhân</a>
+    </p>
+    <div class="paco-lb"></div>
     </div>
+
+    <img src="bia_mien-binh-yen_4t.webp"
+         alt="Miền Bình Yên — Tác giả Thiện Nhân"
+         width="1500" height="746"
+         style="width:100%;height:auto;display:block;margin-top:20px;"
+         loading="lazy">
+</section>
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — KHỐI "THAM KHẢO SÁCH KHÁC"
+     - Đặt dưới bình luận, trên "Bài viết liên quan". Tiêu đề giữ nguyên cho mọi loại trang.
+     - 4 link = khối C của 13-CONG-CU/goi-y-link.py: trang REVIEW SÁCH khác (ưu tiên cùng cụm, ít link vào nhất).
+     - Ảnh mỗi thẻ = bìa sách của chính trang review đó (dòng "bìa" trong kết quả goi-y-link.py).
+     - Thuộc tủ sách: 2 trang chủ đề = khối E của goi-y-link.py (trụ của cụm + 1 trụ gần nghĩa).
+     ================================================================ -->
+<section class="ref-books-section">
+    <span class="ref-books-label">Tham khảo sách khác</span>
+    <ul class="ref-books-list">
+        <li><a href="https://duongdenbinhyen.com/cuoc-song-dieu-ky-cua-loai-vat-noi-coi-khac.html" class="ref-books-item"><img class="ref-books-cover" src="https://duongdenbinhyen.com/cuoc-song-dieu-ky-cua-loai-vat-noi-coi-khac.webp" alt="Bìa sách Cuộc Sống Diệu Kỳ Của Loài Vật Nơi Cõi Khác" loading="lazy"><span class="ref-books-text"><span class="ref-books-title">Cuộc Sống Diệu Kỳ Của Loài Vật Nơi Cõi Khác</span><span class="ref-books-desc">Thú cưng ra đi, căn nhà bỗng trống trải?</span><span class="ref-books-more">Xem chi tiết →</span></span></a></li>
+        <li><a href="https://duongdenbinhyen.com/qua-vung-thoi-tiet-xau.html" class="ref-books-item"><img class="ref-books-cover" src="https://duongdenbinhyen.com/qua-vung-thoi-tiet-xau.webp" alt="Bìa sách Qua Vùng Thời Tiết Xấu" loading="lazy"><span class="ref-books-text"><span class="ref-books-title">Qua Vùng Thời Tiết Xấu</span><span class="ref-books-desc">Hôn nhân đang đi qua những ngày giông bão?</span><span class="ref-books-more">Xem chi tiết →</span></span></a></li>
+        <li><a href="https://duongdenbinhyen.com/viet-truc-giac-tay-viet-tam-an.html" class="ref-books-item"><img class="ref-books-cover" src="https://duongdenbinhyen.com/viet-truc-giac-tay-viet-tam-an.webp" alt="Bìa sách Viết Trực Giác – Tay Viết Tâm An" loading="lazy"><span class="ref-books-text"><span class="ref-books-title">Viết Trực Giác – Tay Viết Tâm An</span><span class="ref-books-desc">Muốn viết ra lòng mình mà không biết bắt đầu?</span><span class="ref-books-more">Xem chi tiết →</span></span></a></li>
+        <li><a href="https://duongdenbinhyen.com/buon-co-that-khong.html" class="ref-books-item"><img class="ref-books-cover" src="https://duongdenbinhyen.com/buon-co-that-khong.webp" alt="Bìa sách Buồn Có Thật Không?" loading="lazy"><span class="ref-books-text"><span class="ref-books-title">Buồn Có Thật Không?</span><span class="ref-books-desc">Buồn mà không biết vì sao mình buồn?</span><span class="ref-books-more">Xem chi tiết →</span></span></a></li>
+    </ul>
+    <p class="ref-books-shelf">📚 Thuộc tủ sách: <a href="https://duongdenbinhyen.com/sach-chua-lanh.html">Sách Chữa Lành</a> · <a href="https://duongdenbinhyen.com/sach-tan-van-hay.html">Sách Tản Văn Hay</a></p>
+</section>
+
+<!-- ================================================================ -->
+<!-- FAQ HIỂN THỊ — PHẢI khớp 100% với FAQ Schema bên dưới, đúng thứ tự, đủ 3 câu -->
+<div style="max-width:900px;margin:40px auto 20px;padding:0 20px;font-family:inherit">
+  <h3 style="font-size:16px;font-weight:700;color:#004a99;border-left:4px solid #004a99;padding-left:12px;margin-bottom:20px">❓ Câu hỏi thường gặp</h3>
+  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
+    <summary style="font-weight:600;cursor:pointer;color:#222">Tác giả Thiện Nhân định nghĩa bình yên trong sách Miền Bình Yên như thế nào?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Trong Miền Bình Yên, Tác giả Thiện Nhân cho rằng bình yên không phải một nơi chốn xa xôi, cũng không phải sự vắng bóng của khó khăn. Bình yên là trạng thái khi ta thôi đòi hỏi mọi thứ phải hoàn hảo, biết chấp nhận những thiếu sót của người thân và của chính mình. Sách có tại PACOBOOKS.</p>
+  </details>
+  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
+    <summary style="font-weight:600;cursor:pointer;color:#222">Miền Bình Yên có những câu chuyện gì?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Miền Bình Yên của Tác giả Thiện Nhân gồm những bài viết ngắn về tình thân, tình yêu, lòng người, được mất và trưởng thành. Có bài kể lại câu chuyện chiếc áo hoa lau của Mẫn Tử Khiên, có bài về cách buông những mối quan hệ làm mình mệt mỏi. Sách hiện có tại PACOBOOKS.</p>
+  </details>
+  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
+    <summary style="font-weight:600;cursor:pointer;color:#222">Ai nên đọc Miền Bình Yên?</summary>
+    <p style="margin-top:12px;color:#444;line-height:1.7">Miền Bình Yên phù hợp với người đang mệt vì những điều chưa trọn vẹn trong gia đình, người vừa đi qua mất mát, hoặc người đã có đủ đầy mà lòng vẫn chưa yên. Mỗi bài trong sách của Tác giả Thiện Nhân đọc riêng được, hợp để đọc chậm mỗi tối. Sách có tại PACOBOOKS.</p>
+  </details>
 </div>
 
+<section class="paco-news-section">
+    <div class="container-paco-news">
+        <span class="section-label-news">BÀI VIẾT MỚI</span>
+        <p class="section-sub-news">Góc nhìn mới — tri thức chắt lọc từ hành trình thực chứng</p>
+        <a href="https://duongdenbinhyen.com/bai-viet-moi.html" class="news-view-all">XEM TẤT CẢ BÀI VIẾT →</a>
+    </div>
+</section>
 
 
 
-        <div class="paco-book-pair" style="margin: 10px 15px; width: auto; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; padding: 15px; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff;">
-            <img src="biaduongdenbinhyen11.webp" alt="Đường Đến Bình Yên">
-            <img src="biathitham11.webp" alt="Thì Thầm">
-            <div class="paco-book-info">
-                <div style="color: #004a80; font-weight: bold; font-size: 18px; text-transform: uppercase;">Bộ đôi sách Tâm lý</div>
-                <div style="font-size: 17px;">✨ Đường Đến Bình Yên</div>
-                <div style="font-size: 17px;">✨ Thì Thầm</div>
-                <div style="font-size: 15px; font-style: italic;">Xuất bản & phát hành 2025</div>
-                <div style="color: #c62828; margin-top: 5px;">
-                    <div style="font-size: 40px; font-weight: bold;">10.000+</div>
-                    <div style="font-size: 15px; color: #002d52; font-style: italic;">Ấn bản đã đến tay độc giả</div>
+
+
+
+<section style="max-width: 800px; margin: 60px auto; padding: 0 20px; text-align: center;">
+
+    <p style="font-family: 'Times New Roman', serif; font-style: italic; color: #555; font-size: 1.1em; margin-bottom: 20px;">
+        Mời bạn lắng nghe giai điệu của sự bình yên...
+    </p>
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px; background: #f9f9f9;">
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/_bAQOOn9nTY?autoplay=1&mute=1&playsinline=1&rel=0&controls=1"
+            title="Giới thiệu sách: Lời thì thầm từ cuộc đời - Tác giả Thiện Nhân"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; opacity: 1;"
+            allow="autoplay; encrypted-media"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p style="font-family: 'Times New Roman', serif; color: #666; font-size: 0.85em; margin-top: 15px; text-align: justify;">
+        Hashtag: #loithithamtucuocdoi #langnghe #tamhon #camxuc #thiennhan #dieukydieu #binhyentamhon #sachmoi #mienbinhyen #tacgiathiennhan
+    </p>
+</section>
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — KHỐI "BÀI VIẾT LIÊN QUAN"
+     3 thẻ = khối D của 13-CONG-CU/goi-y-link.py: BÀI VIẾT (bài từ khóa; trang NXB thì NXB khác), ưu tiên cùng cụm.
+     C và D không bao giờ lặp lại sách của tác giả (đã có ở thân bài).
+     Ảnh thẻ: ảnh đại diện thật của chính trang được link (dòng "ảnh thẻ" trong kết quả goi-y-link.py).
+     ================================================================ -->
+<section class="related-articles-section">
+    <span class="related-articles-label">Bài viết liên quan</span>
+    <div class="news-grid-img">
+        <a href="https://duongdenbinhyen.com/cam-thay-lac-long.html" class="news-card-img"><img src="https://duongdenbinhyen.com/logo-paco.webp" alt="Cảm Thấy Lạc Lõng" loading="lazy"><span class="news-card-text"><span class="news-card-title">Cảm Thấy Lạc Lõng</span><span class="news-card-desc">Có những ngày ta thấy mình lạc lõng ngay giữa nơi quen thuộc nhất.</span></span></a>
+        <a href="https://duongdenbinhyen.com/sau-chia-tay-cam-thay-mat-mat.html" class="news-card-img"><img src="https://duongdenbinhyen.com/sau-chia-tay-cam-thay-mat-mat.jpg" alt="Sau Chia Tay Cảm Thấy Mất Mát" loading="lazy"><span class="news-card-text"><span class="news-card-title">Sau Chia Tay Cảm Thấy Mất Mát</span><span class="news-card-desc">Sau chia tay, khoảng trống người ấy để lại thật mênh mông.</span></span></a>
+        <a href="https://duongdenbinhyen.com/cam-giac-trong-rong.html" class="news-card-img"><img src="https://duongdenbinhyen.com/cam-giac-trong-rong.jpg" alt="Cảm Giác Trống Rỗng" loading="lazy"><span class="news-card-text"><span class="news-card-title">Cảm Giác Trống Rỗng</span><span class="news-card-desc">Có khi đủ đầy mà lòng vẫn trống trải khó gọi tên.</span></span></a>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<footer class="paco-footer">
+        <div class="footer-flex">
+            <div class="footer-column">
+                <span class="footer-brand">PACOBOOKS</span>
+                <div class="footer-info">
+                    <span class="footer-item">
+                        <span class="footer-label">Địa Chỉ:</span> 46 Lê đình thám, P. Tân sơn nhì - Thành phố Hồ Chí Minh - Việt Nam
+                    </span>
+                    <span class="footer-item">
+                        <span class="footer-label">Điện thoại:</span> <a href="tel:0933223301" class="footer-link">09 33 22 33 01</a>
+                    </span>
+                    <span class="footer-item">
+                        <span class="footer-label">Email:</span> <a href="mailto:tgthiennhan@gmail.com" class="footer-link">tgthiennhan@gmail.com</a>
+                    </span>
+                    <span class="footer-item">
+                        <span class="footer-label">Website:</span> <a href="https://duongdenbinhyen.com" target="_blank" class="footer-link">www.duongdenbinhyen.com</a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-brand">CHÍNH SÁCH & BẢO MẬT</span>
+                <div class="footer-info">
+                    <span class="footer-item">
+                        <a href="https://duongdenbinhyen.com/chinhsach.html#vechungtoi" class="footer-link">🖋️ Về chúng tôi</a>
+                    </span>
+                    <span class="footer-item">
+                        <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbaomat" class="footer-link">🛡️ Chính sách bảo mật</a>
+                    </span>
+                    <span class="footer-item">
+                        <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbanhang" class="footer-link">📦 Chính sách bán hàng</a>
+                    </span>
+                    <span class="footer-item">
+                        <a href="https://duongdenbinhyen.com/chinhsach.html#chinhsachbaohanh" class="footer-link">🔄 Chính sách bảo hành</a>
+                    </span>
                 </div>
             </div>
         </div>
-
-
-<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 0 15px;">
-    <div style="x-border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
-        <div style="font-family: 'Times New Roman', serif; color: #0056b3; font-size: 18px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
-           BỘ TÁC PHẨM PHẢN CHIẾU HÀNH TRÌNH 
-    		<span style="font-size: 20px; color: #006400;">GIAN TRUÂN</span> 
-    		CỦA 
-    		<span style="font-size: 20px; color: #006400;">CHÍNH BẠN</span>
-
-        </div>
-
-        <div style="font-family: 'Times New Roman', serif; color: #1a1a1a; font-style: normal; font-weight: 600; line-height: 1.3; font-size: 16px; text-align: justify;">
-            
-            <div style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Là tấm gương soi rọi trọn vẹn những thăng trầm mà mỗi đời người đều phải bước qua.</span>
-            </div>
-
-            <div style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Là lời tự sự chân thực giúp bạn tìm thấy hình bóng chính mình trong từng khúc quanh số phận.</span>
-            </div>
-
-            <div style="display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Hãy cầm lấy bản đồ này để thấu hiểu quá khứ và tự tại kiến tạo tương lai.</span>
-            </div>
-
     </div>
-</div>
-</div>
+</footer>
 
 
 
-<div style="max-width: 550px; margin: 10px auto; box-sizing: x-border-box; padding: 15px; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif; width: 92%;">
-    <div style="font-size: 16px; color: #FFFF00; line-height: 1.4; font-weight: bold;">
-        Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size: 25px; color: #8b0000; margin-left: 3px; vertical-align: middle;">-40%</span>
+
+<div class="paco-stats-box">
+    <div class="stats-item">
+        <span class="stats-label">🕒 Giờ VN :</span>
+        <span id="paco-clock" class="stats-value">--:--:--</span>
     </div>
-    <div class="paco-timer" style="font-size: 40px; color: #004a7c; font-weight: bold; margin-top: 5px;">
-        00 : 00 : 00
+    <div class="stats-item">
+        <span class="stats-label">👥 Lượt truy cập:</span>
+        <span id="paco-counter" class="stats-value">--</span>
     </div>
 </div>
 
 
 
-        <div class="paco-border-box" style="width: auto; max-width: 550px; margin: 10px 15px; background-color: #fff9e6; box-sizing: border-box; padding: 15px 0; border: 1px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center;">
-            <div style="color: #8b0000; font-style: italic; font-weight: 600; font-size: 19px;">🌸 Tháng tri ân tác giả 🌸</div>
-            <div style="color: #01579b; font-weight: bold; font-size: 20px; text-transform: uppercase; margin: 10px 0;">MUA 2 CHỈ VỚI GIÁ 1</div>
-            <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-                <span style="text-decoration: line-through; color: #666; font-size: 22px; font-weight: bold;">332.000đ</span>
-                <span style="color: #e53935; font-size: 36px; font-weight: 900;">199.000đ</span>
-                <span style="background-color: #b30000; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 14px; font-weight: bold;">-40%</span>
-            </div>
-            <p style="font-size: 16px; color: #b30000; font-weight: bold; font-style: italic;">⚡ Chỉ còn 12 suất ưu đãi cuối cùng trong ngày!</p>
-            <button class="paco-buy-btn" onclick="document.getElementById('datsach').scrollIntoView({behavior: 'smooth'});">MUA NGAY - GIẢM 40%</button>
-        </div>
 
-        <div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: x-border-box; padding: 0 15px;">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b;  background-image: linear-gradient(to right, transparent, #FDFCF0);  x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: center;">
-            <div style="font-weight: bold; color: #01579b; line-height: 1.8; font-size: 20px;">
-                <span style="display: block;">Có tri thức, bạn không còn sợ hãi.</span>
-                <span style="display: block;">Có bình yên, bạn sở hữu cả thế giới.</span>
+<footer class="paco-footer" style="padding-top: 0;">
+    <div class="footer-container">
+        <div class="footer-seo" style="border-top: 1px solid #3e4f5f; margin-top: 0; padding-top: 20px; text-align: justify; font-size: 13px;">
+
+            <!-- ================================================
+                 THAY TU KHOA THEO TEN TRANG & BAI VIET
+                 - Chi dung 1 tu khoa chinh cua trang nay
+                 - Vi du: "sach chua lanh tam hon, tac gia Thien Nhan, PACOBOOKS"
+                 ================================================ -->
+            <p style="margin-bottom: 20px;">
+                <span class="seo-label">Từ khóa liên quan:</span> Miền Bình Yên, sách tâm lý chữa lành, tác giả Thiện Nhân, PACOBOOKS.
+            </p>
+            <!-- ================================================ -->
+
+            <div class="footer-copyright" style="text-align: center; margin-top: 20px; border-top: 1px solid #3e4f5f; padding-top: 15px; font-size: 16px;">
+                © 2025 Đường Đến Bình Yên. All rights reserved.
             </div>
         </div>
+    </div>
+</footer>
 
 
 
-<div class="paco-content-section">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff;  border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 18px; line-height: 1.4;">
-        
-        <div style="text-align: left; margin-bottom: 24px;">
-            <h2 class="paco-h2-title" style="margin-bottom: 5px; color: #004a80;">ĐƯỜNG ĐẾN BÌNH YÊN</h2>
-            <div style="font-size: 18px; color: #555; font-style: italic; letter-spacing: 0.5px;">
-                Đích đến của mọi cuộc hành trình
-            </div>
+
+<div class="paco-fixed-menu">
+    <a href="https://duongdenbinhyen.com/" class="paco-icon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#008080"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/duongdenbinhyen" target="_blank" class="paco-icon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#1877f2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="https://zalo.me/0933223301" target="_blank" class="paco-icon-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#0068ff"/><text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="16" font-weight="bold" font-family="Arial">Zalo</text></svg>
+    </a>
+    <a href="https://duongdenbinhyen.com/#ebook" class="paco-icon-item" aria-label="Xem Ebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#004a99"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-11.96-2.87-2.87L3.18 23.76zM.68 1.23C.26 1.67 0 2.35 0 3.23v17.54c0 .88.26 1.56.68 2l.11.1 9.83-9.83v-.23L.79 3.13l-.11.1zM20.55 10.3L17.3 8.45l-3.17 3.17 3.17 3.17 3.27-1.86c.93-.53.93-1.39 0-1.93v.3zM4.17.24l12.6 11.96-2.87 2.87L3.18.44C3.53.4 3.87.47 4.17.24z"/></svg>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================================================
+     MENU CHÂN TRANG 5 ICON (thay 2 nút MUA SÁCH GIẤY / XEM EBOOK cũ)
+     Thứ tự: Sách giấy - Ebook - Trang chủ (giữa, nổi lên) - Liên hệ - Giỏ hàng
+     ================================================================ -->
+<div class="paco-bottom-nav">
+
+    <!-- 1. SÁCH GIẤY -> cuộn tới form đặt sách (id="datsach") -->
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-book">
+            <svg viewBox="0 0 24 24"><path d="M4 4.5A2 2 0 0 1 6 3h8v18H6a2 2 0 0 1-2-1.5z" fill="#e0783c"/><path d="M20 4.5A2 2 0 0 0 18 3h-4v18h4a2 2 0 0 0 2-1.5z" fill="#c85a2a"/></svg>
         </div>
-        <div class="paco-body-text">
-            <p>Chúng ta làm việc không ngừng nghỉ, tích lũy không mệt mỏi, để rồi nhận ra thứ duy nhất không thể mua được bằng tiền chính là một tâm thế thản nhiên, tỉnh táo và tự tại trước mọi biến động.
-            <span id="paco-btn" style="color: #01579b; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 18px;" onclick="toggleContent1()">Xem thêm</span></p>
+        <span class="paco-nav-label">Mua sách giấy</span>
+    </a>
 
-            <div id="more-content" style="display: none;">
-                <p>Cuốn sách “Đường Đến Bình Yên” của tác giả Thiện Nhân không phải là những lời khuyên màu hồng. Nó là một hồi chuông tỉnh thức, sắc bén và thực tế đến đau lòng. Tác giả không dạy bạn cách trốn chạy thế gian, mà dạy bạn cách đứng vững ngay giữa tâm bão.</p>
-                
-                <p><b>1. Bình yên là năng lực, không phải sự may mắn:</b> Đừng đợi đến khi mọi rắc rối trong đời biến mất mới gọi là bình yên. Thực tế, nghịch cảnh là một phần tất yếu của nhân sinh. “Đường Đến Bình Yên” xác lập một giá trị cốt lõi: Sự thản nhiên nằm ở một 'trật tự nội tâm' được thiết lập lại. Khi tâm bạn có trật tự, sóng gió ngoài kia chỉ còn là những cơn gió thoảng qua. Đó là khả năng duy trì sự ổn định ngay cả khi thế giới bên ngoài như đang sụp đổ.</p>
-                
-                <p><b>2. Dừng lại để thấy mình – Buông bỏ để tự do:</b> Chúng ta kiệt sức không phải vì làm việc quá nhiều, mà vì mang vác quá nhiều nỗi lo và những kỳ vọng vay mượn. Sự "Tỉnh thức" không nằm ở triết lý cao siêu, nó nằm ở hơi thở và sự chọn lựa hiện diện. Chỉ khi dám đối diện và buông bỏ những gánh nặng ảo ảnh, bạn mới thực sự chạm tay vào sự tự do đích thực. Bạn đã bỏ lỡ bao nhiêu hoàng hôn chỉ vì mải miết đuổi theo những giá trị không thuộc về mình?</p>
-                
-                <p><b>3. Làm chủ nội tại để quản trị cuộc đời:</b> Thành công lớn nhất của cuộc đời là làm chủ chính mình. Một người có trật tự nội tâm vững vàng sẽ không bị cảm xúc chi phối, không bị áp lực đè bẹp và luôn đưa ra được những quyết định sáng suốt nhất. Cuốn sách này là tấm gương phản chiếu những nỗi đau thầm kín nhất – nỗi cô đơn, sự lạc lõng, áp lực kỳ vọng – để rồi từ đó thắp lên bản lĩnh để bạn tái cấu trúc cuộc đời.</p>
-                
-                <p class="paco-quote">"&nbsp; Bình yên không phải là điểm đến, mà là tâm thế bạn chọn để đi qua thế gian này. " </p>
-                
-                <p>Nếu bạn đang mỏi gối trên hành trình hành hương tìm hạnh phúc, hãy để cuốn sách “Đường Đến Bình Yên” đồng hành và dẫn lối. Đã đến lúc dừng lại bão lòng, tái thiết trật tự nội tại để sống một cuộc đời sâu sắc và bản lĩnh hơn. Nhận ra mình không cô đơn trên hành trình này, đã là một dạng bình yên.</p>
-                
-                <div class="paco-readmore-btn" onclick="toggleContent1()" style="margin-top: 15px; cursor: pointer; text-align: center;">Thu gọn</div>
-            </div>
+    <!-- 2. EBOOK -> về khối ebook ở trang chủ (trang bài không có khối ebook) -->
+    <a href="https://duongdenbinhyen.com/#ebook" class="paco-nav-item">
+        <div class="paco-nav-badge badge-ebook">
+            <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2" fill="#2f80c4"/><rect x="7.5" y="5.5" width="9" height="10.5" rx="1" fill="#eaf4ff"/><line x1="9" y1="18.5" x2="15" y2="18.5" stroke="#eaf4ff" stroke-width="1.4"/></svg>
         </div>
+        <span class="paco-nav-label">Mua Ebook</span>
+    </a>
 
-    </div> </div>
-
-
-
-
-
-
-
-
-
-
-<div class="paco-content-section">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); margin: -20px auto; border-bottom: 1px solid #01579b; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
-        
-<div style="text-align: left; margin-bottom: 20px;">
-    <h2 class="paco-h2-title" style="margin-bottom: 5px; color: #004a80;">THÌ THẦM</h2>
-    <div style="font-size: 18px; color: #555; font-style: italic; letter-spacing: 0.5px;">
-        Khi cuộc đời thì thầm những điều đẹp đẽ
-    </div>
-</div>
-
-
-<div class="paco-body-text">
-    <p>Nếu <b>Đường Đến Bình Yên</b> là bản lĩnh để thiết lập trật tự giữa bão giông, thì cuốn sách <b>Thì Thầm</b> chính là hành trình chạm vào phần mềm mại nhất của tâm thức.
-    <span id="paco-btn-3" style="color: #01579b; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 18px;" onclick="toggleContent3()">Xem thêm</span>
-
-    <div id="content-3" style="display: none;">
-        <p><b>Hồi đáp từ trái tim:</b> Cuốn sách mời gọi bạn bước qua những ồn ào vay mượn để quay về đối thoại với chính mình, nơi sự bình yên vốn luôn hiện hữu, lặng lẽ và vẹn nguyên.</p>
-        
-        <p><b>Giao cảm cùng đời sống:</b> Những điều giản dị nhất đôi khi lại chứa đựng sức mạnh chữa lành lớn lao nhất. "Thì Thầm" đánh thức những rung cảm tinh tế trước vẻ đẹp của sự sống mà ta đã vô tình lãng quên.</p>
-        
-        <p><b>Sự tĩnh lặng quyền năng:</b> Khi tâm bạn đủ tĩnh, tiếng thì thầm của tâm hồn sẽ dẫn lối cho những quyết định sáng suốt nhất, giúp bạn đứng vững giữa nhân gian với một tâm thế tự tại.</p>
-        
-        <p class="paco-quote">"&nbsp; Bình yên không phải là khi thế giới lặng im, mà là khi tâm bạn đủ rộng để ôm lấy mọi âm thanh bằng một sự thản nhiên cần có. " </p>
-        
-        <div class="paco-readmore-btn" onclick="toggleContent3()" style="margin-top: 15px; cursor: pointer; text-align: center;">Thu gọn</div>
-    </div>
-</div>
-    </div> </div>
-
-
-
-
-
-
-
-
-
-
-<div class="paco-content-section">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); margin: 0px auto; border-bottom: 1px solid #01579b; background: linear-gradient(to left, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-family: 'Times New Roman', serif; font-size: 22px; line-height: 1.4;">
-        
-    <h2 class="paco-author-h2">
-        <span style="font-size: 26px;">◈</span> VỀ TÁC GIẢ
-    </h2>
-    
-    <div class="paco-author-content">
-        <p>Tác giả Thiện Nhân gửi gắm những góc nhìn được đúc rút từ hành trình tự thân, đi qua những thăng trầm khắc nghiệt từ thuở thiếu thời đến tuổi trung niên.
-        <span id="paco-btn-2" style="color: #01579b; font-weight: bold; cursor: pointer; margin-left: 5px; font-size: 18px;" onclick="toggleContent(2)">Xem thêm</span></p>
-
-        <div id="more-content-2" style="display: none;">
-            <p>Trải qua những biến động sâu sắc về tình thân, công việc và những cơn sóng dữ của cảm xúc, ông thấu hiểu rằng: Bất kể ai trên thế gian này đều cần một nền tảng “nội tâm vững chãi” để làm điểm tựa.</p>
-
-            <p>Ông tin rằng khi mỗi người quản lý tốt cảm xúc và tái thiết được sự tĩnh tại trong tâm trí, mọi sự hành động đều trở nên sáng suốt và hiệu quả. Những trang viết của ông là sự khẳng định về một chân lý nhân sinh: “Khi tâm trí tốt thì mọi sự đều tốt”.</p>
-            
-            <p>Đó là chìa khóa để mỗi cá nhân không chỉ kiến tạo thành công cho chính mình, mà còn lan tỏa giá trị, giúp ích cho gia đình và xã hội.</p>
-
-            
-            
-            <div class="paco-readmore-btn" onclick="toggleContent(2)" style="margin-top: 15px; cursor: pointer; text-align: center;">Thu gọn</div>
+    <!-- 3. TRANG CHỦ -> về trang chủ (mục giữa, khối tròn gradient nổi lên) -->
+    <a href="https://duongdenbinhyen.com/" class="paco-nav-item">
+        <div class="paco-nav-center-circle">
+            <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 10v10h5v-6h4v6h5V10z" fill="#ffffff"/></svg>
         </div>
-    </div>
+        <span class="paco-nav-label">Trang chủ</span>
+    </a>
 
-    </div> </div>
-
-
-
-
-<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 15px auto;">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; background-image: linear-gradient(to right, transparent, #FDFCF0); x-background-color: #f0f7ff; border-radius: 8px; padding: 15px; text-align: justify; color: #1a1a1a; font-weight: 550; font-style: nomal; font-size: 22px; line-height: 1.6;">
-        <div style="font-family: 'Times New Roman', serif; color: #0056b3; font-size: 20px; font-weight: 900; text-transform: uppercase; letter-spacing: 0px; margin-bottom: 20px; line-height: 1.4; text-align: center;">
-            TÁC PHẨM GIÚP BẠN BUÔNG BỎ
-		<span style="font-size: 26px; color: #006400;">MUỘN PHIỀN</span> 
-
+    <!-- 4. LIÊN HỆ -> cuộn tới khối địa chỉ chân trang (id="lienhe") -->
+    <a href="https://duongdenbinhyen.com/#lienhe" class="paco-nav-item">
+        <div class="paco-nav-badge badge-contact">
+            <svg viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="#5b6fd6" stroke-width="2"/><rect x="3" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><rect x="16.5" y="13" width="4.5" height="7" rx="2" fill="#5b6fd6"/><path d="M7.5 20v.5a3 3 0 0 0 3 3H12" fill="none" stroke="#5b6fd6" stroke-width="1.6" stroke-linecap="round"/></svg>
         </div>
+        <span class="paco-nav-label">Liên hệ</span>
+    </a>
 
-        <div style="font-family: 'Times New Roman', serif; color: #1a1a1a; font-style: normal; font-weight: 600; line-height: 1.3; font-size: 18px; text-align: justify;">
-            
-            <div style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Là khoản đầu tư sinh lời nhất cho sự tự do.</span>
-            </div>
-
-            <div style="margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Là tấm bản đồ để thoát khỏi sự hỗn loạn.</span>
-            </div>
-
-            <div style="display: flex; align-items: flex-start; gap: 10px;">
-                <span style="color: #b30000; font-style: normal; font-weight: bold; flex-shrink: 0;">🔷</span> 
-                <span>Là tài sản bản lĩnh để đứng trên nghịch cảnh.</span>
-            </div>
-
-    </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-<div style="background-color: #ffffff; border: 0px solid #e1e8ed; border-radius: 8px; padding: 15px; margin: 20px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-    
-    <div style="border-bottom: 1px solid #f0f2f5; padding-bottom: 10px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between;">
-        <span style="color: #004a7c; font-weight: 600; font-size: 16px;">Khách hàng phản hồi (10.000+)</span>
-        <div style="text-align: right;">
-            <div style="color: #ffb400; font-size: 14px;">⭐⭐⭐⭐⭐</div>
-            <div style="font-size: 11px; color: #000000;">Dựa trên lượt mua thực tế</div>
+    <!-- 5. GIỎ HÀNG -> bấm vào sẽ về thẳng form đặt sách (#datsach), giống nút Sách giấy -->
+    <a href="https://duongdenbinhyen.com/#datsach" class="paco-nav-item">
+        <div class="paco-nav-badge badge-cart">
+            <svg viewBox="0 0 24 24"><path d="M6 6h15l-1.5 9h-12z" fill="#e0611f"/><path d="M6 6 5 3H2" fill="none" stroke="#e0611f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="#e0611f"/><circle cx="18" cy="20" r="1.4" fill="#e0611f"/></svg>
         </div>
-    </div>
+        <span class="paco-nav-label">Giỏ hàng</span>
+    </a>
 
-   <div style="margin-bottom: 10px; border-bottom: 1px solid #f0f2f5; padding-bottom: 8px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-        <strong style="font-size: 14px; color: #1c1e21;">Hoàng Nam</strong>
-        <span style="font-size: 11px; color: #006400; font-weight: 600; background: #e7f3ff; padding: 2px 6px; border-radius: 4px;">✓ Đã mua hàng</span>
-    </div>
-    <div style="color: #ffb400; font-size: 10px; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-    <p style="margin: 0 0 8px 0; font-size: 14px; color: #4b4f56; line-height: 1.5;">Nội dung thực tế, trình bày rất dễ hiểu. Cuốn sách giúp tôi khơi thông tâm trí sau những giờ làm việc căng thẳng.</p>
-    
-        <img src="hoangnam.webp" alt="Hình ảnh từ Hoàng Nam" width="320" height="320" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
-    
 </div>
 
-<div style="margin-bottom: 10px; border-bottom: 1px solid #f0f2f5; padding-bottom: 8px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-        <strong style="font-size: 14px; color: #1c1e21;">Thanh Trúc</strong>
-        <span style="font-size: 11px; color: #006400; font-weight: 600; background: #e7f3ff; padding: 2px 6px; border-radius: 4px;">✓ Đã mua hàng</span>
-    </div>
-    <div style="color: #ffb400; font-size: 10px; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-    <p style="margin: 0; font-size: 14px; color: #4b4f56; line-height: 1.5;">"Lần đầu đọc một cuốn sách tâm lý mà cảm thấy nhẹ lòng đến vậy. Rất cảm ơn tác giả vì những góc nhìn sâu sắc."</p>
-</div>
+<script>
+// 1. MA MENU
+function toggleMenu() {
+    var m = document.getElementById("menuList");
+    if (m) m.style.display = (m.style.display === "block") ? "none" : "block";
+}
+window.addEventListener('click', function(e){
+    var m = document.getElementById('menuList');
+    var b = document.getElementById('menuButton');
+    if (m && b && !m.contains(e.target) && !b.contains(e.target)) m.style.display = "none";
+});
+window.addEventListener('scroll', function() {
+    var m = document.getElementById("menuList");
+    if (m) m.style.display = "none";
+});
 
-<div style="margin-bottom: 10px; border-bottom: 1px solid #f0f2f5; padding-bottom: 8px;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-        <strong style="font-size: 14px; color: #1c1e21;">Bác Thành</strong>
-        <span style="font-size: 11px; color: #006400; font-weight: 600; background: #e7f3ff; padding: 2px 6px; border-radius: 4px;">✓ Đã mua hàng</span>
-    </div>
-    <div style="color: #ffb400; font-size: 10px; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-    <p style="margin: 0 0 8px 0; font-size: 14px; color: #4b4f56; line-height: 1.5;">Sách đóng gói kỹ, giao hàng siêu tốc. Nội dung phản chiếu đúng thăng trầm đời người, rất đáng để chiêm nghiệm.</p>
-    
-        <img src="bacthanh.webp" alt="Hình ảnh từ Bác Thành" width="320" height="320" style="width: 80px; height: 80px; border-radius: 4px; object-fit: cover; border: 1px solid #ddd;">
-    
-</div>
-
-   <div style="text-align: center; margin-top: 5px;">
-    <span style="color: #004a7c; font-size: 13px; font-weight: 700;">Xem thêm 10.532 bình luận khác...</span>
-</div>
-</div>
-
-
-
-
-
-
-
-
-<div style="width: 100%; max-width: 550px; margin: 0px 0 auto; box-sizing: x-border-box; padding: 0 -15px;">
-    <div style="border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #d4a017; background: linear-gradient(to top, rgba(169, 201, 169, 0.6), #FDFCF0); x-background-color: #fff9e6; border-radius: 8px; padding: 15px; text-align: center; color: #002d52; font-weight: bold; font-style: italic; font-size: 20px;">
-        Khoản đầu tư sinh lời nhất là tri thức <br> giá chỉ bằng vài ly cả phê của bạn
-    </div>
-</div>
-
-
-
-
-
-
-
-<div style="width: 100%; max-width: 550px; margin: 10px 0 auto; box-sizing: border-box; padding: 15px; border: 0px dashed rgba(1, 87, 155, 0.4); border-bottom: 1px solid #01579b; border-radius: 8px; text-align: center; font-family: 'Times New Roman', Times, serif;">
-    <div style="font-size: 17px; color: #FFFF00; line-height: 1.4; font-weight: bold;">
-    Ưu đãi tri ân 12 độc giả cuối cùng <span style="font-size: 25px; color: #8b0000; margin-left: 3px; vertical-align: middle;">-40%</span>
-</div>
-    <div class="paco-timer" style="font-size: 50px; color: #004a7c; font-weight: bold; margin-top: 5px;">
-        00 : 00 : 00
-    </div>
-</div>
-
-
-
-<div id="datsach">
-    <div class="paco-form-title" style="color: #004a7c; font-weight: bold;">Nơi Bạn Nhận Sách </div>
-    <form id="pacoForm">
-        <div class="paco-input-wrapper">
-            <input type="text" name="Họ và Tên" class="paco-input" placeholder="Ví dụ: Thiện Nhân" required>
-        </div>
-        <div class="paco-input-wrapper">
-            <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại" required onfocus="fbq('track', 'InitiateCheckout');">
-        </div>
-        <div class="paco-input-wrapper">
-            <input type="text" name="Địa chỉ nhận sách" class="paco-input" placeholder="Địa chỉ chi tiết" required>
-        </div>
-        
-	<input type="hidden" name="Nguon_Don" value="https://duongdenbinhyen.com/mienbinhyen.html">
-	<div style="display:none;"><input type="text" name="confirm_email" value=""></div>
-
-<div style="text-align: center; margin: 15px 0; font-family: 'Times New Roman', serif;">
-    <div style="font-style: normal; color: #008B8B; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;">
-        "Kiểm tra kỹ lưỡng, hài lòng mới thanh toán"
-    </div>
-</div>
-
-
-	<div class="paco-freeship" style="font-size: 16px; color: #8b0000; font-weight: bold;">🚚 Miễn ship trên toàn quốc</div>
-	
-
-        <button type="submit" id="submitBtn" class="paco-submit-btn">HOÀN TẤT ĐẶT HÀNG</button>
-    </form>
-    <div id="msg" class="hidden" style="color: #2e7d32; text-align: center; margin-top: 15px; font-weight: bold;">
-        Gửi thông tin thành công!
-    </div>
-</div>
-
-
-
-
-
-
-        <div class="paco-trust-box">
-            <div style="display: flex; justify-content: space-around; margin-bottom: 10px;">
-                <div><span>🛡️</span><br><b style="color:#01579b">Hàng chính hãng</b></div>
-                <div><span>📦</span><br><b style="color:#01579b">Kiểm tra khi nhận</b></div>
-            </div>
-            <p style="font-size: 12px; color: #555; margin: 0;">Sách thuộc <b>Nhà xuất bản Tri Thức</b>. Tác giả <b>Thiện Nhân</b>.</p>
-        </div>
-
-        <div class="paco-stats-box">
-            <div class="stats-item">🕒 Giờ VN: <span id="paco-clock" style="color:#b30000; font-weight:bold">--:--:--</span></div>
-            <div class="stats-item">👥 Đang xem: <span id="paco-counter" style="color:#b30000; font-weight:bold">--</span></div>
-        </div>
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-	// Đồng hồ đếm ngược
-
-
-(function() {
-    var cycle = 5 * 3600; // Chu kỳ 5 tiếng (giây)
-    var displays = document.querySelectorAll('.paco-timer');
-    
-    setInterval(function () {
-        // Lấy thời gian hiện tại của máy tính để tính toán vị trí trong chu kỳ 5 tiếng
-        var now = Math.floor(Date.now() / 1000);
-        var remaining = cycle - (now % cycle);
-        
-        var h = Math.floor(remaining / 3600);
-        var m = Math.floor((remaining % 3600) / 60);
-        var s = remaining % 60;
-        
-        var text = (h < 10 ? "0" + h : h) + " : " + (m < 10 ? "0" + m : m) + " : " + (s < 10 ? "0" + s : s);
-        
-        displays.forEach(function(el) {
-            el.textContent = text;
-        });
-    }, 1000);
-})();
-
-
-
+// 2. MA DONG HO VA BO DEM
 window.addEventListener('load', function() {
-    // 1. Chạy đồng hồ VN
     const clockEl = document.getElementById('paco-clock');
     if (clockEl) {
         setInterval(() => {
             const now = new Date();
-            clockEl.textContent = now.toLocaleTimeString('vi-VN', { 
-                timeZone: 'Asia/Ho_Chi_Minh', hour12: false 
+            clockEl.textContent = now.toLocaleTimeString('vi-VN', {
+                timeZone: 'Asia/Ho_Chi_Minh', hour12: false
             });
         }, 1000);
     }
-
 // 2. Bộ đếm lấy số thực tế từ Sheet của Ông Paco (Thay thế hoàn toàn API cũ)
     const counterEl = document.getElementById('paco-counter');
     if (counterEl) {
@@ -1171,317 +1099,115 @@ window.addEventListener('load', function() {
                 // data chính là con số chính xác lấy từ ô A2 của Ông
                 counterEl.textContent = parseInt(data).toLocaleString('vi-VN');
             })
-            .catch(() => { 
+            .catch(() => {
                 // Nếu mạng lỗi, giữ nguyên số cũ, không nhảy bậy
                 console.log("Lỗi kết nối máy chủ bộ đếm");
             });
     }
 });
 
-
-
-
-
-
-window.onbeforeunload = function () { window.scrollTo(0, 0); };
-
-
-function toggleContent1() {
-    var content = document.getElementById("more-content");
-    var btn = document.getElementById("paco-btn");
-    
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        btn.style.display = "none"; 
-    } else {
-        content.style.display = "none";
-        btn.style.display = "inline"; 
-        // Cuộn về đúng vị trí nút Xem thêm sau khi thu gọn
-        btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
-
-
-
-function toggleContent3() {
-    var content = document.getElementById("content-3");
-    var btn = document.getElementById("paco-btn-3");
-    
-    if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        btn.style.display = "none"; // ẨN NÚT Ở ĐOẠN ĐẦU KHI MỞ
-    } else {
-        content.style.display = "none";
-        btn.style.display = "inline"; // HIỆN LẠI NÚT KHI THU GỌN
-        btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
-
-
-// 3. Hàm điều khiển phần Về Tác Giả (bài 3)
-function toggleContent(num) {
-    if (num === 2) {
-        var content = document.getElementById("more-content-2");
-        var btn = document.getElementById("paco-btn-2");
-        
-        if (content.style.display === "none" || content.style.display === "") {
-            content.style.display = "block";
-            btn.style.display = "none"; 
-        } else {
-            content.style.display = "none";
-            btn.style.display = "inline"; 
-            btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-     // Script gửi thông tin form đơn đặt hàng - Đã tối ưu theo yêu cầu Ông Paco
-document.addEventListener("DOMContentLoaded", function() {
-    const pacoForm = document.getElementById('pacoForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const msg = document.getElementById('msg');
-
-    if (pacoForm) {
-        pacoForm.addEventListener('submit', e => {
-            e.preventDefault();
-            
-            // 1. Khóa nút và mờ đi để báo đang gửi thông tin
-            submitBtn.disabled = true; 
-            submitBtn.innerHTML = "ĐANG GỬI THÔNG TIN...";
-            
-    
-            fetch("https://script.google.com/macros/s/AKfycbwldlQLTMI7sHFuArZl0oV1vayHvm6krhPEn8IqDQWn_olPnwVCMKOAWSulvpUfsylf/exec", {
-                method: 'POST', 
-                mode: 'no-cors', 
-                body: new FormData(pacoForm)
-            }).then(() => {
-                // 2. Pixel chính xác: Chỉ nổ khi đã gửi thành công
-                //fbq('track', 'Purchase', {currency: 'VND', value: 199000});
-
-
-            /*fetch('https://meta-capi-paco.tgthiennhan.workers.dev/', {
-                method: 'POST',
-                mode: 'no-cors',
-                body: new URLSearchParams({
-                    event_name: 'Purchase',
-                    value: 199000,
-                    currency: 'VND',
-                    action_source: 'website'
-                })
-            });*/
-
-                // 3. Báo gửi thành công và RESET FORM ngay (để không thể gửi đơn trắng)
-                msg.classList.remove('hidden');
-                submitBtn.innerHTML = "ĐÃ GỬI THÀNH CÔNG";
-                pacoForm.reset(); 
-
-                // 4. Trạng thái chờ 5 giây rồi mới mở lại nút cho đơn tiếp theo
-                setTimeout(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = "HOÀN TẤT ĐẶT HÀNG";
-                    msg.classList.add('hidden'); // Ẩn thông báo cũ
-                }, 5000);
-
-            }).catch(err => {
-                // Mở lại nút nếu lỗi mạng để khách thử lại
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = "THỬ LẠI";
-                console.error('Lỗi:', err);
-            });
-        });
-    }
-});
-
-
-
-
-
-
-
-
-
-
-const slider = document.querySelector('.paco-slider-container');
-let isDown = false, startX, scrollLeft;
-
-// 1. Chặn trình duyệt nắm kéo ảnh
-slider.querySelectorAll('img').forEach(img => {
-    img.ondragstart = () => false;
-});
-
-// 2. Xử lý Quay vòng (Cả máy tính & Điện thoại) - ĐÃ BỎ RESETTIMER
-slider.addEventListener('scroll', () => {
-    const w = slider.clientWidth;
-    if (slider.scrollLeft <= 2) slider.scrollTo({ left: w * (slider.children.length - 2), behavior: 'auto' });
-    if (slider.scrollLeft >= w * (slider.children.length - 1) - 2) slider.scrollTo({ left: w, behavior: 'auto' });
-});
-
-// 3. Kéo chuột máy tính
-slider.addEventListener('mousedown', (e) => {
-    isDown = true; slider.style.scrollSnapType = 'none';
-    startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return; e.preventDefault();
-    slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 2;
-});
-const end = () => { isDown = false; slider.style.scrollSnapType = 'x mandatory'; };
-slider.addEventListener('mouseup', end); slider.addEventListener('mouseleave', end);
-
-// 4. Khởi tạo - ĐÃ BỎ RESETTIMER
-window.addEventListener('load', () => {
-    slider.scrollTo({ left: slider.clientWidth, behavior: 'auto' });
-});
-
-
-
 </script>
 
+<!-- Script 6: Gửi form -->
 
 
 
 
 
 
-
+<!-- Script 10: Chặn IP spam (delay 4s) -->
 <script>
-(function() {
-    /* ============================================================
-       BẢNG ĐIỀU KHIỂN CHO ÔNG PACO - CHIẾN THUẬT 1-2-3
-       ============================================================ */
-    const LIMIT_CAPTCHA = 2;  // Đơn 1 bình thường. Từ đơn 2 hiện Captcha.
-    const LIMIT_LOCK    = 3;  // Đặt xong đơn 2 (tức đơn 3) sẽ khóa.
-    const LOCK_MINUTES  = 720; // Khóa 12 tiếng (720 phút).
-    /* ============================================================ */
-
-    const submitBtn = document.getElementById('submitBtn');
-    const pacoForm = document.getElementById('pacoForm');
-    const storageKey = 'paco_track_v3';
-    const lockKey = 'paco_lock_v3';
-
-    let data = JSON.parse(localStorage.getItem(storageKey)) || { count: 0 };
-    let lockUntil = parseInt(localStorage.getItem(lockKey)) || 0;
-
-    function checkLock() {
-        if (Date.now() < lockUntil) {
-            submitBtn.disabled = true;
-            submitBtn.style.backgroundColor = "#9e9e9e";
-	    submitBtn.style.lineHeight = "1.0"; // Thêm dòng này để 2 dòng chữ cân đối
-            submitBtn.innerHTML = "BẠN ĐÃ ĐẶT QUÁ GIỚI HẠN<br><span style='font-size:12px;'>Đặt trực tiếp: 09 33 22 33 01</span>";
-            return true;
-        }
-        return false;
-    }
-
-    if (checkLock()) return;
-
-    function renderGuard() {
-        let guardBox = document.getElementById('paco-guard-box');
-        const code = Math.floor(1000 + Math.random() * 9000);
-        if (!guardBox) {
-            const html = `
-                <div id="paco-guard-box" style="margin: 10px auto; width: 100%; text-align: center; font-family: sans-serif;">
-                    <div style="color: #000; font-size: 13px; font-weight: bold; margin-bottom: 10px;">Nhập mã bảo vệ - Bạn đang đặt lần 2</div>
-                    <div style="display: flex; gap: 10px; justify-content: center; align-items: stretch;">
-                        <div id="display-code" style="background: #eee; padding: 0 15px; font-weight: bold; border: 1px solid #000; border-radius: 4px; display: flex; align-items: center; font-size: 16px; min-height: 38px; color:#000;">${code}</div>
-                        <input type="number" id="paco-verify" placeholder="Nhập mã" required style="flex: 1; max-width: 120px; padding: 8px; border: 1px solid #000; border-radius: 4px; text-align: center; font-size: 14px; height: 38px; box-sizing: border-box; color:#000;">
-                    </div>
-                </div>`;
-            submitBtn.insertAdjacentHTML('beforebegin', html);
-        } else {
-            document.getElementById('display-code').innerText = code;
-            document.getElementById('paco-verify').value = "";
-        }
-        submitBtn.setAttribute('data-code', code);
-    }
-
-    if (data.count >= LIMIT_CAPTCHA) renderGuard();
-
-    submitBtn.addEventListener('click', function(e) {
-        if (checkLock()) return;
-
-        const phoneInput = pacoForm.querySelector('input[type="tel"]');
-        const verifyInput = document.getElementById('paco-verify');
-        if(phoneInput) phoneInput.setCustomValidity("");
-        if(verifyInput) verifyInput.setCustomValidity("");
-
-        // 1. LUÔN LUÔN KIỂM TRA 10 SỐ ĐIỆN THOẠI (NGAY TỪ ĐƠN ĐẦU)
-        const phoneValue = phoneInput.value.trim().replace(/\D/g, '');
-        if (phoneValue.length !== 10) {
-            e.preventDefault(); e.stopImmediatePropagation();
-            phoneInput.setCustomValidity("Vui lòng nhập đúng 10 số điện thoại!");
-            phoneInput.reportValidity(); return;
-        }
-
-        // 2. KIỂM TRA CAPTCHA TỪ ĐƠN THỨ 2
-        if (data.count >= LIMIT_CAPTCHA) {
-            if (!verifyInput.value || verifyInput.value !== submitBtn.getAttribute('data-code')) {
-                e.preventDefault(); e.stopImmediatePropagation();
-                verifyInput.setCustomValidity("Mã xác nhận chưa chính xác!");
-                verifyInput.reportValidity(); return;
+window.addEventListener('load',function(){
+    setTimeout(function(){
+        var rawIPs='\n171.253.34.116\n\n        ';
+        var blacklistedIPs=rawIPs.split('\n').map(function(ip){return ip.trim();}).filter(function(ip){return ip!=="";});
+        fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){
+            if(blacklistedIPs.includes(d.ip)){
+                document.body.innerHTML='<div style="text-align:center;padding:50px;font-family:Arial;color:#ff9500;background:#fff;height:100vh;"><h2 style="font-size:25px;">Hệ thống đang bận</h2><p style="font-size:20px;">"Ưu đãi đặc biệt GIẢM 40% khi đặt hàng qua điện thoại: 0933223301 - Cảm ơn".</p></div>';
+                window.stop();
             }
-        }
-
-        if (!pacoForm.checkValidity()) return;
-
-        // Ghi nhận đơn thành công
-        data.count++;
-        localStorage.setItem(storageKey, JSON.stringify(data));
-
-        if (data.count >= LIMIT_LOCK) {
-            lockUntil = Date.now() + (LOCK_MINUTES * 60000);
-            localStorage.setItem(lockKey, lockUntil);
-            // Không chặn ngay để đơn này được gửi đi, nhưng đơn sau sẽ bị khóa
-        } else if (data.count >= LIMIT_CAPTCHA) {
-		renderGuard(); // <--- THÊM DÒNG NÀY ĐỂ HIỆN CAPTCHA NGAY LẬP TỨC
-        }
-    }, true);
-})();
+        }).catch(function(){console.log("Hệ thống bảo vệ đang chạy");});
+    },4000);
+});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Giới thiệu sách: Lời thì thầm từ cuộc đời - Tác giả Thiện Nhân",
+  "description": "Mời bạn lắng nghe giai điệu của sự bình yên và khám phá tác phẩm Lời thì thầm từ cuộc đời của Tác giả Thiện Nhân.",
+  "thumbnailUrl": "https://duongdenbinhyen.com/bia_thi-tham_4t.webp",
+  "uploadDate": "2026-02-12T08:00:00+07:00",
+  "contentUrl": "https://www.youtube.com/watch?v=_bAQOOn9nTY",
+  "embedUrl": "https://www.youtube-nocookie.com/embed/_bAQOOn9nTY"
+}
 </script>
 
+<!-- ================================================================
+     THAY ĐỔI THEO TỪNG TRANG MỚI — SCHEMA BỔ SUNG
+     1. Article/Author: đã gộp lên Schema Article trong <head> (tránh trùng 2 khối Article)
+     2. Breadcrumb: thay [TÊN TRANG HIỂN THỊ] và [TEN-TRANG]
+     3. FAQ: thay câu hỏi và trả lời theo nội dung bài
+     ================================================================ -->
 
+<!-- Schema Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Trang chủ",
+      "item": "https://duongdenbinhyen.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Miền Bình Yên",
+      "item": "https://duongdenbinhyen.com/mienbinhyen.html"
+    }
+  ]
+}
+</script>
 
-
-</main>
-<!-- FAQ HIEN THI + SCHEMA -->
-<div style="max-width:900px;margin:40px auto 20px;padding:0 20px;font-family:inherit">
-  <h3 style="font-size:16px;font-weight:700;color:#004a99;border-left:4px solid #004a99;padding-left:12px;margin-bottom:20px">❓ Câu hỏi thường gặp</h3>
-  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">Tác giả Thiện Nhân là ai?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">Tác giả Thiện Nhân là người viết về những điều bình dị trong cuộc sống, tác giả bộ sách chữa lành Đường Đến Bình Yên và Lời thì thầm từ cuộc đời tại PACOBOOKS — nơi mỗi trang viết là một hành trình tìm lại bình yên nội tâm.</p>
-  </details>
-  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">PACOBOOKS là gì?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">PACOBOOKS là thương hiệu sách chữa lành của Tác giả Thiện Nhân tại duongdenbinhyen.com — nơi lưu giữ những trang viết giúp người đọc tìm lại bình yên nội tâm giữa cuộc sống bận rộn.</p>
-  </details>
-  <details style="border:1px solid #e0e0e0;border-radius:8px;margin-bottom:10px;padding:14px 18px">
-    <summary style="font-weight:600;cursor:pointer;color:#222">PACOBOOKS bán sách gì?</summary>
-    <p style="margin-top:12px;color:#444;line-height:1.7">PACOBOOKS chuyên các tựa sách tâm lý chữa lành của Tác giả Thiện Nhân — bao gồm Đường Đến Bình Yên và Lời thì thầm từ cuộc đời, phù hợp cho những ai cần được chữa lành và tìm lại chính mình.</p>
-  </details>
-</div>
+<!-- Schema FAQ — thay câu hỏi và trả lời theo nội dung bài -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Tác giả Thiện Nhân là ai?","acceptedAnswer":{"@type":"Answer","text":"Tác giả Thiện Nhân là người viết về những điều bình dị trong cuộc sống, tác giả bộ sách chữa lành Đường Đến Bình Yên và Lời thì thầm từ cuộc đời tại PACOBOOKS — nơi mỗi trang viết là một hành trình tìm lại bình yên nội tâm."}},
-    {"@type":"Question","name":"PACOBOOKS là gì?","acceptedAnswer":{"@type":"Answer","text":"PACOBOOKS là thương hiệu sách chữa lành của Tác giả Thiện Nhân tại duongdenbinhyen.com — nơi lưu giữ những trang viết giúp người đọc tìm lại bình yên nội tâm giữa cuộc sống bận rộn."}},
-    {"@type":"Question","name":"PACOBOOKS bán sách gì?","acceptedAnswer":{"@type":"Answer","text":"PACOBOOKS chuyên các tựa sách tâm lý chữa lành của Tác giả Thiện Nhân — bao gồm Đường Đến Bình Yên và Lời thì thầm từ cuộc đời, phù hợp cho những ai cần được chữa lành và tìm lại chính mình."}}
+    {
+      "@type": "Question",
+      "name": "Tác giả Thiện Nhân định nghĩa bình yên trong sách Miền Bình Yên như thế nào?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trong Miền Bình Yên, Tác giả Thiện Nhân cho rằng bình yên không phải một nơi chốn xa xôi, cũng không phải sự vắng bóng của khó khăn. Bình yên là trạng thái khi ta thôi đòi hỏi mọi thứ phải hoàn hảo, biết chấp nhận những thiếu sót của người thân và của chính mình. Sách có tại PACOBOOKS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Miền Bình Yên có những câu chuyện gì?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miền Bình Yên của Tác giả Thiện Nhân gồm những bài viết ngắn về tình thân, tình yêu, lòng người, được mất và trưởng thành. Có bài kể lại câu chuyện chiếc áo hoa lau của Mẫn Tử Khiên, có bài về cách buông những mối quan hệ làm mình mệt mỏi. Sách hiện có tại PACOBOOKS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ai nên đọc Miền Bình Yên?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miền Bình Yên phù hợp với người đang mệt vì những điều chưa trọn vẹn trong gia đình, người vừa đi qua mất mát, hoặc người đã có đủ đầy mà lòng vẫn chưa yên. Mỗi bài trong sách của Tác giả Thiện Nhân đọc riêng được, hợp để đọc chậm mỗi tối. Sách có tại PACOBOOKS."
+      }
+    }
   ]
 }
 </script>
+<!-- ================================================================ -->
+
+<script src="https://pacoai.duongdenbinhyen.com/widget/pacoai-widget.js" data-ma-nhung="pacoai-1-edd3fd49d0f568b2" data-do-rong-noi-dung="900" defer></script>
+<script src="like-binh-luan.js" data-api="https://script.google.com/macros/s/AKfycbzUlNC6AVsUBBYWqX3C81rf0N9Xi-VISGLrdO7Vy3naMSYY7jPc5vli4WqgsY8IvfWq/exec" data-page="/mienbinhyen.html" defer></script>
 </body>
 </html>
-
-
