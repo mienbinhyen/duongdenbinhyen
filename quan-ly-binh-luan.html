@@ -67,7 +67,7 @@ var SITE = 'https://duongdenbinhyen.com';
   function $(s) { return document.querySelector(s); }
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
   function post(o) { return fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(o) }).then(function (r) { return r.json(); }); }
-  function link(p) { return '<a href="' + SITE + esc(p) + '" target="_blank" rel="noopener">' + esc(p === '/' ? '/ (Trang chủ)' : p) + '</a>'; }
+  function link(p) { return '<a href="' + (p.indexOf('http') === 0 ? '' : SITE) + esc(p) + '" target="_blank" rel="noopener">' + esc(p === '/' ? '/ (Trang chủ)' : p) + '</a>'; }
 
   function load(o) {
     $('#reload').disabled = true;
@@ -90,7 +90,7 @@ var SITE = 'https://duongdenbinhyen.com';
     $('#tb').innerHTML = rows.map(function (x) { return '<tr><td>' + link(x.p) + '</td><td class="n">' + x.xem + '</td><td class="n">' + (x.tt || 0) + '</td><td class="n">' + x.like + '</td><td class="n">' + x.bl + '</td></tr>'; }).join('') || '<tr><td colspan="5" class="muted">Chưa có dữ liệu.</td></tr>';
     var q2 = $('#q2').value.toLowerCase(), f2 = $('#f2').value, nm = { hien: 'Đang hiện', an: 'Đã ẩn', cho: 'Chờ duyệt' };
     $('#cl').innerHTML = L.filter(function (c) { return (!f2 || c.st === f2) && (!q2 || (c.n + ' ' + c.t + ' ' + c.p).toLowerCase().indexOf(q2) >= 0); }).map(function (c) {
-      var u = SITE + esc(c.p.split('#')[0]) + '#bl-' + esc(c.id);
+      var u = (c.p.indexOf('http') === 0 ? '' : SITE) + esc(c.p.split('#')[0]) + '#bl-' + esc(c.id);
       return '<div class="cm"><small>' + esc(c.d) + ' · <a href="' + u + '" target="_blank" rel="noopener">' + esc(c.p === '/' ? '/ (Trang chủ)' : c.p) + '</a> · <b class="st-' + esc(c.st) + '">' + esc(nm[c.st] || c.st) + '</b></small>' +
         '<p><b>' + esc(c.n) + ':</b> ' + esc(c.t) + '</p>' +
         (c.r ? '<div class="rep"><b>PACOBOOKS trả lời:</b> ' + esc(c.r) + '</div>' : '') +
