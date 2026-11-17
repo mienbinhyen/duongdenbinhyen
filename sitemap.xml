@@ -20,7 +20,7 @@
 
   <url>
     <loc>https://duongdenbinhyen.com/cha-me-la-noi-binh-yen-nhat.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
   </url>
 
@@ -87,7 +87,7 @@
 
 <url>
     <loc>https://duongdenbinhyen.com/tu-do-tam-tri.html</loc>
-    <lastmod>2026-11-16</lastmod>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.9</priority>
   </url>
 
@@ -161,14 +161,14 @@
 <!-- Trang 24: sach-hay-ve-tam-ly-hoc.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-hay-ve-tam-ly-hoc.html</loc>
-  <lastmod>2026-06-22</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 25: sach-tam-ly-hoc-hanh-vi.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-tam-ly-hoc-hanh-vi.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -1621,14 +1621,14 @@
 <!-- Trang 215: nha-xuat-ban-tre.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-tre.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 216: nha-xuat-ban-kim-dong.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-kim-dong.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -2092,25 +2092,25 @@
 <!-- Trang 280: nha-gia-kim.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-gia-kim.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 281: dac-nhan-tam.html -->
 <url>
   <loc>https://duongdenbinhyen.com/dac-nhan-tam.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 282: tuoi-tre-dang-gia-bao-nhieu.html -->
 <url>
   <loc>https://duongdenbinhyen.com/tuoi-tre-dang-gia-bao-nhieu.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 283: hieu-ve-trai-tim.html -->
 <url>
   <loc>https://duongdenbinhyen.com/hieu-ve-trai-tim.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-17</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 284: di-tim-le-song.html -->
@@ -3059,6 +3059,12 @@
   <url>
     <loc>https://duongdenbinhyen.com/buoc-ra-anh-sang.html</loc>
     <lastmod>2026-11-14</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 433: sach-chua-lanh-dua-tre-ton-thuong-ben-trong.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/sach-chua-lanh-dua-tre-ton-thuong-ben-trong.html</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
