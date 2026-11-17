@@ -1163,9 +1163,9 @@ document.addEventListener("DOMContentLoaded",function(){
 
             formData.append("IP",clientIP);
             /* ECO-ADD: keepalive:true — giữ request gửi tiếp dù khách thoát trang ngay lập tức */
-            /* Đọc phản hồi của sheet — "Trùng NOMeta"/"Spam" thì KHÔNG báo đặt đơn. Lỗi đọc phản hồi thì xử lý như cũ (vẫn báo thành công + bắn) */
+            /* Đọc phản hồi của sheet — "Trùng"/"Spam" thì KHÔNG báo đặt đơn ("NOMeta" là việc của Facebook, TikTok vẫn báo). Lỗi đọc phản hồi thì xử lý như cũ (vẫn báo thành công + bắn) */
             var _xong=function(kq){
-                if(/NOMeta|Spam/.test(kq||'')){return;}
+                if(/Trùng|Spam/.test(kq||'')){return;}
 		var _ph=((pacoForm.querySelector('input[type=tel]')||{}).value||'').replace(/\D/g,'').replace(/^0/,'84');
 		if(!window.ttq){return;}
 		/* TikTok: gửi số điện thoại đã mã hóa SHA-256 (dạng +84...) để TikTok nhận diện khách tốt hơn; không gửi số thô */
