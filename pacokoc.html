@@ -31,8 +31,8 @@ a{color:inherit}
 .top nav{display:flex;gap:4px}
 .khau{flex:1;min-width:0;margin:0;text-align:center;font-family:'Lora',serif;font-style:italic;font-weight:600;font-size:17px;line-height:1.3;color:var(--vang)}
 .khau .kn{display:none}
-.nhan-tab{display:block;position:absolute;right:0;top:calc(100% + 10px);padding:6px 12px 6px 14px;border-radius:999px 0 0 999px;background:rgba(201,151,31,.72);color:var(--muc);font:700 11px/1.2 "Be Vietnam Pro",sans-serif;white-space:nowrap;box-shadow:0 6px 14px -6px rgba(15,28,61,.55);transform:translateX(100%);animation:nhan-ra 12s ease-in-out 1s infinite;pointer-events:none}
-@keyframes nhan-ra{0%{transform:translateX(100%)}10%,50%{transform:translateX(0)}60%,100%{transform:translateX(100%)}}
+.nhan-tab{display:block;position:absolute;right:0;top:calc(100% + 10px);padding:6px 12px 6px 14px;border-radius:999px 0 0 999px;background:rgba(201,151,31,.72);color:var(--muc);font:700 11px/1.2 "Be Vietnam Pro",sans-serif;white-space:nowrap;box-shadow:0 6px 14px -6px rgba(15,28,61,.55);clip-path:inset(0 0 0 100%);animation:nhan-ra 12s ease-in-out 1s infinite;pointer-events:none}
+@keyframes nhan-ra{0%{clip-path:inset(0 0 0 100%)}10%,50%{clip-path:inset(0 0 0 0)}60%,100%{clip-path:inset(0 0 0 100%)}}
 @media (prefers-reduced-motion:reduce){.nhan-tab{animation:none;display:none!important}}
 .khau{animation:khau-nhay 2.6s ease-in-out infinite}
 @keyframes khau-nhay{0%,100%{opacity:1}50%{opacity:.35}}
@@ -329,6 +329,12 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 .stats-item{background:#fff;padding:5px 14px;border-radius:50px;font-size:13px;color:var(--chu);border:1px solid var(--vien);box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;align-items:center;gap:5px;white-space:nowrap}
 .stats-value{font-weight:700;color:var(--muc)}
 </style>
+<!-- ECO 18/11: logo PACOBOOKS nền trắng -->
+<link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="https://duongdenbinhyen.com/koc-icon-180.png">
+<meta property="og:image" content="https://duongdenbinhyen.com/koc-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 </head>
 <body>
 <div class="trang">
