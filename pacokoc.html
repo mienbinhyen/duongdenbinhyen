@@ -529,15 +529,16 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 </div>
 
 <script>
-// DỮ LIỆU MẪU — sau này lấy từ Apps Script (Sheet PACOBOOKS-AFFILIATE)
-const DU_LIEU={thang:new Date().getMonth()+1,top:[
- {ten:"Góc đọc của Mây",don:64},{ten:"Sách & Trà chiều",don:52},{ten:"Mẹ Bỉm Đọc Sách",don:41},{ten:"An Nhiên Review",don:33},
- {ten:"Tủ sách nhỏ của Linh",don:27},{ten:"Đọc cùng Hà",don:21},{ten:"Bình yên mỗi ngày",don:16},{ten:"Thư phòng Gió",don:12}]};
+// Bảng xếp hạng thật từ Apps Script (Sheet PACOBOOKS-AFFILIATE): chỉ tên kênh + số đơn + hạng, không hiện tiền
 const hang=d=>d>50?"vang":d>30?"bac":"dong",tenHang={vang:"Vàng",bac:"Bạc",dong:"Đồng"};
-(function(){const g=document.getElementById("gay"),max=Math.max(...DU_LIEU.top.map(k=>k.don));
- DU_LIEU.top.forEach((k,i)=>{const h=hang(k.don),el=document.createElement("div");el.className="cuon "+h;el.setAttribute("role","listitem");
-  el.style.height=(40+60*k.don/max)+"%";el.style.animationDelay=(i*60)+"ms";el.setAttribute("aria-label",`Hạng ${i+1}: ${k.ten}, ${k.don} đơn, hạng ${tenHang[h]}`);
-  el.innerHTML=`<span class="ten">${k.ten}</span><span class="so num">${k.don}</span>`;g.appendChild(el)});
+(function(){const g=document.getElementById("gay"),bao=t=>{g.innerHTML=`<p style="margin:auto;padding:0 12px;text-align:center;color:var(--nhat,#666);font-size:15px;line-height:1.5;align-self:center">${t}</p>`};
+ fetch("https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco0kFjUmzFN8zw7zUn9l-fUxHligDLHzVEvXkUGhvwrx/exec?a=xepHang").then(r=>r.json()).then(d=>{
+  if(!d||!d.ok)throw 0;const top=d.top||[];if(!top.length)return bao("Kệ sách tháng "+d.thang+" đang chờ những KOC đầu tiên.<br>Bạn có thể là người đứng đầu!");
+  const max=Math.max(...top.map(k=>k.don));
+  top.forEach((k,i)=>{const h=hang(k.don),el=document.createElement("div");el.className="cuon "+h;el.setAttribute("role","listitem");
+   el.style.height=(40+60*k.don/max)+"%";el.style.animationDelay=(i*60)+"ms";el.setAttribute("aria-label",`Hạng ${i+1}: ${k.ten}, ${k.don} đơn, hạng ${tenHang[h]}`);
+   const t=document.createElement("span");t.className="ten";t.textContent=k.ten;const so=document.createElement("span");so.className="so num";so.textContent=k.don;el.append(t,so);g.appendChild(el)});
+ }).catch(()=>bao("Chưa tải được bảng xếp hạng, vui lòng tải lại trang."));
 })();
 </script>
 <script>
