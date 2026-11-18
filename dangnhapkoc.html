@@ -411,6 +411,15 @@ html,body{overflow-x:clip}
 .pdf-than p{text-align:center;color:#666;margin:40px 0}
 /* ECO 18/11: iPhone tự phóng to khi bấm vào ô nhập chữ nhỏ hơn 16px, làm trang bị tràn lề — giữ chữ ô nhập 16px trên điện thoại */
 @media (max-width:860px){input:not([type=checkbox]):not([type=radio]),textarea{font-size:18px!important}}
+/* ECO 18/11: điện thoại, thanh ghim trên gọn lại hết cỡ */
+@media (max-width:760px){
+#man-tai-khoan .ben .tren{padding:5px 10px!important;gap:0 8px!important}
+#man-tai-khoan .ben .tren img{height:24px!important}
+#man-tai-khoan .ben .ai b{padding-top:0!important;font-size:17px!important;line-height:1.2!important;white-space:nowrap;overflow:hidden;min-width:0}
+#man-tai-khoan .ben .ma-koc{font-size:11.5px!important;line-height:1.2}
+#man-tai-khoan .ben .ai a:not(.gt-koc){padding:1px 8px!important;font-size:12px!important}
+#man-tai-khoan .ben .ai a.gt-koc{margin-top:3px!important;padding:1px 8px!important;font-size:11.5px!important}
+}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -838,6 +847,10 @@ function dieuHuong(){const h=location.hash.slice(1)||"tong-quan";
  document.querySelectorAll(".ben a[data-v]").forEach(a=>{a.classList.toggle("dang",a.dataset.v===v);a.toggleAttribute("aria-current",a.dataset.v===v)});
  window.scrollTo(0,0)}
 addEventListener("hashchange",dieuHuong);dieuHuong();
+
+/* ECO 18/11: điện thoại, tên KOC dài thì tự thu nhỏ chữ cho vừa 1 dòng */
+function vuaTen(){const b=$("ten-koc");if(!b)return;b.style.removeProperty("font-size");if(innerWidth>760||!b.clientWidth)return;let c=17;while(b.scrollWidth>b.clientWidth&&c>11){c-=.5;b.style.setProperty("font-size",c+"px","important")}}
+new MutationObserver(vuaTen).observe($("ten-koc"),{childList:true,characterData:true,subtree:true});addEventListener("resize",vuaTen);addEventListener("hashchange",()=>setTimeout(vuaTen,0));setTimeout(vuaTen,0);
 </script>
 </body>
 </html>
