@@ -419,6 +419,17 @@ table.ds{width:100%;border-collapse:separate;border-spacing:0;min-width:1100px}
 #v-tong .dau-trang>select{grid-column:3}
 @media (max-width:600px){#v-tong .dau-trang{column-gap:8px}#v-tong .dau-trang h1{font-size:20px}#v-tong .dau-trang>select{font-size:12.5px;padding:0 4px 0 8px}.qt-cong{font-size:12px;gap:5px}.qt-cong input{width:32px;height:18px}.qt-cong input::after{width:14px;height:14px}.qt-cong input:checked::after{left:16px}}
 li.trong{display:block!important}li.trong small{white-space:normal}
+/* ECO 18/11: dòng phụ trong Việc cần duyệt chỉ 1 dòng, dài thì ẩn bằng "…" */
+#ds-viec li>div:not(.nut){min-width:0;overflow:hidden}
+#ds-viec li>div:not(.nut) small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* ECO 18/11: xem PDF ngay trong trang (không mở tab mới) */
+.pdf-nen{position:fixed;inset:0;z-index:20000;background:rgba(15,28,61,.72);display:flex;align-items:center;justify-content:center;padding:12px}
+.pdf-hop{background:#fff;border-radius:12px;width:min(860px,100%);height:min(92vh,100%);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.pdf-dau{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #e4e8ef}
+.pdf-dau b{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muc)}
+.pdf-than{flex:1;overflow:auto;background:#eef1f6;padding:10px;-webkit-overflow-scrolling:touch}
+.pdf-than canvas{display:block;width:100%;height:auto;margin:0 auto 10px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.pdf-than p{text-align:center;color:var(--nhat);margin:40px 0}
 </style>
 </head>
 <body>
@@ -560,7 +571,10 @@ function moTL(tl,ma,a){const i=KOC.findIndex(k=>k.ma===ma),k=KOC[i];if(!k)return
  tab(tl==="Sao kê"?"tien":"ho-so")}
 function thanhLy(ma,nut){if(!window.confirm("Thanh lý KOC "+ma+"? Tài khoản bị khóa hẳn, không mở lại được. Muốn hợp tác lại KOC phải đăng ký tài khoản mới."))return;goi("qtThanhLy",{token:layTk(),ma:ma},nut).then(()=>{bao("Đã thanh lý "+ma+". Đã báo KOC qua email.");taiQT()}).catch(loi)}
 function tamDung(ma,dung,nut){if(dung&&!window.confirm("Tạm dừng KOC "+ma+"? Đơn mới qua mã này sẽ không tính hoa hồng."))return;goi("qtTamDung",{token:layTk(),ma:ma,dung:dung},nut).then(()=>{bao(dung?"Đã tạm dừng "+ma+". Đã báo KOC qua email.":"Đã mở lại "+ma+". Đã báo KOC qua email.");taiQT()}).catch(loi)}
-function xemPDF(ma,nut,pl){const w=window.open("","_blank");goi("taiHopDong",{token:layTk(),qt:1,ma:ma,pl:pl||""}).then(r=>{const by=atob(r.b64),u=new Uint8Array(by.length);for(let i=0;i<by.length;i++)u[i]=by.charCodeAt(i);const url=URL.createObjectURL(new Blob([u],{type:"application/pdf"}));if(w)w.location=url;else location.href=url}).catch(x=>{if(w)w.close();loi(x)})}
+function napPdfJs(){if(window.pdfjsLib)return Promise.resolve(window.pdfjsLib);return new Promise((ok,hong)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";sc.onload=()=>{pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";ok(pdfjsLib)};sc.onerror=()=>hong(new Error("Không tải được trình xem PDF"));document.head.appendChild(sc)})}
+function xemPDF(ma,nut,pl){const ten=(pl?pl+" · ":"Hợp đồng ")+"KOC-"+ma,nen=document.createElement("div");nen.className="pdf-nen";nen.innerHTML=`<div class="pdf-hop" role="dialog" aria-label="${e(ten)}"><div class="pdf-dau"><b>${e(ten)}</b><a class="btn btn-vien btn-nho pdf-tai" style="display:none">Tải về</a><button class="btn btn-muc btn-nho" type="button">Đóng</button></div><div class="pdf-than"><p>Đang mở…</p></div></div>`;const esc=x=>{if(x.key==="Escape")dong()},dong=()=>{nen.remove();document.removeEventListener("keydown",esc)};nen.querySelector(".pdf-dau button").onclick=dong;nen.onclick=x=>{if(x.target===nen)dong()};document.addEventListener("keydown",esc);document.body.appendChild(nen);const than=nen.querySelector(".pdf-than");
+ goi("taiHopDong",{token:layTk(),qt:1,ma:ma,pl:pl||""}).then(r=>{const by=atob(r.b64),u=new Uint8Array(by.length);for(let i=0;i<by.length;i++)u[i]=by.charCodeAt(i);const tai=nen.querySelector(".pdf-tai");tai.href=URL.createObjectURL(new Blob([u],{type:"application/pdf"}));tai.download=r.ten||("KOC-"+ma+".pdf");tai.style.display="";
+  return napPdfJs().then(lib=>lib.getDocument({data:u.slice()}).promise).then(doc=>{than.innerHTML="";const rong=than.clientWidth-20,tl=Math.min(2,window.devicePixelRatio||1);let p=Promise.resolve();for(let i=1;i<=doc.numPages;i++)p=p.then(()=>doc.getPage(i)).then(tr=>{const v0=tr.getViewport({scale:1}),v=tr.getViewport({scale:rong/v0.width*tl}),cv=document.createElement("canvas");cv.width=v.width;cv.height=v.height;than.appendChild(cv);return tr.render({canvasContext:cv.getContext("2d"),viewport:v}).promise});return p})}).catch(x=>{than.innerHTML="<p>"+e(x&&x.message||"Không mở được tệp")+"</p>"})}
 
 function duyet(b,v,ma,bc){let vd="",ngay="";if(bc==="s1"||bc==="s2"){vd=window.prompt("Mã vận đơn (bỏ trống nếu chưa có):","");if(vd===null)return}
  if(bc==="rut"){ngay=window.prompt("Ngày trả (dd/mm/yyyy). Bỏ trống: báo KOC nhận chậm nhất vào ngày đối soát tiếp theo.","");if(ngay===null)return}

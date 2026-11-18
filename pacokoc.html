@@ -65,6 +65,7 @@ a{color:inherit}
 .cuon.vang{background:linear-gradient(90deg,#b07f13,#d8a92c 45%,#b07f13)}
 .cuon.bac{background:linear-gradient(90deg,#6b7687,#9aa5b5 45%,#6b7687)}
 .cuon.dong{background:linear-gradient(90deg,#8a5329,#b97a47 45%,#8a5329)}
+.cuon.cho{background:rgba(255,255,255,.04);border:1.5px dashed rgba(216,169,44,.55);color:rgba(255,255,255,.7)}.cuon.cho::before{display:none}.cuon.cho .ten{font-weight:500;font-size:11.5px;max-height:calc(100% - 14px)}
 .ke-chu{display:flex;gap:14px;color:#9fabc6;font-size:12.5px;padding:10px 2px 12px}
 .ke-chu i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px}
 @keyframes moc{from{transform:scaleY(.05);opacity:.3}to{transform:none;opacity:1}}
@@ -538,6 +539,8 @@ const hang=d=>d>50?"vang":d>30?"bac":"dong",tenHang={vang:"Vàng",bac:"Bạc",do
   top.forEach((k,i)=>{const h=hang(k.don),el=document.createElement("div");el.className="cuon "+h;el.setAttribute("role","listitem");
    el.style.height=(40+60*k.don/max)+"%";el.style.animationDelay=(i*60)+"ms";el.setAttribute("aria-label",`Hạng ${i+1}: ${k.ten}, ${k.don} đơn, hạng ${tenHang[h]}`);
    const t=document.createElement("span");t.className="ten";t.textContent=k.ten;const so=document.createElement("span");so.className="so num";so.textContent=k.don;el.append(t,so);g.appendChild(el)});
+  /* ECO 18/11: chỗ trống còn lại trên kệ (đủ 8 chỗ) mời KOC mới */
+  for(let i=top.length;i<8;i++){const el=document.createElement("div");el.className="cuon cho";el.setAttribute("role","listitem");el.style.height="60%";el.style.animationDelay=(i*60)+"ms";el.setAttribute("aria-label","Vị trí này đang chờ bạn");const t=document.createElement("span");t.className="ten";t.textContent="Đang chờ bạn";el.append(t);g.appendChild(el)}
  }).catch(()=>bao("Chưa tải được bảng xếp hạng, vui lòng tải lại trang."));
 })();
 </script>
