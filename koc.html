@@ -1279,10 +1279,14 @@ function pacoRef(v){return String(v||'').toUpperCase().replace(/[^A-Z0-9]/g,'').
     function hienTen(ma){
         var dai=document.getElementById('koc-dai');
         if(!ma){dai.hidden=true;return;}
+        /* ECO 18/11: hiện ngay tên KOC đã lưu trên máy, rồi kiểm tra lại với máy chủ */
+        var hien=function(ten){if(ten){document.getElementById('koc-ten').textContent=ten;dai.hidden=false;document.querySelector('.paco-slider-wrapper').style.setProperty('padding-top','0','important');}else{dai.hidden=true;document.querySelector('.paco-slider-wrapper').style.removeProperty('padding-top');}};
+        var cu='';try{cu=localStorage.getItem('paco_koc_ten_'+ma)||'';}catch(e){}
+        if(cu)hien(cu);
         fetch(PACO_KOC_API+'?a=tenKoc&ma='+encodeURIComponent(ma)).then(function(r){return r.json();}).then(function(d){
-            if(d&&d.ok&&d.ten){document.getElementById('koc-ten').textContent=d.ten;dai.hidden=false;document.querySelector('.paco-slider-wrapper').style.setProperty('padding-top','0','important');}
-            else{dai.hidden=true;document.querySelector('.paco-slider-wrapper').style.removeProperty('padding-top');}
-        }).catch(function(){dai.hidden=true;});
+            var ten=d&&d.ok&&d.ten?d.ten:'';try{if(ten)localStorage.setItem('paco_koc_ten_'+ma,ten);else localStorage.removeItem('paco_koc_ten_'+ma);}catch(e){}
+            if(ten!==cu)hien(ten);
+        }).catch(function(){if(!cu)dai.hidden=true;});
     }
     hienTen(ref);
     if(o)o.addEventListener('change',function(){var v=pacoRef(o.value);o.value=v;try{if(v)localStorage.setItem('paco_koc_ref',v);}catch(e){}hienTen(v);});

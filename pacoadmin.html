@@ -435,6 +435,9 @@ li.trong{display:block!important}li.trong small{white-space:normal}
 .pdf-than p{text-align:center;color:var(--nhat);margin:40px 0}
 /* ECO 18/11: iPhone tự phóng to khi bấm vào ô nhập chữ nhỏ hơn 16px, làm trang bị tràn lề — giữ chữ ô nhập 16px trên điện thoại */
 @media (max-width:860px){input:not([type=checkbox]):not([type=radio]),textarea{font-size:16px!important}}
+/* ECO 18/11: đang cập nhật số mới — khóa nút thao tác, hiện nhãn nhỏ */
+body.dang-tai [onclick*="duyet("],body.dang-tai [onclick*="tamDung("],body.dang-tai [onclick*="thanhLy("],body.dang-tai .qt-cong{opacity:.45;pointer-events:none}
+body.dang-tai::after{content:"Đang cập nhật…";position:fixed;left:50%;top:10px;transform:translateX(-50%);z-index:20001;background:#16264f;color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -519,7 +522,7 @@ const API_URL="https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco
 const $=i=>document.getElementById(i);
 const e=t=>String(t==null?"":t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 function layTk(){try{return localStorage.getItem("qt_tk")||""}catch(x){return ""}}
-function luuTk(t){try{t?localStorage.setItem("qt_tk",t):localStorage.removeItem("qt_tk")}catch(x){}}
+function luuTk(t){try{if(t)localStorage.setItem("qt_tk",t);else{localStorage.removeItem("qt_tk");localStorage.removeItem("qt_dl")}}catch(x){}}
 function goi(a,o,nut){
  if(nut){if(nut.disabled)return Promise.reject(new Error("dang"));nut.disabled=true;nut.dataset.chu=nut.textContent;nut.textContent="Đang xử lý…"}
  const xong=()=>{if(nut&&nut.isConnected){nut.disabled=false;nut.textContent=nut.dataset.chu}};
@@ -529,10 +532,11 @@ function goi(a,o,nut){
 function loi(x){if(x&&x.message!=="dang")bao(x&&x.message||"Có lỗi, vui lòng thử lại")}
 function quenQT(nut){const ten=($("qt-ten").value||window.prompt("Tên đăng nhập quản trị:","")||"").trim();if(!ten)return;goi("qtQuenMk",{ten:ten},nut).then(()=>{const pin=window.prompt("Nếu tên đúng, mã đã gửi về email của tài khoản. Nhập mã:","");if(!pin)return;const mk=window.prompt("Mật khẩu mới (ít nhất 4 ký tự):","");if(!mk)return;return goi("qtDatMk",{ten:ten,pin:pin.trim(),mk:mk},nut).then(()=>{$("qt-ten").value=ten;bao("Đã đổi mật khẩu. Vui lòng đăng nhập lại.")})}).catch(loi)}
 function vaoQT(){goi("qtDangNhap",{ten:$("qt-ten").value,mk:$("qt-mk").value},document.querySelector("#cua [data-chinh]")).then(d=>{luuTk(d.token);$("qt-mk").value="";moApp()}).catch(loi)}
-function moApp(){$("cua").classList.add("an");$("app").classList.remove("an");taiQT()}
+/* ECO 18/11: mở là hiện ngay số liệu lần trước, khóa các nút thao tác cho tới khi có số mới */
+function moApp(){$("cua").classList.add("an");$("app").classList.remove("an");let c=null;try{c=JSON.parse(localStorage.getItem("qt_dl")||"null")}catch(x){}if(c&&c.koc){document.body.classList.add("dang-tai");try{QT=c;KOC=c.koc;apQT(c.qt);veTatCa()}catch(x){}}taiQT()}
 function dangXuatQT(){luuTk("");location.reload()}
 let QT=null;
-function taiQT(){return goi("qtDuLieu",{token:layTk()}).then(d=>{QT=d;KOC=d.koc;apQT(d.qt);veTatCa()}).catch(loi)}
+function taiQT(){return goi("qtDuLieu",{token:layTk()}).then(d=>{QT=d;KOC=d.koc;apQT(d.qt);veTatCa();document.body.classList.remove("dang-tai");try{localStorage.setItem("qt_dl",JSON.stringify(d))}catch(x){}}).catch(loi)}
 function apQT(q){if(!q)return;document.body.classList.toggle("khoa-tt",!q.mo);$("qt-ai").textContent=q.ten+" · ";$("qt-cong").innerHTML=(q.phu||[]).map(x=>`<label class="qt-cong" title="Cho ${x.ten} thao tác"><input type="checkbox" ${x.mo?"checked":""} onchange="moQuyen(this,'${x.ten.replace(/'/g,"")}')">${x.ten}</label>`).join("")}
 function moQuyen(o,ten){goi("qtMoQuyen",{token:layTk(),ten:ten,mo:o.checked}).then(d=>bao((d.mo?"Đã bật":"Đã tắt")+" quyền thao tác của "+ten)).catch(x=>{o.checked=!o.checked;loi(x)})}
 document.querySelectorAll('form').forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();const b=f.querySelector('[data-chinh]');b&&b.click()}}));
