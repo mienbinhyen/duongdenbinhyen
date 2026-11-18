@@ -522,7 +522,7 @@ html,body{overflow-x:clip}
   <main class="chinh">
     <!-- Tổng quan -->
     <!-- ECO 18/11: Giới thiệu KOC xem ngay trong tài khoản (như tab Công khai của admin) -->
-<section class="vung an" id="v-gioi-thieu"><iframe id="khung-gt" title="Giới thiệu KOC" scrolling="no" style="display:block;width:100%;min-height:70vh;border:0;border-radius:12px;background:#16264f"></iframe></section>
+<section class="vung an" id="v-gioi-thieu"><iframe id="khung-gt" title="Giới thiệu KOC" style="position:fixed;z-index:4;border:0;background:#16264f;display:block"></iframe></section>
 <section class="vung" id="v-tong-quan">
       <div class="dau-trang"><div><h1><span id="chao">Chào Mây,</span><br class="xd"> chúc một ngày bình yên</h1><p id="tq-phu">Tháng 11 · cập nhật trực tuyến</p></div></div>
       <div class="luoi c4">
@@ -823,7 +823,10 @@ function bao(t){const b=document.getElementById("tb");b.textContent=t;b.classLis
 function sao(id){const t=document.getElementById(id).textContent,du=()=>{const v=document.createElement("textarea");v.value=t;document.body.appendChild(v);v.select();try{document.execCommand("copy")}catch(e){}v.remove()};if(navigator.clipboard)navigator.clipboard.writeText(t).catch(du);else du();bao("Đã sao chép")}
 function vao(){const nho=$("dn-nho").checked;goi("dangNhap",{ten:$("dn-ten").value.trim(),mk:$("dn-mk").value,nho:nho},document.querySelector("#man-dang-nhap [data-chinh]")).then(d=>{luuTk(d.token,nho);try{if(localStorage.getItem("koc_ma")!==d.ma){localStorage.removeItem("koc_dl")}localStorage.setItem("koc_ma",d.ma)}catch(x){}$("dn-mk").value="";DL=null;location.hash="tong-quan"}).catch(loi)}
 const VUNG=["tong-quan","doanh-so","don-hang","rut-tien","sach-video","hop-dong","tai-nguyen","gioi-thieu"];
-function moGT(){const f=$("khung-gt");if(f.src)return;f.onload=()=>{try{const d=f.contentDocument,st=d.createElement("style");st.textContent="header.top{display:none!important}.nhan-tab{display:none!important}body{background:#16264f!important}";d.head.appendChild(st);const b=d.createElement("base");b.target="_top";d.head.prepend(b);const cao=()=>{f.style.height=d.documentElement.scrollHeight+"px"};cao();new ResizeObserver(cao).observe(d.body);setTimeout(cao,1500)}catch(x){}};f.src="pacokoc.html"}
+function dtGT(){const f=$("khung-gt"),m=document.querySelector("#man-tai-khoan .menu"),k=$("man-tai-khoan");if(!f||!m||!k)return;const a=m.getBoundingClientRect(),b=k.getBoundingClientRect();f.style.top=Math.max(0,a.bottom)+"px";f.style.left=b.left+"px";f.style.width=b.width+"px";f.style.height=(innerHeight-Math.max(0,a.bottom))+"px"}
+addEventListener("resize",()=>{if(location.hash==="#gioi-thieu")dtGT()});
+/* ECO 18/11: Giới thiệu KOC hiện đầy khung dưới menu, y như tab Công khai của admin */
+function moGT(){const f=$("khung-gt");setTimeout(dtGT,0);if(f.src)return;f.onload=()=>{try{const d=f.contentDocument,b=d.createElement("base");b.target="_top";d.head.prepend(b)}catch(x){}};f.src="pacokoc.html"}
 function dieuHuong(){const h=location.hash.slice(1)||"tong-quan";
  document.querySelectorAll(".man").forEach(m=>m.classList.add("an"));
  if(["dang-nhap","quen-mat-khau","dang-ky"].includes(h)){document.getElementById("man-"+h).classList.remove("an");return}
