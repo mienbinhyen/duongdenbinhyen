@@ -2194,8 +2194,20 @@ document.addEventListener('DOMContentLoaded',function(){
             <div style="margin-bottom:15px;">
                 <input type="tel" name="Số điện thoại" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Số điện thoại - nhập đủ 10 số" required="">
             </div>
+            <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
             <div style="margin-bottom:15px;">
-                <input type="text" name="Địa chỉ nhận sách" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Địa chỉ chi tiết" required="">
+                <input type="text" name="Số nhà, thôn xóm" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Số nhà, Tên Đường (thôn/xóm)" required>
+            </div>
+            <div style="margin-bottom:15px;display:flex;gap:10px;">
+                <input type="text" name="Xã Phường" style="flex:1;min-width:0;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Xã/Phường" required>
+                <input type="text" name="Tỉnh Thành phố" style="flex:1;min-width:0;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="Thành phố/Tỉnh" required>
+            </div>
+            <div style="margin-bottom:15px;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;">
+                <label for="fKoc" style="min-width:0;text-align:right;font-size:14px;color:#0d3b7a;font-weight:600;line-height:1.3;">Nhập mã giới thiệu<br>KOC</label>
+                <input type="text" id="fKoc" style="width:100%;min-width:0;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;" placeholder="VD: PACO11" autocomplete="off" autocapitalize="characters" maxlength="12">
+            </div>
+            <div style="margin-bottom:15px;">
+                <textarea id="fGhiChu" maxlength="500" rows="2" placeholder="Ghi chú cho đơn hàng (nếu có)" style="width:100%;padding:12px 15px;border:1px solid #ccc;border-radius:8px;font-size:16px;box-sizing:border-box;display:block;background-color:#fafafa;color:#1a1a1a;font-family:Arial,sans-serif;resize:vertical;"></textarea>
             </div>
             <input type="hidden" name="Nguon_Don" value="Trang chủ">
             <div style="display:none;"><input type="text" name="confirm_email" value=""></div>
@@ -2755,9 +2767,13 @@ document.addEventListener("DOMContentLoaded",function(){
             if(!g.n){document.getElementById('daChon').scrollIntoView({behavior:'smooth',block:'center'});return;}
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG...";
             var formData=new FormData(pacoForm);formData.append("IP",clientIP);
-            fetch("https://script.google.com/macros/s/AKfycbwAGVaRQr7qtDZS_BMyrIdT5RjqqRUFPEAsq8iYwokUugB5E5Z3TQ3y-XRyMQE4pk-S/exec",{method:'POST',mode:'no-cors',body:formData})
-            .then(function(){
+            /* ECO 18/11: đơn trang chủ gửi về sheet PACOBOOKS-AFFILIATE (tab ĐƠN HÀNG, Nguồn đơn = Trang chủ) */
+            fetch(PACO_KOC_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',nguon:'Trang chủ',ref:pacoRef(document.getElementById('fKoc').value),ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:[formData.get("Số nhà, thôn xóm"),formData.get("Xã Phường"),formData.get("Tỉnh Thành phố")].map(function(x){return String(x||"").trim();}).filter(Boolean).join(", "),soCuon:g.n,soLuong:g.sl,sach:g.sach,bot:formData.get('confirm_email')||'',ghiChu:document.getElementById('fGhiChu').value,ip:clientIP||window.clientIP||""})})
+            .then(function(r){return r.json();})
+            .then(function(kq){
+                if(kq&&kq.ok===false){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";alert(kq.loi||'Chưa gửi được đơn, vui lòng thử lại.');return;}
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐƠN HÀNG ĐÃ GỬI THÀNH CÔNG - Cảm ơn";pacoForm.reset();
+                try{document.getElementById('fKoc').value=pacoRef(localStorage.getItem('paco_koc_ref'));}catch(e){}
                 pacoCapNhat();setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
             }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
         });
@@ -2772,6 +2788,19 @@ window.addEventListener('load',function(){
         fetch('https://api.ipify.org?format=json').then(function(r){return r.json();}).then(function(d){clientIP=d.ip;}).catch(function(){clientIP="Không lấy được";});
     },3000);
 });
+</script>
+
+<!-- Script 9: Mã KOC (ref) — ECO 18/11: tự điền mã nếu khách từng vào từ link KOC -->
+<script>
+var PACO_KOC_API='https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco0kFjUmzFN8zw7zUn9l-fUxHligDLHzVEvXkUGhvwrx/exec';
+function pacoRef(v){return String(v||'').toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,12);}
+(function(){
+    var o=document.getElementById('fKoc'),ref='';
+    try{ref=pacoRef(new URLSearchParams(location.search).get('ref'));}catch(e){}
+    try{if(ref)localStorage.setItem('paco_koc_ref',ref);else ref=pacoRef(localStorage.getItem('paco_koc_ref'));}catch(e){}
+    if(o&&ref)o.value=ref;
+    if(o)o.addEventListener('change',function(){var v=pacoRef(o.value);o.value=v;try{if(v)localStorage.setItem('paco_koc_ref',v);}catch(e){}});
+})();
 </script>
 
 <!-- Script 8: Captcha + Giới hạn đặt hàng -->

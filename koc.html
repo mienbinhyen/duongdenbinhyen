@@ -503,6 +503,10 @@
     #datsach .chon-moi { position: absolute; top: 4px; right: 4px; background: #b30000; color: #fff !important; font-style: normal; font-size: 9px; font-weight: bold; padding: 1px 5px; border-radius: 10px; }
     .da-chon { margin-top: 8px; padding: 6px 12px; background: #fff8e1; border: 1px solid #f5c518; border-radius: 8px; text-align: center; font-size: 14px; line-height: 1.4; }
     #datsach .da-chon b.tien { color: #b30000 !important; font-size: 21px; }
+    .chon-sl { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; font-size: 14px; color: #1a1a1a; font-weight: bold; }
+    .chon-sl button { width: 30px; height: 30px; border: 1px solid #b30000; background: #fff; color: #b30000; border-radius: 6px; font-size: 18px; line-height: 1; cursor: pointer; }
+    .chon-sl input { width: 46px; height: 30px; text-align: center; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; -moz-appearance: textfield; }
+    .chon-sl input::-webkit-outer-spin-button, .chon-sl input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
     .dc-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; line-height: 1.15; }
     #datsach .dc-goi { font-size: 16px; white-space: nowrap; }
     .dc-gia { white-space: nowrap; }
@@ -550,7 +554,7 @@
 
 
 <!-- ECO 18/11: dải tên KOC giới thiệu (ẩn khi không có mã hợp lệ) -->
-<div id="koc-dai" hidden style="margin-top:40px;padding:7px 12px;background:#fff8e6;border-bottom:1px solid var(--gold);color:#0d3b7a;font-family:Arial,sans-serif;font-size:14px;text-align:center;line-height:1.35;overflow-wrap:anywhere;">Sách được giới thiệu bởi <b id="koc-ten"></b></div>
+<div id="koc-dai" hidden style="margin-top:40px;padding:7px 14px 7px 100px;background:#fff8e6;border-bottom:1px solid var(--gold);color:#0d3b7a;font-family:Arial,sans-serif;font-size:14px;text-align:right;line-height:1.35;overflow-wrap:anywhere;">Sách được giới thiệu bởi <b id="koc-ten"></b></div>
 
 <!-- ============================================================
      SLIDER ẢNH BANNER CHÍNH
@@ -954,8 +958,12 @@
             <input type="text" name="Xã Phường" class="paco-input" style="flex:1;min-width:0;" placeholder="Xã/Phường" required>
             <input type="text" name="Tỉnh Thành phố" class="paco-input" style="flex:1;min-width:0;" placeholder="Thành phố/Tỉnh" required>
         </div>
+        <div class="paco-input-wrapper" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;">
+            <label for="fKoc" style="min-width:0;text-align:right;font-size:14px;color:#0d3b7a;font-weight:600;line-height:1.3;">Nhập mã giới thiệu<br>KOC</label>
+            <input type="text" id="fKoc" class="paco-input" style="width:100%;min-width:0;box-sizing:border-box;" placeholder="VD: PACO11" autocomplete="off" autocapitalize="characters" maxlength="12">
+        </div>
         <div class="paco-input-wrapper">
-            <input type="text" id="fKoc" class="paco-input" placeholder="Mã KOC (nếu có), ví dụ PACO11" autocomplete="off" autocapitalize="characters" maxlength="12">
+            <textarea id="fGhiChu" class="paco-input" maxlength="500" rows="2" placeholder="Ghi chú cho đơn hàng (nếu có)" style="font-family:Arial,sans-serif;resize:vertical;"></textarea>
         </div>
         <div class="chon-sach">
             <div class="chon-sach-title">Chọn sách bạn muốn nhận</div>
@@ -964,6 +972,7 @@
                 <label class="chon-item"><input type="checkbox" class="chon-cb" value="ddby" checked><img src="biaduongdenbinhyen11.webp" alt="" width="600" height="878" loading="lazy"><span>Đường Đến Bình Yên</span></label>
                 <label class="chon-item"><input type="checkbox" class="chon-cb" value="tt" checked><img src="biathitham11.webp" alt="" width="600" height="878" loading="lazy"><span>Lời Thì Thầm</span></label>
             </div>
+            <div class="chon-sl"><span>Số lượng:</span><button type="button" onclick="pacoDoiSL(-1)">−</button><input type="number" id="fSoLuong" name="Số lượng" value="1" min="1" max="99" inputmode="numeric"><button type="button" onclick="pacoDoiSL(1)">+</button></div>
             <div class="da-chon" id="daChon"></div>
         </div>
         <input type="hidden" name="Nguon_Don" value="tiktok">
@@ -1100,27 +1109,29 @@ var PACO_SACH={
     mby:{ten:'Miền Bình Yên',id:'mienbinhyen'}
 };
 var PACO_GIA={1:129000,2:245000,3:298000};
+function pacoSoLuong(){var el=document.getElementById('fSoLuong');var n=el?parseInt(el.value)||1:1;return Math.max(1,Math.min(99,n));}
 function pacoGoi(){
     var cs=[].slice.call(document.querySelectorAll('.chon-cb:checked')).map(function(c){return c.value;});
-    var n=cs.length,tien=PACO_GIA[n]||0,ids,goi;
+    var n=cs.length,sl=pacoSoLuong(),tien=(PACO_GIA[n]||0)*sl,ids,goi;
     if(n===3){ids=['tronbo3cuon'];goi='Trọn bộ 3 cuốn';}
     else if(n===2&&cs.indexOf('ddby')>-1&&cs.indexOf('tt')>-1){ids=['Combo Sách Miền Bình Yên'];goi='Bộ 2 cuốn';}
     else{ids=cs.map(function(k){return PACO_SACH[k].id;});goi=n===2?'Bộ 2 cuốn':(n===1?'1 cuốn lẻ':'');}
-    return {codes:cs,n:n,tien:tien,ids:ids,goi:goi,sach:cs.map(function(k){return PACO_SACH[k].ten;}).join(' + ')};
+    return {codes:cs,n:n,sl:sl,tien:tien,ids:ids,goi:goi,sach:cs.map(function(k){return PACO_SACH[k].ten;}).join(' + ')};
 }
 /* Dữ liệu gửi TikTok: danh sách sản phẩm + giá trị */
-function pacoTT(g){return {contents:g.ids.map(function(id){return {content_id:id,content_type:'product',quantity:1};}),content_type:'product',value:g.tien,currency:'VND'};}
+function pacoTT(g){return {contents:g.ids.map(function(id){return {content_id:id,content_type:'product',quantity:g.sl||1};}),content_type:'product',value:g.tien,currency:'VND'};}
 function pacoVnd(v){return v.toLocaleString('vi-VN')+'đ';}
 function pacoCapNhat(){
     var g=pacoGoi(),el=document.getElementById('daChon');
-    document.getElementById('fGoi').value=g.goi;
+    document.getElementById('fGoi').value=g.goi+(g.sl>1?' × '+g.sl:'');
     document.getElementById('fSach').value=g.sach;
     document.getElementById('fTien').value=g.tien?g.tien:'';
     if(!g.n){el.innerHTML='<span class="loi">Vui lòng chọn ít nhất 1 cuốn sách</span>';return g;}
-    var goc=156000*g.n,tk=goc-g.tien;
-    el.innerHTML='<div class="dc-row"><b class="dc-goi">'+g.goi+'</b><span class="dc-gia"><s>'+pacoVnd(goc)+'</s> <b class="tien">'+pacoVnd(g.tien)+'</b></span></div><div class="dc-sub">Tiết kiệm '+pacoVnd(tk)+' · Miễn ship toàn quốc</div>'+(g.n<3?'<div class="goi-goi-y">👉 Chọn đủ 3 cuốn chỉ 298.000đ</div>':'');
+    var goc=156000*g.n*g.sl,tk=goc-g.tien;
+    el.innerHTML='<div class="dc-row"><b class="dc-goi">'+g.goi+(g.sl>1?' × '+g.sl:'')+'</b><span class="dc-gia"><s>'+pacoVnd(goc)+'</s> <b class="tien">'+pacoVnd(g.tien)+'</b></span></div><div class="dc-sub">Tiết kiệm '+pacoVnd(tk)+' · Miễn ship toàn quốc</div>'+(g.n<3?'<div class="goi-goi-y">👉 Chọn đủ 3 cuốn chỉ 298.000đ</div>':'');
     return g;
 }
+function pacoDoiSL(d){var el=document.getElementById('fSoLuong');el.value=Math.max(1,Math.min(99,pacoSoLuong()+d));pacoCapNhat();}
 function pacoGoForm(){
     var g=pacoCapNhat();
     /* TikTok: AddToCart chỉ báo 1 lần mỗi lượt xem (Ông Paco chốt 2026-11-17) */
@@ -1133,6 +1144,7 @@ function pacoChonGoi(codes){
 }
 document.addEventListener('DOMContentLoaded',function(){
     document.querySelectorAll('.chon-cb').forEach(function(c){c.addEventListener('change',pacoCapNhat);});
+    var sl=document.getElementById('fSoLuong');if(sl)sl.addEventListener('input',pacoCapNhat);
     pacoCapNhat();
 });
 </script>
@@ -1192,7 +1204,7 @@ document.addEventListener("DOMContentLoaded",function(){
             };
             /* ECO 18/11: gửi đơn về Apps Script affiliate (tab ĐƠN HÀNG, cột Mã KOC) */
             var _ref=pacoRef(document.getElementById('fKoc').value);
-            fetch(PACO_KOC_API,{method:'POST',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',ref:_ref,ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:diaChiGop,soCuon:g.n,sach:g.sach,ip:window.clientIP||""})})
+            fetch(PACO_KOC_API,{method:'POST',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',nguon:'Trang KOC',ref:_ref,ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:diaChiGop,soCuon:g.n,soLuong:g.sl,sach:g.sach,bot:formData.get('confirm_email')||'',ghiChu:document.getElementById('fGhiChu').value,ip:window.clientIP||""})})
             .then(function(r){return r.json();})
             .then(function(kq){if(kq&&kq.ok===false){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";alert(kq.loi||'Chưa gửi được đơn, vui lòng thử lại.');return;}_xong(kq&&kq.kq);_thanhCong();})
             .catch(function(err){console.error('Không đọc được phản hồi:',err);_xong('');_thanhCong();});
