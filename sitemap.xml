@@ -14,7 +14,7 @@
 
   <url>
     <loc>https://duongdenbinhyen.com/hoa_quynh_toa_sach_tac_gia_thien_nhan.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <priority>0.8</priority>
   </url>
 
@@ -182,21 +182,21 @@
 <!-- Trang 27: sach-tu-chua-lanh.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-tu-chua-lanh.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 28: doc-sach-hay.html -->
 <url>
   <loc>https://duongdenbinhyen.com/doc-sach-hay.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 29: mua-sach-online.html -->
 <url>
   <loc>https://duongdenbinhyen.com/mua-sach-online.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -217,7 +217,7 @@
 <!-- Trang 30: sach-tam-ly-hay-nhat.html -->
 <url>
 <loc>https://duongdenbinhyen.com/sach-tam-ly-hay-nhat.html</loc>
-<lastmod>2026-06-09</lastmod>
+<lastmod>2026-11-18</lastmod>
 <priority>0.8</priority>
 </url>
 
@@ -297,7 +297,7 @@
 <!-- Trang 40: the-nao-la-mot-quyen-sach-hay.html -->
 <url>
   <loc>https://duongdenbinhyen.com/the-nao-la-mot-quyen-sach-hay.html</loc>
-  <lastmod>2026-06-13</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -1635,7 +1635,7 @@
 <!-- Trang 217: nha-xuat-ban-giao-duc-viet-nam.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-giao-duc-viet-nam.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -2116,19 +2116,19 @@
 <!-- Trang 284: di-tim-le-song.html -->
 <url>
   <loc>https://duongdenbinhyen.com/di-tim-le-song.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 285: hoang-tu-be.html -->
 <url>
   <loc>https://duongdenbinhyen.com/hoang-tu-be.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 286: cay-cam-ngot-cua-toi.html -->
 <url>
   <loc>https://duongdenbinhyen.com/cay-cam-ngot-cua-toi.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-18</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 287: tu-duy-nhanh-va-cham.html -->
@@ -3065,6 +3065,12 @@
   <url>
     <loc>https://duongdenbinhyen.com/sach-chua-lanh-dua-tre-ton-thuong-ben-trong.html</loc>
     <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 434: thuyet-mac-ke-ho.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/thuyet-mac-ke-ho.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
