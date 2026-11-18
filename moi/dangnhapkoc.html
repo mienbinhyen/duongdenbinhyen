@@ -420,6 +420,73 @@ html,body{overflow-x:clip}
 #man-tai-khoan .ben .ai a:not(.gt-koc){padding:1px 8px!important;font-size:12px!important}
 #man-tai-khoan .ben .ai a.gt-koc{margin-top:3px!important;padding:1px 8px!important;font-size:11.5px!important}
 }
+/* ===== GIAO DIỆN MỚI 2026 (ECO 19/11) — chỉ đổi giao diện, giữ nguyên cơ chế ===== */
+:root{--muc:#1b2747;--muc-2:#25365f;--muc-dam:#141d36;--vang:#c9a14a;--giay:#f3f2ef;--chu:#141b2d;--nhat:#7b8191;--vien:#ebe8e1;--r:20px}
+body{background:var(--giay)!important;color:var(--chu);-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dau-trang h1,.the h2{font-family:"Be Vietnam Pro",system-ui,sans-serif!important;font-weight:700!important;letter-spacing:-.3px;color:var(--chu)!important}
+.the,.khung,.form-cong .khung{background:#fff!important;border:0!important;border-radius:var(--r)!important;box-shadow:0 1px 2px rgba(20,27,45,.04),0 4px 16px rgba(20,27,45,.04)!important}
+.btn{border-radius:14px!important;font-weight:600!important;box-shadow:none!important}
+.btn-vang{background:#e2c47a!important;color:var(--muc)!important;border-color:#e2c47a!important}
+.btn-muc{background:var(--muc)!important;color:#fff!important;border-color:var(--muc)!important}
+.btn-vien{background:#fff!important;color:var(--muc)!important;border:1px solid var(--vien)!important}
+input:not([type=checkbox]):not([type=radio]),select,textarea{border-radius:12px!important;border:1px solid var(--vien)!important;background:#faf9f7!important;box-shadow:none!important}
+input:focus,select:focus,textarea:focus{border-color:#c9a14a!important;background:#fff!important;outline:0!important;box-shadow:0 0 0 3px rgba(201,161,74,.18)!important}
+/* thanh trên + menu: nền sáng */
+.ben{background:transparent!important}
+.ben .tren,#man-tai-khoan .ben .tren{background:rgba(250,249,246,.92)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--chu)!important;border-bottom:1px solid var(--vien)!important}
+.ben .tren img,#man-tai-khoan .ben .tren img{filter:brightness(0) saturate(100%) invert(12%) sepia(24%) saturate(1900%) hue-rotate(196deg) brightness(92%) contrast(94%)}
+.ben .slogan-tk{color:#8a6a1f!important}
+#man-tai-khoan .ben .ai b{color:var(--chu)!important;text-shadow:none!important;font-family:"Be Vietnam Pro",sans-serif!important;font-weight:700!important}
+#man-tai-khoan .ben .ma-koc{color:var(--nhat)!important}
+#man-tai-khoan .ben .ai a{color:var(--muc)!important;border:1px solid var(--vien)!important;background:#fff!important}
+#man-tai-khoan .ben .ai a.gt-koc{color:#8a6a1f!important;border-color:#e8d9b4!important;background:#fbf6ea!important}
+#man-tai-khoan .ben .menu{background:var(--giay)!important;color:var(--chu)!important;padding-top:10px!important}
+.ben .menu a{color:#5d6475!important;border-radius:14px!important}
+.ben .menu a svg{stroke:#8a6a1f}
+.ben .menu a.dang{background:var(--muc)!important;color:#fff!important}
+.ben .menu a.dang svg{stroke:#e2c47a}
+/* Tổng quan: thẻ số tiền nổi bật, còn lại thẻ trắng */
+.chiso{border-radius:var(--r)!important}
+.chiso .nhan{color:var(--nhat)!important}
+.chiso .gt{color:var(--chu)!important;letter-spacing:-.5px}
+.chiso.noi{background:linear-gradient(155deg,#1b2747 0%,#2a3d6b 100%)!important;position:relative;overflow:hidden}
+.chiso.noi::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(226,196,122,.28),transparent 70%);pointer-events:none}
+.chiso.noi .nhan,.chiso.noi .phu{color:#b8c2da!important}
+.chiso.noi .gt{color:#fff!important}
+.chiso.noi .phu{color:#e2c47a!important;font-weight:600}
+.lk{border:0!important;background:#f6f4ef!important;border-radius:14px!important}
+.lk code{color:var(--chu)!important}
+.bang-xh li{border-bottom-color:#f1efea!important}
+.bang-xh li.toi{background:#fbf6ea!important;border-radius:12px!important}
+.bang-xh i{display:inline-grid;place-items:center;width:24px!important;height:24px;border-radius:50%;background:#f3f2ef;font-size:12px;font-weight:700}
+.bang-xh li.toi i{background:#e2c47a;color:var(--muc)}
+.dau-trang p,.the>p{color:var(--nhat)!important}
+.chan-tk,footer{background:var(--muc-dam)!important}
+@media (max-width:760px){
+ .chinh{padding:16px 14px 40px!important}
+ .luoi{gap:10px!important}
+ .dau-trang h1{font-size:22px!important;line-height:1.3}
+ .the{padding:16px!important}
+ .the h2{font-size:17px!important}
+ .chiso{padding:14px!important}
+ .chiso .gt{font-size:22px!important}
+ .chiso.noi{grid-column:1/-1;padding:18px!important}
+ .chiso.noi .nhan{font-size:14px!important}
+ .chiso.noi .gt{font-size:32px!important}
+ #v-tong-quan .luoi.c4{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+ #v-tong-quan .chiso:not(.noi){padding:12px 10px!important}
+ #v-tong-quan .chiso:not(.noi) .nhan{font-size:12.5px!important;line-height:1.3}
+ #v-tong-quan .chiso:not(.noi) .gt{font-size:18px!important}
+ #v-tong-quan .chiso:not(.noi) .phu{font-size:11.5px!important;line-height:1.3}
+ .the h2{font-size:18px!important}
+}
+.ghim-dk{background:rgba(250,249,246,.94)!important;border-bottom:1px solid var(--vien)!important;box-shadow:none!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.ghim-dk img{filter:brightness(0) saturate(100%) invert(12%) sepia(24%) saturate(1900%) hue-rotate(196deg) brightness(92%) contrast(94%)}
+.ghim-dk .dn-cau,.ghim-dk span{color:#8a6a1f!important}
+.ghim-dk .dk-dn{background:transparent!important}
+.ghim-dk .dk-dn b{background:var(--muc)!important;color:#fff!important;border:0!important;border-radius:12px!important}
+.cong-trai{background:linear-gradient(160deg,#1b2747 0%,#2a3d6b 100%)!important}
+/* ===== HẾT GIAO DIỆN MỚI ===== */
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
