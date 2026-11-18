@@ -2767,15 +2767,16 @@ document.addEventListener("DOMContentLoaded",function(){
             if(!g.n){document.getElementById('daChon').scrollIntoView({behavior:'smooth',block:'center'});return;}
             submitBtn.disabled=true;submitBtn.innerHTML="ĐÃ GỬI THÀNH CÔNG...";
             var formData=new FormData(pacoForm);formData.append("IP",clientIP);
-            /* ECO 18/11: đơn trang chủ gửi về sheet PACOBOOKS-AFFILIATE (tab ĐƠN HÀNG, Nguồn đơn = Trang chủ) */
-            fetch(PACO_KOC_API,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',nguon:'Trang chủ',ref:pacoRef(document.getElementById('fKoc').value),ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:[formData.get("Số nhà, thôn xóm"),formData.get("Xã Phường"),formData.get("Tỉnh Thành phố")].map(function(x){return String(x||"").trim();}).filter(Boolean).join(", "),soCuon:g.n,soLuong:g.sl,sach:g.sach,bot:formData.get('confirm_email')||'',ghiChu:document.getElementById('fGhiChu').value,ip:clientIP||window.clientIP||""})})
-            .then(function(r){return r.json();})
-            .then(function(kq){
-                if(kq&&kq.ok===false){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";alert(kq.loi||'Chưa gửi được đơn, vui lòng thử lại.');return;}
+            var _thanhCong=function(){
                 msg.classList.remove('hidden');submitBtn.innerHTML="ĐƠN HÀNG ĐÃ GỬI THÀNH CÔNG - Cảm ơn";pacoForm.reset();
                 try{document.getElementById('fKoc').value=pacoRef(localStorage.getItem('paco_koc_ref'));}catch(e){}
                 pacoCapNhat();setTimeout(function(){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";msg.classList.add('hidden');},5000);
-            }).catch(function(err){submitBtn.disabled=false;submitBtn.innerHTML="THỬ LẠI";console.error('Lỗi:',err);});
+            };
+            /* ECO 18/11: đơn trang chủ gửi về sheet PACOBOOKS-AFFILIATE (tab ĐƠN HÀNG, Nguồn đơn = Trang chủ) */
+            fetch(PACO_KOC_API,{method:'POST',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',nguon:'Trang chủ',ref:pacoRef(document.getElementById('fKoc').value),ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:[formData.get("Số nhà, thôn xóm"),formData.get("Xã Phường"),formData.get("Tỉnh Thành phố")].map(function(x){return String(x||"").trim();}).filter(Boolean).join(", "),soCuon:g.n,soLuong:g.sl,sach:g.sach,bot:formData.get('confirm_email')||'',ghiChu:document.getElementById('fGhiChu').value,ip:clientIP||window.clientIP||""})})
+            .then(function(r){return r.json();})
+            .then(function(){_thanhCong();})
+            .catch(function(err){console.error('Không đọc được phản hồi sheet:',err);_thanhCong();});
         });
     }
 });

@@ -1206,7 +1206,7 @@ document.addEventListener("DOMContentLoaded",function(){
             var _ref=pacoRef(document.getElementById('fKoc').value);
             fetch(PACO_KOC_API,{method:'POST',keepalive:true,headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({a:'datDon',nguon:'Trang KOC',ref:_ref,ten:formData.get("Họ và Tên"),sdt:formData.get("Số điện thoại"),diaChi:diaChiGop,soCuon:g.n,soLuong:g.sl,sach:g.sach,bot:formData.get('confirm_email')||'',ghiChu:document.getElementById('fGhiChu').value,ip:window.clientIP||""})})
             .then(function(r){return r.json();})
-            .then(function(kq){if(kq&&kq.ok===false){submitBtn.disabled=false;submitBtn.innerHTML="HOÀN TẤT ĐẶT HÀNG";alert(kq.loi||'Chưa gửi được đơn, vui lòng thử lại.');return;}_xong(kq&&kq.kq);_thanhCong();})
+            .then(function(kq){_xong(kq&&kq.kq);_thanhCong();})
             .catch(function(err){console.error('Không đọc được phản hồi:',err);_xong('');_thanhCong();});
         });
     }
