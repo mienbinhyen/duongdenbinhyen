@@ -154,7 +154,7 @@
 <!-- Trang 23: sach-tam-ly-hoc.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-tam-ly-hoc.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -312,28 +312,28 @@
 <!-- Trang 41: tim-lai-chinh-minh.html -->
 <url>
   <loc>https://duongdenbinhyen.com/tim-lai-chinh-minh.html</loc>
-  <lastmod>2026-06-22</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 42: lam-sao-de-binh-yen-hon.html -->
 <url>
   <loc>https://duongdenbinhyen.com/lam-sao-de-binh-yen-hon.html</loc>
-  <lastmod>2026-06-22</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 43: song-giua-thanh-pho-ma-long-trong-rong.html -->
 <url>
   <loc>https://duongdenbinhyen.com/song-giua-thanh-pho-ma-long-trong-rong.html</loc>
-  <lastmod>2026-06-22</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 44: sach-hay-khi-buon.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-hay-khi-buon.html</loc>
-  <lastmod>2026-06-22</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -1642,14 +1642,14 @@
 <!-- Trang 218: nha-xuat-ban-hoi-nha-van.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-hoi-nha-van.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 219: nha-xuat-ban-chinh-tri-quoc-gia-su-that.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-chinh-tri-quoc-gia-su-that.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -2134,19 +2134,19 @@
 <!-- Trang 287: tu-duy-nhanh-va-cham.html -->
 <url>
   <loc>https://duongdenbinhyen.com/tu-duy-nhanh-va-cham.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 288: sapiens-luoc-su-loai-nguoi.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sapiens-luoc-su-loai-nguoi.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 289: suc-manh-cua-thoi-quen.html -->
 <url>
   <loc>https://duongdenbinhyen.com/suc-manh-cua-thoi-quen.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-19</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 290: atomic-habits.html -->
@@ -3071,6 +3071,12 @@
   <url>
     <loc>https://duongdenbinhyen.com/thuyet-mac-ke-ho.html</loc>
     <lastmod>2026-11-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 435: hieu-het-ve-tam-ly-hoc.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/hieu-het-ve-tam-ly-hoc.html</loc>
+    <lastmod>2026-11-19</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
