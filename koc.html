@@ -176,7 +176,7 @@
     .paco-book-pair {
         width: auto; margin: 25px 15px;
         border: 1px solid rgba(255,255,255,0.12);
-        border-radius: 12px; padding: 18px;
+        border-radius: 12px; padding: 0 0 14px; overflow: hidden;
         display: flex; flex-direction: column; align-items: center;
         justify-content: center; gap: 10px;
         background-color: rgba(255,255,255,0.5);
@@ -184,18 +184,19 @@
     }
     .paco-book-images {
         display: flex; justify-content: space-between; align-items: flex-end; gap: 0;
-        width: 100%; padding: 0 2px;
+        width: 100%; padding: 0;
     }
     .paco-book-pair img {
         width: 30.5%; height: auto;
         border-radius: 4px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
-    .paco-book-images a { width: 30.5%; display: block; }
+    .paco-book-images a { width: 32.6%; display: block; }
     .paco-book-images a img { width: 100%; display: block; }
     #sach-mby, #sach-ddby, #sach-tt { scroll-margin-top: 15px; }
     html { scroll-behavior: smooth; }
     .paco-book-info { line-height: 1.3; text-align: center; }
+    .paco-book-pair .paco-book-info { padding: 10px 6px 0; box-sizing: border-box; border-top: 1px solid rgba(13,33,55,0.15); }
 
     /* ============================================================
        KHỐI NỘI DUNG SECTION — DÙNG CHUNG
@@ -524,7 +525,7 @@
 .sl-koc .chon-sl button{width:30px;height:28px;flex:none;font-size:18px;margin-top:4px}
 .sl-koc .chon-sl input{width:30px;height:28px;margin-top:4px;flex:none;border:0;background:transparent;font-size:16px;font-weight:normal;padding:0}
 .sl-koc #fKoc{height:48px!important;border-radius:8px!important}
-.sl-koc>*{position:relative}.sl-koc .nhan-vien{position:absolute;left:50%;transform:translateX(-50%);top:-6px;padding:0 5px;font-size:11px;line-height:12px;font-weight:400;letter-spacing:0;font-style:normal;font-family:Arial,sans-serif;color:#333;white-space:nowrap;background:linear-gradient(to bottom,transparent 50%,#fafafa 50%);pointer-events:none;z-index:1}.sl-koc .chon-sl .nhan-vien{top:-7px}
+.sl-koc>*{position:relative}.sl-koc .nhan-vien{position:absolute;left:50%;transform:translateX(-50%);top:-7px;padding:0 5px;font-size:12.5px;line-height:14px;font-weight:400;letter-spacing:0;font-style:normal;font-family:Arial,sans-serif;color:#333;white-space:nowrap;background:linear-gradient(to bottom,transparent 50%,#fafafa 50%);pointer-events:none;z-index:1}.sl-koc .chon-sl .nhan-vien{top:-8px}
 @media (max-width:480px){.sl-koc .chon-sl{justify-content:center;gap:10px;padding:0 6px}.sl-koc .chon-sl span{display:none}.sl-koc .chon-sl button{width:34px;height:28px}.sl-koc .chon-sl input{width:34px}}
 
     .dc-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; line-height: 1.15; }
@@ -711,7 +712,7 @@
         </div>
     </div>
     <p style="font-size:17px;color:#e8e8e8;font-weight:bold;font-style:italic;">⚡ Chỉ còn 20 suất ưu đãi cuối cùng trong tuần!</p>
-    <button class="paco-buy-btn" onclick="pacoChonGoi(['ddby','tt','mby']);">MUA TRỌN BỘ - GIẢM 36%</button>
+    <button class="paco-buy-btn" onclick="pacoChonGoi(['ddby','tt','mby']);" style="white-space:nowrap;padding:12px 8px;font-size:15px;">MUA TRỌN BỘ - GIẢM 36%</button>
 </div>
 
 <!-- ============================================================
