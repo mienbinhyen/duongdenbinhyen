@@ -14,14 +14,14 @@ body{overflow-x:hidden}
 :root{--muc:#16264f;--muc-2:#22356a;--muc-dam:#0f1c3d;--vang:#c9971f;--giay:#f5f6f8;--chu:#1d2433;--nhat:#5b6475;--vien:#dfe3ea;--dong:#a8693a;--bac:#7f8a9a;--vangh:#c9971f;--r:14px}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--chu);background:#d0e8e0;line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+body{font-family:"Be Vietnam Pro",system-ui,sans-serif;color:var(--chu);background:var(--giay);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--muc);line-height:1.25;font-weight:600}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--vang);outline-offset:2px;border-radius:4px}
 .num{font-variant-numeric:tabular-nums}
 .nw{white-space:nowrap}
-.trang{max-width:900px;margin:0 auto;background:var(--giay);overflow-x:clip}
-.wrap{padding:0 28px}
+.trang{max-width:none;margin:0 auto;background:var(--giay);overflow-x:clip}
+.wrap{padding:0 28px;max-width:1140px;margin:0 auto}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;height:42px;padding:0 20px;border-radius:999px;font:600 16px/1 "Be Vietnam Pro",sans-serif;text-decoration:none;cursor:pointer;border:1.5px solid transparent;white-space:nowrap;transition:background .15s}
 .btn-vang{background:var(--vang);color:#fff}.btn-vang:hover{background:#b3851a}
@@ -35,6 +35,7 @@ a{color:inherit}
 .khau{flex:1;min-width:0;margin:0;text-align:center;font-family:'Lora',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.3;color:var(--vang)}
 .khau .kn{display:none}
 .nhan-tab{display:block;position:absolute;right:0;top:calc(100% + 10px);padding:6px 12px 6px 14px;border-radius:999px 0 0 999px;background:rgba(201,151,31,.72);color:var(--muc);font:700 12.5px/1.2 "Be Vietnam Pro",sans-serif;white-space:nowrap;box-shadow:0 6px 14px -6px rgba(15,28,61,.55);clip-path:inset(0 0 0 100%);animation:nhan-ra 12s ease-in-out 1s infinite;pointer-events:none}
+@media (min-width:1141px){.nhan-tab{right:calc((100% - 1140px)/2 + 28px);border-radius:999px}}
 @keyframes nhan-ra{0%{clip-path:inset(0 0 0 100%)}10%,50%{clip-path:inset(0 0 0 0)}60%,100%{clip-path:inset(0 0 0 100%)}}
 @media (prefers-reduced-motion:reduce){.nhan-tab{animation:none;display:none!important}}
 .khau{animation:khau-nhay 2.6s ease-in-out infinite}
@@ -45,7 +46,7 @@ a{color:inherit}
 @media (max-width:350px){.khau{display:none}}
 
 /* Mở đầu */
-.dau{background:var(--muc);color:#fff;padding:28px 0 36px;border-bottom:3px solid var(--vang)}
+.dau{background:linear-gradient(115deg,#213769 0%,#2c4a88 100%);color:#fff;padding:28px 0 36px;border-bottom:3px solid var(--vang)}
 .dau .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:center}
 .loimoi h1{color:#fff;font-size:clamp(28px,3.6vw,37px);margin-bottom:12px}
 .loimoi p{color:#d5dbea;margin-bottom:18px}
@@ -332,6 +333,60 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 .stats-item{background:#fff;padding:5px 14px;border-radius:50px;font-size:14.5px;color:var(--chu);border:1px solid var(--vien);box-shadow:0 2px 6px rgba(0,0,0,.06);display:flex;align-items:center;gap:5px;white-space:nowrap}
 .stats-value{font-weight:700;color:var(--muc)}
 @media (max-width:400px){.ten-sach li{flex-wrap:wrap;row-gap:0}.ten-sach .nxb{flex-basis:100%;padding-left:28px;margin-left:0}}
+
+/* Thẻ AFFILIATE cạnh bảng hoa hồng */
+.hh-luoi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;align-items:stretch}
+.hh-luoi>.the{order:1}
+@media (min-width:861px){.hh-luoi>.the .hh{height:100%}}
+.aff{order:0;background:linear-gradient(150deg,#213769 0%,#2c4a88 100%);color:#fff;border-radius:var(--r);border:1.5px solid var(--vang);padding:24px 24px 22px;box-shadow:0 10px 26px -14px rgba(22,38,79,.6);display:flex;flex-direction:column;justify-content:center}
+.aff-dau{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin-bottom:16px}
+.aff-ten{font:800 27px/1 "Be Vietnam Pro",sans-serif;letter-spacing:.06em;color:#fff}
+.aff-nho{margin-top:10px;font:600 13.5px/1.2 "Be Vietnam Pro",sans-serif;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.aff-so{font:700 56px/.9 Lora,Georgia,serif;color:var(--vang);white-space:nowrap}
+.aff ul{list-style:none;display:grid;gap:9px;border-top:1px solid rgba(255,255,255,.18);padding-top:16px}
+.aff li{position:relative;padding-left:28px;font-size:15.5px;line-height:1.4}
+.aff li::before{content:"";position:absolute;left:0;top:2px;width:19px;height:19px;border-radius:50%;background:var(--vang) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/11px no-repeat}
+@media (max-width:860px){#hoa-hong .wrap{display:flex;flex-direction:column}.hh-luoi{display:contents}.aff{order:-1;margin-bottom:24px}.aff-ten{font-size:32px}.aff-so{font-size:68px}}
+@media (max-width:420px){.aff{padding:20px 18px}.aff-ten{font-size:27px}.aff-so{font-size:56px}.aff li{font-size:15px}}
+@media (max-width:350px){.aff-ten{font-size:22px}.aff-so{font-size:46px}}
+/* Căn đều 2 bên chữ nội dung */
+:where(.dau,.khoi) :where(p,li){text-align:justify}
+.khoi blockquote.trich,.khoi .cta-giua small{text-align:justify;text-align-last:left}
+.khoi blockquote.trich{text-wrap:pretty}
+.cta-giua small{font-size:15.5px}.cta-giua .cg-1{color:rgba(255,255,255,.92)}.cta-giua .cg-2{color:#f5c55a;font-weight:600}
+.ho-tro .cam-ket{font-family:Lora,Georgia,serif;font-style:italic;font-weight:600;font-size:20px;color:#b3851a}
+/* Hỏi đáp + lời mời cạnh nhau trên máy tính */
+.hoi-luoi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.hoi-luoi .moi{display:flex;flex-direction:column;justify-content:space-evenly;align-items:stretch;align-self:start;margin-top:62px;padding:12px 36px;text-align:left;min-height:314px}.hoi-luoi .moi>div:first-child{display:contents}.hoi-luoi .moi .moi-td{margin:0}
+.hoi-luoi .moi p{text-align:justify;text-align-last:left}
+.hoi-luoi .moi .nut{flex-direction:row;gap:12px}.hoi-luoi .moi .nut .btn{flex:1 1 0;min-width:0}
+.hoi .moi h2{padding-bottom:0}.hoi .moi h2::after{display:none}
+@media (max-width:860px){.hoi-luoi{grid-template-columns:minmax(0,1fr);gap:24px}.hoi-luoi .moi{margin-top:0;min-height:0;padding:22px 16px;gap:16px}.hoi-luoi .moi .nut{flex-direction:column}.hoi-luoi .moi .nut .btn{flex:none}}
+/* Chân trang nền navy, viền vàng để tách biệt */
+footer{background:var(--muc);border-top:3px solid var(--vang);margin-top:28px}
+footer .ten-ct{color:#fff}
+footer .lien-he li,footer .lien-he a{color:#d5dbea}
+footer .lien-he b{color:#fff}
+footer .stats-item{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#d5dbea;box-shadow:none}
+footer .stats-value{color:#f5c55a}
+footer .paco-stats-box{flex-wrap:nowrap!important;gap:clamp(6px,2vw,10px)}footer .stats-item{flex:0 1 auto;min-width:0;font-size:clamp(11.5px,3.4vw,14.5px);padding:5px clamp(8px,2.6vw,14px);gap:4px}
+/* Khối PACOBOOKS là ai */
+.ve-paco{background:#fff;padding:36px 0;border-bottom:1px solid #e3e8f0}
+.ve-paco h2{font-size:clamp(28px,3.3vw,32.5px);padding-bottom:8px;margin-bottom:14px;position:relative}
+.ve-paco h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;border-radius:3px;background:var(--vang)}
+.vp-luoi{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;align-items:center}
+.vp-chu p{text-align:justify;color:var(--chu)}.vp-chu p+p{margin-top:10px}
+.vp-diem{list-style:none;display:grid;gap:12px}
+.vp-diem li{border-left:3px solid var(--vang);background:#faf6ea;border-radius:0 12px 12px 0;padding:12px 16px}
+.vp-diem b{display:block;color:var(--muc);font-size:17px}
+.vp-diem span{display:block;color:var(--chu);font-size:15px;margin-top:2px}
+.vp-nxb{color:var(--muc);font-weight:700;background:linear-gradient(transparent 60%,#f3dfa5 60%)}
+.vp-diem .vp-chinh{background:var(--muc);border-left-color:var(--vang)}.vp-diem .vp-chinh b{color:#f5c55a;font-size:19px}.vp-diem .vp-chinh span{color:#d5dbea}
+@media (max-width:860px){.vp-luoi{grid-template-columns:minmax(0,1fr);gap:20px}.ve-paco{padding:28px 0}}
+/* Khối PACOBOOKS lo: số trái, gạch dọc cao cả tiêu đề + nội dung */
+.ht .the{row-gap:0}.ht i{grid-column:1;grid-row:1/3;align-self:center}.ht b{border-left:2px solid #d6dde8;padding-left:14px}.ht p{grid-column:2!important;grid-row:2;margin-top:0!important;padding:6px 0 0 14px;border-left:2px solid #d6dde8}
+@media (max-width:520px){#hoa-hong .hh .hang{gap:clamp(18px,7vw,34px)}#hoa-hong .hh .pt-lon{padding-left:clamp(18px,7vw,34px)}
+#hoa-hong .hh-luoi>.the{box-shadow:none;border:1px solid #e3d6b3;border-top:3px solid var(--vang);border-radius:0 0 14px 14px;overflow:hidden;background:#fbf5e6;margin:0}#hoa-hong .hh tr{padding:20px 14px!important}#hoa-hong .hh td:first-child{padding-left:0!important}#hoa-hong .hh td.tien:nth-child(2){padding-left:0!important}#hoa-hong .hh tbody tr+tr{border-top:1px solid #eadfc2!important}#hoa-hong .hh td.tien{border-left-color:#eadfc2}#hoa-hong .dan{text-align:justify}#hoa-hong{padding-bottom:12px}#hoa-hong .wrap{padding:0 16px}#hoa-hong h2,#hoa-hong .dan,#hoa-hong .hh-chu{padding-left:0;padding-right:0}#hoa-hong h2::after{left:0}#hoa-hong .hh tr{padding:20px 16px!important}.aff{padding:20px 16px}.mai-y>div{padding-left:16px!important;padding-right:16px!important}#dang-ky .moi{padding-left:16px!important;padding-right:16px!important}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -339,6 +394,8 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 <meta property="og:image" content="https://duongdenbinhyen.com/koc-og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<script>/* Mở trong khung trang quản trị thì ẩn dòng chữ chạy ở thanh trên */try{if(window.self!==window.top)document.documentElement.classList.add("trong-khung")}catch(x){document.documentElement.classList.add("trong-khung")}</script>
+<style>.trong-khung .khau{visibility:hidden!important}</style>
 </head>
 <body>
 <div class="trang">
@@ -360,7 +417,7 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
       <h1>Nhận trọn bộ sách,<br class="xd"> kể lại điều bạn thích</h1>
       <p>Đọc một cuốn sách hay, chia sẻ thật lòng, và nhận hoa hồng mỗi tuần cho mỗi người mua qua bạn.</p>
       <ul class="diem">
-        <li>Tặng trọn bộ 3 cuốn, không cọc</li>
+        <li>Nhận sách mẫu miễn phí, gửi tận nhà</li>
         <li>Hoa hồng đến 30%, trả hằng tuần</li>
         <li>Không chỉ tiêu, bán bao nhiêu nhận bấy nhiêu</li>
       </ul>
@@ -381,6 +438,19 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
   <div class="wrap">
     <h2>Hoa hồng cho mỗi<br class="xd"> đơn thành công</h2>
     <p class="dan">Ngay từ đơn đầu tiên, bạn đã nhận 20%. Bán càng nhiều trong tháng, mức hoa hồng càng cao. Đạt hạng nào, cả tháng tính theo hạng đó.</p>
+    <div class="hh-luoi">
+    <aside class="aff" aria-label="Chương trình affiliate PACOBOOKS">
+      <div class="aff-dau">
+        <div><p class="aff-ten">AFFILIATE</p><p class="aff-nho">Hoa hồng đến</p></div>
+        <strong class="aff-so">30%</strong>
+      </div>
+      <ul>
+        <li>Không cần kinh nghiệm</li>
+        <li>Không chỉ tiêu doanh số</li>
+        <li>Chỉ cần điện thoại và một cuốn sách bạn thích</li>
+        <li>Mỗi ngày đều có thể ra đơn, tiền về hằng tuần</li>
+      </ul>
+    </aside>
     <div class="the" style="overflow-x:auto">
       <table class="hh">
         <thead><tr><th>Hạng trong tháng</th><th>Sách lẻ</th><th>Bộ 2 cuốn</th><th>Bộ 3 cuốn</th></tr></thead>
@@ -391,6 +461,7 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
         </tbody>
       </table>
     </div>
+    </div>
     
   </div>
 </section>
@@ -400,9 +471,8 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 <section class="khoi mai">
   <div class="wrap">
     <h2>Một cuốn sách hay,<br class="xd"> là sản phẩm mãi mãi</h2>
-    <p class="mai-dan">“Hoa hồng đến 30%, vì PACOBOOKS bán trực tiếp từ tác giả, không qua trung gian.”</p>
     <div class="mai-y">
-      <div><b>Hoa hồng cao</b><p>Không qua sàn, không qua nhà phân phối, phần đó dành cho bạn.</p></div>
+      <div><b>Không qua trung gian</b><p>Sách đi thẳng từ tác giả đến người đọc. Phần lẽ ra trả cho sàn và nhà phân phối, giờ là hoa hồng của bạn.</p></div>
       <div><b>Sản phẩm văn hóa</b><p>Người mua sách là người có tri thức, ở môi trường luôn biết vươn lên.</p></div>
       <div><b>Chậm mà bền</b><p>Video về một cuốn sách hay vẫn ra đơn sau nhiều tháng, không trôi như hàng theo trend.</p></div>
     </div>
@@ -412,17 +482,15 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
 
 <section class="khoi noi-bat">
   <div class="wrap">
-    <h2>Chỉ 3 bước,<br class="xd"> sách đến trước, video làm sau</h2>
-    <p class="dan"><span class="dong-rieng">Không cần kinh nghiệm bán hàng.</span><span class="dong-rieng">Bạn chỉ cần kể thật cảm nhận của mình.</span></p>
+    <h2>Chỉ 3 bước,<br class="xd"> sách đến trước,<br class="xd"> video làm sau</h2>
+    <p class="dan"><span class="dong-rieng">Sách đến tay bạn trước.</span><span class="dong-rieng">Đọc xong, thấy hay thì kể. Vậy thôi.</span></p>
     <div class="tang">
       <div class="b"><span class="so-b">1</span><div><small>Bước 1</small><b>Được duyệt</b><p>Nhận ngay cuốn mẫu 1</p></div></div>
       <div class="mui" aria-hidden="true">›</div>
-      <div class="b"><span class="so-b">2</span><div><small>Bước 2</small><b>Làm 1 video</b><p>Nhận ngay cuốn mẫu 2 và 3</p></div></div>
+      <div class="b"><span class="so-b">2</span><div><small>Bước 2</small><b>Làm 1 video</b><p>Đăng trong 7 ngày, gắn link hoặc mã. Nhận ngay cuốn mẫu 2 và 3</p></div></div>
       <div class="mui" aria-hidden="true">›</div>
       <div class="b cuoi"><span class="so-b">3</span><div><small>Bước 3</small><b>Chia sẻ link hoặc mã</b><p>Mỗi đơn thành công, nhận hoa hồng hằng tuần</p></div></div>
     </div>
-    <p class="tang-chu"><span class="dong-rieng">Đăng ký và ký hợp đồng ngay trên web.</span><span class="dong-rieng">Video đăng trong 7 ngày, có gắn link hoặc mã của bạn.</span></p>
-    <p class="chon-loc"><span>Cơ hội dành cho người thực sự muốn kiếm thêm thu nhập từ nền tảng số, người yêu tri thức.</span> <span>Không phải hồ sơ nào cũng được duyệt.</span></p>
   </div>
 </section>
 
@@ -433,14 +501,14 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
       <div><b>Chủ đề chữa lành, bình yên</b><p>Nội dung người xem mạng xã hội đang tìm và lưu lại.</p></div>
       <div><b>Giá dễ chốt</b><p>Từ 129.000đ, giảm đến 36% so với giá bìa, miễn ship.</p></div>
       <div><b>Có bộ 2, bộ 3</b><p>Một đơn giá trị cao, hoa hồng cao hơn.</p></div>
-      <div><b>Có sẵn câu trích, ảnh đẹp</b><p>Video có chất liệu ngay, không phải tự nghĩ.</p></div>
+      <div><b>Dễ mua làm quà</b><p>Sách về bình yên hợp để tặng người thân, bạn bè, đồng nghiệp. Một người xem có thể đặt nhiều cuốn.</p></div>
     </div>
   </div>
 </section>
 
 <section class="khoi sach-toi" id="sach">
   <div class="wrap">
-    <h2>Ba cuốn sách bạn sẽ giới thiệu</h2>
+    <h2>Sách bạn sẽ giới thiệu</h2>
     <ol class="ten-sach">
       <li>Đường Đến Bình Yên<span class="nxb">| NXB Tri Thức</span></li>
       <li>Lời Thì Thầm Từ Cuộc Đời<span class="nxb">| NXB Tri Thức</span></li>
@@ -475,15 +543,31 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
         </div>
       </article>
     </div>
-    <blockquote class="trich">Bởi khi tâm ta lặng, bão giông tự khắc tan biến trước ngưỡng cửa của sự bình yên.<small>Miền Bình Yên — Thiện Nhân</small></blockquote>
-    <div class="cta-giua"><a class="btn btn-vang" href="dangnhapkoc.html#dang-ky">Nhận mẫu miễn phí</a><small>Cơ hội dành cho người thực sự muốn kiếm thêm thu nhập từ nền tảng số, người yêu tri thức. Không phải hồ sơ nào cũng được duyệt.</small></div>
+    <blockquote class="trich">Bởi khi tâm ta lặng, bão giông tự khắc tan biến trước ngưỡng cửa của sự&nbsp;bình&nbsp;yên.<small>Miền Bình Yên — Thiện Nhân</small></blockquote>
+    <div class="cta-giua"><a class="btn btn-vang" href="dangnhapkoc.html#dang-ky">Nhận mẫu miễn phí</a><small><span class="cg-1">Dành cho bạn yêu sách và muốn có thêm thu nhập từ mạng xã hội.</span> <span class="cg-2">Mỗi đợt nhận số lượng có hạn, PACOBOOKS duyệt từng hồ sơ.</span></small></div>
+  </div>
+</section>
+
+<section class="khoi ve-paco">
+  <div class="wrap">
+    <div class="vp-luoi">
+      <div class="vp-chu">
+        <h2>PACOBOOKS là ai?</h2>
+        <p>PACOBOOKS phát hành trực tiếp sách của tác giả Thiện Nhân. Sách được xuất bản cùng những nhà xuất bản uy tín như <strong class="vp-nxb">Nhà xuất bản Tri Thức</strong>, viết về những điều rất đời: những ngày mệt mỏi, những lần buông bỏ, và cách tìm lại bình yên trong chính mình.</p>
+        <p>Chúng tôi không chạy theo số lượng. Với KOC, mọi thứ rõ ràng từ đầu: hợp đồng ký trên web, từng đơn hiện trong tài khoản của bạn, tiền chuyển đúng tên bạn mỗi tuần.</p>
+      </div>
+      <ul class="vp-diem">
+        <li class="vp-chinh"><b>Nhà xuất bản Tri Thức</b><span>Sách chính hãng, gửi thẳng từ tác giả đến người đọc.</span></li>
+        <li><b>Minh bạch từng đơn</b><span>Bạn xem được trạng thái từng đơn, hoa hồng từng tuần.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section class="khoi ho-tro">
   <div class="wrap">
     <h2>Bạn chỉ lo kể chuyện,<br class="xd"> phần còn lại có PACOBOOKS</h2>
-    <p class="dan">Thử một lần, bạn không mất gì.</p>
+    <p class="dan cam-ket">Thử một lần, bạn không mất gì.</p>
     <div class="ht ht4">
       <div class="the"><i>1</i><b>Có sẵn chất liệu</b><p>Kho ảnh sách, câu trích, gợi ý cách làm video.</p></div>
       <div class="the"><i>2</i><b>Không lo khâu bán</b><p>Đóng gói, giao hàng, chăm sóc khách: PACOBOOKS lo toàn bộ.</p></div>
@@ -493,21 +577,18 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
   </div>
 </section>
 
-<section class="khoi hoi">
-  <div class="wrap">
+<section class="khoi hoi" id="dang-ky">
+  <div class="wrap hoi-luoi">
+    <div class="hoi-trai">
     <h2>Câu hỏi thường gặp</h2>
     <div class="faq">
-      <details><summary>Tôi chưa từng bán hàng, có làm được không?</summary><p>Được. Bạn không cần chốt đơn hay tư vấn. Bạn chỉ kể cảm nhận thật về cuốn sách, người xem tự đặt qua link hoặc mã của bạn.</p></details>
-      <details><summary>Video phải dài bao lâu, đăng ở đâu?</summary><p>Ngắn hay dài tùy bạn. Đăng trên TikTok hoặc Facebook, hoặc bất cứ nơi nào bạn thích.</p></details>
-      <details><summary>Người xem không bấm được link thì sao?</summary><p>Họ nhập mã KOC của bạn khi đặt sách. Đơn vẫn tính cho bạn.</p></details>
-      <details><summary>Khi nào tôi nhận được tiền?</summary><p>Đơn giao thành công, qua thời gian đối soát thì chuyển sang "Có thể rút". Hoa hồng chốt và chuyển mỗi tuần vào tài khoản ngân hàng chính chủ của bạn.</p></details>
-      <details><summary>Nếu tôi không làm video thì sao?</summary><p>Bạn vẫn giữ cuốn mẫu 1 để đọc. Cuốn mẫu 2 và 3 chỉ gửi khi bạn đăng video có gắn link hoặc mã.</p></details>
+      <details name="hoi-dap"><summary>Tôi chưa từng bán hàng, có làm được không?</summary><p>Được. Bạn không cần chốt đơn hay tư vấn. Bạn chỉ kể cảm nhận thật về cuốn sách, người xem tự đặt qua link hoặc mã của bạn.</p></details>
+      <details name="hoi-dap"><summary>Video phải dài bao lâu, đăng ở đâu?</summary><p>Ngắn hay dài tùy bạn. Đăng trên TikTok hoặc Facebook, hoặc bất cứ nơi nào bạn thích.</p></details>
+      <details name="hoi-dap"><summary>Người xem không bấm được link thì sao?</summary><p>Họ nhập mã KOC của bạn khi đặt sách. Đơn vẫn tính cho bạn.</p></details>
+      <details name="hoi-dap"><summary>Khi nào tôi nhận được tiền?</summary><p>Đơn giao thành công, qua thời gian đối soát thì chuyển sang "Có thể rút". Hoa hồng chốt và chuyển mỗi tuần vào tài khoản ngân hàng chính chủ của bạn.</p></details>
+      <details name="hoi-dap"><summary>Nếu tôi không làm video thì sao?</summary><p>Bạn vẫn giữ cuốn mẫu 1 để đọc. Cuốn mẫu 2 và 3 chỉ gửi khi bạn đăng video có gắn link hoặc mã.</p></details>
     </div>
-  </div>
-</section>
-
-<section class="khoi" id="dang-ky" style="padding-bottom:4px">
-  <div class="wrap">
+    </div>
     <div class="moi">
       <div>
         <h2 class="moi-td">Đăng video hôm nay,<br>nhận đơn hàng dài lâu.</h2>
@@ -520,6 +601,8 @@ section.de-ke{background:#fff;padding:32px 0;margin-top:0;border-bottom:1px soli
     </div>
   </div>
 </section>
+
+
 
 <footer>
   <div class="wrap">
