@@ -285,6 +285,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ky img{max-height:110px}
 .thanh-ky{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--vien);padding:14px 24px;display:flex;gap:12px;justify-content:flex-end;align-items:center;flex-wrap:wrap;margin-top:24px}
 .thanh-ky label{margin-right:auto;display:flex;gap:8px;align-items:center}
+.dang-cn{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:9999;background:#16264f;color:#fff;font-size:13.5px;font-weight:600;padding:6px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;gap:8px;pointer-events:none}.dang-cn[hidden]{display:none}.dang-cn i{width:12px;height:12px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:xoay .8s linear infinite}@keyframes xoay{to{transform:rotate(360deg)}}
 .pin-spam{width:100%;text-align:right;color:#c2453b;font-size:14px;font-weight:600;margin-top:-4px}.pin-spam[hidden]{display:none}
 
 /* ===== Bảng điều khiển ===== */
@@ -635,6 +636,7 @@ html,body{overflow-x:clip}
 <meta property="og:image:height" content="630">
 </head>
 <body>
+<div class="dang-cn" id="dang-cn" role="status" hidden><i></i>Đang cập nhật…</div>
 
 <!-- ============ ĐĂNG NHẬP ============ -->
 <div class="cong man" id="man-dang-nhap">
@@ -818,7 +820,7 @@ html,body{overflow-x:clip}
           <div class="rt-tk"><span class="rt-tk-nhan">Tài khoản nhận:</span><div id="rt-bank"><b>Vietcombank</b><b class="num">••••6688</b><b>NGUYEN THI MAY</b></div></div>
           <div class="otp"><input id="rt-otp" inputmode="numeric" maxlength="6" placeholder="Mã OTP 6 số" aria-label="Mã OTP"><button class="btn btn-vien" id="rt-gui" onclick="guiOtp(this)">Gửi mã OTP</button></div>
           <p class="otp-ghi">Mã OTP gửi về email đã đăng ký, hiệu lực 5 phút.</p>
-          <button class="btn btn-vang" style="width:100%" onclick="rutTien()">Gửi yêu cầu rút tiền</button>
+          <button class="btn btn-vang" style="width:100%" onclick="rutTien(this)">Gửi yêu cầu rút tiền</button>
           <p class="ghichu rt-ghi" style="margin-top:14px">Rút từ 100.000đ · Từ 5 triệu trừ 10% thuế TNCN</p>
         </div>
         <div class="the cot-rut">
@@ -967,7 +969,9 @@ function veTatCa(d){
  $("hd-ds").innerHTML=`<tr><td data-nhan="Văn bản"><b>Hợp đồng hợp tác KOC số ${e(d.hopDong.so)}</b></td><td class="num" data-nhan="Ngày ký">${e(d.hopDong.ngayKy)}</td><td data-nhan="Trạng thái"><span class="tt ${d.hopDong.haiBen?"kha":"doi"}">${d.hopDong.haiBen?"Hai bên đã ký":"Chờ PACOBOOKS ký"}</span></td><td style="text-align:right;white-space:nowrap" data-nhan=""><button class="btn btn-vien btn-nho" onclick="xemHD(false,this)">Xem</button> <button class="btn btn-vien btn-nho" onclick="xemHD(true,this)">Tải về</button></td></tr>`+(d.hopDong.phuLuc||[]).map(x=>`<tr><td data-nhan="Văn bản"><b>${e(x.so)} — đổi tài khoản nhận tiền</b><br><small style="color:var(--nhat)">${e(x.nh)}</small></td><td class="num" data-nhan="Ngày ký">${e(x.ngay)}</td><td data-nhan="Trạng thái"><span class="tt ${x.tt==="ok"?"kha":"doi"}">${x.tt==="ok"?"Hai bên đã ký":"Chờ PACOBOOKS duyệt"}</span></td><td style="text-align:right;white-space:nowrap" data-nhan=""><button class="btn btn-vien btn-nho" onclick="xemHD(false,this,'${e(x.so)}')">Xem</button> <button class="btn btn-vien btn-nho" onclick="xemHD(true,this,'${e(x.so)}')">Tải về</button></td></tr>`).join("")}
 /* ECO 18/11: lưu dữ liệu tài khoản trên máy để lần sau mở là thấy ngay, rồi cập nhật số mới */
 function docDL(){try{const c=JSON.parse(localStorage.getItem("koc_dl")||"null");return c&&c.ma&&c.ma===localStorage.getItem("koc_ma")?c.d:null}catch(x){return null}}
-function taiDL(){return goi("koc",{token:layTk()}).then(d=>{DL=d;veTatCa(d);try{if(d&&d.ma){localStorage.setItem("koc_ma",d.ma);localStorage.setItem("koc_dl",JSON.stringify({ma:d.ma,d:d}))}}catch(x){}return d})}
+/* ECO 20/11: dòng "Đang cập nhật…" khi đang lấy số mới */
+let SO_CN=0;function dangCN(n){SO_CN=Math.max(0,SO_CN+n);const t=document.getElementById("dang-cn");if(t)t.hidden=!SO_CN}
+function taiDL(){dangCN(1);return goi("koc",{token:layTk()}).finally(()=>dangCN(-1)).then(d=>{DL=d;veTatCa(d);try{if(d&&d.ma){localStorage.setItem("koc_ma",d.ma);localStorage.setItem("koc_dl",JSON.stringify({ma:d.ma,d:d}))}}catch(x){}return d})}
 function napPdfJs(){if(window.pdfjsLib)return Promise.resolve(window.pdfjsLib);return new Promise((ok,hong)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";sc.onload=()=>{pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";ok(pdfjsLib)};sc.onerror=()=>hong(new Error("Không tải được trình xem PDF"));document.head.appendChild(sc)})}
 function xemHD(tai,nut,pl){
  if(tai)return goi("taiHopDong",{token:layTk(),pl:pl||""},nut).then(r=>{const by=atob(r.b64),u=new Uint8Array(by.length);for(let i=0;i<by.length;i++)u[i]=by.charCodeAt(i);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([u],{type:"application/pdf"}));a.download=r.ten;document.body.appendChild(a);a.click();a.remove()}).catch(loi);
@@ -1060,7 +1064,7 @@ function guiPinQuen(nut){goi("guiPin",{muc:"quen",email:$("qm-email").value.trim
 function datMatKhau(){if(!$("qm-email").value.trim())return bao("Nhập email đã đăng ký");if(!/^\d{6}$/.test(document.getElementById("qm-pin").value))return bao("Nhập mã PIN 6 số trong email");if(document.getElementById("qm-mk").value.length<8)return bao("Mật khẩu mới cần ít nhất 8 ký tự");
  goi("datMatKhau",{email:$("qm-email").value.trim(),pin:$("qm-pin").value.trim(),mk:$("qm-mk").value}).then(()=>{bao("Đã đổi mật khẩu. Mời bạn đăng nhập.");$("qm-pin").value="";$("qm-mk").value="";location.hash="dang-nhap"}).catch(loi)}
 function guiOtp(b){if(b.disabled)return;b.disabled=true;goi("guiOtpRut",{token:layTk()}).then(()=>{bao("Đã gửi mã OTP tới email của bạn");let n=60;const t=setInterval(()=>{b.textContent="Gửi lại ("+n+"s)";if(--n<0){clearInterval(t);b.disabled=false;b.textContent="Gửi lại mã"}},1000)}).catch(x=>{b.disabled=false;loi(x)})}
-function rutTien(){if(!/^\d{6}$/.test(document.getElementById("rt-otp").value.trim()))return otpLoi();goi("rutTien",{token:layTk(),otp:$("rt-otp").value.trim()}).then(r=>{bao("Đã gửi yêu cầu rút "+f(r.thucNhan)+". PACOBOOKS sẽ duyệt và báo qua email.");$("rt-otp").value="";taiDL().catch(loi)}).catch(loi)}
+function rutTien(nut){if(nut&&nut.disabled)return;const otp=$("rt-otp").value.trim();if(!/^\d{6}$/.test(otp))return otpLoi();$("rt-otp").value="";goi("rutTien",{token:layTk(),otp:otp},nut).then(r=>{bao("Đã gửi yêu cầu rút "+f(r.thucNhan)+" thành công. PACOBOOKS sẽ duyệt và báo qua email.");taiDL().catch(loi)}).catch(loi)}
 function bao(t){const b=document.getElementById("tb");b.textContent=t;b.classList.add("hien");clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove("hien"),2600)}
 function sao(id){const t=document.getElementById(id).textContent,du=()=>{const v=document.createElement("textarea");v.value=t;document.body.appendChild(v);v.select();try{document.execCommand("copy")}catch(e){}v.remove()};if(navigator.clipboard)navigator.clipboard.writeText(t).catch(du);else du();bao("Đã sao chép")}
 function vao(){const nho=$("dn-nho").checked;goi("dangNhap",{ten:$("dn-ten").value.trim(),mk:$("dn-mk").value,nho:nho},document.querySelector("#man-dang-nhap [data-chinh]")).then(d=>{luuTk(d.token,nho);try{if(localStorage.getItem("koc_ma")!==d.ma){localStorage.removeItem("koc_dl")}localStorage.setItem("koc_ma",d.ma)}catch(x){}$("dn-mk").value="";DL=null;location.hash="tong-quan"}).catch(loi)}
