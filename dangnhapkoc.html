@@ -285,6 +285,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .ky img{max-height:110px}
 .thanh-ky{position:sticky;bottom:0;background:#fff;border-top:1px solid var(--vien);padding:14px 24px;display:flex;gap:12px;justify-content:flex-end;align-items:center;flex-wrap:wrap;margin-top:24px}
 .thanh-ky label{margin-right:auto;display:flex;gap:8px;align-items:center}
+.pin-spam{width:100%;text-align:right;color:#c2453b;font-size:14px;font-weight:600;margin-top:-4px}.pin-spam[hidden]{display:none}
 
 /* ===== Bảng điều khiển ===== */
 .khung-tk{max-width:900px;margin:0 auto;background:var(--giay)}
@@ -1028,7 +1029,8 @@ function sangHopDong(){
  <div class="thanh-ky"><label><input type="checkbox" id="dongy"> Tôi đã đọc và đồng ý với hợp đồng</label>
  <input class="o" style="margin:0;width:150px;height:42px;border:1.5px solid var(--vien);border-radius:10px;padding:0 12px" placeholder="Mã PIN email" inputmode="numeric" maxlength="6" aria-label="Mã PIN" id="ky-pin">
  <button class="btn btn-vien" onclick="guiPinKy(this)">Gửi mã PIN</button>
- <button class="btn btn-vang" onclick="kyXong(this)">Ký và gửi hồ sơ</button></div>`;
+ <button class="btn btn-vang" onclick="kyXong(this)">Ký và gửi hồ sơ</button>
+ <small class="pin-spam" id="pin-spam" hidden>Không thấy mã? Kiểm tra mục Spam/Quảng cáo</small></div>`;
  khoiTaoKy();window.scrollTo(0,0);
 }
 let daKy=false;
@@ -1037,7 +1039,7 @@ function khoiTaoKy(){const c=document.getElementById("ve"),r=c.getBoundingClient
  c.onpointerdown=e=>{ve=true;daKy=true;x.beginPath();x.moveTo(...p(e));c.setPointerCapture(e.pointerId)};
  c.onpointermove=e=>{if(ve){x.lineTo(...p(e));x.stroke()}};c.onpointerup=()=>ve=false}
 function xoaKy(){const c=document.getElementById("ve");c.getContext("2d").clearRect(0,0,c.width,c.height);daKy=false}
-function guiPinKy(nut){const m=$("f-email").value.trim();goi("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(()=>bao("Đã gửi mã PIN tới "+m)).catch(loi)}
+function guiPinKy(nut){const m=$("f-email").value.trim();goi("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(()=>{bao("Đã gửi mã PIN tới "+m);const c=$("pin-spam");if(c)c.hidden=false}).catch(loi)}
 function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");if(!v("f-email"))return bao("Vui lòng nhập lại email ở bước 1");
  /* Cơ chế như nút đặt sách (Ông Paco chốt 20/11): bấm 1 lần là khóa nút, xóa ô email ngay, gửi keepalive — khách thoát trang lệnh vẫn được giữ */
  nut.disabled=true;const chu=nut.textContent;nut.textContent="Đang gửi hồ sơ…";
