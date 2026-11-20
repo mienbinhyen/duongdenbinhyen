@@ -705,7 +705,7 @@ function doiDon(ma,tt,nut,lyDo,dc){const o=nut.closest(".dh"),i=o.querySelector(
 const KY={"đăng ký":"Đ","ký hợp đồng":"H","gửi sách 1":"S","video":"V","gửi sách 2":"S","rút tiền":"₫","đã chi":"₫","phụ lục":"P"};
 function veViec(){const V=QT.viec,T=QT.tong,dem=c=>V.filter(v=>c.includes(v[5])).length,n=QT.thangChon||new Date().getMonth()+1;
  $("dem-duyet").textContent=V.length;$("cs-viec").textContent=V.length;$("cs-v1").textContent=dem(["dk","hd","pl"]);$("cs-v2").textContent=dem(["s1","vd","s2"]);$("cs-v3").textContent=dem(["rut","chi"]);
- const don=KOC.reduce((a,k)=>a+k.don,0),truoc=KOC.reduce((a,k)=>a+(k.donTruoc!==undefined?k.donTruoc:k.thang[1]?k.thang[1].don:0),0),daTra=KOC.reduce((a,k)=>a+k.lsRut.filter(r=>/Đã trả/.test(r.tt)).reduce((x,r)=>x+r.tien,0),0);
+ const don=KOC.reduce((a,k)=>a+k.don,0),truoc=KOC.reduce((a,k)=>a+(k.donTruoc!==undefined?k.donTruoc:k.thang[1]?k.thang[1].don:0),0),daTra=KOC.reduce((a,k)=>a+k.lsRut.filter(r=>/Đã trả|Đã chi|Đã nhận/i.test(r.tt)).reduce((x,r)=>x+r.tien,0),0);
  $("cs-koc").textContent=T.dangHopTac;$("cs-koc-p").textContent="Tổng "+T.koc+" hồ sơ đăng ký";
  $("cs-don").textContent=don;$("cs-don-p").textContent=truoc?(don>=truoc?"+":"")+Math.round((don-truoc)/truoc*100)+"% so với tháng "+(n===1?12:n-1):"Tháng "+n;
  $("cs-dt").textContent=f(T.doanhThu);$("cs-hh").textContent=f(T.hhThang);$("cs-hh-p").textContent="Đã trả "+f(daTra);
