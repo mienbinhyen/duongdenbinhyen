@@ -161,7 +161,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 #v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(6){order:8;margin-left:auto!important;padding-left:8px!important}
 #v-don-hang #ds-don tr:not(.hang-tong) .tt{font-size:11.5px!important;padding:2px 8px!important;gap:4px;width:auto!important;min-width:0!important}
 #v-don-hang #ds-don tr:not(.hang-tong) .tt::before{width:5px;height:5px}
-#v-don-hang #ds-don tr:has(.tt.huy-d) td:nth-child(7){color:#9aa3b5;text-decoration:line-through}
+#v-don-hang #ds-don tr:has(.tt.huy-d) td:nth-child(7),#v-don-hang #ds-don tr:has(.tt.hoan) td:nth-child(7),#v-don-hang #ds-don tr:has(.tt.huy) td:nth-child(7),#v-don-hang #ds-don tr:has(.tt.khuy) td:nth-child(7){color:#9aa3b5;text-decoration:line-through}
 }
 #rt-otp.loi{border-color:#d0352c!important;box-shadow:0 0 0 3px rgba(208,53,44,.15)!important}
 .otp-ghi.loi{color:#d0352c!important;font-weight:600}
@@ -183,7 +183,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 #v-don-hang .loc-hang>.sao-ke{flex:0 1 auto;margin:0!important;display:flex!important;align-items:center;gap:6px}
 #v-don-hang .loc-hang>.sao-ke select{width:118px;height:42px;flex:none}
 #v-don-hang .loc-hang>.sao-ke .btn{height:42px}
-#v-don-hang .loc-hang .loc button{padding:0 clamp(8px,1vw,14px);font-size:clamp(13px,1.15vw,15.5px)}
+#v-don-hang .loc-hang .loc button{padding:0 clamp(6px,.75vw,11px);font-size:clamp(12.5px,1.02vw,14.5px)}
 }
 @media (min-width:761px) and (max-width:1180px){
 #v-don-hang .loc-hang{flex-wrap:wrap}
@@ -333,7 +333,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .tt{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:999px;font-size:14.5px;font-weight:600;white-space:nowrap}
 .tt::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
 .tt.cho{background:#eef1f7;color:#55607a}.tt.giao{background:#e8f0fb;color:#2d5fa8}.tt.doi{background:#fdf3e2;color:#9a5d0e}
-.tt.kha{background:#e5f4ec;color:#1f7a50}.tt.rut{background:#eceff3;color:#4d5868}.tt.huy-d{background:#fbe9e7;color:#a8352c}
+.tt.kha{background:#e5f4ec;color:#1f7a50}.tt.rut{background:#eceff3;color:#4d5868}.tt.huy-d,.tt.hoan,.tt.huy,.tt.khuy{background:#fbe9e7;color:#a8352c}.tt.cho{background:#fbf3e0;color:#9a6f0d}.tt-ly{display:inline-block;margin-left:6px;font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid #f0c4bf;color:#a8352c;background:#fff}.tt-dc{display:inline-block;margin-left:6px;font-size:12px;padding:1px 8px;border-radius:999px;background:#eef1f6;color:#2d5fa8;cursor:help}
 .sao-ke{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto;align-items:center;gap:8px;margin-bottom:12px}
 .sao-ke select{height:40px;border:1.5px solid var(--vien);border-radius:6px;background:#fff;padding:0 8px;color:var(--muc);font-weight:600;min-width:0}
 .sao-ke span{color:var(--nhat)}
@@ -432,8 +432,8 @@ html,body{overflow-x:clip}
 }
 @media (max-width:340px){.c4{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:760px){
-#v-don-hang .loc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:0;background:none;border:0;border-radius:0;overflow:visible}
-#v-don-hang .loc button{height:40px;padding:0 4px;font-size:15px;border-radius:6px;background:#fff;border:1.5px solid var(--vien);color:var(--muc);box-shadow:0 2px 4px -2px rgba(22,38,79,.18)}
+#v-don-hang .loc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:0;background:none;border:0;border-radius:0;overflow:visible}
+#v-don-hang .loc button[data-l="huy-d"]{grid-column:span 2}#v-don-hang .loc button{height:38px;padding:0 2px;font-size:13px;border-radius:6px;background:#fff;border:1.5px solid var(--vien);color:var(--muc);box-shadow:0 2px 4px -2px rgba(22,38,79,.18)}
 #v-don-hang .loc button.dang{background:var(--muc);border-color:var(--muc);color:#fff}
 .ben{position:static}
 .ben .menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;overflow:visible;padding:0 10px 10px}
@@ -624,7 +624,7 @@ html,body{overflow-x:clip}
 #man-tai-khoan .ben .ai a:not(.gt-koc){padding:1px 8px!important;font-size:12px!important}
 #man-tai-khoan .ben .ai a.gt-koc{margin-top:3px!important;padding:1px 8px!important;font-size:11.5px!important}
 }
-</style>
+.loi-trung[hidden]{display:none}.loi-trung{display:block;color:#c0392b;font-size:13px;margin-top:4px}</style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
 <link rel="apple-touch-icon" href="https://duongdenbinhyen.com/koc-icon-180.png">
@@ -690,9 +690,9 @@ html,body{overflow-x:clip}
       <p style="color:var(--nhat);margin:4px 0 22px">Bước 1/2: thông tin của bạn. Thông tin dùng để làm hợp đồng và chuyển hoa hồng.</p>
       <div class="luoi2">
         <label class="o"><span>Họ và tên (đúng CCCD)</span><input id="f-ten" required></label>
-        <label class="o"><span>Số CCCD</span><input id="f-cccd" inputmode="numeric" required></label>
-        <label class="o"><span>Số điện thoại (Zalo)</span><input id="f-sdt" inputmode="tel" required></label>
-        <label class="o"><span>Email</span><input id="f-email" type="email" required></label>
+        <label class="o"><span>Số CCCD</span><input id="f-cccd" inputmode="numeric" required pattern="\d{12}" title="CCCD gồm 12 số"></label>
+        <label class="o"><span>Số điện thoại (Zalo)</span><input id="f-sdt" inputmode="tel" required pattern="0\d{9}" title="Số điện thoại gồm 10 số"><small class="loi-trung" id="lt-sdt" hidden>Số điện thoại này đã đăng ký. Vui lòng dùng số khác hoặc đăng nhập.</small></label>
+        <label class="o"><span>Email</span><input id="f-email" type="email" required><small class="loi-trung" id="lt-email" hidden>Email này đã đăng ký. Vui lòng dùng email khác hoặc đăng nhập.</small></label>
         <label class="o"><span>Link kênh TikTok hoặc Facebook</span><input id="f-link" type="url" required placeholder="https://"></label>
         <label class="o"><span>Số người theo dõi</span><input id="f-follow" inputmode="numeric" required></label>
       </div>
@@ -707,7 +707,7 @@ html,body{overflow-x:clip}
         <label class="o"><span>Tên đăng nhập</span><input id="f-dn" required autocomplete="username"></label>
         <label class="o"><span>Mật khẩu</span><input id="f-mk" type="password" required minlength="8" autocomplete="new-password"><small>Ít nhất 8 ký tự.</small></label>
       </div>
-      <div style="display:flex;justify-content:flex-end;margin:8px 0 40px"><button type="button" data-chinh class="btn btn-muc" onclick="gui(this,sangHopDong)">Tiếp tục: đọc hợp đồng</button></div>
+      <div style="display:flex;justify-content:flex-end;margin:8px 0 40px"><button type="button" data-chinh class="btn btn-muc" onclick="gui(this,()=>kiemTrungDk(this))">Tiếp tục: đọc hợp đồng</button></div>
     </form>
 
     <div id="dk-2" class="an">
@@ -799,7 +799,7 @@ html,body{overflow-x:clip}
     <!-- Đơn & sao kê -->
     <section class="vung an" id="v-don-hang">
       <div class="dau-trang ds-dau"><div><h1>Đơn hàng & sao kê</h1><p>Số tiền chỉ có thể rút sau đối soát.</p></div></div>
-      <div class="loc-hang"><div class="loc" role="group" aria-label="Lọc trạng thái"><button class="dang" data-l="">Tất cả</button><button data-l="giao">Đang giao</button><button data-l="doi">Chờ đối soát</button><button data-l="kha">Có thể rút</button><button data-l="rut">Đã rút</button><button data-l="huy-d">Hoàn / hủy</button></div>
+      <div class="loc-hang"><div class="loc" role="group" aria-label="Lọc trạng thái"><button class="dang" data-l="">Tất cả</button><button data-l="cho">Chờ xác nhận</button><button data-l="giao">Đang giao</button><button data-l="doi">Chờ đối soát</button><button data-l="kha">Có thể rút</button><button data-l="rut">Đã rút</button><button data-l="huy-d">Hoàn / hủy</button></div>
       <div class="sao-ke" role="group" aria-label="Lọc theo tháng và tải sao kê"><select id="sk-tu" aria-label="Từ tháng"><option value="11">11/2026</option><option value="10">10/2026</option><option value="9">09/2026</option><option value="8">08/2026</option><option value="7">07/2026</option><option value="6" selected>06/2026</option></select><span>–</span><select id="sk-den" aria-label="Đến tháng"><option value="11" selected>11/2026</option><option value="10">10/2026</option><option value="9">09/2026</option><option value="8">08/2026</option><option value="7">07/2026</option><option value="6">06/2026</option></select><button class="btn btn-muc" onclick="taiSaoKe()">Tải sao kê</button></div></div>
       <div class="the cuon-ngang khung-don" style="padding:6px 8px">
         <table class="bang bang-the"><thead><tr class="dau-tong" id="dau-tong"></tr><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Sản phẩm</th><th>Khách</th><th class="so">Giá bán</th><th>Trạng thái</th><th class="so">Hoa hồng</th></tr></thead><tbody id="ds-don"></tbody></table>
@@ -908,20 +908,20 @@ function goi(a,o,nut){
  .then(d=>{xong();if(!d||!d.ok){const l=String(d&&d.loi||"Có lỗi, vui lòng thử lại");if(/^PHIEN:/.test(l)){luuTk("");DL=null;try{localStorage.removeItem("koc_dl")}catch(x){}location.hash="dang-nhap"}throw new Error(l.replace(/^PHIEN:\s*/,""))}return d},x=>{xong();throw x})}
 function loi(x){if(x&&x.message!=="dang")bao(x&&x.message||"Có lỗi, vui lòng thử lại")}
 let DL=null,DON=[];
-const TEN_TT={giao:"Đang giao",doi:"Chờ đối soát",kha:"Có thể rút",rut:"Đã rút","huy-d":"Hoàn / hủy",cho:"Chờ xác nhận"};
+const TEN_TT={giao:"Đang giao",doi:"Chờ đối soát",kha:"Có thể rút",rut:"Đã rút","huy-d":"Hoàn / hủy",cho:"Chờ xác nhận",hoan:"Hoàn hàng",huy:"Hủy",khuy:"Khách hủy"},HUY=["huy-d","hoan","huy","khuy"];
 function thangDon(d){return d[8]*100+d[7]}
 (function(){const n=new Date(),o=[];for(let k=5;k>=0;k--){const t=new Date(n.getFullYear(),n.getMonth()-k,1);o.push([t.getFullYear()*100+t.getMonth()+1,String(t.getMonth()+1).padStart(2,"0")+"/"+t.getFullYear()])}
  const h=(sel)=>o.slice().reverse().map(x=>`<option value="${x[0]}"${x[0]===sel?" selected":""}>${x[1]}</option>`).join("");
  $("sk-tu").innerHTML=h(o[0][0]);$("sk-den").innerHTML=h(o[5][0]);window.SK=[o[0][0],o[5][0]]})();
 function taiSaoKe(){const a=+$("sk-tu").value,b=+$("sk-den").value,t1=Math.min(a,b),t2=Math.max(a,b),DS=DON.filter(d=>(!LOC_TT||d[5]===LOC_TT)&&thangDon(d)>=t1&&thangDon(d)<=t2);if(!DS.length)return bao("Không có đơn trong khoảng tháng này");
  const ten=t=>String(t%100).padStart(2,"0")+"/"+Math.floor(t/100);
- const html=(`<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sao kê ${e(DL?DL.ma:"")}</title><style>body{font-family:Arial,sans-serif;padding:24px;color:#16264f}table{border-collapse:collapse;width:100%;font-size:14.5px}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left}.so{text-align:right}.cuon-ngang{overflow-x:auto}@media(max-width:600px){body{padding:12px}h2{font-size:20px}table{font-size:12.5px}td,th{padding:4px 5px}}@media print{.cuon-ngang{overflow:visible}}</style></head><body><h2>PACOBOOKS — Sao kê đơn hàng KOC</h2><p>${e(DL?DL.ten+" · Mã "+DL.ma:"")} · Tháng ${ten(t1)} – ${ten(t2)}</p><div class="cuon-ngang"><table><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Sản phẩm</th><th>Khách</th><th class="so">Giá bán</th><th>Trạng thái</th><th class="so">Hoa hồng</th></tr>${DS.map(d=>`<tr><td>${e(d[0])}</td><td>${e(d[1])}/${d[8]}</td><td>${e(d[2])}</td><td>${e(d[3])}</td><td class="so">${f(d[4])}</td><td>${TEN_TT[d[5]]}</td><td class="so">${d[5]==="huy-d"?"0đ":d[6]?f(d[6]):"—"}</td></tr>`).join("")}<tr><th colspan="4">Tổng ${DS.length} đơn</th><th class="so">${f(DS.reduce((x,d)=>x+ +d[4],0))}</th><th></th><th class="so">${f(DS.reduce((x,d)=>x+(d[5]==="huy-d"?0:+d[6]||0),0))}</th></tr></table></div></body></html>`);
+ const html=(`<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sao kê ${e(DL?DL.ma:"")}</title><style>body{font-family:Arial,sans-serif;padding:24px;color:#16264f}table{border-collapse:collapse;width:100%;font-size:14.5px}td,th{border:1px solid #ccc;padding:6px 8px;text-align:left}.so{text-align:right}.cuon-ngang{overflow-x:auto}@media(max-width:600px){body{padding:12px}h2{font-size:20px}table{font-size:12.5px}td,th{padding:4px 5px}}@media print{.cuon-ngang{overflow:visible}}</style></head><body><h2>PACOBOOKS — Sao kê đơn hàng KOC</h2><p>${e(DL?DL.ten+" · Mã "+DL.ma:"")} · Tháng ${ten(t1)} – ${ten(t2)}</p><div class="cuon-ngang"><table><tr><th>Mã đơn</th><th>Ngày đặt</th><th>Sản phẩm</th><th>Khách</th><th class="so">Giá bán</th><th>Trạng thái</th><th class="so">Hoa hồng</th></tr>${DS.map(d=>`<tr><td>${e(d[0])}</td><td>${e(d[1])}/${d[8]}</td><td>${e(d[2])}</td><td>${e(d[3])}</td><td class="so">${f(d[4])}</td><td>${TEN_TT[d[5]]}</td><td class="so">${HUY.includes(d[5])?"0đ":d[6]?f(d[6]):"—"}</td></tr>`).join("")}<tr><th colspan="4">Tổng ${DS.length} đơn</th><th class="so">${f(DS.reduce((x,d)=>x+ +d[4],0))}</th><th></th><th class="so">${f(DS.reduce((x,d)=>x+(d[5]==="huy-d"?0:+d[6]||0),0))}</th></tr></table></div></body></html>`);
  /* ECO 18/11: xem sao kê ngay trong trang, có nút In / Lưu PDF */
  const nen=document.createElement("div");nen.className="pdf-nen";nen.innerHTML=`<div class="pdf-hop" role="dialog" aria-label="Sao kê"><div class="pdf-dau"><b>Sao kê ${e(DL?DL.ma:"")} · ${ten(t1)} – ${ten(t2)}</b><button class="btn btn-vien btn-nho" type="button">In / Lưu PDF</button><button class="btn btn-muc btn-nho" type="button">Đóng</button></div><div class="pdf-than" style="padding:0;background:#fff"><iframe title="Sao kê" style="width:100%;height:100%;border:0;display:block"></iframe></div></div>`;
  const esc=x=>{if(x.key==="Escape")dong()},dong=()=>{nen.remove();document.removeEventListener("keydown",esc)},nut=nen.querySelectorAll(".pdf-dau button"),kh=nen.querySelector("iframe");
  kh.srcdoc=html;nut[0].onclick=()=>{try{kh.contentWindow.focus();kh.contentWindow.print()}catch(x){bao("Không in được, vui lòng thử lại")}};nut[1].onclick=dong;nen.onclick=x=>{if(x.target===nen)dong()};document.addEventListener("keydown",esc);document.body.appendChild(nen)}
 let LOC_TT="";
-function veDon(l){if(l!==undefined)LOC_TT=l;l=LOC_TT;const a=+$("sk-tu").value,b=+$("sk-den").value,t1=Math.min(a,b),t2=Math.max(a,b);const DS=DON.filter(d=>(!l||d[5]===l)&&thangDon(d)>=t1&&thangDon(d)<=t2),TG=DS.reduce((x,d)=>x+ +d[4],0),TH=DS.reduce((x,d)=>x+(d[5]==="huy-d"?0:+d[6]||0),0);const NT=t1===SK[0]&&t2===SK[1]?"Tất cả":"T"+(t1%100)+(t1!==t2?"–T"+(t2%100):""),SP=String(new Set(DS.map(d=>d[2])).size).padStart(2,"0"),TT=l?TEN_TT[l]:"Tất cả";$("dau-tong").innerHTML=`<td><b>Tổng: ${DS.length} đơn</b></td><td>${NT}</td><td>${SP}</td><td>${DS.length}</td><td class="so num"><b>${f(TG)}</b></td><td>${TT}</td><td class="so num"><b>${f(TH)}</b></td>`;$("ds-don").innerHTML=(DS.length?`<tr class="hang-tong"><td data-nhan="Tổng"><b>${DS.length} đơn</b></td><td></td><td></td><td></td><td class="so num" data-nhan="Doanh thu"><b>${f(TG)}</b></td><td></td><td class="so num" data-nhan="Hoa hồng"><b>${f(TH)}</b></td></tr>`:"")+DS.map(d=>`<tr><td class="num" data-nhan="Mã đơn"><b>${e(d[0])}</b></td><td class="num" data-nhan="Ngày đặt">${e(d[1])}</td><td data-nhan="Sản phẩm">${e(d[2])}</td><td data-nhan="Khách">${e(d[3])}</td><td class="so num" data-nhan="Giá bán">${f(d[4])}</td><td data-nhan="Trạng thái"><span class="tt ${d[5]}">${TEN_TT[d[5]]}</span></td><td class="so num" data-nhan="Hoa hồng"><b>${d[5]==="huy-d"?"0đ":d[6]?f(d[6]):"—"}</b></td></tr>`).join("")||`<tr><td style="text-align:center;color:var(--nhat);padding:18px">Không có đơn trong khoảng tháng này.</td></tr>`}
+function veDon(l){if(l!==undefined)LOC_TT=l;l=LOC_TT;const a=+$("sk-tu").value,b=+$("sk-den").value,t1=Math.min(a,b),t2=Math.max(a,b);const DS=DON.filter(d=>(!l||d[5]===l||(l==="huy-d"&&HUY.includes(d[5])))&&thangDon(d)>=t1&&thangDon(d)<=t2),TG=DS.reduce((x,d)=>x+ +d[4],0),TH=DS.reduce((x,d)=>x+(HUY.includes(d[5])?0:+d[6]||0),0);const NT=t1===SK[0]&&t2===SK[1]?"Tất cả":"T"+(t1%100)+(t1!==t2?"–T"+(t2%100):""),SP=String(new Set(DS.map(d=>d[2])).size).padStart(2,"0"),TT=l?TEN_TT[l]:"Tất cả";$("dau-tong").innerHTML=`<td><b>Tổng: ${DS.length} đơn</b></td><td>${NT}</td><td>${SP}</td><td>${DS.length}</td><td class="so num"><b>${f(TG)}</b></td><td>${TT}</td><td class="so num"><b>${f(TH)}</b></td>`;$("ds-don").innerHTML=(DS.length?`<tr class="hang-tong"><td data-nhan="Tổng"><b>${DS.length} đơn</b></td><td></td><td></td><td></td><td class="so num" data-nhan="Doanh thu"><b>${f(TG)}</b></td><td></td><td class="so num" data-nhan="Hoa hồng"><b>${f(TH)}</b></td></tr>`:"")+DS.map(d=>`<tr><td class="num" data-nhan="Mã đơn"><b>${e(d[0])}</b></td><td class="num" data-nhan="Ngày đặt">${e(d[1])}</td><td data-nhan="Sản phẩm">${e(d[2])}</td><td data-nhan="Khách">${e(d[3])}</td><td class="so num" data-nhan="Giá bán">${f(d[4])}</td><td data-nhan="Trạng thái"><span class="tt ${d[5]}">${TEN_TT[d[5]]||e(d[5])}</span>${d[9]?`<span class="tt-ly">${e(d[9])}</span>`:""}${d[10]?`<span class="tt-dc" title="${e(d[10])}">Đã điều chỉnh</span>`:""}</td><td class="so num" data-nhan="Hoa hồng"><b>${HUY.includes(d[5])?"0đ":d[6]?f(d[6]):"—"}</b></td></tr>`).join("")||`<tr><td style="text-align:center;color:var(--nhat);padding:18px">Không có đơn trong khoảng tháng này.</td></tr>`}
 veDon("");
 ["sk-tu","sk-den"].forEach(i=>$(i).onchange=()=>veDon());
 document.querySelectorAll(".loc button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".loc button").forEach(x=>x.classList.remove("dang"));b.classList.add("dang");veDon(b.dataset.l)});
@@ -994,6 +994,13 @@ const TRICH=[["Có những con đường không đo bằng khoảng cách, mà b
 document.getElementById("ds-trich").innerHTML=TRICH.map((t,i)=>`<li><div><q id="tr${i}">${t[0]}</q><small>${t[1]} — Thiện Nhân</small></div><button class="btn btn-vien btn-nho" onclick="sao('tr${i}')">Sao chép</button></li>`).join("")+`<li style="color:var(--nhat)">… và 15 câu khác trong bộ tài nguyên.</li>`;
 
 /* ===== Hợp đồng để ký (đăng ký bước 2) ===== */
+/* Lọc trùng email + SĐT ngay khi bấm "Tiếp tục" (Ông Paco chốt 20/11) */
+function kiemTrungDk(nut){["email","sdt"].forEach(k=>$("lt-"+k).hidden=true);
+ goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(d=>{
+  if(d.sdt)$("lt-sdt").hidden=false;if(d.email)$("lt-email").hidden=false;
+  if(d.email||d.sdt){$(d.email?"f-email":"f-sdt").focus();return}
+  sangHopDong()}).catch(loi)}
+["f-email","f-sdt"].forEach(i=>{const o=document.getElementById(i);if(o)o.addEventListener("input",()=>$("lt-"+(i==="f-email"?"email":"sdt")).hidden=true)});
 function sangHopDong(){
  const ten=document.getElementById("f-ten").value.trim(), chu=document.getElementById("f-chu").value.trim();
  if(ten.toUpperCase()!==chu.toUpperCase()){bao("Chủ tài khoản phải trùng họ tên");document.getElementById("f-chu").focus();return}
@@ -1030,11 +1037,20 @@ function khoiTaoKy(){const c=document.getElementById("ve"),r=c.getBoundingClient
  c.onpointerdown=e=>{ve=true;daKy=true;x.beginPath();x.moveTo(...p(e));c.setPointerCapture(e.pointerId)};
  c.onpointermove=e=>{if(ve){x.lineTo(...p(e));x.stroke()}};c.onpointerup=()=>ve=false}
 function xoaKy(){const c=document.getElementById("ve");c.getContext("2d").clearRect(0,0,c.width,c.height);daKy=false}
-function guiPinKy(nut){const m=$("f-email").value.trim();goi("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim()},nut).then(()=>bao("Đã gửi mã PIN tới "+m)).catch(loi)}
-function kyXong(nut){if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");
- const v=i=>$(i).value.trim();
- goi("dangKy",{hoTen:v("f-ten"),cccd:v("f-cccd"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),diaChi:v("f-dc"),nh:v("f-nh"),stk:v("f-stk"),chu:v("f-chu"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("ky-pin"),chuKy:$("ve").toDataURL("image/png")},nut)
- .then(d=>{const dn=$("f-dn").value.trim();$("dk-1").reset();$("dk-1").classList.remove("an");$("dk-2").classList.add("an");$("b2").classList.remove("xong");const hv=$("hop-dong-vung");hv.classList.add("an");hv.innerHTML="";$("dn-ten").value=dn;location.hash="dang-nhap";bao("Ký hợp đồng thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")}).catch(loi)}
+function guiPinKy(nut){const m=$("f-email").value.trim();goi("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(()=>bao("Đã gửi mã PIN tới "+m)).catch(loi)}
+function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");if(!v("f-email"))return bao("Vui lòng nhập lại email ở bước 1");
+ /* Cơ chế như nút đặt sách (Ông Paco chốt 20/11): bấm 1 lần là khóa nút, xóa ô email ngay, gửi keepalive — khách thoát trang lệnh vẫn được giữ */
+ nut.disabled=true;const chu=nut.textContent;nut.textContent="Đang gửi hồ sơ…";
+ const c0=$("ve"),c1=document.createElement("canvas");c1.width=Math.round(c0.width/2);c1.height=Math.round(c0.height/2);c1.getContext("2d").drawImage(c0,0,0,c1.width,c1.height);
+ const body=JSON.stringify({a:"dangKy",hoTen:v("f-ten"),cccd:v("f-cccd"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),diaChi:v("f-dc"),nh:v("f-nh"),stk:v("f-stk"),chu:v("f-chu"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("ky-pin"),chuKy:c1.toDataURL("image/png")});
+ $("f-email").value="";
+ const mo=()=>setTimeout(()=>{nut.disabled=false;nut.textContent=chu},4000);
+ const yc={method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:body};
+ let f;try{f=fetch(API_URL,Object.assign({keepalive:true},yc))}catch(x){f=fetch(API_URL,yc)}
+ f.catch(()=>fetch(API_URL,yc)).then(r=>r.json()).then(d=>{
+  if(!d||!d.ok){mo();return bao(String(d&&d.loi||"Có lỗi, vui lòng thử lại")+". Vui lòng nhập lại email ở bước 1 rồi gửi lại.")}
+  const dn=$("f-dn").value.trim();$("dk-1").reset();$("dk-1").classList.remove("an");$("dk-2").classList.add("an");$("b2").classList.remove("xong");const hv=$("hop-dong-vung");hv.classList.add("an");hv.innerHTML="";$("dn-ten").value=dn;location.hash="dang-nhap";bao("Ký hợp đồng thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")
+ }).catch(()=>{mo();bao("Không kết nối được máy chủ. Vui lòng nhập lại email ở bước 1 rồi gửi lại.")})}
 
 /* ===== Điều hướng ===== */
 function guiPinQuen(nut){goi("guiPin",{muc:"quen",email:$("qm-email").value.trim()},nut).then(()=>bao("Nếu email đã đăng ký, mã PIN 6 số đã được gửi tới email")).catch(loi)}
