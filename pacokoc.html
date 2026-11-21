@@ -394,6 +394,11 @@ footer .paco-stats-box{flex-wrap:nowrap!important;gap:clamp(6px,2vw,10px)}footer
 <meta property="og:image" content="https://duongdenbinhyen.com/koc-og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<script>/* ECO 21/11/2026 — CHỌN MÁY CHỦ Google/Vultr (Ông bật ở pacoadmin). Mọi lệnh gửi Apps Script tự đi sang máy đang chọn; Vultr không trả lời: lệnh đọc tự hỏi lại Google, 5 phút sau mới thử lại Vultr. Gỡ: xóa cả thẻ script này */
+(function(){var G="https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco0kFjUmzFN8zw7zUn9l-fUxHligDLHzVEvXkUGhvwrx/exec",V="https://api.duongdenbinhyen.com/",DOC={qtDuLieu:1,qtDon:1,koc:1,tenKoc:1,xepHang:1,kiemTrung:1,taiHopDong:1},goc=window.fetch.bind(window),loi=0;try{loi=+sessionStorage.getItem("mayChuLoi")||0}catch(x){}
+var hong=function(){chon=Promise.resolve("google");try{sessionStorage.setItem("mayChuLoi",Date.now())}catch(x){}};
+var chon=Date.now()-loi<3e5?Promise.resolve("google"):new Promise(function(xong){var ac=new AbortController(),h=setTimeout(function(){ac.abort()},1500);goc(V+"may-chu",{signal:ac.signal,cache:"no-store"}).then(function(r){return r.json()}).then(function(d){clearTimeout(h);xong(d.may==="vultr"?"vultr":"google")}).catch(function(){clearTimeout(h);hong();xong("google")})});
+window.fetch=function(u,o){if(typeof u!=="string"||u.indexOf(G)!==0)return goc(u,o);return chon.then(function(m){if(m!=="vultr")return goc(u,o);var a="";try{a=o&&o.body?JSON.parse(o.body).a:new URL(u).searchParams.get("a")}catch(x){}return goc(V+u.slice(G.length),o).then(function(r){if(r.status>=500)throw new Error("Vultr "+r.status);return r}).catch(function(e){hong();if(!DOC[a])throw e;return goc(u,o)})})}})();</script>
 <script>/* Mở trong khung trang quản trị thì ẩn dòng chữ chạy ở thanh trên */try{if(window.self!==window.top)document.documentElement.classList.add("trong-khung")}catch(x){document.documentElement.classList.add("trong-khung")}</script>
 <style>.trong-khung .khau{visibility:hidden!important}</style>
 </head>

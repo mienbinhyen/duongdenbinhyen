@@ -490,6 +490,21 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{padding:5px 12px 6px!important;font-
 .dh-them{grid-column:1/-1;display:flex;justify-content:space-between;gap:0;margin:16px -20px 0;padding:10px 20px;background:#f7f8fb;border-top:1px solid var(--vien);border-radius:0 0 12px 12px}
 .dh-them div{display:flex;flex-direction:column;min-width:0;flex:1 1 auto;padding:0 14px;border-left:1px solid #e3e6ee}.dh-them div:first-child{padding-left:0;border-left:0;flex:0 0 auto}.dh-them div:last-child{padding-right:0}.dh-them div:nth-child(5),.dh-them div:nth-child(6),.dh-them div:nth-child(8){flex-grow:2}.dh-them span{font-size:12px;color:var(--nhat)}.dh-them b,.dh-them span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dh-them b{font-size:14px;color:var(--muc);font-weight:600}.dh-nut button:disabled{opacity:.4;cursor:not-allowed}.khoa-tt .dh-nut{opacity:.45;pointer-events:none}@media (max-width:360px){.thanh nav a .nh{font-size:11px;letter-spacing:-.2px}}
 @media (max-width:860px){.dh{grid-template-columns:1fr 1fr;row-gap:14px}.dh-c1{grid-column:1/-1;display:flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:8px}.dh-c1>i{display:none}.dh-c1 .dh-ma{font-size:15px;white-space:nowrap}.dh-c1 .dh-gio{font-size:12px;white-space:nowrap}.dh-c1 .tt{margin:0 0 0 auto;min-width:0;font-size:12px;padding:2px 8px}.dh-nut{grid-column:1/-1}.dh-them{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 10px}.dh-them div,.dh-them div:first-child{border-left:0;padding:0}.dh-them span{font-size:11px}.dh-them b{font-size:12.5px}}@media (max-width:600px){.dh.gon .dh-dong{width:calc(100% + 28px);margin:-12px -14px 0;padding:11px 14px;gap:8px;font-size:13.5px}.dh.gon .dh-dong span:nth-child(2){flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dh.gon .dh-dong .tt{margin:0;font-size:11.5px}.dh{grid-template-columns:1fr;padding:12px 14px 0}.dh-them{margin:14px -14px 0;padding:8px 10px}}
+/* ECO 20/11: công tắc Máy chủ (Google/Vultr) + quyền Thu Lan — máy tính: cạnh "Tổng quan"; điện thoại: 3 nút đều nhau trên thanh ghim, bỏ dòng khẩu hiệu */
+.qt-cong2{display:none}
+@media (max-width:860px){
+body:not(.xem-cong) #app .thanh .khau{display:none!important}
+#qt-cong{display:none!important}
+body:not(.xem-cong) #app .thanh .ra{margin-left:auto!important;gap:6px}
+.qt-cong2{display:contents}
+body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!important;font-size:14px}
+.nut-cong{cursor:pointer;color:#fff;white-space:nowrap}
+.nut-cong input{position:absolute;opacity:0;width:0;height:0}
+.nut-cong small{display:flex!important;align-items:center;gap:4px}
+.nut-cong small i{width:8px;height:8px;border-radius:50%;background:#c9cfda;flex:none}
+.nut-cong input:checked+small i{background:#4caf50}
+}
+@media (max-width:360px){body:not(.xem-cong) #app .thanh .ra .nut-ra{width:80px;font-size:13px}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -520,7 +535,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{padding:5px 12px 6px!important;font-
       <a href="#" data-v="duyet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg><span class="nh">Chờ duyệt</span><span class="dem num" id="dem-duyet">6</span></a>
       <a href="#" data-v="cong"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="nh"><span class="dai">Trang công khai</span><span class="ten-ngan">Công khai</span></span></a>
     </nav>
-    <span class="khau">Tri thức sách &amp; Tri thức số</span><div class="ra"><span class="ten-ra" id="qt-ai">PACOBOOKS · </span><a class="nut-ra" href="#" onclick="dangXuatQT();return false">Đăng xuất<small class="ten-nho" id="qt-ai2">PACOBOOKS</small></a></div>
+    <span class="khau">Tri thức sách &amp; Tri thức số</span><div class="ra"><span class="ten-ra" id="qt-ai">PACOBOOKS · </span><span class="qt-cong2" id="qt-cong2"></span><a class="nut-ra" href="#" onclick="dangXuatQT();return false">Đăng xuất<small class="ten-nho" id="qt-ai2">PACOBOOKS</small></a></div>
   </div></header>
 
   <main class="chinh">
@@ -581,6 +596,11 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{padding:5px 12px 6px!important;font-
 </aside>
 <div class="thongbao" id="tb" role="status" aria-live="polite"></div>
 
+<script>/* ECO 21/11/2026 — CHỌN MÁY CHỦ Google/Vultr (Ông bật ở pacoadmin). Mọi lệnh gửi Apps Script tự đi sang máy đang chọn; Vultr không trả lời: lệnh đọc tự hỏi lại Google, 5 phút sau mới thử lại Vultr. Gỡ: xóa cả thẻ script này */
+(function(){var G="https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco0kFjUmzFN8zw7zUn9l-fUxHligDLHzVEvXkUGhvwrx/exec",V="https://api.duongdenbinhyen.com/",DOC={qtDuLieu:1,qtDon:1,koc:1,tenKoc:1,xepHang:1,kiemTrung:1,taiHopDong:1},goc=window.fetch.bind(window),loi=0;try{loi=+sessionStorage.getItem("mayChuLoi")||0}catch(x){}
+var hong=function(){chon=Promise.resolve("google");try{sessionStorage.setItem("mayChuLoi",Date.now())}catch(x){}};
+var chon=Date.now()-loi<3e5?Promise.resolve("google"):new Promise(function(xong){var ac=new AbortController(),h=setTimeout(function(){ac.abort()},1500);goc(V+"may-chu",{signal:ac.signal,cache:"no-store"}).then(function(r){return r.json()}).then(function(d){clearTimeout(h);xong(d.may==="vultr"?"vultr":"google")}).catch(function(){clearTimeout(h);hong();xong("google")})});
+window.fetch=function(u,o){if(typeof u!=="string"||u.indexOf(G)!==0)return goc(u,o);return chon.then(function(m){if(m!=="vultr")return goc(u,o);var a="";try{a=o&&o.body?JSON.parse(o.body).a:new URL(u).searchParams.get("a")}catch(x){}return goc(V+u.slice(G.length),o).then(function(r){if(r.status>=500)throw new Error("Vultr "+r.status);return r}).catch(function(e){hong();if(!DOC[a])throw e;return goc(u,o)})})}})();</script>
 <script>
 function gui(b,fn){const f=b.form;if(f&&!f.reportValidity())return;fn()}
 const API_URL="https://script.google.com/macros/s/AKfycbydObMHbg3L9iCJCTb0y5IKco0kFjUmzFN8zw7zUn9l-fUxHligDLHzVEvXkUGhvwrx/exec";
@@ -602,7 +622,13 @@ function moApp(){$("cua").classList.add("an");$("app").classList.remove("an");le
 function dangXuatQT(){luuTk("");location.reload()}
 let QT=null;
 function taiQT(){dangCN(1);return goi("qtDuLieu",{token:layTk()}).finally(()=>dangCN(-1)).then(d=>{QT=d;KOC=d.koc;apQT(d.qt);veTatCa();document.body.classList.remove("dang-tai");try{localStorage.setItem("qt_dl",JSON.stringify(d))}catch(x){}}).catch(loi)}
-function apQT(q){if(!q)return;window.LA_CHU=!!q.chu;document.body.classList.toggle("khoa-tt",!q.mo);$("qt-ai").textContent=q.ten+" · ";if($("qt-ai2"))$("qt-ai2").textContent=q.ten;$("qt-cong").innerHTML=(q.phu||[]).map(x=>`<label class="qt-cong" title="Cho ${x.ten} thao tác"><input type="checkbox" ${x.mo?"checked":""} onchange="moQuyen(this,'${x.ten.replace(/'/g,"")}')">${x.ten}</label>`).join("")}
+function apQT(q){if(!q)return;window.LA_CHU=!!q.chu;document.body.classList.toggle("khoa-tt",!q.mo);$("qt-ai").textContent=q.ten+" · ";if($("qt-ai2"))$("qt-ai2").textContent=q.ten;const phu=q.phu||[],tn=x=>x.ten.replace(/'/g,"");$("qt-cong").innerHTML=(q.chu?`<label class="qt-cong" title="Máy chủ đang chạy hệ thống"><input type="checkbox" data-may ${MAY==="vultr"?"checked":""} onchange="doiMay(this)">Máy chủ <span data-may-chu>${MAY==="vultr"?"Vultr":"Google"}</span></label>`:"")+phu.map(x=>`<label class="qt-cong" title="Cho ${x.ten} thao tác"><input type="checkbox" data-qt="${tn(x)}" ${x.mo?"checked":""} onchange="qtBat(this,'${tn(x)}')">${x.ten}</label>`).join("");$("qt-cong2").innerHTML=(q.chu?`<label class="nut-ra nut-cong">Máy chủ<input type="checkbox" data-may ${MAY==="vultr"?"checked":""} onchange="doiMay(this)"><small class="ten-nho"><i></i><span data-may-chu>${MAY==="vultr"?"Vultr":"Google"}</span></small></label>`:"")+phu.map(x=>`<label class="nut-ra nut-cong">${e(x.ten)}<input type="checkbox" data-qt="${tn(x)}" ${x.mo?"checked":""} onchange="qtBat(this,'${tn(x)}')"><small class="ten-nho"><i></i><span data-qt-chu>${x.mo?"Đang bật":"Đang tắt"}</span></small></label>`).join("");if(q.chu)docMay()}
+/* ECO 20/11: chọn máy chủ Google/Vultr (chỉ tài khoản chính). Đọc trạng thái từ Vultr /may-chu (nhanh, không ghi gì); Vultr không trả lời = đang chạy Google */
+const API_V="https://api.duongdenbinhyen.com/";var MAY="google";
+function veMay(){document.querySelectorAll("input[data-may]").forEach(x=>x.checked=MAY==="vultr");document.querySelectorAll("[data-may-chu]").forEach(x=>x.textContent=MAY==="vultr"?"Vultr":"Google")}
+function docMay(){const ac=new AbortController(),h=setTimeout(()=>ac.abort(),2500);fetch(API_V+"may-chu",{signal:ac.signal,cache:"no-store"}).then(r=>r.json()).then(d=>{clearTimeout(h);MAY=d.may==="vultr"?"vultr":"google";veMay()}).catch(()=>{clearTimeout(h);MAY="google";veMay()})}
+function doiMay(o){const m=o.checked?"vultr":"google";MAY=m;veMay();goi("qtMayChu",{token:layTk(),may:m}).then(d=>{MAY=d.may;veMay();bao("Đã chuyển máy chủ sang "+(d.may==="vultr"?"Vultr":"Google"))}).catch(x=>{MAY=m==="vultr"?"google":"vultr";veMay();loi(x)})}
+function qtBat(o,ten){const v=o.checked,dat=b=>{document.querySelectorAll("input[data-qt]").forEach(x=>{if(x.dataset.qt===ten){x.checked=b;const s=x.parentNode.querySelector("[data-qt-chu]");if(s)s.textContent=b?"Đang bật":"Đang tắt"}})};dat(v);goi("qtMoQuyen",{token:layTk(),ten:ten,mo:v}).then(d=>bao((d.mo?"Đã bật":"Đã tắt")+" quyền thao tác của "+ten)).catch(x=>{dat(!v);loi(x)})}
 function moQuyen(o,ten){goi("qtMoQuyen",{token:layTk(),ten:ten,mo:o.checked}).then(d=>bao((d.mo?"Đã bật":"Đã tắt")+" quyền thao tác của "+ten)).catch(x=>{o.checked=!o.checked;loi(x)})}
 document.querySelectorAll('form').forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();const b=f.querySelector('[data-chinh]');b&&b.click()}}));
 let KOC=[];
