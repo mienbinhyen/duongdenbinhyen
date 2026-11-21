@@ -1094,7 +1094,7 @@ function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;if(!doc
  let f;try{f=fetch(API_URL,Object.assign({keepalive:true},yc))}catch(x){f=fetch(API_URL,yc)}
  f.catch(()=>fetch(API_URL,yc)).then(r=>r.json()).then(d=>{
   if(!d||!d.ok){mo();return bao(String(d&&d.loi||"Có lỗi, vui lòng thử lại")+". Vui lòng nhập lại email ở bước 1 rồi gửi lại.")}
-  const dn=$("f-dn").value.trim();$("dk-1").reset();$("dk-1").classList.remove("an");$("dk-2").classList.add("an");$("b2").classList.remove("xong");const hv=$("hop-dong-vung");hv.classList.add("an");hv.innerHTML="";$("dn-ten").value=dn;location.hash="dang-nhap";bao("Ký hợp đồng thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")
+  const dn=$("f-dn").value.trim();$("dk-1").reset();$("dk-1").classList.remove("an");$("dk-2").classList.add("an");$("b2").classList.remove("xong");const hv=$("hop-dong-vung");hv.classList.add("an");hv.innerHTML="";$("dn-ten").value=dn;location.hash="dang-nhap";try{window.fbq&&fbq("track","CompleteRegistration");window.ttq&&ttq.track("CompleteRegistration")}catch(e){};bao("Ký hợp đồng thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")
  }).catch(()=>{mo();bao("Không kết nối được máy chủ. Vui lòng nhập lại email ở bước 1 rồi gửi lại.")})}
 
 /* ===== Điều hướng ===== */
@@ -1142,5 +1142,22 @@ window.addEventListener('hashchange',danh);danh();})();
 function otpLoi(){var o=document.getElementById("rt-otp"),g=document.querySelector("#v-rut-tien .otp-ghi");if(!g.dataset.goc)g.dataset.goc=g.textContent;o.classList.add("loi");g.classList.add("loi");g.textContent="Cần nhập mã OTP 6 số trong email để rút tiền.";o.scrollIntoView({block:"center",behavior:"smooth"});setTimeout(function(){o.focus({preventScroll:true})},300)}
 document.getElementById("rt-otp").addEventListener("input",function(){var g=document.querySelector("#v-rut-tien .otp-ghi");this.classList.remove("loi");g.classList.remove("loi");if(g.dataset.goc)g.textContent=g.dataset.goc});
 </script>
+<!-- Pixel Facebook + TikTok (cùng mã landing 18-LANDING, delay 3s) -->
+<script>
+window.addEventListener('load',function(){
+    setTimeout(function(){
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.defer=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init','935549958850787');
+        fbq('set','autoConfig',false,'935549958850787');
+        fbq('track','PageView');
+        !function (w, d, t) {
+          w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+          ttq.load('D7ETK7JC77U751P3J3V0');
+          ttq.page();
+        }(window, document, 'ttq');
+    },3000);
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=935549958850787&ev=PageView&noscript=1"></noscript>
 </body>
 </html>
