@@ -505,6 +505,31 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 .nut-cong input:checked+small i{background:#4caf50}
 }
 @media (max-width:360px){body:not(.xem-cong) #app .thanh .ra .nut-ra{width:80px;font-size:13px}}
+/* ECO 21/11: Danh sách KOC (điện thoại) — chỉ đổi màu, viền: thẻ trắng tách bạch, vạch trái theo tình trạng (xanh đậm bình thường · vàng có việc chờ · đỏ tạm dừng/thanh lý) */
+@media (max-width:600px){
+#ds-koc tr{background:#fff!important;border:1px solid #dfe4ee!important;border-left:5px solid var(--muc)!important;border-radius:14px!important;box-shadow:0 2px 8px rgba(17,28,56,.07)!important;margin-bottom:12px!important}
+#ds-koc tr:has(.cho-dem){border-left-color:#d4a017!important}
+#ds-koc tr:has(.ten-koc small b){border-left-color:var(--do)!important;background:#fdf8f7!important}
+#ds-koc .ten-koc b{text-decoration:none!important}
+#ds-koc td:nth-child(8)>div{background:#f4f6fa!important;border-color:#e3e8f0!important}
+#ds-koc .cho-dem{background:#fff4d6!important;border:1px solid #edd18c!important;color:#8a5a00!important}
+}
+/* ECO 21/11: Đơn hàng — dòng gọn chia cột thẳng hàng: mã đơn + tên khách (2 dòng) · giá · trạng thái · mũi tên */
+.dh.gon .dh-dong{display:grid!important;grid-template-columns:calc(6.8em + 12px) minmax(0,1fr) 9.4em 12px;grid-template-rows:auto auto;align-items:center;column-gap:12px;row-gap:0}
+.dh.gon .dh-dong>b,.dh.gon .dh-dong>span:nth-child(2){align-self:stretch;padding-right:12px;border-right:1px solid #e3e8f0}   /* đường kẻ dọc sau cột mã đơn, rộng bằng mã chuẩn 261120-2000; tên khách dài ẩn tại đường kẻ */
+.dh.gon .dh-dong>b{grid-area:1/1}.dh.gon .dh-dong>span:nth-child(2){grid-area:2/1;font-size:13.5px;color:var(--nhat)}.dh.gon .dh-dong>.num{grid-area:1/2/3/3}.dh.gon .dh-dong>.tt{grid-area:1/3/3/4}.dh.gon .dh-dong>i{grid-area:1/4/3/5}
+.dh.gon .dh-dong>b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dh.gon .dh-dong>span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dh.gon .dh-dong>.num{text-align:center;white-space:nowrap}   /* giá nằm giữa khoảng trống cho cân */
+.dh.gon .dh-dong>.tt{margin:0!important;justify-self:stretch;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dh.gon .dh-dong>i{justify-self:end}
+.dh.gon{border-left:4px solid var(--vien)}   /* mọi dòng cùng vạch trái → mã đơn thẳng hàng */
+@media (max-width:600px){   /* điện thoại: cột hẹp hơn */
+.dh.gon .dh-dong{grid-template-columns:calc(7.1em + 10px) minmax(0,1fr) 8.2em 10px;column-gap:8px}.dh.gon .dh-dong>b,.dh.gon .dh-dong>span:nth-child(2){padding-right:10px}
+.dh.gon .dh-dong>b{font-size:14px}.dh.gon .dh-dong>span:nth-child(2){font-size:13px}
+.dh.gon .dh-dong>.tt{font-size:11.5px!important;padding:3px 4px}
+}
+@media (max-width:370px){.dh.gon .dh-dong{grid-template-columns:calc(7.1em + 8px) minmax(0,1fr) 7.6em 10px;column-gap:6px}.dh.gon .dh-dong>b,.dh.gon .dh-dong>span:nth-child(2){padding-right:8px}.dh.gon .dh-dong>.tt{font-size:10.5px!important}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">

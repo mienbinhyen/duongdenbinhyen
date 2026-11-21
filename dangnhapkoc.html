@@ -627,7 +627,26 @@ html,body{overflow-x:clip}
 #man-tai-khoan .ben .ai a:not(.gt-koc){padding:1px 8px!important;font-size:12px!important}
 #man-tai-khoan .ben .ai a.gt-koc{margin-top:3px!important;padding:1px 8px!important;font-size:11.5px!important}
 }
-.loi-trung[hidden]{display:none}.loi-trung{display:block;color:#c0392b;font-size:13px;margin-top:4px}</style>
+.loi-trung[hidden]{display:none}.loi-trung{display:block;color:#c0392b;font-size:13px;margin-top:4px}
+/* ECO 21/11: Đơn hàng (điện thoại) — chia cột thẳng hàng: [mã đơn / ngày | kẻ dọc] [sản phẩm / khách] [giá] [hoa hồng / trạng thái] — trạng thái chỉ nằm dưới cột hoa hồng */
+@media (max-width:760px){
+#v-don-hang #ds-don tr:not(.hang-tong){display:grid!important;font-size:13px!important;grid-template-columns:108px minmax(0,1fr) 62px 104px!important;grid-template-rows:auto auto;align-items:center;column-gap:6px!important;row-gap:0!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:is(:nth-child(2),:nth-child(4),:nth-child(6)){padding-top:4px!important}
+#v-don-hang #ds-don tr:not(.hang-tong)::after{display:none!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td{order:0!important;overflow:hidden;text-overflow:ellipsis;margin:0!important;padding:0!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td::before,#v-don-hang #ds-don tr:not(.hang-tong) td:is(:nth-child(2),:nth-child(4),:nth-child(5))::before{display:none!important;content:none!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(1){grid-area:1/1!important;font-size:13.5px!important;flex:none;letter-spacing:0!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(1) b{letter-spacing:0!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(2){grid-area:2/1!important;font-size:12.5px}
+#v-don-hang #ds-don tr:not(.hang-tong) td:is(:nth-child(1),:nth-child(2)){align-self:stretch;padding-right:8px!important;border-right:1px solid #e3e8f0!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(3){grid-area:1/2!important;color:var(--chu,#1c2541);font-weight:600;font-size:13px}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(4){grid-area:2/2!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(5){grid-area:1/3!important;text-align:right!important;font-size:12.5px;color:var(--chu,#1c2541)}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(7){grid-area:1/4!important;text-align:right!important;font-size:14.5px!important}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(6){grid-area:2/4!important;justify-self:stretch!important;width:100%!important;box-sizing:border-box;margin:0!important;padding:0!important;display:flex!important;flex-direction:column;align-items:stretch;gap:4px;white-space:normal}
+#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(6)>span{width:100%!important;margin:0!important;box-sizing:border-box;justify-content:center;text-align:center;display:flex!important;align-items:center}   /* nút trạng thái cùng một độ rộng, thẳng cột */
+}
+@media (max-width:370px){#v-don-hang #ds-don tr:not(.hang-tong){grid-template-columns:103px minmax(0,1fr) 88px!important;column-gap:5px!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(5){grid-area:2/2!important;justify-self:end;padding-top:4px!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(7){grid-area:1/3!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(6){grid-area:2/3!important}#v-don-hang #ds-don tr:not(.hang-tong) .tt{font-size:10.5px!important;padding:2px 6px!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(1){font-size:13px!important}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(5){font-size:12px}#v-don-hang #ds-don tr:not(.hang-tong) td:nth-child(7){font-size:13.5px!important}}
+</style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
 <link rel="apple-touch-icon" href="https://duongdenbinhyen.com/koc-icon-180.png">
