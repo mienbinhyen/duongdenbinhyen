@@ -562,6 +562,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
     </nav>
     <span class="khau">Tri thức sách &amp; Tri thức số</span><div class="ra"><span class="ten-ra" id="qt-ai">PACOBOOKS · </span><span class="qt-cong2" id="qt-cong2"></span><a class="nut-ra" href="#" onclick="dangXuatQT();return false">Đăng xuất<small class="ten-nho" id="qt-ai2">PACOBOOKS</small></a></div>
   </div></header>
+  <div class="thanh" id="nav-duoi" style="display:contents"></div><!-- ECO 22/11: điện thoại — thanh menu dưới đặt ngoài header dính (iPhone hay hiện lệch giữa màn hình) -->
 
   <main class="chinh">
     <section id="v-tong">
@@ -807,6 +808,8 @@ function tab(t){document.querySelectorAll(".ngan-tab button").forEach(b=>b.class
  hd:`<ul class="ls"><li><span>Hợp đồng KOC-${k.ma} · ${e(k.hdn)}</span><span><button class="btn btn-vien btn-nho" onclick="xemPDF('${k.ma}',this)">Xem PDF</button></span></li>${(k.pl||[]).map(x=>`<li><span>${e(x.so)} · ${e(x.ngay)} · ${e(x.nh)}</span><span><button class="btn btn-vien btn-nho" onclick="xemPDF('${k.ma}',this,'${e(x.so)}')">Xem PDF</button>${x.tt==="cho"?` <button class="btn btn-muc btn-nho" onclick="duyet(this,'phụ lục','${k.ma}','pl')">Duyệt</button>`:""}</span></li>`).join("")||"<li><span>Phụ lục đổi tài khoản</span><span>Chưa có</span></li>"}</ul>`,
  hdong:`<ul class="ls"><li><span>Đăng nhập</span><span>${e(k.lan)}</span></li><li><span>Số lần vào trong tháng</span><span>${k.solan}</span></li><li><span>Gửi link video gần nhất</span><span>${e(k.vdn||"—")}</span></li></ul>`};
  n.innerHTML=N[t]}
+/* ECO 22/11: điện thoại (≤860px) đưa thanh menu dưới ra khỏi header dính để iPhone không vẽ lệch; máy tính trả về chỗ cũ */
+(function(){const mq=matchMedia("(max-width:860px)"),w=document.getElementById("nav-duoi"),n=document.querySelector("header.thanh nav");if(!w||!n)return;const cha=n.parentNode,sau=n.nextSibling;const dat=()=>{if(mq.matches){if(n.parentNode!==w)w.append(n)}else if(n.parentNode!==cha)cha.insertBefore(n,sau)};dat();mq.addEventListener?mq.addEventListener("change",dat):mq.addListener(dat)})();
 </script>
 </body>
 </html>
