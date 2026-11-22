@@ -540,6 +540,15 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 #ds-koc tr.mo .o-tt:has(.nut-tc) .tl{grid-column:1!important;grid-row:1!important;align-self:end!important}
 #ds-koc tr.mo .o-tt:has(.nut-tc) a{grid-column:1!important;grid-row:2!important;align-self:start!important}
 .nut-tc{color:#8a4b4b!important;border-color:#e3cfcf!important}
+
+/* ECO 22/11: tab Thông báo trong hồ sơ KOC */
+.ls-trong .ngan-tab{grid-template-columns:repeat(7,minmax(0,1fr))!important}
+@media (max-width:600px){.ls-trong .ngan-tab{grid-template-columns:repeat(4,minmax(0,1fr))!important}.ls-trong .ngan-tab button{font-size:13.5px!important}}
+.tb-gui{display:grid;gap:8px;margin-bottom:12px}
+.tb-gui select,.tb-gui input,.tb-gui textarea{width:100%;box-sizing:border-box;border:1px solid var(--vien);border-radius:10px;padding:9px 12px;font-family:inherit;font-size:15px;line-height:1.5;color:var(--muc);background:#fff}
+.tb-gui textarea{resize:vertical;min-height:120px}
+.tb-chan{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tb-chan small{color:var(--nhat)}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -627,7 +636,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 <div class="man-che an" id="che" onclick="dongNgan()"></div>
 <aside class="ngan an" id="ngan" role="dialog" aria-modal="true" aria-labelledby="ngan-ten">
   <div class="ngan-dau"><div><h2 id="ngan-ten"></h2><span id="ngan-phu" style="color:var(--nhat)"></span></div><button class="btn btn-vien btn-nho" onclick="dongNgan()">Đóng</button></div>
-  <div class="ngan-tab" role="tablist"><button class="dang" data-t="ho-so">Hồ sơ</button><button data-t="don">Đơn hàng</button><button data-t="tien">Rút tiền</button><button data-t="video">Sách & video</button><button data-t="hd">Hợp đồng</button><button data-t="hdong">Hoạt động</button></div>
+  <div class="ngan-tab" role="tablist"><button class="dang" data-t="ho-so">Hồ sơ</button><button data-t="don">Đơn hàng</button><button data-t="tien">Rút tiền</button><button data-t="video">Sách & video</button><button data-t="hd">Hợp đồng</button><button data-t="hdong">Hoạt động</button><button data-t="tb">Thông báo</button></div>
   <div class="ngan-noi" id="ngan-noi"></div>
 </aside>
 <div class="thongbao" id="tb" role="status" aria-live="polite"></div>
@@ -671,7 +680,7 @@ let KOC=[];
 const TEN={ok:"Đã xong",cho:"Chờ duyệt",chua:"Chưa có",loi:"Cần nhắc",tc:"Từ chối"};
 const f=n=>Number(n).toLocaleString("vi-VN")+"đ";
 const hang=d=>d>50?["vang","Vàng"]:d>30?["bac","Bạc"]:d>0?["dong","Đồng"]:null;
-function o(tt,phu,nut,tl,k,bc){return `<div class="o-tt"><span class="tt ${tt}">${TEN[tt]}</span>${phu?`<span class="tl">${e(phu)}</span>`:""}${tl?`<a href="#" onclick="moTL('${tl}','${k.ma}',this);return false">${tl}</a>`:""}${tt==="cho"&&nut?`<button class="btn btn-muc btn-nho" onclick="duyet(this,'${nut}','${k.ma}','${bc}')">${bc==="chi"?"Đã chi":"Duyệt"}</button>${bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="tuChoi(this,'${k.ma}')">Từ chối</button>`:""}`:tt==="tc"&&bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="khoiPhuc(this,'${k.ma}')">Khôi phục</button>`:nut?`<button class="btn btn-nho btn-mo" disabled>${tt==="ok"?"Đã duyệt":"Duyệt"}</button>`:""}</div>`}
+function o(tt,phu,nut,tl,k,bc){return `<div class="o-tt"><span class="tt ${tt}">${TEN[tt]}</span>${phu?`<span class="tl">${e(phu)}</span>`:""}${tl?`<a href="#" onclick="moTL('${tl}','${k.ma}',this);return false">${tl}</a>`:""}${tt==="cho"&&nut?`<button class="btn btn-muc btn-nho" onclick="duyet(this,'${nut}','${k.ma}','${bc}')">${bc==="chi"?"Đã chi":"Duyệt"}</button>${bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="tuChoi(this,'${k.ma}')">Từ chối</button>`:""}`:tt==="loi"?`<button class="btn btn-vien btn-nho nut-tc" onclick="nhacKoc(this,'${k.ma}')">Nhắc</button>`:tt==="tc"&&bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="khoiPhuc(this,'${k.ma}')">Khôi phục</button>`:nut?`<button class="btn btn-nho btn-mo" disabled>${tt==="ok"?"Đã duyệt":"Duyệt"}</button>`:""}</div>`}
 const BUOC=["dk","hd","s1","vd","s2","rut"];
 /* ECO 22/11: tài khoản thử (tên có "Thử nghiệm", "Hồ sơ mẫu", "thanh lý", "TEST") hoặc KOC thanh lý */
 const laThu=k=>/thử nghiệm|thanh lý|hồ sơ mẫu|\btest\b/i.test(k.ten)||k.trangThai==="Thanh lý"?1:0;
@@ -824,8 +833,21 @@ function tab(t){document.querySelectorAll(".ngan-tab button").forEach(b=>b.class
  tien:`<ul class="ls">${k.lsRut.map(r=>`<li><span>${e(r.ngay)} · ${f(r.tien)}</span><span>${e(r.tt)}</span></li>`).join("")||"<li><span>Chưa có yêu cầu rút tiền</span><span></span></li>"}</ul>`,
  video:`<ul class="ls"><li><span>Gửi sách 1 · ${e(k.s1n||"—")}</span><span>${TEN[k.s1]}</span></li>${k.vids.map(v=>`<li><span style="overflow-wrap:anywhere">Video ${e(v.ngay)} · <a href="${e(v.link)}" target="_blank" rel="noopener">${e(v.link.replace(/^https?:\/\/(www\.)?/,"").slice(0,40))}</a></span><span>${v.tt==="ok"?"Đã duyệt":"Chờ duyệt"}</span></li>`).join("")||`<li><span>Video · —</span><span>${TEN[k.vd]}</span></li>`}<li><span>Gửi sách 2 · ${e(k.s2n||"—")}</span><span>${TEN[k.s2]}</span></li></ul>`,
  hd:`<ul class="ls"><li><span>Hợp đồng KOC-${k.ma} · ${e(k.hdn)}</span><span><button class="btn btn-vien btn-nho" onclick="xemPDF('${k.ma}',this)">Xem PDF</button></span></li>${(k.pl||[]).map(x=>`<li><span>${e(x.so)} · ${e(x.ngay)} · ${e(x.nh)}</span><span><button class="btn btn-vien btn-nho" onclick="xemPDF('${k.ma}',this,'${e(x.so)}')">Xem PDF</button>${x.tt==="cho"?` <button class="btn btn-muc btn-nho" onclick="duyet(this,'phụ lục','${k.ma}','pl')">Duyệt</button>`:""}</span></li>`).join("")||"<li><span>Phụ lục đổi tài khoản</span><span>Chưa có</span></li>"}</ul>`,
- hdong:`<ul class="ls"><li><span>Đăng nhập</span><span>${e(k.lan)}</span></li><li><span>Số lần vào trong tháng</span><span>${k.solan}</span></li><li><span>Gửi link video gần nhất</span><span>${e(k.vdn||"—")}</span></li></ul>`};
- n.innerHTML=N[t]}
+ hdong:`<ul class="ls"><li><span>Đăng nhập</span><span>${e(k.lan)}</span></li><li><span>Số lần vào trong tháng</span><span>${k.solan}</span></li><li><span>Gửi link video gần nhất</span><span>${e(k.vdn||"—")}</span></li></ul>`,
+ tb:`<div class="tb-gui"><select id="tb-mau" onchange="chonMau(this.value)">${Object.keys(TB_MAU).map(x=>`<option value="${x}"${x===MAU_CHON?" selected":""}>${TB_MAU[x].ten}</option>`).join("")}</select><input id="tb-td" maxlength="150" placeholder="Tiêu đề" value="${e(TB_MAU[MAU_CHON].td)}"><textarea id="tb-nd" rows="6" maxlength="3000" placeholder="Nội dung">${e(TB_MAU[MAU_CHON].nd)}</textarea><div class="tb-chan"><small>Gửi qua email và hiện ở mục Thông báo trong tài khoản KOC.</small><button class="btn btn-muc btn-nho" onclick="guiTB(this)">Gửi</button></div></div><ul class="ls">${(k.tb||[]).map(x=>`<li><span>${e(x.ngay)} · ${e(x.td)}</span><span class="tt ${x.doc?"ok":"cho"}">${x.doc?"Đã đọc":"Chưa đọc"}</span></li>`).join("")||"<li><span>Chưa gửi thông báo nào</span><span></span></li>"}</ul>`};
+ n.innerHTML=N[t];MAU_CHON="chung"}
+/* ECO 22/11: gửi thông báo cho KOC (email + mục Thông báo trong tài khoản KOC). Mỗi việc 1 mẫu, chọn xong sửa tùy ý */
+const TB_MAU={
+ chung:{ten:"Thông báo chung",td:"",nd:""},
+ video:{ten:"Nhắc làm video",td:"Nhắc đăng video review sách",nd:"Chào bạn,\nPACOBOOKS đã gửi sách mẫu cho bạn được hơn 7 ngày. Bạn đăng video review và gửi link ở mục Sách & video trong tài khoản KOC giúp PACOBOOKS nhé.\nCảm ơn bạn!"},
+ hoso:{ten:"Nhắc bổ sung hồ sơ",td:"Bổ sung thông tin hồ sơ KOC",nd:"Chào bạn,\nThông tin trong hồ sơ KOC của bạn chưa đúng hoặc còn thiếu: …\nBạn kiểm tra và phản hồi lại giúp PACOBOOKS nhé."},
+ link:{ten:"Nhắc chia sẻ link bán hàng",td:"Gắn link bán hàng để có đơn",nd:"Chào bạn,\nBạn gắn link bán hàng vào bio và đọc mã KOC trong video để người xem đặt sách dễ dàng, đơn sẽ được tính cho bạn.\nLink và mã có sẵn ở mục Tổng quan trong tài khoản KOC."},
+ camon:{ten:"Cảm ơn, động viên",td:"Cảm ơn bạn đã đồng hành cùng PACOBOOKS",nd:"Chào bạn,\nPACOBOOKS cảm ơn bạn đã chia sẻ sách đến người xem. Mong bạn tiếp tục lan tỏa những cuốn sách bình yên này nhé!"}};
+let MAU_CHON="chung";
+function chonMau(m){const x=TB_MAU[m];if(!x)return;$("tb-td").value=x.td;$("tb-nd").value=x.nd}
+function guiTB(b){const td=$("tb-td").value.trim(),nd=$("tb-nd").value.trim(),k=dang;if(!td||!nd)return bao("Vui lòng nhập tiêu đề và nội dung");if(!window.confirm("Gửi thông báo cho "+k.ten+" ("+k.ma+")?"))return;
+ goi("qtGuiTB",{token:layTk(),ma:k.ma,tieuDe:td,noiDung:nd},b).then(()=>{bao("Đã gửi thông báo cho "+k.ma);(k.tb=k.tb||[]).unshift({ngay:"Vừa gửi",td:td,doc:""});tab("tb")}).catch(loi)}
+function nhacKoc(b,ma){const tr=b.closest("tr"),i=KOC.findIndex(x=>x.ma===ma);if(i<0)return;if(!tr||!tr.querySelector(".ls-trong")){const a=tr&&tr.querySelector(".nut-ls");if(a)moLichSu(i,a);else{dang=KOC[i]}}MAU_CHON="video";tab("tb");const n=$("tb-nd");if(n)n.scrollIntoView({block:"center",behavior:"smooth"})}
 /* ECO 22/11: điện thoại (≤860px) đưa thanh menu dưới ra khỏi header dính để iPhone không vẽ lệch; máy tính trả về chỗ cũ */
 (function(){const mq=matchMedia("(max-width:860px)"),w=document.getElementById("nav-duoi"),n=document.querySelector("header.thanh nav");if(!w||!n)return;const cha=n.parentNode,sau=n.nextSibling;const dat=()=>{if(mq.matches){if(n.parentNode!==w)w.append(n)}else if(n.parentNode!==cha)cha.insertBefore(n,sau)};dat();mq.addEventListener?mq.addEventListener("change",dat):mq.addListener(dat)})();
 </script>
