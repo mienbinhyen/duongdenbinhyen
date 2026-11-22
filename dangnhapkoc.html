@@ -925,6 +925,13 @@ html,body{overflow-x:clip}
         <button class="btn btn-muc" onclick="moPhuLuc()">Đổi tài khoản nhận tiền</button>
         <div id="pl-vung" class="an" style="margin-top:16px"></div>
       </div>
+      <div class="the" style="margin-top:16px"><!-- ECO 22/11: điều chỉnh thông tin (như phụ lục, cần duyệt) -->
+        <h2>Thông tin liên hệ và kênh</h2>
+        <p id="dc-tt" style="line-height:1.7"></p>
+        <p style="color:var(--nhat);font-size:15.5px;margin:6px 0 14px">Đổi email, số điện thoại, địa chỉ nhận sách, tên hoặc link kênh cần xác nhận mã PIN gửi về email hiện tại và chờ PACOBOOKS duyệt. Họ tên và CCCD không đổi được.</p>
+        <button class="btn btn-muc" onclick="moDieuChinh()">Yêu cầu điều chỉnh thông tin</button>
+        <div id="dc-vung" class="an" style="margin-top:16px"></div>
+      </div>
     </section>
 
     <!-- Tài nguyên -->
@@ -1048,7 +1055,24 @@ function veTB(){veDemTB();
 function locTB(b){TB_LOC=b.dataset.l;document.querySelectorAll(".tb-loc button").forEach(x=>x.classList.toggle("dang",x===b));veTB()}
 function moTB(li){li.classList.toggle("mo");const x=TB.find(t=>t.id===li.dataset.id);if(!x||x.doc)return;x.doc=true;li.classList.remove("moi");veDemTB();goi("tbDaDoc",{token:layTk(),ids:[x.id]}).catch(()=>{})}
 function docHetTB(b){if(!TB.some(x=>!x.doc))return bao("Bạn đã đọc hết thông báo");TB.forEach(x=>x.doc=true);veTB();goi("tbDaDoc",{token:layTk(),het:true}).then(()=>bao("Đã đánh dấu đọc hết")).catch(loi)}
+/* ECO 22/11: điều chỉnh thông tin — KOC gửi yêu cầu, xác thực PIN email hiện tại, PACOBOOKS duyệt */
+const DC_LY_KOC=[[0,"Đổi email / số điện thoại mới"],[1,"Nhập sai khi đăng ký"],[2,"Chuyển địa chỉ nhận sách"],[3,"Đổi tên hoặc link kênh"],[5,"Khác"]];
+const DC_O=[["email","Email mới","email"],["sdt","Số điện thoại mới","tel"],["diaChi","Địa chỉ nhận sách mới","text"],["kenh","Tên kênh mới","text"],["link","Link kênh mới","url"],["follow","Số follow","text"]];
+function veDC(d){if(!d)return;const t=d.tt||{},v=$("dc-tt");if(v)v.innerHTML=`Email: <b>${e(t.email)}</b><br>Số điện thoại: <b>${e(t.sdt)}</b><br>Địa chỉ nhận sách: <b>${e(t.diaChi)}</b><br>Tên kênh: <b>${e(t.kenh)}</b>${t.link?` · <a href="${e(t.link)}" target="_blank" rel="noopener">Link kênh</a>`:""}`;
+ const b=$("hd-ds");if(b)b.insertAdjacentHTML("beforeend",((d.hopDong&&d.hopDong.dieuChinh)||[]).map(x=>`<tr><td data-nhan="Văn bản"><b>${e(x.so)} — điều chỉnh thông tin</b><br><small style="color:var(--nhat)">${e(x.thayDoi)}</small></td><td class="num" data-nhan="Ngày gửi">${e(String(x.ngay).slice(0,10))}</td><td data-nhan="Trạng thái"><span class="tt ${x.tt==="ok"?"kha":x.tt==="tc"?"khuy":"doi"}">${x.tt==="ok"?"Đã cập nhật":x.tt==="tc"?"Không được duyệt":"Chờ PACOBOOKS duyệt"}</span></td><td data-nhan=""></td></tr>`).join(""))}
+function moDieuChinh(){if(DL&&((DL.hopDong&&DL.hopDong.dieuChinh)||[]).some(x=>x.tt==="cho"))return bao("Bạn đang có yêu cầu điều chỉnh chờ PACOBOOKS duyệt");const v=$("dc-vung");if(!v.classList.contains("an")){v.classList.add("an");return}const t=(DL&&DL.tt)||{};
+ v.innerHTML=`<form onsubmit="return false"><p style="font-size:15.5px;color:var(--nhat);margin:0 0 8px">Sửa ô cần đổi, các ô khác để nguyên.</p><div class="luoi2">${DC_O.map(o=>`<label class="o"><span>${o[1]}</span><input data-f="${o[0]}" type="${o[2]}" value="${e(t[o[0]]||"")}"></label>`).join("")}</div>
+ <label class="o"><span>Lý do</span><select id="dc-ly" required><option value="">Chọn lý do</option>${DC_LY_KOC.map(x=>`<option value="${x[0]}">${x[1]}</option>`).join("")}</select></label>
+ <label class="o"><span>Ghi chú</span><input id="dc-ghi" maxlength="300" placeholder="Bắt buộc nếu chọn Khác"></label>
+ <label style="display:flex;gap:8px;align-items:center;margin:12px 0;font-size:15.5px"><input type="checkbox" id="dc-dongy"> Tôi xác nhận thông tin mới là đúng và do chính tôi yêu cầu</label>
+ <div class="otp"><input id="dc-pin" inputmode="numeric" maxlength="6" placeholder="Mã PIN 6 số" aria-label="Mã PIN"><button type="button" class="btn btn-vien" onclick="guiPinDc(this)">Gửi mã PIN</button></div>
+ <button type="button" class="btn btn-vang" style="width:100%;margin-top:12px" onclick="guiDC(this)">Gửi yêu cầu điều chỉnh</button></form>`;v.classList.remove("an")}
+function guiPinDc(nut){guiNgay("guiPin",{muc:"dc",token:layTk()},nut,{bao:"Đã gửi mã PIN tới email hiện tại của bạn. Không thấy mã? Kiểm tra mục Spam/Quảng cáo",dem:60})}
+function guiDC(nut){const t=(DL&&DL.tt)||{},moi={};$("dc-vung").querySelectorAll("input[data-f]").forEach(i=>{if(i.value.trim()!==String(t[i.dataset.f]||"").trim())moi[i.dataset.f]=i.value.trim()});
+ if(!Object.keys(moi).length)return bao("Bạn chưa đổi thông tin nào");const ly=$("dc-ly").value;if(ly==="")return bao("Vui lòng chọn lý do");if(ly==="5"&&!$("dc-ghi").value.trim())return bao("Lý do Khác cần ghi rõ");if(!$("dc-dongy").checked)return bao("Bạn cần tích xác nhận");if(!/^\d{6}$/.test($("dc-pin").value.trim()))return bao("Nhập mã PIN 6 số trong email");
+ goi("dcGui",{token:layTk(),lyDo:ly,ghiChu:$("dc-ghi").value.trim(),moi:moi,pin:$("dc-pin").value.trim()},nut).then(()=>{bao("Đã gửi yêu cầu. PACOBOOKS sẽ duyệt và báo qua email.");$("dc-vung").classList.add("an");taiDL().catch(()=>{})}).catch(loi)}
 function taiDL(){dangCN(1);return goi("koc",{token:layTk()}).finally(()=>dangCN(-1)).then(d=>{DL=d;veTatCa(d);try{if(d&&d.ma){localStorage.setItem("koc_ma",d.ma);localStorage.setItem("koc_dl",JSON.stringify({ma:d.ma,d:d}))}}catch(x){}taiTB();return d})}
+{const _veTC=veTatCa;veTatCa=function(d){_veTC(d);try{veDC(d)}catch(x){}}}   // ECO 22/11: vẽ thêm điều chỉnh thông tin
 function napPdfJs(){if(window.pdfjsLib)return Promise.resolve(window.pdfjsLib);return new Promise((ok,hong)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";sc.onload=()=>{pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";ok(pdfjsLib)};sc.onerror=()=>hong(new Error("Không tải được trình xem PDF"));document.head.appendChild(sc)})}
 function xemHD(tai,nut,pl){
  if(tai)return goi("taiHopDong",{token:layTk(),pl:pl||""},nut).then(r=>{const by=atob(r.b64),u=new Uint8Array(by.length);for(let i=0;i<by.length;i++)u[i]=by.charCodeAt(i);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([u],{type:"application/pdf"}));a.download=r.ten;document.body.appendChild(a);a.click();a.remove()}).catch(loi);
@@ -1080,7 +1104,8 @@ document.getElementById("ds-trich").innerHTML=TRICH.map((t,i)=>`<li><div><q id="
 /* ===== Hợp đồng để ký (đăng ký bước 2) ===== */
 /* Lọc trùng email + SĐT ngay khi bấm "Tiếp tục" (Ông Paco chốt 20/11) */
 function kiemTrungDk(nut){["email","sdt"].forEach(k=>$("lt-"+k).hidden=true);
- goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(d=>{
+ goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim(),cccd:$("f-cccd").value.trim()},nut).then(d=>{
+  if(d.cccd){$("f-cccd").focus();return bao("Số CCCD này đã đăng ký tài khoản KOC. Vui lòng đăng nhập hoặc liên hệ PACOBOOKS")}   // ECO 22/11
   if(d.sdt)$("lt-sdt").hidden=false;if(d.email)$("lt-email").hidden=false;
   if(d.email||d.sdt){$(d.email?"f-email":"f-sdt").focus();return}
   sangHopDong()}).catch(loi)}
