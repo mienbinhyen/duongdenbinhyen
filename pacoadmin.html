@@ -89,6 +89,7 @@ table.ds{width:100%;border-collapse:separate;border-spacing:0;min-width:1100px}
 .tt{display:inline-flex;align-items:center;gap:5px;padding:2px 9px;border-radius:999px;font-size:14px;font-weight:600;white-space:nowrap}
 .tt::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .tt.ok{background:#e5f4ec;color:#1f7a50}.tt.cho{background:#fdf3e2;color:#9a5d0e}.tt.chua{background:#eef1f7;color:#7a8396}.tt.loi{background:#fbe9e7;color:#a8352c}
+.tt.tc{background:#f1eded;color:#8a4b4b}
 .huy{display:inline-block;padding:1px 8px;border-radius:999px;font-weight:600;font-size:13.5px;margin-top:3px}
 .huy.dong{background:#f4e9df;color:#7c4a22}.huy.bac{background:#eceff3;color:#4d5868}.huy.vang{background:#fbf1d6;color:#7a5a0b}
 .hd .cham{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
@@ -530,6 +531,15 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 .dh.gon .dh-dong>.tt{font-size:11.5px!important;padding:3px 4px}
 }
 @media (max-width:370px){.dh.gon .dh-dong{grid-template-columns:calc(7.1em + 8px) minmax(0,1fr) 7.6em 10px;column-gap:6px}.dh.gon .dh-dong>b,.dh.gon .dh-dong>span:nth-child(2){padding-right:8px}.dh.gon .dh-dong>.tt{font-size:10.5px!important}}
+
+/* ECO 22/11: dòng Đăng ký có 2 nút (Từ chối + Duyệt) nằm cạnh nhau trên điện thoại */
+#ds-koc tr.mo .o-tt:has(.nut-tc){grid-template-columns:minmax(0,1fr) auto auto!important}
+#ds-koc tr.mo .o-tt:has(.nut-tc) .btn{grid-row:1/3!important}
+#ds-koc tr.mo .o-tt:has(.nut-tc) .btn:not(.nut-tc){grid-column:3!important}
+#ds-koc tr.mo .o-tt:has(.nut-tc) .nut-tc{grid-column:2!important;margin-left:0!important}
+#ds-koc tr.mo .o-tt:has(.nut-tc) .tl{grid-column:1!important;grid-row:1!important;align-self:end!important}
+#ds-koc tr.mo .o-tt:has(.nut-tc) a{grid-column:1!important;grid-row:2!important;align-self:start!important}
+.nut-tc{color:#8a4b4b!important;border-color:#e3cfcf!important}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -587,7 +597,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
         <button class="btn btn-vien" onclick="window.open('https://docs.google.com/spreadsheets/d/1ZksL1sJuHkvUGdkRuXimvYRhxED5oXSe2dhwqXDiOaA/edit','_blank')">Xuất danh sách</button></div>
       <div class="cong-cu">
         <input type="search" placeholder="Tìm tên kênh, mã KOC, SĐT…" aria-label="Tìm KOC" id="tim-koc" oninput="veKoc()">
-        <select id="loc-tt" aria-label="Lọc trạng thái" onchange="veKoc()"><option value="">Tất cả trạng thái</option><option value="cho">Có việc chờ duyệt</option><option value="hd">Đang hoạt động</option><option value="loi">Cần nhắc</option><option value="dung">Tạm dừng</option><option value="tl">Thanh lý</option></select>
+        <select id="loc-tt" aria-label="Lọc trạng thái" onchange="veKoc()"><option value="">Tất cả trạng thái</option><option value="cho">Có việc chờ duyệt</option><option value="hd">Đang hoạt động</option><option value="loi">Cần nhắc</option><option value="dung">Tạm dừng</option><option value="tl">Thanh lý</option><option value="tc">Từ chối</option></select>
         <select id="loc-hang" aria-label="Lọc hạng" onchange="veKoc()"><option value="">Tất cả hạng</option><option value="vang">Vàng</option><option value="bac">Bạc</option><option value="dong">Đồng</option></select>
       </div>
       <div class="cuon"><table class="ds">
@@ -658,12 +668,12 @@ function qtBat(o,ten){const v=o.checked,dat=b=>{document.querySelectorAll("input
 function moQuyen(o,ten){goi("qtMoQuyen",{token:layTk(),ten:ten,mo:o.checked}).then(d=>bao((d.mo?"Đã bật":"Đã tắt")+" quyền thao tác của "+ten)).catch(x=>{o.checked=!o.checked;loi(x)})}
 document.querySelectorAll('form').forEach(f=>f.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'){e.preventDefault();const b=f.querySelector('[data-chinh]');b&&b.click()}}));
 let KOC=[];
-const TEN={ok:"Đã xong",cho:"Chờ duyệt",chua:"Chưa có",loi:"Cần nhắc"};
+const TEN={ok:"Đã xong",cho:"Chờ duyệt",chua:"Chưa có",loi:"Cần nhắc",tc:"Từ chối"};
 const f=n=>Number(n).toLocaleString("vi-VN")+"đ";
 const hang=d=>d>50?["vang","Vàng"]:d>30?["bac","Bạc"]:d>0?["dong","Đồng"]:null;
-function o(tt,phu,nut,tl,k,bc){return `<div class="o-tt"><span class="tt ${tt}">${TEN[tt]}</span>${phu?`<span class="tl">${e(phu)}</span>`:""}${tl?`<a href="#" onclick="moTL('${tl}','${k.ma}',this);return false">${tl}</a>`:""}${tt==="cho"&&nut?`<button class="btn btn-muc btn-nho" onclick="duyet(this,'${nut}','${k.ma}','${bc}')">${bc==="chi"?"Đã chi":"Duyệt"}</button>`:nut?`<button class="btn btn-nho btn-mo" disabled>${tt==="ok"?"Đã duyệt":"Duyệt"}</button>`:""}</div>`}
+function o(tt,phu,nut,tl,k,bc){return `<div class="o-tt"><span class="tt ${tt}">${TEN[tt]}</span>${phu?`<span class="tl">${e(phu)}</span>`:""}${tl?`<a href="#" onclick="moTL('${tl}','${k.ma}',this);return false">${tl}</a>`:""}${tt==="cho"&&nut?`<button class="btn btn-muc btn-nho" onclick="duyet(this,'${nut}','${k.ma}','${bc}')">${bc==="chi"?"Đã chi":"Duyệt"}</button>${bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="tuChoi(this,'${k.ma}')">Từ chối</button>`:""}`:tt==="tc"&&bc==="dk"?`<button class="btn btn-vien btn-nho nut-tc" onclick="khoiPhuc(this,'${k.ma}')">Khôi phục</button>`:nut?`<button class="btn btn-nho btn-mo" disabled>${tt==="ok"?"Đã duyệt":"Duyệt"}</button>`:""}</div>`}
 const BUOC=["dk","hd","s1","vd","s2","rut"];
-function hopLoc(k){const t=document.getElementById("loc-tt").value,h=document.getElementById("loc-hang").value,hk=hang(k.don);if(h&&(!hk||hk[0]!==h))return false;if(t==="cho")return BUOC.some(b=>k[b]==="cho");if(t==="loi")return BUOC.some(b=>k[b]==="loi");const tl=k.trangThai==="Thanh lý";if(t==="tl")return tl;if(t==="dung")return !!k.tamDung&&!tl;if(t==="hd")return k.hd==="ok"&&k.don>0&&!k.tamDung&&!tl;return true}
+function hopLoc(k){const t=document.getElementById("loc-tt").value,h=document.getElementById("loc-hang").value,hk=hang(k.don);if(h&&(!hk||hk[0]!==h))return false;if(t==="cho")return BUOC.some(b=>k[b]==="cho");if(t==="loi")return BUOC.some(b=>k[b]==="loi");const tl=k.trangThai==="Thanh lý";if(t==="tl")return tl;if(t==="tc")return !!k.loai;if(t==="dung")return !!k.tamDung&&!tl;if(t==="hd")return k.hd==="ok"&&k.don>0&&!k.tamDung&&!tl;return true}
 (()=>{const s=document.getElementById("chon-thang"),d=new Date();for(let k=0;k<12;k++){const t=new Date(d.getFullYear(),d.getMonth()-k,1);s.add(new Option("Tháng "+(t.getMonth()+1)+"/"+t.getFullYear(),k))}s.onchange=()=>veTatCa()})();
 const HEN=new WeakMap();
 function henThu(tr){clearTimeout(HEN.get(tr));HEN.set(tr,setTimeout(()=>{if(tr.matches(":hover"))return henThu(tr);if(tr.querySelector(".ls-trong"))veNgan();tr.classList.remove("mo");const b=tr.querySelector(".ten-koc");b&&b.setAttribute("aria-expanded",false)},10000))}
@@ -763,7 +773,7 @@ function veViec(){const V=QT.viec,T=QT.tong,dem=c=>V.filter(v=>c.includes(v[5]))
  $("cs-dt").textContent=f(T.doanhThu);$("cs-hh").textContent=f(T.hhThang);$("cs-hh-p").textContent="Đã trả "+f(daTra);
  $("top-chan").textContent=T.koc+" KOC · "+don+" đơn tháng "+n;
  $("ds-viec").innerHTML=V.map((v,i)=>[v,i,KOC.findIndex(k=>k.ma===v[4])]).sort((x,y)=>y[2]-x[2]||x[1]-y[1]).map(x=>x[0]).map(v=>`<li><span class="bt" style="background:${v[0]}">${KY[v[3]]}</span><div><b>${e(v[1])}</b><small>${e(v[2])}</small></div><div class="nut"><button class="btn btn-vien btn-nho" onclick="xemViec('${v[4]}')">Xem</button><button class="btn btn-muc btn-nho" onclick="duyet(this,'${v[3]}','${v[4]}','${v[5]}')">${v[5]==="chi"?"Đã chi":"Duyệt"}</button></div></li>`).join("")||`<li class="trong"><div><small>Không có việc chờ duyệt.</small></div></li>`;
- $("ds-top").innerHTML=KOC.filter(k=>k.don).sort((a,b)=>b.don-a.don).slice(0,5).map((k,i)=>{const h=hang(k.don);return `<li><span class="bt" style="background:var(--${h[0]==="vang"?"vang":h[0]})">${i+1}</span><div><b>${e(k.ten)}</b><small>${f(k.hh)} hoa hồng</small></div><span class="num" style="font-weight:600;color:var(--muc)">${k.don} đơn</span></li>`}).join("")||`<li class="trong"><div><small>Chưa có đơn thành công tháng này.</small></div></li>`}
+ /* ECO 22/11: tài khoản thử (tên có "Thử nghiệm") và KOC thanh lý luôn xếp cuối kệ */const thu=k=>/thử nghiệm|thanh lý/i.test(k.ten)||k.trangThai==="Thanh lý"?1:0;$("ds-top").innerHTML=KOC.filter(k=>k.don).sort((a,b)=>thu(a)-thu(b)||b.don-a.don).slice(0,5).map((k,i)=>{const h=hang(k.don);return `<li><span class="bt" style="background:var(--${h[0]==="vang"?"vang":h[0]})">${i+1}</span><div><b>${e(k.ten)}</b><small>${f(k.hh)} hoa hồng</small></div><span class="num" style="font-weight:600;color:var(--muc)">${k.don} đơn</span></li>`}).join("")||`<li class="trong"><div><small>Chưa có đơn thành công tháng này.</small></div></li>`}
 function xemViec(ma){document.querySelector(".thanh nav a[data-v=koc]").click();$("tim-koc").value=ma;$("loc-tt").value="";$("loc-hang").value="";veKoc();const b=document.querySelector("#ds-koc .ten-koc");b&&b.click()}
 function moTL(tl,ma,a){const i=KOC.findIndex(k=>k.ma===ma),k=KOC[i];if(!k)return;
  if(tl==="PDF")return xemPDF(ma,a);
@@ -780,8 +790,14 @@ function xemPDF(ma,nut,pl){const ten=(pl?pl+" · ":"Hợp đồng ")+"KOC-"+ma,n
 function duyet(b,v,ma,bc){let vd="",ngay="";if(bc==="s1"||bc==="s2"){vd=window.prompt("Mã vận đơn (bỏ trống nếu chưa có):","");if(vd===null)return}
  if(bc==="rut"){ngay=window.prompt("Ngày trả (dd/mm/yyyy). Bỏ trống: báo KOC nhận chậm nhất vào ngày đối soát tiếp theo.","");if(ngay===null)return}
  if(bc==="chi"&&!window.confirm("Xác nhận đã chi tiền cho "+ma+"?"))return;
- const chay=otp=>goi("qtDuyet",{token:layTk(),ma:ma,buoc:bc,vanDon:vd,ngayTra:ngay,otp:otp},b).then(()=>{const ot=b.closest(".o-tt");if(ot){const t=ot.querySelector(".tt");t.className="tt ok";t.textContent="Đã xong";b.className="btn btn-nho btn-mo";b.disabled=true;b.textContent="Đã duyệt";b.onclick=null}else b.replaceWith(Object.assign(document.createElement("span"),{className:"tt ok",textContent:"Đã duyệt"}));const d=document.getElementById("dem-duyet");d.textContent=Math.max(0,+d.textContent-1);bao("Đã duyệt "+v+". Hệ thống ghi vào Sheet và báo KOC qua email.");setTimeout(()=>{if(!document.querySelector("#ds-koc tr.mo"))taiQT()},2700)}).catch(loi);
+ /* ECO 22/11: bấm là hiện "Đã duyệt" ngay, máy chủ ghi phía sau; lỗi thì báo và tải lại số liệu thật */
+ const chay=otp=>{if(b.disabled)return;const ot=b.closest(".o-tt");if(ot){const t=ot.querySelector(".tt");t.className="tt ok";t.textContent="Đã xong";b.className="btn btn-nho btn-mo";b.disabled=true;b.textContent="Đã duyệt";b.onclick=null;const tc=ot.querySelector(".nut-tc");if(tc)tc.remove()}else b.replaceWith(Object.assign(document.createElement("span"),{className:"tt ok",textContent:"Đã duyệt"}));const d=document.getElementById("dem-duyet");d.textContent=Math.max(0,+d.textContent-1);
+  return goi("qtDuyet",{token:layTk(),ma:ma,buoc:bc,vanDon:vd,ngayTra:ngay,otp:otp}).then(()=>{bao("Đã duyệt "+v+". Hệ thống ghi vào Sheet và báo KOC qua email.");setTimeout(()=>{if(!document.querySelector("#ds-koc tr.mo"))taiQT()},2700)}).catch(x=>{loi(x&&x.message?{message:"Chưa duyệt được: "+x.message}:x);taiQT()})};
  if(bc==="rut")goi("qtGuiOtp",{token:layTk()}).then(d=>{if(!d.can)return chay("");const o=window.prompt("Nhập mã OTP vừa gửi về email của bạn:","");if(o)chay(o.trim())}).catch(loi);else chay("")}
+/* ECO 22/11: từ chối đăng ký — chỉ loại khỏi danh sách duyệt (KOC không biết, trạng thái giữ nguyên); xem lại/khôi phục ở bộ lọc "Từ chối" */
+function tuChoi(b,ma){if(b.disabled||!window.confirm("Từ chối đăng ký "+ma+"?\nChỉ loại khỏi danh sách duyệt, KOC không nhận thông báo và trạng thái của họ giữ nguyên. Xem lại hoặc khôi phục ở bộ lọc Từ chối."))return;const ot=b.closest(".o-tt");if(ot){const t=ot.querySelector(".tt");t.className="tt tc";t.textContent="Từ chối";ot.querySelectorAll("button").forEach(x=>x.remove())}else b.disabled=true;document.querySelectorAll(`button[onclick*="'${ma}','hd'"]`).forEach(x=>{const o2=x.closest(".o-tt");if(o2){const t=o2.querySelector(".tt");t.className="tt tc";t.textContent="Từ chối";x.remove()}});const k=KOC.find(x=>x.ma===ma),d=document.getElementById("dem-duyet");if(k&&k.dk==="cho")d.textContent=Math.max(0,+d.textContent-1-(k.hd==="cho"?1:0));
+ goi("qtTuChoi",{token:layTk(),ma:ma}).then(()=>{bao("Đã từ chối "+ma+". KOC không nhận thông báo.");setTimeout(taiQT,1500)}).catch(x=>{loi(x&&x.message?{message:"Chưa từ chối được: "+x.message}:x);taiQT()})}
+function khoiPhuc(b,ma){if(!window.confirm("Khôi phục hồ sơ "+ma+" về danh sách chờ duyệt?"))return;goi("qtTuChoi",{token:layTk(),ma:ma,khoiPhuc:1},b).then(()=>{bao("Đã khôi phục "+ma+" về danh sách chờ duyệt.");taiQT()}).catch(loi)}
 if(layTk())moApp();
 function bao(t){const b=document.getElementById("tb");b.textContent=t;b.classList.add("hien");clearTimeout(b._t);b._t=setTimeout(()=>b.classList.remove("hien"),2600)}
 let VIEW_TRUOC=null;
