@@ -672,6 +672,11 @@ html,body{overflow-x:clip}
 .nhac-hd{display:flex;gap:14px;align-items:center;justify-content:space-between;border:1px solid #f0d9a8;background:#fffaf0;margin:0 0 16px}
 .nhac-hd p{margin:4px 0 0;color:var(--nhat);font-size:15px}.nhac-hd .btn{white-space:nowrap}
 @media(max-width:640px){.nhac-hd{flex-direction:column;align-items:stretch}}
+
+/* ECO 23/11: trang ít nội dung (VD Thông báo) — chân trang luôn nằm sát đáy màn hình, liền với thanh menu, không lơ lửng giữa trang */
+#man-tai-khoan{min-height:100vh;min-height:100dvh}
+/* ECO 23/11: nội dung thông báo căn trái, không giãn chữ */
+#ds-tb p{text-align:left;overflow-wrap:anywhere}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">

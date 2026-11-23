@@ -568,9 +568,13 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 .tb-nd p{margin:4px 0 0}.tb-qt li.mo .tb-nd{display:block}.tb-qt li.mo .tb-tt{white-space:normal}
 
 /* ECO 23/11: thêm chuông thông báo đã gửi — màn máy tính hẹp dùng chữ ngắn để menu không đè nút Đăng xuất */
-@media (min-width:861px) and (max-width:1200px){body:not(.xem-cong) .thanh nav .dai{display:none}body:not(.xem-cong) .thanh nav .ten-ngan{display:inline}body:not(.xem-cong) .thanh nav a{padding:8px 9px}}
+@media (min-width:861px){body:not(.xem-cong) .thanh nav .dai{display:none}body:not(.xem-cong) .thanh nav .ten-ngan{display:inline}body:not(.xem-cong) .thanh nav a{padding:8px 12px}}
 @media (min-width:861px) and (max-width:1100px){body:not(.xem-cong) .thanh nav a{padding:7px 6px;font-size:14px;gap:4px}body:not(.xem-cong) .thanh nav svg{width:16px;height:16px}body:not(.xem-cong) #app .thanh .trong{padding-left:10px!important;padding-right:10px!important}}
-.thanh nav a[data-v="thu"] svg{width:21px;height:21px}
+.thanh nav a[data-v="thu"] svg{width:18px;height:18px}
+/* ECO 23/11: chuông — máy tính có chữ "Thông báo" cho gióng các nút; điện thoại chỉ chuông */
+@media (max-width:860px){.thanh nav a[data-v="thu"] .thu-chu{display:none}.thanh nav a[data-v="thu"] svg{width:21px;height:21px}}
+.thu-tt b{margin-right:6px}.thu-tt b::after{content:" ·"}.thu-ph span{white-space:nowrap}
+@media (max-width:640px){.thu-tt{display:flex;flex-direction:column;gap:2px}.thu-tt b{margin:0;overflow:hidden;text-overflow:ellipsis}.thu-tt b::after{content:""}.thu-ph{font-size:14px;color:var(--nhat,#667085);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tb-qt li.mo .thu-ph{white-space:normal}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -599,7 +603,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
       <a href="#" data-v="koc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5.5a3 3 0 010 5.6M18 14.8c1.8.7 3 2.5 3 5.2"/></svg><span class="nh">Danh sách<span class="dai"> KOC</span></span></a>
       <a href="#" data-v="don"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg><span class="nh">Đơn hàng</span><span class="dem num" id="dem-don" hidden></span></a>
       <a href="#" data-v="duyet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg><span class="nh">Chờ duyệt</span><span class="dem num" id="dem-duyet">6</span></a>
-      <a href="#" data-v="thu" title="Thông báo đã gửi KOC" aria-label="Thông báo đã gửi KOC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 004 0"/></svg></a>
+      <a href="#" data-v="thu" title="Thông báo đã gửi KOC" aria-label="Thông báo đã gửi KOC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 004 0"/></svg><span class="nh thu-chu">Thông báo</span></a>
       <a href="#" data-v="cong"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="nh"><span class="dai">Trang công khai</span><span class="ten-ngan">Công khai</span></span></a>
     </nav>
     <span class="khau">Tri thức sách &amp; Tri thức số</span><div class="ra"><span class="ten-ra" id="qt-ai">PACOBOOKS · </span><span class="qt-cong2" id="qt-cong2"></span><a class="nut-ra" href="#" onclick="dangXuatQT();return false">Đăng xuất<small class="ten-nho" id="qt-ai2">PACOBOOKS</small></a></div>
@@ -883,7 +887,7 @@ function luuSuaTT(b){const k=dang,ly=$("dc-ly").value;if(ly==="")return bao("Vui
 function veThu(){const u=document.getElementById("ds-thu");if(!u)return;const q=(document.getElementById("thu-tim").value||"").trim().toLowerCase();
  const ds=[];(KOC||[]).forEach(k=>(k.tb||[]).forEach(x=>ds.push(Object.assign({kt:k.ten,km:k.ma},x))));ds.sort((a,b)=>(b.t||0)-(a.t||0));
  const loc=ds.filter(x=>!q||(x.kt+" "+x.km+" "+x.td).toLowerCase().includes(q)).slice(0,200);
- u.innerHTML=loc.map(x=>`<li onclick="moTbQt(this)"><div class="tb-hang"><span class="tb-tt">${e(x.ngay)} · <b>${e(x.kt)}</b> · ${e(x.td)}</span><span class="tt ${x.doc?"ok":"cho"}">${x.doc?"Đã đọc":"Chưa đọc"}</span></div><div class="tb-nd"><small>${e(x.km)} · ${e(x.ai==="Email tự động"?"Email tự động":"Gửi bởi "+(x.ai||"quản trị"))}</small><p>${e(x.nd||"").replace(/\n/g,"<br>")}</p></div></li>`).join("")||"<li><span>Chưa có thông báo nào.</span><span></span></li>"}
+ u.innerHTML=loc.map(x=>`<li onclick="moTbQt(this)"><div class="tb-hang"><span class="tb-tt thu-tt"><b>${e(x.kt)}</b><span class="thu-ph"><span>${e(x.ngay)}</span> · ${e(x.td)}</span></span><span class="tt ${x.doc?"ok":"cho"}">${x.doc?"Đã đọc":"Chưa đọc"}</span></div><div class="tb-nd"><small>${e(x.km)} · ${e(x.ai==="Email tự động"?"Email tự động":"Gửi bởi "+(x.ai||"quản trị"))}</small><p>${e(x.nd||"").replace(/\n/g,"<br>")}</p></div></li>`).join("")||"<li><span>Chưa có thông báo nào.</span><span></span></li>"}
 {const _veTC=veTatCa;veTatCa=function(){_veTC.apply(this,arguments);try{if(!document.getElementById("v-thu").classList.contains("an"))veThu()}catch(x){}}}
 function moTbQt(li){const mo=!li.classList.contains("mo");li.parentNode.querySelectorAll("li.mo").forEach(x=>x.classList.remove("mo"));if(mo)li.classList.add("mo")}
 function xemDC(ma){xemViec(ma);setTimeout(()=>{tab("hd");const x=document.querySelector(".dc-xet");if(x)x.scrollIntoView({block:"center",behavior:"smooth"})},450)}
