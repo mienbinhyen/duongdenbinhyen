@@ -667,6 +667,11 @@ html,body{overflow-x:clip}
 .tb-ds p{margin:6px 0 0;color:var(--nhat);font-size:15px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .tb-ds li.mo p{display:block;-webkit-line-clamp:unset;color:var(--muc)}
 .tb-ds .tb-trong{color:var(--nhat);text-align:center;cursor:default}
+
+/* ECO 23/11: nhắc hoàn tất hợp đồng */
+.nhac-hd{display:flex;gap:14px;align-items:center;justify-content:space-between;border:1px solid #f0d9a8;background:#fffaf0;margin:0 0 16px}
+.nhac-hd p{margin:4px 0 0;color:var(--nhat);font-size:15px}.nhac-hd .btn{white-space:nowrap}
+@media(max-width:640px){.nhac-hd{flex-direction:column;align-items:stretch}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -731,39 +736,32 @@ html,body{overflow-x:clip}
 
     <form id="dk-1" onsubmit="return false">
       <h1 style="font-size:33.5px">Đăng ký làm KOC</h1>
-      <p style="color:var(--nhat);margin:4px 0 22px">Bước 1/2: thông tin của bạn. Thông tin dùng để làm hợp đồng và chuyển hoa hồng.</p>
-      <ul style="margin:-14px 0 20px;padding-left:20px;color:var(--nhat);font-size:14.5px;line-height:1.55"><!-- ECO 22/11: trấn an trước khi nhập CCCD -->
-        <li>Thông tin cá nhân chưa được gửi đi cho đến khi bạn ký hợp đồng.</li>
-        <li>Thông tin cá nhân được bảo mật theo Điều 13 của hợp đồng này.</li>
+      <p style="color:var(--nhat);margin:4px 0 22px">Bước 1/2: thông tin liên hệ và kênh của bạn. Khi kênh được duyệt, bạn mới ký hợp đồng để nhận sách mẫu và hoa hồng.</p>
+      <ul style="margin:-14px 0 20px;padding-left:20px;color:var(--nhat);font-size:14.5px;line-height:1.55"><!-- ECO 23/11: đăng ký nhanh, chưa cần CCCD -->
+        <li>Bước này chưa cần CCCD hay tài khoản ngân hàng.</li>
+        <li>Thông tin cá nhân được bảo mật theo Điều 13 của hợp đồng.</li>
       </ul>
       <div class="luoi2">
         <label class="o"><span>Họ và tên (đúng CCCD)</span><input id="f-ten" required></label>
-        <label class="o"><span>Số CCCD</span><input id="f-cccd" inputmode="numeric" required pattern="\d{12}" title="CCCD gồm 12 số"></label>
         <label class="o"><span>Số điện thoại (Zalo)</span><input id="f-sdt" inputmode="tel" required pattern="0\d{9}" title="Số điện thoại gồm 10 số"><small class="loi-trung" id="lt-sdt" hidden>Số điện thoại này đã đăng ký. Vui lòng dùng số khác hoặc đăng nhập.</small></label>
         <label class="o"><span>Email</span><input id="f-email" type="email" required><small class="loi-trung" id="lt-email" hidden>Email này đã đăng ký. Vui lòng dùng email khác hoặc đăng nhập.</small></label>
         <label class="o"><span>Link kênh TikTok hoặc Facebook</span><input id="f-link" type="url" required placeholder="https://"></label>
         <label class="o"><span>Số người theo dõi</span><input id="f-follow" inputmode="numeric" required></label>
       </div>
       <label class="o"><span>Tên kênh (hiện trên kệ sách và trang bán)</span><input id="f-kenh" required maxlength="40"></label>
-      <label class="o"><span>Địa chỉ nhận sách mẫu</span><input id="f-dc" required></label>
-      <div class="luoi2">
-        <label class="o"><span>Ngân hàng</span><select id="f-nh" required><option value="">Chọn ngân hàng</option><option>Vietcombank</option><option>Techcombank</option><option>MB Bank</option><option>ACB</option><option>VietinBank</option><option>BIDV</option><option>Khác</option></select></label>
-        <label class="o"><span>Số tài khoản</span><input id="f-stk" inputmode="numeric" required></label>
-      </div>
-      <label class="o"><span>Chủ tài khoản</span><input id="f-chu" required><small>Chủ tài khoản phải là KOC. Hoa hồng chỉ trả cho người ký hợp đồng.</small></label>
+      <template id="mau-nh"><select required><option value="">Chọn ngân hàng</option><option>Vietcombank</option><option>Techcombank</option><option>MB Bank</option><option>ACB</option><option>VietinBank</option><option>BIDV</option><option>Khác</option></select></template>
       <div class="luoi2">
         <label class="o"><span>Tên đăng nhập</span><input id="f-dn" required autocomplete="username"></label>
         <label class="o"><span>Mật khẩu</span><input id="f-mk" type="password" required minlength="8" autocomplete="new-password"><small>Ít nhất 8 ký tự.</small></label>
       </div>
-      <div style="display:flex;justify-content:flex-end;margin:8px 0 40px"><button type="button" data-chinh class="btn btn-muc" onclick="gui(this,()=>kiemTrungDk(this))">Tiếp tục: đọc hợp đồng</button></div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 6px"><input class="o" style="margin:0;width:150px;height:42px;border:1.5px solid var(--vien);border-radius:10px;padding:0 12px" placeholder="Mã PIN email" inputmode="numeric" maxlength="6" aria-label="Mã PIN" id="dk-pin">
+        <button type="button" class="btn btn-vien" onclick="guiPinDk(this)">Gửi mã PIN</button>
+        <button type="button" data-chinh class="btn btn-vang" onclick="gui(this,()=>kiemTrungDk(this))">Đăng ký</button>
+        <small class="pin-spam" id="dk-spam" hidden>Không thấy mã? Kiểm tra mục Spam/Quảng cáo</small></div>
+      <p style="color:var(--nhat);font-size:14.5px;margin:0 0 40px">Bấm "Gửi mã PIN", nhập mã 6 số trong email rồi bấm "Đăng ký".</p>
     </form>
 
-    <div id="dk-2" class="an">
-      <h1 style="font-size:33.5px">Ký hợp đồng</h1>
-      <p style="color:var(--nhat);margin:4px 0 18px">Bước 2/2: đọc kỹ, ký tên, rồi nhập mã PIN gửi về email để xác nhận.</p>
-    </div>
   </div>
-  <div id="hop-dong-vung" class="an"></div>
   <footer class="chan-tk"><b>PACOBOOKS</b><span class="lh"><a href="mailto:tgthiennhan@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>tgthiennhan@gmail.com</a><a href="tel:0933223301"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>0933 22 33 01</a></span></footer>
 </div>
 
@@ -793,6 +791,7 @@ html,body{overflow-x:clip}
 <section class="vung an" id="v-gioi-thieu"><iframe id="khung-gt" title="Giới thiệu KOC" style="position:fixed;z-index:4;border:0;background:#16264f;display:block"></iframe></section>
 <section class="vung" id="v-tong-quan">
       <div class="dau-trang"><div><h1><span id="chao">Chào Mây,</span><br class="xd"> chúc một ngày bình yên</h1><p id="tq-phu">Tháng 11 · cập nhật trực tuyến</p></div></div>
+      <div class="the nhac-hd an" id="nhac-hd"><div><b>Còn một bước nhỏ: hoàn tất hợp đồng</b><p>Bổ sung CCCD, địa chỉ nhận sách, tài khoản nhận tiền và ký điện tử (khoảng 3 phút) để nhận sách mẫu và rút hoa hồng.</p></div><a class="btn btn-vang" href="https://duongdenbinhyen.com/dangnhapkoc.html#hop-dong" onclick="setTimeout(moKyHD,50)">Hoàn tất hợp đồng</a></div>
       <div class="luoi c4">
         <div class="the chiso noi"><div class="nhan">Hoa hồng có thể rút</div><div class="gt num" id="tq-kha">1.246.200đ</div><div class="phu">Rút được ngay</div><a class="btn btn-vang tq-rut" href="https://duongdenbinhyen.com/dangnhapkoc.html#rut-tien">Rút tiền</a></div>
         <div class="the chiso"><div class="nhan">Đơn thành công<span class="dt-an"> tháng này</span></div><div class="gt num" id="tq-don">64</div><div class="phu" id="tq-don-phu">+12 so với tháng trước</div></div>
@@ -913,6 +912,7 @@ html,body{overflow-x:clip}
     <!-- Hợp đồng -->
     <section class="vung an" id="v-hop-dong">
       <div class="dau-trang"><div><h1>Hợp đồng</h1><p>Hợp đồng và phụ lục đã ký, lưu dạng PDF.</p></div></div>
+      <div id="ky-vung" class="an"></div>
       <div class="the cuon-ngang hd-the" style="padding:6px 8px">
         <table class="bang bang-the"><thead><tr><th>Văn bản</th><th>Ngày ký</th><th>Trạng thái</th><th></th></tr></thead><tbody id="hd-ds">
           <tr><td data-nhan="Văn bản"><b>Hợp đồng hợp tác KOC số KOC-PACO11</b></td><td class="num" data-nhan="Ngày ký">02/10/2026</td><td data-nhan="Trạng thái"><span class="tt kha">Hai bên đã ký</span></td><td style="text-align:right;white-space:nowrap" data-nhan=""><button class="btn btn-vien btn-nho" onclick="bao('Đang mở bản PDF')">Xem</button> <button class="btn btn-vien btn-nho" onclick="bao('Đang tải PDF về máy')">Tải về</button></td></tr>
@@ -1035,7 +1035,7 @@ function veTatCa(d){
  $("ls-dem").textContent=d.rut.length+" lần";
  $("ls-rut").innerHTML=d.rut.map(r=>`<li><div><b class="num">${f(r.tien)}</b><small class="num"><span class="yc">Yêu cầu </span>${e(r.ngay)}</small></div><span class="tt ${r.xong?"kha":"doi"}">${r.xong?"Đã nhận "+e(r.tra):r.duyet?(r.hen?"Hẹn trả "+e(r.hen):"Chờ đối soát"):"Đã gửi yêu cầu"}</span></li>`).join("")||`<li><div><small>Chưa có yêu cầu rút tiền.</small></div></li>`;
  const b=d.buoc,v1=d.videos.find(v=>v.tt==="ok");
- $("sv-tg").innerHTML=[[b.dk==="ok"&&b.hd==="ok","Đăng ký được duyệt",b.dk==="ok"&&b.hd==="ok"?"Hợp đồng ký ngày "+d.hopDong.ngayKy:"Hồ sơ đang chờ PACOBOOKS duyệt",d.hopDong.ngayKy.slice(0,5)],
+ $("sv-tg").innerHTML=[[b.dk==="ok"&&b.hd==="ok","Đăng ký được duyệt",b.dk==="ok"&&b.hd==="ok"?"Hợp đồng ký ngày "+d.hopDong.ngayKy:!d.hopDong.ngayKy&&b.dk==="ok"?"Kênh đã được duyệt · bạn cần hoàn tất hợp đồng":"Hồ sơ đang chờ PACOBOOKS duyệt",d.hopDong.ngayKy.slice(0,5)],
   [b.s1==="ok","Đã gửi 1 cuốn",b.s1==="ok"?"Mã vận đơn "+b.s1n:"PACOBOOKS gửi sau khi duyệt hồ sơ",b.s1ngay],
   [b.vd==="ok","Video đầu tiên được duyệt",v1?ngan(v1.link):"Đăng video trong 7 ngày sau khi nhận sách",v1?v1.ngay:""],
   [b.s2==="ok","Đã gửi 2 cuốn còn lại",b.s2==="ok"?"Mã vận đơn "+b.s2n:"Gửi sau khi video được duyệt",b.s2ngay]]
@@ -1072,7 +1072,12 @@ function guiDC(nut){const t=(DL&&DL.tt)||{},moi={};$("dc-vung").querySelectorAll
  if(!Object.keys(moi).length)return bao("Bạn chưa đổi thông tin nào");const ly=$("dc-ly").value;if(ly==="")return bao("Vui lòng chọn lý do");if(ly==="5"&&!$("dc-ghi").value.trim())return bao("Lý do Khác cần ghi rõ");if(!$("dc-dongy").checked)return bao("Bạn cần tích xác nhận");if(!/^\d{6}$/.test($("dc-pin").value.trim()))return bao("Nhập mã PIN 6 số trong email");
  goi("dcGui",{token:layTk(),lyDo:ly,ghiChu:$("dc-ghi").value.trim(),moi:moi,pin:$("dc-pin").value.trim()},nut).then(()=>{bao("Đã gửi yêu cầu. PACOBOOKS sẽ duyệt và báo qua email.");$("dc-vung").classList.add("an");taiDL().catch(()=>{})}).catch(loi)}
 function taiDL(){dangCN(1);return goi("koc",{token:layTk()}).finally(()=>dangCN(-1)).then(d=>{DL=d;veTatCa(d);try{if(d&&d.ma){localStorage.setItem("koc_ma",d.ma);localStorage.setItem("koc_dl",JSON.stringify({ma:d.ma,d:d}))}}catch(x){}taiTB();return d})}
-{const _veTC=veTatCa;veTatCa=function(d){_veTC(d);try{veDC(d)}catch(x){}}}   // ECO 22/11: vẽ thêm điều chỉnh thông tin
+{const _veTC=veTatCa;veTatCa=function(d){_veTC(d);try{veDC(d)}catch(x){}try{veChuaKy(d)}catch(x){}}}
+/* ECO 23/11: tài khoản đăng ký nhanh chưa ký hợp đồng */
+function veChuaKy(d){const chua=!(d.hopDong&&d.hopDong.ngayKy);if(chua&&d.buoc&&d.buoc.dk==="ok"&&!d.tamDung)$("tq-phu").textContent="Tháng "+d.thang+" · kênh đã được duyệt, còn bước hoàn tất hợp đồng";$("nhac-hd").classList.toggle("an",!chua);const bk=$("hd-bank");if(bk)bk.closest(".the").classList.toggle("an",chua);
+ if(!chua){const k=$("ky-vung");if(k){k.classList.add("an");k.innerHTML=""}return}
+ $("hd-ds").innerHTML=`<tr><td data-nhan="Văn bản"><b>Hợp đồng hợp tác KOC số ${e(d.hopDong.so)}</b></td><td class="num" data-nhan="Ngày ký">—</td><td data-nhan="Trạng thái"><span class="tt doi">Chưa ký</span></td><td style="text-align:right;white-space:nowrap" data-nhan=""><button class="btn btn-vang btn-nho" onclick="moKyHD()">Hoàn tất hợp đồng</button></td></tr>`;
+ if(location.hash==="#hop-dong"&&$("ky-vung").classList.contains("an"))moKyHD()}   // ECO 22/11: vẽ thêm điều chỉnh thông tin
 function napPdfJs(){if(window.pdfjsLib)return Promise.resolve(window.pdfjsLib);return new Promise((ok,hong)=>{const sc=document.createElement("script");sc.src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";sc.onload=()=>{pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";ok(pdfjsLib)};sc.onerror=()=>hong(new Error("Không tải được trình xem PDF"));document.head.appendChild(sc)})}
 function xemHD(tai,nut,pl){
  if(tai)return goi("taiHopDong",{token:layTk(),pl:pl||""},nut).then(r=>{const by=atob(r.b64),u=new Uint8Array(by.length);for(let i=0;i<by.length;i++)u[i]=by.charCodeAt(i);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([u],{type:"application/pdf"}));a.download=r.ten;document.body.appendChild(a);a.click();a.remove()}).catch(loi);
@@ -1104,22 +1109,34 @@ document.getElementById("ds-trich").innerHTML=TRICH.map((t,i)=>`<li><div><q id="
 /* ===== Hợp đồng để ký (đăng ký bước 2) ===== */
 /* Lọc trùng email + SĐT ngay khi bấm "Tiếp tục" (Ông Paco chốt 20/11) */
 function kiemTrungDk(nut){["email","sdt"].forEach(k=>$("lt-"+k).hidden=true);
- goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim(),cccd:$("f-cccd").value.trim()},nut).then(d=>{
-  if(d.cccd){$("f-cccd").focus();return bao("Số CCCD này đã đăng ký tài khoản KOC. Vui lòng đăng nhập hoặc liên hệ PACOBOOKS")}   // ECO 22/11
+ if(!/^\d{6}$/.test($("dk-pin").value.trim()))return bao("Bấm Gửi mã PIN rồi nhập mã 6 số trong email");
+ goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(d=>{
   if(d.sdt)$("lt-sdt").hidden=false;if(d.email)$("lt-email").hidden=false;
   if(d.email||d.sdt){$(d.email?"f-email":"f-sdt").focus();return}
-  sangHopDong()}).catch(loi)}
+  dangKyNhanh(nut)}).catch(loi)}
+/* ECO 23/11: đăng ký nhanh — chưa cần CCCD, tài khoản ngân hàng; ký hợp đồng sau khi kênh được duyệt */
+function guiPinDk(nut){const m=$("f-email").value.trim();if(!m)return bao("Nhập email trước");$("dk-spam").hidden=false;guiNgay("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut,{bao:"Đã gửi mã PIN tới "+m,dem:60})}
+function dangKyNhanh(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;nut.disabled=true;const chu=nut.textContent;nut.textContent="Đang gửi…";
+ const body=JSON.stringify({a:"dangKy",hoTen:v("f-ten"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("dk-pin")});
+ const mo=()=>setTimeout(()=>{nut.disabled=false;nut.textContent=chu},3000),yc={method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:body};
+ let f;try{f=fetch(API_URL,Object.assign({keepalive:true},yc))}catch(x){f=fetch(API_URL,yc)}
+ f.catch(()=>fetch(API_URL,yc)).then(r=>r.json()).then(d=>{
+  if(!d||!d.ok){mo();return bao(String(d&&d.loi||"Có lỗi, vui lòng thử lại"))}
+  const dn=v("f-dn");$("dk-1").reset();$("dk-spam").hidden=true;nut.disabled=false;nut.textContent=chu;$("dn-ten").value=dn;location.hash="dang-nhap";try{window.fbq&&fbq("track","CompleteRegistration");window.ttq&&ttq.track("CompleteRegistration")}catch(e){};bao("Đăng ký thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")
+ }).catch(()=>{mo();bao("Không kết nối được máy chủ. Vui lòng thử lại.")})}
 ["f-email","f-sdt"].forEach(i=>{const o=document.getElementById(i);if(o)o.addEventListener("input",()=>$("lt-"+(i==="f-email"?"email":"sdt")).hidden=true)});
-function sangHopDong(){
- const ten=document.getElementById("f-ten").value.trim(), chu=document.getElementById("f-chu").value.trim();
- if(ten.toUpperCase()!==chu.toUpperCase()){bao("Chủ tài khoản phải trùng họ tên");document.getElementById("f-chu").focus();return}
- document.getElementById("dk-1").classList.add("an");document.getElementById("dk-2").classList.remove("an");document.getElementById("b2").classList.add("xong");
- const v=document.getElementById("hop-dong-vung");v.classList.remove("an");
- v.innerHTML=`<article class="giay-hd" aria-label="Hợp đồng hợp tác KOC">
+/* ECO 23/11: bước 2 — KOC đã đăng ký nhanh bổ sung thông tin và ký hợp đồng ngay trong mục Hợp đồng */
+function moKyHD(){const v=$("ky-vung");if(!v||!DL)return;const d=DL,t=d.tt||{},ten=d.hoTen;
+ v.classList.remove("an");
+ v.innerHTML=`<div class="the" style="margin-bottom:16px"><h2>Hoàn tất hợp đồng</h2><p style="color:var(--nhat);font-size:15.5px;margin:4px 0 12px">Thông tin chỉ dùng cho hợp đồng, gửi sách và chi trả hoa hồng, được bảo mật theo Điều 13 của hợp đồng.</p>
+ <div class="luoi2"><label class="o"><span>Số CCCD</span><input id="k-cccd" inputmode="numeric" maxlength="12" placeholder="12 số"></label><label class="o"><span>Địa chỉ nhận sách mẫu</span><input id="k-dc" value="${e(t.diaChi||"")}"></label>
+ <label class="o"><span>Ngân hàng</span>${$("mau-nh").innerHTML.replace("<select","<select id=\"k-nh\"")}</label><label class="o"><span>Số tài khoản</span><input id="k-stk" inputmode="numeric"></label></div>
+ <label class="o"><span>Chủ tài khoản</span><input id="k-chu" value="${e(String(ten).toUpperCase())}"><small>Chủ tài khoản phải trùng họ tên ${e(ten)}. Hoa hồng chỉ trả cho người ký hợp đồng.</small></label></div>
+ <article class="giay-hd" aria-label="Hợp đồng hợp tác KOC">
  <p class="qh">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>Độc lập – Tự do – Hạnh phúc</p>
- <h2>HỢP ĐỒNG HỢP TÁC TIẾP THỊ LIÊN KẾT (KOC)</h2><p style="text-align:center;color:var(--nhat)">Số: KOC-(cấp sau khi duyệt)</p>
+ <h2>HỢP ĐỒNG HỢP TÁC TIẾP THỊ LIÊN KẾT (KOC)</h2><p style="text-align:center;color:var(--nhat)">Số: KOC-${e(d.ma)}</p>
  <h3>Điều 1. Các bên</h3><p><b>Bên A — PACOBOOKS:</b> 46 Lê Đình Thám, P. Tân Sơn Nhì, TP. Hồ Chí Minh; ĐT 0933 22 33 01; email tgthiennhan@gmail.com; MST 034083007299; đại diện Ông Nguyễn Văn Thiện.</p>
- <p><b>Bên B — KOC:</b> <input class="dien" value="${ten}" aria-label="Họ tên Bên B"> — kênh <b>${e($("f-kenh").value.trim())}</b> (${e($("f-link").value.trim())}); thông tin CCCD, liên hệ, tài khoản nhận tiền theo hồ sơ đăng ký.</p>
+ <p><b>Bên B — KOC:</b> <input class="dien" value="${ten}" aria-label="Họ tên Bên B"> — kênh <b>${e(t.kenh||"")}</b> (${e(t.link||"")}); thông tin CCCD, liên hệ, tài khoản nhận tiền theo thông tin khai ở trên.</p>
  <h3>Điều 2. Nội dung hợp tác</h3><p>Bên B giới thiệu sách của Bên A bằng link hoặc mã riêng do Bên A cấp. Đơn qua link/mã được ghi nhận cho Bên B trên tài khoản KOC. Hoa hồng là thù lao dịch vụ giới thiệu sách theo đơn thành công; hợp đồng này không phải hợp đồng lao động và không phải hợp đồng hợp tác kinh doanh.</p>
  <h3>Điều 3. Sách mẫu</h3><ol><li>Duyệt hồ sơ xong, Bên A gửi 1 cuốn sách mẫu.</li><li>Trong 7 ngày, Bên B đăng ít nhất 1 video review có link hoặc mã và gửi link video lên tài khoản.</li><li>Nhận link hợp lệ, Bên A gửi 2 cuốn còn lại trong 3–6 ngày.</li><li>PACOBOOKS là đơn vị phát hành chính thức, có đầy đủ thủ tục pháp lý về quyền phát hành và bản quyền.</li></ol>
  <h3>Điều 4. Hoa hồng theo hạng (tính trên giá bán)</h3>
@@ -1137,9 +1154,9 @@ function sangHopDong(){
  <div class="thanh-ky"><label><input type="checkbox" id="dongy"> Tôi đã đọc và đồng ý với hợp đồng</label>
  <input class="o" style="margin:0;width:150px;height:42px;border:1.5px solid var(--vien);border-radius:10px;padding:0 12px" placeholder="Mã PIN email" inputmode="numeric" maxlength="6" aria-label="Mã PIN" id="ky-pin">
  <button class="btn btn-vien" onclick="guiPinKy(this)">Gửi mã PIN</button>
- <button class="btn btn-vang" onclick="kyXong(this)">Ký và gửi hồ sơ</button>
+ <button class="btn btn-vang" onclick="kyXong(this)">Ký hợp đồng</button>
  <small class="pin-spam" id="pin-spam" hidden>Không thấy mã? Kiểm tra mục Spam/Quảng cáo</small></div>`;
- khoiTaoKy();window.scrollTo(0,0);
+ khoiTaoKy();v.scrollIntoView({block:"start",behavior:"smooth"});
 }
 let daKy=false;
 function khoiTaoKy(){const c=document.getElementById("ve"),r=c.getBoundingClientRect(),x=c.getContext("2d");c.width=r.width*2;c.height=r.height*2;x.scale(2,2);x.lineWidth=2.4;x.lineCap="round";x.strokeStyle="#16264f";let ve=false;
@@ -1147,20 +1164,14 @@ function khoiTaoKy(){const c=document.getElementById("ve"),r=c.getBoundingClient
  c.onpointerdown=e=>{ve=true;daKy=true;x.beginPath();x.moveTo(...p(e));c.setPointerCapture(e.pointerId)};
  c.onpointermove=e=>{if(ve){x.lineTo(...p(e));x.stroke()}};c.onpointerup=()=>ve=false}
 function xoaKy(){const c=document.getElementById("ve");c.getContext("2d").clearRect(0,0,c.width,c.height);daKy=false}
-function guiPinKy(nut){const m=$("f-email").value.trim();const c=$("pin-spam");if(c)c.hidden=false;guiNgay("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut,{bao:"Đã gửi mã PIN tới "+m,dem:60})}
-function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");if(!v("f-email"))return bao("Vui lòng nhập lại email ở bước 1");
- /* Cơ chế như nút đặt sách (Ông Paco chốt 20/11): bấm 1 lần là khóa nút, xóa ô email ngay, gửi keepalive — khách thoát trang lệnh vẫn được giữ */
- nut.disabled=true;const chu=nut.textContent;nut.textContent="Đang gửi hồ sơ…";
+function guiPinKy(nut){const c=$("pin-spam");if(c)c.hidden=false;guiNgay("guiPin",{muc:"hd",token:layTk()},nut,{bao:"Đã gửi mã PIN tới email của bạn",dem:60})}
+function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;
+ if(!/^\d{12}$/.test(v("k-cccd")))return bao("CCCD cần đủ 12 số");if(v("k-dc").length<8)return bao("Vui lòng nhập địa chỉ nhận sách");if(!v("k-nh")||!v("k-stk")||!v("k-chu"))return bao("Vui lòng điền đủ tài khoản nhận tiền");
+ if(v("k-chu").toUpperCase()!==String(DL.hoTen).trim().toUpperCase())return bao("Chủ tài khoản phải trùng họ tên "+DL.hoTen);
+ if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");
  const c0=$("ve"),c1=document.createElement("canvas");c1.width=Math.round(c0.width/2);c1.height=Math.round(c0.height/2);c1.getContext("2d").drawImage(c0,0,0,c1.width,c1.height);
- const body=JSON.stringify({a:"dangKy",hoTen:v("f-ten"),cccd:v("f-cccd"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),diaChi:v("f-dc"),nh:v("f-nh"),stk:v("f-stk"),chu:v("f-chu"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("ky-pin"),chuKy:c1.toDataURL("image/png")});
- $("f-email").value="";
- const mo=()=>setTimeout(()=>{nut.disabled=false;nut.textContent=chu},4000);
- const yc={method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:body};
- let f;try{f=fetch(API_URL,Object.assign({keepalive:true},yc))}catch(x){f=fetch(API_URL,yc)}
- f.catch(()=>fetch(API_URL,yc)).then(r=>r.json()).then(d=>{
-  if(!d||!d.ok){mo();return bao(String(d&&d.loi||"Có lỗi, vui lòng thử lại")+". Vui lòng nhập lại email ở bước 1 rồi gửi lại.")}
-  const dn=$("f-dn").value.trim();$("dk-1").reset();$("dk-1").classList.remove("an");$("dk-2").classList.add("an");$("b2").classList.remove("xong");const hv=$("hop-dong-vung");hv.classList.add("an");hv.innerHTML="";$("dn-ten").value=dn;location.hash="dang-nhap";try{window.fbq&&fbq("track","CompleteRegistration");window.ttq&&ttq.track("CompleteRegistration")}catch(e){};bao("Ký hợp đồng thành công. Mã KOC của bạn: "+d.ma+". Mời bạn đăng nhập.")
- }).catch(()=>{mo();bao("Không kết nối được máy chủ. Vui lòng nhập lại email ở bước 1 rồi gửi lại.")})}
+ goi("kyHopDong",{token:layTk(),cccd:v("k-cccd"),diaChi:v("k-dc"),nh:v("k-nh"),stk:v("k-stk"),chu:v("k-chu"),pin:v("ky-pin"),chuKy:c1.toDataURL("image/png")},nut).then(()=>{
+  const k=$("ky-vung");k.classList.add("an");k.innerHTML="";bao("Ký hợp đồng thành công. PACOBOOKS sẽ xác nhận và gửi sách mẫu cho bạn.");window.scrollTo(0,0);taiDL().catch(()=>{})}).catch(loi)}
 
 /* ===== Điều hướng ===== */
 function guiPinQuen(nut){guiNgay("guiPin",{muc:"quen",email:$("qm-email").value.trim()},nut,{bao:"Nếu email đã đăng ký, mã PIN 6 số đã được gửi tới email. Không thấy mã? Kiểm tra mục Spam/Quảng cáo",dem:60})}
