@@ -677,6 +677,11 @@ html,body{overflow-x:clip}
 #man-tai-khoan{min-height:100vh;min-height:100dvh}
 /* ECO 23/11: nội dung thông báo căn trái, không giãn chữ */
 #ds-tb p{text-align:left;overflow-wrap:anywhere}
+
+/* ECO 23/11: bỏ nút Giới thiệu KOC trên thanh đầu (đã chuyển xuống thẻ Link và mã), nút Đăng xuất to, dễ bấm */
+#man-tai-khoan .ben .ai a.gt-koc{display:none!important}
+#v-tong-quan .lk-gtk{order:10}
+@media (max-width:760px){#man-tai-khoan .ben .ai a:not(.gt-koc){grid-row:1/span 2!important;align-self:center!important;justify-self:end!important;margin:0!important;padding:8px 16px!important;font-size:15px!important;line-height:1.2!important;border-radius:999px!important}#man-tai-khoan .ben .ai b,#man-tai-khoan .ben .ma-koc{transform:none!important}}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -809,6 +814,7 @@ html,body{overflow-x:clip}
           <h2>Link và mã của bạn</h2>
           <p style="color:var(--nhat);font-size:15.5px">Dán link vào bio TikTok hoặc bài Facebook, đọc mã trong video.</p>
           <div class="lk"><div class="lk-gt"><span class="lk-nhan">Video review</span><code>Gửi video cho shop</code></div><a class="btn btn-vang btn-nho" href="https://duongdenbinhyen.com/dangnhapkoc.html#sach-video">Gửi link</a></div>
+          <div class="lk lk-gtk"><div class="lk-gt"><span class="lk-nhan">Giới thiệu KOC</span><code>Mời bạn bè cùng làm KOC</code></div><a class="btn btn-muc btn-nho" href="https://duongdenbinhyen.com/dangnhapkoc.html#gioi-thieu">Xem</a></div><!-- ECO 23/11: chuyển nút Giới thiệu KOC từ thanh trên xuống đây -->
           <div class="lk"><div class="lk-gt"><span class="lk-nhan">Link bán hàng</span><code id="lk1">https://duongdenbinhyen.com/koc.html?ref=PACO11</code></div><button class="btn btn-muc btn-nho" onclick="sao('lk1')">Sao chép</button></div>
           <div class="lk"><div class="lk-gt"><span class="lk-nhan">Mã KOC</span><code id="lk2">PACO11</code></div><button class="btn btn-muc btn-nho" onclick="sao('lk2')">Sao chép</button></div>
           <small class="lk-ghi">Khách không bấm được link chỉ cần nhập mã này khi đặt sách, đơn vẫn tính cho bạn.</small>
