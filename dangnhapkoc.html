@@ -1129,14 +1129,15 @@ function dangKyNhanh(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;nu
 function moKyHD(){const v=$("ky-vung");if(!v||!DL)return;const d=DL,t=d.tt||{},ten=d.hoTen;
  v.classList.remove("an");
  v.innerHTML=`<div class="the" style="margin-bottom:16px"><h2>Hoàn tất hợp đồng</h2><p style="color:var(--nhat);font-size:15.5px;margin:4px 0 12px">Thông tin chỉ dùng cho hợp đồng, gửi sách và chi trả hoa hồng, được bảo mật theo Điều 13 của hợp đồng.</p>
+ <label class="o"><span>Họ và tên (đúng CCCD)</span><input id="k-ten" value="${e(ten)}" oninput="dongBoTen()"><small>Sửa lại nếu khi đăng ký bạn nhập chưa đúng. Họ tên này dùng cho hợp đồng và tài khoản nhận tiền.</small></label>
  <div class="luoi2"><label class="o"><span>Số CCCD</span><input id="k-cccd" inputmode="numeric" maxlength="12" placeholder="12 số"></label><label class="o"><span>Địa chỉ nhận sách mẫu</span><input id="k-dc" value="${e(t.diaChi||"")}"></label>
  <label class="o"><span>Ngân hàng</span>${$("mau-nh").innerHTML.replace("<select","<select id=\"k-nh\"")}</label><label class="o"><span>Số tài khoản</span><input id="k-stk" inputmode="numeric"></label></div>
- <label class="o"><span>Chủ tài khoản</span><input id="k-chu" value="${e(String(ten).toUpperCase())}"><small>Chủ tài khoản phải trùng họ tên ${e(ten)}. Hoa hồng chỉ trả cho người ký hợp đồng.</small></label></div>
+ <label class="o"><span>Chủ tài khoản</span><input id="k-chu" value="${e(String(ten).toUpperCase())}" readonly style="background:var(--giay)"><small>Tự lấy theo họ tên ở trên. Tài khoản ngân hàng phải đứng tên chính bạn.</small></label></div>
  <article class="giay-hd" aria-label="Hợp đồng hợp tác KOC">
  <p class="qh">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>Độc lập – Tự do – Hạnh phúc</p>
  <h2>HỢP ĐỒNG HỢP TÁC TIẾP THỊ LIÊN KẾT (KOC)</h2><p style="text-align:center;color:var(--nhat)">Số: KOC-${e(d.ma)}</p>
  <h3>Điều 1. Các bên</h3><p><b>Bên A — PACOBOOKS:</b> 46 Lê Đình Thám, P. Tân Sơn Nhì, TP. Hồ Chí Minh; ĐT 0933 22 33 01; email tgthiennhan@gmail.com; MST 034083007299; đại diện Ông Nguyễn Văn Thiện.</p>
- <p><b>Bên B — KOC:</b> <input class="dien" value="${ten}" aria-label="Họ tên Bên B"> — kênh <b>${e(t.kenh||"")}</b> (${e(t.link||"")}); thông tin CCCD, liên hệ, tài khoản nhận tiền theo thông tin khai ở trên.</p>
+ <p><b>Bên B — KOC:</b> <input class="dien" id="k-ten-hd" value="${e(ten)}" readonly aria-label="Họ tên Bên B"> — kênh <b>${e(t.kenh||"")}</b> (${e(t.link||"")}); thông tin CCCD, liên hệ, tài khoản nhận tiền theo thông tin khai ở trên.</p>
  <h3>Điều 2. Nội dung hợp tác</h3><p>Bên B giới thiệu sách của Bên A bằng link hoặc mã riêng do Bên A cấp. Đơn qua link/mã được ghi nhận cho Bên B trên tài khoản KOC. Hoa hồng là thù lao dịch vụ giới thiệu sách theo đơn thành công; hợp đồng này không phải hợp đồng lao động và không phải hợp đồng hợp tác kinh doanh.</p>
  <h3>Điều 3. Sách mẫu</h3><ol><li>Duyệt hồ sơ xong, Bên A gửi 1 cuốn sách mẫu.</li><li>Trong 7 ngày, Bên B đăng ít nhất 1 video review có link hoặc mã và gửi link video lên tài khoản.</li><li>Nhận link hợp lệ, Bên A gửi 2 cuốn còn lại trong 3–6 ngày.</li><li>PACOBOOKS là đơn vị phát hành chính thức, có đầy đủ thủ tục pháp lý về quyền phát hành và bản quyền.</li></ol>
  <h3>Điều 4. Hoa hồng theo hạng (tính trên giá bán)</h3>
@@ -1165,12 +1166,13 @@ function khoiTaoKy(){const c=document.getElementById("ve"),r=c.getBoundingClient
  c.onpointermove=e=>{if(ve){x.lineTo(...p(e));x.stroke()}};c.onpointerup=()=>ve=false}
 function xoaKy(){const c=document.getElementById("ve");c.getContext("2d").clearRect(0,0,c.width,c.height);daKy=false}
 function guiPinKy(nut){const c=$("pin-spam");if(c)c.hidden=false;guiNgay("guiPin",{muc:"hd",token:layTk()},nut,{bao:"Đã gửi mã PIN tới email của bạn",dem:60})}
-function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;
+function dongBoTen(){const t=$("k-ten").value.replace(/\s+/g," ").trim();$("k-chu").value=t.toUpperCase();const h=$("k-ten-hd");if(h)h.value=t}
+function kyXong(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;if(!/\S+\s+\S+/.test(v("k-ten")))return bao("Vui lòng nhập đầy đủ họ và tên đúng CCCD");dongBoTen();
  if(!/^\d{12}$/.test(v("k-cccd")))return bao("CCCD cần đủ 12 số");if(v("k-dc").length<8)return bao("Vui lòng nhập địa chỉ nhận sách");if(!v("k-nh")||!v("k-stk")||!v("k-chu"))return bao("Vui lòng điền đủ tài khoản nhận tiền");
- if(v("k-chu").toUpperCase()!==String(DL.hoTen).trim().toUpperCase())return bao("Chủ tài khoản phải trùng họ tên "+DL.hoTen);
+ 
  if(!document.getElementById("dongy").checked)return bao("Bạn cần tích đồng ý hợp đồng");if(!daKy)return bao("Bạn chưa ký tên");if(!/^\d{6}$/.test(document.getElementById("ky-pin").value))return bao("Nhập mã PIN 6 số trong email");
  const c0=$("ve"),c1=document.createElement("canvas");c1.width=Math.round(c0.width/2);c1.height=Math.round(c0.height/2);c1.getContext("2d").drawImage(c0,0,0,c1.width,c1.height);
- goi("kyHopDong",{token:layTk(),cccd:v("k-cccd"),diaChi:v("k-dc"),nh:v("k-nh"),stk:v("k-stk"),chu:v("k-chu"),pin:v("ky-pin"),chuKy:c1.toDataURL("image/png")},nut).then(()=>{
+ goi("kyHopDong",{token:layTk(),hoTen:v("k-ten").replace(/\s+/g," "),cccd:v("k-cccd"),diaChi:v("k-dc"),nh:v("k-nh"),stk:v("k-stk"),chu:v("k-chu"),pin:v("ky-pin"),chuKy:c1.toDataURL("image/png")},nut).then(()=>{
   const k=$("ky-vung");k.classList.add("an");k.innerHTML="";bao("Ký hợp đồng thành công. PACOBOOKS sẽ xác nhận và gửi sách mẫu cho bạn.");window.scrollTo(0,0);taiDL().catch(()=>{})}).catch(loi)}
 
 /* ===== Điều hướng ===== */
