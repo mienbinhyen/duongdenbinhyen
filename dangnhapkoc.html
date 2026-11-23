@@ -749,6 +749,7 @@ html,body{overflow-x:clip}
         <label class="o"><span>Số người theo dõi</span><input id="f-follow" inputmode="numeric" required></label>
       </div>
       <label class="o"><span>Tên kênh (hiện trên kệ sách và trang bán)</span><input id="f-kenh" required maxlength="40"></label>
+      <label class="o"><span>Địa chỉ nhận sách mẫu (PACOBOOKS gửi tặng miễn phí)</span><input id="f-dc" required minlength="8" maxlength="300" placeholder="Số nhà, đường, phường/xã, tỉnh/thành"></label>
       <template id="mau-nh"><select required><option value="">Chọn ngân hàng</option><option>Vietcombank</option><option>Techcombank</option><option>MB Bank</option><option>ACB</option><option>VietinBank</option><option>BIDV</option><option>Khác</option></select></template>
       <div class="luoi2">
         <label class="o"><span>Tên đăng nhập</span><input id="f-dn" required autocomplete="username"></label>
@@ -791,7 +792,7 @@ html,body{overflow-x:clip}
 <section class="vung an" id="v-gioi-thieu"><iframe id="khung-gt" title="Giới thiệu KOC" style="position:fixed;z-index:4;border:0;background:#16264f;display:block"></iframe></section>
 <section class="vung" id="v-tong-quan">
       <div class="dau-trang"><div><h1><span id="chao">Chào Mây,</span><br class="xd"> chúc một ngày bình yên</h1><p id="tq-phu">Tháng 11 · cập nhật trực tuyến</p></div></div>
-      <div class="the nhac-hd an" id="nhac-hd"><div><b>Còn một bước nhỏ: hoàn tất hợp đồng</b><p>Bổ sung CCCD, địa chỉ nhận sách, tài khoản nhận tiền và ký điện tử (khoảng 3 phút) để nhận sách mẫu và rút hoa hồng.</p></div><a class="btn btn-vang" href="https://duongdenbinhyen.com/dangnhapkoc.html#hop-dong" onclick="setTimeout(moKyHD,50)">Hoàn tất hợp đồng</a></div>
+      <div class="the nhac-hd an" id="nhac-hd"><div><b>Còn một bước nhỏ: hoàn tất hợp đồng</b><p>Bổ sung CCCD, tài khoản nhận tiền, kiểm tra địa chỉ nhận sách và ký điện tử (khoảng 3 phút) để nhận sách mẫu và rút hoa hồng.</p></div><a class="btn btn-vang" href="https://duongdenbinhyen.com/dangnhapkoc.html#hop-dong" onclick="setTimeout(moKyHD,50)">Hoàn tất hợp đồng</a></div>
       <div class="luoi c4">
         <div class="the chiso noi"><div class="nhan">Hoa hồng có thể rút</div><div class="gt num" id="tq-kha">1.246.200đ</div><div class="phu">Rút được ngay</div><a class="btn btn-vang tq-rut" href="https://duongdenbinhyen.com/dangnhapkoc.html#rut-tien">Rút tiền</a></div>
         <div class="the chiso"><div class="nhan">Đơn thành công<span class="dt-an"> tháng này</span></div><div class="gt num" id="tq-don">64</div><div class="phu" id="tq-don-phu">+12 so với tháng trước</div></div>
@@ -1109,7 +1110,7 @@ document.getElementById("ds-trich").innerHTML=TRICH.map((t,i)=>`<li><div><q id="
 /* ===== Hợp đồng để ký (đăng ký bước 2) ===== */
 /* Lọc trùng email + SĐT ngay khi bấm "Tiếp tục" (Ông Paco chốt 20/11) */
 function kiemTrungDk(nut){["email","sdt"].forEach(k=>$("lt-"+k).hidden=true);
- if(!/^\d{6}$/.test($("dk-pin").value.trim()))return bao("Bấm Gửi mã PIN rồi nhập mã 6 số trong email");
+ if($("f-dc").value.trim().length<8){$("f-dc").focus();return bao("Vui lòng nhập địa chỉ nhận sách mẫu")}if(!/^\d{6}$/.test($("dk-pin").value.trim()))return bao("Bấm Gửi mã PIN rồi nhập mã 6 số trong email");
  goi("kiemTrung",{email:$("f-email").value.trim(),sdt:$("f-sdt").value.trim()},nut).then(d=>{
   if(d.sdt)$("lt-sdt").hidden=false;if(d.email)$("lt-email").hidden=false;
   if(d.email||d.sdt){$(d.email?"f-email":"f-sdt").focus();return}
@@ -1117,7 +1118,7 @@ function kiemTrungDk(nut){["email","sdt"].forEach(k=>$("lt-"+k).hidden=true);
 /* ECO 23/11: đăng ký nhanh — chưa cần CCCD, tài khoản ngân hàng; ký hợp đồng sau khi kênh được duyệt */
 function guiPinDk(nut){const m=$("f-email").value.trim();if(!m)return bao("Nhập email trước");$("dk-spam").hidden=false;guiNgay("guiPin",{muc:"ky",email:m,ten:$("f-ten").value.trim(),sdt:$("f-sdt").value.trim()},nut,{bao:"Đã gửi mã PIN tới "+m,dem:60})}
 function dangKyNhanh(nut){const v=i=>$(i).value.trim();if(nut.disabled)return;nut.disabled=true;const chu=nut.textContent;nut.textContent="Đang gửi…";
- const body=JSON.stringify({a:"dangKy",hoTen:v("f-ten"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("dk-pin")});
+ const body=JSON.stringify({a:"dangKy",hoTen:v("f-ten"),sdt:v("f-sdt"),email:v("f-email"),link:v("f-link"),follow:v("f-follow"),kenh:v("f-kenh"),diaChi:v("f-dc"),dn:v("f-dn"),mk:$("f-mk").value,pin:v("dk-pin")});
  const mo=()=>setTimeout(()=>{nut.disabled=false;nut.textContent=chu},3000),yc={method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:body};
  let f;try{f=fetch(API_URL,Object.assign({keepalive:true},yc))}catch(x){f=fetch(API_URL,yc)}
  f.catch(()=>fetch(API_URL,yc)).then(r=>r.json()).then(d=>{
