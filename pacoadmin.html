@@ -117,7 +117,7 @@ table.ds{width:100%;border-collapse:separate;border-spacing:0;min-width:1100px}
 @media (max-width:860px){
 .thanh .trong{height:auto;flex-wrap:wrap;padding:10px 14px;gap:8px}
 .thanh .ra{display:block;margin-left:auto;font-size:15px}
-.thanh nav{order:3;width:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;overflow:visible}
+.thanh nav{order:3;width:100%;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;overflow:visible}
 .thanh nav a{justify-content:center;text-align:center;white-space:normal;line-height:1.25;padding:8px 4px;border-radius:8px;font-size:15px}
 .dau-trang{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:4px 12px}
 .dau-trang>div{display:contents}
@@ -210,7 +210,7 @@ table.ds{width:100%;border-collapse:separate;border-spacing:0;min-width:1100px}
 .thanh img{height:28px}
 .thanh .ra{display:block;margin:0}
 .thanh .ra .ten-ra{display:none}
-.thanh nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,900px);z-index:7;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:0;padding:0 0 env(safe-area-inset-bottom);background:var(--muc-dam);border-top:2px solid var(--vang);box-shadow:0 -4px 14px rgba(15,28,61,.18)}
+.thanh nav{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,900px);z-index:7;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;margin:0;padding:0 0 env(safe-area-inset-bottom);background:var(--muc-dam);border-top:2px solid var(--vang);box-shadow:0 -4px 14px rgba(15,28,61,.18)}
 .thanh nav a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:52px;padding:0 2px;border-radius:0;font-size:12.5px;line-height:1.15;white-space:nowrap;color:#aeb8cf;background:none!important}
 .thanh nav a.dang{color:#fff}
 .thanh nav a.dang svg{color:var(--vang)}
@@ -566,6 +566,11 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
 .tb-tt{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tb-nd{display:none;margin-top:8px;padding:10px 12px;background:var(--giay,#f6f4ef);border-radius:8px;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
 .tb-nd p{margin:4px 0 0}.tb-qt li.mo .tb-nd{display:block}.tb-qt li.mo .tb-tt{white-space:normal}
+
+/* ECO 23/11: thêm chuông thông báo đã gửi — màn máy tính hẹp dùng chữ ngắn để menu không đè nút Đăng xuất */
+@media (min-width:861px) and (max-width:1200px){body:not(.xem-cong) .thanh nav .dai{display:none}body:not(.xem-cong) .thanh nav .ten-ngan{display:inline}body:not(.xem-cong) .thanh nav a{padding:8px 9px}}
+@media (min-width:861px) and (max-width:1100px){body:not(.xem-cong) .thanh nav a{padding:7px 6px;font-size:14px;gap:4px}body:not(.xem-cong) .thanh nav svg{width:16px;height:16px}body:not(.xem-cong) #app .thanh .trong{padding-left:10px!important;padding-right:10px!important}}
+.thanh nav a[data-v="thu"] svg{width:21px;height:21px}
 </style>
 <!-- ECO 18/11: logo PACOBOOKS nền trắng -->
 <link rel="icon" href="https://duongdenbinhyen.com/koc-icon.png" type="image/png">
@@ -594,6 +599,7 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
       <a href="#" data-v="koc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 5.5a3 3 0 010 5.6M18 14.8c1.8.7 3 2.5 3 5.2"/></svg><span class="nh">Danh sách<span class="dai"> KOC</span></span></a>
       <a href="#" data-v="don"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg><span class="nh">Đơn hàng</span><span class="dem num" id="dem-don" hidden></span></a>
       <a href="#" data-v="duyet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2.5 2.5L16 9"/><rect x="3.5" y="3.5" width="17" height="17" rx="3"/></svg><span class="nh">Chờ duyệt</span><span class="dem num" id="dem-duyet">6</span></a>
+      <a href="#" data-v="thu" title="Thông báo đã gửi KOC" aria-label="Thông báo đã gửi KOC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 004 0"/></svg></a>
       <a href="#" data-v="cong"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg><span class="nh"><span class="dai">Trang công khai</span><span class="ten-ngan">Công khai</span></span></a>
     </nav>
     <span class="khau">Tri thức sách &amp; Tri thức số</span><div class="ra"><span class="ten-ra" id="qt-ai">PACOBOOKS · </span><span class="qt-cong2" id="qt-cong2"></span><a class="nut-ra" href="#" onclick="dangXuatQT();return false">Đăng xuất<small class="ten-nho" id="qt-ai2">PACOBOOKS</small></a></div>
@@ -641,6 +647,11 @@ body:not(.xem-cong) #app .thanh .ra .nut-ra{width:88px;padding:6px 4px 8px!impor
       <button type="button" class="dh-moi" id="dh-moi" hidden onclick="xemMoi()"><i></i>Có <b>0</b> đơn mới · bấm để xem</button>
       <div class="dh-dem" id="dh-dem"></div>
       <div id="ds-don"><p class="dh-trong">Đang tải đơn hàng…</p></div>
+    </section>
+    <section id="v-thu" class="an"><!-- ECO 23/11: tất cả thư/thông báo đã gửi KOC — 1 hàng, bấm mở, tự thu -->
+      <div class="dau-trang"><div><h1>Thông báo đã gửi KOC</h1><p>Thông báo, lời nhắc và nội dung email KOC đã nhận, mới nhất trước.</p></div></div>
+      <input class="btn btn-vien" id="thu-tim" placeholder="Tìm theo tên kênh, mã KOC, tiêu đề" oninput="veThu()" style="width:100%;text-align:left;margin:0 0 12px;cursor:text">
+      <div class="the"><ul class="ls tb-qt" id="ds-thu"></ul></div>
     </section>
     <section id="v-cong" class="an">
       <div class="vuot-ve" id="vuot-ve" aria-hidden="true"></div>
@@ -836,9 +847,9 @@ function quayLai(){(VIEW_TRUOC||document.querySelector(".thanh nav a[data-v=tong
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&document.body.classList.contains("xem-cong"))history.back()});
 (()=>{const v=document.getElementById("vuot-ve");let x0=null,y0=0;v.addEventListener("pointerdown",e=>{x0=e.clientX;y0=e.clientY;v.setPointerCapture(e.pointerId)});v.addEventListener("pointerup",e=>{if(x0!==null&&e.clientX-x0>50&&Math.abs(e.clientY-y0)<80)history.back();x0=null});v.addEventListener("pointercancel",()=>x0=null)})();
 window.addEventListener("popstate",()=>{if(!document.getElementById("v-cong").classList.contains("an"))quayLai()});
-document.querySelectorAll(".thanh nav a").forEach(a=>a.onclick=e=>{e.preventDefault();if(a.dataset.v!=="don"&&a.dataset.v!=="cong")apMoi();if(a.dataset.v==="cong"){const d=document.querySelector(".thanh nav a.dang");if(d&&d!==a)VIEW_TRUOC=d;document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));["v-tong","v-koc","v-don"].forEach(i=>document.getElementById(i).classList.add("an"));const f=document.getElementById("khung-cong");if(!f.src){f.onload=()=>{try{const st=f.contentDocument.createElement("style");st.textContent=".khau{visibility:hidden!important}";f.contentDocument.head.appendChild(st)}catch(x){}};f.src="https://duongdenbinhyen.com/pacokoc.html"}document.getElementById("v-cong").classList.remove("an");document.body.classList.add("xem-cong");window.scrollTo(0,0);if(!history.state||history.state.v!=="cong")history.pushState({v:"cong"},"");return}if(history.state&&history.state.v==="cong")history.replaceState(null,"");document.getElementById("v-cong").classList.add("an");document.body.classList.remove("xem-cong");
- if(a.dataset.v==="duyet"){document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));document.getElementById("v-tong").classList.remove("an");document.getElementById("v-koc").classList.add("an");document.getElementById("v-don").classList.add("an");document.getElementById("ds-viec").scrollIntoView({behavior:"smooth",block:"center"});return}
- document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));document.getElementById("v-tong").classList.toggle("an",a.dataset.v!=="tong");document.getElementById("v-koc").classList.toggle("an",a.dataset.v!=="koc");document.getElementById("v-don").classList.toggle("an",a.dataset.v!=="don");if(a.dataset.v==="don")taiDon()});
+document.querySelectorAll(".thanh nav a").forEach(a=>a.onclick=e=>{e.preventDefault();if(a.dataset.v!=="don"&&a.dataset.v!=="cong")apMoi();if(a.dataset.v==="cong"){const d=document.querySelector(".thanh nav a.dang");if(d&&d!==a)VIEW_TRUOC=d;document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));["v-tong","v-koc","v-don","v-thu"].forEach(i=>document.getElementById(i).classList.add("an"));const f=document.getElementById("khung-cong");if(!f.src){f.onload=()=>{try{const st=f.contentDocument.createElement("style");st.textContent=".khau{visibility:hidden!important}";f.contentDocument.head.appendChild(st)}catch(x){}};f.src="https://duongdenbinhyen.com/pacokoc.html"}document.getElementById("v-cong").classList.remove("an");document.body.classList.add("xem-cong");window.scrollTo(0,0);if(!history.state||history.state.v!=="cong")history.pushState({v:"cong"},"");return}if(history.state&&history.state.v==="cong")history.replaceState(null,"");document.getElementById("v-cong").classList.add("an");document.body.classList.remove("xem-cong");
+ if(a.dataset.v==="duyet"){document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));document.getElementById("v-tong").classList.remove("an");document.getElementById("v-koc").classList.add("an");document.getElementById("v-don").classList.add("an");document.getElementById("v-thu").classList.add("an");document.getElementById("ds-viec").scrollIntoView({behavior:"smooth",block:"center"});return}
+ document.querySelectorAll(".thanh nav a").forEach(x=>x.classList.toggle("dang",x===a));document.getElementById("v-tong").classList.toggle("an",a.dataset.v!=="tong");document.getElementById("v-koc").classList.toggle("an",a.dataset.v!=="koc");document.getElementById("v-don").classList.toggle("an",a.dataset.v!=="don");document.getElementById("v-thu").classList.toggle("an",a.dataset.v!=="thu");if(a.dataset.v==="thu"){veThu();window.scrollTo(0,0)}if(a.dataset.v==="don")taiDon()});
 
 let dang=null;
 function veNgan(){const g=document.getElementById("ngan"),t=document.querySelector(".ngan-tab"),n=document.getElementById("ngan-noi");if(t.parentElement!==g){const c=t.parentElement;g.append(t,n);c.remove();document.querySelectorAll(".nut-ls").forEach(a=>a.textContent="Xem toàn bộ lịch sử")}}
@@ -869,6 +880,11 @@ function moSuaTT(){const k=dang,n=$("ngan-noi");n.innerHTML=`<div class="tb-gui"
 function luuSuaTT(b){const k=dang,ly=$("dc-ly").value;if(ly==="")return bao("Vui lòng chọn lý do");if(ly==="5"&&!$("dc-ghi").value.trim())return bao("Lý do Khác cần ghi rõ");const moi={};$("ngan-noi").querySelectorAll("input[data-f]").forEach(i=>{if(i.value.trim()!==giaTriTT(k,i.dataset.f).trim())moi[i.dataset.f]=i.value.trim()});if(!Object.keys(moi).length)return bao("Chưa có thông tin nào thay đổi");if(!window.confirm("Lưu thay đổi cho "+k.ma+"?"))return;
  goi("qtDc",{token:layTk(),ma:k.ma,lyDo:ly,ghiChu:$("dc-ghi").value.trim(),moi:moi},b).then(()=>{bao("Đã cập nhật thông tin và báo KOC qua email.");taiQT()}).catch(loi)}
 /* ECO 23/11: thư/thông báo đã gửi — 1 hàng, bấm mới mở, mở cái này thì thu cái khác */
+function veThu(){const u=document.getElementById("ds-thu");if(!u)return;const q=(document.getElementById("thu-tim").value||"").trim().toLowerCase();
+ const ds=[];(KOC||[]).forEach(k=>(k.tb||[]).forEach(x=>ds.push(Object.assign({kt:k.ten,km:k.ma},x))));ds.sort((a,b)=>(b.t||0)-(a.t||0));
+ const loc=ds.filter(x=>!q||(x.kt+" "+x.km+" "+x.td).toLowerCase().includes(q)).slice(0,200);
+ u.innerHTML=loc.map(x=>`<li onclick="moTbQt(this)"><div class="tb-hang"><span class="tb-tt">${e(x.ngay)} · <b>${e(x.kt)}</b> · ${e(x.td)}</span><span class="tt ${x.doc?"ok":"cho"}">${x.doc?"Đã đọc":"Chưa đọc"}</span></div><div class="tb-nd"><small>${e(x.km)} · ${e(x.ai==="Email tự động"?"Email tự động":"Gửi bởi "+(x.ai||"quản trị"))}</small><p>${e(x.nd||"").replace(/\n/g,"<br>")}</p></div></li>`).join("")||"<li><span>Chưa có thông báo nào.</span><span></span></li>"}
+{const _veTC=veTatCa;veTatCa=function(){_veTC.apply(this,arguments);try{if(!document.getElementById("v-thu").classList.contains("an"))veThu()}catch(x){}}}
 function moTbQt(li){const mo=!li.classList.contains("mo");li.parentNode.querySelectorAll("li.mo").forEach(x=>x.classList.remove("mo"));if(mo)li.classList.add("mo")}
 function xemDC(ma){xemViec(ma);setTimeout(()=>{tab("hd");const x=document.querySelector(".dc-xet");if(x)x.scrollIntoView({block:"center",behavior:"smooth"})},450)}
 /* ECO 22/11: gửi thông báo cho KOC (email + mục Thông báo trong tài khoản KOC). Mỗi việc 1 mẫu, chọn xong sửa tùy ý */
