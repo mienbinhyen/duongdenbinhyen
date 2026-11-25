@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <!-- OpenAI Ads Pixel (pacobooks) -->
-<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"818DNtT527qeyVA1a71doR",debug:false});</script>
+<script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"818DNtT527qeyVA1a71doR",debug:false});oaiq("measure","page_viewed",{type:"contents",contents:[{id:"gpt",name:"Landing GPT",content_type:"page"}]});oaiq("measure","contents_viewed",{type:"contents",contents:[{id:"tronbo3cuon",name:"Trọn bộ 3 cuốn",content_type:"product"}]});</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 	<!-- ECO 30/10: lưu mã click quảng cáo (fbc) NGAY khi khách vào trang, không chờ pixel -->
@@ -13,7 +13,7 @@
 	<meta property="og:title" content="Trọn Bộ Miền Bình Yên – 3 cuốn sách của Tác giả Thiện Nhân | PacoBooks" />
 	<meta property="og:description" content="Miền Bình Yên, Đường Đến Bình Yên, Lời Thì Thầm Từ Cuộc Đời. Ưu đãi trọn bộ 298.000đ, miễn ship toàn quốc." />
 	<meta property="og:url" content="https://duongdenbinhyen.com/gpt.html" />
-	<meta name="keywords" content="Đường Đến Bình Yên, PacoBooks, Paco, Lời Thì Thầm Từ Cuộc Đời, Tác giả Thiện Nhân, Miền Bình Yên, sách chữa lành" />
+	<meta name="keywords" content="Đường Đến Bình Yên, PacoBooks, Paco, Lời Thì Thầm Từ Cuộc Đời, Tác giả Thiện Nhân, Miền Bình Yên, sách chữa lành, mua sách online, nhà sách, tiệm sách, sách hay, sách mới, sách bán chạy, sách văn học, sách kỹ năng sống, sách tâm lý, sách self-help, sách truyền cảm hứng, sách giấy, đọc sách, tủ sách gia đình, review sách, quà tặng sách" />
 	<meta name="description" content="Trọn bộ 3 cuốn sách chữa lành của Tác giả Thiện Nhân: Đường Đến Bình Yên, Lời Thì Thầm Từ Cuộc Đời và Miền Bình Yên. Ưu đãi trọn bộ 298.000đ, miễn ship toàn quốc.">
 
 	<meta property="og:image" content="https://duongdenbinhyen.com/og-tronbo3cuon.jpg" />
@@ -941,7 +941,7 @@
         </div>
         <div style="text-align:center;font-size:11px;color:#0d3b7a;font-weight:600;margin:-8px 0 6px 0;">📞 Vui lòng nghe máy, chúng tôi sẽ gọi xác nhận trước khi gửi sách!</div>
         <div class="paco-input-wrapper">
-        <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required>
+        <input type="tel" name="Số điện thoại" class="paco-input" placeholder="Số điện thoại - nhập đủ 10 số" required onfocus="try{if(!window.icSent&&typeof oaiq==='function'){window.icSent=1;var g=pacoGoi();oaiq('measure','checkout_started',{type:'contents',amount:g.tien,currency:'VND',contents:g.ids.map(function(i){return {id:String(i),content_type:'product',quantity:1}})});}}catch(e){}">
         </div>
         <div style="text-align:left;font-size:11px;color:#0d3b7a;font-weight:600;margin:0 0 6px 0;">📍 Địa chỉ sau sáp nhập xã/huyện/tỉnh</div>
         <div class="paco-input-wrapper">
@@ -1115,6 +1115,7 @@ function pacoCapNhat(){
 }
 function pacoGoForm(){
     var g=pacoCapNhat();
+    try{if(typeof oaiq==='function'&&g.n){oaiq('measure','items_added',{type:'contents',amount:g.tien,currency:'VND',contents:g.ids.map(function(i){return {id:String(i),content_type:'product',quantity:1}})});}}catch(e){}
     document.getElementById('datsach').scrollIntoView({behavior:'smooth'});
 }
 function pacoChonGoi(codes){
