@@ -224,7 +224,7 @@
 <!-- Trang 31: sach-tam-ly.html --> 
 <url>   
 <loc>https://duongdenbinhyen.com/sach-tam-ly.html</loc>   
-<lastmod>2026-06-09</lastmod>   
+<lastmod>2026-11-27</lastmod>   
 <priority>0.8</priority> 
 </url>
 
@@ -568,21 +568,21 @@
 <!-- Trang 75: sach-hay-cho-nguoi-huong-noi.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sach-hay-cho-nguoi-huong-noi.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 76: sao-toi-hay-buon-vo-co.html -->
 <url>
   <loc>https://duongdenbinhyen.com/sao-toi-hay-buon-vo-co.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 
 <!-- Trang 77: cach-de-yeu-thuong-ban-than.html -->
 <url>
   <loc>https://duongdenbinhyen.com/cach-de-yeu-thuong-ban-than.html</loc>
-  <lastmod>2026-07-19</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -1733,7 +1733,7 @@
 <!-- Trang 231: nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html -->
 <url>
   <loc>https://duongdenbinhyen.com/nha-xuat-ban-dai-hoc-quoc-gia-ha-noi.html</loc>
-  <lastmod>2026-09-12</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 
@@ -2061,7 +2061,7 @@
 <!-- Trang 277: nha-xuat-ban-thuan-hoa.html -->
 <url>
     <loc>https://duongdenbinhyen.com/nha-xuat-ban-thuan-hoa.html</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <priority>0.6</priority>
   </url>
  
@@ -2302,25 +2302,25 @@
 <!-- Trang 315: tam-ly-hoc-dam-dong.html -->
 <url>
   <loc>https://duongdenbinhyen.com/tam-ly-hoc-dam-dong.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 316: bi-mat.html -->
 <url>
   <loc>https://duongdenbinhyen.com/bi-mat.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 317: doc-vi-bat-ky-ai.html -->
 <url>
   <loc>https://duongdenbinhyen.com/doc-vi-bat-ky-ai.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 318: phi-ly-tri.html -->
 <url>
   <loc>https://duongdenbinhyen.com/phi-ly-tri.html</loc>
-  <lastmod>2026-10-23</lastmod>
+  <lastmod>2026-11-27</lastmod>
   <priority>0.8</priority>
 </url>
 <!-- Trang 319: nghe-thuat-tinh-te-cua-viec-dech-quan-tam.html -->
@@ -3191,6 +3191,24 @@
   <url>
     <loc>https://duongdenbinhyen.com/sach-hay-cua-carl-jung.html</loc>
     <lastmod>2026-11-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 455: sach-cua-rhonda-byrne.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/sach-cua-rhonda-byrne.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 456: sach-hay-cua-paulo-coelho.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/sach-hay-cua-paulo-coelho.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Trang 457: sach-hay-cua-jim-rohn.html -->
+  <url>
+    <loc>https://duongdenbinhyen.com/sach-hay-cua-jim-rohn.html</loc>
+    <lastmod>2026-11-27</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
